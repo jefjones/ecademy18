@@ -1,0 +1,46 @@
+@import 'variables.css';
+
+h2 {
+    font-weight: normal;
+    font-family: "OpenSans", Open Sans, sans-serif;
+}
+
+.titleStyle {
+    font-size: 32px;
+    color: #333333;
+    position: relative;
+    margin: 2px 0 12px;
+    font-family: "Helam Slab", "Roboto Slab", Calibri, Helvetica, Arial, sans-serif;
+    font-weight: 200;
+    line-height: 41px;
+}
+
+.lineStyle {
+    border-bottom: 2px solid #333333;
+}
+
+.farRight {
+    float: right;
+}
+
+.printIcon {
+    color: white;
+    margin-right: 3px;
+    margin-bottom: -3px;
+    width: 16px;
+}
+
+.description {
+    padding: 14px;
+    background-color: #d9edf7;
+    /*border-color: #bce8f1;*/
+    font-family: "OpenSans", Open Sans, sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    color: #58595b;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    border: 1px solid #fbeed5;
+    border-radius: 4px;
+    margin-bottom: 18px;
+    position: relative;
+}

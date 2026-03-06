@@ -1,0 +1,78 @@
+@import 'variables.css';
+
+.section {
+	margin-left: 10px;
+	margin-right: 20px;
+	margin-bottom: 8px;
+}
+
+.label, .subHeading, .labelCheckbox {
+	font-family: var(--generalFont, sans-serif);
+	font-weight: normal !important;
+	letter-spacing: normal;
+	text-rendering: optimizelegibility;
+	font-size: 9px;
+}
+
+.labelCheckbox {
+	font-size: 12px;
+}
+
+.subHeading {
+	font-weight: bold;
+	font-size: 12px;
+	margin-bottom: 4px;
+}
+
+.row {
+	display: flex;
+	flex-flow: row;
+}
+
+.required {
+	position: relative;
+	top: -4px;
+	left: 4px;
+	width: 12px;
+}
+
+.label {
+    margin-bottom: 1px;
+    font-size: 10px;
+}
+
+.rowWrap {
+	display: flex;
+	flex-flow: row;
+	flex-wrap: wrap;
+}
+
+.checkbox {
+		margin-left: 20px !important;
+}
+
+.strong {
+	font-weight: bold !important;
+	margin-bottom: 8px;
+}
+
+.background {
+	background-color: var(--lightGray, lightGray);
+	border-radius: 3px;
+	padding-top: 3px;
+	padding-left: 2px;
+	padding-right: 30px;
+}
+
+.selectList {
+	margin-left: 10px;
+	margin-bottom: 12px;
+}
+
+.checkboxSpace {
+	margin-top: 8px !important;
+}
+
+.billingAmount {
+	margin-left: 25px;
+}

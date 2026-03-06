@@ -1,0 +1,69 @@
+@import 'variables.css';
+
+/* common */
+.container {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin-left: 15px;
+}
+
+.checkboxLabel, .label, .link, .text, .subHeading, .count, .cellText {
+    font-family: var(--generalFont, sans-serif);
+    letter-spacing: normal;
+    text-rendering: optimizelegibility;
+    font-size: 12px;
+}
+
+.label {
+	font-size: 13px !impora;
+}
+
+.moreTop {
+	margin-top: 20px;
+}
+
+.backMaroon {
+	background-color: maroon;
+}
+
+.backGray {
+	background-color: gray;
+}
+
+.backRed {
+	background-color: var(--red, red);
+	color: var(--red, red);
+	border-color: var(--red, red);
+}
+
+.boldText {
+	font-weight: bold;
+}
+
+.lowOpacity {
+	opacity: .4 !important;
+}
+
+.backWhite {
+	background-color: white;
+}
+
+.wrap {
+	word-wrap: break-word;
+}
+
+.iconPosition {
+	margin-left: 3px;
+	margin-top: 3px;
+}
+
+.fullWidth {
+	width: 100%;
+}
+
+.checkbox {
+	margin-top: 8px !important;
+	margin-bottom: 8px;
+}

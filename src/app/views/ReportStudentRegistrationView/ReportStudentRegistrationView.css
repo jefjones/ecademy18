@@ -1,0 +1,23 @@
+@import 'variables.css';
+
+/* common */
+.container {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: auto;
+    margin-left: 15px;
+}
+
+.label {
+  font-family: var(--generalFont, sans-serif);
+	font-weight: normal !important;
+	letter-spacing: normal;
+	text-rendering: optimizelegibility;
+	font-size: 13px;
+
+}
+
+.moreTop {
+	margin-top: 20px;
+}

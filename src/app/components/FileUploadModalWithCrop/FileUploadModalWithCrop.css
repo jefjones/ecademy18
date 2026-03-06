@@ -1,0 +1,149 @@
+@import 'variables.css';
+
+.container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 0;
+    /* max-width: 500px; */
+}
+
+.explanation, .errorName, .errorLanguage, .inputText {
+    font-family: var(--generalFont, sans-serif);
+    text-rendering: optimizelegibility;
+    text-decoration: none;
+}
+
+.explanation {
+    font-size: 9pt;
+    vertical-align: middle;
+    line-height: 1.4;
+    margin-top: 6px;
+}
+
+.containerName {
+    margin-top: 10px;
+    max-width: 500px;
+}
+
+.singleDropDown {
+    margin-left: 24px;
+    font-size: 10px;
+    align-self: center;
+    margin-top: 20px;
+}
+
+.buttonStyle {
+    margin-left: 18px;
+    background: linear-gradient(#67ae55, #578843);
+    background-color: #69a74e;
+    border: 1px solid;
+    border-color: #3b6e22 #3b6e22 #2c5115;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 1px #a4e388;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    font-family: var(--generalFont, sans-serif);
+    font-size: 10px;
+    text-transform: uppercase;
+    font-weight: bold !important;
+    letter-spacing: 1px;
+    line-height: 116%;
+    margin-bottom: 4px;
+    margin-top: 7px;
+    min-width: 60px;
+    padding: 3px 8px;
+    position: relative;
+    text-align: center;
+    text-rendering: optimizelegibility;
+    text-shadow: 0 1px 2px rgba(0,0,0,.5);
+    outline: none;
+    box-shadow: none;
+    opacity: 1 !important;
+}
+
+.buttonStyle:active {
+  transform: scalex(.90);
+}
+
+.buttonReady {
+  opacity: 1 !important;
+}
+
+.buttonDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    /* float: right; */
+    margin-right: 25px;
+}
+
+.buttonWrite {
+    line-height: 1;
+}
+
+.errorName, .errorLanguage {
+    margin-left: 8px;
+    font-size: 9pt;
+    color: var(--red, red);
+}
+
+.errorLanguage {
+    margin-left: 26px !important;
+}
+
+.languageDiv {
+    margin-bottom: 10px;
+}
+
+.inputText {
+    font-size: 9pt;
+}
+
+.row {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-end;
+    margin-right: 25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.form {
+    border: 0 !important;
+    margin-left: 10px;
+}
+
+.dropZone {
+    margin-top: 5px;
+}
+
+.imageRow {
+    margin-left: 8px;
+}
+
+.aLittleBigger {
+    height: 22px;
+}
+
+.disabled {
+    opacity: .4 !important;
+}
+
+.cancelLink {
+    font-weight: normal;
+    font-family: var(--generalFont, sans-serif);
+    font-weight: normal !important;
+    letter-spacing: normal;
+    text-rendering: optimizelegibility;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 10pt;
+    color: #4f5253;
+    margin-top: 10px;
+}
+
+.canvas {
+	width: 600px;
+}

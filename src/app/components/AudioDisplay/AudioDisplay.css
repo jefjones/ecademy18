@@ -1,0 +1,44 @@
+@import 'variables.css';
+
+.container {
+    display: flex;
+    flex-direction: row;
+    margin-left: 10px;
+		margin-bottom: 8px;
+}
+
+.label {
+    font-family: var(--generalFont, sans-serif);
+    letter-spacing: normal;
+    text-rendering: optimizelegibility;
+}
+
+.label {
+    margin-left: 10px;
+    margin-bottom: 0px !important;
+    font-size: 9px;
+    font-weight: normal;
+}
+
+.small {
+		height: 15px;
+}
+
+
+.row {
+  display: flex;
+  flex-flow: row;
+}
+
+.remove {
+  margin-left: 12px;
+  margin-top: 2px;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--red, red);
+  font-size: 11px;
+}
+
+.remove:hover {
+  text-decoration: underline;
+}

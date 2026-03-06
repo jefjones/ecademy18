@@ -1,0 +1,102 @@
+@import 'variables.css';
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    vertical-align: middle;
+    margin-bottom: 16px;
+}
+
+.searchText {
+    float: left !important;
+    margin: 0 10px 0 0;
+    padding: 0;
+    display: inline;
+    margin-top: 7px;
+}
+
+.popover {
+    margin-top: 3px;
+}
+
+.singleDropDown {
+    font-size: 14px !important;
+    margin-top: 7px;
+    margin-bottom: 10px;
+}
+
+.checkbox {
+    margin-top: 10px;
+    margin-left: 11px;
+    margin-right: 10px;
+}
+
+.width {
+    flex-basis: 90px !important;
+}
+
+.widthmedium {
+    flex-basis: 130px !important;
+}
+
+.widthwide {
+    flex-basis: 160px !important;
+}
+
+.lineDivider {
+    width: 90%;
+    opacity: .4;
+}
+
+.label {
+    font-size: 14px;
+    color: #333333;
+    font-family: "OpenSans", Open Sans, sans-serif;
+    vertical-align: middle;
+    text-decoration: none;
+}
+
+.selectAllContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.linkText {
+    font-size: 12px;
+    font-family: "OpenSans", Open Sans, sans-serif;
+    color: #147ea7;
+    clear: none;
+    padding: 0;
+    margin: 5px 0 0 0;
+    font-weight: normal;
+    line-height: 18px;
+    white-space: nowrap;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.inline {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.smaller {
+    font-size: 10px;
+    margin-right: 3px;
+}
+
+.indent {
+    margin-left: 26px;
+}
+
+.halfIndent {
+    margin-left: 14px;
+}
+
+indentTwo {
+    margin-left: 40px;
+}

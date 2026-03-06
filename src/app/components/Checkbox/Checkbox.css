@@ -1,0 +1,62 @@
+@import 'variables.css';
+
+.container {
+		display: flex;
+		flex-flow: row;
+}
+
+.alertMessage {
+    font-family: var(--generalFont, sans-serif);
+    text-rendering: optimizelegibility;
+    text-decoration: none;
+    border-radius: 3px !important;
+}
+
+.checkboxLeft {
+    vertical-align: middle;
+    margin-right: 3px;
+}
+
+.checkboxRight {
+    vertical-align: middle;
+    margin-right: 3px;
+    margin-left: 3px;
+}
+
+.label {
+    font-size: 12px;
+    font-family: "OpenSans", Open Sans, sans-serif;
+    vertical-align: middle;
+    text-decoration: none;
+}
+
+.labelHover:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.icon {
+		margin-top: 0px !important;
+		width: 14px;
+}
+
+.row {
+	display: flex;
+	flex-flow: row;
+	flex-wrap: nowrap;
+}
+
+.lowOpacity {
+	opacity: .4;
+}
+
+.alertMessage {
+    color: var(--red, red);
+    font-size: 12px;
+}
+
+.requiredPosition {
+	position: relative;
+	left: 3px;
+	top: -4px;
+}

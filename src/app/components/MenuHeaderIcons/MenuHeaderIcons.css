@@ -1,0 +1,30 @@
+@import 'variables.css';
+
+.container {
+	display: flex;
+	flex-flow: row;
+	position: fixed;
+	top: 0;
+	right: 60;
+	margin-top: 2px;
+}
+
+.smallText {
+    font-size: 7px;
+    text-transform: uppercase;
+}
+
+.menuItem {
+	width: 35px !important;
+}
+
+.firstName {
+	font-family: var(--generalFont, sans-serif);
+	font-weight: normal !important;
+	letter-spacing: normal;
+	text-rendering: optimizelegibility;
+	font-size: 12px;
+	color: var(--yellow, yellow);
+	margin-right: 8px;
+	margin-top: 4px;
+}

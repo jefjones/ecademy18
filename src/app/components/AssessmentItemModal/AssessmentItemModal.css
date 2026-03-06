@@ -1,0 +1,303 @@
+@import 'variables.css';
+
+.container {
+    margin-top: 15px !important;
+    z-index: 1010 !important;
+    max-width: 500px;
+}
+
+.heading {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.center {
+    justify-content: center;
+}
+
+.dialogButtons {
+    text-align: center;
+    margin-bottom: 6px !important;
+}
+
+.yesButton {
+    margin-left: 9px;
+    background: linear-gradient(#67ae55, #578843);
+  	background-color: #69a74e;
+  	border: 1px solid;
+  	border-color: #3b6e22 #3b6e22 #2c5115;
+  	border-radius: 5px;
+  	box-shadow: inset 0 1px 1px #a4e388;
+  	color: white;
+  	cursor: pointer;
+  	display: inline-block;
+  	font-family: var(--generalFont, sans-serif);
+  	font-size: 12px;
+  	font-weight: bold !important;
+  	letter-spacing: 1px;
+  	line-height: 9%;
+  	margin-top: 8px;
+  	min-width: 55px;
+  	padding: 6px 8px;
+  	position: relative;
+  	text-align: center;
+  	text-rendering: optimizelegibility;
+  	text-shadow: 0 1px 2px rgba(0,0,0,.5);
+    outline: none;
+}
+
+.yesButton:active {
+    transform: scaleX(.89);
+}
+
+
+.buttonRow {
+    margin-left: 120px;
+    margin-top: 8px;
+}
+
+.cancelLink, .remove, .headerLabel, .labelSwitch, .labelCheckbox, .inputText, .heading, .cancelLink, .labelNotice, .explanation, .label, .commentTextarea, .link, .questionText, .error, .instructions {
+	font-family: var(--generalFont, sans-serif);
+	font-weight: normal !important;
+	letter-spacing: normal;
+	text-rendering: optimizelegibility;
+}
+
+.labelSwitch {
+    font-size: 12px !important;
+    margin-left: 20px;
+    cursor: pointer;
+    position: relative;
+    top: -3px;
+}
+
+.labelCheckbox {
+    font-size: 10px !important;
+    margin-left: 10px;
+}
+
+.switch {
+    display: flex;
+    flex-flow: row;
+    padding-top: 15px !important;
+    padding-bottom: 7px !important;
+    margin-left: 5px;
+}
+
+.inputText {
+    margin-bottom: 1px;
+    font-size: 9px;
+}
+
+.commentTextarea {
+    border-radius: 5px;
+    padding-left: 4px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    font-size: 13px;
+		min-width: 100px;
+		width: 90%;
+		height: 80px;
+}
+
+.multiSelect {
+    z-index: 99 !important;
+    min-width: 100px;
+    width: auto;
+    font-size: 11px;
+    margin-top: 5px;
+    margin-bottom: 8px;
+    margin-right: 10px;
+}
+
+.unorderedList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  flex-flow:column;
+  z-index: 99;
+  /* overflow-y: auto; */
+  height: auto;
+}
+
+ul li {
+  margin-top: 8px;
+}
+
+.dropZone {
+    margin-top: 5px;
+    border-radius: 5px;
+    width: 325px !important;
+}
+
+.labelNotice {
+  color: var(--blue, blue);
+  font-size: 12px;
+  margin-left: 5px;
+  max-width: 350px;
+}
+
+.textDisplay {
+  margin-top: 10px;
+}
+
+.explanation {
+  color: var(--blue, blue);
+  font-size: 13px;
+  max-width: 350px;
+}
+
+.labelUpload {
+  font-size: 12px;
+  margin-left: 3px;
+  margin-top: 5px;
+}
+
+.row {
+  display: flex;
+  flex-flow: row;
+}
+
+.fileAttach {
+  margin-right: 20px;
+}
+
+.label {
+  font-size: 12px;
+  margin-right: 8px;
+}
+
+.multipleInput {
+  position: relative;
+  top: -11px;
+}
+
+.link {
+  color: var(--blue, blue);
+  cursor: pointer;
+  font-size: 11px;
+  margin-top: 3px;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.error {
+  color: var(--red, red);
+  font-size: 12 px;
+}
+
+.instructions {
+    bottom: 5px;
+    left: -12px;
+    font-size: 10px;
+    cursor: pointer;
+    color: var(--green, green);
+}
+
+.icon {
+	margin-right: 5px;
+}
+
+.headerLabel {
+	font-size: 12px;
+	font-weight: bold !important;
+}
+
+.moreTop {
+	margin-top: 12px !important;
+}
+
+.littleTop {
+	margin-top: 3px !important;
+}
+
+.includePicture {
+	margin-left: 20px;
+}
+
+.iconPosition {
+	margin-left: 6px !important;
+	margin-right: 2px;
+}
+
+.remove {
+  margin-left: 12px;
+  margin-top: 2px;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--red, red);
+  font-size: 11px;
+}
+
+.remove:hover {
+  text-decoration: underline;
+}
+
+img[src=""] {
+    display: none;
+}
+
+audio[src=""] {
+    display: none;
+}
+
+.checkboxLabel {
+	font-size: 12px;
+}
+
+.wordSpace {
+	margin-left: 3px;
+}
+
+.shortTextInput {
+	width: 40px;
+}
+
+.positionVariations {
+		margin-top: 0px !important;
+		margin-left: 35px !important;
+}
+
+.liftUp {
+	position: relative;
+	top: -4px;
+	margin-left: 5px;
+}
+
+.muchLeft {
+	margin-left: 30px;
+}
+
+.moreLeft {
+	margin-left: 20px;
+}
+
+.muchMoreLeft {
+	margin-left: 30px;
+}
+
+.audioSpace {
+	margin-top: 8px !important;
+	margin-bottom: 8px !important;
+}
+
+.rowRight {
+	display: flex;
+	flex-flow: row;
+	margin-left: 70px;
+}
+
+.cancelLink {
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 10pt;
+    color: #4f5253;
+		margin-top: 10px !important;
+    margin-right: 10px !important;
+}
+
+.listPosition {
+	max-width: 500px;
+}

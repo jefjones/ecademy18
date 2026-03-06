@@ -1,0 +1,21 @@
+@import 'variables.css';
+
+.header {
+    align-items: center;
+    /*color: #133;*/
+    display: flex;
+    justify-content: flex-start;
+    padding-bottom: 0; /*.2em; */
+    padding-top: 0; /* .2em; */
+}
+
+.nav {
+}
+
+.logo {
+    /*margin-top: .5em;*/
+    /*margin-bottom: -.5em;*/
+    margin-left: 3em;
+    margin-right: .5em;
+    vertical-align: middle;
+}

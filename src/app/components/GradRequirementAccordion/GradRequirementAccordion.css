@@ -1,0 +1,34 @@
+@import 'variables.css';
+
+.row {
+	display: flex;
+	flex-flow: row;
+}
+
+.header, .text {
+    font-family: var(--generalFont, sans-serif);
+    letter-spacing: normal;
+    text-rendering: optimizelegibility;
+    font-size: 12px;
+}
+
+.header {
+	margin-left: 7px;
+	margin-right: 15px;
+	white-space: nowrap;
+}
+
+.iconHigher {
+	width: 16px;
+  position: relative;
+	top: -3px;
+}
+
+.graduationHeader {
+	width: 340px;
+}
+
+.showDetails {
+		word-wrap: nowrap;
+		margin-left: 17px;
+}

@@ -1,0 +1,55 @@
+@import 'variables.css';
+
+/* common */
+.container {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: auto;
+    margin-left: 15px;
+}
+
+.instructions, .red {
+		margin-top: 10px;
+		margin-left: 10px;
+		width: auto;
+		max-width: 450px;
+	  font-family: var(--generalFont, sans-serif);
+		font-weight: normal !important;
+		letter-spacing: normal;
+		text-rendering: optimizelegibility;
+		font-size: 13px;
+}
+
+.red {
+		color: var(--red, red);
+		font-weight: bold;
+		font-size: 14px !important;
+}
+
+.moreBottom {
+		margin-bottom: 20px !important;
+}
+
+.link {
+		color: var(--blue,blue);
+		text-decoration: none;
+}
+
+.link:hover {
+		text-decoration: underline;
+}
+
+.moreTop {
+  margin-top: 15px;
+}
+
+.littleTop {
+  margin-top: 7px;
+}
+
+.row {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+}

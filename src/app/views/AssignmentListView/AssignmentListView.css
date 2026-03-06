@@ -1,0 +1,380 @@
+@import 'variables.css';
+
+/* common */
+.container {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: auto;
+    margin-left: 15px;
+}
+
+.label, .headLabel, .remove, .error, .textRating, .labelCheckbox, .noRecord, .link, .dueDate, .checkboxText, .noDocs {
+  font-family: var(--generalFont, sans-serif);
+	font-weight: normal !important;
+	letter-spacing: normal;
+	text-rendering: optimizelegibility;
+}
+
+.icon {
+		width: 16px;
+		margin-right: 7px !important;
+		position: relative;
+		top: -3px;
+}
+
+.iconSmaller {
+		width: 12px !important;
+		margin-right: 3px !important;
+		position: relative;
+		top: -3px;
+}
+
+.iconQuiz {
+		width: 12px !important;
+		margin-left: 3px !important;
+		margin-top: 3px !important;
+}
+
+
+.iconCell {
+	width: 16px;
+	margin-right: 4px !important;
+}
+
+.iconIntable {
+		width: 16px;
+		margin-right: 5px !important;
+		position: relative;
+		top: 4px;
+}
+
+.iconSmall {
+		width: 14px;
+		margin-left: 4px;
+		margin-right: 0px !important;
+		cursor: pointer;
+}
+
+.error {
+    color: var(--red, red);
+}
+
+.label {
+  font-size: 12px;
+}
+
+.headLabel {
+  font-size: 12px;
+}
+
+.dateTimePicker {
+    margin-top: 0px;
+    font-size: 11px;
+    border-radius: 4px;
+    font-weight: bold;
+    width: 100px;
+}
+
+.dateColumn {
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+    margin-left: 5px;
+    margin-top: 10px;
+    margin-bottom: 12px;
+    width: 100px;
+}
+
+.dueDateLabel {
+    margin-left: 15px;
+}
+
+.singleDropDown {
+  /*margin-top: 6px !important;*/
+  margin-left: 4px;
+  font-size: 10px;
+}
+
+.remove {
+  color: var(--maroon, maroon);
+  cursor: pointer;
+  font-size: 9px;
+	margin-right: 10px;
+	font-family: var(--generalFont, sans-serif);
+	text-rendering: optimizelegibility;
+}
+
+.tableLabelClass {
+	margin-bottom: 0px !important;
+	padding-bottom: 0px !important;
+  font-size: 8pt !important;
+  text-align: left !important;
+  font-weight: bold !important;
+  padding-right: 2px;
+  text-decoration: underline;
+  font-family: var(--generalFont, sans-serif);
+  font-weight: normal !important;
+  letter-spacing: normal;
+  text-rendering: optimizelegibility;
+}
+
+.firstColumnClass {
+    max-width: 50px !important;
+    line-height: 2 !important;
+    flex-wrap: wrap !important;
+}
+
+.rowRight {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-end;;
+    margin-right: 25px;
+}
+
+.submitButton {
+    background: linear-gradient(#67ae55, #578843);
+  	background-color: #69a74e;
+  	border: 1px solid;
+  	border-color: #3b6e22 #3b6e22 #2c5115;
+  	border-radius: 5px;
+  	box-shadow: inset 0 1px 1px #a4e388;
+  	color: white;
+  	cursor: pointer;
+  	display: inline-block;
+  	font-family: var(--generalFont, sans-serif);
+  	font-size: 12px;
+  	font-weight: bold !important;
+  	letter-spacing: 1px;
+  	line-height: 116%;
+    margin-top: 8px;
+  	margin-left: 12px;
+  	min-width: 50px;
+  	padding: 2px 5px;
+  	position: relative;
+  	text-align: center;
+  	text-rendering: optimizelegibility;
+  	text-shadow: 0 1px 2px rgba(0,0,0,.5);
+    outline: none;
+}
+
+.submitButton:active {
+    transform: scaleX(.89);
+    background: linear-gradient(#aec3a9, #578843);
+  	border: 1px solid;
+  	border-color: #3b6e22 #3b6e22 #2c5115;
+  	border-radius: 5px;
+  	box-shadow: inset 0 1px 1px #a4e388;
+  	color: gray;
+  	cursor: default;
+}
+
+.submitButton:hover {
+    box-shadow: 0 0 0 1px #297e2d;
+}
+
+.cellSpacing {
+    margin-right: 20px;
+}
+
+.multiSelect {
+    z-index: 99 !important;
+    min-width: 100px;
+    width: auto;
+    font-size: 11px;
+    margin-top: 5px;
+    margin-bottom: 8px;
+    margin-right: 10px;
+}
+
+.row {
+    display: flex;
+    flex-flow: row;
+}
+
+.textRating {
+    font-size: 10px;
+    margin-right: 4px;
+    margin-top: 4px;
+}
+
+.labelCheckbox {
+    font-size: 10px !important;
+    margin-right: 5px;
+}
+
+.checkbox {
+    margin-top: 10px;
+    margin-left: 8px;
+}
+
+.textDisplay {
+  margin-top: 10px !important;
+  margin-left: 10px !important;
+}
+
+.noRecords {
+		font-weight: bold;
+		color: var(--red, red);
+		font-size: 12px;
+		font-style: italic;;
+}
+
+.red {
+		color: var(--red, red);
+}
+
+.link {
+		font-size: 12px;
+		text-decoration: none;
+		cursor: pointer;
+		color: var(--blue, blue);
+}
+
+.link:hover {
+		text-decoration: underline;
+}
+
+.rowWrap {
+	display: flex;
+	flex-flow: row;
+	flex-wrap: wrap;
+}
+
+.moreLeft {
+		margin-left: 17px;
+}
+
+.nameLinkStyle {
+		cursor: pointer;
+		margin-top: 10px;
+}
+
+.image {
+    margin-top: 10px;
+    height: 13px;
+}
+
+.dueDate {
+		font-size: 11px;
+		margin-top: 8px;
+}
+
+.dateColumn {
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+    margin-left: 5px;
+    margin-top: 10px;
+    margin-bottom: 12px;
+    width: 100px;
+}
+
+.leftSpace {
+		margin-left: 8px;
+}
+
+.moreTop {
+		margin-top: 10px;
+}
+
+.filters {
+		background-color: #ecf2ef;
+		padding: 2px;
+		border-radius: 4px;
+		padding-left: 10px;
+		margin-right: 20px;
+}
+
+.checkboxText {
+		font-size: 11px;
+		margin-right: 10px;
+}
+
+.position {
+		position: relative;
+		top: 7px;
+}
+
+.noDocs {
+		font-style: italic;
+		color: var(--gray, gray);
+		font-size: 11px;
+		margin-bottom: 10px;
+}
+
+.alotLeft {
+		margin-left: 40px;
+}
+
+.moveTop {
+	position: relative;
+	top: 7px;
+	margin-bottom: 8px;
+  margin-left: 8px;
+}
+
+.linkDisplay {
+		margin-bottom: 8px !important;
+		margin-left: -3px !important;
+		margin-top: 3px !important;
+}
+
+.noRecords {
+		font-weight: bold;
+		color: var(--red, red);
+		font-size: 12px;
+		font-style: italic;;
+}
+
+.lessTop {
+		position: relative;
+		top: -3px;
+}
+
+.muchLeft {
+		margin-left: 20px !important;
+}
+
+.moreLeft {
+		margin-left: 5px;
+}
+
+.moreSpace {
+		margin-left: 8px;
+		margin-right: 8px;
+}
+
+.penspringIcon {
+		width: 20px;
+		position: relative;
+		top: 5px;
+		left: -2px;
+		cursor: pointer;
+		margin-right: 10px;
+}
+
+.psImage {
+	position: relative;
+	top: -6px;
+}
+
+.alertText {
+	font-size: 12px;
+	text-transform: none;
+}
+
+.questionMark {
+	margin-top: 2px;
+	margin-left: 5px;
+	font-size: 10px;
+	color: black;
+	font-weight: bold;
+}
+
+.iconOverlap {
+	width: 12px;
+	position: relative;
+	left: -9px;
+	top: 1px;
+}

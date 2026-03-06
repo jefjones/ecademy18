@@ -1,0 +1,269 @@
+@import 'variables.css';
+
+.container {
+    display: flex;
+    flex-direction: row;
+    height: 27px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.text, .textGlow, .commentBox, .smallText {
+    padding-top: 2px;
+    color:white;
+    font-weight: normal;
+    font-size: 8pt;
+		font-family: var(--generalFont, sans-serif);
+		font-weight: normal !important;
+		letter-spacing: normal;
+		text-rendering: optimizelegibility;
+}
+
+.text {
+  padding-left: 2px;
+  /*padding-right: 25px;*/
+}
+
+.noWrap {
+  flex-wrap: nowrap;
+}
+
+.textGlow {
+  padding-left: 6px;
+  color: yellow;
+  text-shadow: red 0.1em 0.1em 0.2em;
+}
+
+.downArrow {
+  margin-left: 3px;
+  margin-top: 1px;
+  cursor: pointer;
+}
+
+.leftImage {
+    margin-left: 5px;
+    margin-top: 1px;
+    cursor: pointer;
+}
+
+.image {
+		width: 14px;
+    margin-left: 16px;
+    margin-top: 1px;
+    cursor: pointer;
+}
+
+.imageEye {
+		width: 16px;
+    margin-left: 16px;
+    margin-top: 1px;
+    cursor: pointer;
+}
+
+.lessLeft {
+		width: 14px;
+    margin-left: 12px;
+    margin-top: 1px;
+    cursor: pointer;
+}
+
+.imageOverlay {
+		width: 14px;
+    position: relative;
+    left: -6px;
+    cursor: pointer;
+    width: 18px;
+}
+
+.imageBlocked {
+		width: 14px;
+    cursor: pointer;
+    width: 11px;
+}
+
+.imageLeftSide {
+    margin-left: 10px !important;
+    margin-top: 3px;
+    cursor: pointer;
+}
+
+.lessLeft {
+    margin-left: 10px !important;
+}
+
+.smallerImage {
+    width: 16px;
+}
+
+.bitSmallerImage {
+    width: 11px;
+}
+
+.imageSmaller {
+    height: 16px !important;
+    margin-left: 16px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.comment {
+    height: 18px;
+    margin-top: 1px;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.grayedOut {
+    -webkit-filter: grayscale(100%);
+   -moz-filter: grayscale(100%);
+     -o-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+        filter: grayscale(100%);
+    opacity: .2;
+    cursor: default;
+}
+
+.firstImage {
+    margin-left: 3px !important;
+}
+
+.crossCount, .blockCount, .checkmarkCount, .sentenceEditCount {
+    color: var(--red, red);
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+.sentenceEditCount {
+    left: 30px;
+}
+
+.crossCount {
+    left: 33px;
+}
+
+.blockCount {
+    margin-left: -5px !important;
+}
+
+.checkmarkCount {
+    left: 31px;
+}
+
+.editButton {
+    height: 25px;
+    margin-left: 5px;
+    margin-right: -5px;
+    margin-top: 0px;
+    background: linear-gradient(#67ae55, #578843);
+  	background-color: #69a74e;
+  	border: 1px solid;
+  	border-color: #3b6e22 #3b6e22 #2c5115;
+  	border-radius: 4px;
+  	box-shadow: inset 0 1px 1px #a4e388;
+  	color: white;
+  	cursor: pointer;
+  	font-family: var(--generalFont, sans-serif);
+  	font-size: 10px;
+  	letter-spacing: 1px;
+  	min-width: 57px;
+  	position: relative;
+  	text-align: center;
+  	text-rendering: optimizelegibility;
+  	text-shadow: 0 1px 2px rgba(0,0,0,.5);
+    outline: none;
+}
+
+.smallText {
+    font-size: 8px !important;
+    text-transform: uppercase;
+    /* text-shadow: 0 !important; */
+}
+
+.disabled {
+    opacity: .2;
+}
+
+.topMargin {
+    margin-top: 10px !important;
+}
+
+.moreTopMargin {
+    margin-top: 5px !important;
+}
+
+.moreBottomMargin {
+    position: relative;
+    top: -16px;
+    margin-left: 2px;
+}
+
+.moreLeft{
+    margin-left: 30px !important;
+}
+
+.iconSpaceLeft {
+    margin-left: 15px;
+}
+
+.moreLeft {
+    margin-left: 12px !important;
+}
+
+.imageMagnifier {
+		width: 13px;
+    position: relative;
+    top: 4px;
+    left: -7px;
+    cursor: pointer;
+}
+
+.imageDocument {
+		width: 14px;
+    margin-left: 13px;
+}
+
+.upperLabel {
+    margin-left: 10px;
+    margin-bottom: 0px !important;
+    font-size: 9px;
+    font-weight: normal;
+		font-family: var(--generalFont, sans-serif);
+		font-weight: normal !important;
+		letter-spacing: normal;
+		text-rendering: optimizelegibility;
+		cursor: pointer;
+		text-decoration: normal;
+}
+
+.upperLabel:hover {
+		text-decoration: underline;
+}
+
+.link {
+    color: var(--blue, blue);
+  	cursor: pointer;
+		font-family: var(--generalFont, sans-serif);
+		font-weight: normal !important;
+		letter-spacing: normal;
+		text-rendering: optimizelegibility;
+  	font-size: 12px;
+    text-decoration: none;
+		margin-left: 15px;
+
+    &:hover {
+				text-decoration: underline;
+    }
+}
+
+.red {
+		color: maroon !important;
+}
+
+.checkbox {
+		margin-left: 25px !important;
+}

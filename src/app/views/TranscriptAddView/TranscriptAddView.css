@@ -1,0 +1,83 @@
+@import 'variables.css';
+
+/* common */
+.container {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: auto;
+    margin-left: 15px;
+}
+
+.titleLine {
+		margin-top: 32px;
+}
+
+.labelHeader, .label, .remove, .error, .cancelLink {
+  font-family: var(--generalFont, sans-serif);
+	font-weight: normal !important;
+	letter-spacing: normal;
+	text-rendering: optimizelegibility;
+}
+
+.dialogButtons {
+    text-align: center;
+    margin-bottom: 6px !important;
+}
+
+.muchLeft {
+		margin-left: 50px;
+}
+
+.row {
+	display: flex;
+	flex-flow: row;
+}
+
+.cancelLink {
+    font-weight: normal;
+    font-family: var(--generalFont, sans-serif);
+    font-weight: normal !important;
+    letter-spacing: normal;
+    text-rendering: optimizelegibility;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 12px;
+    color: #4f5253;
+    position: relative;
+    top: 11px;
+    left: 2px;
+}
+
+.icon {
+  cursor: pointer;
+  width: 14px;
+}
+
+.white {
+	background-color: white !important;
+}
+
+.noMargins {
+	margin: 0px !important;
+}
+
+.labelHeader {
+		font-size: 12px;
+}
+
+.centered {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+}
+
+.moreBottom {
+	margin-bottom: 10px;
+}
+
+.moreLeft {
+	margin-left: 10px;
+}

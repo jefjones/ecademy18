@@ -1,0 +1,292 @@
+@import 'variables.css';
+
+.container {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: auto;
+}
+
+.accordionTitle
+{
+    font-family: var(--generalFont, sans-serif) !important;
+		font-weight: normal !important;
+		letter-spacing: normal;
+		text-rendering: optimizelegibility;
+    font-size: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    padding-left: 5px;
+    padding-top: 7px;
+    padding-right: 7px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+.isCurrentWork a {
+    color: var(--currentWork, #f5b330);
+}
+
+.labelCurrentClass {
+    color: var(--currentWork, #f5b330);
+}
+
+.unorderedList {
+    position: relative;
+    left: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    flex-flow:column;
+    width: 100%;
+}
+
+.workSummary {
+    margin-top: 0px;
+    margin-left: 0px;
+    width: auto;
+}
+
+.titleLine {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.caret {
+    top: 6px;
+    margin-left: 5px;
+    position: relative;
+    border: none;
+    display: inline;
+    margin-left: none;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    vertical-align: top;
+    border-top: 4px solid #000000;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+    content: "";
+    font-size:20px;
+}
+
+.caretUp {
+    -webkit-transform: rotate(180deg);     /* Chrome and other webkit browsers */
+    -moz-transform: rotate(180deg);        /* FF */
+    -o-transform: rotate(180deg);          /* Opera */
+    -ms-transform: rotate(180deg);         /* IE9 */
+    transform: rotate(180deg);             /* W3C compliant browsers */
+
+    /* IE8 and below */
+    filter: progid:DXImageTransform.Microsoft.Matrix(M11=-1, M12=0, M21=0, M22=-1, DX=0, DY=0, SizingMethod='auto expand');
+}
+
+.caret:before {
+    border-color: rgba(71, 157, 190, 0);
+    border-top-color: #5c7a99;
+    border-width: 6px;
+    margin-left: -6px;
+    top: 10px;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+
+.caret:after {
+    border-color: rgba(255, 255, 255, 0);
+    border-top-color: #ffffff;
+    border-width: 4px;
+    margin-left: -4px;
+    top: 10px;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+
+.togglePanel {
+    margin-right: 45px;
+    color: var(--menuHoverLinks, maroon);
+    font-size: 12px !important;
+    cursor: pointer;
+}
+
+.newWork, .noListMessage, .label, .count {
+    font-family: var(--generalFont, sans-serif);
+  	font-weight: normal !important;
+  	letter-spacing: normal;
+  	text-rendering: optimizelegibility;
+    color:black;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.newWork, .noListMessage {
+    font-size: 12px;
+    margin-left: 15px;
+}
+
+.label {
+    margin-top: 4px;
+    font-size: 12px !important;
+    cursor: pointer;
+}
+
+.noListMessage {
+    text-decoration: italic !important;
+    margin-left: 40px !important;
+}
+
+.newWork:hover {
+    text-decoration: underline;
+}
+
+.spaceHeight {
+    height: 1px;
+}
+
+.subTitle {
+    font-family: var(--generalFont, sans-serif);
+	font-weight: normal !important;
+	letter-spacing: normal;
+	text-rendering: optimizelegibility;
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 8px !important;
+    margin-bottom: 10px !important;
+    margin-left: 25px;
+    color: var(--blue, blue);
+}
+
+.row {
+    display: flex;
+    flex-flow: row;
+}
+
+.image {
+    margin-right: 8px;
+}
+
+.marginBottom {
+    /* margin-bottom: 12px !important; */
+}
+
+.imageTree {
+  width: 17px;
+  margin-top: -3px;
+  margin-bottom: 3px;
+  margin-right: 4px;
+  cursor: pointer;
+}
+
+.linkStyle {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.link {
+	font-size: 12px;
+	color: var(--blue, blue);
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.link:hover {
+	text-decoration: underline;
+}
+
+.icon {
+		width: 16px;
+}
+
+.iconTree {
+		width: 16px;
+		position: relative;
+		top: -1px;
+		left: -2px;
+		margin-right: 3px;
+		cursor: pointer;
+}
+
+.iconSmaller {
+		width: 11px;
+		position: relative;
+		top: -1px;
+		margin-right: 5px;
+		cursor: pointer;
+}
+
+.menuItem {
+		margin-left: 14px;
+		margin-top: 3px;
+		margin-bottom: 3px;
+}
+
+.divider {
+	margin-left: 4px;
+	margin-right: 4px;
+	position: relative;
+	top: -2px;
+}
+
+.mainFolder {
+	margin-left: 14px;
+	margin-top: 3px;
+	margin-bottom: 3px;
+}
+
+.document {
+	margin-left: 14px;
+	margin-top: 3px;
+	margin-bottom: 3px;
+}
+
+.backgroundFolder {
+	width: 90%;
+	background-color: var(--blue, blue);
+	color: white;
+	border-radius: 4px;
+	margin-left: 2px;
+	padding-left: 3px;
+	padding-top: 2px;
+	cursor: pointer.
+}
+
+.moreLeft {
+	margin-left: 10px !important;
+}
+
+.count {
+		color: #faeecc;
+		font-size: 13px;
+		font-weight: bold !important;
+		position: relative;
+		top: 5px;
+		left: 5px;
+}
+
+.moreTop {
+	margin-top: 20px;
+}
+
+.pointer {
+	cursor: pointer;
+}
+
+.ribbonPosition {
+	margin-left: 50px;
+	width: 85%;
+	margin-bottom: 6px;
+}
+
+.muchLeft {
+	margin-left: 20px !important;
+}

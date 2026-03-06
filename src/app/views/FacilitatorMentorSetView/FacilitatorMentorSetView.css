@@ -1,0 +1,63 @@
+@import 'variables.css';
+
+.titleLine {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.container {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: auto;
+}
+
+.tableLabelClass {
+    font-size: 8pt !important;
+    text-align: left !important;
+    font-weight: bold !important;
+    padding-right: 2px;
+    text-decoration: underline;
+    font-family: var(--generalFont, sans-serif);
+    font-weight: normal !important;
+    letter-spacing: normal;
+    text-rendering: optimizelegibility;
+}
+
+.marginLeft {
+    margin-left: 20px;
+}
+
+.selectAll {
+    margin-left: 40px;
+    margin-bottom: 20px;
+}
+
+.linkText {
+    cursor:pointer;
+    font-size: 8pt;
+    text-decoraton: none;
+    margin-right: 10px;
+    margin-bottom: 15px;
+    margin-top: -5px;
+    color: var(--blue, blue);
+}
+
+.linkText:hover {
+    text-decoration: underline;
+}
+
+.linkText {
+    font-family: var(--generalFont, sans-serif);
+    font-weight: normal !important;
+    letter-spacing: normal;
+    text-rendering: optimizelegibility;
+}
+
+.separator {
+  margin-left: 4px;
+  margin-right: 10px;
+}

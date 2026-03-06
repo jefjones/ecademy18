@@ -1,0 +1,99 @@
+@import 'variables.css';
+
+.container {
+    display: flex;
+    flex-direction: column;
+    /* max-height: 65px; */
+}
+
+.image {
+    width: 14px;
+    margin-left: 18px;
+    margin-top: 6px;
+    cursor: pointer;
+}
+
+.upArrow {
+    /* width: 14px; */
+    margin-left: 2px;
+    margin-top: 6px;
+    cursor: pointer;
+}
+
+.downArrow {
+    /* width: 14px; */
+    margin-left: 18px;
+    margin-top: 6px;
+    cursor: pointer;
+}
+
+.deleteIcon, .addBookmark {
+    margin-left: 12px;
+    margin-left: 12px;
+    margin-top: 1px;
+    cursor: pointer;
+}
+
+.nextNav {
+    margin-left: 4px;
+    margin-top: 1px;
+    cursor: pointer;
+}
+
+.counts {
+    /* position: relative;
+    top: -6px; */
+    margin-top: 10px;
+    margin-left: 4px;
+    font-weight: normal;
+    font-size: 9pt;
+    font-family: var(--generalFont, sans-serif);
+    font-weight: normal !important;
+    letter-spacing: normal;
+    text-rendering: optimizelegibility;
+}
+
+.closeButton {
+    margin-top: 8px;
+    margin-right: 8px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.closeButton:hover {
+    font-weight: bold;
+}
+
+.inputRow {
+    display: flex;
+    flex-flow: row;
+    /* margin-bottom: 7px; */
+}
+
+.navRow {
+    margin-left: 8px;
+    margin-top: 5px;
+}
+
+.singleDropDown {
+    margin-top: 10px !important;
+    margin-right: 4px !important;
+    /* margin-bottom: 6px !important; */
+    padding: 0 !important;
+    /* margin-left: 10px !important; */
+    min-width: 20px !important;
+    width: 100px !important;
+}
+
+.grayedOut {
+    opacity: .2;
+    cursor: default;
+}
+
+.bookmarkName {
+    height: 10px;
+}
+
+.marginRight {
+    margin-right: 45px;
+}

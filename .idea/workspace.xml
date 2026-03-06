@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="37cc1f43-4b67-449a-ada0-3a0f4c7be330" name="Default Changelist" comment="The keyword accuracy count keeps going to the highest number even if you choose 1.  3 in my case.&#10;&#10;In the quiz question to fill-in-the-blank, the answer is now displayed on the finished view.&#10;&#10;I would prefer to have the question type listed at the top of each question section just to know what to expect.">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/actions/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/actions/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/views/FirstNavView/FirstNavView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/views/FirstNavView/FirstNavView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/index.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="1m3ctvx98eQ1Le9m1IYWpB51frm" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/stash/ecademy&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\stash\\ecademy\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\stash\ecademy\src\app\components" />
+      <recent name="C:\stash\ecademy\dist" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="37cc1f43-4b67-449a-ada0-3a0f4c7be330" name="Default Changelist" comment="" />
+      <created>1608725932553</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1608725932553</updated>
+      <workItem from="1608725934012" duration="1969000" />
+      <workItem from="1609191776298" duration="41000" />
+      <workItem from="1613433840676" duration="1551000" />
+      <workItem from="1621535586747" duration="3984000" />
+      <workItem from="1622735545222" duration="1807000" />
+      <workItem from="1630459327388" duration="2578000" />
+      <workItem from="1630968472537" duration="2369000" />
+      <workItem from="1631033019942" duration="6518000" />
+      <workItem from="1631070536234" duration="656000" />
+      <workItem from="1631283951697" duration="862000" />
+      <workItem from="1631295910762" duration="524000" />
+      <workItem from="1631478137050" duration="119000" />
+      <workItem from="1631764340742" duration="857000" />
+      <workItem from="1633235986176" duration="982000" />
+      <workItem from="1636764772779" duration="1909000" />
+      <workItem from="1636776824799" duration="580000" />
+      <workItem from="1649860087168" duration="15316000" />
+      <workItem from="1650110860473" duration="1796000" />
+      <workItem from="1650596712662" duration="594000" />
+      <workItem from="1651588371691" duration="580000" />
+      <workItem from="1655615589267" duration="74000" />
+      <workItem from="1656366401772" duration="1497000" />
+      <workItem from="1656381094218" duration="667000" />
+      <workItem from="1656391311394" duration="857000" />
+      <workItem from="1657397255386" duration="21000" />
+      <workItem from="1657402430592" duration="2494000" />
+      <workItem from="1661002848982" duration="621000" />
+      <workItem from="1661011759125" duration="24000" />
+      <workItem from="1661614900455" duration="601000" />
+      <workItem from="1661828412422" duration="849000" />
+      <workItem from="1663115783257" duration="1259000" />
+      <workItem from="1663210013617" duration="32716000" />
+      <workItem from="1664026022485" duration="2636000" />
+      <workItem from="1666228195086" duration="1068000" />
+      <workItem from="1669406807779" duration="600000" />
+      <workItem from="1669413049852" duration="30000" />
+      <workItem from="1669690006657" duration="1853000" />
+      <workItem from="1669766787713" duration="2574000" />
+      <workItem from="1669899196962" duration="29000" />
+      <workItem from="1669916935114" duration="763000" />
+      <workItem from="1670079772665" duration="1001000" />
+      <workItem from="1672978772284" duration="587000" />
+      <workItem from="1673282942733" duration="237000" />
+      <workItem from="1673464116429" duration="611000" />
+      <workItem from="1673725033999" duration="1051000" />
+      <workItem from="1673730325019" duration="594000" />
+      <workItem from="1673738698437" duration="8158000" />
+      <workItem from="1673921630372" duration="4024000" />
+      <workItem from="1674657212820" duration="1841000" />
+      <workItem from="1675213515577" duration="3295000" />
+      <workItem from="1675784082692" duration="835000" />
+      <workItem from="1679157342686" duration="6134000" />
+      <workItem from="1680355635157" duration="1413000" />
+      <workItem from="1681435416544" duration="6656000" />
+      <workItem from="1694442549366" duration="1903000" />
+      <workItem from="1698027880136" duration="1975000" />
+      <workItem from="1698905640602" duration="2139000" />
+      <workItem from="1700359674871" duration="3814000" />
+    </task>
+    <task id="LOCAL-00001" summary="Style coordinatino (between loalhost and production which is different in app/html.js and server/index.js for some reason.)">
+      <created>1663472672225</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1663472672225</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Style coordinatino (between loalhost and production which is different in app/html.js and server/index.js for some reason.)" />
+    <MESSAGE value="The keyword accuracy count keeps going to the highest number even if you choose 1.  3 in my case.&#10;&#10;In the quiz question to fill-in-the-blank, the answer is now displayed on the finished view.&#10;&#10;I would prefer to have the question type listed at the top of each question section just to know what to expect." />
+    <option name="LAST_COMMIT_MESSAGE" value="The keyword accuracy count keeps going to the highest number even if you choose 1.  3 in my case.&#10;&#10;In the quiz question to fill-in-the-blank, the answer is now displayed on the finished view.&#10;&#10;I would prefer to have the question type listed at the top of each question section just to know what to expect." />
+  </component>
+</project>

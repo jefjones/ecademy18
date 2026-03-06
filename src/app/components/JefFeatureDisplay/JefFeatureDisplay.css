@@ -1,0 +1,111 @@
+@import 'variables.css';
+
+.container {
+	max-width: 400px;
+	/* box-shadow: 5px 10px 8px #888888; */
+	border: 1px;
+	border-style: solid;
+	border-bottom: 1px;
+	border-bottom-style: solid;
+	border-width: 1px;
+	padding: 10px;
+	border-radius: 4px;
+	border-color: #ff8e01;
+	margin-bottom: 10px;
+}
+
+.title {
+	color: #ff8e01;
+	font-family: "Roboto", Sans-serif;
+	font-size: 18px;
+	font-weight: 400;
+	text-transform: uppercase;
+}
+
+.subHeader {
+	color: #2f296c;
+	font-family: "Roboto", Sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	text-transform: uppercase;
+}
+
+.description {
+	font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif;
+	color: #625e5e;
+	font-weight: normal !important;
+	font-size: 12px !important;
+	line-height: 1.5;
+}
+
+.pickme {
+
+}
+
+.row {
+	display: flex;
+	flex-flow: row;
+	flex-wrap: nowrap;
+}
+
+.checkbox {
+  -ms-transform: scale(1.5); /* IE */
+  -moz-transform: scale(1.5); /* FF */
+  -webkit-transform: scale(1.5); /* Safari and Chrome */
+  -o-transform: scale(1.5); /* Opera */
+  transform: scale(1.5);
+  padding: 10px;
+	margin-top: 5px;
+	margin-left: 2px;
+	margin-right: 8px;
+}
+
+.count {
+	color: var(--maroon, maroon);
+	position: relative;
+	top: 5px;
+	left: 4px;
+	font-weight: normal;
+	font-family: var(--generalFont, sans-serif);
+	letter-spacing: normal;
+	text-rendering: optimizelegibility;
+}
+
+.moreBottom {
+	margin-bottom : 12px;
+}
+
+.bigIcon {
+	width: 24px;
+}
+
+.demoText {
+	font-size: 12px;
+	font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif;
+	font-weight: normal !important;
+}
+
+.lowOpacity {
+	opacity: .4;
+}
+
+.cursor {
+	cursor: pointer;
+}
+
+.moreRight {
+	margin-right: 5px;
+}
+
+.moreLeft {
+	margin-left: 5px;
+}
+
+.noUnderline {
+	text-decoration: none;
+}
+
+.noDisplay {
+	display: inline;
+	visibility: hidden;
+}

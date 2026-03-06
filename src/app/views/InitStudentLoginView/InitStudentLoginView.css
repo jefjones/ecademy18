@@ -1,0 +1,124 @@
+@import 'variables.css';
+
+.container {
+    display: flex;
+    flex-direction: column;
+		margin: auto;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+}
+
+.logo {
+    height: 70px;
+    /* margin-top: 15px; */
+    margin-bottom: 10px;
+}
+
+.instructions {
+    font-size: 13px;
+    width: 97%;
+		margin-left: 5px;
+    margin-bottom: 10px;
+		font-weight: bold !important;
+}
+
+.instructions, .forgotPassword, .red, .link, .plainText {
+	font-weight: normal;
+	font-family: var(--generalFont, sans-serif);
+	letter-spacing: normal;
+	text-rendering: optimizelegibility;
+}
+
+.loginButton {
+  background: linear-gradient(#67ae55, #578843);
+	background-color: #69a74e;
+	border: 1px solid;
+	border-color: #3b6e22 #3b6e22 #2c5115;
+	border-radius: 5px;
+	box-shadow: inset 0 1px 1px #a4e388;
+	color: white;
+	cursor: pointer;
+	display: inline-block;
+	font-family: var(--generalFont, sans-serif);
+	font-size: 14px;
+	font-weight: bold !important;
+	letter-spacing: 1px;
+	line-height: 116%;
+	margin-bottom: 8px;
+	margin-top: 8px;
+	min-width: 84px;
+	padding: 6px 15px;
+	position: relative;
+	text-align: center;
+	text-rendering: optimizelegibility;
+	text-shadow: 0 1px 2px rgba(0,0,0,.5);
+  outline: none;
+}
+
+.loginButton:active {
+  transform: scalex(.95);
+}
+
+.loginButton:focus {
+  box-shadow: 0 0 0 1px #297e2d;
+}
+
+.topLogo {
+  font-family: arial;
+	margin-top: 35px !important;
+  margin-bottom: 20px !important;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.bold {
+		font-weight: bold;
+		margin-left: 3px;
+}
+
+.red {
+		color: var(--red, red);
+		font-size: 13px;
+		font-weight: bold;
+}
+
+.link {
+		cursor: pointer;
+		font-size: 13px;
+		color: var(--blue, blue);
+		text-decoration: none;
+		font-weight: bold;
+		margin-left: 5px;
+}
+
+.link:hover {
+		text-decoration: underline;
+}
+
+.logoSmaller {
+	height: 110px;
+	margin-bottom: 10px;
+	margin-left: 12px;
+}
+
+.smallLogo {
+    margin-top: 1px;
+    margin-bottom: -5px;
+    padding-left: 2px;
+}
+
+.plainText {
+		font-size: 12px;
+		font-weight: bool !important;
+		margin-top: 4px;
+		color: black !important;
+}
+
+.width {
+	width: 280px;
+}
+
+.moreTop {
+	margin-top: 15px !important;
+}

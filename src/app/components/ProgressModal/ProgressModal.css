@@ -1,0 +1,62 @@
+@import 'variables.css';
+
+.container {
+    z-index: 99;
+}
+
+.dialogHeader, .workName, .chapterName, .percentLabel, .countLabel, .ofText {
+    font-family: var(--generalFont, sans-serif);
+	font-weight: normal !important;
+	letter-spacing: normal;
+	text-rendering: optimizelegibility;
+}
+
+.dialogHeader {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 6px  !important;
+    margin-bottom: 26px  !important;
+    font-size: 10pt;
+    font-weight: bold;
+}
+
+.workName {
+    font-size: 9pt;
+}
+
+.chapterName {
+    font-size: 9pt;
+}
+
+.percentLabel {
+    font-size: 10pt;
+    color: var(--gold, gold);
+    text-align: right;
+    margin-left: 10px;
+    padding-left: 10px;
+}
+
+.centered {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.countLabel {
+    font-size: 9pt;
+    color: var(--gray, gray);
+    text-align: right;
+    margin-left: 5px;
+    padding-right: 10px;
+}
+
+.ofText {
+    color: black;
+    margin-left: 4px;
+    margin-right: 4px;
+}

@@ -1,0 +1,11 @@
+@import 'variables.css';
+
+.container {
+
+}
+
+.text {
+	font-family: var(--generalFont, sans-serif);
+	text-rendering: optimizelegibility;
+	font-size: 12px;
+}

@@ -1,0 +1,561 @@
+@import 'variables.css';
+
+/* common */
+.container {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: auto;
+    margin-left: 15px;
+		max-width: 600px;
+}
+
+.label, .labelNotice, .headLabel, .remove, .error, .textRating, .labelCheckbox, .noRecord, .link, .dueDate, .checkboxText, .noDocs, .cancelLink, .excludeCourses, .plusExtraCredit, .input_superShort, .sectionLabel {
+  font-family: var(--generalFont, sans-serif);
+	font-weight: normal !important;
+	letter-spacing: normal;
+	text-rendering: optimizelegibility;
+}
+
+.icon {
+		width: 16px;
+		margin-right: 10px !important;
+		position: relative;
+		top: -3px;
+}
+
+.iconLink {
+		width: 16px;
+		margin-right: 2px !important;
+		position: relative;
+		top: -3px;
+}
+
+.iconButton {
+		position: relative;
+		top: -6px;
+		left: -2px;
+		width: 16px;
+		padding: 0px;
+		margin: 0px;
+		margin-right: 3px;
+}
+
+.iconSmall {
+		width: 14px;
+		margin-left: 4px;
+		margin-right: 0px !important;
+		cursor: pointer;
+}
+
+.error {
+    color: var(--red, red);
+		font-size: 12px;
+}
+
+.label {
+  font-size: 10px;
+}
+
+.headLabel {
+  font-size: 10px;
+}
+
+.dateTimePicker {
+    margin-top: 0px;
+    font-size: 11px;
+    border-radius: 4px;
+    font-weight: bold;
+    width: 100px;
+}
+
+.dateColumn {
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+    margin-left: 5px;
+    margin-top: 10px;
+    margin-bottom: 12px;
+    width: 100px;
+}
+
+.dueDateLabel {
+    margin-left: 15px;
+}
+
+.singleDropDown {
+  /*margin-top: 6px !important;*/
+  margin-left: 4px;
+  font-size: 10px;
+}
+
+.remove {
+  color: var(--maroon, maroon);
+  cursor: pointer;
+  font-size: 9px;
+}
+
+.tableLabelClass {
+	margin-bottom: 0px !important;
+	padding-bottom: 0px !important;
+  font-size: 8pt !important;
+  text-align: left !important;
+  font-weight: bold !important;
+  padding-right: 2px;
+  text-decoration: underline;
+  font-family: var(--generalFont, sans-serif);
+  font-weight: normal !important;
+  letter-spacing: normal;
+  text-rendering: optimizelegibility;
+}
+
+.firstColumnClass {
+    max-width: 50px !important;
+    line-height: 2 !important;
+    flex-wrap: wrap !important;
+}
+
+.rowRight {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-end;
+    margin-right: 25px;
+}
+
+.submitButton {
+    background: linear-gradient(#67ae55, #578843);
+  	background-color: #69a74e;
+  	border: 1px solid;
+  	border-color: #3b6e22 #3b6e22 #2c5115;
+  	border-radius: 5px;
+  	box-shadow: inset 0 1px 1px #a4e388;
+  	color: white;
+  	cursor: pointer;
+  	display: inline-block;
+  	font-family: var(--generalFont, sans-serif);
+  	font-size: 12px;
+  	font-weight: bold !important;
+  	letter-spacing: 1px;
+  	line-height: 116%;
+    margin-top: 8px;
+  	margin-left: 12px;
+  	min-width: 50px;
+  	padding: 2px 5px;
+  	position: relative;
+  	text-align: center;
+  	text-rendering: optimizelegibility;
+  	text-shadow: 0 1px 2px rgba(0,0,0,.5);
+    outline: none;
+}
+
+.submitButton:active {
+    transform: scaleX(.89);
+    background: linear-gradient(#aec3a9, #578843);
+  	border: 1px solid;
+  	border-color: #3b6e22 #3b6e22 #2c5115;
+  	border-radius: 5px;
+  	box-shadow: inset 0 1px 1px #a4e388;
+  	color: gray;
+  	cursor: default;
+}
+
+.submitButton:hover {
+    box-shadow: 0 0 0 1px #297e2d;
+}
+
+.cellSpacing {
+    margin-right: 20px;
+}
+
+.multiSelect {
+    z-index: 99 !important;
+    min-width: 100px;
+    width: auto;
+    font-size: 11px;
+    margin-top: 5px;
+    margin-bottom: 8px;
+    margin-right: 10px;
+}
+
+.row {
+    display: flex;
+    flex-flow: row;
+		align-items: baseline;
+}
+
+.rowNowrap {
+    display: flex;
+    flex-flow: row;
+		flex-wrap: nowrap;
+}
+
+.textRating {
+    font-size: 10px;
+    margin-right: 4px;
+    margin-top: 4px;
+}
+
+.labelCheckbox {
+		position: relative;
+		top: 7px;
+    font-size: 11px !important;
+    margin-right: 5px;
+}
+
+.checkbox {
+    margin-top: 10px;
+    margin-left: 8px;
+}
+
+.textDisplay {
+  margin-top: 10px !important;
+  margin-left: 10px !important;
+}
+
+.noRecords {
+		font-weight: bold;
+		color: var(--red, red);
+		font-size: 12px;
+		font-style: italic;;
+}
+
+.red {
+		color: var(--red, red);
+}
+
+.link {
+		font-size: 12px;
+		text-decoration: none;
+		cursor: pointer;
+		color: var(--blue, blue);
+}
+
+.link:hover {
+		text-decoration: underline;
+}
+
+.rowWrap {
+	display: flex;
+	flex-flow: row;
+	flex-wrap: wrap;
+}
+
+.moreLeft {
+		margin-left: 17px;
+}
+
+.nameLinkStyle {
+		cursor: pointer;
+		margin-top: 10px;
+}
+
+.image {
+    margin-top: 10px;
+    height: 13px;
+}
+
+.dueDate {
+		font-size: 11px;
+		margin-top: 8px;
+}
+
+.dateColumn {
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+    margin-left: 5px;
+    margin-top: 10px;
+    margin-bottom: 12px;
+    width: 100px;
+}
+
+.leftSpace {
+		margin-left: 8px;
+}
+
+.moreTop {
+		margin-top: 10px !important;
+}
+
+.filters {
+		background-color: #ecf2ef;
+		padding: 2px;
+		border-radius: 4px;
+		padding-left: 10px;
+		margin-right: 20px;
+}
+
+.checkboxText {
+		font-size: 11px;
+		margin-right: 10px;
+}
+
+.position {
+		position: relative;
+		top: 7px;
+}
+
+.noDocs {
+		font-style: italic;
+		color: var(--gray, gray);
+		font-size: 11px;
+		margin-bottom: 10px;
+}
+
+.alotLeft {
+		margin-left: 40px;
+}
+
+.moveTop {
+	position: relative;
+	top: 8px;
+}
+
+.linkDisplay {
+		margin-bottom: 8px !important;
+		margin-left: -3px !important;
+		margin-top: 3px !important;
+}
+
+.labelCourseType {
+		font-size: 11px;
+		width: 100px;
+		text-align: right;
+		position: relative;
+		top: -2px;
+		left: 5px;
+}
+
+.lineSpace {
+		margin-bottom: 4px;
+}
+
+.blue {
+		color: var(--blue, blue);
+}
+
+.dialogButtons {
+    text-align: center;
+		margin-bottom: 6px !important;
+    margin-top: 12px !important;
+}
+
+.muchLeft {
+		margin-left: 50px;
+}
+
+.cancelLink {
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 10pt;
+    color: #4f5253;
+		position: relative;
+		top: -8px;
+}
+
+.required {
+	position: relative;
+	top: 4px;
+	left: 4px;
+}
+
+.smallRequired {
+  margin-left: 5px;
+  width: 8px;
+  top: 5px;
+}
+
+.labelNotice {
+		margin-left: 20px;
+		font-size: 10px;
+		color: var(--green, green);
+		font-style: italic;;
+}
+
+.textDisplay {
+		margin-left: 0px !important;
+		margin-top: 10px !important;
+}
+
+.labelDisplay {
+		margin-left: 0px !important;
+}
+
+.commentTextarea {
+    border-radius: 5px;
+    padding-left: 4px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    font-size: 13px;
+    width: 90%;
+		margin-right: 25px !important;
+}
+
+.yesButton {
+    margin-left: 15px;
+    background: linear-gradient(#67ae55, #578843);
+  	background-color: #69a74e;
+  	border: 1px solid;
+  	border-color: #3b6e22 #3b6e22 #2c5115;
+  	border-radius: 5px;
+  	box-shadow: inset 0 1px 1px #a4e388;
+  	color: white;
+  	cursor: pointer;
+  	/* display: inline-block; */
+  	font-family: var(--generalFont, sans-serif);
+  	font-size: 12px;
+  	font-weight: bold !important;
+  	letter-spacing: 1px;
+  	line-height: 9%;
+  	margin-top: 8px;
+  	min-width: 55px;
+  	padding: 6px 8px;
+  	position: relative;
+  	text-align: center;
+  	text-rendering: optimizelegibility;
+  	text-shadow: 0 1px 2px rgba(0,0,0,.5);
+    outline: none;
+		max-height: 22px;
+		width: auto;
+}
+
+.yesButton:active {
+    transform: scaleX(.89);
+}
+
+.red {
+		background: linear-gradient(#9e0714, #c21a2d) !important;
+		background-color: #a74e4f !important;
+		border-color: #6e222a #6e2227 #52151b !important;
+}
+
+.dialogButtons {
+    text-align: center;
+    margin-bottom: 6px !important;
+}
+
+.buttonText {
+		position: relative;
+		top: 4px;
+		font-family: var(--generalFont, sans-serif);
+  	font-size: 12px;
+  	font-weight: bold !important;
+  	letter-spacing: 1px;
+  	line-height: 9%;
+}
+
+.fileAttach {
+  margin-right: 20px;
+	cursor: pointer;
+}
+
+.labelUpload {
+  font-size: 12px;
+  margin-left: -5px;
+  margin-top: 2px;
+}
+
+.explanation {
+  color: var(--blue, blue);
+  font-size: 13px;
+  max-width: 350px;
+}
+
+.someTop {
+	margin-left: 8px;
+	margin-top: 4px;
+}
+
+.linkSpace {
+	margin-left: 8px;
+	margin-top: 8px;
+}
+
+.excludeCourses {
+		color: var(--green, green);
+		font-size: 11px;
+}
+
+.plusExtraCredit, .totalPoints {
+	color: var(--green, green);
+	font-size: 12px;
+	margin-right: 4px;
+	margin-top: 3px;
+	margin-left: 3px;
+}
+
+.totalPoints {
+	color: black;
+	font-weight: bold;
+	margin-top: 3px;
+	margin-left: 3px;
+}
+
+.input_superShort {
+	width: 30px !important;
+	margin-right: 1px !important;
+	margin-left: 1px !important;
+	border-radius: 5px;
+	border: 1px solid #d1d9de;
+	background: #fff !important;
+	color: black;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 2px;
+	padding-left: 5px;
+}
+
+.input_superShort:focus {
+		box-shadow: 0 0 0 2px #297e2d;
+}
+
+.boldText {
+		font-weight: bold;
+}
+
+.rowPoints {
+	display: flex;
+	flex-flow: row;
+	flex-wrap: wrap;
+	height: 20px !important;
+}
+
+.gradedByBackground {
+	background-color: var(--lighterBlue, lightBlue);
+	border-radius: 4px;
+	padding: 4px;
+	margin-right: 20px;
+}
+
+.sectionLabel {
+	font-size: 12px !important;
+	color: black;
+}
+
+.studentsBackground {
+	background-color: var(--lightBlue, lightBlue);
+	border-radius: 4px;
+	padding: 4px;
+	margin-right: 20px;
+}
+
+.multiSelect {
+    z-index: 99 !important;
+    min-width: 100px;
+    width: auto;
+    font-size: 11px;
+    margin-bottom: 8px;
+    margin-right: 10px;
+}
+
+.includeCourseBackground {
+	background-color: var(--lightGray, lightGray);
+	border-radius: 4px;
+	padding: 4px;
+	margin-right: 20px;
+}
+
+.hidden {
+	display: none;
+	visibility: hidden;
+}

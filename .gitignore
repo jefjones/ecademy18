@@ -1,0 +1,16 @@
+/src/app/api_host.js
+/src/app/penspring_host.js
+node_modules
+npm-debug.log
+.DS_Store
+.vscode/
+.happypack
+
+# built files
+/dist
+static/assets
+static/app.*
+server/modules/react-server-app
+
+/src/app/html.js  //This is different on localhost and production
+/src/server/index.js  //This is different on localhost and production

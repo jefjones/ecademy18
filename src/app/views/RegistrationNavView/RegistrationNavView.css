@@ -1,0 +1,352 @@
+@import 'variables.css';
+
+/* common */
+@media only screen
+and (min-width : 700px) {
+/* Styles */
+  .container {
+    max-width: 350px;
+  }
+}
+
+.unorderedList {
+    overflow-y: auto;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    flex-flow:column;
+    /* margin-top: 10px; */
+    margin-bottom: 10px !important;
+}
+
+.workSummary {
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-bottom: 10px;
+    width: auto;
+}
+
+.pageTitle {
+    position: relative;
+    top: 10px;
+}
+
+.notSubmitted, .stepLabel, .stepCount, .workNameLabel, .goWhere, .personal, .text, .calendarLink, .label, .link, .classification, .approved, .denied, .subheading, .redText {
+    font-family: var(--generalFont, sans-serif);
+    font-weight: normal !important;
+    letter-spacing: normal;
+    text-rendering: optimizelegibility;
+    font-size: 12px;
+}
+
+.text {
+  font-size: 12px;
+}
+
+.redText {
+  font-size: 12px;
+	color: maroon;
+}
+
+.workNameLabel {
+    margin-left: 13px;
+    margin-bottom:-6px !important;
+}
+
+.menuItem {
+    display: block;
+    color: black;
+    cursor: pointer;
+    font-family: var(--generalFont, sans-serif);
+    font-size: 12px;
+    letter-spacing: 1px;
+    line-height: 286%;
+    margin-top: 4px;
+    margin-left: 14px;
+    margin-right: 4px;
+    text-align: left;
+    text-rendering: optimizelegibility;
+    text-decoration: none;
+    -webkit-transition: all .8s;
+    transition: all .8s;
+    /* z-index: 99; */
+}
+
+.current {
+    margin-top: 5px;
+    background-color: #ffcc66;
+    color: white;
+}
+
+.moreLeft {
+    margin-left: 10px;
+}
+
+.littleLeft {
+    margin-left: 10px;
+}
+
+.marginLeft {
+    margin-left: 15px;
+}
+
+.goWhere {
+    color: var(--blue, blue);
+    font-size: 14px;
+    margin-left: 15px;
+    margin-bottom: 20px !important;
+}
+
+.loading {
+    margin-top: 20px;
+    height: 50px;
+}
+
+.implemented {
+    font-weight: bold !important;
+    color: maroon;
+}
+
+.listManage {
+  margin-left: 12px;
+}
+
+.row {
+  display: flex;
+  flex-flow: row;
+}
+
+.listButton {
+  position: relative;
+  top: 10px;
+  left: -7px;
+}
+
+.moreBottom {
+  margin-bottom: 10px !important;
+}
+
+.personal {
+  font-style: italic;
+  color: var(--gray, gray);
+  text-transform: lowercase;
+  margin-right: 4px;
+  font-size: 10px;
+}
+
+.calendarLink {
+  cursor: pointer;
+  margin-left: 20px;
+  color: var(--linkMaroon, maroon);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.topSpace {
+  margin-top: 8px !important;
+}
+
+.noWrap {
+  white-space: nowrap;;
+}
+
+.desktopLeft {
+  margin-right: 25px;
+  width: 350px;
+}
+
+.icon {
+	margin-left: 8px;
+  margin-right: 4px;
+	margin-top: 5px;
+  width: 16px;
+	cursor: pointer;
+	outline: none;
+}
+
+.iconWarning {
+	margin-top: 7px !important;
+	margin-left: 4px !important;
+	width: 16px;
+}
+
+.moreLeft {
+	margin-left: 28px;
+}
+
+.moreTop {
+	margin-top: 4px !important;
+}
+
+.muchMoreTop {
+	margin-top: 8px !important;
+}
+
+.label {
+	font-size: 13px;
+	font-weight: bold !important;
+
+}
+
+.instructions, .red {
+		margin-top: 10px;
+		margin-left: 10px;
+		width: auto;
+		max-width: 450px;
+	  font-family: var(--generalFont, sans-serif);
+		font-weight: normal !important;
+		letter-spacing: normal;
+		text-rendering: optimizelegibility;
+		font-size: 12px;
+}
+
+.red {
+		color: var(--red, red);
+		font-weight: bold;
+		font-size: 14px !important;
+}
+
+.aLotLeft {
+	margin-left: 15px;
+}
+
+.iconHigher {
+		margin-left: 8px !important;
+		width: 16px;
+		cursor: pointer;
+}
+
+.required {
+		position: relative;
+		top: -6px;
+		margin-right: 5px;
+}
+
+.smallRequired {
+  position: relative;
+  top: -1px;
+  margin-left: 5px !important;
+}
+
+.requiredSize {
+  width: 8px;
+}
+
+.mediumRequired {
+  position: relative;
+  margin-left: 5px;
+  width: 14px;
+  top: 3px;
+}
+
+.link {
+		font-size: 12px;
+		color: var(--blue, blue);
+		text-decoration: none;
+		margin-left: 5px;
+		cursor: pointer;
+		margin-top: 3px !important;
+}
+
+.link:hover {
+		text-decoration: underline;
+}
+
+.pointer {
+	cursor: pointer
+}
+
+.iconRight {
+	margin-left: 4px !important;
+	margin-right: 8px !important;
+  width: 12px !important;
+	position: relative;
+	top:-4px;
+	left: 4px;
+}
+
+.tabMargin {
+	margin-left: 8px;
+}
+
+.classification {
+    width: 100%;
+    color: white;
+    background-color: var(--blue, blue);
+    font-size: 12px;
+    margin-top: 6px;
+    padding-left: 5px;
+    border-radius: 3px;
+		padding-top: 2px;
+}
+
+.lotTop {
+	position: relative;
+	top: 9px;
+}
+
+.approved, .denied {
+	font-size: 12px;
+	margin-left: 4px;
+	margin-right: 5px;
+	margin-top: 8px;
+	text-transform: capitalize;
+}
+
+.approved {
+	color: var(--green, green);
+}
+
+.denied {
+	color: var(--maroon, maroon);
+}
+
+.muchMoreTop {
+		margin-top: 10px;
+}
+
+.lessTop {
+	position: relative;
+	top: -10px;
+}
+
+.strong {
+	font-weight: bold !important;
+}
+
+.positionText {
+	position: relative;
+	top: 12px;
+	left: 5px;
+}
+
+.stepLabel {
+		color: var(--green, green);
+		font-size: 20px;
+		margin-left: 2px;
+}
+
+.stepCount {
+	color: var(--gold, gold);
+	font-size: 20px;
+	margin-left: 5px;
+}
+
+.linkDisplay {
+		margin-bottom: 8px !important;
+		margin-left: -3px !important;
+		margin-top: 3px !important;
+}
+
+.moreSpace {
+		margin-left: 22px;
+		margin-right: 8px;
+}
+
+.notSubmitted {
+	font-style: italic;
+	color: var(--maroon, maroon);
+	font-size: 12px;
+}

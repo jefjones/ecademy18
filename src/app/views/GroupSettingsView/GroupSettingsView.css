@@ -1,0 +1,337 @@
+@import 'variables.css';
+
+/* common */
+.container {
+    /* position: relative;
+    left: 0;
+    top: 0; */
+    width: auto;
+		max-width: 650px;
+}
+
+.unorderedList {
+    overflow-y: auto;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    flex-flow:column;
+}
+
+.whiteLine {
+    color:white;
+    opacity: .5;
+    width:140px;
+    text-align:left;
+    margin-left:15px;
+    margin-top:10px;
+}
+
+.singleDropDown {
+    margin-top: -5px !important;
+    padding-top: -5px !important;
+    margin-bottom: 2px !important;
+}
+
+.menuItemContainer {
+  display: flex;
+  justify-content: flex-start;
+  flex-flow:row;
+}
+
+.rightArrow {
+  float: right;
+  margin-top: 8px;
+
+}
+
+.spreadToRight {
+  justify-content: space-between !important;
+}
+
+.subMenuArrow {
+  width: 100%;
+  margin-right: 4px;
+  cursor: pointer;
+}
+
+.workSummary {
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-bottom: 10px;
+    width: auto;
+}
+
+.pageTitle {
+    position: relative;
+    top: 10px;
+}
+
+.selectLabelClass, .error, .label, .subTitle, .addNew {
+    font-family: var(--generalFont, sans-serif);
+    font-weight: normal !important;
+    letter-spacing: normal;
+    text-rendering: optimizelegibility;
+    font-size: 9px;
+}
+
+.selectLabelClass {
+    margin-bottom:-4px !important;
+}
+
+.selectListClass {
+    /*margin-bottom: -8px !important;*/
+    margin-top: -10px !important;
+    mmargin-bottom: 20px !important;
+}
+
+.menuItem {
+    display: block;
+    color: black;
+    cursor: pointer;
+    font-family: var(--generalFont, sans-serif);
+    font-size: 11px;
+    letter-spacing: 1px;
+    line-height: 286%;
+    margin-top: 4px;
+    margin-left: 14px;
+    margin-right: 4px;
+    text-align: left;
+    text-rendering: optimizelegibility;
+    text-decoration: none;
+    -webkit-transition: all .8s;
+    transition: all .8s;
+    z-index: -1;
+}
+
+.dateRow {
+    display: flex;
+    flex-direction: row;
+    font-size: 13px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.dateTimePicker {
+    margin-top: 0px;
+    margin-left: 8px;
+    font-size: 12px;
+    border-radius: 4px;
+}
+
+.current {
+    margin-top: 5px;
+    background-color: #ffcc66;
+    color: white;
+}
+
+.input {
+    margin-left: 10px;
+    margin-top: 8px;
+}
+
+.marginLeft {
+    margin-left: 15px;
+}
+
+.label {
+    position: relative;
+    top: 7px;
+    margin-left: 10px;
+    font-size: 9px;
+}
+.tableLabel, .dueDateLabel {
+    text-align: right;
+    font-size: 11px;
+    color: var(--gray, #c4c4bc);
+    margin-right: 2px;
+    white-space: nowrap;
+}
+
+
+
+.subTitle {
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-left: 25px;
+    color: var(--blue, blue);
+}
+
+.messageBox {
+    margin-top: 9px;
+    margin-left: 10px;
+    margin-right: 6px;
+	font-family: var(--generalFont, sans-serif);
+	letter-spacing: normal;
+	text-rendering: optimizelegibility;
+    border-radius: 5px;
+    border: 1px solid #d1d9de;
+    background: #fff !important;
+    display: inline-block;
+    vertical-align: middle;
+    color: black;
+    font-size: 12px;
+    padding: 2px;
+    padding-left: 5px;
+    /* outline: none; */
+    font-weight: bold;
+}
+
+.messageBox:focus {
+    box-shadow: 0 0 0 2px #297e2d;
+}
+
+.error {
+    color: var(--red, red);
+    margin-left: 10px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.subTitle {
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-left: 25px;
+    color: var(--blue, blue);
+}
+
+.editButton {
+    height: 20px;
+    margin-left: 9px;
+    margin-right: 15px;
+    margin-top: 8px;
+    background: linear-gradient(#67ae55, #578843);
+  	background-color: #69a74e;
+  	border: 1px solid;
+  	border-color: #3b6e22 #3b6e22 #2c5115;
+  	border-radius: 5px;
+  	box-shadow: inset 0 1px 1px #a4e388;
+  	color: white;
+  	cursor: pointer;
+  	display: inline-block;
+  	font-family: var(--generalFont, sans-serif);
+  	font-size: 12px;
+  	font-weight: bold !important;
+  	letter-spacing: 1px;
+  	line-height: 9%;
+  	min-width: 55px;
+  	padding: 3px 4px;
+  	position: relative;
+  	text-align: center;
+  	text-rendering: optimizelegibility;
+  	text-shadow: 0 1px 2px rgba(0,0,0,.5);
+    outline: none;
+}
+
+.editButton:active {
+    transform: scaleX(.89);
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.tableDisplay {
+    width: 97%;
+}
+
+.lastLine, .whiteBack {
+    background-color: white !important;
+}
+
+.count {
+    margin-top: 7px;
+    margin-right: 4px;
+    margin-left: 4px;
+}
+
+.rowTight {
+    display: flex;
+    flex-flow: row;
+}
+
+.image {
+    width: 14px;
+    margin-top: 5px;
+    margin-right: 12px;
+}
+
+.image:hover {
+    opacity: 1;
+    color: var(--menuHoverLinks, maroon);
+    text-shadow: 0 1px 2px rgba(0,0,0,.5);
+    -webkit-transition: all .8s;
+    transition: all .8s;
+    box-shadow: inset 0 0 .4em #d4af37, 0 0 .4em #d4af37;
+}
+
+.image:active {
+    opacity: 1;
+    color: var(--menuHoverLinks, maroon);
+    text-shadow: 0 1px 2px rgba(0,0,0,.5);
+    -webkit-transition: all .8s;
+    box-shadow: inset 0 0 .4em #d4af37, 0 0 .4em #d4af37;
+}
+
+.lowOpacity {
+    opacity: .3;
+}
+
+.highOpacity {
+    opacity: 1;
+}
+
+.linkStyle {
+    cursor: pointer;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.column {
+    display: flex;
+    flex-flow: column;
+}
+
+.cancelButton {
+    font-weight: normal;
+	font-family: var(--generalFont, sans-serif);
+	font-weight: normal !important;
+	letter-spacing: normal;
+	text-rendering: optimizelegibility;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 10pt;
+    position: relative;
+    left: 15px;
+    top: 11px;
+}
+
+.cancelButton:hover {
+    color: #353e40 !important;
+}
+
+.addNew {
+    font-size: 12px;
+    cursor: pointer;
+    margin-left: 15px;
+    text-decoration: none;
+    color:black;
+}
+
+.loading {
+    margin-top: 20px;
+    margin-left: 20px !important;
+}
+
+.count {
+    font-size: 11px;
+    color: var(--maroon, maroon);
+    position: relative;
+    top: 5px;
+    left: -3px;
+}

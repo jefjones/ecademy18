@@ -1,0 +1,138 @@
+@import 'variables.css';
+
+/* common */
+.container {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: auto;
+    margin-left: 15px;
+}
+
+.checkboxLabel, .headerLabel, .label, .cancelLink {
+	  font-family: var(--generalFont, sans-serif);
+		font-weight: normal !important;
+		letter-spacing: normal;
+		text-rendering: optimizelegibility;
+}
+
+.label {
+		font-size: 13px;
+}
+
+.submitButton {
+    background: linear-gradient(#67ae55, #578843);
+  	background-color: #69a74e;
+  	border: 1px solid;
+  	border-color: #3b6e22 #3b6e22 #2c5115;
+  	border-radius: 5px;
+  	box-shadow: inset 0 1px 1px #a4e388;
+  	color: white;
+  	cursor: pointer;
+  	display: inline-block;
+  	font-family: var(--generalFont, sans-serif);
+  	font-size: 12px;
+  	font-weight: bold !important;
+  	letter-spacing: 1px;
+  	line-height: 116%;
+    margin-top: 15px;
+  	margin-left: 12px;
+  	min-width: 50px;
+  	padding: 2px 5px;
+  	position: relative;
+  	text-align: center;
+  	text-rendering: optimizelegibility;
+  	text-shadow: 0 1px 2px rgba(0,0,0,.5);
+    outline: none;
+}
+
+.submitButton:active {
+    transform: scaleX(.89);
+    background: linear-gradient(#aec3a9, #578843);
+  	border: 1px solid;
+  	border-color: #3b6e22 #3b6e22 #2c5115;
+  	border-radius: 5px;
+  	box-shadow: inset 0 1px 1px #a4e388;
+  	color: gray;
+  	cursor: default;
+}
+
+.submitButton:hover {
+    box-shadow: 0 0 0 1px #297e2d;
+}
+
+.fromLeft {
+		margin-left: 200px;
+}
+
+.textDisplay {
+		margin-top: 8px;
+		margin-left: 15px;
+}
+
+.smallIcon {
+		width: 12px;
+		margin-right: 5px;
+}
+
+.iconSpace {
+		margin-left: 12px;
+}
+
+.row {
+		display: flex;
+		flex-flow: row;
+}
+
+.moreSpace {
+		margin-top: 18px !important;
+		margin-bottom: 8px;
+}
+
+.subDiv {
+		margin-left: 10px;
+		margin-top: 10px !important;
+		margin padding: 10px;
+}
+
+.giveMeSpace {
+		margin-bottom: 12px;
+}
+
+.cancelLink {
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 10pt;
+    color: #4f5253;
+    margin-top: 10px;
+}
+
+.moreTop {
+	margin-top: 15px !important;
+}
+
+.widthInstructions {
+	max-width: 600px;
+}
+
+.lowOpacity {
+	opacity: .4;
+}
+
+.headerLabel {
+	font-size: 13px !important;
+	font-weight: bold !important;
+}
+
+.space {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.muchBottom {
+	margin-bottom: 40px;
+}
+
+.checkboxLabel {
+	font-size: 12px !important;
+}

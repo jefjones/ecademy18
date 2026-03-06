@@ -1,0 +1,371 @@
+@import 'variables.css';
+
+.container {
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+}
+
+.center {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+/* div {
+    width: auto;
+} */
+
+.logo {
+    height: 70px;
+    /* margin-top: 15px; */
+    margin-bottom: 10px;
+}
+
+.smallLogo {
+    margin-top: 1px;
+    margin-bottom: -5px;
+    padding-left: 2px;
+}
+
+/* .textLogo {
+  margin-top: 25px;
+} */
+
+/*.textBeforeLogo {
+    padding-bottom: 15px;
+}*/
+
+.loginOption {
+    padding: 4px;
+}
+
+.loginOption:active {
+  transform: scalex(.95);
+}
+
+.free {
+    color: #297e2d;
+    font-size: 13pt;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+.text {
+    font-size: 13px;
+    width: 97%;
+    margin-left: 5px;
+}
+
+.wordText {
+    margin-bottom: 12px;
+}
+
+.boldText, .textLogo, .login,  .errorMessage, .slogan, .forgotPassword, .passwordResetRequest, .learner, .sphere, .demoLeft, .instructions, .schoolName {
+	font-weight: normal;
+	font-family: var(--generalFont, sans-serif);
+	letter-spacing: normal;
+	text-rendering: optimizelegibility;
+}
+
+.boldText {
+  font-weight: bold !important;
+  font-size: 12px;
+}
+
+.moreRight {
+  margin-right: 10px;
+}
+
+.slogan {
+    font-size: 10px;
+    margin-left: 6px;
+    margin-bottom: 12px;
+    margin-top: 0px;
+}
+
+.loginButton, .resetButton {
+  background: linear-gradient(#67ae55, #578843);
+	background-color: #69a74e;
+	border: 1px solid;
+	border-color: #3b6e22 #3b6e22 #2c5115;
+	border-radius: 5px;
+	box-shadow: inset 0 1px 1px #a4e388;
+	color: white;
+	cursor: pointer;
+	display: inline-block;
+	font-family: var(--generalFont, sans-serif);
+	font-size: 14px;
+	font-weight: bold !important;
+	letter-spacing: 1px;
+	line-height: 116%;
+	margin-bottom: 8px;
+	margin-top: 8px;
+	min-width: 84px;
+	padding: 6px 15px;
+	position: relative;
+	text-align: center;
+	text-rendering: optimizelegibility;
+	text-shadow: 0 1px 2px rgba(0,0,0,.5);
+  outline: none;
+}
+
+.opacityLow {
+  opacity: .6;
+}
+
+.opacityHigh {
+  opacity: 1;
+}
+
+.loginButton:active {
+  transform: scalex(.95);
+}
+
+.loginButton:focus {
+  box-shadow: 0 0 0 1px #297e2d;
+}
+
+.nameFull {
+  display: flex;
+  flex-direction: row;
+}
+
+.signUp, .signUp:active, .signUp:visited {
+  color: #297e2d;
+  text-decoration: underline;
+  margin-left: 6px;
+  margin-right: 6px;
+  cursor: pointer;
+  /*font-weight: bold;*/
+}
+
+.signUp:hover {
+  text-decoration: underline;
+}
+
+.chosen {
+  font-weight: bold;
+	font-size: 14px;
+	margin-right: 10px;
+	position: relative;
+	top: -2px;
+}
+
+.errorMessage, .passwordResetRequest {
+    margin-top: 10px;
+    margin-left: 10px;
+    color: var(--red, red);;
+    font-size: 12px;
+}
+
+.alertMessage {
+    color: #333333;
+    font-family: "OpenSans", Open Sans, sans-serif;
+    vertical-align: middle;
+    text-decoration: none;
+    margin-right: 3px;
+    color: var(--red, red);;
+    font-size: 12px;
+}
+
+.forgotPassword, .createAccount, .demoLeft {
+    color: var(--green, green);
+    font-size: 12px;
+    margin-top: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    position: relative;
+    left: -100px;
+}
+
+.recaptcha {
+    margin-top: 10px;
+}
+
+.resetButton {
+    margin-top: 25px !important;
+}
+
+.passwordResetRequest {
+    margin-top: 15px !important;
+}
+
+.topLogo {
+  font-family: arial;
+  margin-top: 35px !important;
+	margin-bottom: 10px !important;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.learner {
+  color: var(--blue, blue);
+}
+
+.sphere {
+  color: var(--gold, gold);
+}
+
+.waitMessage {
+  font-size: 12px;
+  color: var(--blue, blue);
+  margin-top: 5px;
+  margin-left: 10px;
+}
+
+.demoText {
+  color: black !important;
+  font-weight: bold;
+}
+
+.demoColumn {
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+}
+
+.demoLeft {
+  text-align: left !important;
+  margin-top: 8px !important;
+}
+
+.instructions, .red {
+		margin-bottom: 10px;
+		margin-top: 10px;
+		margin-left: 10px;
+		width: auto;
+		max-width: 450px;
+		font-size: 13px;
+}
+
+.instructions {
+	color: var(--green, green);
+}
+
+.red {
+		color: var(--red, red);
+		font-weight: bold;
+		font-size: 12px !important;
+}
+
+.schoolName {
+		margin-left: 30px;
+		font-size: 18px !important;
+		color: var(--blue, blue);
+}
+
+.row {
+	display: flex;
+	flex-flow: row;
+	flex-direction: row;
+}
+
+.logoSmaller {
+	height: 110px;
+	margin-bottom: 10px;
+	margin-left: 12px;
+}
+
+.smallLogo {
+    margin-top: 1px;
+    margin-bottom: -5px;
+    padding-left: 2px;
+}
+
+.plainText {
+		font-size: 12px;
+		font-weight: bool !important;
+		margin-top: 4px;
+		color: black !important;
+}
+
+.link {
+	font-size: 12px;
+	color: var(--blue, blue);
+	cursor: pointer;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.link:hover {
+	text-decoration: underline;
+}
+
+.button {
+    margin-left: 15px;
+    background: linear-gradient(#67ae55, #578843);
+  	background-color: #69a74e;
+  	border: 1px solid;
+  	border-color: #3b6e22 #3b6e22 #2c5115;
+  	border-radius: 5px;
+  	box-shadow: inset 0 1px 1px #a4e388;
+  	color: white;
+  	cursor: pointer;
+  	/* display: inline-block; */
+  	font-family: var(--generalFont, sans-serif);
+  	font-size: 12px;
+  	font-weight: bold !important;
+  	letter-spacing: 1px;
+  	line-height: 9%;
+  	margin-top: 8px;
+  	min-width: 55px;
+  	padding: 6px 8px;
+  	position: relative;
+  	text-align: center;
+  	text-rendering: optimizelegibility;
+  	text-shadow: 0 1px 2px rgba(0,0,0,.5);
+    outline: none;
+		max-height: 22px;
+		width: auto;
+		height: 28px;
+}
+
+.button:active {
+    transform: scaleX(.89);
+}
+
+.width {
+	width: 260px;
+}
+
+.green {
+	color: var(--green, green);
+}
+
+.red {
+	color: var(--red, red);
+}
+
+.moreTop {
+  margin-top: 5px !important;
+}
+
+.muchTop {
+  margin-top: 18px;
+}
+
+.moreLeft {
+  margin-left: 4px;
+}
+
+.safariMessage {
+		margin-bottom: 10px;
+		margin-top: 10px;
+		margin-left: 10px;
+		width: auto;
+		max-width: 450px;
+		font-size: 13px;
+		color: var(--red, red);
+		font-size: 12px !important;
+		opacity: .6;
+}

@@ -1,0 +1,39 @@
+ @import 'variables.css';
+
+.label {
+    font-family: var(--generalFont, sans-serif);
+    text-rendering: optimizelegibility;
+    text-decoration: none;
+    border-radius: 3px !important;
+}
+
+.label {
+    /* margin-top: 8px; */
+    margin-bottom: 1px;
+    font-size: 12px;
+}
+
+.row {
+	display: flex;
+	flex-flow: row;
+}
+
+.lower {
+		position: relative;
+		top: 6px;
+		margin-right: 5px;
+}
+
+.timePicker {
+    width: 110px;
+    border-radius: 3px;
+    font-family: var(--generalFont, sans-serif);
+    letter-spacing: normal;
+    text-rendering: optimizelegibility;
+    font-size: 12px;
+    padding-left: 3px;
+}
+
+.bold {
+	font-weight: bold !important;
+}

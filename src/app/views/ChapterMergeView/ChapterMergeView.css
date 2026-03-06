@@ -1,0 +1,133 @@
+@import 'variables.css';
+
+.titleLine {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    width: 100%;
+		max-width: 650px;
+}
+
+.container {
+    /* position: relative;
+    left: 0;
+    top: 0; */
+    width: auto;
+		max-width: 650px;
+}
+
+.opacityLow {
+  opacity: .6;
+}
+
+.opacityHigh {
+  opacity: 1;
+}
+
+.current {
+    margin-top: 5px;
+    background-color: #ffcc66;
+    color: white;
+}
+
+.workSummary {
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-bottom: 10px;
+    width: auto;
+}
+
+.tableHeader, .tableData {
+    font-size: 13px;
+    /*margin-left: 4px;*/
+    font-family: var(--generalFont, sans-serif);
+    letter-spacing: normal;
+    text-rendering: optimizelegibility;
+}
+
+.tableHeader {
+    font-weight: bold !important;
+}
+
+.tableData {
+    margin-left: 7px;
+}
+
+.radioButton {
+    width: 20%;
+}
+
+.commentTextarea {
+    border-radius: 5px;
+    padding-left: 4px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.buttonStyle {
+    margin-left: 18px;
+    background: linear-gradient(#67ae55, #578843);
+    background-color: #69a74e;
+    border: 1px solid;
+    border-color: #3b6e22 #3b6e22 #2c5115;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 1px #a4e388;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    font-family: var(--generalFont, sans-serif);
+    font-size: 10px;
+    text-transform: uppercase;
+    font-weight: bold !important;
+    letter-spacing: 1px;
+    line-height: 116%;
+    margin-bottom: 4px;
+    margin-top: 4px;
+    min-width: 60px;
+    padding: 3px 8px;
+    position: relative;
+    text-align: center;
+    text-rendering: optimizelegibility;
+    text-shadow: 0 1px 2px rgba(0,0,0,.5);
+    outline: none;
+    box-shadow: none;
+    opacity: .80 !important;
+}
+
+.buttonPlace {
+    margin-left: 225px;
+    width: 100%;
+}
+
+.buttonStyle:active {
+  transform: scalex(.95);
+}
+
+.buttonStyle:focus {
+  box-shadow: 0 0 0 1px #297e2d;
+}
+
+.tableStyle {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 500px;
+}
+
+.lineSpace {
+    height: 42px;
+}
+
+.sectionName {
+    margin-left: 7px;
+}
+
+.alertMessage {
+    font-family: var(--generalFont, "OpenSans");
+    vertical-align: middle;
+    text-decoration: none;
+    margin-right: 3px;
+    margin-left: 15px;
+    color: red;
+    font-size: 12px;
+}

@@ -1,0 +1,213 @@
+@import 'variables.css';
+
+.container {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  border-radius: 6px;
+}
+
+.currentWork {
+    padding-right: 10px;
+    background-color: #e6f2fb;
+    width: 100%;
+    border-radius: 8px;
+}
+
+.textDisplayWidth {
+  padding: 8px;
+  border-radius: 6px;
+  transition: all 1.5s;
+}
+
+.textDisplayWidth:hover {
+    box-shadow: inset 0 0 .1em #d4af37;
+    transition: all .8s;
+}
+
+.title, .label, .text, .doneStyle, .score {
+    font-family: var(--generalFont, sans-serif);
+	font-weight: normal !important;
+	letter-spacing: normal;
+	text-rendering: optimizelegibility;
+}
+
+.score {
+    font-size: 10px;
+    color: var(--green, green);
+    margin-left: 10px;
+}
+
+.title {
+  font-size: 14px;
+  color: black !important;
+  text-shadow: none;
+  -webkit-transition: all .8s;
+  transition: all .8s;
+}
+
+.linkStyle:hover > .title {
+    color: var(--menuHoverLinks, maroon);
+    text-shadow: 0 1px 2px rgba(0,0,0,.5);
+    -webkit-transition: all .8s;
+    transition: all .8s;
+}
+
+.profilePicture {
+    z-index: -1 !important;
+    height: 45px !important;
+    opacity: .8;
+}
+
+.profilePicture:hover {
+  opacity: 1;
+  color: var(--menuHoverLinks, maroon);
+  text-shadow: 0 1px 2px rgba(0,0,0,.5);
+  -webkit-transition: all .8s;
+  transition: all .8s;
+  box-shadow: inset 0 0 .4em #d4af37, 0 0 .4em #d4af37;
+}
+
+.label {
+  font-size: 11px;
+  color: gray;
+  text-align: right;
+  margin-right: 2px;
+  padding: 4px;
+}
+
+.text {
+  font-size: 11px;
+  margin-left: 3px;
+  font-weight: bold;
+  color: maroon;
+  padding: 4px;
+}
+
+.row {
+  line-height: 0.9;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+}
+
+.menuIcon {
+  margin-left: 10px;
+  height: 18px;
+}
+
+.linkStyle, .linkStyle:hover, .linkStyle:visited {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.linkStyle:active {
+    transform: scalex(.90);
+    transform: scaley(.90);
+}
+
+.image {
+    height: 18px;
+    margin-left: 20px;
+    opacity: .8;
+}
+
+.image:hover {
+    opacity: 1;
+    color: var(--menuHoverLinks, maroon);
+    text-shadow: 0 1px 2px rgba(0,0,0,.5);
+    -webkit-transition: all .8s;
+    transition: all .8s;
+    box-shadow: inset 0 0 .4em #d4af37, 0 0 .4em #d4af37;
+}
+
+.image:active {
+    opacity: 1;
+    color: var(--menuHoverLinks, maroon);
+    text-shadow: 0 1px 2px rgba(0,0,0,.5);
+    -webkit-transition: all .8s;
+    box-shadow: inset 0 0 .4em #d4af37, 0 0 .4em #d4af37;
+}
+
+.doneStyle {
+    color: #035301;
+    cursor: pointer;
+    font-size: 12px;
+    margin-left: 18px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-shadow: none;
+    -webkit-transition: all .8s;
+    transition: all .8s;
+}
+
+.doneStyle:hover {
+    color: var(--menuHoverLinks, maroon);
+    text-shadow: 0 1px 2px rgba(0,0,0,.5);
+    -webkit-transition: all .8s;
+    transition: all .8s;
+}
+
+.buttonStyle {
+    margin-left: 18px;
+    background: linear-gradient(#67ae55, #578843);
+    background-color: #69a74e;
+    border: 1px solid;
+    border-color: #3b6e22 #3b6e22 #2c5115;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 1px #a4e388;
+    color: #991414;
+    cursor: pointer;
+    display: inline-block;
+    font-family: var(--generalFont, sans-serif);
+    font-size: 10px;
+    text-transform: uppercase;
+    font-weight: bold !important;
+    letter-spacing: 1px;
+    line-height: 116%;
+    margin-bottom: 4px;
+    margin-top: 4px;
+    min-width: 60px;
+    padding: 3px 8px;
+    position: relative;
+    text-align: center;
+    text-rendering: optimizelegibility;
+    text-shadow: 0 1px 2px rgba(0,0,0,.5);
+    outline: none;
+    box-shadow: none;
+    opacity: .80 !important;
+}
+
+.buttonStyle:active {
+  transform: scalex(.90);
+}
+
+.buttonStyle:focus {
+  opacity: 1 !important;
+}
+
+.ebiScore {
+  color: maroon;
+}
+
+.documentImage {
+    height: 20px;
+    margin-top: 13px;
+    margin-left: 20px;
+    opacity: .8;
+}
+
+.documentImage:hover {
+    opacity: 1;
+    color: var(--menuHoverLinks, maroon);
+    text-shadow: 0 1px 2px rgba(0,0,0,.5);
+    -webkit-transition: all .8s;
+    transition: all .8s;
+    box-shadow: inset 0 0 .4em #d4af37, 0 0 .4em #d4af37;
+}
+
+.iconColumn {
+    padding-top: 8px !important;
+    margin-top: 8px !important;
+}

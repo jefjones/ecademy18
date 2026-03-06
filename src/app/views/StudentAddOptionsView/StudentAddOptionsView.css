@@ -1,0 +1,103 @@
+@import 'variables.css';
+@import 'rc-time-picker/assets/index.css';
+
+/* common */
+.container {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: auto;
+}
+
+.row {
+		display: flex;
+		flex-flow: row;
+}
+
+.optionLabel, .optionCount, .description, .forgotPassword, .textBold {
+		font-family: var(--generalFont, sans-serif);
+		letter-spacing: normal;
+		text-rendering: optimizelegibility;
+}
+
+.optionLabel {
+		color: var(--green, green);
+		font-size: 20px;
+		margin-left: 10px;
+}
+
+.optionCount {
+	color: var(--gold, gold);
+	font-size: 20px;
+	margin-left: 5px;
+}
+
+.description {
+	font-size: 14px;
+	margin-left: 8px;
+	margin-top: 5px;
+	width: auto;
+}
+
+.textBold {
+	font-weight: bold;
+}
+
+.space {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.buttonPosition {
+		position: relative;
+		top: -5px;
+}
+
+.moreMarginBottom {
+	margin-bottom: 40px !important;
+}
+
+.muchTop {
+	margin-top: 80px;
+	margin-bottom: 20px;
+}
+
+.forgotPassword {
+    color: var(--green, green);
+    font-size: 12px;
+    margin-top: 20px !important;
+    margin-left: 10px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.privacyPosition {
+		margin-top: 0px;
+		margin-bottom: 20px;
+		margin-left: 10px;
+}
+
+.link {
+	font-size: 13px;
+	font-weight: bold;
+	color: var(--blue, blue);
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.link:hover {
+	text-decoration: underline;
+}
+
+.muchLeft {
+	margin-left: 30px !important;
+	position :relative;
+	top: -5px;
+	/* left: 100px; */
+}
+
+.muchMoreLeft {
+	margin-left: 100px !important;
+	position: relative;
+	top: -12px;
+}

@@ -1,0 +1,86 @@
+@import 'variables.css';
+
+/* common */
+.container {
+    /* position: relative;
+    left: 0;
+    top: 0; */
+    width: auto;
+		max-width: 650px;
+}
+
+.unorderedList {
+    overflow-y: auto;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    flex-flow:column;
+    margin-top: 20px;
+}
+
+.workSummary {
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-bottom: 10px;
+    width: auto;
+}
+
+.pageTitle {
+    position: relative;
+    top: 10px;
+}
+
+.workNameLabel, .goWhere {
+    font-family: var(--generalFont, sans-serif);
+    font-weight: normal !important;
+    letter-spacing: normal;
+    text-rendering: optimizelegibility;
+    font-size: 9px;
+}
+
+.workNameLabel {
+    margin-left: 13px;
+    margin-bottom:-6px !important;
+}
+
+.menuItem {
+    display: block;
+    color: black;
+    cursor: pointer;
+    font-family: var(--generalFont, sans-serif);
+    font-size: 11px;
+    letter-spacing: 1px;
+    line-height: 286%;
+    margin-top: 4px;
+    margin-left: 14px;
+    margin-right: 4px;
+    text-align: left;
+    text-rendering: optimizelegibility;
+    text-decoration: none;
+    -webkit-transition: all .8s;
+    transition: all .8s;
+    z-index: 99;
+}
+
+.current {
+    margin-top: 5px;
+    background-color: #ffcc66;
+    color: white;
+}
+
+.workNameInput {
+    margin-left: 10px;
+}
+
+.marginLeft {
+    margin-left: 15px;
+}
+
+.goWhere {
+    color: var(--blue, blue);
+    font-size: 14px;
+    margin-left: 15px;
+    margin-bottom: 20px !important;
+}

@@ -1,0 +1,102 @@
+@import 'variables.css';
+
+.container {
+    height: 20px;
+    width: 100%;
+    margin-top: 0px;
+    margin-bottom: 22px;
+    margin-left: 2px;
+    z-index: 1;
+}
+
+.row {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+
+.image {
+  margin-top: 1px;
+  margin-left: 13px;
+  cursor: pointer;
+}
+
+.counts {
+    margin-top: 5px;
+    margin-right: 4px;
+    font-weight: normal;
+    font-size: 9pt;
+    font-family: var(--generalFont, sans-serif);
+    font-weight: normal !important;
+    letter-spacing: normal;
+    text-rendering: optimizelegibility;
+    position: relative;
+    left: -4px;
+    color: var(--blue, blue);
+    z-index: 2;
+}
+
+.radio {
+    margin-right: 0px;
+    margin-left: 6px;
+    visibility: hidden;
+}
+
+.blueBack {
+    background: var(--blue, blue);
+    border-radius: 3px;
+    padding-top: 2px;
+}
+
+.grayBack {
+    background: var(--lightGray, gray);
+    border-radius: 2px;
+    padding-top: 2px;
+}
+
+.editModeImage {
+    cursor: pointer;
+    position: relative;
+    left: -10px;
+    z-index: 2;
+}
+
+.modeOption {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    margin-right: 2px;
+}
+
+.headText {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    color:black;
+    font-size: 10px !important;
+}
+
+.upperCase {
+    text-transform: uppercase;
+}
+
+.white {
+    color: white;
+}
+
+.imageSection {
+    margin-top: 14px;
+    margin-left: 6px;
+    display: flex;
+    flex-direction: row;
+}
+
+.editModeButton {
+    cursor: pointer;
+}
+
+.subMenu {
+    margin-top: 10px;
+    margin-left: 10px;
+}

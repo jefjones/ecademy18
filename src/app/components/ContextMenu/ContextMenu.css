@@ -1,0 +1,61 @@
+@import 'variables.css';
+
+.container {
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.text {
+    margin-top: 5px;
+    margin-left: 5px;
+    color:black;
+    font-weight: normal;
+    font-size: 8pt;
+	font-family: var(--generalFont, sans-serif);
+	font-weight: normal !important;
+	letter-spacing: normal;
+	text-rendering: optimizelegibility;
+}
+
+.imageOverlay {
+    position: relative;
+    left: -6px;
+    cursor: pointer;
+    width: 18px;
+    z-index: 9;
+}
+
+.imageBlocked {
+    cursor: pointer;
+    width: 11px;
+    z-index: 9;
+}
+
+.crossCount, .blockCount, .checkmarkCount, .sentenceEditCount {
+    color: var(--red, red);
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+.blockCount {
+    margin-left: -5px !important;
+}
+
+.imageMagnifier {
+    position: relative;
+    top: 4px;
+    left: -7px;
+    cursor: pointer;
+    width: 13px;
+    z-index: 9;
+}
+
+.imageDocument {
+}
+
+.leftWidth {
+    width: 35px;
+}

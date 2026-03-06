@@ -1,0 +1,82 @@
+@import 'variables.css';
+
+.container {
+  margin-top: 15px;
+}
+
+.label, .link, .noRecords {
+  font-family: var(--generalFont, sans-serif);
+  font-weight: normal !important;
+  letter-spacing: normal;
+  text-rendering: optimizelegibility;
+  color:black;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.row {
+  display: flex;
+  flex-flow: row;
+}
+
+.inputText {
+    margin-bottom: 1px;
+    font-size: 9px;
+}
+
+.icon {
+		width: 12px;
+		margin-right: 5px;
+}
+
+.instructions {
+		font-size: 12px;
+		cursor: pointer;
+		color: var(--green, green) !important;
+		margin-top: 4px;
+		width: 300px;
+}
+
+.label {
+	font-size: 11px;
+}
+
+.tableLabelClass {
+    font-size: 8pt !important;
+    text-align: left !important;
+    font-weight: bold !important;
+    padding-right: 2px;
+    text-decoration: underline;
+}
+
+.link {
+	font-size: 11px;
+	color: var(--blue, blue);
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.link:hover {
+	text-decoration: underline;
+}
+
+.iconSmall {
+	width: 11px !important;
+	margin-right: 3px !important;
+	position: relative;
+}
+
+.topPosition {
+	position: relative !important;
+	top: 21px !important;
+}
+
+.moreTop {
+  margin-top: 3.5px;
+}
+
+.noRecords {
+	font-size: 11px;
+	font-style: italic;
+	color: var(--gray, gray);
+}

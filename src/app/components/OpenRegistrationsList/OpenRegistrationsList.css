@@ -1,0 +1,65 @@
+@import 'variables.css';
+
+.container {
+    max-width: 300px !important;
+}
+
+.row {
+    display: flex;
+    flex-flow: row;
+}
+
+.icon {
+		width: 16px;
+		margin-right: 6px;
+		margin-left: 10px;
+		cursor: pointer;
+}
+
+.iconBig {
+		width: 18px;
+		margin-right: 14px;
+}
+
+.tableLabelClass, .link, .redLink {
+    font-family: var(--generalFont, sans-serif);
+    font-weight: normal !important;
+    letter-spacing: normal;
+    text-rendering: optimizelegibility;
+    font-size: 9px;
+}
+
+.link, .redLink {
+		color: var(--blue, blue);
+		text-decoration: none;
+		font-size: 12px;
+		cursor: pointer;
+		margin-top: 4px;
+}
+
+.link:hover, .redLink:hover {
+	text-decoration: underline;
+}
+
+.redLink {
+		color: var(--maroonLink, maroon);
+		font-size: 9px;
+}
+
+.tableLabelClass {
+    font-size: 8pt !important;
+    text-align: left !important;
+    font-weight: bold !important;
+    padding-right: 2px;
+    text-decoration: underline;
+}
+
+.iconText {
+	margin-left: 4px;
+  margin-right: 10px;
+  width: 16px;
+}
+
+.moreLeft {
+	margin-left: 15px;
+}

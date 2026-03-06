@@ -1,0 +1,135 @@
+@import 'variables.css';
+
+.container {
+  z-index: 1 !important;
+	position: relative;
+	display: flex;
+	flex-flow: row;
+}
+
+.button {
+		width: 28px;
+		height: 20px;
+  	border: 1px solid;
+  	border-radius: 3px;
+  	box-shadow: inset 0 1px 1px #a4e388;
+  	cursor: pointer;
+  	/* display: inline-block; */
+  	font-family: var(--generalFont, sans-serif);
+  	font-size: 12px;
+  	font-weight: bold !important;
+  	letter-spacing: 1px;
+  	line-height: 9%;
+  	padding: 6px 8px;
+  	text-rendering: optimizelegibility;
+  	text-shadow: 0 1px 2px rgba(0,0,0,.5);
+    outline: none;
+}
+
+.text {
+	text-rendering: optimizelegibility;
+	font-family: var(--generalFont, sans-serif);
+	font-size: 12px;
+	font-weight: normal;
+	color: black !important;
+	letter-spacing: 1px;
+}
+
+.button:active {
+    transform: scaleX(.89);
+}
+
+.color0 {
+		color: gray;
+		background: linear-gradient(#ddfad6, #b6ccad);
+		background-color: #cbf2bb;
+		border-color: #99b48b #87a379 #819c71;
+}
+
+.color1 {
+		color: black;
+		background: linear-gradient(#ffff00, #eded19);
+		background-color: #ffff00;
+		border-color: #dede0c #e9e90e #ffff00;
+}
+
+.color2 {
+		color: white;
+		background: linear-gradient(#55abad, #447688);
+		background-color: #4e9da7;
+		border-color: #22636e #22586e #154952;
+}
+
+.color3 {
+		color: white;
+		background: linear-gradient(#67ae55, #578843);
+		background-color: #69a74e;
+		border-color: #3b6e22 #3b6e22 #2c5115;
+}
+
+.color4 {
+		color: white;
+		background: linear-gradient(#67ae55, #578843);
+		background-color: #69a74e;
+		border-color: #3b6e22 #3b6e22 #2c5115;
+}
+
+.color5 {
+		color: white;
+		background: linear-gradient(#67ae55, #578843);
+		background-color: #69a74e;
+		border-color: #3b6e22 #3b6e22 #2c5115;
+}
+
+.color6 {
+		color: white;
+		background: linear-gradient(#67ae55, #578843);
+		background-color: #69a74e;
+		border-color: #3b6e22 #3b6e22 #2c5115;
+}
+
+.buttonText {
+		position: relative;
+		left: -4px;
+		font-family: var(--generalFont, sans-serif);
+  	font-size: 12px;
+  	font-weight: bold !important;
+  	/* letter-spacing: 1px; */
+  	line-height: 9%;
+}
+
+.littleLeft {
+	position: relative !important;
+	left: -1px !important;
+}
+
+
+.lessTop {
+	position: relative !important;
+	top: -4px !important;
+}
+
+.scoreLink {
+	cursor: pointer;
+	text-decoration: none;
+	outline: none;
+	color: var(--blue, blue);
+}
+
+.scoreLink:hover {
+	color: var(--blue, blue);
+	text-decoration: underline;
+}
+
+.blankHeight {
+	height: 20px;
+}
+
+.row {
+	display: flex;
+	flex-flow: row;
+}
+
+.littleRight {
+	margin-right: 4px;
+}

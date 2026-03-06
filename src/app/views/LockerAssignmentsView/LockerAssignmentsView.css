@@ -1,0 +1,95 @@
+@import 'variables.css';
+
+/* common */
+.container {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: auto;
+    margin-left: 15px;
+}
+
+.titleLine {
+		margin-top: 32px;
+}
+
+.label, .remove, .error, .cancelLink {
+  font-family: var(--generalFont, sans-serif);
+	font-weight: normal !important;
+	letter-spacing: normal;
+	text-rendering: optimizelegibility;
+}
+
+.dialogButtons {
+    text-align: center;
+    margin-top: 8px !important;
+}
+
+.muchLeft {
+		margin-left: 70px;
+}
+
+.row, .rowWrap {
+	display: flex;
+	flex-flow: row;
+}
+
+.rowWrap {
+	flex-wrap: wrap;
+}
+
+.cancelLink {
+    font-weight: normal;
+    font-family: var(--generalFont, sans-serif);
+    font-weight: normal !important;
+    letter-spacing: normal;
+    text-rendering: optimizelegibility;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 12px;
+    color: #4f5253;
+    position: relative;
+    top: 11px;
+    left: 2px;
+}
+
+.icon {
+  width: 14px;
+  margin-right: 3px;
+  position: relative;
+  top: -5px;
+}
+
+.addIconPosition {
+  margin-left: 5px;
+  margin-top: 25px;
+}
+
+.positionIconLink {
+  margin-top: 15px;
+  margin-left: 25px;
+}
+
+.label {
+  font-size: 10px;
+}
+
+.exportBox {
+  background-color: #b5e2ff;
+  border-radius: 4px;
+  padding: 4px;
+	margin-top: 10px;
+}
+
+.checkbox {
+  margin-left: 10px;
+}
+
+.moreTop {
+	margin-top: 12px !important;
+}
+
+.moreSpace {
+	margin-top: 12px !important;
+	margin-bottom: 14px !important;
+}

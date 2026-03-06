@@ -1,0 +1,285 @@
+@import 'variables.css';
+
+/* common */
+.container {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: auto;
+		overflowy: auto;
+}
+
+.radioLabel, .linkStyle, .textRating, .labelCheckbox, .noRecords, .link, .text, .subHeading, .count, .finalized, .cellText, .cellHead {
+    font-family: var(--generalFont, sans-serif);
+    letter-spacing: normal;
+    text-rendering: optimizelegibility;
+    font-size: 12px;
+}
+
+.rowWrap {
+    display: flex;
+    flex-flow: row;
+		flex-wrap: wrap;
+}
+
+.row {
+    display: flex;
+    flex-flow: row;
+}
+
+.marginLeft {
+    margin-left: 10px;
+		position: relative;
+}
+
+.link {
+	font-size: 12px;
+	color: var(--blue, blue);
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.link:hover {
+	text-decoration: underline;
+}
+
+.linkBold {
+	font-weight: bold !important;
+}
+
+.icon {
+	width: 12px !important;
+	cursor: pointer;
+	margin-top: 5px !important;
+}
+
+.noRecords {
+		font-weight: bold;
+		color: var(--red, red);
+		font-size: 12px;
+		font-style: italic;
+}
+
+.muchLeft {
+		margin-left: 40px;
+}
+
+.filterLabel {
+		font-size: 13px;
+		margin-top: 2px;
+		margin-right: 7px;
+}
+
+.text {
+		font-size: 12px;
+		cursor: pointer;
+		margin-left: 5px;
+		margin-left: '1px !important';
+		padding: '0px !important';
+		align-items: 'flex-start !important';
+		text-transform: 'none !important';
+}
+
+.cellText, .cellHead {
+	width: 50px;
+	font-size: 11px;
+	margin-left: 2px;
+	margin-right: 4px;
+	padding: 2px;
+	line-height: 230%;
+	/* height: 20px !important; */
+	text-align: left;
+	white-space: nowrap;
+}
+
+.moreLeft {
+		margin-left: 25px !important;
+		margin-top: 5px;
+}
+
+.mediumLeft {
+		margin-left: 20px;
+}
+
+.subHeading {
+		font-size: 12px;
+		margin-top: 8px;
+}
+
+.doubleLeft {
+		margin-left: 20px;
+}
+
+.white {
+		color: white;
+}
+
+.buttonDiv {
+		height: 55px;
+		margin-left: 15px;
+}
+
+.count {
+		font-size: 11px;
+		margin-left: 25px !important;
+}
+
+.backgroundGraduation {
+		padding: 4px;
+		border-radius: 4px;
+		background-color: var(--lightBlue, blue);
+		max-width: 600px;
+}
+
+.moreTop {
+	margin-top: 20px;
+}
+
+.moreBottom {
+	margin-bottom: 20px;
+}
+
+.littleTop {
+	margin-top: 10px;
+}
+
+.alertText {
+	font-size: 12px;
+	text-transform: none;
+}
+
+.backMaroon {
+	background-color: maroon;
+}
+
+.backGray {
+	background-color: gray;
+}
+
+.backRed {
+	background-color: var(--red, red);
+	color: var(--red, red);
+	border-color: var(--red, red);
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.lowOpacity {
+	opacity: .4 !important;
+}
+
+.backWhite {
+	background-color: white;
+}
+
+.wrap {
+	word-wrap: break-word;
+}
+
+.iconPosition {
+	margin-left: 3px;
+	margin-top: 3px;
+}
+
+.fullWidth {
+	width: 100%;
+}
+
+.littleLeft {
+	margin-left: 10px;
+}
+
+.nowrap {
+	white-space: nowrap;
+}
+
+.textRight {
+	text-align: right;
+	font-weight: bold !important;
+}
+
+.labelCheckbox {
+		margin-left: -2px !important;
+    margin-right: 9px !important;
+    font-size: 10px;
+}
+
+.checkbox {
+		margin-top: 8px;
+}
+
+.textRating {
+    font-size: 12px;
+    margin-right: 4px;
+    margin-top: 10px !important;
+}
+
+.linkStyle {
+    cursor: pointer;
+    margin-left: 3px;
+    color: var(--maroon, maroon);
+    font-size: 12px;
+		font-weight: bold !important;
+		text-decoration: none;
+}
+
+.linkStyles:hover {
+		text-decoration: underline;
+}
+
+.radioLabel {
+	font-size: 14px !important;
+	font-weight: bold !important;
+}
+
+.moreBottom {
+	margin-bottom: 8px;
+}
+
+.iconTeacher {
+  margin-left: 18px !important;
+	margin-top: 5px !important;
+  margin-right: -7px !important;
+  width: 12px !important;
+}
+
+.menuItem {
+    display: block;
+    color: black;
+    cursor: pointer !important;
+    font-family: var(--generalFont, sans-serif);
+    font-size: 11px;
+    letter-spacing: 1px;
+    line-height: 286%;
+    margin-left: 8px;
+    margin-right: 4px;
+    text-align: left;
+    text-rendering: optimizelegibility;
+    text-decoration: none;
+    -webkit-transition: all .8s;
+    transition: all .8s;
+    /* z-index: 99; */
+}
+
+.menuItem:hover {
+		text-decoration: underline !important;
+}
+
+.instructionsWidth {
+	width: 250px;
+}
+
+.muchMoreTop {
+	margin-top: 40px
+}
+
+.littleTop {
+	margin-top: 8px;
+}
+
+.inputPosition {
+	margin-top: 10px;
+	margin-right: 10px;
+}

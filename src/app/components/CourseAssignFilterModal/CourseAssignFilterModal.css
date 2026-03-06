@@ -1,0 +1,172 @@
+@import 'variables.css';
+
+.container {
+    margin-top: 2px;
+    padding-top: 5px;
+    background-color: #ebebee;
+}
+
+.dialogButtons {
+    text-align: center;
+    margin-bottom: 6px !important;
+}
+
+.yesButton {
+    margin-left: 9px;
+    background: linear-gradient(#67ae55, #578843);
+  	background-color: #69a74e;
+  	border: 1px solid;
+  	border-color: #3b6e22 #3b6e22 #2c5115;
+  	border-radius: 5px;
+  	box-shadow: inset 0 1px 1px #a4e388;
+  	color: white;
+  	cursor: pointer;
+  	display: inline-block;
+  	font-family: var(--generalFont, sans-serif);
+  	font-size: 12px;
+  	font-weight: bold !important;
+  	letter-spacing: 1px;
+  	line-height: 9%;
+  	margin-top: 8px;
+  	min-width: 55px;
+  	padding: 6px 8px;
+  	position: relative;
+  	text-align: center;
+  	text-rendering: optimizelegibility;
+  	text-shadow: 0 1px 2px rgba(0,0,0,.5);
+    outline: none;
+}
+
+.yesButton:active {
+    transform: scaleX(.89);
+}
+
+
+.dialogHeader {
+    margin-left: 20px !important;
+    margin-top: 8px  !important;
+    margin-bottom: 6px  !important;
+    font-size: 11pt;
+    font-weight: bold;
+}
+
+.dialogExplain {
+    font-size: 10pt;
+}
+
+.dialogButtons {
+    text-align: center;
+    margin-bottom: 6px !important;
+}
+
+.noButton {
+    font-weight: normal;
+	font-family: var(--generalFont, sans-serif);
+	font-weight: normal !important;
+	letter-spacing: normal;
+	text-rendering: optimizelegibility;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 10pt;
+    color: #9db0b4;
+    margin-left: 16px;
+}
+
+.noButton:hover {
+    color: #353e40 !important;
+}
+
+.filterLabel, .subHeading, .boldText, .text {
+    font-family: var(--generalFont, sans-serif);
+    letter-spacing: normal;
+    text-rendering: optimizelegibility;
+    font-size: 12px;
+}
+
+.boldText {
+	font-weight: bold !important;
+}
+
+.grayBack {
+		background-color: #f1f2f0;
+		margin-bottom: 15px;
+		padding: 8px;
+		border-radius: 4px;
+		margin-right: 20px;
+		max-width: 600px;
+		height: auto;
+}
+
+.moreBottomMargin {
+    margin-bottom: 20px;
+}
+
+.rowWrap {
+    display: flex;
+    flex-flow: row;
+		flex-wrap: wrap;
+}
+
+.row {
+    display: flex;
+    flex-flow: row;
+}
+
+.filterLabel {
+		font-size: 13px;
+		margin-top: 2px;
+		margin-right: 7px;
+}
+
+.moreLeft {
+		margin-left: 25px !important;
+		margin-top: 5px;
+}
+
+.linkStyle {
+    cursor: pointer;
+    margin-left: 3px;
+    color: var(--maroon, maroon);
+    font-size: 11px;
+}
+
+.moreRight {
+	margin-right: 20px;
+}
+
+.lowHeight {
+		height: 12px;
+}
+
+.littleLeft {
+		margin-left: 6px;
+}
+
+.icon, .iconTight {
+		width: 16px;
+		position: relative;
+		left: -3px;
+		top: -4px;
+		cursor: pointer;
+}
+
+.icon {
+	margin-right: 5px !important;
+}
+
+.lessLeft {
+	position: relative;
+	left: -8px;
+}
+
+.radio {
+    margin-left: 8px;
+}
+
+.moreTop {
+	margin-top: 14px;
+}
+
+.littleLeft {
+	margin-left: 2px;
+}

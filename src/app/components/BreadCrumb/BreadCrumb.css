@@ -1,0 +1,44 @@
+@import 'variables.css';
+
+.container {
+	display: flex;
+	flex: row;
+	flex-wrap: wrap;
+}
+
+.requiredText, .active, .inactive {
+	font-family: var(--generalFont, sans-serif);
+	font-weight: bold;
+	letter-spacing: normal;
+	text-rendering: optimizelegibility;
+	color:black;
+	text-decoration: none;
+}
+
+.inactive {
+	color: var(--blue, blue);
+	font-size: 12px;
+	margin-left: 8px;
+}
+
+.inactive:hover {
+	text-decoration: underline;
+}
+
+.active {
+	font-size: 13px;
+	border: 1px solid var(--green, green);
+	color: var(--green, green);
+	padding-left: 2px;
+	padding-right: 2px;
+	margin-left: 8px;
+}
+
+.bigText {
+	font-size: 24px !important;
+}
+
+.requiredText {
+	font-size: 12px;
+	margin-left: 4px;
+}

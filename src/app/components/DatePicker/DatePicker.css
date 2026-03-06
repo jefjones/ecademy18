@@ -1,0 +1,22 @@
+@import 'variables.css';
+
+.dateText {
+	font-size: 12px !important;
+	font-family: "OpenSans", Open Sans, sans-serif;
+    border-radius: 5px;
+	width: 110px;
+	padding-left: 5px;
+}
+
+.dateComponent {
+	display: flex;
+	flex-flow: row;
+	flex-wrap: nowrap;
+}
+
+.calendarIcon {
+	opacity: .4;
+	width: 14px;
+	position: relative;
+	left: -20px;
+}

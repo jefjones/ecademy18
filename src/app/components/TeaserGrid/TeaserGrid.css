@@ -1,0 +1,28 @@
+@import 'variables.css';
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 720px;
+    max-height: 300px;
+}
+
+.child {
+    flex-shrink: 1;
+    width: 33%;
+    margin-top: 9px;
+    margin-bottom: 9px;
+    /*flex-basis: 180px;*/
+}
+
+@media (min-width: 950px) {
+    .container {
+        max-width: 900px;
+    }
+
+    .child {
+        flex-basis: 285px;
+    }
+}

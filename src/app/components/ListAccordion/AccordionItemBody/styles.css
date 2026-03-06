@@ -1,0 +1,14 @@
+
+.react_sanfona_item_body {
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+.react_sanfona_item_body_wrapper {
+  color: #666;
+  position: relative;
+}
+
+.react_sanfona_item_body_wrapper:hover .tooltip {
+  opacity: 1;
+}

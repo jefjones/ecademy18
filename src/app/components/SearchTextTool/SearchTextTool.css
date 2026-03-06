@@ -1,0 +1,73 @@
+@import 'variables.css';
+
+.container {
+    display: flex;
+    flex-direction: row;
+    /* margin-top: 11px !important; */
+    width: 100%;
+}
+
+.image {
+    width: 14px;
+    margin-left: 18px;
+    margin-top: 6px;
+    cursor: pointer;
+}
+
+.downArrow {
+    /* width: 14px; */
+    margin-top: 6px;
+    cursor: pointer;
+}
+
+.upArrow {
+    margin-top: 6px;
+    margin-left: 3px;
+    cursor: pointer;
+}
+
+.nextNav {
+    margin-left: 4px;
+    margin-top: 1px;
+    cursor: pointer;
+}
+
+.counts {
+    position: relative;
+    top: 9px;
+    margin-left: 4px;
+    font-weight: normal;
+    font-size: 9pt;
+    font-family: var(--generalFont, sans-serif);
+    font-weight: normal !important;
+    letter-spacing: normal;
+    text-rendering: optimizelegibility;
+}
+
+.closeButton {
+    margin-top: 7px;
+    margin-right: 8px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.closeButton:hover {
+    font-weight: bold;
+}
+
+.inputRow {
+    margin-bottom: 4px;
+}
+
+.navRow {
+    margin-left: 8px;
+    display: flex;
+    flex-direction: row;
+}
+
+.submitButton {
+    width: 14px;
+    margin-top: 4px;
+    margin-right: 10px;
+    cursor: pointer;
+}

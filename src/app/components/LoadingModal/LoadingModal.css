@@ -1,0 +1,29 @@
+@import 'variables.css';
+
+.container {
+    z-index: 99;
+}
+
+.first {
+    color: #147EA7;
+}
+
+.second {
+    color: #095c7d;
+}
+
+.third {
+    color: #bb871d;
+}
+
+.fourth {
+    color: #e69b05;
+}
+
+.label, .first, .second, .third, .fourth {
+    font-size: 12px;
+    font-weight: bold;
+    font-family: var(--generalFont, sans-serif);
+    letter-spacing: normal;
+    text-rendering: optimizelegibility;
+}

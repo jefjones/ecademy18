@@ -1,0 +1,1709 @@
+﻿Krystal
+	Did the quiz work with scored quizzes?
+	I noticed that the matching pop-up is too wide for the smart phone.
+
+_______________________________________
+Leslie Ann:  A general announcement area to the right of the calendar with a time range to show.
+		And maybe a dismiss option by the user, too.
+
+	Mark up files: when kids upload worksheets etc in the student response, and I open them, is there a way to rotate them and make them bigger? They are all coming in sideways. I can open them in a new tab by right clicking, but it still isn't rotate-able. Also, is there a way to correct them? In Drive, it lets you put comments on stuff with highlights, but I'm hoping for something like a red pen I can mark assignments with. That may be unreasonable for someone who doesn't have a touch screen! Lol! But maybe a comment place on the assignment like Drive... Or can you suggest how to copy it into a pdf? Right now I'm just tilting my head sideways and squinting at the light pencil marks.
+
+_______________________________________
+File Service
+	d. Excused absence file
+
+____________________________________
+Translation Penspring:
+ 	a. Create a Work record with the eCademyTranslation name under Jef personId
+	b. Loop through the EnglishString records
+		i. For each new webPage name, create a chapter record with the webPage name and keep track of the new ChapterID
+		ii. Get the next hrefId
+		iii. In the chapterText, append a <br/> and the span text with the hrefId and the EnglishString
+			1. Set the NewStringFlag to false
+		iv. Call the translation service for a translation string and wait for it.
+		v. Write the EditDetail translation record
+	c. Grant access to Adriana
+	d. Create a new demo school and give access to Adriana (and other translators)
+	e. Add Translate accessRole type.
+	f. Add Translate text and icon to the flip out menu which will then take the translator to the work and chapter for translation.
+
+Language Translation
+	0. ***Put in container getPageLang code
+		a. Pick out any text in containers that ought to go to the render of view
+	2. Consider localStorage strategy
+		Can localStorage be used in the reducer?
+		A separate function to pickup the localStorage on login.
+
+	0. ***use "text", "page", and "langCode" as the unique keys, essentially, for all translations.  Do not use code.
+	1. ***The containers (app and first nav) receive the langPages data set
+	2. ***Login automatically gets all component page translations getPageLangs(personId, langCode, "component")
+	3. ***Each page uses getPageLangs(personId, langCode, page)
+	4. ***The getPageLangs looks for "en" as the langCode and does not call the server-side function since the text is already the "en" version.
+	5. ***The L component receives this.context.langPages dataset
+	6. ***Each page has a const p = 'StudentCourseAssignView' pagename, for example.
+	7. ***The component is <L p={p} t={'Grade levels'}/>, for example.
+	8. File reader: The page crawler to pick up on the needed translations
+		a. recognize the sentences not yet translated.
+		b. pick up on already-translated sentences to make use of again for the given page.
+		c. use Penspring to manage the translations with the pageName tag-along to match up.  Or maybe just the text alone is enough to match up.
+	g. weekdays need to be translated for reducers\student-schedule - but it seems that that needs to come from the database
+		i. And there ae other lists like student name first for companies in the schoolSet page tha tneed to come over as labels translated.
+	
+
+2. student attendance report
+    a. repeat header columns 
+    b. squishy 2nd page topper
+
+3. Messaging:  Scheduled messages; repeat messages; document and image library; and editor with HTML like capabilities.
+
+3. Allow more than one file to be uploaded at a time...?
+
+1. Penspring's main menu needs a line above it when the teacher is signed in.
+
+1. to do
+	2. Choosing the any first option from the inputDataList doesn't show anything unti you choose a second one.
+	1. Media Art School:  Visitor picture and print out.  Visitor enters on their own phone and submits.  The admin prints the pass.  
+		GPS tracker is on them forany admin until they check out.
+	1. The course base list needs a cursor pointer and make it to cover the entire cell.
+	3. Click on the InputDataList and reset it even if someone is chosen in the list.  It is confusing otherwise.
+	4. Checked off homework:  See John30 Johnson of ALA in Earth Science.  There are assignments with 0s that are marked as complete automatically.
+	5. The Edge browser doesn't work with impersonating users.
+	6. Time stamp strategy:  Set UsState table with a time difference for time-zone.  On day light savings, have a process that updatse that value.  The companyConfig then picks that up and sets the DateMoment's minusHours to that value for the given school.
+	7. Email SMTP fix! Or SendGrid adjustments?	
+	8. Create new open ergistration does not clear an edit of an open registration record since it is on the left side main menu.
+	9. Assignment list:  removing an assignmetn will give a pop up with [Object] text in the middle of the message.
+	10. Gradebook enry:  create or modify assignments link has CouseEntryID but the url quickly says undefined.  It doesn't bring up a list.
+	11. 
+	
+___________________________________________________
+1. Katie Merrill: Messages from senders need to show the class they are in with that teacher.  And include last name instead of just
+	initial.  And make them clickable so you can go right to them.  Or maybe have icons so they can go right to their
+	schedule or their gradebook or student assignments for the teacher to go directly.
+1. Create an InfoPopup that is like the MessageMOdal that has messageTitle and messageExplain.  It won't show anything if there isn't a messageExplain.  So that does away with the switch to show it. And keep the explainJSX, among other things.    
+1. Improve the AssignmentResponseModal so that the files are uploaded.  In fact, provide the camera-take-over version when on a phone.
+1. Something ain't right about StudentGradeTranscripts.  It refers to IntervalType and the four intervals hard-coded.  I think GradeReport does it better now.
+	a. Some students in the list are duplicates.
+1. Student transcript manager list (and delete to start over)
+1. Graduation request manager list (and delete to start over)
+	0. and Student spreadsheet and entry option
+
+1. Diana: PTO (PSO) for charter schools
+1. Use the profile pictures somewhere
+	a. And maybe we need a bulk profile picture upload process?  How do we tie that to the student Id?
+1. Consider a title bar color in gold if the user is not in the current year.
+1. Principal Name needs to go to the CompanyConfig file as "PrincipalName" for the grade report.  And what about the administrator?  Same?
+1. Stored procedure conversions:
+	addDemoPeopleAndCourses
+1. Penspring
+	AssessmengPendingEssayView:  The studentPersonId choice list doesn't go anywhere:  handleStudentChange.
+1. Gradebook entry page is slow even on the Rackspace server itself.  Something is rather inefficient about that set of queries.
+	a. And also check how many divs are being created for each icon or cell of the gradebook to see if those divs can be cut back if they are unnecessary.
+1. Student upload
+	and manager list (and delete to start over)
+1. Teacher upload
+	and manager list (and delete to start over)
+1. Enrollment upload
+	and manager list (and delete to start over)
+0. Fix the Penspring print out
+0. Adjust the teacher print out
+1. Pay for football games or plays.  Get a UPC symbol that they paid.  They can check them in at the gate off their own phone.
+1. Student photo manager (if student doesnt' put up a profile picture, then the teacher or admin should have a screen to be abel to enter a student's picture.)
+1. Carson Smith records and entry system - parent and teacher?  And admin?Smith
+1. Penspring
+1. Pick-up Lane
+1. subscript and superscripts for Kristal Taylor science entry for quizzes.
+1. Rochelle:  To move from one assignment to the next.  Force a double tab.  More tabs for each assignment.
+	Look for writing to compare on the internet text that already exists.  Some level of error or 
+1. Finance (ALA)
+	0. See the Zoom video (without sound, unfortunately) in the ALA school folder.
+	1. Student numbers (search and view their numbers with their records)
+	2. Print is small.
+	3. Refund can be chosen from the main payment screen.
+	4. Low income:  Fees are all or nothing for the school.
+		But lunch is different and it can be a partial.
+	5. addrUpdateFinanceFeeType (adding a fee did not save the record)
+
+1. School Settings:  Changing intervals for everyone at once:  Change everyone's view to see classes based on interval. Make sure that the interval Ids are being considered in all queries as a group
+0. Courses and Sections needs two numbers on the main menu:  # / #
+0. On the course/sections entry, I'm not seeing the courses but I'm seeing sections.  I wonder if that has anything to do with Quarters intervaltype instead of semester.  Probably not.  Courses are not even set by year.  They are wide open.
+1. Jeanine: the student assignment list in the assignment entry is very big when in as admin
+2. When editing a behavior incident but then deciding to add another one, it does not clear the controls to start a new one.  The editing one is still there.
+1. Rochelle Rudd - grading a discusion entry
+	Not getting credit for their comments.  Check the length of the word count
+		Mariana Gillen
+		Kindred Lindstrom
+	Check to see if the word count is being applied to both the post and the comments.  She was saying that it didn't look liek comments was given the option of a word count.
+1. We amy soon need to manage a collection of intervals in case a school has quarter-centric classes so that the user needs to see the semester and its two quarters.
+1. After adding a student, the Course Sections didn't show the new person on Alicia's screen but mine showed the new person.
+1. Need to do union for the student schedule if there is a StudentGradeFinal record.
+3. Pickup Line:
+	a. Add approved driver (need new driver access role, include their facial recognition, background and any other I'd such as vehicle picture and description)
+	b. See current pick up line students (including carpool combination)
+	c. Set student not present today by admin, teacher, or driver.
+	d. Parent chooses their car they are driving today
+	e. The pick up line view:
+		Number.     Student.            Teacher.       Driver.       Vehicle.  (Description and pop up picture)
+
+		Click on driver for facial recognition, Id, data information, or to send message... Including text,). Also to set student-not-here. Also to set student sent out. Also to set car complete.
+
+1. School contact manager:  need phone format, upload input, and jump up to the first box when editing. And voice recorder.
+
+
+1. Videos to ALA
+=======
+1. Betty Shipman's brother:  David Lougee (lougeed@gmail.com).  About ELL students help with audio and automated quizzes.
+1. Videos to ALA 
+	j. Registration (to do -the student is not getting the primary guardian's address - a new reg seems to have access to unexcused absences and other things,
+			I was expecting to see Joan Freeman in the list of aprents although she hasn't been approved yet.  But maybe that's okay.  Maybe another
+			list of attempted registrations needs to be shown instead.
+			The new user's username is still getting saved off as the email address.
+			Logging abck in as joan freeman (joan@freeman.com 987234) it went to the current year.  How do we make that be the year that they are logging in as?  Regstudent year?
+			Student Course Assign: Does the clipboard need to be a stored procedure?  It is slow.
+
+
+		***application
+		***review to approve/decline
+		course recommendations (mandatory or optional)
+		two stage course signup:  1) request just a list without committing to periods, 2) commit to periods and work the final schedule by parent/student
+	a. ?Unexcused absences and doctor offices.  Alread done?
+	a. Parent communication, including weekly status reports (attendance, grades, missing assignments?
+	b. ***Benchmark tests
+	c. ***Standards based
+	d. Distribute homework essay (penspring) and the folder structure with grading inline
+	e. Peer editing (penspring)
+	g. Behavior incidents
+	h. Calendar and events (searching - need to display events by grade level)
+	i. Teacher - split up the functions for gradebook, student schedule views, assignment set up
+
+1. Include the videos as icons in the main menu.
+	have a checkbox at the top to turn on or off the tutorials.  It can also be a link to go to the page to view all tutorials (or an icon at the end of the checkbox label).
+2. Print outs
+	a. Improve edit page with more simple view (penspring)
+	b. Teacher - spit up the functions for gradebook, student schedule views, assignment set up
+1. Alicia: Adalyn Arner - her fall semester grade is showing in grade report for Spring semester.  It should cut off.
+	- changing from de to academy - do the assignments carry over?
+	- taking out a student from a class after a fall semester will lose the grade report entry.  So don't use the learnercourseassign table.  use studentassignmentscore.
+	on registration pending screen, show the year they are applying for.
+		and can't enter 0 siblings pre registering.
+
+1. Start Aspire request with Rich.
+2. Start SIF agent
+3. See USBE contract and provide any feedback to Rich.
+5. Upload ALA data:  students, parents, and standards.
+5. Phone call and complete messaging to replace blackboard. Send video
+4. Penspring fixes of the edit boxes and the file structures.  Test through the distributed assignment.
+	Restore the peer edit assignments (random and otherwise)
+7. Geo location and pick up app
+8  Facial recognition
+9. PLACE ACCESSROLE BLOCKS ON PAGES THAT THE USER SHOULD NOT BE ABLE TO GET TO.
+	import NotFound from '../components/Error';
+
+        const {accessRoles} = this.props;
+        return accessRoles.admin ? <SchoolSettingsView {...this.props} /> : <NotFound />
+10. Benchmark test list didn't set the next test as order #2. They are both #1.  And they won't change.
+	a. also see line 111 of AssessmentEntryService of the backend.  IT has having a hard time picking up the assessmentId for the assignment record.
+11. Give access to a teacher to change the big/small and other settings of a benchmark test for their own class.  There may be a need to have it different between classes.
+12. Adding benhcmark test as an assignment to eArth Science, they showed up at the top.  And the 4th Grade test didn't show the 7 points that it shoudl have been changed to from 20.
+13. AFter Audrey Aldrich took the benchmark test, it was not showing the circles.  When I went to see it after being in as admin and went to the student assignment list
+	they showed up briefly and then disappeared.
+14. The benchmark test list is blank for Sarah Sorensen when shes goes in ... sometimes.  If I go in as kdunford and then back in as sarah sorensen, it will show up.  It is not consistent.  Even refreshing the page doesn't bring it up.
+15. The test settings won't save.  This is after the test has been created and published and I'm going back to update it with big test and one-at-a-time.  Even unpublishing and publishign doesn't save it.
+	16. The grade report page didn't set the sessino-wide chosen-student setting for the other pages.  Either that or the firstNav didnt' reset for the student list under student accordion.
+
+
+9. The quiz set up was showing all questions in single form when it looked like it had the next button to be one-by-one only.
+
+
+______________________________________________
+Billing and Credits:
+	1. Consider adding a billing fee for a student that is a course-type fee that would then bring up the course that they are in so that a new fee can be added for them and record the course and fall into that
+		course track of fees which would also fall under the automatic list of fees that need to consider a refund percent.
+	2. ^^^If a new course fee is added a little late after registration, will that billing go to the currently enrolled students?  How will they know?  Automated email?  Or an admin-sent email?
+	4. include credit card scanning for payment page.
+	7. Page history:  There are some pages that are not tracking movement for the new visited places:  student schedule is one of them.
+	9. [Leave this for school's decision:] The course fee and class assignment does not set the due date for each of the billing months.  At least it is not displayed in the billing history.
+	3. ^^^[I tried to fix this by sending a set parameter to INputDAtaList.  It didn't work.] Sending the parameter of the studentPersonId over to the page from the Account Summary, it doesn't fill in the studentPersonId for the actual record in state.  If you choose another student, the sent parameter will no longer be included.
+
+__________________________________________________
+Liahona (Jeanine)
+	Changing the course name did not change it in the database.
+	In the baseCourseView page, the object that is comign through to code is causing havok with the toLowerCase() function call.
+	For the gradebook, show the class even when there are not any assignments.  Left outer join.  Heading count (put in a header indicating no assignments entered yet.)
+
+___________________________________________________
+Registration
+	0. New registration didn't record the primary guardian because the school year have to be lined up.  We might need to force the school yaer by personConfig if they are in registration mode.
+	1. Convert the server calls to registration details to stored procedures:  Guardians, regStudent, etc.
+	2. On submtting an incomplete student record, give the option for the user to see the fields with errors where information is missing.  And did they ever see the missing info dialog?  No.
+	3. I had two George Students and deleted one.  They both disappeared.  It didnt' come back on refresh.  But after adding anothe rone, the first George returned.
+	4. Address was not filling in automatically.
+	5.
+	1. Lottery for assigning the rest of the students
+		a. Present the grade level seat counts
+		b. First, the initial choice is for teachers' students
+		c. Take all students who have siblings
+		d. Take the rest of the students by ordering their guid personIds and filling up the rest of the classes.
+
+___________________________________________________
+Today
+
+0. Include the picture camera in order to take business cards and any other notes given
+1. Benchmark Test
+	1. Create a benchmark test with the already established assessment questions.
+		a. ???on assessmentCorrect, Matching got 2 out of 3 points in the display but no ponts in the point accumulation.  Should this be a partial credit choice by the teacher?
+		e. Test correction page:  Have a drop list of standards that will filter the questions.  When clicking on buttons to come in,
+			send in the parameter of the standard in order to automaticaly filter (and show the filter choice) for the user to see.
+		f. The Fifty-six answer in question 5 of the benchmark test was not picked up as accurate.
+
+1. The gradebook doesn't show if there arent' any assignments.  We ought to show something in order to see the student list at least.  OTherwise, the user doesn't know why the list isn't showing up.
+1. Quiz auto score override... If more than one standard provide a standard score multiple score record
+1. Impersonating is slow.
+1. Consider a store restore for a user.  Can that be restored as the user left it?  Probably.
+1. Choose studentScheduleView line of the table and have it highlight.
+1. ON StudentScheduleView, put the student's name on the schedule.  When calling that page with the peronId parameter, it doesn't fill in the box automatically.  One of those two things will be good.
+1. Deleting a finance course fee will take out the class entirely from the list without its blank version.  Consider just deleting the given fee value and leave the null version behind.  Refrehing the page will bring it back.
+1. The student search name on first nav must not be pulling the same learner list as impersonate. It doesn't come up.
+1. There is a place to update a photo in a person's profile.  But we need an admin entry page for student photos.
+1. Penspring fix (the size of th edit boxes and any peripheral things that don't work due to the changes in the last few months)
+	a. Directory structure:  complete it.
+	b. Simple entry box that can have the option of being corrected in penspring by the teacher.  And optional view by the user as well when they go back to review what has been corrected.
+
+1. Facial recognition for lunch check-out and elementary login.
+	a. Admin student identifier by facial recognition
+1. The adding of a new admin, sssorensen, didn't include the grade level range although the logic is there in AddUser(...)
+1. Alicia:  withdrawn student:
+	a. Inactive when withdrawn
+		i. They can't log in again
+		ii. They don't receive emails - nor do their parents.
+		iii. But show up for transcripts, grade reports and attendance reports.
+		iv. Teacher should have a "show withdrawn students" checkbox so they can enter in other homework for transcripts later.
+	b. Registration: Laurie Little - created a second record which I wonder if that is doing that on the billing information.
+		The problem seems to be that a new registrationtable gets written.  So I have to move all of the billing information up to the original registrationtable
+		and then deleted the last one that was creaed.
+	c. Birthday list including student name, grade, and birthdate.
+	d. Email teachers when a student withdrawal date is saved.
+	e. Student Schedule:  She is having trouble adding a class sometimes.  I traced it without any logic errors.  It must be a race condition...?
+	f. Wishlist:
+		1- on the registration we would like to know what school they are coming from, even if its homeschool. That would help us to request records and have a general knowledge of their background.
+		2- we would like to know how they heard about Liahona. If it was a referral- who referred them to us... maybe make it mandatory for them to answer that question. It would help us to know if our advertising efforts are working.
+
+2. New company... Not bringing in behavior incident types.
+	Also needs indecent report for trends for days and hours. Bar graph
+3. Rochelle: Two names of students with inaccurate discussion score
+	Kindred Lindstom
+	Mollie Hostetter
+
+1. The course and sections table views are different.  The fast table needs to have darker headers to set them off from the actual data rows.
+1. If a quiz has a due date, then when that date is past, the link should no longer be available.
+	What about opening it up for a particular student?  Maybe let them take it somehow with a student list
+1. Alicia moving Natalie Cannon to DE from Academy.  When assigning a class, her student's class schedule would say "No data found."  But mine would assign it and show it immediately without a problem.
+1. Standards based settings
+	a. Check "Used in" and don't allow a delete of the entire standard or the various options that have records attached.
+	note: The set up is still strict with having to add them in sequence.  So a mistake would require you to delete anything entered after the mistake to rebuild the standards scale.
+	b. Put in a standards column for AssignmentList with a cickable number that you can then see the one or more stnadards entered (only for KNOWLEDGERATING)
+1. After connecting phone message service, send tutorial for messaging.
+2. *Aleks - support ticket:  Is there a free/developer sandbox login?
+3. Front desk configuration and user add
+4. Kristen: Billing and functionality?  Rycor demo
+4. Sections is not the same fast table as Course Entries (base courses)
+4. Registration details and Richard James status
+5. Standard base and show gradebook
+6. Change sendGrid to try a new send-out identifier.
+7. Coordinate standards from the state and do cross reference when they come in so that it is clear how standards line up from the past and what might be new
+	or what might be discontinued.  He would love that.  So that can be a great win for his impressions.
+8. Laura Beneventi has 10001000 in her password.  Why is that?
+9. Finish Penspring at least on obvious problems like the entry boxes that are scrunched up.
+	a. Maybe consider the document folder view and the work to be finished there.
+9. Assignment entry will not refresh it's page with the Id and fil in the controls.  You have to go back to the assignment list and choose again.
+10. The studentSchedule page from the gradebook (clock icon) does not really call up the student.  You have to choose from the list still.
+	But it does work when coming from the mian menu after selecting a student from the InputDataList
+10. Grade scale by grade level range
+
+		i. Suggested/Required classes for student sign up:  Look up students by class.
+		i. Excused Absence
+			0. Parents can invite a doctor in to get a doctor's note.
+			a. Doctor may decline to reply, but that needs to be represented in the Excused Absences response clearly.  So it can't be accepted, take the checkbox away.
+			e. Doctor note add: When choosing a student with an arrow or other method seems to not indicate that it was really chosen in state.
+			f. Test the crossing of the boundaries of schools so that the doctor can see more than one school ... and see the student list change between them.
+			g. Daily attendance communication.  with phone call.
+			h.
+		i. Assign grade levels to teachers, administrators, mentors, and counselors. Change queries so that only those grades' classes and teachers show up for them.  Ask Kristen what other distinctions there might need to be.
+		i. Display the student files in the student profile.  Let the icons be printed to show that there is something there.  But otherwise, they are document view only links.
+		i. Attendance email out to parents at 4:00 (or whenever the schools indicates.
+		i. Weekly report on grades, assignments, good things, and attendance.
+		i. It would be nice if teachers could color code the assignments on eCademy. This would help students to find scores.
+		i. General password resetting.  make sure they all work.  Trace through the main login password reset sending of the actual email to find an error.
+		i. PersonConfigCalendar loads very slow.
+		iv. Knowledge rating setup doesn't show the newly added entry in the list.  you have to refresh the page.
+		ii. The standard-based settings are not being dynamic.
+		ii. Tie one or more standards to a quiz question.  Grade them accordingly on the standard.  (
+			a. Although, that implies that the gradebook would be standard-displayed and not assignment displayed.  Hmmm.  How does that work?
+			b. Kristen also had confusion looking at that gradebook.  So, how would they like to see that gradebook?
+		ii. Show the tutorial icons and record more tutorials.
+		v. Calendar event entry: If there is a repeatWeeks value and (potentially) other weekDays entered, then the calendarEvent needs to be repeated for those
+			days for those number of weeks.
+		i. Fixes for Safari:  It is probably a refresh page thing that is going on.  Create a simple entry page and then see if Safari can handle it.
+			a. What is loading when the landing view page comes up?
+		v. Aleks integration.
+		vi. Tie down the pages for security and access roles and company access
+
+
+	0. Calendar
+		0. Need to test the break off from the interval date range.
+		i. ???Save the range choice in order to set it when coming back to view. (just do this locally for the session)
+			a. setCalendarViewRange is coming through as undefined.  I don't know why.
+	1. DiscussionEntry
+		i. QueryRepeatCompare
+			a. The timer call just checks to see if the posted entries have changed (probably by the count of the entry lengths)
+			b. If it doesn't change, send back the string:  "NOCHANGE", otherwise send the entire data back.
+			c. Maybe this will help the freezing problem so that the local redux updates for addNew and Delete will work.
+
+	8. Overall grade on Student Assignment would be good to pick off of the server with changes.
+	9. Parent can upload for students?
+	11. Can students respond to a quiz with voice recording and file uploads?
+	12. Deactivate teachers on a list according to the year and maybe by interval.
+	16. ?Attendance School page needs to have the student list turned into an inputDataList
+	18. ? /attendanceSchool might not be used.  It looks like an interesting report.  Is this the Karl Maiser attendance calculator that I did?
+	19. Student profile:  The siblings list should not list the current person chosen.  And there shouldn't be a list if there is only one.
+	22. Reimbursement request action is not done:  reimbursement-request  (references to curbside check-in)
+	14. Can the course list be any faster ... considering the change of years for the admin to see schedules for a student from the year before.
+__________________________________________________
+Montissorri - Chelsea
+
+	1. Excused absence - would be good to be able to upload a doctor's note for the excused absence.
+	2. Be able to put in a cartag for the parent/driver.
+	3. Lunch - Instapayment is what they use.  Student puts in their four digit number and then it system knows that they are eating lunch.  That is connected to Aspire in order to report lunches.  (Consider keeping track of those who have free lunch and those who have reduced lunch for state funding."
+	4. IEP is another system
+		i. You have to write it up.
+		ii. Print progress reports.
+		iii. Write their goals.
+		iv. (Does this communicate to UPIPs?)
+	5. Clever collection of apps or links:  So as much as eCademy would be most things in one place, it would be good to have links to go to the other places that are set already.
+	6. Where do I go to see my projected enrollment?
+	7.
+__________________________________________________
+Caritas
+	4. ***Last visited pages (all users - the tutorials page being the first one by default when a use enters for the first time)
+	6. Tutorials page - be sure to mark these tutorials by the user role
+		a. and organize tutorials with a one level-up parent option.
+	6. Assignments assigned to students
+		Not showing up for Latin B
+	7. Homeroom
+		a. The user can rename it:  mentor, safety accountability, counselor
+		b. Section on the left on the first nav
+			List by teacher/mentor
+		this is not a physical class but an ethereal
+		printable
+		columns:  name, birthdate, age, icon for the student information, attendance, schedule
+	8. See the students assignment list for the grade overwrite.  The F is not accurate on Lucas Beneventi
+	9. parent signature line on grade report
+	10. Grade report
+		Columns of quarters that disappear when the filter checkboxes are unchecked and then have a total to the right.
+		No credits in student grade report for Isabella.
+	11. Moving between pages remembers the current student
+	12. Class period setup:  Is the sequence being forced?  It seems to be necessary for the display somewhere to be in order.
+	13. intervals needs a sequence forced as well.
+	3. **^Calendar
+		Show courses - teacher's schedule or a student's schedule
+		???Show sporting events and let the user choose between which sporting events
+		Assignments due.
+		The parent ought to have a drop down of each student in order to see their calendar only.  Or let them see all of them at once.
+
+_____________________________________________________
+Quiz completion
+
+	The solution needs to display on correct answer view if there is a solution (including picture or audio)
+
+	Question type		Pictures		Audio
+				U E T S C R Sol		U E T S C R Sol
+	MULTIPLEANSWER		U E T S C ? Sol		U E T
+	MULTIPLECHOICE		U E T S C ? Sol		U E T
+	PASSAGE			U E T S C ? Sol
+	TRUEFALSE		U E T S C ? Sol
+	SINGLEENTRY		U E T S C ? Sol
+	FILLBLANK		U E T S C ? Sol
+	MATCHING		U E T S C ? Sol
+	ESSAY			???!
+
+Follow up with meetings and notes:
+	1. Higginbotham:  Amplify - is there a React component that connects with Amplify?
+	2. Dollar: Aleks - is there a React component that connects with Aleks?
+	3. Plagiarism checker - is there a Chrome plug in for that?  Or a React component?
+	4. Unicheck is a plug in for Canvas.
+	5. Spark – something about pictures
+	6. Discussion after a class is given.  It would be good to include a feature where the teacher can report on the class
+		for others' benefits.  Or even better, record a video of the class that they can attach to the class for the day.
+	7. FlipGrid is an awesome tool.
+	8. Assignments (quizzes) - turned on for the first five minutes of class
+		Rob Dollar: ACT questions is bell ringers for the first five minutes of class.
+		Be able to turn off the assignment so that it can't be taken after a given time.
+	9. Drag the students into the seating chart. You can click on them to set their attendance with a toggle of that button.
+	10. Be able to record my screen and my voice audio in order to let others who were not there to be able to know what we taught.  Or even for a review.
+	11. Is GradeCam the transfer plug-in from Mastery Connect to PowerSchool?
+	12. Infinite Campus:  Is Illuminate Education a canvas-related application?  Or a connector application?
+	13. Messages that can pick up students who are missing assignments.
+	14. What is OMR?
+	15. OdysseyWare - can it have its gradebook send data to eCademy?
+	16. Parent not able to pay online except through SecureInstantPayments.com.  Consider other options for payments.
+	17. Transfer students standards-based grading:  Include in grade calculations for the transcripts for transfer students.
+	18.
+
+____________________________________________________________________
+
+
+***Access control
+Aspire SIS implemented on hosted system for state reporting
+***Attendance
+**Behavior incidents and trend reports
+*Calendar and events
+***Carpool (for parents)
+***Class discussions
+***Curbside check-in / check-out
+***Grade reports
+*ID Cards
+*Learning management system
+***Assignments
+***Audio record assignments
+***Automated quizzes and scoring
+***Course management
+***Gradebook
+*Student schedules
+***Standards-based rating
+***Traditional gradebook
+***Upload files, audio and videos
+***Locker management and combinations
+Log entries
+Lunch management
+*Master Scheduling
+***Messaging
+***Online registration
+***Parent portal
+Photo management for users
+*Pre-schedule class request
+Reports
+***Safety alert
+*Self-service student class sign-up
+Special Ed, Title I, ELL
+Student information system
+*Testing scores
+***Transcripts (grades to colleges)
+***Volunteer hours
+
+
+_______________________________________________
+
+Kristen
+	How is the standard list portrayed as a view either graphically or a list to show the student's progress
+		Or is it dependent on the quizes or homework and scores that represent the progress?
+		A bar of color would be intriguing with being able to click on a slice in order to see what it is.  Or hover over slices.
+
+	Mastery Connect replaced by quizes
+		Include the Standard choice (in a data input for multiple choices)
+			Get this list from the three separate schools.  Where do they cross over?  Or are they all the same?
+		The final score can then be split up between the standards
+			Control the ranges so that they can't overlap or be above the higher ones or lower than the lower ones.
+
+	Quiz question entry
+		Include pictures or audio for the questions and answers
+
+
+
+	Video recording
+		Ms. Higginbotham showed me a screen that had a video recording view in progress.  And being able to record.  How about edit?  Is there a react component?
+
+	Assignment entry
+		When there is not an assignment chosen, let the user click on the green plus in order to add another assignment at the end. but if there
+			is any confusion, we might need to ask the user if they want to add the assignment at the end or after the current chosen assignment.
+
+	Assignments Assigned to Student
+		This page is not coming up with a list.  Something is wrong in the background.
+
+	Three schools (four technically with the graduates)
+		Elementary
+			Has a separate Standards-based grading?  Only four?
+		Junior High
+		High School
+		Join the schools as one in the end for administration.
+
+	The video on registration on Mac Firefox does not work:  MIME type?
+	Vaccination record to upload. (If the student record has not yet been created, then save off the record under the primary guardian personid and
+		the student's name ... or just a holding table for the student record when it is saved.  Make that part of the saving process.)
+	She was able to save the student without choosing the permission to get emergency care.  And the referral was missing, too, but it went on.
+	Need a School State Id (SSID) for students (in addition to the school external id)
+	Test the PDF to pick up the SSID and upload the file to the student.  (The c# reader?)
+	Who can pick up the student.
+	***Change the name from base course to 'course' and scheduled course to 'section'
+	***Upload document for a student for the parent, teacher and admin view (in the student profile)
+
+Course Section
+	It is not clear when that left most icon changes from scheduling to choosing it for a course cipboard.
+
+Assignment correction - same problem at the same time.
+	Correct the same problem for each student's assignment (See the top link of the quiz in the gradebook)
+
+
+Standards Based grading
+	When adjusting the knowledgeRatingView page sequence, the lines jump since they are being ordered.  Make them drop downs instead and then
+		reset the sequences accordingly.
+	And the number sequences didn't end up getting set properly anyway.
+
+calendar
+	Proactively add, delete and modify events on the local redux.
+	Clicking on a time and then choosing a different time in the event setup still puts it on the clicked time.
+	No edit option.
+	In the Repeat for Weeks list a date for the week number out so the user knows the target.
+	Changing to another user doesn't bring up the calendar?  You have to reload.
+	The student section of the stored procedure includes courses but Jaren Ford is not seeing any schedule on his calendar.
+	(I'm not seeing a course scheduled for Jaren.  it is admin view "week view" so include that in the user's filter and view)
+	Put the classes on the student's calendar.  And put in the assignments, due.  See how they line up.
+	Let the teacher knock out a class for the day to indicate that it is not going to be held that day.  Or even a time change.  It is an exception table thing.
+	The back and next arrows are probably calendar updates in node modules only on my local laptop.
+
+Curbside check-out
+	Check them out for the day for the classes that are to follow.  Excused?
+
+
+TELENECT
+	Block if tuition is not paid.
+
+_____________________________________________________
+Developing Ideas:
+	1. myCarpool.app
+	2. preActive.app
+	3. autoInquizitive (Math picture quizes)
+	4. Penspring distributable/editable assignments (integrated into Canvas, PowerSchool, Infinite Campus)
+	5. ESL assisted LMS?
+
+Monday to do
+	a. Make the driver choice faster for Kara.
+	a. convert SetDemoSchool to stored procedure.
+	b. Send email to the admin user with their username and instructions to reset passwod anytime that they want.
+	c. Convert the Aspire file upload and comparison to stored procedure.
+
+Penspring
+	Test that one.  It comes up undefined in the quiz essay link for the student - or teacher, I suppose, too.
+
+Gradebook
+	a. Alicia put in 100100 and it still went through without being stopped by the > 999 message.  Check that for proper function.
+
+Attendance
+	Is the date list a stored procedure?  It is coming up slow so that it doesn't show up.
+
+Quiz publish
+	Do a surgical reducer on toggling the publish
+	Refreshing the assessmentCorrect page seems to delete the score itself.  Is there also a componentDidUpdate old code on the page?
+
+Monday to do list:
+4. John Hancock fixes
+5. Other McKay fixes
+
+________________________________________________
+New roles
+	Bus driver
+	Volunteer (non-parent)
+	Substitute
+	Finance
+	Front desk (non-administrator)
+	Can transport
+
+________________________________________________
+Pocatello follow-up
+	Christian schools on the northeast side.
+
+Idaho Falls follow-up
+	Lisa Dalton - American Heritage
+
+Butte follow up
+	Ronda (finance at Catholic school)
+	Tamora (for the absent type list)
+____________________________________________________
+Landing page
+	a. Switch out testimonials every 10 seconds.
+	b. Save the checked boxes in localStorage and by IPAddress in the database.
+	c. Convert the saved checked boxes to the createNewSchool setup for the features to be used.
+
+
+
+Mckay Review
+	1. (Mckay test) If both have carpools in a request/approval process, the accepting one would be accepting to be a member in the other carpool.
+	2. On the open request, when choosing a carpool, set the days can drive automatically.  But let them change.
+	3. Carpool the page needs to be confined to the view width.
+	4.
+	5.
+	6. There is an error on daily schedule when setting the choice to not chosen.
+	7.
+	8. So when a not available person is chosen, the Can Drive person gets moved down to the Not Available slot.
+	9. See Mckay's email.
+	10.
+	11.
+	12. Carpool:  On the modal pop up, if we have days that they can drive already, set them here again.
+	13. Quiz: The publish button could be a fast switch over with a local redux.
+	14. Quiz: A re-take option should be controlled by the teacher.
+	15. Quiz: The quiz link on the student assignment changes to not clickabale and without the icon after taking the quiz and returning.
+	16.
+
+
+Carpool:  Testing
+	a. The not available and can drive option groups changes when a user is chosen.
+	c. Lead the new member to add in their student's week settings by day before going to the daily schedule which looks like a setting page for their students.
+
+
+Liahona Visit
+	9.	When setting grades, it would be nice to have a way to give all the students the same score and then tweak whatever you want. (And recalculation for any changes.)
+	10.	Refresh the course list when you delete a student from a course.
+
+
+Jef to do
+	3.	Avatar with my profile and logout.
+	2.	Other rework of FetchingRecord structures (old)
+	4. 	On the my Profile password change, require the old password along wiht the new password.
+
+Feature List for Phase I
+	Landing page
+		to do: a. table of features
+			b. do training videos (INCLUDE A PARENT/STUDENT TRAINING VIDEO - and sent it out to them)
+			c. include screen shots
+			e. point people to the new landing page using new domain eCADEMY.app
+			f. Related: Set the person's avatar in the mobile header and include the My Profile and Logout menu options.
+	Attendance
+	Behavior Incidents
+		to do: a. Reports
+	Billing
+	Calendar and Events
+		to do: a. Fix
+			b. choose which event types you want to see
+			c. Sports calendar (and all of its entry/management pages
+	Carpool
+		to do: Fix up the regular request features with the new structure
+	Courses
+		Testing to do: a. Test AutoInquizitive  (include a separate video)
+			b. Test penspring (and enhance for the MLA format)  (include a separate video - including distribution)
+	Curbside Check-in or Check-out
+	Gradebook
+		^^^Do Knowledge-based and pass/fail for local redux and no recall.
+		^^^Adding a new assignment in knowledge-based, it should be consistent with the class.
+	Graduation Requirement Status
+	Learning Management System
+		to do: a. Tiles of courses and activities
+	Lockers
+	Messages and Reminders
+	Registration
+	Safety Alert
+	?Self-service Student Class Sign-up (MANHEIM)
+	Teachers
+	Transcripts
+	Volunteer Hours
+
+	New phase
+		Finance
+		Sports entry
+		websites for schools
+
+
+
+Marketing landing page
+	a. Create a component with a checkbox for choosing a favorite feature, title, description and video link
+		i. The feature feed comes from a table with a sequence setting.
+	b. Save the features saved not only on the client but keep track of IP address and the feature choice for analysis purposes
+	c. Provide instructions at hte top that they can choose the favorite features and then choose only to view those favoritses in order to show your colleagues those features which apply to your school.
+	d. Make the testimonial a 5 second change-out.  Make it work off of a table.
+
+Mckay: Registration
+	b. Registration:  When setting the relation to a student, set all of the pending ones to the same thing (including custody)
+
+
+Leslie Ann
+	a. Delete a penspring file attached by the teacher in an assignment. Probably from the assignment.  Show the files, links and penspring files at the bottom to delete.  But also be able to delete it from Penspring.  When clicking on the file that LeslieAnn created, it was not in the document list.
+	d. calendar doesn't work still.
+		i. Take out the time text of a calendar item since the div size shows that and clicking on it will provide that information specifically.
+
+
+Kara Davis
+	a. ***A list of all of your students that you can take off the carpool altogether.  And restore them later as needed.
+	a. ***The carpool needs to be editable.
+	b. ***On accepting, include a days-can-drive - AND the times.
+	c. ***On creating a carpool dropOff/PickUp, include a days-can-drive by the carpool owner. (and it does not have to be required that they can drive any day)
+	c. ***The student assignment by days.
+	d. ***Be able to add another drop off - or even a single day (one-off).
+	e. ***On the scheduled days, Amara and Barak are showing on both of the pick up times.  See email.
+	g. Show in the driver drop down if the person can drive.  Maybe put that in a grouped option display of that list.  Of course, a person can still be chosen (since that might prove to be an exception for the week and day.)
+		i. Can a person choose to drive on a given day?  Maybe one that is open, they can certainly volunteer and assign themselves ... and unassign themselves.
+	h. Make sure that a student can have the exception of changing the default setup of a carpool for a day.
+	i. Rework the invite modal dialog (carpoolRequestResponseModal) ???
+	f. Make it so that the site doesn't log you out.
+	g. Save the user's last place so when they sign back in they go straight to where they left off.
+	h. still need to finish from line 1312 where the regular request transfers the CanDoDays for driving.
+	i. And refine the setCarpoolMember by using the carpoolRequestDirectId in the CarpoolRequestDirectCanDoDay records so that the transfer won't pull all of the canDoDays over to the permanent table for other direct requests that might exist.
+	j. The carpool in My Carpools only handles a single carpool at the moment.
+	k. Multiple carpools. The user can add more in CarpoolsMine plus they can join a carpool by someone else and still have that show up in your schedule.
+	l. Test "Students included" list on iPhone to ensure that the included students are checked by default and get excluded when they are unchecked.
+	m.
+
+Julie Adimic
+	a. Behavior inciden
+		which days
+		and time of the day.
+		Location
+		subjecct
+		arrangements?
+		(safe school violations are the escalated ones to go to the admin)
+		MTSS (multi teers system and support) - not all schools
+	b. Mastery Connect
+		NWA connection and tests
+	c. Messages
+		a. flag as emergency.
+		b. Even if they opted out of email or text.
+		c. Add in voice
+		d. Make sure that links can be clickable.  Text and email.
+		e.
+	d. Volunteer hours
+		a. have it included in the calendar.
+		b. although there is email signup by parents, you can also send out a message about the event.
+		c. when it is full, it stops it.
+		d. required hours (is that generic for parents)
+		e. show a report of the hours by month, by day (trend) and hours (trend)
+
+Alicia:
+	Choosing a student from quick search, the icons don't become available for Lexi McCauley
+
+Merry
+	Adding a course to a student's schedule, she can't click off the Accredited.
+
+Design Calendar:
+	For the options for the user to choose from (persistent config records)
+	?Sports entries
+	Teacher enters an event just for her students and their parents.
+	Enter in an event for the school but either by class or by grade level.
+
+Videos to record (and prepare the email to send to parents)
+	***Carpool request
+		Open requests
+		Direct invitations
+	Reading log for the parent
+	Parents: Students / Grades / Assignments
+		a. THE PARENT NEEDS TO BE ABLE TO UPLOAD OR RESPOND TO HELP THEIR CHILD WITH THE SITE.
+	Teacher/admin only:
+		Behavior incidents
+		Messages and Reminders (Save Groups)
+		Students:  Assignments Assigned to Students
+	Teacher: Reading accumulation:  points are minutes.  provide a tally at the end (or the top of the page).  Use a traditional gradebook and set points by minutes and let the parents report minutes as points.
+	Curbside check-in and check-out (need teacher and student response and work flow)
+	***Registration:  On the front page, too, with the registration in progress or starting.
+	Volunteer Hours
+
+Liahona Teacher Review
+	Teacher entry of an event for the class and parents to see.
+		And by grades
+		By class (by base class)
+	Be sure that the behavior incident emails Jordan (config option?)
+
+Carpool
+	The create of a carpool doesn't close down the input accordion when you are done.
+	the carpool entry doesn't clear out the drop-off and pick-up times that are still in the controls.
+	Maximum seats is not necessary in the carpool creation.
+	The "allow my address..." is not lined up with the checkbox.
+	It didn't make sense to send a message to someone when you add a request and there is the message link on your line.
+	And when you have an invitation in response to your request,
+	There is not a way to delete someone from a carpool or for someone to delete themselves from the carpool
+	Need a student assignment to drop-off and pick-up time to be repeated so many times.
+	And the initial entry for someone joining a carpool should be to assign them to the drop-off and pick-up times by defaut
+	The stop display on Daily schedule need a line between the checkbox and the next stop.
+
+Melissa Pearson
+	She didn't like the calendar coming up when she was coming up the first time to register.  Have tutorial video instead
+
+Carpool direct request
+	repeat assignment for student moves between carpools
+	Carpool owner can delete drivers (with a trash can next to their name)
+
+
+Check for accuracy on the change of the semesterInterval
+        modified:   src/app/views/ScheduleAssignByMathView/ScheduleAssignByMathView.js
+        modified:   src/app/views/StudentAssignmentAssignView/StudentAssignmentAssignView.js
+        modified:   src/app/views/StudentCourseAssignView/StudentCourseAssignView.js
+        modified:   src/app/views/StudentScheduleWeekView/StudentScheduleWeekView.js
+        modified:   src/app/views/TeacherScheduleView/TeacherScheduleView.js
+
+2. Behavior with notification (parent view)
+3. Locker combinations (for the student and admin to get combinations.)
+4. check out
+5. Volunteer by grade with notification
+6. Get freedom teacher canvas feedback
+7. Calendar config view
+8. Sports entry
+
+Behavior incidents
+Calendar and Events
+	person config
+	show homework
+	show classes
+	show sporting events (and specifically the events that you want to see per grade level or team)
+
+Tabitha
+	a. notify me of volunteer events.
+	b. after responses come in, be able to mark it full when there are enough volunteers.
+	c. Check-out three-and-a-half step process
+		parent to admin
+		admin to teacher/student
+		student response or status
+	d. Fee portal Aspire: Tabitha
+		Upload csv
+
+Programming and Moving priorities:
+	a. Make the gradebook have a paging option at the top when there are so many students and so many assignments.
+	b. Note boxes on the registration last four questions for academy
+	b. clean windows and spider webs
+
+Matt review of behavior incidents
+	a. Other fields on the levels:  an input box that comes up
+	b. Descriptions on the levels
+	c. The other fields are not coming up on the responses.
+	d. accumulate the choices on the levels.
+	e. Speical is misspelled in the admin response.
+	f. Required fields:  Note, Teacher's response, admin's response, Do oyu want aadministrator..., Have parents been contacted, when contacted if yes, If you have not contacted...
+	g. Describe the incident. Please include all students and adults involved.
+	h. report that shows
+		By teacher by month - how many write-ups has a teacher done.  And by year
+		print per student - the complete form.
+		notice level 2 and 3 the ISS and OSS suspensions is added that the level 1 doesn't have.
+		Students who have exicted after receiving behavior write-ups - came late in the year and left early. take date time stamps of coming and going. (Time with freedom)
+
+
+To do (Kara Davis Carpool)
+	Review August 7, 2019
+	a. Carpool setup:  The "Maximum seats" may be unclear. Take it out.
+	b. When submitting it should close down the accordion.
+	c. The general setup needs a daily setting for the week.
+	d. Why is Kyanne is graduated from last year.  Determine which kids are gong to be involved.
+	e. When entering a dropoff or pickup, selecting the days of the week.  A date range as well?
+	f. Immediate cick changes (local redux)
+
+	m. The "Running late" needs to text all in the carpool. (Students, too?)
+	n. Shirlyn is the driver but she is not seeing the drop down.  Kara did see it.  Is that because she is the owner?
+	o. Be sure that the new day does not show yesterday's day so that it is most convenient.
+	p. When someone says that they can't drive, then it opens up so anyone can go in and sign up for it.  Text for each sign up is okay.
+	q. Put the driver assigments in the carpool tab.
+	s. The curbside check in doesn't respond with the record waiting for the admin.  The page is quite blank.
+	t. Return the user to the very page they were on when they left last.
+
+	v. Carpool:
+		1. Jump to a given date from a list.
+		2. Show the time for the pick up or drop off prominently.
+		3. Let a driver see their days that they are driving.
+		4.
+
+
+________________________________
+Eldon McMurray
+	Comparison percent of gain of the three tests during the year.
+	One test correlates with another test.
+	ASVAB is military. They can take it multiple times.  See gains.
+	Percent of attendance:
+	You want to restrict your sample as far as taking those students which are serious.
+	Weekly assessment update that rolls off automatically that goes to someone.
+		Who would that alert go to:  It could go to the parent.  Checkboxes for those that the admin wants to send to the
+
+______________________________
+HIGH PRIOIRTY:
+	b. Gradebook
+		gradebook entry is slow.
+		clicking on managing assignment must lose the course id.
+
+	c. student profile: does DE show the both parents living?
+	d. Calendar:  Does the teacher see the assignment due?
+	e. Attendance:  not working in test.  show up.
+	a. put the user back on the page where they left off.
+	a. The admin doesn't have a way, yet, to see the combination.  Make the locker or padlock a link (only if there is a combo) and then have the admin enter their password to get access to the pop-up of that combination.
+	a. The logo is not able to get removed in school settings - other than replacing, which is confusing.
+	b. On AssessmentItemModal, there doesn't seem to be a handleRemoveInputRecording... function for the three options (question, solution, answer)
+	d. See handleRemoveAnswerRecordingOpen of AssessmentItemModal.  It is not defined.
+	c. handleNewPenspring in AssessmentEssay.js needs to change the editorPeronId to a list so that more than one person can be given access (multiple teachers)
+		also see handlePenspringView of AssessmentPendingEssayView.js
+		also see handlePenspringView of GradebookEntryView
+		also see data.editorPersonId of PenspringWorkAddView.js
+		also see handlePenspringView of StudentAssignmentView.js
+	e. the temporary or first password has some special characters that may not be necessary
+
+
+LOW PRIORITY
+	e. The "Assignments waiting for review" is taken away until it can be caught up with the mixed-in knowledgeRating and PassFail type ratings.
+
+
+
+Leslie Ann (Caritas)
+	a. !! Choosing a day, chose the school event and then chose all day.  But it will not show up.
+	a. Who can pick up a student
+	b. Courses scheduled in the original setup with the checkboxes to set up all different classes for the quarters.  That way they can be assigned different periods.
+		And assignments are set according to the specific class.
+	c. Attendance to be able to check once for the day to set for the entire day.  They can then uncheck a student who leaves early.
+		i. A parent checks in a student and the admin confirms could also mark the student there for the entire day.
+	0. Do we really need the time in the display of the calendar items?  They are already in their slot.  You can click on it to see all of that specific details.
+	0. Teacher login instructions:  probably going to want a all-invite option in the teacher section.
+	1. Be able to indicate who CANNOT pick up a child.
+	7. On Background, the Yes does not open up a text box to give more description.
+	8. Curbside check-in:  Be able to choose whether a picutre is required at either check-in or check-out.
+	13. Manual student entry:  Finished student profiles show a place for state and country, but there isn't a place to input that on the original screen.
+	15. Have all of the registration options for the manual entry?
+
+	1. ***Can we format the schedules so they are in a weekly calendar format, so you see what classes each student or teacher has each day of the week? The current format is confusing.
+		HAVE THE CALENDAR CHOICES SET IN PERSON CONFIG TO BE PERSISTENT
+		a. The student's main menu schedule needs to have specific days and period listed.
+		b. Calendar on the right will have a list of checkboxes to decide what they want to see in their schedule.
+			Category to choose all classes or just some.
+			Alo see assignments due.
+			Of school events.
+			Persistent choices
+			personal details, too.
+
+	Leslie Ann Review (July 23, 2019)
+	1. ***Teacher Schedule: time on the left and the names of the classes in the columns on the right.
+		b. Adjustable times in increments.
+	5. Student Grade Report
+		a. Needs to calculate the course credits completed by fraction.
+		b. Probably make the admin commit to quarters, trimesters or semesters.  Then the credits will be labeled "Credits per <quarter>" since they
+			committed to quarters already.
+_________________________________
+
+
+Feature List to do:
+0. Testing gains reports and test scores in general.  (interface with testing companies?)
+1. Lunch menu
+2. Parent/Teacher conference
+3. Class photo gallery
+4. Classroom seating assignments
+5. Staff Onboarding (part oft he financial feature)
+6. Course Library and Duplication
+7. Facilities management (To be designed by Taylor Ostler)
+8. Send student to office (which office?  what and who is the target for the student to report to?)
+9. Substitute request and scheduler
+10. Voting and surveys
+11. Voice recording options for homework-quizes (this one exists now)
+12. Teacher determined grade scale.  The company one is the default.
+13. Voting and surveys
+14. Substitute request and scheduler
+15. Live streaming service for class filming (live or otherwise)
+
+_________________________________
+locker list
+	i. Have it assign lockers to students automatically.  Maybe have a new page with a student clipboard and a locker number range or a descriptor)
+		Then show the list below to show all of those students in the clipboard to show that all of the students were assigned alocker or not.
+_____________________________________
+Math features
+[?. it is possible to delete an answer which is the only correct answer for the multiple answer or multiple choice.]
+0. On the question view page, don't use the radio buttons and checkboxes to indicate true and false.  It appears that you can change them.  Use green checkmark instead.
+
+0. CourseToSchedule (single view) needs a stored procedure. (getCourseEntryScheduledSingle)
+0. The getAssessmentQuestions needs a stored procedure.
+0. The essay version doesn't have the picture showing by default, I'm sure in the setup, the learner view or the corrected view
+1. Passage also needs to have its picture files put into its component (just question file in this case)
+3. The score override (or teacher correction version) still needs a comment.
+4. AssessmentCorrectView : only allow those students who have a completed quiz to be in the list.
+
+3. The teacher can choose to correct all answers from all teachers of a single problem all at aonce.
+4. The teacher can write on top of the sketch of the student in a different color to point out different aspects of the problem that need to be corrected.
+5. The text response is also an option.  The text responses can be saved (maybe by clicking on a button to save it in the list - which infers that entries can also be deleted).  So that the response can be reused for another student.
+6. Scoring can be done with a click of a button for full credit (5 out of 5) or a number can be inserted if it is less. 4 out of 5.
+7. The test can have a different retake (that starts as a copy of the first test but the teacher can change the question slightly so that students just don't recognize the problem and know the answer from before.)
+8. The test can mix up answers from the previous order.  The order of the answers can also be changed around so that other students who are taking the test can't get away with just choosing the same letter of the answer as the other student.
+12. Maybe save the feedback to repeat without having to rewrite....maybe it accumulates in a drop down.
+13. Homework:  Verbal questions and verbal responses.
+
+_________________________________
+
+4. Provide file upload and picture from camera
+          by identifying camera on device?
+5. Assignment entry with direct upload from the popup.  Or link.
+
+_______________________________________
+Freedom Academy
+		10. Enter the pre-requisites
+		11. Consider the GradeLevelCourse records.
+________________________________________
+Google classroom
+	1. What does it do?
+
+2. The step #6 of a new school ought to have an option 1 to set up with the clipboards.  A video would be useful to show how that works.
+3. The assignment entry for Annette showed "Students Assigned: 84 of 44" in the student list, so I wonder if the semester setting for the class was not cutting
+	back on the student list since it was also showing doubled up classes for class list which infers the two semesters.
+4. The student clipboard didn't take all of the students from the search page.  (change the loop call to a single call with array)
+5. Search page, when filtering and the chosen person is not in the list, then return the buttons to not chosen.
+6. "You appear to be offline" is boxy. It needs to go across the page and not push the left.
+7. Put the features checking around the School Settings page.
+
+0  profile picture in MyProfile and where to show the picture???  Student Profile!  Maybe also the student schedule page for the teacher to see when clicking on a student's name on the gradebook.  Or include a portrait icon and show the picture in a pop-up.
+0. In the courseToSchedule page when choosing a class period, you can't turn it off once you turn it on.
+0. Tie a message to a homework assignment so that it would launch from there (although they would see the messagse in their general list.  but historically
+	this could be seen from a student assignment although the message has been archived.  but do allow it to be dleted from the archive permanently.
+2. make pages scroll horizonally on nthe right.  Or at least the tables.
+3. The message icon from the student list in the parent main menu does not put in the individual recipient as intended.
+5. Spanish translation?  For parents.
+6. Login is too low.
+7. On accepting admin responses, hit enter to automatically accept.
+8. Text response directly to the sender.  Can Twilio do that?
+10. It might be interesting to know what CharterTech oes to support schools.  Maybe they could be resellers for eCademy.
+11. Visitor check-in.  Can that be right from their phone?  Go to to the eCademyApp and then get a confirmation from the admin.  Would that be something to prove
+	that they have checked in if they show that to someone who needs to see it?
+13. Lynelle King:  Emphasize Liahona in emails and texts.
+14. In company setup, include a long name and a short name (with an explanation that they are for email and text communications to your people.)
+15. Background check service?  A URL that you can use to automatically send information or use an iFrame to include?
+16. Is Penspring editing still jumping?
+18. A live answer to questions presented to the teacher in class.
+19. Penspring (Marcus Madsen): The new penspring document where a teacher can put something (such as a test) up as an assignment and then edit and submit is very convenient. But when you submit it after editing then it does not update the status of that assignment to completed. To fix this you still have to click on the submit and input a score a second time. Not sure if this was intended or not
+20. Admin setup:  Couldn't delete a discipline even when there weren't any classes
+21. First time login and invite strategy
+22. Penspring edit review still needs the count wait on did update restore location
+24. Penspring Taylor Ostler test: He had 268 invited lines for just me.  Viewing access for Taylor gave a blank page. Must be an error.
+25. Math scribble entries
+26. Penspring: login page isDuplicateUsername is not a function (first-nav container)
+27. Ps report page
+1a. Google Calendar API integration (And be able to choose the events you want published)
+1b. On top of everything you print, include the logo.
+	Next to the print icon and link, have a checkbox to include the logo. But it will be checked by default.1
+1c. Penspring - create email with style and include logo.
+
+28. Upload their logo with size indicators and show then what i looks like. At least height
+29. Penspring swing in right menu:  The gray out area needs to cover the rest of the page.
+30. Penspring edit review:
+	1. The box on the smart iPhone is a one liner
+	2. The green buttons are right and overlapping
+31. Student class signup.  consider how that is managed by admin (configuration?)
+	a. Class entry like student entry upload
+	b. Course grade level
+	c. Course recommendation
+	d. Pre requisites
+	e. Student transcripts for both pre requisites and credit for graduation
+	f. Graduation requirements
+32. penspring homework:  (Marcus Madsen) So I just found a weird bug on the app. If you have an assignment and you submit the assignment before writing the points, then when you write the points it will change the status from completed to past due. You have to type the points first, then open and submit the assignment.
+33. The parent student list has blue headers
+34. Penspring instructions:  mention MLA. That it doesn't do it.  (yet)
+35. Tutorials:  show video icon next to the subject on phone or desktop:  Show videos of each.
+36. Document delete in Penspring
+37. convert to Penspring any plain text or word processor file
+38. Parent:  Don't allow upload for a student.  But they can impersonate (from the student view or schedule as well as the main menu with the drop down.)
+39. StudentAssignmentScore: pendingEssayReview (to be reversed later after essay review.)
+40. Base course list:  The fast table is not filling in very well.  Maybe take this away so that it is a normal table?
+41. Base course credit change:  not changing.
+42. Student quiz:  Going in as a different student had Anjolee's quiz answers.  (Was that just me?)
+43. assignmentsPendingReview enter key to go down.
+44. File upload or student response DATE: show in alert.
+45. Table horizonal scrolling: Look for those tables that need to scroll without the rest of the page.
+46. Last search;  Don't save off the sameone that was the last one.
+47. What is this?  maybe send email to new users:  not your text formatter.  You can use it for your own purposes and keep your documents private among friends.
+48. Penspring:  margin adjusts to width;  The wider the editor, the more narroww the inside margins.
+49. Penspring: deleting as an editor doesn't dismiss confirmation message.
+50. (some messages changes on will unmount...?)
+51. Penspring (Josef): The advantage of seeing what has changed since you gave feedback to the author (so this is an editor advantage of view changes.)
+52. Penspring from Assignment response:  file upload not going anywhere.
+54. Penspring:  Takes too long to load a doc.  Consdier loading message and stored procedures for speed.
+55. Grade report:  Have drop down for year and checkboxes for semesters.
+56. Audio:  Record questions.  Allow recorded answers.
+0. SafetyAlerts page other than admin should be a SafetyBroadcast which ought to be able to be turned off by the admin.
+0. Sending a penspring invite without a last name will cause an error since the URL will be incomplete ... or something related to that.
+_____________________________________
+Penspring
+1. The work edit review page ought to just have a single view that is clear that that is where you start writing.  A switch on the page ought to be clear that it will show the editor's versions (and maybe show a count of how many editors have edited.  Even a zero would indicate that there is pending editor contribution so that the author knows that that is what it is used for.)
+2. The editor versions on the left need some color background to indicate that it is view only.
+3. The user ought to be able to click anywhere in the editable editor pane and have the cursor show up.  And the cursor should be started in it's place with a blinking action in order to indicate that they can start writing.
+4. On the swing-in pane, the Hide Labels link doesn't hide the labels.
+5. the config thing to have the editor pane go to the next statement is not setting.
+6. ps shouldn't have its own column
+
+_____________________________________
+Facilities management
+	1. Overflowing toilet or garbage.
+	2. When a room has been cleaned last and by whom.
+	3. What fixtures or appliances have been replaced or repairs and by whome.
+	4. See history of room and include costs for historical purposes.
+	5. A new facilities management access role?
+	4. Facility alert (cleaning need?  Bathroom?)
+		i.  Would that require a facility access role?  Maybe so.  We could have an entire role for that purpose with reporting of what has
+			been cleaned and when?  And replacement details of any equipment or appliance?
+
+_____________________________________
+Attendance
+	1. We are going to have to be specific on the semesters and the exact dates:  Quarters makes that even more imperative.
+	2. Needs tardy excused.
+	3. Needs admin config page for the hour violations settings and cost.
+	4. Need time ranges for courses for dates?  I think so.
+	5. Attendance admin: Need to do a local redux setting for the choices.
+_____________________________________
+
+Parent Volunteer
+	1. Need to include the pendingVolunteerConfirmations in the main counts.
+	6. User sees pending hours to check in or check out.
+	8. In the date, we need to consider how the deleted 6 hours works.  It should be saved properly as a date going in, but the admin confirmation date is
+		going to be off by 6 hours.
+	2. Add VolunteerType to school setup in settings to add, modify or delete.
+	4. Add a file or website link to the volunteer opportunity.
+	5. Include a time filter, too, as well as days so that a parent can look for opportunities which fit their schedule.
+		a. and include a notification when a volunteer opportunity shows up to fit that filter.
+	6. *Include the volunteer date of the opportunity in their calendar
+		and provide that reminder as usual.
+	7. Admin report to know where the volunteer (building and field) is and who they are with (teacher, admin).
+		a. How can a message be sent to those who are misisng their 40 hours of volunteer hours?
+	8.
+
+_____________________________________
+Main Feature list
+	0. user agreement
+	1. Create a landing page with video demos
+		a. Show the views to choose from:  Student, parent, teacher, admin
+		b. Give the option to choose between mobile or desktop
+		c. should it appear like the screens themselves so they are in place?  Or similar enough but not confusing?
+	1. Aspire - know it inside and out.  What needs to be put in manually if everything else takes place outside (excpt for registration)?
+	4. Get to know Canvas
+	2. PowerSchool integration
+	3. Skyward integration
+	1. Get to know Infinite Campus
+	5. Make up hours (and a configurable calculation for absences and tardies?)
+	6. See the remove clipboard to have it call the getCount when it is done.
+	7. Mindy:  Sports signup.
+	8. Montessori pick up is a mess.
+	9. Voting event for students?  Elections?  Or an admin survey to students?  Or even a teacher to students so that it is restricted to them only.
+	10. Behaviorial negative and positive marks. - and marking those according to which subject they are on to see if that is a trigger.
+	11. Seating chart
+		a. be able to indicate the class arrangement with a grid of checkboxes.
+		b. quickly assign students to a chair (and cut them out of the list as they are assigned.
+		c. pop out students who get re-assigned elsewhere.
+		d. When it is all set up, be able to click on a seat and it will show you the student's summary information with the option to go to their full info and their schedule.
+	12. Graduation requirements and self-service class registration
+
+
+______________________________________
+Demo school
+
+	4. The penspring file will need additional work.  Even for the teacher, the new work needs to be copied over for them so they are the author
+		of their own copy.
+
+	3. Set up demos for
+		a. *Stephanie Diediker sdiediker@americanleadership.net  ala2020!
+		b. *Jennifer Myers
+		c. Frank Anderson
+		d. *Buddy Ivie
+
+_______________________________________
+Safety alert
+	1. On initial entry, create a starting structure of a building, level with entrance and room.  Then the user can start modifying those and adding on.
+	2. alter table personconfigure drop column MyLocationsFolderExpanded;
+	3. alter table personconfigure drop column BuildingAndFieldFolderExpanded;
+	4. Send emails and texts to all admins
+	6. Show the location in both the waiting for confirmation page and the admin page.
+	7. Let the alert-person go to their old alerts to see the responses.
+	8. Add on the notes from message interactions. (both for safety alert as well as curbside.)
+	9. show students and how involved.
+	10. The mobile is not hearing a noise.
+	11. Broadcast to the access roles.
+	12. The admin note is not coming through.
+	13. The alert person just said 'Confirmed" and didn't indicate if it was denied or not.
+	14. iPhone is not letting the checkbox on the location common choice.
+	15. Bomb threat
+	16. Suspicious package
+	17. A picture from a student to prove it so there are no false alarms.
+	18. Room status: locked down, being broken into, intruder present, comment, picture upload, intruder departed, intruder direction or unknown
+	19. police login
+	20. People search with gps?
+
+   Low priority:
+	21. Place the responsible people with links to their records of email and phone undearneath the room (or maybe display it on the page?  probably.)
+_______________________________________
+
+Menu items:  Hand on hover.
+
+Curside Check-in or Check-out
+	1. reason list to be maintained by company
+	2. Create reason records for all other companies
+	3. Include the reason records in the company creation.
+	4. Admin reason update page.
+	5. Gps location (Mike Bersie: GPS so that the person sending out students knows if you are first in line.)
+	6. Upload picture (if not facial recognition)
+	7. Parent:  Check-in-or-out history
+	8. Secondary guardian ought to be able to drop off as well. (And emergency contact?) (And carpool driver?)
+	10. Winsockets would be a more direct way to communicate with the front office?
+		a. And the ability to carry on a conversation rather than only having one chance at a comment and no rebuttal to the office's response.
+	11. The student list is not seyt in order so when the page refreshes on timer, it reorders.
+	12. MinusHours is different on the server, of course!
+	13. lOGIN AND STAY ON ALL DAY.
+	14. Check the setInterval for admin (more than 60 seconds?)
+_______________________________________
+Calendar and Events
+	1. parent needs to impersonate a student (but keep track of the impersonate so that the parent can switch to another student or even back to themselves.)
+	2. Enhancement: admin school event specifically for the grade level.
+	4. Test an event over three days.
+	8. Display of time could be cut back from 7:00 AM to 7am for real estate conservation.
+	6.1 There will be a problem with the type filters since courses will show up twice when rebuilding automatically since the semester assignment doesn't have a date range on it.
+	7. Reminders
+	8. flex box with note and assignment and attachments
+	9. File or link or Penspring temporary holding until. Assignment or calendar event is submitted  (Do this on assignment entry, too)
+	10. Google maps link is not working.  Also use "google maps" verbiage.
+	11. Click on "Add a new area" do onfocus to the area name control.
+	12. On request, if you choose that you have a request, then hide "seats needed".  if not, hide the 'seats available."
+	13. Also, take off the checkf or allow address on google maps if you have a car pool.
+	14. On request, you wouldn't need a message icon on your own request.
+
+_______________________________________
+Messages and Alerts
+	1. Consider the narrow view of messags to use a flexbox structure to move the subject and message with ellipses below each entry. Keep zebra striping.
+_______________________________________
+Elizabeth Test
+	6. I haven't yet hooked up the quiz essay with penspring.
+	7. The quiz essay shows that you can create a Penspring file.  But you click on the link and it don't go nowhere. Or it has a blank page in penspring.
+	8. The penspring window needs to be tall and not a single line.
+_______________________________________
+Carpool
+	0. Allow the admin to see who is driving in a student's carpool on any given day.
+	1. add another driver for drop off or pick up
+	2. another carpool for later in the day. (Or is that the same carpool?  Probably not.  There could be a whole other evening drama arrangement that is covered
+		by completely different people for the same user.)
+	3. Create pre-worded messages for the various choices, such as students not coming today (or change of mind that they are coming today.)
+	4. Simple acknowledgement for a button click by their name as well as a link in email or texts.
+	5. Flex box on the request view too.
+		a. Keep requests related by zebra-stripping.
+	6. Does the column of the carpool report that shows how many requests actually show the count of pending requests?
+
+_______________________________________
+Shirlyn
+	1. Unenroll a student from classes and access to the system.
+_______________________________________
+Alicia
+	2. How do we know which record I am looking at in the student info page?  Particularly to find out if she is accredited.
+		a. year switch at the top of the grade report.
+	3. Put School Settings in its own page since it is so low on the page, it gets lost on the scroll since the page opens up above.  And put numbers on the options
+_______________________________________
+Carpool
+	Get carpool count to include in the main menu counts
+
+1. Carpool setup
+	c. The acknowledged confirmation datestamp could be by each parent (and the driver as far as getting communications, too).
+		i. remember to include a link in text and email messages for an easy acknowledgement.
+	d. I still don't know what it looks like when there is more than one carpool.
+	b. If there is a change to the student, it needs to be submitted to confirm before sending since a miscommunication could happen if the user unmarks their child and then marks them again.  The driver might get the first communication and not pay attention to the next, believing that they don't need to be picked up. (Confirm pop-up to send message or not.)
+	d. I'm here! button. Confirm pop-up to send message or not.
+	g. comment areas for driver and the other parents.
+	Have a distinct confirmation area to see which parent/drivers have acknowledged the latest changes.
+	The email or text should have a link to confirm/acknowledge the update/change so that they don't have to log in directly.
+
+	4. Let the parent indicate text or email preferences for each type of communication
+	e. Delete a member from the group
+	c. Don't let a carpool be deleted if it has members other than the owner.
+	h. After choosing accept/decline on someone who has asked to be in your carpool, send an email. (Keep the declined record so that you can see that.  Or even undecline?
+	i. On editing a carpool, the dates aren't reading in.
+	j. the filter keeps flashing on and off so the list shows.
+	Daily schedule:
+		1. If more than one carpool, have it chosen from a list and be big, bold and prominent.
+
+	...Stragglers
+		a. The fromDate/toDate would still need to update the CarpoolDate records without losing the drivers who have been assigned.
+
+_______________________________________
+Knowledge rating details:
+       f. Speedometer display for both current assignment mastery from what has been introduced.  A second speedometer for overall progress for the course
+       g. This assumes that all of the state requirements or standard entries have been chosen for the course (at least for that semester interval)
+      h. Get state requirements
+      i. Need a standard entries page and facility for managing the standards (which might allow the choice of state requirements, too, as well as adding to, modifying, or deleting.)  Keep them tied together if they are modified (for future comparison and adjustments as the state requirements might evolve.)
+
+_______________________________________
+New companies
+	1. We will need to figure out the billing details.  Use my account?
+	2. Need a landing page.
+_______________________________________
+David test
+	4. My Profile page should have a picture.
+
+________________________________________
+Priority:
+	The penspring icon in the assignment list was always showing not submitted as an icon. It needs a better icon for not submitted. Maybe world.
+	The teacher schedule probably needs to make the day unique and loop through the various days of the week with the new daysScheduled table.
+	Did we determine how a new student is assigned assignments to a class if they are added after the fact?
+	Registration confirmation on the website in addition to the email that is sent.
+	Emma: make a button for zero fill in.
+		Default is no one assigned to the assignment.
+		right click on left label or title label above to get a set score generically down the column or on the row.  Default it to zero.
+	Sluff report:  Have an admin entry for the people who should receive notification about sluff reports ... the automated ones as well as a direct teacher report.
+	The admin setting could include a add-one-list of admins and also an open set of controls for those who may not have an eCademy account.
+	Send messages to Android message list
+	Integrate with Google calendar
+	Can I get GPS location?
+	The myWorks page sometimes has the Loading message go on forever.  And then after a long time, it can disappear without any other indication.
+	Teacher distributed file.
+		a. Update their distributed file if they have not yet opened it (in order to make a correction).  There must be a flag that they have opened it at least once.
+		b. When creating Brother Pollock's penspring file for 7/8 and Earth Science, it put both of his owned files under the Earth Science directory rather than the two separates ones.
+
+Katie
+	2. Put an error on the page if no students are chosen in assignmentEntry (in case it came up blank.)
+
+______________________________________________
+Knowledge Rating
+
+	7. The Gradebook: display the overall grade as a count of the total (from introduced) / introduced / practicing / mastered
+	8. The Student assignment: display the overall grade as a count of the total (from introduced) / introduced / practicing / mastered/
+	10. Display the gauge on the assignment list page
+		a. display the overall grade as a count of the total (from introduced) / introduced / practicing / mastered/
+	11. Display the gauge on the main menu student course list.
+		a. display the overall grade as a count of the total (from introduced) / introduced / practicing / mastered/
+	12. Modify the code anywhere for StudentAssignmentScore so that it picks up the knowledgerating data as needed.
+
+________________________________
+My testing
+	The score entry of the dynamic quiz for the correct phrases used in an essay would not take a score entry or the checkbox of "mark this essay as correct."
+	And I don't think that the essay entries of the quiz are yet created as Penspring entries.  How is that managed on the penspring side?  Interesting.  Maybe in chapters?  That would be interesting.
+	The clipboard count is off on the courses.  In accordion header it shows 4.  But both the count below and the course assign page show 3.
+	The student's assignment list could probably lose the red clock when a 0 is put in their score.  Because itis done it's just that they didn't do well.
+
+
+
+____________________________________
+Alicia
+	2. scheduled courses page:  add a school year list for the next year.  Also course entry form needs it.
+		And save the record accordingly.
+	3. can we make the registration have a DE courseType for other schools so that this wil flow similarly?  Or some flag
+		to indicate that there are classes to choose as they register.  Or should we lead them into the Manheim
+		class registration with the courseType along with the grade level?
+	4. Have a grade level choice when entering in a course scheduled.
+	6. Is the relation coming back in after it is enter in a registration for a parent.  I saw Summer Carter's which were all not filled in.
+	7. Messages:
+		b. Be able to reset your message entirely with the reset of the subject and the message.  Maybe links or an X in those two areas or boxes.
+	8.
+
+____________________________________
+Merry Tutorials
+	1. An accordion with tutorials of videos.
+		a. Admin can send to callers by email or by drop down of the parents.
+	9. There are 5 edits on the Other list of Merry's document.
+	10. Notification to send to the author that they made changes.  It could say how many edits and what kind.
+		a. Should we encorporate the entire messaging system over from 5 star?  Probably.  The groups would be editors
+			or even editors of specific works.
+		b. When emailing from EditReview or from the MyWorks, include th workId.  And maybe a hrefId from EditReview?
+
+
+____________________________________
+Today:
+
+	6. Send email out tp parents and students with screens as well as tutorial video link.
+
+	Teacher assignment
+	   If a sentence is moved to the beginning or to the end, it doesn't show up.
+	   If a sentence is moved to the beginning of a paragraph, it can get moved to the end of the paragraph above.
+	   ???I'm not convinced that the editsPending and editsProcessed are being gathered right in getMyWorkFileTreeExplorer
+	   ^^^Any student who is assigned to that class late, should be assigned the homework (according to specific class
+		LearnerCourseAssign process
+	   ^^^How to delete the distributable assignment?
+	   ^^^Republishing is possible - maybe phase II.
+	   ^^^Should we be able to lock the file?  Maybe not since the grade can be given and that is final.
+
+	2. The work summary popup is missing word count and sentence count.  Maybe edit counts?
+
+Rochelle
+	1. Multiple tabs - title in tab:  First name - assignment name
+
+__________________________________________________
+Ideas
+	A link on emails or texts for a simple "Got it" response from the recipient.
+	AND! How about a link for the recipient to go into 5 Star right to the message where they can respond?  Maybe if they have to log in then it still redirects them.  If they are logged in, then let them go directly there.
+	The teacher ought to be able to convert a word document to a penspring file in order to show edits.  And have it belong to the assignment.  Maybe a drop down list of students and assignments?
+
+__________________________________________________
+Merry
+	3. The teacher's response will be obvious to the student.
+	4. RegStudentService line 324 - something to be truncated
+__________________________________
+Shelyce Test:
+	1. ***Not allowing duplicate messasges to be sent (even if an email address is shared between a student and a parent)
+	2. ***Arranged the class entry with better tool options which were switched to the top rather than the popup menu.
+		a.*** The choice of a class will choose all of them.
+		b. ***Need to do the same type of tool arrangement for the scheduled courses.
+	3. ***Creating a message group, didn't look like anything happened.  The name should go in the list.  And an alert
+		message that indicates that you created a group.
+	7. ***course scheduled - put optional by the ones like course and section
+		a. The new course did not enter. Was that because there was not a class period set up for Shelyce?
+	0. ***an improved upload by Excel (csv only) for students.
+	9. ***Student bulk entry:  could use both guardian options for full name (first-name-first or last-name-first versions)
+	11. ***After the user chooses the bulk entry fields, remember them for this user.
+	12. ***Potentially create additional static fields so they can have more than 10
+	13. Take phone numbers in by parsing all numbers (cutting out the formatted text). Then always display phone numbers in full format (###) ###-####
+
+________________________________________
+Leslie Ann
+	1. Deleting a course from a schedule from a student, deletes on the client but not in the database.  It keeps coming back.
+	3. Change the label of the lower part of the student schedule, "Available Courses for Fourth Quarter" to add to the student's schedule aboev.
+	4. Student schedule had a start time with "Invalid Date"
+	5. Missing students in the student schedule drop down list.
+	7. In the assignment list, have it check off immediately on the line when a score is entered.  It is staying with the overdue red clock still after a score entry.
+	8. Print option on student schedule.
+	9. View teacher's schedule.
+		a. checkboxes for the semester intervals.
+		b. print the same choices.
+	10. What about propagating a schedule through the entire year.
+		a. course entry ought to be able to let you how many quarters that it goes.
+		A class could go all year long.  Or it could repeat the next semester.
+
+	11.
+
+
+Courses
+
+     + Add new course
+
+     Scheduled courses  5  (view, delete, or update)
+
+
+Course Entry
+	instructions on how assignments can be given on a class and then you can reschedule a class and duplicate the course with its assignments.  If it is a similar or different class with different assignments, create a new class. (You can add an assignment tha twill go to more than one class and make it specific only to that class.)
+	don't allow the same name?  Hmm.  the same name might be necessary but the question is who is teaching.
+
+
+Christine test
+	7. Delete a course:  Don't allow a delete if there are students assigned to it.
+	9. The clipboard-add icon needs a clipboard-remove icon to toggle for courses and students.
+	10.
+
+Caritas Academy:
+	0. Recaptcha didn't have the right domain name for the key.
+	a. Billing and invoice
+	b. Card swiping at the door to keep it secure (parent, employee) logging them into the school as far as time stamp and location.  Open the door for you.
+		i. And visitors to be able to communicate to say that they are there and need in.  Property managers as well.
+	3.1 Give Jef the option to log in as any admin for any school.
+
+	c. The message icon in the search student list did not cause that student's name to come up in the single recipient list
+	d. Change the logo on the grade report.
+	4. Student Add (initStudentLogin also needs this)
+		i. Make sure that usernames are unique as they blur as well as get validated in processForm.  Call the database to compare rather than calling the names.
+		ii. The guardian could use a username field, too.
+	8. Doubling up on the student grade report: Cache carter - probably from 2020 registration. And it showed him in the
+		next grade up.  It is probably a good place to have the year in there (of those years which exist for the
+		students of the teacher.)
+	9. New course entry page with the top part that allows you to choose existing or to enter your own.
+	12. Calendar for parents. It would mix the school schedule and events as well as possibly class details.
+
+	17. Should the School Setup section have the year that the school is in as well as the semester ... which would then
+		be the source for setting up new students and teachers as far as their own personConfig records are concerned?
+	13. We will need a reset link on all of the school setting pages in order to erase any current record in progress and to go enter a new one.  Otherwise the Id is stuck in edit mode.
+	14. After entering students with their parents, we need a feature that would allow the user to let all emails go out to users who have been entered new.  Maybe give them a list with checkboxes in order to undo any of those checkboxes if they are not ready to send, yet.  The firsttimeEntry passowrd is kept in clear text until the user logs in the first time.  Then have it deleted (which needs to be done, still.)
+
+Wish list eCademy:
+	1. Tammy: When a parent pulls up, they can press a button that they have arrived.  Or the GPS might have their location that they arrived, as well.
+	2. Christine:  Bloomz - schedule for teacher conference.  Pictures of students in class related to some activity.
+Penspring
+	3. Does the new penspring pick up the pending assignment for teachers?
+
+	c. The invite needs to be able to handle new and old users to assign the work that is being shared.
+	b. Like notePad, cut out special html while pasting in order to control extraneous html (although we would certainly like to preserve that in the future. -
+		or maybe that was just from my own books where I got specific on styles per paragraph ...?)
+	d. The auto-login in from eC takes too long to come up (but we did away with the autologin anyway and went with the direct implementation inside eC.) And it should go right to the edit page.
+	e.
+____________________________
+Liahona
+
+	Kathy Drake:  The grade report change needs to be faster and probably blank out between calls.  Stored procedure?
+
+	Registration:
+		a. A couple of students on the initial brief overview, it shows the wrong grade.  It has two dashes or correct grade.  Mercel gardner.
+			Also the student profile view iwth parents needs to show the current view by year (from the student search page.)
+		1. ^^^Only let the primary guardian have the register link on the main menu.
+		b. Be sure that the sign up and then the approval will really put the right classes into the schedule for the right year.
+		0. Registration: Picture upload and personal Id for registration
+			a. guardians (both primary, secondaries, and emergency contact)
+			b. students
+			c. Anyone approved for pick up.(do we need a pick up access role?)
+
+	Alicia:
+		a. Report for enrollment.  Put it under the Registration accordion.
+
+	5. Math canvas/scribble features.
+	6. password reset:  Is there a problem with username/emailaddress which causes a problem with two accounts that share the same emailaddress but different usernames?  Only let one be chosen (top 1).  Also force all other username entry points to be unique.
+	12. The assignmentList could be stored-procedures.  Plus when refeshing the list, don't blank it out so that it flashes.
+	5. Profile for a student view has a lot of details. Make it a stored procedure.
+	Messages:  It is a bit weird to not have the recipients up before the subject and message when choosing group people.
+	7. Shirlyn Jones parent has 8 registrations.  Why is that?
+	Wait function:  Replace wait functions with runFunction calls in response code.
+	8. Impersonating a student tends to bring over wrong counts:  0 for messages and 86 for courses.  What does that look like when you log in directly?
+	9.
+_________________________
+Ask if an Android in Spanish will really translate voice to text.
+
+_________________________
+
+Liahona:  Harmon registration
+She could see spring of 2018 but nothing else
+	I will make note of "No open registration for 2019-2020"
+	The year for the registration ought to be on the main menu of the registration. Then the registration can change according to the students and choices.
+
+__________________________
+
+^^^Abandon Ajax call
+Student clipboard is slow going to the assign course page.
+
+The Bigger Plan:
+	2. Finish Penspring and launch it in 5 Star
+		j. Make the ps favicon transparent
+		0. Author logged in
+			a. When cursor enters a sentence which has edits, show them on the left with the sliding left pane which might need to be opened.
+		1. The clicking on an edit change that is colored will not open up the left sliding pane.  It must be a child thing.
+		4. On invite, I'm not getting the 'Create a new record" version of the login page. Send the CreateNew parameter after looking
+			for an existing account
+		4. "Yyou have been invited" needs to be checked off when the user goes in with the invite URL so that it does'nt show when you go in.
+			(Although when you log in again aftewards, it is gone.  So maybe it just need to be recalled on the first entry on the local Redux)
+		2. Moving a sentence to the very beginning makes it get lost entirely.  Or was that because it was the last sentence to start with?
+
+			b. The edit modes in the context menu don't give instructions for the author.  Take those away.  Maybe give the image insert, though.
+				How else does an image go in?
+		0. Editor logged in
+			h. ^^^Shirlyn did experience a jumping of the cursor after she stopped for a moment and started typing again.
+				???Maybe cut out the ability to type when it is in the middle of the update.
+			f. On giving access to existing editor's, don't send the messages until you leave the page.
+		1. Landing view
+			c. Create the main table to hold the main steps followed by the detail table to show the movements within the steps - and set that
+				according to the device media size (desktop, tablet or mobile)
+			d. Use the default page as the #3 editing step with images of laptop, tablet and mobile for direct undrestanding of responsive site.
+			e. Improve the look-and-feel of the track changes first
+			f. Create images with arrows and letters that are obvious not part of the site to lead users to each step.
+		0. The login page Login button goes full opacity after a valid email address is typed in.  But a username might not be an email address
+			any more.
+		2. Provide Tab with five spaces anywhere that the user hits it.  And place the cursor after those five spaces. (savePosition = 5?)
+		5. on a teacher's response, include the penspring option
+		b. report on 5 Star side with double click on ps icon.  Single click takes you to penspring. double click to view pop up report of editors,
+			statistics, and also instructions icon.
+		d. Send email to students, parents, and teachers to give Penspring instructions
+		e. Restore penspring home pages
+		f. Check out peer group feature
+		g. If a teacher assigns a penspring homework, does that mean that it is a separate copy for each student?  how is that managed by the teacher since that will fill up her document list tremendously?  Maybe a drop down list to choose the student that she wants to go to?  maybe a report to show statistics in one view as well as to indicate that she has graded it for that student?
+	More Penspring:
+		15. In translation mode in the editor's frame on the right, color code the text when it has been translated.  Then they can see their progress.
+		17. When going next automatically, then blank out the local Redux with the MT as it waits to pick up the next MT.
+		18. Reports:  It could change from edit at the top to translate when it is a translation type of effort.  Have it go there directly when it is a translation effort or editor.
+			a) Also the report is confusing since the user doesn't know that the labels of the report are clickable in order to drill down to that more specific detail of the given document or editor.  Give a list of the reports in better description.
+			b) When choosing a language or an editor in the multiple select lists, it gives some error and crashes the page.
+
+	3. eCademyApp
+		a. Allow a person to sign up for 30 days free (to start their own school group - family or extended)
+		b. Set up course content authoring and sharing for the library
+		d. Standard check-off (knowledge base check off) for courses overall and assignments more specifically (including quizzes of course)
+		h. File TEAS
+		i. Links to state requirements for home schoolers
+		j. Heather:  California Inspire - funding
+	4. Math snippets and canvas for stylus or finger entry.
+	5. Video streaming (live or otherwise) for both 5 Star and HomeAcademyApp
+	6. (How to do a Google Play app entry when it is really a progressive web app?)
+
+
+
+***John Orgill:  Student Attendance Report - no data shown
+	?? What about parents?
+
+The entry of a base course does not aggressively refresh the base course list.
+Base course list fast table cuts off bottom (return it back to a regular table which is fast enough now.)
+
+Don't allow any usernames to be created that already exist (My Profile, Registration, and when inserting usernames anywhere with an email address.)
+
+Assignment List could come up faster (AssignmentListView)
+The impersonate student is quite slow.
+
+Penspring
+2. Have Others call on a timer.
+3. The change of the order will go back to the database and save that config option.  The personconfigure record.  And bring back the data.
+	But otherwise the local Redux with the call back to save the sequence change or the delete.
+4. Drag is only available within the "sequence pereferred" option.  Somehow make a message to explain that.
+5. Don't let someone change their username - particularly if it has a space in it.
+	a. And validate that their email address is valid - or don't let them update it.
+
+
+Merry
+	Learner data: After seeing all of the data about a student profile that is brought over at the beginning and then trying to update a student in registration, I'm realizing that we are bringing over way too much information to start with because it needs to refresh but it is already there on the client..
+
+Penspring
+20. I'm not seeing how to delete my own document in penspring.
+	0. When deleting a Penspring document, have it delete in the student homework response as well.
+	a. What happens if the teacher deletes anything related to their connection to a student's Penspring document?
+12. Do helpful tips when entering the page.  Have a way to turn them back on if they get turned off.
+2. The right-side text of the author's pane overlaps on the left side when the screen is at minimal width.  Have the tabs combine so that the author then switches between tabs to make comparisons.
+	a. And consider going full-width when it is 390px or less.
+3. The student Assignment list is not showing the ps icon when creating new.
+
+10. Check popups (like the homework response views) to make sure that they are mobile friendly.
+16. When the author is logged in, if there is a sentence chosen which has at least one sentence by an editor, have the left side open up.  In fact, if there
+	is enough room on the page, have it stay open and move the editor's pane over to make room - as if the left-in-move pane was pinned.
+17. Switching between documents causes the text to save to the second one after the first one was called.  It needs to be blanked out better - most likely in Redux aggressively on blur.
+21. The score input on assessmentCorrect is slow (with the full round from the database), but we can get to that.
+7. Show word count in the assessment in order to indicate that the essay has been entered.  And maybe indicate the teacher's response and edit count.
+
+
+Students
+	File upload automatic submit
+
+Consider debounce in student schedule:  It gets called with every keystroke in the list...?
+
+	14. ^^^Attendance:  What time arrived late or left early.  time stamp.
+
+	5. ^^^Button with Icon:
+		a. Consider a upper label that is small above the main text such as "Set as" followed by "Paid"  With an icon.
+
+	6. Messaging: Remember to do the saved messages to reuse again in the future.  And edit them and view them in general to manage.
+
+	7.Have a school setup list of who wants to know about registration movements.
+	8. Studnet assignment  file upload icon:  Consider displaying a file name in the tool tip in gradebook and student assignments.  The other icons do have a label and tool tip.
+
+	9. When doing a file or adding a link to the course documents, do we need to stipulate which class that it should go to?
+		Also indent the files with the remove link.
+		Maybe color code the entire course document area. light blue.
+
+	10. Important messages need email and text override
+	1. The student clipboard is very slow to come up.  it might be building components, too.  It needs stored procedure.
+
+_______________________________
+Penspring
+	f. ^^^The teacher probably shouldn't see the homework in their list unless it has been submitted.
+	2. ^^^I took out this line in edit-review.js on line 167:  dispatch(getEditDetails(personId, chapterId, languageId, includeHistory)). But we do need to refresh the editDetails every so often.
+
+_______________________________
+Wish List
+	1. ^^^eCademy: multiple tabs - View different gradebooks or assignments.
+	2. The download button on the gradebookEntryView page doesn't take into consideration the knowledge based rating.
+	3. Guardian: sex offender list
+	0. And can videos be saved up to the blob service?
+	5. Be aware that the weighted score can be thrown over two semesters since each semester has a different courseScheduledId but the courseEntryId from the
+		base course is what the weighted score is assigned to.  Or...maybe the weighted score could be changed to the courseScheduled instead.  That would
+		be another level of maintenance as far as the course set up is concerned.
+	2. In Fall, the left-side overall grade is 1%F and the right-side overall grade is also 1%F.  [It's a difference in the content types for assignments!]
+	6. Offline-site
+		https://create-react-app.dev/docs/making-a-progressive-web-app
+	7. When working with a student and then choosing grade report, have it save thename and use the name on the next page so that she doesn't have
+		to choose again.  Such as changing between transcripts and grade report and transcript entry.  They can always remove the name and look
+		for someone else.
+	8. Do a "your most recent pages" history so that the user can click right on that and go back to where they were just a few steps ago.
+	9. On the course to schedule page, don't let the attendance date range be different than the year chosen - at least within an error of 1 either way.
+	10. The courseAttendanceAdmin page could use buttons instead of the checkboxes at the top of each column for mass settings.
+	11. The secondary guardian ought to have better access to functions and consistency like the primary guardian.
+	12. Consider setting "Add safety alert" as a default Frequent Place
+	13. Consider a count down for the InputTextArea...assuming a required max length.
+	14. Axe is a plug in for Chrome to help detect problems with your code pages.
+	15. A chat feature?
+	16. Makesure that the server-side createWorkAndPenspringTransfer function carries the AssignmentId for the assessment versions of a benchmark test.
+	17. Benchmark Test comparison report: (wishlist) Show the gains numbers below the circle to compare to the previous one.
+	18. Manheim (Graduation Requirements or the self-service student course assignment):  Wish list: The ability to choose a class that opens up another class.  Then they delete that first one.  They can work around that.
+	19. When changing the section Tuesday schedule to another period, the start time and duration were not updated automatically.
+	20. Do not allow a student to take a class that they have already passed from their transcript record.
+	21. Consider that a single interval is sufficient to assign to a class.  But those intervals are "Fall and Spring", "Fall Semester", "Fall MP1", etc.
+	22. Speak into the microphone to do an action with a particular record:  "Change class 'German'"
+	23. The ReimbursementRequestAddView page is not fully converted from curbside check in.
+	24. PWA offline: https://blog.risingstack.com/building-react-app-from-scratch-live-stream/
+
+__________________________________________
+Blackboard: ALA Phone and Communication
+
+	1. Blackboard:  It does the app, too, get to Facebook page.  And PowerSchool link.
+	2. Lock a class so that they have to have it but they can change it to another time slot.
+	3. Also suggest classes so that the parents can have an idea but not be forced in that case.
+	4. Required to take this year:  one of three classes.
+	5. Hybrid scheduling:
+		a. First step is that the students choose their classes (mixed with some classes that are required and maybe some suggestions)
+			i. This is just a list without a schedule placement into periods or A/B days.
+		b. Second step is after the master schedule is created
+			i. The student can adjust their schedule
+			ii. There will be some classes that are forced in their schedule.  If they take it out, it will sit out in a red box indicating
+				that they cannot finalize until that class (or set of classes) is placed in their schedule.
+
+
+_____________________________________________
+Penspring code to do:
+	The route editReview/draft/:isdraft was changed to include /draft after the :workId was added as a parameter.
+		Similarly:  editReview/:workId/:chosenTabPersonId/:hrefId changed from editReview/:chosenTabPersonId/:hrefId to include workId
+		

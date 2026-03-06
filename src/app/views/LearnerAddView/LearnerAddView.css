@@ -1,0 +1,311 @@
+@import 'variables.css';
+
+.titleLine {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.container {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: auto;
+}
+
+.centered {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.button {
+    background: linear-gradient(#67ae55, #578843);
+	background-color: #69a74e;
+	border: 1px solid;
+	border-color: #3b6e22 #3b6e22 #2c5115;
+	border-radius: 5px;
+	box-shadow: inset 0 1px 1px #a4e388;
+	color: white;
+	cursor: pointer;
+	display: inline-block;
+	font-family: var(--generalFont, sans-serif);
+	font-size: 12px;
+	font-weight: bold !important;
+	letter-spacing: 1px;
+	line-height: 116%;
+	margin-bottom: 8px;
+    margin-top: 22px;
+	margin-right: 12px;
+	min-width: 84px;
+	padding: 4px 6px;
+	position: relative;
+	text-align: center;
+	text-rendering: optimizelegibility;
+	text-shadow: 0 1px 2px rgba(0,0,0,.5);
+    /* outline: none; */
+}
+
+.opacityLow {
+  opacity: .6;
+}
+
+.opacityHigh {
+  opacity: 1;
+}
+
+.button:active {
+  transform: scalex(.95);
+}
+
+.button:focus {
+  box-shadow: 0 0 0 1px #297e2d;
+}
+
+.nameFull {
+  display: flex;
+  flex-direction: row;
+}
+
+.messageBox, .bulkBox {
+    margin-top: 12px;
+    margin-left: 10px;
+    margin-right: 8px;
+  	font-family: var(--generalFont, sans-serif);
+  	letter-spacing: normal;
+  	text-rendering: optimizelegibility;
+    border-radius: 5px;
+    border: 1px solid #d1d9de;
+    background: #fff !important;
+    display: inline-block;
+    vertical-align: middle;
+    color: black;
+    font-size: 12px;
+    padding: 2px;
+    padding-left: 5px;
+    /* outline: none; */
+    font-weight: bold;
+}
+
+.bulkBox {
+    margin-left: 0px !important;
+}
+
+.messageBox:focus {
+    box-shadow: 0 0 0 2px #297e2d;
+}
+
+.matches, .orPhone, .numbersOnly, .memberCount, .label, .labelBulk, .hdr, .txt, .txtRed, .headerText, .warningText, .cancelLink {
+    font-family: var(--generalFont, sans-serif);
+	font-weight: normal !important;
+	letter-spacing: normal;
+	text-rendering: optimizelegibility;
+    text-decoration: none;
+}
+
+.matches {
+    font-size: 12px;
+    cursor: pointer;
+    margin-left: 15px;
+    color: var(--linkMaroon, maroon);
+}
+
+.numbersOnly {
+    position: relative;
+    top: 15px;
+    left: -9px;
+    font-size: 10px;
+    cursor: pointer;
+    margin-left: 4px;
+    color: var(--gray, gray)
+}
+
+.orPhone {
+    font-size: 12px;
+    margin-top: 9px !important;
+    margin-left: 7px;
+    margin-bottom: 7px !important;
+    color: var(--blue, blue);
+}
+
+.formLeft {
+    margin-left: 10px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+}
+
+.row, .rowRight {
+    display: flex;
+    flex-direction: row;
+}
+
+.rowRight {
+    justify-content: flex-end;
+    margin-right: 25px;
+}
+
+.subTitle {
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 13px;
+    margin-left: 25px;
+    color: var(--blue, blue);
+}
+
+.memberCount {
+    font-size: 9px;
+    margin-top: 15px;
+    margin-left: 5px;
+    color: var(--gray, gray);
+}
+
+.label, .labelBulk {
+    position: relative;
+    top: 8px;
+    left: 11px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.labelBulk {
+    position: relative;
+    top: 8px;
+    left: 1px !important;
+}
+
+.hdr, .txt, .txtRed {
+    font-size: 11px;
+    margin-right: 5px;
+    padding-right: 5px;
+}
+
+.txtRed {
+    color: var(--red, red);
+}
+
+.hdr {
+    font-weight: bold !important;
+    text-decoration: underline
+}
+
+.tableStyle {
+    cell-padding: 10px;
+    overflow-x: auto;
+}
+
+.columnAndText {
+    display: flex;
+    flex-flow: column;
+}
+
+.headerText, .warningText {
+    font-size: 14px;
+}
+
+.headerText {
+    margin-top: 15px;
+    color: var(--blue, blue);
+}
+
+.warningText {
+    color: var(--red, red);
+}
+
+.subHeader {
+    font-family: var(--generalFont, sans-serif) !important;
+    font-weight: normal !important;
+    letter-spacing: normal;
+    text-rendering: optimizelegibility;
+    font-size: 11px;
+}
+
+.text {
+    font-size: 9px;
+    font-family: var(--generalFont, sans-serif);
+    font-weight: normal !important;
+    letter-spacing: normal;
+    text-rendering: optimizelegibility;
+    margin-top: 8px !important;
+    margin-left: 2px;
+    margin-right: 4px;
+}
+
+.error {
+  font-family: var(--generalFont, sans-serif);
+  font-weight: normal !important;
+  letter-spacing: normal;
+  text-rendering: optimizelegibility;
+  color: var(--red, red);
+  font-size: 12px;
+  opacity: 1;
+}
+
+.noWrap {
+	white-space: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cancelLink {
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 10pt;
+    color: #4f5253;
+    margin-top: 10px;
+		position: relative;
+		top: 18px;
+		left: -15px;
+}
+
+.alertText {
+	font-size: 12px;
+	text-transform: none;
+}
+
+.instructions {
+		font-size: 10px;
+		cursor: pointer;
+		color: var(--green, green) !important;
+		margin-top: 4px;
+		margin-left: 15px;
+		margin-right: 15px;
+		max-width: 600px;
+}
+
+.subheader {
+		font-family: var(--generalFont, sans-serif);
+		letter-spacing: normal;
+		text-rendering: optimizelegibility;
+		font-size: 12px;
+		color: var(--blue, blue);
+}
+
+.required {
+		position: relative;
+		left: 4px;
+		top: -3px;
+}
+
+.grayBack {
+		background-color: #f1f2f0;
+		margin-bottom: 15px;
+		padding: 8px;
+		border-radius: 6px;
+		margin-right: 20px;
+		max-width: 400px;
+}
+
+.moreLeft {
+		margin-left: 10px;
+}
+
+.alertText {
+		font-size: 12px;
+		text-transform: none;
+}

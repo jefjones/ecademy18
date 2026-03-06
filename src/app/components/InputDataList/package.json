@@ -1,0 +1,5 @@
+{
+    "name": "InputDataList",
+    "main": "InputDataList.js",
+    "storybook": "InputDataList.story.js"
+}

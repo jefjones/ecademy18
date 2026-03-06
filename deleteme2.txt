@@ -1,0 +1,28 @@
+
+
+			'Combined music classes' as Description,
+
+			14 as IntervalId,
+			'Fall Semester (MP1, MP2)' as IntervalName,
+			'M1M2' as IntervalCode,
+
+
+			'Combined music classes' as Description,
+
+			17 as IntervalId,
+			'Spring Semester (MP3, MP4)' as IntervalName,
+			'M3M4' as IntervalCode,
+
+
+
+			'Combined learning support classes' as Description,
+
+			14 as IntervalId,
+			'Fall Semester (MP1, MP2)' as IntervalName,
+			'M1M2' as IntervalCode,
+
+
+			17 as IntervalId,
+			'Spring Semester (MP3, MP4)' as IntervalName,
+			'M3M4' as IntervalCode,
+

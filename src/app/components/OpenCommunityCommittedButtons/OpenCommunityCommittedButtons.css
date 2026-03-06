@@ -1,0 +1,108 @@
+
+.container {
+
+    display: flex;
+    flex-flow: column;
+}
+
+.multiSelect {
+    min-width: 300px;
+    font-size: 12px;
+    width: auto;
+}
+
+.submitButton, .removeButton {
+    background: linear-gradient(#67ae55, #578843);
+	background-color: #69a74e;
+	border: 1px solid;
+	border-color: #3b6e22 #3b6e22 #2c5115;
+	border-radius: 5px;
+	box-shadow: inset 0 1px 1px #a4e388;
+	color: white;
+	cursor: pointer;
+	display: inline-block;
+	font-family: var(--generalFont, sans-serif);
+	font-size: 10px;
+	font-weight: bold !important;
+	letter-spacing: 1px;
+    margin-top: 8px;
+    margin-left: 40px;
+	min-width: 50px;
+	padding: 2px 5px;
+	text-align: center;
+	text-rendering: optimizelegibility;
+	text-shadow: 0 1px 2px rgba(0,0,0,.5);
+    outline: none;
+}
+
+.submitButton:active {
+    transform: scaleX(.89);
+    background: linear-gradient(#aec3a9, #578843);
+	background-color: #aec3a9;
+	border: 1px solid;
+	border-color: #3b6e22 #3b6e22 #2c5115;
+	border-radius: 5px;
+	box-shadow: inset 0 1px 1px #a4e388;
+	color: gray;
+	cursor: default;
+}
+
+.removeButton:active {
+    transform: scaleX(.89);
+    background: linear-gradient(#c3a9ad, #884450);
+	background-color: #c3a9ae;
+	border: 1px solid;
+	border-color: #6e222b #6e222b #521522;
+	border-radius: 5px;
+	box-shadow: inset 0 1px 1px #e38896;
+	color: gray;
+	cursor: default;
+}
+
+.submitButton:hover, .removeButton:hover {
+    box-shadow: 0 0 0 1px #297e2d;
+}
+
+.removeButton {
+    background: linear-gradient(#ad5565, #88444c) !important;
+    background-color: #a74e60 !important;
+    border: 1px solid;
+    border-color: #6e2230 #6e2229 #52151e !important;
+}
+
+.centered {
+    display: flex;
+    justify-content: center;
+}
+
+.checkbox {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.labelCheckbox, .errorMessage {
+    font-family: var(--generalFont, sans-serif);
+    font-weight: normal !important;
+    letter-spacing: normal;
+    text-rendering: optimizelegibility;
+}
+
+.labelCheckbox {
+    font-size: 13px !important;
+    position: relative;
+    top: 2px;
+}
+
+.errorMessage {
+    color: var(--red, red) !important;
+    font-size: 12px;
+    opacity: 1;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-left: 40px;
+    margin-bottom: -15px;
+}

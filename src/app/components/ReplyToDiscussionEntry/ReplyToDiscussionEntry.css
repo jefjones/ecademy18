@@ -1,0 +1,103 @@
+@import 'variables.css';
+
+.link, .comment, .label {
+    font-family: var(--generalFont, sans-serif);
+  	font-weight: normal !important;
+  	letter-spacing: normal;
+  	text-rendering: optimizelegibility;
+}
+
+.row {
+    display: flex;
+    flex-flow: row;
+}
+
+.addNew {
+	margin-left: 25px;
+  margin-top: 10px;
+}
+
+.icon {
+  width: 16px;
+  margin-left: 4px;
+}
+
+.addAnother {
+    /* position: relative;
+    top: 4px;
+    left: -13px; */
+    font-size: 11px !important;
+    cursor: pointer;
+    color: var(--blue, blue);
+    text-decoration: none;
+}
+
+.linkRow {
+  margin-left: 20px;
+  /* margin-top: 8px; */
+}
+
+.link {
+  color: var(--blue, blue);
+  cursor: pointer;
+  font-size: 11px;
+  margin-top: 3px;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.link:hover {
+  color: var(--gold, gold);
+}
+
+.reply {
+		padding: 3px;
+		border-radius: 4px;
+		background-color: #d6f3f6;
+		margin-left: 40px;
+		margin-right: 20px;
+		margin-top: 10px;
+}
+
+.moreLeft {
+		margin-left: 10px;
+}
+
+.rowWrap {
+	display: flex;
+	flex-flow: row;
+	flex-wrap: wrap;
+}
+
+.lighter {
+		font-weight: normal !important;
+}
+
+.highlight {
+		background-color: yellow;
+}
+
+.comment {
+		font-size: 12px;
+		margin-left: 10px !important;
+		font-weight: bold !important;
+}
+
+.moreLeft {
+		margin-left: 10px;
+}
+
+.muchMoreLeft {
+		margin-left: 25px;
+}
+
+.moreTop {
+  margin-top: 10px;
+}
+
+.label {
+	margin-bottom: 1px;
+	font-size: 10px;
+	color: var(--gray, gray);
+	margin-top: 8px;
+}

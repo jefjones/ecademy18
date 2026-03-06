@@ -1,0 +1,299 @@
+@import 'variables.css';
+
+.divCenter {
+		max-width: 960px;
+		margin: auto;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+		margin: auto;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+}
+
+.logoPosition {
+	font-family: var(--generalFont, sans-serif);
+	font-size: 15px;
+	margin-left: 10px;
+	margin-bottom: 10px !important;
+}
+
+/* div {
+    width: auto;
+} */
+
+.logo {
+    height: 70px;
+    /* margin-top: 15px; */
+    margin-bottom: 10px;
+}
+
+.logoSmaller {
+	height: 110px;
+	margin-bottom: 10px;
+	margin-left: 12px;
+}
+
+.smallLogo {
+    margin-top: 1px;
+    margin-bottom: -5px;
+    padding-left: 2px;
+}
+
+.textLogo {
+	max-width: 300px;
+}
+
+/*.textBeforeLogo {
+    padding-bottom: 15px;
+}*/
+
+.loginOption {
+    padding: 4px;
+}
+
+.loginOption:active {
+  transform: scalex(.95);
+}
+
+.free {
+    color: #297e2d;
+    font-size: 13pt;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+.text {
+    font-size: 13px;
+    width: 97%;
+    margin-left: 5px;
+}
+
+.wordText {
+    margin-bottom: 12px;
+}
+
+.flexRow {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 12px;
+}
+
+.textLogo, .login,  .errorMessage, .slogan, .forgotPassword, .passwordResetRequest, .learner, .sphere, .demoLeft, .plainText, .newsUpdate {
+	font-weight: normal;
+	font-family: var(--generalFont, sans-serif);
+	letter-spacing: normal;
+	text-rendering: optimizelegibility;
+}
+
+.slogan {
+    font-size: 10px;
+    margin-left: 6px;
+    margin-bottom: 12px;
+    margin-top: 0px;
+}
+
+.loginButton, .resetButton {
+  background: linear-gradient(#67ae55, #578843);
+	background-color: #69a74e;
+	border: 1px solid;
+	border-color: #3b6e22 #3b6e22 #2c5115;
+	border-radius: 5px;
+	box-shadow: inset 0 1px 1px #a4e388;
+	color: white;
+	cursor: pointer;
+	display: inline-block;
+	font-family: var(--generalFont, sans-serif);
+	font-size: 14px;
+	font-weight: bold !important;
+	letter-spacing: 1px;
+	line-height: 116%;
+	margin-bottom: 18px !important;
+	margin-top: 8px;
+	min-width: 84px;
+	padding: 6px 15px;
+	position: relative;
+	text-align: center;
+	text-rendering: optimizelegibility;
+	text-shadow: 0 1px 2px rgba(0,0,0,.5);
+  outline: none;
+}
+
+.opacityLow {
+  opacity: .6;
+}
+
+.opacityHigh {
+  opacity: 1;
+}
+
+.loginButton:active {
+  transform: scalex(.95);
+}
+
+.loginButton:focus {
+  box-shadow: 0 0 0 1px #297e2d;
+}
+
+.nameFull {
+  display: flex;
+  flex-direction: row;
+}
+
+.signUp, .signUp:active, .signUp:visited {
+  color: #297e2d;
+  text-decoration: underline;
+  margin-left: 6px;
+  margin-right: 6px;
+  cursor: pointer;
+  /*font-weight: bold;*/
+}
+
+.signUp:hover {
+  text-decoration: underline;
+}
+
+.chosen {
+  font-weight: bold;
+	max-width: 300px;
+}
+
+.errorMessage, .passwordResetRequest {
+    margin-top: 10px;
+    margin-left: 10px;
+    color: var(--red, red);;
+    font-size: 12px;
+}
+
+.alertMessage {
+    color: #333333;
+    font-family: "OpenSans", Open Sans, sans-serif;
+    vertical-align: middle;
+    text-decoration: none;
+    margin-right: 3px;
+    color: var(--red, red);;
+    font-size: 12px;
+}
+
+.forgotPassword, .createAccount, .demoLeft {
+    color: var(--green, green);
+    font-size: 12px;
+    margin-top: 20px !important;
+    margin-left: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    /* position: relative; */
+    /* left: -100px; */
+}
+
+.recaptcha {
+    margin-top: 10px;
+}
+
+.resetButton {
+    margin-top: 25px !important;
+}
+
+.passwordResetRequest {
+    margin-top: 15px !important;
+}
+
+.topLogo {
+  font-family: arial;
+  /* font-size: 18px; */
+	margin-top: 35px !important;
+  margin-bottom: 12px !important;
+  cursor: pointer;
+  text-decoration: none;
+  /* height: 35px !important; */
+}
+
+.learner {
+  color: var(--blue, blue);
+}
+
+.sphere {
+  color: var(--gold, gold);
+}
+
+.waitMessage {
+  font-size: 12px;
+  color: var(--blue, blue);
+  margin-top: 5px;
+  margin-left: 10px;
+}
+
+.demoText {
+	  color: black !important;
+	  font-weight: bold;
+}
+
+.demoColumn {
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+}
+
+.demoLeft {
+	  text-align: left !important;
+	  margin-top: 8px !important;
+}
+
+.row {
+		display: flex;
+		flex-flow: row;
+		font-weight: bold;
+		margin-top: 8px;
+}
+
+.icon {
+		width: 16px;
+		margin-right: 4px;
+}
+
+.comingNext {
+		position: relative;
+		top: 7px;
+		color: maroon;
+		font-weight: bold;
+}
+
+.plainText {
+		font-size: 12px;
+		font-weight: bool !important;
+		margin-top: 4px;
+		color: black !important;
+}
+
+.loading {
+		margin-top: 12px !important;
+		margin-left: -10px !important;
+		margin-bottom: 15px !important;
+}
+
+.newsUpdate {
+	color: var(--green, green);
+	font-weight: bold;
+	max-width: 350px;
+	font-size: 12px;
+}
+
+.bold {
+	font-weight: bold !important;
+}
+
+.moreMarginBottom {
+	margin-bottom: 10px !important;
+}
+
+.centered {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+}

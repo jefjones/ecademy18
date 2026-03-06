@@ -1,0 +1,6 @@
+@import 'variables.css';
+
+.warning {
+		margin-right: 4px;
+		width: 8px !important;
+}

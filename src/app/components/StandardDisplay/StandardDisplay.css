@@ -1,0 +1,14 @@
+@import 'variables.css';
+
+.container {
+		margin-left: 20px;
+		margin-right: 10px;
+}
+
+.text {
+		font-family: var(--generalFont, sans-serif);
+		font-weight: normal !important;
+		letter-spacing: normal;
+		text-rendering: optimizelegibility;
+		font-size: 12px;
+}

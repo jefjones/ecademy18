@@ -1,0 +1,43 @@
+@import 'variables.css';
+
+
+.sideNote {
+	font-weight: bold;
+	font-family: var(--generalFont, sans-serif);
+	letter-spacing: normal;
+	text-rendering: optimizelegibility;
+  text-align: center;
+  font-size: 12px;
+  font-weight: normal !important;
+  width: 97%;
+	margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.link {
+	color: var(--blue, blue) !important;
+}
+
+.row {
+	text-align: center;
+	display: flex;
+	flex-flow: row;
+	justify-content: center;
+}
+
+.logo {
+	height: 16px;
+	margin-left: 5px;
+	margin-right: 6px;
+	margin-bottom: 1px;
+	position: relative;
+	top: -2px;
+}
+
+.reallySmall {
+	font-family: var(--generalFont, sans-serif);
+	letter-spacing: normal;
+	text-rendering: optimizelegibility;
+	text-align: center;
+	font-size: 8px;
+}

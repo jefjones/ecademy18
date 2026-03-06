@@ -1,0 +1,157 @@
+@import 'variables.css';
+
+.container {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: auto;
+}
+
+.error, .label, .classification, .instructions, .inputText, .labelCheckbox, .commentTextarea, .cancelLink {
+    font-family: var(--generalFont, sans-serif);
+    font-weight: normal !important;
+    letter-spacing: normal;
+    text-rendering: optimizelegibility;
+    font-size: 12px;
+}
+
+.marginLeft {
+    margin-left: 15px;
+}
+
+.moreMarginBottom {
+    margin-bottom: 10px !important;
+}
+
+.row {
+    display: flex;
+    flex-flow: row;
+}
+
+.label {
+    font-size: 12px;
+}
+
+.moreBottomMargin {
+    margin-bottom: 10px;
+}
+
+.submitButton {
+    background: linear-gradient(#67ae55, #578843);
+  	background-color: #69a74e;
+  	border: 1px solid;
+  	border-color: #3b6e22 #3b6e22 #2c5115;
+  	border-radius: 5px;
+  	box-shadow: inset 0 1px 1px #a4e388;
+  	color: white;
+  	cursor: pointer;
+  	display: inline-block;
+  	font-family: var(--generalFont, sans-serif);
+  	font-size: 12px;
+  	font-weight: bold !important;
+  	letter-spacing: 1px;
+  	line-height: 116%;
+    margin-top: 8px;
+  	margin-left: 12px;
+  	min-width: 50px;
+  	padding: 2px 5px;
+  	position: relative;
+  	text-align: center;
+  	text-rendering: optimizelegibility;
+  	text-shadow: 0 1px 2px rgba(0,0,0,.5);
+    outline: none;
+}
+
+.submitButton:active {
+    transform: scaleX(.89);
+    background: linear-gradient(#aec3a9, #578843);
+  	border: 1px solid;
+  	border-color: #3b6e22 #3b6e22 #2c5115;
+  	border-radius: 5px;
+  	box-shadow: inset 0 1px 1px #a4e388;
+  	color: gray;
+  	cursor: default;
+}
+
+.submitButton:hover {
+    box-shadow: 0 0 0 1px #297e2d;
+}
+
+.classification {
+    width: 100%;
+    color: white;
+    background-color: var(--blue, blue);
+    font-size: 12px;
+    margin-top: 6px;
+    padding-left: 5px;
+    border-radius: 3px;
+		padding-top: 2px;
+		padding-bottom: 2px;
+}
+
+.error {
+    color: var(--red, red);;
+    font-size: 12px;
+    opacity: 1;
+}
+
+.labelCheckbox {
+    font-size: 12px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.centerRowRight {
+		margin-top: 15px;
+		margin-left: 100px;
+}
+
+.instructions {
+	font-size: 12px;
+}
+
+.inputText {
+		margin-top: 8px !important;
+    margin-bottom: 1px;
+    font-size: 12px;
+}
+
+.labelCheckbox {
+    font-size: 12px;
+    cursor: pointer;
+    text-decoration: none;
+		margin-right: 13px;
+}
+
+.phoneText {
+	margin-top: 30px;
+	martin-left: 9px;
+}
+
+.lower {
+		position: relative !important;
+		top: 6px !important;
+		margin-right: 5px !important;
+}
+
+.commentTextarea {
+    border-radius: 5px;
+    padding-left: 4px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    font-size: 13px;
+		font-weight: bold !important;
+}
+
+.cancelLink {
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 12px;
+    color: #4f5253;
+    margin-top: 10px;
+}
+
+.alertText {
+		font-size: 12px;
+		text-transform: none;
+}

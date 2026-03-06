@@ -1,0 +1,65 @@
+@import 'variables.css';
+
+/* common */
+.container {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: auto;
+    margin-left: 15px;
+}
+
+.text, .boldText {
+  font-family: var(--generalFont, sans-serif);
+	font-weight: normal !important;
+	letter-spacing: normal;
+	text-rendering: optimizelegibility;
+	font-size: 12px;
+}
+
+.boldText {
+		font-weight: bold !important;
+}
+
+.moreLeft {
+	margin-left: 10px;
+}
+
+.multiSelect {
+	min-width: 150px;
+	width: auto;
+	font-size: 11px;
+	margin-bottom: 8px;
+	margin-right: 10px;
+	margin-top: 13px;
+}
+
+.row, .rowWrap {
+	display: flex;
+	flex-flow: row;
+}
+
+.rowWrap {
+	flex-wrap: wrap;
+}
+
+.moreBottomMargin {
+	margin-bottom: 10px;
+}
+
+.muchTop {
+	margin-top: 13px;
+}
+
+.iconPosition {
+	margin-left: 10px;
+	position: relative;
+	top: -3px;
+	cursor: pointer;
+	width: 16px;
+	opacity: .4;
+}
+
+.moreTop {
+	margin-top: 10px;
+}

@@ -1,0 +1,304 @@
+@import 'variables.css';
+
+.jef_title_click_target {
+    margin-right: 15px;
+}
+
+.react_sanfona_item_row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #333;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    margin-left: 20px;
+}
+
+.assignWork {
+    position: relative;
+    top: 8px;
+    /* margin-top: 8px; */
+}
+
+.score, .label, .listLabel, .labelCheckbox {
+    font-family: var(--generalFont, sans-serif);
+	font-weight: normal !important;
+	letter-spacing: normal;
+	text-rendering: optimizelegibility;
+}
+
+.labelCheckbox {
+    margin-top: 18px;
+    font-size: 12px;
+}
+
+.checkbox {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.listLabel {
+    font-size: 11px;
+    margin-left: 2px;
+}
+
+.label {
+    font-size: 12px;
+    margin-right: 4px;
+    margin-top: 8px;
+}
+
+.selectList {
+    margin-left: 4px;
+}
+
+.documentImage {
+    /* height: 20px; */
+    margin-top: 13px;
+    margin-right: 15px;
+    opacity: .8;
+    cursor: pointer;
+}
+
+.profilePicture, .contactName, .score, .noPointerCursor {
+    cursor: default !important;
+}
+
+.containerLeft {
+    margin-left: 0px;
+}
+
+.score {
+    font-size: 10px;
+    color: var(--green, green);
+    margin-left: 10px;
+}
+
+.clickableArea {
+    margin: 6px;
+    padding: 6px;
+}
+
+.title, .commitTitle {
+    font-family: var(--generalFont, sans-serif);
+    font-weight: normal !important;
+    letter-spacing: normal;
+    text-rendering: optimizelegibility;
+    color: black;
+    font-size: 12px;
+    margin-left: 0px !important;
+    margin-top: 8px !important;
+}
+
+.title {
+    cursor: pointer;
+    margin-top: 8px !important;
+}
+
+.commitTitle {
+    color: var(--gold, gold);
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.currentTitle {
+    color: var(--gold, gold) !important;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+		flex-wrap: nowrap;
+}
+
+/* .marginTop {
+    margin-top: 14px;
+} */
+
+.marginLessTop {
+    margin-top: 6px;
+    margin-left: 4px;
+}
+
+.image {
+    margin-top: 8px;
+    margin-left: 6px;
+    height: 16px;
+}
+
+.linkStyle {
+    cursor: pointer;
+    margin-left: 3px;
+    color: var(--maroon, maroon);
+    font-size: 11px;
+}
+
+.linkStyle:hover {
+    cursor: pointer;
+    margin-left: 3px;
+    text-decoration: underline;
+}
+
+
+.submitButton, .removeButton {
+    background: linear-gradient(#67ae55, #578843);
+	background-color: #69a74e;
+	border: 1px solid;
+	border-color: #3b6e22 #3b6e22 #2c5115;
+	border-radius: 5px;
+	box-shadow: inset 0 1px 1px #a4e388;
+	color: white;
+	cursor: pointer;
+	display: inline-block;
+	font-family: var(--generalFont, sans-serif);
+	font-size: 10px;
+	font-weight: bold !important;
+	letter-spacing: 1px;
+    margin-top: 8px;
+	margin-left: 12px;
+	min-width: 50px;
+	padding: 2px 5px;
+	position: relative;
+	text-align: center;
+	text-rendering: optimizelegibility;
+	text-shadow: 0 1px 2px rgba(0,0,0,.5);
+    outline: none;
+}
+
+.submitButton:active {
+    transform: scaleX(.89);
+    background: linear-gradient(#aec3a9, #578843);
+	background-color: #aec3a9;
+	border: 1px solid;
+	border-color: #3b6e22 #3b6e22 #2c5115;
+	border-radius: 5px;
+	box-shadow: inset 0 1px 1px #a4e388;
+	color: gray;
+	cursor: default;
+}
+
+.removeButton:active {
+    transform: scaleX(.89);
+    background: linear-gradient(#c3a9ad, #884450);
+	background-color: #c3a9ae;
+	border: 1px solid;
+	border-color: #6e222b #6e222b #521522;
+	border-radius: 5px;
+	box-shadow: inset 0 1px 1px #e38896;
+	color: gray;
+	cursor: default;
+}
+
+.submitButton:hover, .removeButton:hover {
+    box-shadow: 0 0 0 1px #297e2d;
+}
+
+.removeButton {
+    background: linear-gradient(#ad5565, #88444c) !important;
+    background-color: #a74e60 !important;
+    border: 1px solid;
+    border-color: #6e2230 #6e2229 #52151e !important;
+}
+
+.currentLabel {
+    font-family: var(--generalFont, sans-serif);
+    font-weight: normal !important;
+    letter-spacing: normal;
+    text-rendering: optimizelegibility;
+    font-size: 10px;
+    color: var(--blue, blue);
+    margin-right: 4px;
+    margin-top: 2px;
+    position: relative;
+    top: -2px;
+}
+
+.moreMarginTop {
+    margin-top: 3px !important;
+}
+
+.marginLessLeft {
+    margin-left: 10px;
+    margin-top: 6px;
+}
+
+.openCommunityTitle {
+    font-family: var(--generalFont, sans-serif);
+    font-weight: normal !important;
+    letter-spacing: normal;
+    text-rendering: optimizelegibility;
+    color: white;
+    font-size: 13px;
+    margin-left: 0px !important;
+    margin-top: 6px !important;
+    background: var(--blue, blue);
+    border-radius: 4px;
+    /* background: #f3f3f3; */
+    padding-left: 5px;
+    text-transform: uppercase;
+}
+
+.openCommunityBackground {
+    /* background: #f3f3f3; */
+    background: var(--blue, blue);
+    border-radius: 4px;
+}
+
+.editCount {
+  font-size: 9pt;
+  color: var(--lightGray, gray);
+  /* color: maroon; */
+  margin-left: 4px;
+  margin-top: 6px;
+  font-family: var(--generalFont, sans-serif);
+  font-weight: normal !important;
+  letter-spacing: normal;
+  text-rendering: optimizelegibility;
+}
+
+.editCountFirstNav {
+  font-family: var(--generalFont, sans-serif);
+  font-weight: normal !important;
+  letter-spacing: normal;
+  text-rendering: optimizelegibility;
+  margin-left: 4px;
+  /* margin-top: 16px; */
+  font-size: 9pt;
+  color: var(--gold, gold);
+}
+
+.viewAccess {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.iconUser {
+    margin-top: 4px;
+    font-size: 14px;
+}
+
+.boldBlue {
+    font-weight: bold !important;
+    color: var(--blue, blue);
+}
+
+.lower {
+  position: relative;
+  top: 40px;
+}
+
+.iconBig {
+	width: 25px;
+	position: relative;
+	top: -6px;
+	margin-right: 5px;
+}
+
+
+.iconBigger {
+	width: 30px;
+	position: relative;
+	top: -6px;
+	margin-right: 5px;
+}

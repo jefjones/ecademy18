@@ -1,0 +1,20 @@
+@import 'variables.css';
+
+.text {
+	font-family: var(--generalFont, sans-serif);
+	text-rendering: optimizelegibility;
+	font-size: 12px;
+}
+
+.label {
+    font-family: var(--generalFont, sans-serif);
+    text-rendering: optimizelegibility;
+    text-decoration: none;
+    border-radius: 3px !important;
+}
+
+.label {
+    /* margin-top: 8px; */
+    margin-bottom: 1px;
+    font-size: 11px;
+}

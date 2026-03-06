@@ -1,0 +1,5 @@
+{
+    "name": "InputTextArea",
+    "main": "InputTextArea.js",
+    "storybook": "InputTextArea.story.js"
+}

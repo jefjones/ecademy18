@@ -1,0 +1,110 @@
+@import 'variables.css';
+
+.menuItem, .menuHeader {
+    display: block;
+    color: black;
+    cursor: pointer;
+    font-family: var(--generalFont, sans-serif);
+		text-rendering: optimizelegibility;
+    font-size: 12px;
+    letter-spacing: 1px;
+    line-height: 286%;
+    margin-left: 14px;
+    margin-right: 4px;
+    text-align: left;
+    text-decoration: none;
+    -webkit-transition: all .8s;
+    transition: all .8s;
+    /* z-index: 99; */
+}
+
+.moreLeft {
+	margin-left: 14px;
+}
+
+.muchLeft {
+	margin-left: 30px !important;
+}
+
+.muchMuchLeft {
+	margin-left: 40px !important;
+}
+
+.littleLeft {
+		margin-left: 5px;
+}
+
+.topSpace {
+	margin-top: 10px;
+}
+
+.row {
+	display: flex;
+	flex-flow: row;
+}
+
+.iconAdmin {
+  margin-left: 18px !important;
+	margin-top: 5px !important;
+  margin-right: -7px !important;
+  width: 12px !important;
+}
+
+.iconPlus {
+	margin-top: 5px !important;
+  margin-right: 4px !important;
+  width: 12px !important;
+}
+
+.listManage {
+  margin-left: 12px;
+}
+
+.flipped {
+		transform: rotate(180deg);
+		width: 16px;
+}
+
+.menuHeader {
+  font-size: 12px;
+  font-weight: bold !important;
+  cursor: pointer;
+  color: var(--blue, blue);
+}
+
+.moreSpace {
+		margin-left: 8px;
+		margin-right: 8px;
+}
+
+.remove {
+  color: var(--maroon, maroon);
+  cursor: pointer;
+  font-size: 12px;
+	margin-right: 10px;
+	margin-left: 20px;
+}
+
+.noDocs {
+		font-style: italic;
+		color: var(--gray, gray);
+		font-size: 12px;
+		margin-bottom: 10px;
+		margin-left: 20px;
+}
+
+.linkDisplay {
+		margin-bottom: 8px !important;
+		margin-left: -3px !important;
+		margin-top: 3px !important;
+}
+
+.label, .menuHeader {
+	font-size: 12px;
+	font-family: var(--generalFont, sans-serif);
+	text-rendering: optimizelegibility;
+}
+
+.moreTop {
+  margin-top: 10px;
+}

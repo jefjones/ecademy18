@@ -1,0 +1,48 @@
+@import 'variables.css';
+
+.container {
+    margin-left: 10px;
+    margin-bottom: 8px;
+}
+
+.topLabel {
+  display: flex;
+  flex-direction: column;
+}
+
+.leftLabel {
+  display: flex;
+  flex-direction: row;
+}
+
+.label, .text, .link {
+    font-family: var(--generalFont, sans-serif);
+    letter-spacing: normal;
+    text-rendering: optimizelegibility;
+}
+
+.label {
+    margin-left: 10px;
+    margin-bottom: 0px !important;
+    font-size: 12px;
+    font-weight: normal;
+    opacity: .6;
+}
+
+.text {
+    margin-left: 13px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.link {
+	text-decoration: none;
+	color: var(--blue, blue);
+	margin-left: 13px;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.link:hover {
+		text-decoration: underline;
+}

@@ -1,0 +1,104 @@
+@import 'variables.css';
+
+.container {
+    background-color: var(--lightGray, lightGray);
+    border-radius: 4px;
+    border: 1px solid var(--blue, blue);
+    z-index: 800 !important;
+		position: absolute !important;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.text {
+    margin-top: 5px;
+    margin-left: 5px;
+    color:black;
+    font-weight: normal;
+    font-size: 8pt;
+		font-family: var(--generalFont, sans-serif);
+		font-weight: normal !important;
+		letter-spacing: normal;
+		text-rendering: optimizelegibility;
+}
+
+.imageOverlay {
+    position: relative;
+    left: -6px;
+    cursor: pointer;
+    width: 18px;
+    /* z-index: 9; */
+}
+
+.imageBlocked {
+    cursor: pointer;
+    width: 11px;
+    /* z-index: 9; */
+}
+
+.crossCount, .blockCount, .checkmarkCount, .sentenceEditCount {
+    color: var(--red, red);
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+.blockCount {
+    margin-left: -5px !important;
+}
+
+.imageMagnifier {
+    position: relative;
+    top: 4px;
+    left: -7px;
+    cursor: pointer;
+    width: 13px;
+    /* z-index: 9; */
+}
+
+.imageDocument {
+}
+
+.leftWidth {
+    width: 35px;
+}
+
+.iconSpaceLeft {
+    margin-left: 15px;
+}
+
+.moreLeft {
+    margin-left: 12px !important;
+}
+
+.moreRight {
+    margin-right: 10px !important;
+}
+
+.moreTopMargin {
+    margin-top: 5px !important;
+}
+
+.image {
+    margin-left: 16px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.undo {
+    margin-left: 12px;
+    margin-right: 12px;
+    cursor: pointer;
+}
+
+.middleIcon {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.multipleContainer {
+		margin-top: 6px;
+		margin-bottom: 6px;
+}

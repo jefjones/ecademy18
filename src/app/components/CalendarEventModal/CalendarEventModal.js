@@ -1,0 +1,89 @@
+import React, {Component} from 'react';
+import {Link, browserHistory} from 'react-router';
+import styles from './CalendarEventModal.css';
+import globalStyles from '../../utils/globalStyles.css';
+import {ModalContainer, ModalDialog} from '../react-modal-dialog/lib/index.js';
+import classes from 'classnames';
+import MessageModal from '../../components/MessageModal';
+import Icon from '../../components/Icon';
+import DateMoment from '../../components/DateMoment';
+import ButtonWithIcon from '../../components/ButtonWithIcon';
+import TextDisplay from '../TextDisplay';
+const p = 'component';
+import L from '../../components/PageLanguage';
+
+export default class CalendarEventModal extends Component {
+    constructor(props) {
+	      super(props);
+
+	      this.state = {
+						isShowingModal_remove: false,
+	      }
+    }
+
+		handleRemoveOpen = (calendarEventId) => this.setState({isShowingModal_remove: true, calendarEventId})
+		handleRemoveClose = () => this.setState({isShowingModal_remove: false})
+		handleRemove = () => {
+				const {personId, removeCalendarEvent} = this.props;
+				const {calendarEventId} = this.state;
+				removeCalendarEvent(personId, calendarEventId)
+				this.handleRemoveClose();
+		}
+
+		handlePathLink = (pathLink) => {
+				const {onClick} = this.props;
+				pathLink && browserHistory.push(pathLink);
+				onClick();
+		}
+
+		render() {
+				const {personId, handleClose, onClick, className, chosenEvent, events, calendarViewRange, calendarTargetDate, accessRoles,
+									doNotAddNew, doNotRemove} = this.props;
+				const {isShowingModal_remove} = this.state;
+
+		    let eventDisplay = events && events.length > 0
+						? events.filter(m => {  //eslint-disable-line
+				            if (m.start >= chosenEvent.start && m.start <= chosenEvent.start) return m;
+				         })
+		      	: [];
+
+		    return (
+		        <div className={classes(styles.container, className)}>
+		            <ModalContainer onClose={handleClose}>
+		                <ModalDialog onClose={handleClose}>
+		                    <div className={styles.dialogHeader}><L p={p} t={`Calendar Event`}/></div>
+		                    <br />
+												{eventDisplay && eventDisplay.length > 0 && eventDisplay.map((m,i) =>
+				                    <div key={i} className={classes(styles.row,styles.minWidth)}>
+																<a onClick={() => this.handleRemoveOpen(m.calendarEventId)} className={classes(styles.remove, styles.muchTop)}><L p={p} t={`remove`}/></a>
+																<TextDisplay label={<L p={p} t={`Date`}/>} text={<DateMoment date={m.fromDate} format={'D MMM YYYY'}/>} />
+																<TextDisplay label={<L p={p} t={`Time`}/>} text={<DateMoment date={m.startTime} timeOnly={true}/>} />
+																<TextDisplay label={<L p={p} t={`Type`}/>} text={m.calendarEventType} />
+																<TextDisplay label={<L p={p} t={`Event`}/>} text={m.pathLink
+																		? <Link to={`/${m.pathLink}`} className={globalStyles.link}>{m.title}</Link>
+																		: m.title}/>
+				                    </div>
+												)}
+												<hr />
+												{!doNotAddNew &&
+														<div className={styles.bottomMargin}>
+				                      <Link to={'/calendarEventAdd/' + chosenEvent.start + '/' + calendarViewRange + '/' + calendarTargetDate} className={classes(styles.text, styles.row)}>
+																<Icon pathName={'plus'} className={styles.icon} fillColor={'green'}/>
+				                        {`Add another event`}
+				                      </Link>
+				                    </div>
+												}
+		                    <div className={styles.dialogButtons}>
+														<ButtonWithIcon label={<L p={p} t={`Close`}/>} icon={'checkmark_circle'} onClick={onClick}/>
+		                    </div>
+		                </ModalDialog>
+		            </ModalContainer>
+								{isShowingModal_remove &&
+										<MessageModal handleClose={this.handleRemoveClose} heading={<L p={p} t={`Remove this Event?`}/>}
+											 explainJSX={<L p={p} t={`Are you sure you want to remove this event from your calendar?`}/>}
+											 isConfirmType={true} onClick={this.handleRemove} />
+								}
+		        </div>
+		    )
+		}
+}

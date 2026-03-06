@@ -1,0 +1,83 @@
+@import 'variables.css';
+
+/* common */
+.container {
+    /* position: absolute;
+    left: 0;
+    top: 0; */
+    padding: 0;
+		width: auto;
+		max-width: 650px;
+}
+
+.languageListDiv {
+    margin-top: 25px;
+}
+
+.singleDropDown {
+    margin-left: 4px;
+    font-size: 10px;
+}
+
+.hiddenTextarea {
+    position: relative;
+    left: -2000px;
+}
+
+.bigLabel, .smallLabel, .copyChoice, .successLabel {
+    font-family: var(--generalFont, sans-serif);
+	font-weight: normal !important;
+	letter-spacing: normal;
+	text-rendering: optimizelegibility;
+}
+
+.bigLabel {
+    font-size: 12px;
+    margin-left: 5px;
+    margin-top: 15px;
+}
+
+.successLabel {
+    font-size: 12px;
+    margin-top: 10px;
+    margin-left: 15px;
+    width: 90%;
+    font-style: italic;
+    color: maroon;
+}
+
+.smallLabel {
+     font-size: 9px;
+     margin-left: 5px;
+     margin-bottom: 15px;
+     color: var(--gray);
+ }
+.workSummary {
+    margin-bottom: 20px;
+}
+
+.copyChoice {
+    font-size: 12px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #107e95;
+    margin-left: 20px;
+}
+
+.editorDiv {
+    height: 10px;
+    width: 10px;
+    position: relative;
+    left: -5000;
+}
+
+.current {
+    margin-top: 5px;
+    background-color: #ffcc66;
+    color: white;
+}
+
+.row {
+  display: flex;
+  flex-flow: row;
+}

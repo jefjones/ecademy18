@@ -1,0 +1,60 @@
+@import 'variables.css';
+
+.label {
+	font-family: var(--generalFont, sans-serif);
+	font-size: 12px;
+	font-weight: bold !important;
+	letter-spacing: 1px;
+	line-height: 9%;
+	text-rendering: optimizelegibility;
+	position: relative;
+	text-align: center;
+	color: white;
+	text-shadow: 0 1px 2px rgba(0,0,0,.5);
+	margin-top: 4px;
+	padding-top: 7px;
+	padding-bottom: 5px;
+}
+
+.text {
+	font-family: var(--generalFont, sans-serif);
+	font-weight: normal;
+	letter-spacing: 1px;
+	text-rendering: optimizelegibility;
+	font-size: 12px;
+}
+
+.opacityLow {
+	opacity: .4 !important;
+}
+
+.rowNowrap {
+    display: flex;
+    flex-flow: row;
+		flex-wrap: nowrap;
+}
+
+.iconButton {
+		position: relative;
+		top: -6px;
+		left: -2px;
+		width: 16px;
+		padding: 0px;
+		margin: 0px;
+		margin-right: 3px;
+}
+
+.buttonText {
+		position: relative;
+		top: 4px;
+		font-family: var(--generalFont, sans-serif);
+  	font-size: 12px;
+  	font-weight: bold !important;
+  	letter-spacing: 1px;
+  	line-height: 9%;
+}
+
+.position {
+	margin-top: 5px;
+	margin-left: 6px;
+}

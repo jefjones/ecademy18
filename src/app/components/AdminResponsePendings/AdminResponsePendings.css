@@ -1,0 +1,64 @@
+@import 'variables.css';
+
+.container {
+	margin-top: 45px;
+	/* z-index: 999; */
+	width: 200px !important;
+	margin-right: 5px;
+}
+
+.redBold, .bold {
+	font-family: var(--generalFont, sans-serif);
+	font-weight: bold !important;
+	letter-spacing: normal;
+	text-rendering: optimizelegibility;
+	font-size: 12px;
+}
+
+.image {
+	width: 150px;
+}
+
+.border {
+	border: 12px solid;
+	border-width: 2px;
+	border-top-width: 10px;
+	padding: 4px;
+	margin-bottom: 8px;
+	border-radius: 14px;
+}
+
+.borderSafety {
+	border-top-color: var(--red, red) !important;
+}
+
+.borderCurbside {
+	border-top-color: #139120;
+}
+
+.borderVolunteer {
+	border-top-color: var(--blue, blue);
+}
+
+.seeMorelink {
+	margin-top: 14px;
+	margin-left: 4px;
+	font-family: var(--generalFont, sans-serif);
+	font-weight: bold !important;
+	letter-spacing: normal;
+	text-rendering: optimizelegibility;
+	color: var(--blue, blue);
+	cursor: pointer;
+	text-decoration: none;
+	font-size: 12px;
+}
+
+.seeMorelink:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.row {
+	display: flex;
+	flex-flow: row;
+}

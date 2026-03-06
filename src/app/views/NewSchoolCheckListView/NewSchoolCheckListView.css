@@ -1,0 +1,221 @@
+@import 'variables.css';
+@import 'rc-time-picker/assets/index.css';
+
+/* common */
+.container {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: auto;
+		max-width: 650px;
+}
+
+.row {
+		display: flex;
+		flex-flow: row;
+}
+
+.optionLabel, .optionCount, .description, .forgotPassword, .textBold, .stepLabel, .stepName, .stepCount, .countHeader, .instructions, .menuHeaderGreen {
+		font-family: var(--generalFont, sans-serif);
+		letter-spacing: normal;
+		text-rendering: optimizelegibility;
+}
+
+.optionLabel {
+		color: var(--green, green);
+		font-size: 14px;
+		margin-left: 10px;
+}
+
+.optionCount {
+	color: var(--gold, gold);
+	font-size: 14px;
+	margin-left: 5px;
+}
+
+.description {
+	font-size: 14px;
+	margin-left: 8px;
+	width: auto;
+}
+
+.textBold {
+	font-weight: bold;
+}
+
+.space {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.buttonPosition {
+		position: relative;
+		top: -5px;
+}
+
+.moreMarginBottom {
+	margin-bottom: 40px !important;
+}
+
+.muchTop {
+	margin-top: 80px;
+	margin-bottom: 20px;
+}
+
+.forgotPassword {
+    color: var(--green, green);
+    font-size: 12px;
+    margin-top: 20px !important;
+    margin-left: 10px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.privacyPosition {
+		margin-top: 0px;
+		margin-bottom: 20px;
+		margin-left: 10px;
+}
+
+.link {
+	font-size: 13px;
+	font-weight: bold;
+	color: var(--blue, blue);
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.link:hover {
+	text-decoration: underline;
+}
+
+.muchLeft {
+	margin-left: 30px !important;
+	position :relative;
+	top: -5px;
+	/* left: 100px; */
+}
+
+.muchMoreLeft {
+	margin-left: 100px !important;
+	position: relative;
+	top: -12px;
+}
+
+.icon {
+	width: 22px;
+}
+
+.stepLabel {
+		color: var(--green, green);
+		font-size: 20px;
+		margin-left: 2px;
+}
+
+.stepCount {
+	color: var(--gold, gold);
+	font-size: 20px;
+	margin-left: 5px;
+}
+
+.stepName {
+	font-size: 18px;
+	margin-left: 12px;
+	margin-top: 2px;
+	width: auto;
+	color: black;
+}
+
+.countHeader {
+		width: 12px;
+		font-size: 12px;
+		font-weight: bold !important;
+		cursor: pointer;
+		margin-top: 10px;
+		color: var(--maroon, maroon);
+		position: relative;
+		left: -8px;
+}
+
+.subSection {
+	margin-left: 40px;
+	margin-right: 10px;
+	max-width: 600px;
+	background-color: var(--lightGray, lightGray);
+	border: 1px solid black;
+	border-radius: 6px;
+	padding: 4px;
+}
+
+.flipped {
+		transform: rotate(180deg);
+		width: 20px;
+}
+
+.moreLeft {
+	margin-left: 21px;
+}
+
+.menuItem {
+    /* display: block; */
+    color: black;
+    cursor: pointer;
+    font-family: var(--generalFont, sans-serif);
+    font-size: 11px;
+    letter-spacing: 1px;
+    line-height: 286%;
+    margin-left: 14px;
+    margin-right: 4px;
+    text-align: left;
+    text-rendering: optimizelegibility;
+    text-decoration: none;
+    -webkit-transition: all .8s;
+    transition: all .8s;
+    /* z-index: 99; */
+}
+
+.iconBig {
+	width: 25px;
+	margin-top: 4px !important;
+	margin-right: 8px !important;
+	position: relative;
+	top: 3px;
+}
+
+.logoutPosition {
+	margin-left: 10px;
+	margin-top: 15px;
+
+}
+
+.instructions {
+		font-size: 11px;
+		cursor: pointer;
+		color: var(--green, green) !important;
+		margin-top: 4px;
+		margin-left: 15px;
+		margin-right: 15px;
+}
+
+.columns {
+	display: flex;
+	flex-flow: column;
+}
+
+.wordBreak {
+	word-break: break-all;
+}
+
+.menuHeaderGreen {
+	font-size: 12px;
+	font-weight: bold !important;
+	cursor: pointer;
+	margin-left: 8px;
+	margin-top: 2px;
+	color: var(--green, green);
+}
+
+.linkAlone {
+	margin-left: 15px;
+	margin-bottom: 8px;
+}

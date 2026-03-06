@@ -1,0 +1,24 @@
+@import 'variables.css';
+
+.hidden_menu_search_only {
+    display: none !important;
+}
+
+.columnWidth {
+    width: 150px;
+}
+
+
+.new-feature {
+    background: #ffffb0;
+}
+
+.labelRow {
+    line-height: 18px;
+    /*padding-left: 8px;*/
+    margin-left: 8px;
+}
+
+.highlight {
+    background-color: rgb(232, 250, 239)
+}

@@ -1,0 +1,108 @@
+
+@import 'variables.css';
+
+.editorDiv {
+    overflow-y: auto;
+    margin-left: 5px;
+    font-size: 8pt;
+    font-weight: normal;
+	font-family: var(--generalFont, sans-serif);
+	font-weight: normal !important;
+	letter-spacing: normal;
+	text-rendering: optimizelegibility;
+}
+
+.toolSection {
+    margin-bottom: 10px;
+}
+
+.container {
+    z-index: 1 !important;
+    /* position: absolute;
+    left: 0;
+    top: 10;
+    width: 100%; */
+		width: auto;
+		max-width: 1000px;
+    height: 97%;
+    display: flex;
+    flex-flow: column;
+}
+
+.hidden {
+    transition: opacity 1s ease-out, height 1s ease-out;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+.visible {
+    transition: opacity 1s ease-in, height 1s ease-in;
+    opacity: 1;
+    height: auto;
+}
+
+
+/*************  Flipping CSS ****************/
+/* entire container, keeps perspective */
+.flipContainer {
+    margin-top: 15px;
+	perspective: 1000px;
+}
+	/* flip the pane when hovered */
+	/*.flipContainer:hover .flipper, .flipContainer.hover .flipper {
+		transform: rotateY(180deg);
+	}*/
+
+.flip {
+    transform: rotateY(180deg);
+}
+
+.deflip {
+    transform: rotateY(360deg);
+}
+
+.flipContainer, .front, .back {
+	width: 320px;
+	height: 480px;
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+}
+
+.tabPageMargin {
+    margin-bottom: 4px;
+}
+
+.pageTitle {
+    margin-top: 18px !important;
+}
+
+.marginLeft {
+    margin-left: 12px !important;
+}

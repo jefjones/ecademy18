@@ -1,0 +1,31 @@
+@import 'variables.css';
+
+.sideBySide {
+	display: flex;
+	flex-direction: row;
+}
+
+
+.label {
+    font-size: 9px !important;
+    color: #147ea7;
+	font-weight: normal !important;
+	background-color: white !important;
+    font-family: "OpenSans", Open Sans, sans-serif;
+	margin-bottom: -14px;
+	/*margin-top: 10px;*/
+}
+
+.label:after {
+    content:"\a";
+    white-space: pre;
+	margin-right: 30px;
+}
+
+.data {
+    font-size: 11px !important;
+	font-weight: normal !important;
+	background-color: white !important;
+    font-family: "OpenSans", Open Sans, sans-serif;
+	margin-top: -10px;
+}

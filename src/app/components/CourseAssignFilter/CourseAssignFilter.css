@@ -1,0 +1,90 @@
+@import 'variables.css';
+
+.container {
+    background-color: #ebebee;
+}
+
+.linkStyle, .text, .subHeading, .boldText {
+    font-family: var(--generalFont, sans-serif);
+    letter-spacing: normal;
+    text-rendering: optimizelegibility;
+    font-size: 9px;
+}
+
+.grayBack {
+		background-color: #f1f2f0;
+		margin-bottom: 15px;
+		padding: 4px;
+		border-radius: 4px;
+		margin-right: 20px;
+		height: auto;
+}
+
+.moreBottomMargin {
+    margin-bottom: 20px;
+}
+
+.rowWrap {
+    display: flex;
+    flex-flow: row;
+		flex-wrap: wrap;
+		width: 100%;
+}
+
+.row {
+    display: flex;
+    flex-flow: row;
+}
+
+.moreLeft {
+		margin-left: 15px !important;
+}
+
+.linkStyle {
+    cursor: pointer;
+    margin-left: 3px;
+    color: var(--maroon, maroon);
+    font-size: 12px;
+		font-weight: bold !important;
+}
+
+.moreRight {
+	margin-right: 20px;
+}
+
+.lowHeight {
+		height: 12px;
+}
+
+.littleLeft {
+		margin-left: 6px;
+}
+
+.icon, .iconTight {
+		width: 14px;
+		position: relative;
+		left: -3px;
+		top: -4px;
+		cursor: pointer;
+}
+
+.icon {
+	margin-left: 5px !important;
+}
+
+.lessLeft {
+	position: relative;
+	left: -8px;
+}
+
+.radio {
+    margin-left: 8px;
+}
+
+.muchTop {
+	margin-top: 20px;
+}
+
+.moreTop {
+	margin-top: 12px;
+}

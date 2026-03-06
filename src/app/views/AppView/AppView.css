@@ -1,0 +1,138 @@
+.app {
+    display: flex;
+    /* flex-direction: column; */
+    width: auto;
+    /* margin-bottom: 40px; */
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+/* Styles */
+    /* width: 320px; */
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen
+and (min-width : 321px) {
+/* Styles */
+
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen
+and (max-width : 320px) {
+/* Styles */
+    /* width: 320px; */
+
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px) {
+    /* Styles */
+    /* width: 768px; */
+}
+
+/* iPads (landscape) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape) {
+/* Styles */
+    /* width: 768px; */
+
+}
+
+/* iPads (portrait) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait) {
+/* Styles */
+}
+
+/* Desktops and laptops ----------- */
+@media only screen
+and (min-width : 1224px) {
+    /* Styles */
+    /* width: 768px; */
+}
+
+/* Large screens ----------- */
+@media only screen
+and (min-width : 1824px) {
+    /* Styles */
+    /* width: 1824px; */
+}
+
+.row {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+/************** The left and right side scrolling *****************/
+
+/* .rowScroll:last-child {
+  flex: 0 1 auto;
+  overflow: hidden;
+}
+ */
+
+.rowScroll {
+	height: 93vh;
+	display: flex;
+  flex: 0 0 100%; /* Don't change flex: 0 0 100% to flex: 0 0 auto.  It will cause the extra vertical sroll bar on the far right. */
+}
+
+
+.divLeft {
+	flex-grow: 0;
+	/* display:inline-block; */
+	flex-grow: 0;
+  min-width: 340px;
+  height:94vh;
+  overflow-y: auto;
+	top: 25px;
+	margin-bottom: 40px !important;
+}
+
+.divLeftMarginRight {
+	/* margin-right: 250px !important; */
+}
+
+.divMiddle {
+	margin-top: 20px;
+	overflow-y: auto;
+  overflow-x: auto;
+	flex-grow: 1;
+  /* display:inline-block; */
+	height:96vh;
+	/* max-width: 70%; */
+	/* width: auto; */
+}
+
+.divRight {
+	width: auto;
+	min-width:220px;
+	flex-grow: 0;
+  /* display:inline-block; */
+  /* padding: 0 30px; */
+	overflow-y: auto;
+  /* overflow-x: auto;
+  position: fixed;
+  left: 0;
+  top: 0; */
+	/* height:100vh; */
+}
+
+.divCenter {
+		/* max-width: 700px; */
+		margin: auto;
+}
+
+.moreTop {
+	margin-top: 15px;
+}

@@ -1,0 +1,25 @@
+@import 'variables.css';
+
+.container {
+    display: flex;
+    flex-flow: row;
+    margin-top: 8px;
+}
+
+.stacked {
+
+}
+
+.labelCheckbox {
+  margin-left: 7px;
+  margin-right: 1px;
+  font-family: var(--generalFont, sans-serif);
+  font-weight: normal !important;
+  letter-spacing: normal;
+  text-rendering: optimizelegibility;
+  font-size: 12px;
+}
+
+.checkbox {
+
+}

@@ -1,0 +1,313 @@
+@import 'variables.css';
+@import 'rc-time-picker/assets/index.css';
+
+/* common */
+.container {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: auto;
+		height: 90%;
+}
+
+.tableLabelClass, .remove, .link, .text, .labelCheckbox, .textRating {
+    font-family: var(--generalFont, sans-serif);
+    font-weight: normal !important;
+    letter-spacing: normal;
+    text-rendering: optimizelegibility;
+    font-size: 12px;
+}
+
+.moreMarginBottom {
+    margin-bottom: 10px !important;
+}
+
+.row {
+    display: flex;
+    flex-flow: row;
+}
+
+.rowWrap {
+    display: flex;
+    flex-flow: row;
+		flex-wrap: wrap;
+}
+
+.label {
+    font-size: 12px;
+}
+
+.marginLeft {
+    margin-left: 10px;
+}
+
+.tableLabelClass {
+    font-size: 12pt !important;
+    text-align: left !important;
+    font-weight: bold !important;
+    padding-right: 2px;
+    text-decoration: underline;
+}
+
+.remove {
+  color: var(--maroon, maroon);
+  cursor: pointer;
+}
+
+.link {
+		color: var(--blue, blue);
+		text-decoration: none;
+		font-size: 12px;
+		cursor: pointer;
+}
+
+.link:hover {
+	text-decoration: underline;
+}
+
+.icon {
+		width: 16px;
+		margin-right: 8px;
+}
+
+.iconSmall {
+	 width: 12px !important;
+	 margin-right: 3px !important;
+	 position: relative;
+	 top: -3px;
+}
+
+.alignRight {
+		display: flex;
+		flex-flow: row;
+		justify-content: flex-end;
+		margin-right: 40px;
+		margin-top: 10px;
+}
+
+.littleLeft {
+    margin-left: 10px;
+}
+
+.dateRow {
+    font-size: 12px !important;
+		margin-right: 10px;
+}
+
+.text {
+    font-size: 12px;
+    margin-right: 4px;
+}
+
+.lower {
+  position: relative;
+  top: 1px;
+	left: 15px;
+}
+
+.linkStyle {
+    cursor: pointer;
+    color: var(--maroon, maroon);
+    font-size: 12px;
+		position: relative;
+		top: 15px;
+		left: 70px;
+}
+
+.nameLinkStyle {
+		cursor: pointer;
+		margin-top: 10px;
+}
+
+.image {
+    margin-top: 10px;
+		width: 16px !important;
+}
+
+.moreBottomMargin {
+    margin-bottom: 10px;
+}
+
+.grayBack {
+		background-color: #f1f2f0;
+		margin-bottom: 15px;
+		padding: 8px;
+		border-radius: 6px;
+		margin-right: 20px;
+		max-width: 400px;
+}
+
+.labelCheckbox {
+		margin-left: -2px !important;
+    margin-right: 9px !important;
+    font-size: 12px;
+}
+
+.textRating {
+    font-size: 12px;
+    margin-right: 4px;
+    margin-top: 4px;
+}
+
+.radio {
+		margin-top: 10px;
+}
+
+.checkbox {
+		margin-top: 8px;
+}
+
+.moreLeft {
+	margin-left: 10px;
+}
+
+.filters {
+		max-width: 420px;
+}
+
+.scrollable {
+		overflow-y: auto;
+		overflow-x: auto;
+		height: auto;
+		max-height: 350px;
+		padding-right: 10px;
+		min-width: 450px;
+}
+
+.muchLeft {
+		margin-left: 15px !important;
+}
+
+.littleTop {
+		margin-top: 10px;
+}
+
+.tabs {
+		color: var(--blue, blue);
+		font-size: 12px;
+		align-items: center;
+		text-transform: capitalize;
+		cursor: pointer;
+		margin-right: 15px;
+		position: relative;
+		top: 3px;
+		left: 3px;
+}
+
+.alertText {
+		font-size: 12px;
+		text-transform: none;
+}
+
+.paper {
+		max-width: 380px !important;
+		/* width: auto; */
+}
+
+.alotLeft {
+		margin-left: 25px;
+}
+
+.tabChoice {
+		margin-left: 15px;
+		text-decoration: none;
+}
+
+.tabChoice:hover {
+		text-decoration: underline;
+}
+
+.iconBig {
+		width: 18px;
+		margin-right: 14px;
+}
+
+.iconText {
+	margin-left: 4px;
+  margin-right: 10px;
+  width: 16px;
+}
+
+.iconSuper {
+		width: 16px;
+		margin-right: 9px;
+		cursor: pointer;
+}
+
+.missingIcon {
+		margin-right: 35px;
+}
+
+.divider {
+	margin-left: 4px;
+	margin-right: 4px;
+	font-size: 24px;
+}
+
+.instructions {
+		font-size: 12px;
+		cursor: pointer;
+		color: var(--green, green) !important;
+		margin-top: 4px;
+}
+
+.clickSpace {
+	margin-left: 6px;
+	margin-right: 6px;
+}
+
+.button {
+	margin-left: -10px;
+	margin-top: 10px;
+	height: 12px !important;
+	width: 16px !important;
+}
+
+.overrideButton {
+	margin-top: 13px !important;
+	padding: 2px !important;
+	width: 30px !important;
+	height: 16px !important;
+}
+
+.selectPosition {
+	position: relative;
+	top: -10px;
+}
+
+.superScript {
+		position: relative !important;
+		left: -4px !important;
+}
+
+.iconSuper {
+		width: 14px;
+		margin-right: 0px;
+		cursor: pointer;
+		position: relative;
+		top: -3px;
+}
+
+.liftIcon {
+	position: relative;
+	top: -3px;
+	width: 16px;
+}
+
+.menuWidth {
+	width: 95%;
+}
+
+.plusPosition {
+		width: 18px !important;
+		position: relative;
+		top: 18px;
+		left: -7px;
+}
+
+.image {
+    margin-left: 16px;
+    margin-bottom: 10px;
+    cursor: pointer;
+		width: 16px !important;
+}

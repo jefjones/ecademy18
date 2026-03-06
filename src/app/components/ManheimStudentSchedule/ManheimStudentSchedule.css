@@ -1,0 +1,122 @@
+@import 'variables.css';
+@import 'rc-time-picker/assets/index.css';
+
+/* common */
+.container {
+    position: relative;
+    left: 0;
+    top: 0;
+		min-width: 250px;
+		max-width: 800px;
+    width: 95%;
+		overflow-x: auto;
+		margin-left: 5px;
+}
+
+.label, .classification, .data, .link, .error {
+    font-family: var(--generalFont, sans-serif);
+    letter-spacing: normal;
+    text-rendering: optimizelegibility;
+}
+
+.data {
+	font-size: 12px;
+	width: 1000px;
+	margin-bottom: 5px;
+}
+
+.label {
+		font-size: 11px;
+		margin-left: 8px;
+}
+
+.classification {
+    width: 95%;
+    color: white;
+    font-size: 12px;
+    margin-top: 6px;
+    padding-left: 5px;
+    border-radius: 4px;
+		padding-top: 2px;
+		padding-bottom: 2px;
+}
+
+.fallSchedule {
+		background-color: var(--maroon, maroon);
+}
+
+.springSchedule {
+		background-color: var(--gray, gray);
+}
+
+.row {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+}
+
+.cells {
+		margin-right: 5px;
+		font-weight: bold;
+}
+
+.link {
+		color: var(--blue, blue);
+		font-size: 12px;
+		cursor: pointer;
+		margin-right: 4px;
+		text-decoration: none;
+}
+
+.link:hover {
+		text-decoration: underline;
+}
+
+.icon {
+		width: 12px;
+		position: relative;
+		top: -2px;
+		margin-left: 15px;
+		cursor: pointer;
+}
+
+.checkmarkIcon {
+		width: 12px;
+		position: relative;
+		top: -4px;
+		margin-left: 12px;
+}
+
+.required {
+		width: 12px;
+		margin-left: 10px;
+		margin-top: -4px;
+		margin-bottom: 0px;
+		/* position: relative;
+		top: -5px;
+		left: 10px; */
+		color: var(--maroon, maroon);
+}
+
+.classNotChosen {
+		position: relative;
+		top: -4px;
+		margin-left: 15px;
+		margin-bottom: 2px;
+		font-size: 12px;
+		font-weight: bold;
+}
+
+.error {
+		margin-left: 6px;
+		color: var(--red, red);
+		font-size: 12px;
+}
+
+.space {
+		margin-right: 17px;
+}
+
+.moreLeft {
+	margin-left: 4px !important;
+}

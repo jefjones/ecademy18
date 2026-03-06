@@ -1,0 +1,36 @@
+@import 'variables.css';
+.navRow {
+    position: relative;
+    left: 15px;
+    top: -3px;
+    display: flex;
+    flex-direction: row;
+    white-space: nowrap;
+}
+
+.downArrow {
+    width: 14px;
+    margin-top: 4px;
+    cursor: pointer;
+    margin-right: 2px;
+}
+
+.upArrow {
+    width: 14px;
+    margin-top: 5px;
+    margin-left: 3px;
+    cursor: pointer;
+}
+
+.singleDropDown {
+    margin-top: 5px;
+    margin-left: 2px;
+    margin-right: 2px;
+    padding: 3px;
+    font-size: 11px;
+    min-width: 50px;
+	border-color: #bdc7d8;
+    border-radius: 5px;
+    font-weight: normal;
+    cursor: pointer;
+}

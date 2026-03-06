@@ -1,0 +1,224 @@
+@import 'variables.css';
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic,900,900italic,300italic,300,100italic,100);
+
+.container {
+    display: flex;
+    flex-flow: column;
+    padding: 0;
+    margin: 0;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+		max-width: 650px;
+}
+
+.demo {
+    display: flex;
+    flex-flow: column;
+}
+
+.logo {
+    height: 32px;
+    margin-top: 10px;
+    margin-bottom: 8px;
+    /* This is to compensate for the TM trademark on the right in order to center the logo better. */
+    margin-left: 4px;
+    text-align: center;
+}
+
+.free {
+    color: #297e2d;
+    font-size: 13pt;
+    text-transform: uppercase;
+    font-weight: bold;
+    transform: scalex(.95);
+    margin-bottom: 10px;
+}
+
+.text, .listText, .free, .sideNote, .slogan {
+	/* font-size: 19px;
+	line-height: 126%; */
+	/* color: #333; */
+	font-weight: bold;
+	font-family: var(--generalFont, sans-serif);
+	letter-spacing: normal;
+	text-rendering: optimizelegibility;
+    text-align: center;
+}
+
+.slogan {
+    font-size: 10px;
+    font-weight: normal !important;
+    margin-left: 6px;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.sideNote {
+    font-size: 10px;
+    font-weight: normal !important;
+    width: 97%;
+    margin-left: 5px;
+    text-align: center;
+    margin-bottom: 7px;
+}
+
+.text {
+    font-size: 13px;
+    width: 97%;
+    margin-left: 5px;
+    text-align: center;
+}
+
+.wordText {
+    text-align: center;
+}
+
+.flexRow {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 12px;
+}
+
+.listText {
+    font-size: 14px;
+    margin-left: 40px;
+    margin-top: 6px;
+    color: #005ca5;
+    display: flex;
+    flex-direction: column;
+}
+
+.imgDemo {
+    position: relative;
+    left: -10px;
+    margin: 0;
+    padding: 0;
+}
+
+/*  Start button styles */
+.startContainer {
+    position: relative;
+    text-align: center;
+}
+
+.startText, .startTextHover, .startTextPressed {
+    text-align: center;
+    position: absolute;
+    bottom: 46px !important;
+    left: 13px !important;
+    z-index: 2;
+    color: #FFF;
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: var(--generalFont, sans-serif);
+    letter-spacing: normal;
+    text-rendering: optimizelegibility;
+    transform: scalex(.95);
+}
+
+.imgBckg {
+    text-align: center;
+    z-index: 2;
+    display:inline-block;
+}
+
+.startImage {
+    height: 90px;
+    position:relative;
+    z-index:-1;
+    display:block;
+    bottom:0;
+    text-align: center;
+    align-items: center;
+}
+
+.startImage:hover {
+  content: url('../../assets/Start_textless_hover.png');
+}
+
+.startImage:active {
+  content: url('../../assets/Start_textless_pressed.png');
+}
+
+.startTextHover {
+  color: yellow !important;
+  text-shadow: 0 1px 2px rgba(0,0,0,.5);
+  text-align: center;
+}
+
+.startTextPressed {
+  bottom: 44px !important;
+  left: 13px !important;
+  color: white !important;
+  text-shadow: 0 1px 2px rgba(0,0,0,.5);
+  text-align: center;
+}
+
+.finalText {
+  margin-top: 6px;
+  font-weight: normal !important;
+  color: maroon;
+  /*#d4af37;*/
+  font-family: var(--generalFont, sans-serif);
+  letter-spacing: normal;
+  text-rendering: optimizelegibility;
+}
+
+.featureText, .featureSubText, .explainText, .topFeature {
+	font-family: 'Roboto-Thin', 'Roboto', sans-serif;
+    font-weight: 100;
+    line-height: normal;
+    color: #586382;
+	letter-spacing: normal;
+	text-rendering: optimizelegibility;
+    margin-left: 5px;
+}
+
+.topFeature {
+    font-size: 26px;
+    margin-top: 0px !important;
+    cursor: pointer;
+}
+
+.featureText {
+    font-size: 26px;
+    margin-top: 20px;
+    text-align: left !important;
+}
+.topFeature, .featureText {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+}
+
+.featureSubText {
+    font-size: 16px;
+    margin-top: -5px;
+}
+
+.explainText {
+    font-size: 16px;
+    font-family: 'Roboto-Medium', sans-serif;
+    color: #rgb(12, 12, 15);
+    margin-bottom: 10px;
+}
+
+.videoIcon {
+    margin-right: 15px;
+    margin-top: 8px;
+}
+
+.videoLaunch {
+    opacity: .8;
+}
+
+.videoLaunch:hover {
+    opacity: 1;
+}
+
+.marginTop {
+    margin-top: 40px !important;
+}

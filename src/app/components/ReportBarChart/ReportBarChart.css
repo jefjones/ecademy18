@@ -1,0 +1,70 @@
+@import 'variables.css';
+
+.button {
+    margin-left: 15px;
+    background: linear-gradient(#67ae55, #578843);
+  	background-color: #69a74e;
+  	border: 1px solid;
+  	border-color: #3b6e22 #3b6e22 #2c5115;
+  	border-radius: 5px;
+  	box-shadow: inset 0 1px 1px #a4e388;
+  	color: white;
+  	cursor: pointer;
+  	/* display: inline-block; */
+  	font-family: var(--generalFont, sans-serif);
+  	font-size: 12px;
+  	font-weight: bold !important;
+  	letter-spacing: 1px;
+  	line-height: 9%;
+  	margin-top: 8px;
+  	min-width: 35px;
+  	padding: 6px 8px;
+  	position: relative;
+  	text-align: center;
+  	text-rendering: optimizelegibility;
+  	text-shadow: 0 1px 2px rgba(0,0,0,.5);
+    outline: none;
+		max-height: 22px;
+		width: auto;
+}
+
+.button:active {
+    transform: scaleX(.89);
+}
+
+.redButton {
+		background: linear-gradient(#ad5955, #884744) !important;
+		background-color: #a7584e !important;
+  	box-shadow: inset 0 1px 1px #e38988;
+		border-color: #6e2722 #6e2522 #521b15;
+}
+
+.opacityLow {
+	opacity: .4 !important;
+}
+
+.rowNowrap {
+    display: flex;
+    flex-flow: row;
+		flex-wrap: nowrap;
+}
+
+.iconButton {
+		position: relative;
+		top: -6px;
+		left: -2px;
+		width: 16px;
+		padding: 0px;
+		margin: 0px;
+		margin-right: 3px;
+}
+
+.buttonText {
+		position: relative;
+		top: 4px;
+		font-family: var(--generalFont, sans-serif);
+  	font-size: 12px;
+  	font-weight: bold !important;
+  	letter-spacing: 1px;
+  	line-height: 9%;
+}

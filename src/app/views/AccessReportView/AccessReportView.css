@@ -1,0 +1,308 @@
+@import 'variables.css';
+
+/* common */
+.container {
+    /* position: relative;
+    left: 0;
+    top: 0;
+    width: auto; */
+		max-width: 650px;
+}
+
+.languageListDiv {
+    margin-top: 25px;
+}
+
+.singleDropDown {
+    margin-top: 5px;
+    margin-left: 14px;
+    font-size: 10px;
+    margin-right: 2px;
+    border-color: #bdc7d8;
+    border-radius: 5px;
+    font-weight: normal;
+    padding: 3px;
+    font-size: 11px;
+    min-width: 150px;
+
+}
+
+.editList {
+    width: auto;
+    margin-left: 10px;
+}
+
+.hiddenTextarea {
+    position: relative;
+    left: -200px;
+}
+
+.bigLabel, .smallLabel, .copyChoice, .successLabel, .tableLabelClass, .subTitle, .explanation, .newWork, .label {
+    font-family: var(--generalFont, sans-serif);
+	font-weight: normal !important;
+	letter-spacing: normal;
+	text-rendering: optimizelegibility;
+}
+
+.bigLabel {
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+.successLabel {
+    font-size: 12px;
+    margin-top: 10px;
+    margin-left: 15px;
+    width: 90%;
+    font-style: italic;
+    color: maroon;
+}
+
+.smallLabel {
+     font-size: 9px;
+     margin-left: 5px;
+     margin-bottom: 15px;
+     color: var(--gray);
+ }
+
+.workSummary {
+    margin-bottom: 4px;
+}
+
+.copyChoice {
+    font-size: 12px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #107e95;
+    margin-left: 20px;
+}
+
+.editorDiv {
+    height: 10px;
+    width: 10px;
+    position: relative;
+    left: -5000;
+}
+
+/*************  Flipping CSS ****************/
+/* entire container, keeps perspective */
+.flipContainer {
+	perspective: 1000px;
+}
+	/* flip the pane when hovered */
+	/*.flipContainer:hover .flipper, .flipContainer.hover .flipper {
+		transform: rotateY(180deg);
+	}*/
+
+.flip {
+    transform: rotateY(180deg);
+}
+
+.deflip {
+    transform: rotateY(360deg);
+}
+
+.flipContainer, .front, .back {
+	width: 290px;
+	height: auto;
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+    width: 97%;
+}
+
+.tableLabelClass {
+    font-size: 8pt !important;
+    text-align: right;
+    font-weight: normal !important;
+    padding-right: 2px;
+}
+
+.firstColumnClass {
+    max-width: 50px !important;
+    line-height: 2 !important;
+    flex-wrap: wrap !important;
+}
+
+.current {
+    margin-top: 5px;
+    background-color: #ffcc66;
+    color: white;
+}
+
+.tabPageMargin {
+    margin-bottom: 4px;
+    margin-top: 0px;
+}
+
+.listText {
+    font-family: var(--generalFont, sans-serif);
+    font-weight: normal !important;
+    letter-spacing: normal;
+    text-rendering: optimizelegibility;
+    z-index: 10;
+    line-height: .8;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.moreLeft {
+	margin-left: 10px;
+}
+
+.icon {
+    position: relative;
+    top: 19px;
+    width: 16px;
+}
+
+.linkStyle {
+    cursor: pointer;
+    z-index: 99;
+}
+
+.marginSpace {
+    margin-top: 40px;
+}
+
+.marginBottom {
+    margin-bottom: 30px !important;
+}
+
+.subTitle {
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 8px;
+    margin-left: 25px;
+    color: var(--blue, blue);
+}
+
+.button {
+    background: linear-gradient(#67ae55, #578843);
+	background-color: #69a74e;
+	border: 1px solid;
+	border-color: #3b6e22 #3b6e22 #2c5115;
+	border-radius: 5px;
+	box-shadow: inset 0 1px 1px #a4e388;
+	color: white;
+	cursor: pointer;
+	display: inline-block;
+	font-family: var(--generalFont, sans-serif);
+	font-size: 12px;
+	font-weight: bold !important;
+	letter-spacing: 1px;
+	line-height: 116%;
+	margin-bottom: 8px;
+    margin-top: 4px;
+	margin-right: 12px;
+	min-width: 84px;
+	padding: 4px 6px;
+	position: relative;
+	text-align: center;
+	text-rendering: optimizelegibility;
+	text-shadow: 0 1px 2px rgba(0,0,0,.5);
+    /* outline: none; */
+}
+
+.button:active {
+  transform: scalex(.95);
+}
+
+.button:focus {
+  box-shadow: 0 0 0 1px #297e2d;
+}
+
+.checkbox {
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+.explanation {
+    font-size: 9pt;
+    vertical-align: middle;
+    line-height: 1.4;
+    margin-top: 12px;
+    margin-bottom: 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.image {
+    margin-left: 6px;
+    width: 16px;
+    position: relative;
+    top: -3px;
+}
+
+.newWork {
+    font-size: 12px;
+    cursor: pointer;
+    margin-left: 15px;
+    text-decoration: none;
+    color:black;
+}
+
+.label {
+    font-size: 12px;
+}
+
+.singleDropDown {
+    margin-top: 0px !important;
+    padding-top: 0px !important;
+}
+
+.resetButton {
+    font-weight: normal;
+	font-family: var(--generalFont, sans-serif);
+	font-weight: normal !important;
+	letter-spacing: normal;
+	text-rendering: optimizelegibility;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 10pt;
+    color: #9db0b4;
+    margin-left: 16px;
+}
+
+.resetButton:hover {
+    color: #353e40 !important;
+}
+
+.rowRight {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-end;;
+    margin-right: 25px;
+}

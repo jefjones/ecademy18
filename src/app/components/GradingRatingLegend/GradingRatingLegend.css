@@ -1,0 +1,76 @@
+@import 'variables.css';
+
+.container {
+  z-index: 1 !important;
+	display: flex;
+	flex-flow: row;
+	margin-left: 15px;
+}
+
+.button {
+		width: 28px;
+		height: 20px;
+  	border: 1px solid;
+  	border-radius: 3px;
+  	box-shadow: inset 0 1px 1px #a4e388;
+  	cursor: pointer;
+  	/* display: inline-block; */
+  	font-family: var(--generalFont, sans-serif);
+  	font-size: 12px;
+  	font-weight: bold !important;
+  	letter-spacing: 1px;
+  	line-height: 9%;
+  	padding: 6px 8px;
+  	text-rendering: optimizelegibility;
+  	text-shadow: 0 1px 2px rgba(0,0,0,.5);
+    outline: none;
+		margin-left: 7px;
+}
+
+.button:active {
+    transform: scaleX(.89);
+}
+
+.buttonText {
+		position: relative;
+		left: -4px;
+		font-family: var(--generalFont, sans-serif);
+  	font-size: 12px;
+  	font-weight: bold !important;
+  	/* letter-spacing: 1px; */
+  	line-height: 9%;
+}
+
+.littleLeft {
+	position: relative !important;
+	left: -1px !important;
+}
+
+.text {
+	margin-left: 3px;
+	margin-right: 5px;
+	font-size: 11pt;
+	font-family: var(--generalFont, sans-serif);
+	font-size: 12px;
+	text-rendering: optimizelegibility;
+
+}
+
+.row {
+	display: flex;
+	flex-flow: row;
+}
+
+.container, .upperDisplay {
+    z-index: 899;
+    max-width: 500px !important;
+}
+
+.moreBottom {
+	margin-bottom: 8px;
+}
+
+.littleTop {
+	margin-left: 4px;
+	margin-top: 4px;
+}

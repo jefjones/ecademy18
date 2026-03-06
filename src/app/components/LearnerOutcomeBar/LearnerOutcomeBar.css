@@ -1,0 +1,32 @@
+@import 'variables.css';
+
+.container {
+    overflow-x: visible;
+    height: auto;
+    border-radius: 4px;
+    border: 1px solid #ccc!important;
+    display: flex;
+    flex-flow: row;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 0;
+}
+
+.sliver {
+    width: 0.5px;
+    height: 22px;
+    margin: 0;
+    padding: 0;
+}
+
+.proficient {
+    background-color: var(--red, red);
+}
+
+.inProgress {
+    background-color: var(--blue, blue);
+}
+
+.notStarted {
+    background-color: var(--white, white);
+}

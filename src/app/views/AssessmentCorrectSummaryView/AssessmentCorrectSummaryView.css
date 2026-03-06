@@ -1,0 +1,501 @@
+@import 'variables.css';
+@import 'rc-time-picker/assets/index.css';
+
+/* common */
+.container {
+    position: relative;
+    left: 0;
+    top: 0;
+		max-width: 96vw;
+}
+
+.unorderedList {
+    overflow-y: auto;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    flex-flow:column;
+}
+
+.whiteLine {
+    color:white;
+    opacity: .5;
+    width:140px;
+    text-align:left;
+    margin-left:15px;
+    margin-top:10px;
+}
+
+.singleDropDown {
+  margin-top: 8px !important;
+  margin-bottom: 6px;
+}
+
+.menuItemContainer {
+  display: flex;
+  justify-content: flex-start;
+  flex-flow:row;
+}
+
+.rightArrow {
+  float: right;
+  margin-top: 8px;
+
+}
+
+.spreadToRight {
+  justify-content: space-between !important;
+}
+
+.subMenuArrow {
+  width: 100%;
+  margin-right: 4px;
+  cursor: pointer;
+}
+
+.workSummary {
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-bottom: 10px;
+    width: auto;
+}
+
+.pageTitle {
+    position: relative;
+    top: 10px;
+}
+
+.error, .label, .subHeader, .noRecord, .addNew, .dueDate, .link, .labelHead, .labelSubhead, .instructions, .labelCheckbox, .bolded, .smaller, .letterGrade {
+    font-family: var(--generalFont, sans-serif);
+    font-weight: normal !important;
+    letter-spacing: normal;
+    text-rendering: optimizelegibility;
+    font-size: 10px;
+}
+
+.marginLeft {
+    margin-left: 15px;
+}
+
+.error {
+    color: var(--red, red);
+}
+
+.moreMarginBottom {
+    margin-bottom: 10px !important;
+}
+
+.row {
+    display: flex;
+    flex-flow: row;
+		flex-wrap: nowrap;
+}
+
+.rowSpace {
+    display: flex;
+    flex-flow: row;
+		justify-content: space-between;
+}
+
+.rowWrap {
+    display: flex;
+    flex-flow: row;
+		flex-wrap: wrap;
+}
+
+.label {
+    font-size: 10px;
+}
+
+.multiSelect {
+    z-index: 99 !important;
+    min-width: 100px;
+    width: auto;
+    font-size: 11px;
+    margin-bottom: 8px;
+    margin-right: 10px;
+}
+
+.error {
+    color: var(--red, red);;
+    font-size: 12px;
+    opacity: 1;
+}
+
+.radio {
+    margin-left: 8px;
+}
+
+.radioLabels {
+    font-size: 11px;
+    margin-left: 3px !important;
+    margin-bottom: 13px !important;
+    margin-top: -10px !important;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.radioLabels:hover {
+    text-decoration: underline;
+}
+
+.radioClass {
+    margin-top: 10px !important;
+}
+
+.subHeader {
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 8px;
+    margin-bottom: -3px;
+}
+
+.formLeft {
+    margin-left: 10px;
+}
+
+.noRecord {
+    color: var(--red, red);
+    font-size: 12px !important;
+    font-weight: bold;
+    margin-left: 20px !important;
+    margin-top: 20px !important;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.tableFreeze {
+    margin-top: 10px !important;
+		width: auto;
+		overflow: auto;
+}
+
+.moreLeft {
+    margin-left: 8px;
+}
+
+.moreBottomMargin {
+    margin-bottom: 10px !important;
+}
+
+.addNew {
+		margin-top: 10px;
+		margin-bottom: 10px;
+		margin-left: 25px;
+    font-size: 13px !important;
+    cursor: pointer;
+    color: var(--blue, blue);
+    text-decoration: none;
+}
+
+.dueDate {
+		font-size: 10px;
+}
+
+.bold {
+		font-weight: bold !important;
+}
+
+.center {
+		justify-content: center;
+}
+
+.icon {
+		width: 16px;
+		z-index: 998;
+		margin-right: 8px;
+}
+
+.iconInline {
+		width: 16px;
+		margin: 0 !important;
+		padding: 0 !important;
+}
+
+.iconLessRight {
+		width: 16px;
+		z-index: 998;
+		margin-right: 3px;
+}
+
+.iconSmaller {
+		width: 13px !important;
+		z-index: 998;
+		margin-right: 3px;
+		position: relative;
+		top: -3px;
+}
+
+.iconCell {
+		width: 16px;
+		z-index: 998;
+		margin-left: 5px !important;
+		margin-right: 5px !important;
+		margin-top: 1px !important;
+}
+
+.iconTeacher {
+		width: 16px;
+		transform: rotatey(180deg);
+		margin-left: 3px !important;
+		margin-right: 3px !important;
+}
+
+.iconTeacherFile {
+		width: 16px;
+		transform: rotatey(180deg);
+		margin-left: 3px !important;
+		margin-right: 3px !important;
+		margin-top: 2px !important;
+		/* background-color: var(--lightBlue, #dfdcfb) !important;
+		border-radius: 4px; */
+}
+
+
+.iconTeacherFile {
+		width: 16px;
+		transform: rotatey(180deg);
+		margin-left: 3px !important;
+		margin-right: 3px !important;
+		margin-top: 2px !important;
+}
+
+.rowSpread {
+		display: flex;
+		flex-flow: row;
+		justify-content: space-between;
+}
+
+.link {
+		color: var(--blue, blue);
+		text-decoration: none;
+		margin-right: 6px;
+		font-size: 13px;
+		cursor: pointer;
+}
+
+.link:hover {
+		text-decoration: underline;
+}
+
+.dateRow {
+		display: flex;
+		flex-flow: row;
+}
+
+.rowRight {
+		display: flex;
+		flex-flow: row;
+		justify-content: flex-end;
+		margin-right: 40px;
+}
+
+.firstColumnClass {
+    max-width: 50px !important;
+    line-height: 2 !important;
+    flex-wrap: wrap !important;
+}
+
+muchLeft {
+	margin-left: 25px;
+}
+
+.moreTop {
+	margin-top: 15px;
+}
+
+.narrowLine {
+	line-height: 1;
+}
+
+.labelHead {
+		font-weight: bold !important;
+		font-size: 11px;
+		position: relative;
+		left: -10px;
+		wrap: nowrap;
+		width: auto;
+}
+
+.labelSubhead {
+		font-size: 10px;
+}
+
+.lineSub {
+		font-weight: bold !important;
+		margin-left: 3px;
+}
+
+.bottomBorder {
+		padding: 0px;
+		margin: 0px;
+		bottom: 1;
+		color:red;
+}
+
+.yesButton {
+    margin-left: 15px;
+    background: linear-gradient(#67ae55, #578843);
+  	background-color: #69a74e;
+  	border: 1px solid;
+  	border-color: #3b6e22 #3b6e22 #2c5115;
+  	border-radius: 5px;
+  	box-shadow: inset 0 1px 1px #a4e388;
+  	color: white;
+  	cursor: pointer;
+  	/* display: inline-block; */
+  	font-family: var(--generalFont, sans-serif);
+  	font-size: 12px;
+  	font-weight: bold !important;
+  	letter-spacing: 1px;
+  	line-height: 9%;
+  	margin-top: 8px;
+  	min-width: 70px;
+  	padding: 6px 8px;
+  	position: relative;
+  	text-align: center;
+  	text-rendering: optimizelegibility;
+  	text-shadow: 0 1px 2px rgba(0,0,0,.5);
+    outline: none;
+		max-height: 22px;
+}
+
+.yesButton:active {
+    transform: scaleX(.89);
+}
+
+.iconButton {
+		position: relative;
+		top: -6px;
+		left: -2px;
+		width: 16px;
+		padding: 0px;
+		margin: 0px;
+		margin-right: 3px;
+}
+
+.buttonText {
+		position: relative;
+		top: 4px;
+		font-family: var(--generalFont, sans-serif);
+  	font-size: 12px;
+  	font-weight: bold !important;
+  	letter-spacing: 1px;
+  	line-height: 9%;
+}
+
+.note {
+    font-size: 10px;
+    color: green;
+    position: relative;
+    Top: -4px
+
+}
+
+.instructions {
+	font-size: 11px;
+	color: var(--green, green);
+	margin-left: 15px;
+}
+
+.fullWidth {
+	width: 100% !important;
+}
+
+.teacherResponse {
+		margin-top: 4px;
+		background-color: var(--lightBlue, #dfdcfb);
+		border-radius: 4px;
+}
+
+.labelCheckbox {
+		font-size: 11px;
+}
+
+.iconSmall {
+	width: 12px;
+	position: relative;
+	top: 4px;
+	margin-left: 5px;
+}
+
+.testColor {
+		color: var(--green, green);
+}
+
+.download {
+		margin-top: 15px;
+		margin-left: 15px;
+		height: 10px !important;
+}
+
+.score {
+		height: 20px;
+}
+
+.bolded {
+		font-weight: bold !important;
+		font-size: 11px;
+		margin-left: 4px;
+}
+
+.smaller {
+	font-size: 10px;
+}
+
+.visited {
+		opacity: .7;
+}
+
+.penspringIcon {
+		width: 16px;
+		position: relative;
+		top: 11px;
+		cursor: pointer;
+		margin-left: 6px;
+}
+
+.positionIconLink {
+		position: relative;
+		top: 20px;
+		margin-left: 10px;
+		margin-bottom: 10px;
+}
+
+.alertText {
+	font-size: 12px;
+	text-transform: none;
+}
+
+.noAssignBackground {
+	background-color: var(--lightGray, lightGray) !important;
+	borde-radius: 4px;
+}
+
+.blankSpace {
+	width: auto;
+	height: auto;
+	max-height: 30px;
+	max-width: 100px;
+	color: var(--lightGray, lightGray) !important;
+}
+
+.widthLimit {
+	width: 80%;
+}
+
+.letterGrade {
+
+	margin-top: 8px;
+	margin-left: 3px;
+}
+
+.moreRight {
+	margin-right: 15px;
+}
+
+.tableMargin {
+	margin-left: 10px;
+}

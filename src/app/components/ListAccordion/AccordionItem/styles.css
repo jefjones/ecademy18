@@ -1,0 +1,82 @@
+.react_sanfona_item_row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.react_sanfona_item_expanded .react_sanfona_item_title {
+  color: #fff;
+
+  .title_done_btn {
+      display: inline-block;
+      float: right;
+      color: #000;
+  }
+}
+
+.react_sanfona_item_body_wrapper {
+  color: #666;
+  padding-left: 15px;
+  padding-top: 15px;
+  padding-right: 15px;
+  padding-bottom: 8px;
+  position: relative;
+}
+
+.react_sanfona_item_body_wrapper:hover .tooltip {
+  opacity: 1;
+}
+
+.jef_caret, .white_caret {
+  position: relative;
+  margin-top: 5px;
+  margin-right: 30px;
+  cursor: pointer;
+}
+
+.jef_caret:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-top: 8px solid #948c8c;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+}
+
+.white_caret:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* border-top: 8px solid #948c8c; */
+  border-top: 8px solid white;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+}
+
+
+.jef_caret:after, .white_caret:after {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 0;
+  border-top: 4px solid white;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+}
+
+.jefCaretDown {
+  transform: rotate(0deg);
+  transition: transform 0.3s ease-in-out;
+}
+
+.jefCaretUp {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease-in-out;
+}
+
+.line {
+    position: relative;
+    top: 10px;
+}

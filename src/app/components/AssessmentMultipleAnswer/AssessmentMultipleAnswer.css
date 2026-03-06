@@ -1,0 +1,137 @@
+@import 'variables.css';
+
+.container {
+  margin-top: 15px;
+}
+
+.sequence, .question, .letter, .answer, .headerLabel, .solutionText {
+  font-family: var(--generalFont, sans-serif);
+  font-weight: normal !important;
+  letter-spacing: normal;
+  text-rendering: optimizelegibility;
+  color:black;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.radio {
+  margin-left: 30px;
+}
+
+.row {
+  display: flex;
+  flex-flow: row;
+}
+
+.sequence {
+  margin-right: 5px;
+  font-size: 12px;
+}
+
+.question {
+  font-size: 12px;
+}
+
+.questionLine {
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.letter {
+  margin-left: 20px;
+  margin-right: 5px;
+  font-size: 12px;
+}
+
+.answer {
+  margin-right: 5px;
+  margin-top: 2px;
+  font-size: 11px;
+  text-transform: uppercase;
+  color: var(--green, green);
+}
+
+.label, .labelCorrect, .labelWrong {
+    position: relative;
+    top: -3px;
+    right: 2px;
+    margin-right: 6px;
+    margin-left: 3px;
+    color: #333333;
+    font-family: "OpenSans", Open Sans, sans-serif;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.label:hover {
+    text-decoration: underline;
+    color: #333333;
+    cursor: pointer;
+}
+
+.checkbox {
+  margin-top: 8px;
+  margin-left: 50px;
+}
+
+.icon {
+		width: 16px;
+		margin-right: 5px;
+}
+
+.labelWrong {
+		color: var(--red, red) !important;
+		font-weight: bold !important;
+}
+
+.labelCorrect {
+		color: var(--green, green) !important;
+		font-weight: bold !important;
+}
+
+.headerLabel {
+	font-size: 12px !important;
+	font-weight: bold !important;
+	margin-left: 15px !important;
+	margin-right: 5px;
+}
+
+.solutionText {
+	font-size: 12px !important;
+	margin-left: 20px !important;
+}
+
+img[src=""] {
+    display: none;
+}
+
+.correctBorder {
+	background-color: green;
+	padding: 2px;
+}
+
+.wrongBorder {
+	background-color: red;
+	padding: 2px;
+}
+
+.audioLeftAnswer {
+	margin-left: 30px;
+}
+
+.audioLeftQuestion {
+	margin-left: 20px;
+}
+
+.borderCorrect {
+	border-style: solid;
+  border-width: 7px;
+	border-color: var(--green, green);
+}
+
+.borderWrong {
+	border-style: solid;
+  border-width: 7px;
+	border-color: var(--red, red);
+}

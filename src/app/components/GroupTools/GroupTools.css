@@ -1,0 +1,78 @@
+@import 'variables.css';
+
+.containerRow, .containerColumn {
+    width: auto;
+    margin-left: 29px !important;
+    margin-top: 10px;
+}
+
+.containerRow {
+    display: flex;
+    flex-flow: row;
+}
+
+.containerColumn {
+    display: flex;
+    flex-flow: column;
+}
+
+.linkStyle, .linkStyle:hover, .linkStyle:visited, .lastLinkStyle, .lastLinkStyle:hover, .lastLinkStyle:visited {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.linkStyle, .linkStyle:hover, .linkStyle:visited {
+    text-decoration: none;
+    cursor: pointer;
+    padding-right: 20px;
+}
+
+.personImage {
+    height: 22px;
+}
+
+.flipHorizontal {
+     width: 16px;
+     -moz-transform: scaleX(-1);
+     -o-transform: scaleX(-1);
+     -webkit-transform: scaleX(-1);
+     transform: scaleX(-1);
+     filter: FlipH;
+     -ms-filter: \"FlipH\";
+}
+
+.lowOpacity {
+    opacity: .3;
+}
+
+.label, .labelChoice {
+    font-size: 11px;
+    font-family: var(--generalFont, sans-serif);
+    font-weight: normal !important;
+    letter-spacing: normal;
+    text-rendering: optimizelegibility;
+}
+
+.label {
+    margin-top: 4px;
+    white-space: nowrap;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.labelChoice {
+    cursor: pointer;
+    margin-top: -3px;
+    max-width: 15px;
+}
+
+.row {
+    display: flex;
+    flex-flow: row;
+    margin-left: 8px;
+}
+
+.moreTop {
+    margin-top: 16px;
+}

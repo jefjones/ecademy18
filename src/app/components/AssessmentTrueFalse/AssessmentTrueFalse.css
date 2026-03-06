@@ -1,0 +1,76 @@
+@import '../../variables.css';
+
+.container {
+  margin-top: 15px;
+}
+
+.sequence, .question {
+  font-family: var(--generalFont, sans-serif);
+  font-weight: normal !important;
+  letter-spacing: normal;
+  text-rendering: optimizelegibility;
+  color:black;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.radio {
+  margin-left: 30px;
+}
+
+.row {
+  display: flex;
+  flex-flow: row;
+}
+
+.sequence {
+  margin-right: 5px;
+  font-size: 12px;
+}
+
+.question {
+  font-size: 12px;
+}
+
+.questionLine {
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.icon {
+		width: 16px;
+		margin-right: 5px;
+}
+
+img[src=""] {
+    display: none;
+}
+
+.headerLabel {
+	font-size: 12px !important;
+	font-weight: bold !important;
+	margin-left: 15px !important;
+	margin-right: 5px;
+}
+
+.solutionText {
+	font-size: 12px !important;
+	margin-left: 20px !important;
+}
+
+.questionType {
+  background-color: var(--gold, gold);
+  width: 15px;
+  height: 15px;
+  color: white;
+  font-size: 11px;
+  padding: 0 0 0 4px;
+}
+
+.hrHeight {
+  height: 3px;
+  color: var(--gold, gold);
+  background-color: var(--gold, gold);
+}
+

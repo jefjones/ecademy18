@@ -1,0 +1,29 @@
+@import 'variables.css';
+
+/* common */
+.container {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: auto;
+    margin-left: 15px;
+		margin-top: 35px !important;
+}
+
+.moreBottom {
+		margin-bottom: 20px !important;
+}
+
+.link {
+		color: var(--blue,blue);
+		text-decoration: none;
+}
+
+.link:hover {
+		text-decoration: underline;
+}
+
+.checkbox {
+		margin-left: 6px;
+		margin-top: 5px;
+}

@@ -1,0 +1,82 @@
+@import 'variables.css';
+
+.horizontal {
+    display: flex;
+    flex-flow: row;
+		flex-wrap: wrap;
+    margin-right: 3px;
+}
+
+.radio {
+    vertical-align: middle;
+    margin-right: 3px;
+}
+
+.label, .titleClass, .alertMessage {
+	font-family: var(--generalFont, sans-serif);
+	text-rendering: optimizelegibility;
+	text-decoration: none;
+}
+
+.label {
+    position: relative;
+    top: -3px;
+    right: 2px;
+    margin-right: 8px !important ;
+		margin-left: 2px !important;
+		margin-top: 2px !important;
+    margin-bottom: 0px !important;
+    color: #333333;
+    font-family: "OpenSans", Open Sans, sans-serif;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.label:hover {
+    text-decoration: underline;
+    color: #333333;
+    cursor: pointer;
+}
+
+.spaceBetween {
+    margin-left: 15px;
+		margin-bottom: 8px;
+}
+
+.spaceBelow {
+    margin-bottom: 8px;
+}
+
+.wrong {
+		color: var(--red, red);
+}
+
+.correct {
+		color: var(--green, green);
+}
+
+.titleClass {
+    margin-bottom: 4px !important;
+    font-size: 12px;
+}
+
+.row {
+		display: flex;
+		flex-direction: row;
+		align-items: baseline;
+}
+
+.leftDown {
+	margin-left: 4px;
+	position: relative;
+	top: 6px;
+}
+
+.alertMessage {
+    color: var(--red, red);
+    font-size: 12px;
+}
+
+.moreBottom {
+	margin-bottom: 10px !important;
+}

@@ -1,0 +1,5 @@
+{
+    "name": "InputFile",
+    "main": "InputFile.js",
+    "storybook": "InputFile.story.js"
+}

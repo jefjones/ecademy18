@@ -1,0 +1,254 @@
+@import 'variables.css';
+
+/* common */
+.container {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: auto;
+    margin-left: 15px;
+}
+
+.linkStyles, .text, .cellText, .subHeader, .label, .remove, .error, .cancelLink {
+  font-family: var(--generalFont, sans-serif);
+	font-weight: normal !important;
+	letter-spacing: normal;
+	text-rendering: optimizelegibility;
+	font-size: 12px;
+}
+
+.error {
+    color: var(--red, red);
+}
+
+.label {
+  font-size: 10px;
+	margin-right: 3px;
+	position: relative;
+	top: 5px;
+	left: -2px;
+}
+
+.dateColumn {
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+    margin-left: 5px;
+    margin-top: 10px;
+    margin-bottom: 12px;
+    width: 85px;
+}
+
+.dueDateLabel {
+    margin-left: 15px;
+}
+
+.singleDropDown {
+  /*margin-top: 6px !important;*/
+  margin-left: 4px;
+  font-size: 10px;
+}
+
+.remove {
+  color: var(--maroon, maroon);
+  cursor: pointer;
+  font-size: 9px;
+}
+
+.tableLabelClass {
+  font-size: 8pt !important;
+  text-align: left !important;
+  font-weight: bold !important;
+  padding-right: 2px;
+  text-decoration: underline;
+  font-family: var(--generalFont, sans-serif);
+  font-weight: normal !important;
+  letter-spacing: normal;
+  text-rendering: optimizelegibility;
+}
+
+.firstColumnClass {
+    max-width: 50px !important;
+    line-height: 2 !important;
+    flex-wrap: wrap !important;
+}
+
+.rowRight {
+		display: flex;
+		flex-flow: row;
+		margin-top: 10px;
+}
+
+.submitButton {
+    background: linear-gradient(#67ae55, #578843);
+  	background-color: #69a74e;
+  	border: 1px solid;
+  	border-color: #3b6e22 #3b6e22 #2c5115;
+  	border-radius: 5px;
+  	box-shadow: inset 0 1px 1px #a4e388;
+  	color: white;
+  	cursor: pointer;
+  	display: inline-block;
+  	font-family: var(--generalFont, sans-serif);
+  	font-size: 12px;
+  	font-weight: bold !important;
+  	letter-spacing: 1px;
+  	line-height: 116%;
+    margin-top: 8px;
+  	margin-left: 12px;
+  	min-width: 50px;
+  	padding: 2px 5px;
+  	position: relative;
+  	text-align: center;
+  	text-rendering: optimizelegibility;
+  	text-shadow: 0 1px 2px rgba(0,0,0,.5);
+    outline: none;
+}
+
+.submitButton:active {
+    transform: scaleX(.89);
+    background: linear-gradient(#aec3a9, #578843);
+  	border: 1px solid;
+  	border-color: #3b6e22 #3b6e22 #2c5115;
+  	border-radius: 5px;
+  	box-shadow: inset 0 1px 1px #a4e388;
+  	color: gray;
+  	cursor: default;
+}
+
+.submitButton:hover {
+    box-shadow: 0 0 0 1px #297e2d;
+}
+
+.cellSpacing {
+    margin-right: 20px;
+}
+
+.cancelLink {
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 10pt;
+    color: #4f5253;
+    margin-top: 10px;
+}
+
+.row {
+	display: flex;
+	flex-flow: row;
+}
+
+.littleLeft {
+	margin-left: 5px;
+}
+
+.muchTop {
+	margin-top: 24px;
+}
+
+.errorPosition {
+	position: relative;
+	left: 6px;
+	top: -8px;
+}
+
+.littleTop {
+	margin-top: 8px;
+}
+
+.rowWrap {
+	display: flex;
+	flex-flow: row;
+	flex-wrap: wrap;
+}
+
+.moveBox {
+	margin-left: 10px !important;
+	margin-top: 20px !important;
+}
+
+.smallWidth {
+	width: 35px;
+	margin-left: 0px !important;
+	margin-bottom: 5px !important;
+	margin-top: 0px !important;
+	position: relative !important;
+	left: -15px !important;
+}
+
+.subHeader {
+		font-weight: bold !important;
+		margin-top: 20px;
+}
+
+.linkPosition {
+	margin-top: 4px;
+	margin-left: 3px;
+}
+
+.moreRight {
+	margin-right: 15px;
+}
+
+.moreLeft {
+	margin-left: 10px;
+}
+
+.smallButton {
+	margin-top: 0px !important;
+	margin-bottom: 5px !important;
+}
+
+.cellText, .cellHead {
+	width: 50px;
+	font-size: 11px;
+	margin-left: 2px;
+	margin-right: 4px;
+	padding: 2px;
+	line-height: 230%;
+	/* height: 20px !important; */
+	text-align: left;
+	white-space: nowrap;
+	cursor: pointer;
+}
+
+.checkbox {
+		margin-top: 8px !important;
+		margin-left: 5px !important;
+}
+
+.checkboxSiblings {
+		margin-top: 28px !important;
+		margin-left: 5px !important;
+		margin-right: 10px !important;
+}
+
+.iconCell {
+		width: 16px;
+		margin-right: 4px !important;
+		position: relative;
+		top: 5px;
+		padding-right: 4px;
+}
+
+.moreTop {
+	margin-top: 10px;
+}
+
+.highlight {
+	background-color: #faf8b6;
+	width: 100%;
+	height: 100%;
+}
+
+.linkStyle {
+    cursor: pointer;
+    margin-left: 3px;
+    color: var(--maroon, maroon);
+    font-size: 12px;
+		font-weight: bold !important;
+		text-decoration: none;
+}
+
+.linkStyles:hover {
+		text-decoration: underline;
+}

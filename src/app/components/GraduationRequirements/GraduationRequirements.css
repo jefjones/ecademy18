@@ -1,0 +1,129 @@
+@import 'variables.css';
+
+.container {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: auto;
+		overflowy: auto;
+}
+
+.row {
+    display: flex;
+    flex-flow: row;
+}
+
+.text, .upperHeader, .header, .cell, .cellCentered, .headerNoLine {
+    font-family: var(--generalFont, sans-serif);
+    font-weight: normal !important;
+    letter-spacing: normal;
+    text-rendering: optimizelegibility;
+    font-size: 12px;
+		margin-bottom: 0px !important;
+    line-height: 1 !important;
+    vertical-align: bottom !important;
+    text-align: left !important;
+}
+
+.link {
+		color: var(--blue, blue);
+		text-decoration: none;
+		font-size: 12px;
+		cursor: pointer;
+		margin-top: 4px;
+}
+
+.link:hover {
+	text-decoration: underline;
+}
+
+.header, .headerNoLine {
+    font-size: 12px !important;
+    text-align: left !important;
+    font-weight: bold !important;
+    padding-right: 2px;
+}
+
+.header {
+	text-decoration: underline;
+}
+
+.cell {
+	font-size: 12px !important;
+	text-align: left !important;
+	padding-right: 2px;
+}
+
+.cellCentered {
+	font-size: 12px !important;
+	text-align: center !important;
+	padding-right: 2px;
+}
+
+.tableClass th {
+	/*text-transform: uppercase;*/
+    font-size: 12px;
+		font-weight: normal;
+		background-color: white;
+    text-align: right;
+    min-width: 20px;
+    width: auto;
+}
+
+.tableClass th, .tableClass td, .count {
+		line-height: 2.1;
+		font-size: 12px;
+		vertical-align: middle;
+    text-align: left;
+    min-width: 20px;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.tableClass td {
+    padding-right: 6px !important;
+}
+
+.tableClass, .count {
+		/* width: auto; */
+	/*background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJod…EiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);*/
+    background-size: 10px 30px;
+    background-repeat: repeat-x;
+    padding-left: 0;
+    padding-right: 0;
+    font-family: "OpenSans", Open Sans, sans-serif;
+}
+
+tr:nth-of-type(odd) {
+	background-color: rgba(161, 195, 207, 0.2);
+}
+
+tr:nth-of-type(even) {
+	background-color: white;
+}
+
+.iconSmall {
+	width: 12px;
+	margin-left: 10px;
+}
+
+.sliderLine {
+	display: flex;
+	flex-flow: row;
+	justify-content: space-between;
+	width: 110px;
+	background-color: white !important;
+}
+
+.text {
+		font-size: 12px;
+		width: 30px !important;
+}
+
+.sliderCell {
+	background-color: white !important;
+}
+
+.sliderWidth {
+	width: 75px;
+}

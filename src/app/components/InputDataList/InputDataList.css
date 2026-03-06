@@ -1,0 +1,163 @@
+@import 'variables.css';
+
+.container {
+    z-index: -1 !important;
+}
+
+.column {
+  display: flex;
+  flex-flow: column;
+}
+
+.row {
+  display: flex;
+  flex-flow: row;
+}
+
+.editControl {
+    /* margin-bottom: 2px; */
+    margin-right: 2px;
+	  border-color: #bdc7d8;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: normal;
+    cursor: pointer;
+    z-index: -1 !important;
+		font-weight: bold;
+		max-width: 400px !important;
+}
+
+.sizehigh, .size {
+    padding: 5px;
+}
+
+.size {
+    font-size: 10px;
+}
+
+.sizehigh {
+    font-size: 14px;
+    min-width: 200px;
+}
+
+.sizemedium {
+    padding: 3px;
+    font-size: 11px;
+}
+
+.sizemedium-short {
+    padding: 3px;
+    font-size: 11px;
+}
+
+.sizesmall {
+    font-size: 11px;
+}
+
+.sizemini {
+    font-size: 11px;
+}
+
+.maxwidthmedium {
+	max-width: 250px !important;
+}
+
+.maxwidthmediumshort {
+	max-width: 150px !important;
+}
+
+.maxwidthshort {
+	max-width: 100px !important;
+}
+
+.labelTop, .labelLeft, .alertMessage, .text {
+    font-family: var(--generalFont, sans-serif);
+    font-weight: normal !important;
+    letter-spacing: normal;
+    text-rendering: optimizelegibility;
+    z-index: 4;
+}
+
+.labelTop {
+    margin-bottom: 1px;
+    font-size: 12px;
+}
+
+.labelLeft {
+    margin-top: 3px;
+    margin-right: 5px;
+    font-size: 12px;
+}
+
+.alertMessage {
+    color: var(--red, red);
+    font-size: 12px;
+    opacity: 1;
+}
+
+.lower {
+		position: relative;
+		top: 6px;
+		margin-right: 5px;
+}
+
+.text {
+	font-size: 12px;
+}
+
+.moreLeft {
+	margin-left: 15px;
+}
+
+.icon {
+	width: 12px;
+	margin-right: 4px;
+	position: relative;
+	top: 0px;
+	cursor: pointer;
+}
+
+.topPosition {
+	margin-left: 4px;
+	position: relative !important;
+	top: 17px !important;
+}
+
+.iconSmall {
+	width: 11px !important;
+	margin-right: 3px !important;
+	position: relative;
+	top: -3px;
+}
+
+.listTextPosition {
+	margin-top: 3px;
+	font-weight: bold;
+}
+
+.iconCross, .iconCrossTop {
+	width: 14px;
+	margin-left: 5px;
+}
+
+.iconCross {
+	margin-top: 13px;
+}
+
+.iconCrossTop {
+	margin-top: 20px;
+}
+
+.removePosition {
+	margin-left: 0px;
+	margin-top: 5px;
+	margin-right: 3px;
+}
+
+maxWidth {
+	max-width: 400px !important;
+}
+
+ .moreBottom {
+   margin-bottom: 5px;
+ }

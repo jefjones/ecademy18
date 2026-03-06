@@ -1,0 +1,147 @@
+@import 'variables.css';
+
+.container {
+    /* margin-left: 10px; */
+		max-width: 650px;
+}
+
+.multiSelect {
+    min-width: 100px;
+    width: auto;
+    font-size: 11px;
+    margin-bottom: 8px;
+    margin-right: 10px;
+}
+
+.selectLabelClass, .dueDateLabel, .nativeLanguage, .textBig, .textAbove, .alertMessage, .errorMessage, .newWork, .labelCheckbox {
+    font-family: var(--generalFont, sans-serif);
+    font-weight: normal !important;
+    letter-spacing: normal;
+    text-rendering: optimizelegibility;
+    font-size: 9px;
+}
+
+.selectLabelClass {
+    /* margin-bottom:-4px !important; */
+    margin-top: 10px !important;
+}
+
+.selectListClass {
+    mmargin-bottom: 20px !important;
+}
+
+.extraMarginTop {
+    margin-top: 10px !important;
+}
+
+.textBig {
+    font-size: 14px !important;
+    color: var(--maroon, maroon);
+    margin-left: 7px;
+}
+
+.stackedText {
+    display: flex;
+    flex-flow: column;
+}
+
+.nativeLanguage {
+    margin-top: 7px;
+}
+
+.textAbove {
+
+}
+
+.dateRow {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-size: 11px !important;
+}
+
+.submitButton {
+    background: linear-gradient(#67ae55, #578843);
+	background-color: #69a74e;
+	border: 1px solid;
+	border-color: #3b6e22 #3b6e22 #2c5115;
+	border-radius: 5px;
+	box-shadow: inset 0 1px 1px #a4e388;
+	color: white;
+	cursor: pointer;
+	display: inline-block;
+	font-family: var(--generalFont, sans-serif);
+	font-size: 12px;
+	font-weight: bold !important;
+	letter-spacing: 1px;
+	line-height: 116%;
+    margin-top: 8px;
+	margin-left: 12px;
+	min-width: 50px;
+	padding: 2px 5px;
+	position: relative;
+	text-align: center;
+	text-rendering: optimizelegibility;
+	text-shadow: 0 1px 2px rgba(0,0,0,.5);
+    outline: none;
+}
+
+.submitButton:active {
+    transform: scaleX(.89);
+    background: linear-gradient(#aec3a9, #578843);
+	background-color: #aec3a9;
+	border: 1px solid;
+	border-color: #3b6e22 #3b6e22 #2c5115;
+	border-radius: 5px;
+	box-shadow: inset 0 1px 1px #a4e388;
+	color: gray;
+	cursor: default;
+}
+
+.submitButton:hover {
+    box-shadow: 0 0 0 1px #297e2d;
+}
+
+.buttonPlace {
+    margin-top: 7px;
+    display: flex;
+    justify-content: center;
+}
+
+.errorMessage {
+    color: var(--red, red) !important;
+    font-size: 12px;
+    opacity: 1;
+}
+
+.newWork {
+    font-size: 12px;
+    cursor: pointer;
+    text-decoration: none;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 15px;
+    color:black;
+}
+
+.newWork:hover {
+    text-decoration: underline;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.checkbox {
+    margin-left:15px;
+    margin-top:15px;
+}
+
+.labelCheckbox {
+    margin-top: 18px;
+    font-size: 12px;
+}
+
+.marginLeft {
+    margin-left: 10px;
+}

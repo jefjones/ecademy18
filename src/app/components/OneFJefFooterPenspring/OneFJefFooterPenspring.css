@@ -1,0 +1,30 @@
+@import 'variables.css';
+
+
+.sideNote {
+	font-weight: bold;
+	font-family: var(--generalFont, sans-serif);
+	letter-spacing: normal;
+	text-rendering: optimizelegibility;
+    text-align: center;
+    font-size: 12px;
+    font-weight: normal !important;
+    width: 97%;
+    text-align: center;
+	margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+.link {
+	color: var(--blue, blue) !important;
+}
+
+.row {
+	display: flex;
+	flex-flow: row;
+}
+
+.logo {
+	margin-left: 10px;
+	height: 18px;
+}

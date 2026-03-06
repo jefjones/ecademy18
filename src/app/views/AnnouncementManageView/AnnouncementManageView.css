@@ -1,0 +1,432 @@
+@import 'variables.css';
+@import 'rc-time-picker/assets/index.css';
+
+/* common */
+.container {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: auto;
+}
+
+.unorderedList {
+    overflow-y: auto;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    flex-flow:column;
+}
+
+.whiteLine {
+    color:white;
+    opacity: .5;
+    width:140px;
+    text-align:left;
+    margin-left:15px;
+    margin-top:10px;
+}
+
+.singleDropDown {
+  /*margin-top: 6px !important;*/
+  margin-left: 4px;
+  font-size: 10px;
+}
+
+.menuItemContainer {
+  display: flex;
+  justify-content: flex-start;
+  flex-flow:row;
+}
+
+.rightArrow {
+  float: right;
+  margin-top: 8px;
+
+}
+
+.spreadToRight {
+  justify-content: space-between !important;
+}
+
+.subMenuArrow {
+  width: 100%;
+  margin-right: 4px;
+  cursor: pointer;
+}
+
+.workSummary {
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-bottom: 10px;
+    width: auto;
+}
+
+.pageTitle {
+    position: relative;
+    top: 10px;
+}
+
+.selectLabelClass, .error, .label, .classification, .subHeader, .smallerSubHeader, .tableData, .tableHead, .noData, .inputText, .commentTextarea {
+    font-family: var(--generalFont, sans-serif);
+    font-weight: normal !important;
+    letter-spacing: normal;
+    text-rendering: optimizelegibility;
+    font-size: 9px;
+}
+
+.subHeader {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.smallerSubHeader {
+    font-size: 11px;
+    font-weight: normal;
+    margin-left: 15px;
+    margin-top: 2px;
+}
+
+.selectLabelClass {
+    margin-bottom:-4px !important;
+}
+
+.workNameLabel {
+    margin-left: 13px;
+    margin-bottom:-6px !important;
+}
+
+.selectListClass {
+    margin-top: 10px !important;
+    margin-left: 10px !important;
+    mmargin-bottom: 10px !important;
+}
+
+.menuItem {
+    display: block;
+    color: black;
+    cursor: pointer;
+    font-family: var(--generalFont, sans-serif);
+    font-size: 11px;
+    letter-spacing: 1px;
+    line-height: 286%;
+    margin-top: 4px;
+    margin-left: 14px;
+    margin-right: 4px;
+    text-align: left;
+    text-rendering: optimizelegibility;
+    text-decoration: none;
+    -webkit-transition: all .8s;
+    transition: all .8s;
+    z-index: -1;
+}
+
+.dateRow {
+    display: flex;
+    flex-direction: row;
+    font-size: 13px;
+}
+
+.dateColumn {
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.dateTimePicker {
+    margin-top: 0px;
+    margin-left: 8px;
+    font-size: 12px;
+    border-radius: 4px;
+}
+
+.dueDateLabel {
+    margin-left: 15px;
+}
+
+.current {
+    margin-top: 5px;
+    background-color: #ffcc66;
+    color: white;
+}
+
+.workNameInput {
+    margin-left: 10px;
+}
+
+.marginLeft {
+    margin-left: 15px;
+}
+
+.error {
+    color: var(--red, red);
+}
+
+.labelHigher {
+    margin-top: 8px;
+    margin-bottom: 2px;
+    font-size: 9px;
+}
+
+.messageBox {
+    margin-right: 6px;
+	font-family: var(--generalFont, sans-serif);
+	letter-spacing: normal;
+	text-rendering: optimizelegibility;
+    border-radius: 5px;
+    border: 1px solid #d1d9de;
+    background: #fff !important;
+    display: inline-block;
+    vertical-align: middle;
+    color: black;
+    font-size: 12px;
+    padding: 2px;
+    padding-left: 5px;
+    /* outline: none; */
+    font-weight: bold;
+}
+
+.messageBox:focus {
+    box-shadow: 0 0 0 2px #297e2d;
+}
+
+.input {
+    margin-bottom: 10px;
+}
+
+.inputControls {
+    margin-left: 10px;
+}
+
+.moreMarginBottom {
+    margin-bottom: 10px !important;
+}
+
+.checkbox {
+    margin-top: 15px !important;
+}
+
+.timePicker {
+    width: 100px;
+}
+
+.row {
+    display: flex;
+    flex-flow: row;
+}
+
+.label {
+    font-size: 10px;
+}
+
+.duration {
+    margin-left: 15px;
+    margin-top: 6px;
+}
+
+.marginLeft {
+    margin-left: 10px;
+}
+
+.multiSelect {
+    z-index: 99 !important;
+    min-width: 100px;
+    width: auto;
+    font-size: 11px;
+    margin-bottom: 8px;
+    margin-right: 10px;
+}
+
+.moreBottomMargin {
+    margin-bottom: 10px;
+}
+
+.submitButton {
+    background: linear-gradient(#67ae55, #578843);
+  	background-color: #69a74e;
+  	border: 1px solid;
+  	border-color: #3b6e22 #3b6e22 #2c5115;
+  	border-radius: 5px;
+  	box-shadow: inset 0 1px 1px #a4e388;
+  	color: white;
+  	cursor: pointer;
+  	display: inline-block;
+  	font-family: var(--generalFont, sans-serif);
+  	font-size: 12px;
+  	font-weight: bold !important;
+  	letter-spacing: 1px;
+  	line-height: 116%;
+    margin-top: 8px;
+  	margin-left: 12px;
+  	min-width: 50px;
+  	padding: 2px 5px;
+  	position: relative;
+  	text-align: center;
+  	text-rendering: optimizelegibility;
+  	text-shadow: 0 1px 2px rgba(0,0,0,.5);
+    outline: none;
+}
+
+.submitButton:active {
+    transform: scaleX(.89);
+    background: linear-gradient(#aec3a9, #578843);
+  	border: 1px solid;
+  	border-color: #3b6e22 #3b6e22 #2c5115;
+  	border-radius: 5px;
+  	box-shadow: inset 0 1px 1px #a4e388;
+  	color: gray;
+  	cursor: default;
+}
+
+.submitButton:hover {
+    box-shadow: 0 0 0 1px #297e2d;
+}
+
+.dateButton {
+    background: linear-gradient(var(--blue, blue), #445d88);
+    background-color: var(--blue, blue) !important;
+    height: 20px !important;
+}
+
+.classification {
+    width: 100%;
+    color: white;
+    background-color: var(--blue, blue);
+    font-size: 12px;
+    margin-top: 6px;
+    padding-left: 5px;
+    border-radius: 3px;
+		padding-top: 2px;
+		padding-bottom: 2px;
+}
+
+.error {
+    color: var(--red, red);;
+    font-size: 12px;
+    opacity: 1;
+}
+
+.tableData {
+    font-size: 13px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.cellSpacing {
+    margin-right: 20px;
+}
+
+.tableMargin {
+    margin-left: 20px;
+    margin-bottom: 7px;
+}
+
+.noData {
+    font-size: 12px;
+    font-style: italic;
+}
+
+.radio {
+    margin-left: 8px;
+}
+
+.radioLabels {
+    font-size: 11px;
+    margin-left: 3px !important;
+    margin-bottom: 13px !important;
+    margin-top: -10px !important;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.radioLabels:hover {
+    text-decoration: underline;
+}
+
+.radioClass {
+    margin-top: 10px !important;
+}
+
+.labelCheckbox {
+    font-size: 11px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.tableLabelClass {
+    font-size: 8pt !important;
+    text-align: left !important;
+    font-weight: bold !important;
+    padding-right: 2px;
+    text-decoration: underline;
+}
+
+.remove {
+    color: var(--maroon, maroon);
+    cursor: pointer;
+		text-decoration: none;
+}
+
+.remove:hover {
+		text-decoration: underline;
+}
+
+.editLink {
+  color: var(--green, green);
+  cursor: pointer;
+	text-decoration: none;
+}
+
+.editLink:hover {
+  text-decoration: underline;
+}
+
+.cancelLink {
+    font-weight: normal;
+    font-family: var(--generalFont, sans-serif);
+    font-weight: normal !important;
+    letter-spacing: normal;
+    text-rendering: optimizelegibility;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 10pt;
+    color: #4f5253;
+    position: relative;
+    top: 20px;
+    left: 12px;
+}
+
+.timePicker {
+    width: 110px;
+    border-radius: 3px;
+    font-family: var(--generalFont, sans-serif);
+    font-weight: bold !important;
+    letter-spacing: normal;
+    text-rendering: optimizelegibility;
+    font-size: 11px;
+    padding-left: 3px;
+}
+
+.inputText {
+    margin-bottom: 1px;
+    font-size: 9px;
+}
+
+.commentTextarea {
+    border-radius: 5px;
+    padding-left: 4px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    font-size: 13px;
+		width: 100%;
+    max-width: 400px;
+		margin-right: 8px;
+}
+
+.textareaDiv {
+	margin-top: 8px;
+	margin-bottom: 8px;
+}

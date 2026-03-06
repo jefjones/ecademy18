@@ -1,0 +1,68 @@
+@import 'variables.css';
+
+.countText, .link {
+  font-family: var(--generalFont, sans-serif);
+	font-weight: normal !important;
+	letter-spacing: normal;
+	text-rendering: optimizelegibility;
+}
+
+.studentSection {
+		background-color: var(--lightGray, gray);
+		padding-left: 2px;
+		padding-top: 4px;
+		padding-bottom: 4px;
+		border-radius: 4px;
+		/* max-width: 400px; */
+}
+
+.row {
+		display: flex;
+		flex-direction: row;
+}
+
+.littleLeft {
+		margin-left: 10px;
+}
+
+.countText {
+		font-size: 11px;
+		margin-right: 5px;
+		margin-left: 0px !important;
+		position: relative;
+		top: 4px;
+}
+
+.link {
+		font-size: 12px;
+		color: var(--blue, blue);
+		text-decoration: none;
+		margin-left: 5px;
+		cursor: pointer;
+		margin-top: 3px !important;
+}
+
+.link:hover {
+		text-decoration: underline;
+}
+
+.iconSmall {
+		width: 11px !important;
+		margin-right: 3px !important;
+		position: relative;
+		top: -3px;
+}
+
+.muchLeft {
+		margin-left: 20px;
+}
+
+.scrollable {
+		overflow-y: auto;
+		overflow-x: auto;
+		height: auto;
+		max-height: 200px;
+		padding-right: 10px;
+		/* max-width: 320px; */
+		width:auto;
+}

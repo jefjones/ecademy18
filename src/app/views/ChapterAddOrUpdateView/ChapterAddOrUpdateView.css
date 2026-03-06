@@ -1,0 +1,245 @@
+@import 'variables.css';
+
+.titleLine {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    width: 100%;
+		max-width: 650px;
+}
+
+.container {
+    /* position: relative;
+    left: 0;
+    top: 0;
+    width: auto; */
+    z-index: 1;
+		max-width: 650px;
+}
+
+
+.editControls {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    margin-left: 10px;
+}
+
+.loginButton {
+    background: linear-gradient(#67ae55, #578843);
+	background-color: #69a74e;
+	border: 1px solid;
+	border-color: #3b6e22 #3b6e22 #2c5115;
+	border-radius: 5px;
+	box-shadow: inset 0 1px 1px #a4e388;
+	color: white;
+	cursor: pointer;
+	display: inline-block;
+	font-family: var(--generalFont, sans-serif);
+	font-size: 14px;
+	font-weight: bold !important;
+	letter-spacing: 1px;
+	line-height: 116%;
+	margin-bottom: 8px;
+	margin-top: 22px;
+	min-width: 84px;
+	padding: 6px 15px;
+	position: relative;
+	text-align: center;
+	text-rendering: optimizelegibility;
+	text-shadow: 0 1px 2px rgba(0,0,0,.5);
+    outline: none;
+}
+
+.opacityLow {
+  opacity: .6;
+}
+
+.opacityHigh {
+  opacity: 1;
+}
+
+.loginButton:active {
+  transform: scalex(.95);
+}
+
+.loginButton:focus {
+  box-shadow: 0 0 0 1px #297e2d;
+}
+
+.nameFull {
+  display: flex;
+  flex-direction: row;
+}
+
+.current {
+    margin-top: 5px;
+    background-color: #ffcc66;
+    color: white;
+}
+
+.workSummary {
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-bottom: 10px;
+    width: auto;
+}
+
+.unorderedList {
+    overflow-y: auto;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    flex-flow:column;
+}
+
+.menuItem {
+    display: block;
+    color: black;
+    cursor: pointer;
+    font-family: var(--generalFont, sans-serif);
+    font-size: 11px;
+    letter-spacing: 1px;
+    line-height: 286%;
+    margin-top: 4px;
+    margin-left: 14px;
+    margin-right: 4px;
+    text-align: left;
+    text-rendering: optimizelegibility;
+    text-decoration: none;
+    -webkit-transition: all .8s;
+    transition: all .8s;
+    z-index: 99;
+}
+
+.labelClass, .labelText, .editLabel, .inputText {
+    margin-left: 2px;
+    font-family: var(--generalFont, sans-serif);
+    font-weight: normal !important;
+    letter-spacing: normal;
+    text-rendering: optimizelegibility;
+    font-size: 9px;
+}
+
+.commentTextarea {
+    border-radius: 5px;
+    padding-left: 4px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.labelClass, .labelText, .editLabel, .inputText {
+    position: relative;
+    bottom: -5px;
+}
+
+.inputClassName {
+    margin-left: -3px !important;
+    border-radius: 5px;
+    font-size: 13px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.inputClassName:focus {
+    box-shadow: 0 0 0 2px !important;
+}
+
+.lessBottom {
+    position: relative;
+    bottom: -10px !important;
+}
+
+.centered {
+    display: flex;
+    justify-content: center;
+}
+
+.navEnterText {
+    font-weight: bold;
+}
+
+.navChoice {
+    margin-left: 25px !important;
+}
+
+.buttonStyle {
+    margin-left: 118px;
+    margin-top: 20px;
+    margin-bottom: 4px;
+    background: linear-gradient(#67ae55, #578843);
+    background-color: #69a74e;
+    border: 1px solid;
+    border-color: #3b6e22 #3b6e22 #2c5115;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 1px #a4e388;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    font-family: var(--generalFont, sans-serif);
+    font-size: 10px;
+    text-transform: uppercase;
+    font-weight: bold !important;
+    letter-spacing: 1px;
+    line-height: 116%;
+    min-width: 60px;
+    padding: 3px 8px;
+    position: relative;
+    text-align: center;
+    text-rendering: optimizelegibility;
+    text-shadow: 0 1px 2px rgba(0,0,0,.5);
+    outline: none;
+    box-shadow: none;
+    opacity: .80 !important;
+}
+
+.submitButton {
+    background: linear-gradient(#67ae55, #578843);
+	background-color: #69a74e;
+	border: 1px solid;
+	border-color: #3b6e22 #3b6e22 #2c5115;
+	border-radius: 5px;
+	box-shadow: inset 0 1px 1px #a4e388;
+	color: white;
+	cursor: pointer;
+	display: inline-block;
+	font-family: var(--generalFont, sans-serif);
+	font-size: 12px;
+	font-weight: bold !important;
+	letter-spacing: 1px;
+	line-height: 116%;
+    margin-top: 8px;
+	margin-left: 12px;
+	min-width: 50px;
+	padding: 2px 5px;
+	position: relative;
+	text-align: center;
+	text-rendering: optimizelegibility;
+	text-shadow: 0 1px 2px rgba(0,0,0,.5);
+    outline: none;
+}
+
+.submitButton:active {
+    transform: scaleX(.89);
+    background: linear-gradient(#aec3a9, #578843);
+	background-color: #aec3a9;
+	border: 1px solid;
+	border-color: #3b6e22 #3b6e22 #2c5115;
+	border-radius: 5px;
+	box-shadow: inset 0 1px 1px #a4e388;
+	color: gray;
+	cursor: default;
+}
+
+.submitButton:hover {
+    box-shadow: 0 0 0 1px #297e2d;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}

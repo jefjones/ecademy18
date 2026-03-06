@@ -1,0 +1,18 @@
+@import 'variables.css';
+
+.textStyle {
+    margin-right:4px;
+    font-size: 12px;
+    font-weight: normal;
+    height: 18px;
+    font-family: "OpenSans", Open Sans, sans-serif;
+}
+
+.idStyle {
+    color: gray;
+    font-size: 12px;
+    font-weight: normal;
+    height: 18px;
+    font-family: "OpenSans", Open Sans, sans-serif;
+
+}

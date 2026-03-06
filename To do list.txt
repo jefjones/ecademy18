@@ -1,0 +1,38 @@
+Penspring
+
+7.  ReCaptcha for non-robot login
+8.  How to receive payment for services and track paid users?
+9.  Invite editor
+	a.  We ought to let an existing editor of an author accept or reject an invitation of an additional document (maybe showing willingness or availability).
+	b.  Let the author know that that editor made it in and now sees the document.
+
+
+
+Put the most recent documents at the top of the My Documents list.  Order by default.  That can be changed in the search screen
+	Besides, I don't think that the search screens are completed yet.
+
+ToDo:   The list of contacts for a user is different than the FriendWorkAssign
+		I wonder if we are not yet looking at the personconfig record for the hrefId counts (that leave off from the previous file processing.)
+		b.  Group your contacts at the top (as favorites) to those who have access to your document but still put that contact in the full list alphabetically.
+
+I'm having trouble putting the focus in the commentBox of the comment textarea on the main editing page.
+
+3.  We have a chapter splitter.  Do we need a joiner?
+
+0.1	Include an option to email the editor proactively that their access has been changed. (Or maybe just send it when the page leaves and it is discovered that the access has changed.)
+
+0.2	When giving access, should we have an option to match the access give to [ editor name   \/ ]  ?
+
+0.	Add "Project" to a document in order to sort or group documents together. (And manage this in Outline page)
+
+6. 	More than one author-owner?
+
+8. 	Do not let anyone but the author copy the text out.
+
+13.	Open Community:  Charge 5.99 for a certain minimum of words and 5.99 more for additional number of words - but only if the responses are worthy of the cost.
+
+_______________________
+Near future fixes:
+
+1. full-screen mode:
+	https://developers.google.com/web/fundamentals/native-hardware/fullscreen/

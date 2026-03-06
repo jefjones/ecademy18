@@ -1,0 +1,19 @@
+@import 'variables.css';
+
+.container {
+    /* margin-left: 15px; */
+		max-width: 650px;
+}
+
+.noListMessage {
+    font-family: var(--generalFont, sans-serif);
+	font-weight: normal !important;
+	letter-spacing: normal;
+	text-rendering: optimizelegibility;
+    font-size: 12px;
+    cursor: pointer;
+    text-decoration: italic;
+    color:black;
+    margin-top: 30px;
+    margin-left: 140px !important;
+}

@@ -1,0 +1,12 @@
+@import 'variables.css';
+
+.text {
+    margin: 0 0 9px;
+    border-bottom: 1px solid #333333;
+    color: #333333;
+    font-size: 21.5px;
+    line-height: normal;
+    font-family: "Helam Slab", "Roboto Slab", Calibri, Helvetica, Arial, sans-serif;
+    font-weight: 200;
+    text-rendering: optimizelegibility;
+}

@@ -1,0 +1,69 @@
+@import 'variables.css';
+
+.container {
+    z-index: 99;
+    font-size: 9pt;
+    font-weight: normal;
+    font-family: var(--generalFont, sans-serif);
+    font-weight: normal !important;
+    letter-spacing: normal;
+    text-rendering: optimizelegibility;
+}
+
+.container td {
+    vertical-align: top;
+}
+
+.image {
+    margin-left: 12px;
+}
+
+.row {
+    display: flex !important;
+    flex-flow: row !important;
+}
+
+.superscriptImage {
+    width: 10px;
+}
+
+.imageOverlay {
+    position: relative;
+    left: -6px;
+    cursor: pointer;
+    width: 18px;
+}
+
+.imageBlocked {
+    cursor: pointer;
+    width: 11px;
+}
+
+.linkStyle {
+    font-weight: normal;
+    font-size: 12px;
+    font-family: var(--generalFont, sans-serif);
+    font-weight: normal !important;
+    letter-spacing: normal;
+    text-rendering: optimizelegibility;
+    text-decoration: none;
+    cursor: pointer;
+    color: #107e95;
+}
+
+.imageMagnifier {
+    position: relative;
+    top: 4px;
+    left: -7px;
+    cursor: pointer;
+    width: 13px;
+}
+
+.imageDocument {
+    margin-left: 18px;
+    cursor:pointer;
+}
+
+.moreLeft {
+    margin-left: 10px;
+}

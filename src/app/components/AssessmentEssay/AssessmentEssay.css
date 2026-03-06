@@ -1,0 +1,147 @@
+@import 'variables.css';
+
+.container {
+  margin-top: 15px;
+}
+
+.sequence, .question, .commentTextarea, .inputText, .noAnswer, .staticText, .penspring, .link, .checkboxLabel {
+  font-family: var(--generalFont, sans-serif);
+  font-weight: normal !important;
+  letter-spacing: normal;
+  text-rendering: optimizelegibility;
+  color:black;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.radio {
+  margin-left: 30px;
+}
+
+.row {
+  display: flex;
+  flex-flow: row;
+}
+
+.text {
+  font-size: 12px;
+  color: var(--gray, gray);
+}
+
+.sequence {
+  margin-right: 5px;
+  font-size: 12px;
+}
+
+.question {
+  font-size: 12px;
+}
+
+.questionLine {
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.commentTextarea {
+    border-radius: 5px;
+    padding-left: 4px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    font-size: 13px;
+    width: 100%;
+}
+
+.inputText {
+    margin-bottom: 1px;
+    font-size: 9px;
+}
+
+.answerLeft {
+  margin-left: 25px;
+  margin-right: 8px;
+  max-width: 400px;
+}
+
+.noAnswer {
+		font-weight: bold;
+		color: var(--red, red);
+		font-size: 12px;
+		font-style: italic;
+		margin-left: 30px;
+		font-weight: bold !important;
+		margin-bottom: 10px;
+}
+
+.icon {
+		width: 16px;
+		margin-right: 5px;
+}
+
+.staticText {
+		margin-left: 30px;
+		margin-top: 5px;
+		margin-bottom: 5px;
+}
+
+.checkbox {
+		margin-top: 30px !important;
+		margin-left: 10px !important;
+}
+
+.penspringLogo {
+	height: 17px;
+	position: relative;
+	top: -1px;
+	margin-left: 3px;
+}
+
+.penspring {
+	font-size: 12px;
+	color: var(--gray, gray);
+}
+
+.moreLeft {
+	margin-left: 3px;
+}
+
+.link {
+	font-size: 12px;
+	color: var(--blue, blue);
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.link:hover {
+	text-decoration: underline;
+}
+
+.pointer {
+	cursor: pointer;
+}
+
+.iconSuper {
+		width: 16px;
+		position: relative;
+		top: -4px;
+		margin-right: 9px;
+		margin-left: 6px;
+		cursor: pointer;
+}
+
+.checkboxLabel {
+	font-size: 11px;
+}
+
+.moreBottom {
+	margin-bottom: 10px;
+}
+
+.audioLeftQuestion {
+	margin-left: 20px;
+}
+
+.marginRight {
+  margin-right: 3px !important;
+  margin-Left: 3px !important;
+}

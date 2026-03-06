@@ -1,0 +1,195 @@
+@import 'variables.css';
+
+/* common */
+.container {
+    /* position: relative;
+    left: 0;
+    top: 0; */
+    width: auto;
+		max-width: 650px;
+}
+
+.languageListDiv {
+    margin-top: 25px;
+}
+
+.singleDropDown {
+    margin-top: 5px;
+    margin-left: 14px;
+    font-size: 10px;
+    margin-right: 2px;
+    border-color: #bdc7d8;
+    border-radius: 5px;
+    font-weight: normal;
+    padding: 3px;
+    font-size: 11px;
+    min-width: 150px;
+
+}
+
+.editList {
+    width: auto;
+    margin-left: 10px;
+}
+
+.hiddenTextarea {
+    position: relative;
+    left: -200px;
+}
+
+.bigLabel, .smallLabel, .copyChoice, .successLabel, .tableLabelClass {
+    font-family: var(--generalFont, sans-serif);
+	font-weight: normal !important;
+	letter-spacing: normal;
+	text-rendering: optimizelegibility;
+}
+
+.bigLabel {
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+.successLabel {
+    font-size: 12px;
+    margin-top: 10px;
+    margin-left: 15px;
+    width: 90%;
+    font-style: italic;
+    color: maroon;
+}
+
+.smallLabel {
+     font-size: 9px;
+     margin-left: 5px;
+     margin-bottom: 15px;
+     color: var(--gray);
+ }
+
+.workSummary {
+    margin-bottom: 4px;
+}
+
+.copyChoice {
+    font-size: 12px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #107e95;
+    margin-left: 20px;
+}
+
+.editorDiv {
+    height: 10px;
+    width: 10px;
+    position: relative;
+    left: -5000;
+}
+
+/*************  Flipping CSS ****************/
+/* entire container, keeps perspective */
+.flipContainer {
+	perspective: 1000px;
+}
+	/* flip the pane when hovered */
+	/*.flipContainer:hover .flipper, .flipContainer.hover .flipper {
+		transform: rotateY(180deg);
+	}*/
+
+.flip {
+    transform: rotateY(180deg);
+}
+
+.deflip {
+    transform: rotateY(360deg);
+}
+
+.flipContainer, .front, .back {
+	width: 290px;
+	height: auto;
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+    width: 97%;
+}
+
+.tableLabelClass {
+    font-size: 8pt !important;
+    text-align: right;
+    font-weight: normal !important;
+    padding-right: 2px;
+}
+
+.firstColumnClass {
+    max-width: 50px !important;
+    line-height: 2 !important;
+    flex-wrap: wrap !important;
+}
+
+.current {
+    margin-top: 5px;
+    background-color: #ffcc66;
+    color: white;
+}
+
+.tabPageMargin {
+    margin-bottom: 4px;
+    margin-top: 0px;
+}
+
+.listText {
+    font-family: var(--generalFont, sans-serif);
+    font-weight: normal !important;
+    letter-spacing: normal;
+    text-rendering: optimizelegibility;
+    z-index: 10;
+    line-height: .8;
+}
+
+.row {
+    display: flex;
+    flex-flow: row;
+}
+
+.icon {
+    position: relative;
+    top: 19px;
+    width: 16px;
+}
+
+.linkStyle {
+    cursor: pointer;
+    z-index: 99;
+}
+
+.marginSpace {
+    margin-top: 40px;
+}
+
+.marginBottom {
+    margin-bottom: 30px !important;
+}

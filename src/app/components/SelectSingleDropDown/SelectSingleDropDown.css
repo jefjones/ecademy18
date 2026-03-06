@@ -1,0 +1,108 @@
+@import 'variables.css';
+
+.container {
+    z-index: -1 !important;
+    margin-top: 8px;
+    margin-right: 8px;
+}
+
+.column {
+  display: flex;
+  flex-flow: column;
+}
+
+.row {
+  display: flex;
+  flex-flow: row;
+}
+
+.editControl {
+    /* margin-bottom: 2px; */
+    margin-right: 2px;
+	  border-color: #bdc7d8;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: normal;
+    cursor: pointer;
+    z-index: -1 !important;
+		font-weight: bold;
+}
+
+.sizehigh, .size {
+    padding: 5px;
+}
+
+.size {
+    font-size: 10px;
+}
+
+.sizehigh {
+    font-size: 14px;
+    min-width: 200px;
+}
+
+.sizemedium {
+    padding: 3px;
+    font-size: 11px;
+}
+
+.sizemedium-short {
+    padding: 3px;
+    font-size: 11px;
+}
+
+.sizesmall {
+    font-size: 11px;
+}
+
+.sizemini {
+    font-size: 11px;
+}
+
+.maxwidthmedium {
+	max-width: 250px !important;
+}
+
+.maxwidthmediumshort {
+	max-width: 150px !important;
+}
+
+.maxwidthshort {
+	max-width: 100px !important;
+}
+
+.labelTop, .labelLeft, .alertMessage {
+    font-family: var(--generalFont, sans-serif);
+    font-weight: normal !important;
+    letter-spacing: normal;
+    text-rendering: optimizelegibility;
+    z-index: 4;
+}
+
+.labelTop {
+    margin-bottom: 1px;
+    font-size: 12px;
+}
+
+.labelLeft {
+    margin-top: 3px;
+    margin-right: 5px;
+    font-size: 12px;
+}
+
+.alertMessage {
+    color: var(--red, red);
+    font-size: 12px;
+    opacity: 1;
+}
+
+.lower {
+		position: relative;
+		top: 6px;
+		margin-right: 5px;
+}
+
+.sizebigtext {
+    padding: 4px;
+    font-size: 24px !important;
+}

@@ -1,0 +1,484 @@
+@import 'variables.css';
+
+.container {
+  z-index: 99;
+  width: 100%;
+  /* position: fixed;
+  left: 0;
+  top: 0; */
+}
+
+.editCount {
+    z-index: -1;
+    font-size: 12px;
+    margin-left: 4px;
+    margin-top: 6px;
+}
+
+.children {
+    position: absolute;
+    top: 23px;
+    left: 0px;
+    /* width: 300px; */
+    height: 94%;
+    /* width: 0px;
+    height: 0px; */
+    overflow-x: auto;
+    background-color: #d9e3f6;
+    z-index: 9;
+    display: flex;
+    flex-flow: column;
+
+    transition:  width .5s;
+    -webkit-transition-timing-function: ease-in;
+    transition-timing-function: ease-in-out;
+
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    padding-left: 5px;
+    padding-right: 15px;
+}
+
+.opened {
+    top: 23px;
+    left: 0px;
+    width: 285px;
+    height: 94%;
+    /*border: solid 1px black;*/
+    transition:  width .5s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+    z-index: 9;
+}
+
+.editDisplay {
+    display: flex;
+    flex-flow: column;
+    margin-bottom: 18px;
+}
+
+.editDetails {
+    margin-top: 16px;
+    overflow-y: auto;
+}
+
+.toolOptions {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-end;
+    margin-right: 15px;
+}
+
+.choiceIcons {
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.bitSmaller {
+    width: 18px;
+}
+
+.smaller {
+    width: 16px;
+}
+
+.historyChoiceIcons {
+    margin-left: 15px;
+    -webkit-filter: grayscale(100%);
+   -moz-filter: grayscale(100%);
+     -o-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+        filter: grayscale(100%);
+    cursor: default;
+}
+
+.choiceIcons:hover {
+    color: var(--menuHoverLinks, maroon);
+    text-shadow: 0 1px 2px rgba(0,0,0,.5);
+    -webkit-transition: all .8s;
+    transition: all .8s;
+    box-shadow: inset 0 0 .4em #d4af37, 0 0 .4em #d4af37;
+}
+
+.choiceIcons:active {
+    //ToDo:  some interaction with the button when it is pressed, but the image is not responding to a scalex(.95)
+}
+
+.editCount, .tooltip, .myEdit, .editorDiv, .authorSentence, .editText, .authorDateLine, .translateTitle, .languageName, .link {
+  font-weight: normal;
+	font-family: var(--generalFont, sans-serif);
+	font-weight: normal !important;
+	letter-spacing: normal;
+	text-rendering: optimizelegibility;
+}
+
+.editText {
+    font-size: 12px;
+}
+
+.authorDateLine {
+    display: flex;
+    flex-flow: row;
+    font-size: 10px;
+    margin-top: 5px;
+    margin-bottom: 4px;
+    color: var(--maroon, maroon);
+}
+
+.authorSentence {
+    font-size: 12px;
+}
+
+.buttonRow {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-end;
+    margin-bottom: 12px;
+    margin-right: 8px;
+    /*margin-right: 35px;*/
+    /* position: relative; */
+}
+
+.resetButton, .cancelButton, .closeButton, .deleteAllButton, .nextButton, .prevButton, .restoreButton, .launchButton, .labelCheckbox {
+    font-weight: normal;
+    font-size: 12px;
+		font-family: var(--generalFont, sans-serif);
+		font-weight: normal !important;
+		letter-spacing: normal;
+		text-rendering: optimizelegibility;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.cancelButton {
+    margin-right: 9px;
+    margin-top: 9px;
+    color: #107e95;
+}
+
+.nextButton {
+    margin-left: 9px;
+    margin-top: 9px;
+    color: #107e95;
+}
+
+.restoreButton {
+    position: relative;
+    top: -6px;
+    margin-left: 9px;
+    margin-top: 9px;
+    color: #107e95;
+}
+
+.prevButton {
+    margin-left: 9px;
+    margin-top: 9px;
+    color: #107e95;
+}
+
+.cancelButton:hover, .noButton:hover, .nextButton:hover, .restoreButton:hover {
+    text-decoration: underline;
+}
+
+.prevButton:hover {
+    text-decoration: underline;
+}
+
+.resetButton {
+    color: maroon;
+    margin-top: 5px;
+    margin-right: 9px;
+    float: right;
+}
+.resetDiv {
+    float: right;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.saveButton, .yesButton {
+    /*float:right;*/
+    /*margin-right: 12px;*/
+    background: linear-gradient(#67ae55, #578843);
+  	background-color: #69a74e;
+  	border: 1px solid;
+  	border-color: #3b6e22 #3b6e22 #2c5115;
+  	border-radius: 5px;
+  	box-shadow: inset 0 1px 1px #a4e388;
+  	color: white;
+  	cursor: pointer;
+  	display: inline-block;
+  	font-family: var(--generalFont, sans-serif);
+  	font-size: 12px;
+  	font-weight: bold !important;
+  	letter-spacing: 1px;
+  	line-height: 9%;
+  	margin-top: 8px;
+  	min-width: 55px;
+  	padding: 6px 8px;
+  	position: relative;
+  	text-align: center;
+  	text-rendering: optimizelegibility;
+  	text-shadow: 0 1px 2px rgba(0,0,0,.5);
+    outline: none;
+}
+
+.saveButton:active, .yesButton:active {
+    transform: scaleX(.89);
+}
+
+.closeButton {
+    position:absolute;
+    right: 4px;
+    top: 4px;
+    cursor: pointer;
+    color: #107e95;
+}
+
+.closeButton:hover {
+    font-weight: bold;
+}
+
+.isComment {
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-left: 12px;
+    background-color: #fffdda;
+    padding: 2px 4px 2px 4px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.isAccepted {
+    color: #2ca63c;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-left: 4px;
+    padding: 2px 4px 2px 4px;
+}
+
+.isProcessed {
+    color: #abc2fe;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-left: 4px;
+    padding: 2px 4px 2px 4px;
+}
+
+.isCommentText {
+    padding: 2px 4px 2px 4px;
+    background-color: #fffdda;
+    font-style: italic;
+    border-radius: 4px;
+    width: 94%;
+}
+
+.editorDiv {
+    overflow-y:auto;
+    height: 80px;
+    width: 95%;
+    padding: 5px;
+    font-size: 12px;
+    background-color: white;
+    border-radius: 4px;
+    border: 1px;
+    -moz-box-shadow:    2px 2px 1px 2px #ccc;
+    -webkit-box-shadow: 2px 2px 1px 2px #ccc;
+    box-shadow:         2px 2px 1px 2px #ccc;
+}
+
+.myEdit {
+    font-size: 12px;
+}
+
+.voteCount {
+    position: relative;
+    top: 10px;
+    left: 0px;
+    font-size: 11px;
+    color: red;
+}
+
+.trollCount {
+    position: relative;
+    top: 10px;
+    left: -4px;
+    font-size: 11px;
+    color: red;
+}
+
+.deleteAllButton {
+    margin-left: 5px;
+    margin-right: 15px;
+    color: #107e95;
+}
+
+.editsHistory {
+    margin-left: 12px;
+    opacity: .4;
+}
+
+del {
+  background-color: rgb(255, 224, 224) !important;
+  /*text-decoration: none !important;*/
+}
+
+ins {
+  background-color: rgb(201, 238, 211) !important;
+  /*text-decoration: none !important;*/
+}
+
+.launchButton {
+    margin-left: 14px;
+    margin-top: 6px;
+    height: 18px;
+}
+
+.translateTitle {
+  color: var(--red, #f61919);
+  font-size: 10px;
+  text-decoration: italic;
+}
+
+.iconRow {
+    display: flex;
+    flex-flow: row;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.rowSpread {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 3px;
+}
+
+.image {
+    margin-left: 12px;
+}
+
+.sentenceDelete {
+    margin-left: 5px;
+    margin-right: 7px;
+    margin-top: 4px;
+    height: 14px !important;
+}
+
+.topMargin {
+    margin-top: 5px;
+}
+
+.originalTextSection {
+    height: 70px;
+    overflow: auto;
+}
+
+.imageOverlay {
+    position: relative;
+    left: -6px;
+    cursor: pointer;
+    width: 18px;
+}
+
+.imageBlocked {
+    cursor: pointer;
+    width: 11px;
+}
+
+.imageMagnifier {
+    position: relative;
+    top: 4px;
+    left: -7px;
+    cursor: pointer;
+    width: 13px;
+}
+
+.imageDocument {
+    margin-left: 18px;
+    cursor:pointer;
+}
+
+.moreLeft {
+    margin-left: 15px;
+}
+
+.colorBox {
+    width: 7px;
+    height: 7px;
+    border-radius: 2px;
+    margin-top: 3px;
+    margin-right: 2px;
+}
+
+.jef_caret {
+    position: relative;
+    margin-left: 20px !important;
+    margin-top: 8px;
+    cursor: pointer;
+}
+
+.jef_caret:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-top: 8px solid #948c8c;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+}
+
+.jef_caret:after {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 0;
+    border-top: 4px solid #d9e3f6;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+}
+
+.jefCaretDown{
+    transform: rotate(0deg);
+    transition: transform 0.3s ease-in-out;
+}
+
+.jefCaretUp{
+    background-color: #ffcc66;
+    transform: rotate(180deg);
+    transition: transform 0.3s ease-in-out;
+}
+
+.outerBorder {
+    margin-top: 8px;
+}
+
+.languageName {
+	position: relative;
+	left: 25px;
+	top: 4px;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.link, .link:hover {
+	margin-top: 4px;
+	font-size: 11px;
+	font-weight: bold;
+	margin-left: 7px;
+	color: var(--blue, blue);
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.link:hover {
+	text-decoration: underline !important;
+}
+
+.labelCheckbox {
+	color: #107e95;
+}

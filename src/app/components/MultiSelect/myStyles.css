@@ -1,0 +1,21 @@
+.aboveLabel {
+    font-family: var(--generalFont, sans-serif);
+    text-rendering: optimizelegibility;
+    text-decoration: none;
+    border-radius: 3px !important;
+    margin-bottom: 1px;
+    margin-top: 5px !important;
+    font-size: 9px;
+}
+
+.maxWidth {
+    max-width: 350px;
+}
+
+.label {
+  font-family: var(--generalFont, sans-serif);
+  text-rendering: optimizelegibility;
+  text-decoration: none;
+  margin-bottom: 3px;
+  margin-left: 3px;
+}

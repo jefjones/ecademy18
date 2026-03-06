@@ -1,0 +1,374 @@
+@import 'variables.css';
+
+/* common */
+.container {
+		position: relative;
+		left: 0;
+		top: 0;
+		width: auto;
+}
+
+.dashboardBox {
+    flex: 0 1 400px;
+    margin-right: 25px;
+}
+
+.unorderedList {
+    overflow-y: auto;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    flex-flow:column;
+    margin-top: 20px;
+    margin-bottom: 22px !important;
+}
+
+.workSummary {
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-bottom: 10px;
+    width: auto;
+}
+
+.pageTitle {
+    position: relative;
+    top: 10px;
+}
+
+.checkboxLabel, .decline, .approve, .workNameLabel, .goWhere, .personal, .text, .calendarLink, .classification, .tableLabelClass, .approved, .denied {
+    font-family: var(--generalFont, sans-serif);
+    font-weight: normal !important;
+    letter-spacing: normal;
+    text-rendering: optimizelegibility;
+    font-size: 12px;
+}
+
+.text {
+  font-size: 12px;
+}
+
+.workNameLabel {
+    margin-left: 13px;
+    margin-bottom:-6px !important;
+}
+
+.menuItem {
+    display: block;
+    color: black;
+    cursor: pointer;
+    font-family: var(--generalFont, sans-serif);
+    font-size: 12px;
+    letter-spacing: 1px;
+    line-height: 286%;
+    margin-top: 4px;
+    margin-left: 14px;
+    margin-right: 4px;
+    text-align: left;
+    text-rendering: optimizelegibility;
+    text-decoration: none;
+    -webkit-transition: all .8s;
+    transition: all .8s;
+    z-index: 1;
+}
+
+.current {
+    margin-top: 5px;
+    background-color: #ffcc66;
+    color: white;
+}
+
+.workNameInput {
+    margin-left: 10px;
+}
+
+.marginLeft {
+    margin-left: 15px;
+}
+
+.goWhere {
+    color: var(--blue, blue);
+    font-size: 12px;
+    margin-left: 15px;
+    margin-bottom: 20px !important;
+}
+
+.loading {
+    margin-top: 20px;
+    height: 50px;
+}
+
+.implemented {
+    font-weight: bold !important;
+    color: maroon;
+}
+
+.courseEntryManage {
+  margin-left: 12px;
+}
+
+.row {
+  display: flex !important;
+  flex-flow: row !important;
+}
+
+.listButton {
+  position: relative;
+  top: 10px;
+  left: -7px;
+}
+
+.moreBottomMargin {
+  margin-bottom: 22px !important;
+}
+
+.personal {
+  font-style: italic;
+  color: var(--gray, gray);
+  text-transform: lowercase;
+  margin-right: 4px;
+  font-size: 12px;
+}
+
+.calendarLink {
+  cursor: pointer;
+  margin-left: 20px;
+  color: var(--linkMaroon, maroon);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.topSpace {
+  margin-top: 8px !important;
+}
+
+.noWrap {
+  white-space: nowrap;;
+}
+
+.classification {
+    width: 100%;
+    color: white;
+    background-color: var(--blue, blue);
+    font-size: 12px;
+    margin-top: 6px;
+    padding-left: 5px;
+    border-radius: 3px;
+		padding-top: 2px;
+		padding-bottom: 2px;
+}
+
+.tableLabelClass {
+    font-size: 12pt !important;
+    text-align: left !important;
+    font-weight: bold !important;
+    padding-right: 2px;
+    text-decoration: underline;
+}
+
+.dashboardColumn {
+    display: flex;
+    flex-flow: column;
+    margin-bottom: 25px;
+}
+
+.desktopCalendar {
+    max-height: 500px !important;
+}
+
+.tabs {
+		color: var(--blue, blue);
+		font-size: 12px;
+		align-items: center;
+		text-transform: capitalize;
+		width: 60px !important;
+		cursor: pointer;
+		padding: 4px;
+		margin-right: 7px;
+}
+
+.tabChoice {
+		background-color: var(--lightGray, gray);
+		border-radius: 4px;
+}
+
+.menuItem {
+    display: block;
+    color: black;
+    cursor: pointer;
+    font-family: var(--generalFont, sans-serif);
+    font-size: 12px;
+    letter-spacing: 1px;
+    line-height: 286%;
+    margin-left: 14px;
+    margin-right: 4px;
+    text-align: left;
+    text-rendering: optimizelegibility;
+    text-decoration: none;
+    -webkit-transition: all .8s;
+    transition: all .8s;
+    /* z-index: 99; */
+}
+
+.link {
+		font-size: 12px;
+		color: var(--blue, blue);
+		text-decoration: none;
+		cursor: pointer;
+}
+
+.link:hover {
+		text-decoration: underline;
+}
+
+.iconRight {
+	margin-left: 4px !important;
+	margin-right: 8px !important;
+	margin-top: 4px;
+  width: 12px !important;
+	position: relative;
+	top: 4px;
+	left: 4px;
+}
+
+.bitTop {
+	margin-top: 3px !important;
+}
+
+.scrollable {
+		overflow-y: auto;
+		overflow-x: auto;
+		height: auto;
+		width: auto;
+		max-width: 1200px;
+		max-height: 500px;
+}
+
+.icon {
+	margin-left: 8px;
+  margin-right: 4px;
+  margin-top: 1px;
+  width: 16px;
+}
+
+.moreWidith {
+	width: 150px;
+}
+
+.moreMarginBottom {
+	margin-bottom: 15px;
+}
+
+.moreRight {
+	margin-right: 8px;
+}
+
+.moreSpace {
+	margin-right: 4px;
+	margin-left: 4px;
+}
+
+.bigIndent {
+	margin-left: 60px;
+	line-height: 1;
+}
+
+.approved, .denied {
+	font-size: 12px;
+	margin-right: 5px;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+
+.approved {
+	color: var(--green, green);
+}
+
+.denied {
+	color: var(--maroon, maroon);
+}
+
+.checkboxPosition {
+	position: relative;
+	top: 12px;
+	left: 20px;
+}
+
+.columnWidth {
+	max-width: 150px;
+	word-break: break-all;
+}
+
+.moreLeft {
+	margin-left: 10px !important;
+}
+
+.decline, .approve {
+	font-size: 12px;
+	font-weight: bold;
+	margin-top: 3px;
+	cursor: pointer;
+}
+
+.decline {
+	color: var(--maroon, maroon);
+}
+
+.approve {
+	color: var(--green, green);
+}
+
+.littleRight {
+	margin-right: 5px;
+}
+
+.heightDiv {
+	height: 75vh;
+	overflow-y: auto;
+}
+
+.rowWrap {
+	display: flex;
+	flex-flow: row;
+	flex-wrap: wrap;
+	white-space: normal;
+}
+
+.border {
+	border: 1px solid #373939;
+	border-radius: 4px;
+	padding: 2px;
+}
+
+.textRating {
+    font-size: 12px;
+    margin-right: 4px;
+    margin-top: 14px !important;
+}
+
+.labelCheckbox {
+		margin-left: -2px !important;
+    margin-right: 4px !important;
+    font-size: 12px;
+}
+
+.checkbox {
+	margin-top: 8px;
+	margin-left: 10px;
+}
+
+.moreTop {
+	margin-top: 8px;
+}
+
+.checkboxLabel {
+	margin-top: 6px;
+}
+
+.iconSmall {
+		width: 14px;
+		margin-right: 5px !important;
+		position: relative;
+		top: -3px;
+}

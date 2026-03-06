@@ -1,0 +1,159 @@
+@import 'variables.css';
+
+.container, .row, .rowLabel .divider, .searchText, .selectMultiple {
+    -webkit-transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    -moz-transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    -ms-transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    -o-transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.container, .partHiddenContainer {
+    margin-top: 2px;
+    padding-top: 5px;
+    padding-bottom: 16px;
+    background-color: #ebebee;
+}
+
+.container {
+    height: 210px;
+}
+
+.partHiddenContainer {
+    height: 140px !important;
+}
+
+.hidden {
+    height: 0px;
+    display: none;
+}
+
+.row, .rowLabel, .text, .radioLabels, .setFilters, .labelCheckbox {
+    font-family: var(--generalFont, sans-serif);
+    font-weight: normal !important;
+    letter-spacing: normal;
+    text-rendering: optimizelegibility;
+    margin-left: 5px;
+}
+
+.row {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+}
+
+.rowLabel {
+    width: 55px;
+    text-align: right;
+    font-size: 9pt;
+    font-weight: bold;
+    margin-right: 7px;
+    white-space: nowrap;
+}
+
+.text {
+    font-size: 10px;
+    margin-right: 8px;
+}
+
+.radio {
+    margin-left: 8px;
+}
+
+.radioLabels {
+    font-size: 10px;
+    margin-left: 3px !important;
+    margin-bottom: 13px !important;
+    margin-top: -10px !important;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.radioLabels:hover {
+    text-decoration: underline;
+}
+
+.radioClass {
+    margin-top: 10px !important;
+}
+
+.searchText {
+    margin-left: 5px;
+}
+
+.singleDropDown {
+    margin-left: 7px;
+}
+
+.selectMultiple {
+    margin-left: 12px;
+}
+
+.setFilters {
+    position: relative;
+    top: -20px;
+    margin-left: 15px;
+    cursor: pointer;
+    font-size: 9px;
+    color: #da132e;
+}
+
+.setFilters:hover {
+    text-decoration: underline;
+}
+
+.containerLeft {
+    display:flex;
+    flex-direction: row;
+    margin-right: 10px 0px;
+    justify-content: flex-start;
+}
+
+.inputBox, .addon {
+    border: 1px solid #d1d9de;
+    background: #fff !important;
+    display: inline-block;
+    vertical-align: middle;
+    color: black;
+    font-size: 12px;
+    height: 28px;
+}
+
+.inputBox:focus, .addon:focus {
+    outline: 0;
+}
+
+.inputBox {
+    border-radius: 12px 0 0 12px;
+    -webkit-border-radius: 12px 0 0 12px;
+    border-right: none;
+    padding-top: 6px;
+    padding-right: 50px;
+    padding-left: 10px;
+    padding-bottom: 6px;
+    height: 30px;
+}
+
+.addon {
+    border-radius: 0 12px 12px 0;
+    -webkit-border-radius: 0 12px 12px 0;
+    border-left: none;
+}
+
+.icon {
+    width: 12px;
+    margin-right: 6px;
+    padding-top: 2px;
+}
+
+.labelCheckbox {
+    position: relative;
+    top: -4px;
+    font-size: 8pt;
+    margin-right: 9px !important;
+    margin-left: 0px !important;
+}
+
+.checkbox {
+    /*margin-left: 5px;*/
+    margin-bottom: 4px !important;
+}

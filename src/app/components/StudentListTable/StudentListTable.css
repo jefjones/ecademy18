@@ -1,0 +1,94 @@
+@import 'variables.css';
+
+.container {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: auto;
+		overflowy: auto;
+}
+
+.scrollable {
+		overflow-y: auto;
+		overflow-x: auto;
+		height: auto;
+		max-height: 350px;
+		padding-right: 10px;
+		max-width: 400px !important;
+		width: auto;
+}
+
+.row {
+    display: flex;
+    flex-flow: row;
+}
+
+.icon {
+		width: 16px;
+		margin-right: 14px;
+		cursor: pointer;
+}
+
+.iconBig {
+		width: 18px;
+		margin-right: 14px;
+}
+
+.tableLabelClass, .link, .remove {
+    font-family: var(--generalFont, sans-serif);
+    font-weight: normal !important;
+    letter-spacing: normal;
+    text-rendering: optimizelegibility;
+    font-size: 9px;
+}
+
+.link {
+		color: var(--blue, blue);
+		text-decoration: none;
+		font-size: 12px;
+		cursor: pointer;
+		margin-top: 4px;
+}
+
+.link:hover {
+	text-decoration: underline;
+}
+
+.tableLabelClass {
+    font-size: 8pt !important;
+    text-align: left !important;
+    font-weight: bold !important;
+    padding-right: 2px;
+    text-decoration: underline;
+}
+
+.iconText {
+	margin-left: 4px;
+  margin-right: 10px;
+  width: 16px;
+}
+
+.moreLeft {
+	margin-left: 15px;
+}
+
+.iconSuper {
+		width: 16px;
+		margin-right: 9px;
+		cursor: pointer;
+}
+
+.missingIcon {
+		margin-right: 35px;
+}
+
+.remove {
+		cursor: pointer;
+		font-size: 10px;
+		color: var(--maroon, maroon);
+		margin-right: 8px;
+}
+
+.moreBottomMargin {
+    margin-bottom: 20px;
+}

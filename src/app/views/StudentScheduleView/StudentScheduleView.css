@@ -1,0 +1,434 @@
+@import 'variables.css';
+@import 'rc-time-picker/assets/index.css';
+
+/* common */
+.container {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: auto;
+}
+
+.unorderedList {
+    overflow-y: auto;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    flex-flow:column;
+}
+
+.whiteLine {
+    color:white;
+    opacity: .5;
+    width:140px;
+    text-align:left;
+    margin-left:15px;
+    margin-top:10px;
+}
+
+.singleDropDown {
+  /*margin-top: 6px !important;*/
+  margin-left: 4px;
+  font-size: 12px;
+}
+
+.menuItemContainer {
+  display: flex;
+  justify-content: flex-start;
+  flex-flow:row;
+}
+
+.rightArrow {
+  float: right;
+  margin-top: 8px;
+
+}
+
+.spreadToRight {
+  justify-content: space-between !important;
+}
+
+.subMenuArrow {
+  width: 100%;
+  margin-right: 4px;
+  cursor: pointer;
+}
+
+.workSummary {
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-bottom: 10px;
+    width: auto;
+}
+
+.pageTitle {
+    position: relative;
+    top: 10px;
+}
+
+.boldText, .textLeft, .textRight, .classification, .addNew, .noRecords, .link, .headerLabel, .label, .labelBold {
+    font-family: var(--generalFont, sans-serif);
+    letter-spacing: normal;
+    text-rendering: optimizelegibility;
+    font-size: 12px;
+}
+
+.row {
+    display: flex;
+    flex-flow: row;
+}
+
+.rowWrap {
+    display: flex;
+    flex-flow: row;
+		flex-wrap: wrap;
+}
+
+.marginLeft {
+    margin-left: 10px;
+}
+
+.multiSelect {
+    z-index: 99 !important;
+    min-width: 100px;
+    width: auto;
+    font-size: 12px;
+    margin-bottom: 8px;
+    margin-right: 10px;
+}
+
+.moreBottomMargin {
+    margin-bottom: 20px;
+}
+
+.submitButton {
+		margin-top: 19px !important;
+		height: 20px;
+    background: linear-gradient(#67ae55, #578843);
+  	background-color: #69a74e;
+  	border: 1px solid;
+  	border-color: #3b6e22 #3b6e22 #2c5115;
+  	border-radius: 5px;
+  	box-shadow: inset 0 1px 1px #a4e388;
+  	color: white;
+  	cursor: pointer;
+  	display: inline-block;
+  	font-family: var(--generalFont, sans-serif);
+  	font-size: 12px;
+  	font-weight: bold !important;
+  	letter-spacing: 1px;
+  	line-height: 116%;
+  	margin-left: 12px;
+  	min-width: 50px;
+  	padding: 2px 5px;
+  	position: relative;
+  	text-align: center;
+  	text-rendering: optimizelegibility;
+  	text-shadow: 0 1px 2px rgba(0,0,0,.5);
+    outline: none;
+}
+
+.submitButton:active {
+    transform: scaleX(.89);
+    background: linear-gradient(#aec3a9, #578843);
+  	border: 1px solid;
+  	border-color: #3b6e22 #3b6e22 #2c5115;
+  	border-radius: 5px;
+  	box-shadow: inset 0 1px 1px #a4e388;
+  	color: gray;
+  	cursor: default;
+}
+
+.submitButton:hover {
+    box-shadow: 0 0 0 1px #297e2d;
+}
+
+.dateButton {
+    background: linear-gradient(var(--blue, blue), #445d88);
+    background-color: var(--blue, blue) !important;
+    height: 20px !important;
+}
+
+.error {
+    color: var(--red, red);;
+    font-size: 12px;
+    opacity: 1;
+}
+
+.tableData {
+    font-size: 13px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.cellSpacing {
+    margin-right: 20px;
+}
+
+.tableMargin {
+    margin-left: 20px;
+    margin-bottom: 7px;
+}
+
+.noData {
+    font-size: 12px;
+    font-style: italic;
+}
+
+.radio {
+    margin-left: 8px;
+}
+
+.radioLabels {
+    font-size: 12px;
+    margin-left: 3px !important;
+    margin-bottom: 13px !important;
+    margin-top: -10px !important;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.radioLabels:hover {
+    text-decoration: underline;
+}
+
+.radioClass {
+    margin-top: 10px !important;
+}
+
+.labelCheckbox {
+    font-size: 12px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.tableLabelClass {
+    font-size: 12px !important;
+    text-align: left !important;
+    font-weight: bold !important;
+    padding-right: 2px;
+    text-decoration: underline;
+}
+
+.remove {
+  color: var(--maroon, maroon);
+  cursor: pointer;
+}
+
+.cancelLink {
+    font-weight: normal;
+    font-family: var(--generalFont, sans-serif);
+    font-weight: normal !important;
+    letter-spacing: normal;
+    text-rendering: optimizelegibility;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 12px;
+    color: #4f5253;
+    position: relative;
+    top: 20px;
+    left: 12px;
+}
+
+.timePicker {
+    width: 110px;
+    border-radius: 3px;
+    font-family: var(--generalFont, sans-serif);
+    font-weight: bold !important;
+    letter-spacing: normal;
+    text-rendering: optimizelegibility;
+    font-size: 12px;
+    padding-left: 3px;
+}
+
+.inputText {
+    margin-bottom: 1px;
+    font-size: 12px;
+}
+
+.commentTextarea {
+    border-radius: 5px;
+    padding-left: 4px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    font-size: 13px;
+		width: 100%;
+    max-width: 400px;
+		margin-right: 8px;
+}
+
+.textareaDiv {
+	margin-top: 8px;
+	margin-bottom: 8px;
+}
+
+.link {
+	font-size: 12px;
+	color: var(--blue, blue);
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.link:hover {
+	text-decoration: underline;
+}
+
+.linkBold {
+	font-weight: bold !important;
+}
+
+.scrollSideVertical {
+	overflow-y: auto;
+}
+
+.classification {
+    width: 100%;
+    color: white;
+    background-color: var(--blue, blue);
+    font-size: 12px;
+    margin-top: 6px;
+    padding-left: 5px;
+    border-radius: 3px;
+		padding-top: 2px;
+		padding-bottom: 2px;
+}
+
+.addNew {
+		margin-top: 10px;
+		margin-bottom: 10px;
+		margin-left: 25px;
+    font-size: 13px !important;
+    cursor: pointer;
+    color: var(--blue, blue);
+    text-decoration: none;
+}
+
+.addNew:hover {
+		text-decoration: underline;
+}
+
+.icon {
+		width: 16px;
+		/* margin-right: 6px !important; */
+		position: relative;
+		top: -3px;
+}
+
+.iconInline {
+		width: 16px;
+		margin-right: 4px !important;
+		position: relative;
+		top: -3px;
+}
+
+.noRecords {
+		font-weight: bold;
+		color: var(--red, red);
+		font-size: 12px;
+		font-style: italic;;
+}
+
+.moreTop {
+		margin-top: 8px;
+}
+
+.headerLabel {
+		font-size: 12px;
+		font-weight: bold;
+}
+
+.farFromleft {
+		margin-left: 250px
+}
+
+.positionRelative {
+		position: relative !important;
+		top: -20px !important;
+}
+
+.superScriptAdd {
+		position: relative !important;
+		left: -4px !important;
+}
+
+.icon {
+		width: 16px;
+		margin-right: 10px !important;
+		position: relative;
+		top: -3px;
+}
+
+.horizScroll {
+		overflow-y: auto;
+}
+
+.scrollable {
+		overflow-y: auto;
+		height: auto;
+		max-height: 450px;
+		margin-top: 8px;
+}
+
+.alertText {
+	font-size: 12px;
+	text-transform: none;
+}
+
+.label, .labelBold {
+		font-size: 12px;
+}
+
+.positionTop {
+	position: relative;
+	top: 5px;
+  margin-bottom: 5px;
+}
+
+.labelBold {
+	font-weight: bold;
+	margin-left: 4px;
+}
+
+.moreLeft {
+	margin-left: 15px;
+}
+
+.grayBack {
+		background-color: #f1f2f0;
+		margin-bottom: 15px;
+		padding: 8px;
+		border-radius: 6px;
+		margin-right: 20px;
+		max-width: 600px;
+}
+
+.inputPosition {
+	margin-top: 8px !important;
+	margin-bottom: 8px !important;
+}
+
+.printPosition {
+	margin-top: 20px;
+	margin-left: 20px;
+}
+
+.textRight {
+		margin-right: 5px;
+		font-size: 14px !important;
+}
+
+.textLeft {
+		margin-left: 5px;
+		font-size: 14px !important;
+}
+
+.boldText {
+	font-weight: bold !important;
+	font-size: 14px !important;
+}
+
+.checkbox {
+  margin-top: 5px;
+}

@@ -1,0 +1,48 @@
+@import 'variables.css';
+
+.container {
+    z-index: 99;
+    font-size: 9pt;
+    font-weight: normal;
+    font-family: var(--generalFont, sans-serif);
+    font-weight: normal !important;
+    letter-spacing: normal;
+    text-rendering: optimizelegibility;
+}
+
+.container td {
+    vertical-align: top;
+}
+
+.image {
+    width: 20px;
+}
+
+.row {
+    display: flex !important;
+    flex-flow: row !important;
+}
+
+.superscriptImage {
+    width: 10px;
+}
+
+.imageOverlay {
+    position: relative;
+    left: -6px;
+    cursor: pointer;
+    width: 18px;
+    z-index: 9;
+}
+
+.imageBlocked {
+    width: 11px;
+}
+
+.imageMagnifier {
+    position: relative;
+    top: 4px;
+    left: -7px;
+    cursor: pointer;
+    width: 13px;
+}

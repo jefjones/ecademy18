@@ -1,0 +1,217 @@
+@import 'variables.css';
+
+.container {
+    margin-bottom: 30px;
+}
+
+/* .tableClass th {
+	/*text-transform: uppercase;*/
+/*    font-size: 9pt;
+		font-weight: normal;
+		background-color: white;
+    text-align: right;
+    min-width: 20px;
+		/* width: auto; */
+/*    height: 100px;
+}
+*/
+
+/* BEGIN of the TH class for the slanted text */
+.tableClass th.rotate {
+  /* Something you can count on */
+  height: 148px;
+  white-space: nowrap;
+	background-color: white !important;
+}
+
+.tableClass th.rotate > div {
+  transform:
+    /* Magic Numbers */
+    /* translate(25px, 51px) */
+    translate(23px, 51px) /* was 11px */
+    /* 45 is really 360 - 45 */
+    rotate(315deg);
+  width: 30px;
+}
+
+.tableClass th.rotate > div > span {
+  border-bottom: 1px solid #ccc;
+  padding: 5px 10px;
+}
+/* END of the TH class for the slanted text */
+
+.tableClass td, .count {
+		line-height: 2.1;
+		font-size: 9pt;
+		vertical-align: middle;
+    text-align: left;
+    min-width: 20px;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.tableClass td {
+    padding-right: 6px !important;
+}
+
+.tdLink {
+    color: #147ea7;
+    cursor: pointer;
+}
+
+
+.tableClass, .count {
+		/* width: auto; */
+	/*background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJod…EiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);*/
+    background-size: 10px 30px;
+    background-repeat: repeat-x;
+    padding-left: 0;
+    padding-right: 0;
+    font-family: "OpenSans", Open Sans, sans-serif;
+}
+
+.link {
+    cursor: pointer;
+}
+
+.forceBackground {
+		background-color: white !important;
+}
+
+/* Zebra striping */
+tr:nth-of-type(odd) {
+	background-color: rgba(161, 195, 207, 0.2);
+}
+
+tr:nth-of-type(even) {
+	background-color: white;
+}
+
+.noWrap {
+	white-space: nowrap;
+}
+
+.languageName {
+    padding: 0;
+    margin: 0;
+    color: #e27b0a;
+    font-size: 7pt;
+    margin-left: 6px;
+}
+
+.headerOverride {
+    /* margin-bottom: 0px !important;
+    line-height: 1 !important;
+    vertical-align: bottom !important; */
+}
+
+.grayBack {
+    background-color: var(--lightGray, lightGray);
+}
+
+.blueBack {
+    background-color: var(--lightBlue, lightBlue);
+}
+
+.textLeft {
+    margin-left: -14px;
+}
+
+.tightText {
+    margin-bottom: 0px !important;
+    line-height: 1 !important;
+    vertical-align: bottom !important;
+    text-align: left !important;
+}
+
+.emptyReport {
+    position: relative !important;
+    top: 30px !important;
+    color: var(--red, red);
+}
+
+.noWrapCell {
+    white-space: nowrap;
+}
+
+.redBack {
+    background-color: var(--red, red);
+}
+
+.greenBack {
+    background-color: var(--green, green);
+}
+
+.columnFlex {
+    display: flex;
+    flex-flow: column;
+}
+
+.small {
+    font-size:9px;
+    color: var(--blue, blue);
+    line-height: .5;
+    margin-top: -3px;
+    margin-bottom: -3px;
+    margin-left: 6px;
+}
+
+.row {
+    display: flex;
+    flex-flow: row;
+}
+
+.upperHeader {
+    text-align: left !important;
+}
+
+.maroonBack  {
+	 background-color: var(--linkMaroon, maroon);
+}
+
+.grayBack  {
+	 background-color: var(--gray, gray);
+}
+
+.firstColumn {
+	  position: absolute;
+		width: 200px;
+		margin-left: -220px;
+		margin-right: 40px;
+}
+
+.tableWrapper {
+    overflow-x: auto;
+		overflow-y: hidden;
+		/* width: 430px; */
+		margin: 0 0 0 210px;
+}
+
+.tanBack {
+    background-color: #fbe07c !important;
+		border-radius: 4px;
+		border: 1px solid var(--blue, blue);
+}
+
+.blueBack {
+    background-color: var(--lightBlue, lightBlue);
+}
+
+.grayBack {
+    background-color: #e8e1e1 !important;
+		border-radius: 4px;
+		border: 1px solid var(--blue, blue);
+}
+
+.highlightBack {
+    background-color: #fbe07c !important;
+}
+
+.pinkBack {
+    background-color: var(--pink, pink);
+}
+
+.responseBack {
+	background-color: #9ff78b;
+	border-radius: 4px;
+}

@@ -1,0 +1,254 @@
+@import 'variables.css';
+
+.container {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    /* background-color: #0095ff; */
+    width: auto;
+    z-index: 100;
+    margin-left: 10px;
+}
+
+.tableDisplay {
+    width: 97%;
+    /* position: relative;
+    left: -10px; */
+}
+
+.textDisplayWidth:hover {
+    box-shadow: inset 0 0 .1em #d4af37;
+    transition: all .8s;
+}
+
+.title, .titleBold, .label, .text, .doneStyle, .dueDateLabel, .sectionLabel, .openCommunitylabel {
+    font-family: var(--generalFont, sans-serif);
+    font-weight: normal !important;
+    letter-spacing: normal;
+    text-rendering: optimizelegibility;
+    color: black;
+}
+
+.dueDateLabel {
+    margin-right: 5px;
+}
+
+.title, .titleBold {
+    font-size: 12px;
+}
+
+.titleBold {
+		font-weight: bold !important;
+}
+
+.titleCurrentWork {
+    color: var(--gold, gold);
+}
+
+.label, .dueDateLabel {
+    text-align: right;
+    font-size: 11px;
+    color: var(--gray, #c4c4bc);
+    margin-right: 2px;
+    white-space: nowrap;
+}
+
+.verticalAlignTop {
+    vertical-align: top;
+}
+
+.sectionLabel {
+    margin-left: 15px;
+    margin-right: 4px !important;
+    font-size: 11px;
+    color: var(--lightGray, #c4c4bc);
+}
+
+.labelCurrentWork {
+    color: white !important;
+}
+
+.text {
+    font-size: 12px;
+    margin-left: 3px;
+    font-weight: bold;
+    color: black;
+    font-weight: bold;
+}
+
+.bold {
+    font-size: 13px !important;
+    font-weight: bold !important;
+}
+
+.textCurrentWork {
+    /* color: #666666; */
+    color: black;
+}
+
+.row {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+}
+
+.rowLeft {
+    width: auto;
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    flex-flow: nowrap;
+}
+
+.linkStyle, .linkStyle:hover, .linkStyle:visited {
+    text-decoration: none;
+    cursor: pointer;
+    /* padding: 4px; */
+}
+
+.image {
+    height: 18px;
+    margin-left: 10px;
+    opacity: .8;
+}
+
+.image:hover {
+    opacity: 1;
+    color: var(--menuHoverLinks, maroon);
+    text-shadow: 0 1px 2px rgba(0,0,0,.5);
+    -webkit-transition: all .8s;
+    transition: all .8s;
+    box-shadow: inset 0 0 .4em #d4af37, 0 0 .4em #d4af37;
+}
+
+.image:active {
+    opacity: 1;
+    color: var(--menuHoverLinks, maroon);
+    text-shadow: 0 1px 2px rgba(0,0,0,.5);
+    -webkit-transition: all .8s;
+    box-shadow: inset 0 0 .4em #d4af37, 0 0 .4em #d4af37;
+}
+
+.leftMargin {
+    margin-left: 12px !important;
+}
+
+.dateRow {
+    font-size: 10px !important;
+}
+
+.sequenceList {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-right: 20px !important;
+}
+
+.currentText {
+    font-family: var(--generalFont, sans-serif);
+    font-weight: normal !important;
+    letter-spacing: normal;
+    text-rendering: optimizelegibility;
+    font-size: 10px;
+    color: var(--blue, blue);
+    margin-right: 4px;
+    margin-top: 2px;
+    /* margin-left: 10px; */
+}
+
+.currentLine {
+    display: flex;
+    flex-direction: row;
+    margin-top: 9px;
+    margin-bottom: 9px;
+}
+
+.workTools {
+    margin-left: 50px;
+    /* margin-bottom: 10px; */
+}
+
+.currentWorkColor {
+    /* margin-top: 5px; */
+    /* background-color: #ffcc66; */
+    color: white;
+}
+
+.jef_caret {
+    position: relative;
+    margin-top: 16px;
+    margin-right: 40px !important;
+    cursor: pointer;
+}
+
+.jef_caret:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-top: 8px solid #948c8c;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+}
+
+.jef_caret:after {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 0;
+    border-top: 4px solid #ffcc66;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+}
+
+.jefCaretDown{
+    transform: rotate(0deg);
+    transition: transform 0.3s ease-in-out;
+}
+
+.jefCaretUp{
+    background-color: var(--gold, #ffcc66);
+    transform: rotate(180deg);
+    transition: transform 0.3s ease-in-out;
+}
+
+.bottomMargin {
+    margin-bottom: 10px;
+}
+
+.readMore {
+    cursor:pointer;
+    color: var(--linkBlue, blue);
+    margin-left: 6px;
+    display: flex;
+    flex-flow: row;
+}
+
+.pencil {
+    background-color: white;
+    margin-right: 5px;
+    cursor: pointer;
+    vertical-align: top;
+}
+
+.sentencesPending {
+    vertical-align: bottom;
+}
+
+.lastLine, .whiteBack {
+    background-color: white !important;
+}
+
+.openCommunitylabel {
+    text-transform: uppercase;
+    font-size: 12px;
+    color: var(--maroon, maroon);
+}
+
+.commentText {
+    margin-right: 10px;
+}
+
+.goldColor {
+		color: var(--gold, gold);
+}

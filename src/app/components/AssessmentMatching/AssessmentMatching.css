@@ -1,0 +1,230 @@
+@import 'variables.css';
+
+.container {
+  margin-top: 15px;
+}
+
+.headerText, .sequence, .question, .text, .answer, .headerLabel, .solutionText, .overSizeText, .wrongText, .correctText {
+  font-family: var(--generalFont, sans-serif);
+  font-weight: normal !important;
+  letter-spacing: normal;
+  text-rendering: optimizelegibility;
+  color:black;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.radio {
+  margin-left: 30px;
+}
+
+@media only screen
+and (max-width : 696px) {
+	.rowMatching {
+	  display: flex;
+	  flex-flow: row;
+		flex-wrap: wrap;
+	}
+}
+
+@media only screen
+and (min-width : 696px) {
+	.rowMatching {
+	  display: flex;
+	  flex-flow: row;
+	}
+}
+
+.row {
+	display: flex;
+	flex-flow: row;
+}
+
+.sequence {
+  margin-right: 5px;
+  font-size: 12px;
+}
+
+.question {
+  font-size: 12px;
+}
+
+.questionLine {
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.text {
+  font-size: 12px;
+}
+
+.answer {
+  margin-right: 5px;
+  margin-top: 2px;
+  font-size: 11px;
+  text-transform: uppercase;
+  color: var(--green, green);
+}
+
+.label, .labelCorrect, .labelWrong {
+    position: relative;
+    top: -3px;
+    right: 2px;
+    margin-right: 6px;
+    margin-left: 3px;
+    color: #333333;
+    font-family: "OpenSans", Open Sans, sans-serif;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.label:hover {
+    text-decoration: underline;
+    color: #333333;
+    cursor: pointer;
+}
+
+.checkbox {
+  margin-top: 8px;
+  margin-left: 50px;
+}
+
+.icon {
+		margin-right: 5px;
+}
+
+.labelWrong {
+		color: var(--red, red) !important;
+		font-weight: bold !important;
+}
+
+.labelCorrect {
+		color: var(--green, green) !important;
+		font-weight: bold !important;
+}
+
+.headerLabel {
+	font-size: 12px !important;
+	font-weight: bold !important;
+	margin-left: 15px !important;
+	margin-right: 5px;
+}
+
+.solutionText {
+	font-size: 12px !important;
+	margin-left: 20px !important;
+}
+
+img[src=""] {
+    display: none;
+}
+
+.correctBorder {
+	background-color: green;
+	padding: 2px;
+}
+
+.wrongBorder {
+	background-color: red;
+	padding: 2px;
+}
+
+.audioLeftAnswer {
+	margin-left: 30px;
+}
+
+.audioLeftQuestion {
+	margin-left: 20px;
+}
+
+.muchLeft {
+	margin-left: 20px;
+}
+
+.red {
+	color: var(--red, red);
+}
+
+.moreTop {
+	margin-top: 10px !important;
+}
+
+.overSizeText {
+	font-size: 14px;
+	font-weight: bold;
+	margin-right: 8px;
+}
+
+.moreLeft {
+	margin-left: 15px;
+}
+
+.column {
+	display: flex;
+	flex-flow: row;
+	width: 180px;
+	margin-left: 30px;
+}
+
+.columnNarrow {
+	display: flex;
+	flex-flow: row;
+	width: 80px;
+}
+
+.littleLeft {
+	margin-left: 5px;
+}
+
+.moveUpTop {
+	margin-top: -10px !important;
+	margin-bottom: 8px !important;
+}
+
+.wrongText {
+	color: var(--maroon, maroon);
+	font-weight: bold !important;
+}
+
+.correctText {
+	color: var(--green, green) !important;
+	font-weight: bold !important;
+}
+
+.correctPosition {
+	margin-left: 5px;
+	margin-right: 10px !important;
+}
+
+.moreRight {
+	margin-right: 18px !important;
+}
+
+.headerText {
+	font-weight: bold !important;
+	font-size: 12px !important;
+}
+
+.muchMoreLeft {
+	margin-left: 30px;
+}
+
+.muchMuchMoreLeft {
+	margin-left: 50px;
+}
+
+.rowWrap {
+	display: flex;
+	flex-flow: row;
+	flex-wrap: wrap;
+}
+
+.moreBottom {
+	margin-bottom: 15px;
+}
+
+.iconPosition {
+	margin-left: 6px !important;
+	margin-right: 2px;
+}

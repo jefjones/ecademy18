@@ -1,0 +1,439 @@
+@import 'variables.css';
+@import 'rc-time-picker/assets/index.css';
+
+/* common */
+.container {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: auto;
+		overflowy: auto;
+}
+
+.unorderedList {
+    overflow-y: auto;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    flex-flow:column;
+}
+
+.whiteLine {
+    color:white;
+    opacity: .5;
+    width:140px;
+    text-align:left;
+    margin-left:15px;
+    margin-top:10px;
+}
+
+.singleDropDown {
+  /*margin-top: 6px !important;*/
+  margin-left: 4px;
+  font-size: 10px;
+}
+
+.menuItemContainer {
+  display: flex;
+  justify-content: flex-start;
+  flex-flow:row;
+}
+
+.rightArrow {
+  float: right;
+  margin-top: 8px;
+
+}
+
+.spreadToRight {
+  justify-content: space-between !important;
+}
+
+.subMenuArrow {
+  width: 100%;
+  margin-right: 4px;
+  cursor: pointer;
+}
+
+.workSummary {
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-bottom: 10px;
+    width: auto;
+}
+
+.pageTitle {
+    position: relative;
+    top: 10px;
+}
+
+.classification, .addNew, .noRecords, .link, .filterLabel, .count, .instructions {
+    font-family: var(--generalFont, sans-serif);
+    letter-spacing: normal;
+    text-rendering: optimizelegibility;
+    font-size: 9px;
+}
+
+.rowWrap {
+    display: flex;
+    flex-flow: row;
+		flex-wrap: wrap;
+		width: auto;
+}
+
+.row {
+    display: flex;
+    flex-flow: row;
+}
+
+.marginLeft {
+    margin-left: 10px;
+		position: relative;
+}
+
+.multiSelect {
+    z-index: 99 !important;
+    min-width: 100px;
+    width: auto;
+    font-size: 11px;
+    margin-bottom: 8px;
+    margin-right: 10px;
+}
+
+.moreBottomMargin {
+    margin-bottom: 20px;
+}
+
+.submitButton {
+    background: linear-gradient(#67ae55, #578843);
+  	background-color: #69a74e;
+  	border: 1px solid;
+  	border-color: #3b6e22 #3b6e22 #2c5115;
+  	border-radius: 5px;
+  	box-shadow: inset 0 1px 1px #a4e388;
+  	color: white;
+  	cursor: pointer;
+  	display: inline-block;
+  	font-family: var(--generalFont, sans-serif);
+  	font-size: 12px;
+  	font-weight: bold !important;
+  	letter-spacing: 1px;
+  	line-height: 116%;
+    margin-top: 8px;
+  	margin-left: 12px;
+  	min-width: 50px;
+  	padding: 2px 5px;
+  	position: relative;
+  	text-align: center;
+  	text-rendering: optimizelegibility;
+  	text-shadow: 0 1px 2px rgba(0,0,0,.5);
+    outline: none;
+}
+
+.submitButton:active {
+    transform: scaleX(.89);
+    background: linear-gradient(#aec3a9, #578843);
+  	border: 1px solid;
+  	border-color: #3b6e22 #3b6e22 #2c5115;
+  	border-radius: 5px;
+  	box-shadow: inset 0 1px 1px #a4e388;
+  	color: gray;
+  	cursor: default;
+}
+
+.submitButton:hover {
+    box-shadow: 0 0 0 1px #297e2d;
+}
+
+.dateButton {
+    background: linear-gradient(var(--blue, blue), #445d88);
+    background-color: var(--blue, blue) !important;
+    height: 20px !important;
+}
+
+.error {
+    color: var(--red, red);
+    font-size: 12px;
+    opacity: 1;
+}
+
+.tableData {
+    font-size: 13px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.cellSpacing {
+    margin-right: 20px;
+}
+
+.tableMargin {
+    margin-left: 20px;
+    margin-bottom: 7px;
+}
+
+.noData {
+    font-size: 12px;
+    font-style: italic;
+}
+
+.radio {
+    margin-left: 8px;
+}
+
+.radioLabels {
+    font-size: 11px;
+    margin-left: 3px !important;
+    margin-bottom: 13px !important;
+    margin-top: -10px !important;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.radioLabels:hover {
+    text-decoration: underline;
+}
+
+.radioClass {
+    margin-top: 10px !important;
+}
+
+.labelCheckbox {
+    font-size: 11px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.tableLabelClass {
+    font-size: 8pt !important;
+    text-align: left !important;
+    font-weight: bold !important;
+    padding-right: 2px;
+    text-decoration: underline;
+}
+
+.remove {
+  color: var(--maroon, maroon);
+  cursor: pointer;
+}
+
+.cancelLink {
+    font-weight: normal;
+    font-family: var(--generalFont, sans-serif);
+    font-weight: normal !important;
+    letter-spacing: normal;
+    text-rendering: optimizelegibility;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 10pt;
+    color: #4f5253;
+    position: relative;
+    top: 20px;
+    left: 12px;
+}
+
+.timePicker {
+    width: 110px;
+    border-radius: 3px;
+    font-family: var(--generalFont, sans-serif);
+    font-weight: bold !important;
+    letter-spacing: normal;
+    text-rendering: optimizelegibility;
+    font-size: 11px;
+    padding-left: 3px;
+}
+
+.inputText {
+    margin-bottom: 1px;
+    font-size: 9px;
+}
+
+.commentTextarea {
+    border-radius: 5px;
+    padding-left: 4px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    font-size: 13px;
+		width: 100%;
+    max-width: 400px;
+		margin-right: 8px;
+}
+
+.textareaDiv {
+	margin-top: 8px;
+	margin-bottom: 8px;
+}
+
+.link {
+	font-size: 12px;
+	color: var(--blue, blue);
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.link:hover {
+	text-decoration: underline;
+}
+
+.linkBold {
+	font-weight: bold !important;
+}
+
+.scrollSideVertical {
+	overflow-y: auto;
+}
+
+.classification {
+    width: 100%;
+    color: white;
+    background-color: var(--blue, blue);
+    font-size: 12px;
+    margin-top: 6px;
+    padding-left: 5px;
+    border-radius: 3px;
+		padding-top: 2px;
+		padding-bottom: 2px;
+}
+
+.addNew {
+		margin-bottom: 10px;
+		margin-left: 25px;
+    font-size: 13px !important;
+    cursor: pointer;
+    color: var(--blue, blue);
+    text-decoration: none;
+}
+
+.addNew:hover {
+		text-decoration: underline;
+}
+
+.icon {
+		width: 16px;
+		margin-right: 5px !important;
+		position: relative;
+		top: -3px;
+}
+
+.noRecords {
+		font-weight: bold;
+		color: var(--red, red);
+		font-size: 12px;
+		font-style: italic;
+}
+
+.muchLeft {
+		margin-left: 40px;
+}
+
+.filterLabel {
+		font-size: 13px;
+		margin-top: 2px;
+		margin-right: 7px;
+}
+
+.moreBottom {
+		margin-bottom: 11px !important;
+}
+
+.positionRelative {
+		position: relative !important;
+}
+
+.moreLeft {
+		margin-left: 15px;
+}
+
+.scrollable {
+		overflow-y: auto;
+		height: auto;
+		max-height: 450px;
+}
+
+.muchLeft {
+		margin-left: 15px !important;
+}
+
+.iconSmall {
+	 width: 12px !important;
+	 margin-right: 3px !important;
+	 position: relative;
+	 top: -3px;
+}
+
+.iconSuper {
+		width: 14px;
+		margin-right: 0px;
+		cursor: pointer;
+		position: relative;
+		top: -3px;
+}
+
+.superScript {
+		position: relative !important;
+		left: -4px !important;
+}
+
+.count {
+	margin-left: 3px;
+	position: relative !important;
+	top: 3px !important;
+	color: var(--red, red);
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.iconSuperAdd {
+		width: 16px;
+		margin-left: 10px;
+		cursor: pointer;
+}
+
+.superScriptAdd {
+		position: relative !important;
+		left: -4px !important;
+}
+
+.alertText {
+	font-size: 12px;
+	text-transform: none;
+}
+
+.widthStop {
+	width: auto;
+	/* max-width: 600px; */
+	margin-right: 15px;
+}
+
+.instructions {
+		font-size: 10px;
+		cursor: pointer;
+		color: var(--green, green) !important;
+		margin-top: 4px;
+		margin-left: 15px;
+		margin-right: 15px;
+}
+
+.plusPosition {
+		width: 18px !important;
+		position: relative;
+		top: 13px;
+		left: -7px;
+}
+
+.image {
+		margin-top: 4px !important;
+    margin-left: 16px;
+    margin-bottom: 10px;
+    cursor: pointer;
+		width: 16px !important;
+}
+
+.iconSmaller {
+		width: 12px;
+		margin-right: 5px !important;
+		position: relative;
+		top: -3px;
+}

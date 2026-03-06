@@ -1,0 +1,94 @@
+@import 'variables.css';
+
+.container {
+	margin-bottom: 20px;
+}
+
+.rowNowrap {
+	display: flex;
+	flex-flow: row;
+	flex-wrap: nowrap;
+	vertical-align: middle;
+}
+
+.rowWrap {
+	display: flex;
+	flex-flow: row;
+	flex-wrap: wrap;
+	vertical-align: middle;
+}
+
+.lowOpacity {
+	opacity: .4;
+}
+
+.labelCheckbox {
+    font-size: 12px;
+		font-weight: bold !important;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.labelCheckbox:hover {
+	text-decoration: underline;
+}
+
+.moreLeft {
+		margin-left: 10px;
+}
+
+.dateColumn {
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+		margin-top: 8px;
+    margin-left: 12px;
+}
+
+.label {
+    font-size: 10px;
+}
+
+.timePicker {
+    width: 110px;
+    border-radius: 4px !important;
+    font-family: var(--generalFont, sans-serif);
+    font-weight: bold !important;
+    letter-spacing: normal;
+    text-rendering: optimizelegibility;
+    font-size: 11px;
+    padding-left: 3px;
+}
+
+.duration {
+    margin-left: 15px;
+}
+
+
+.lightGray {
+	background-color: var(--lightGray, lightGray);
+}
+
+.checkboxPosition {
+	width: 85px;
+	margin-top: 5px !important;
+	margin-bottom: 5px !important;
+}
+
+.iconSmall {
+	 width: 12px !important;
+	 margin-right: 3px !important;
+	 position: relative;
+	 top: -3px;
+}
+
+.row {
+	display: flex;
+	flex-flow: row;
+}
+
+.setAllSpace {
+	margin-left: 5px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}

@@ -1,0 +1,122 @@
+@import 'variables.css';
+
+.container {
+    margin-top: 2px;
+    padding-top: 5px;
+    padding-bottom: 16px;
+    background-color: #ebebee;
+}
+
+.hidden {
+    height: 0px;
+    display: none;
+}
+
+.row, .text, .labelCheckbox, .textSave, .radioLabels, .clearFilters {
+    font-family: var(--generalFont, sans-serif);
+    font-weight: normal !important;
+    letter-spacing: normal;
+    text-rendering: optimizelegibility;
+    margin-left: 5px;
+}
+
+.labelCheckbox {
+    margin-left: 0px !important;
+    font-size: 10px;
+}
+
+.row {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+}
+
+.text {
+    font-size: 10px;
+    margin-right: 8px;
+}
+
+.textSave  {
+    font-size: 10px;
+    margin-right: 3px;
+    margin-top: 10px;
+}
+
+.radio {
+    margin-left: 8px;
+}
+
+.radioLabels {
+    font-size: 10px;
+    margin-left: 3px !important;
+    margin-bottom: 13px !important;
+    margin-top: -10px !important;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.radioLabels:hover {
+    text-decoration: underline;
+}
+
+.radioClass {
+    margin-top: 10px !important;
+}
+
+.searchText {
+    margin-left: 5px;
+}
+
+.singleDropDown {
+    margin-left: 7px;
+}
+
+.selectMultiple {
+    margin-left: 12px;
+}
+
+.clearFilters {
+    margin-top: 10px;
+    margin-bottoom: 0px;
+    margin-left: 20px;
+    cursor: pointer;
+    font-size: 11px;
+    color: #da132e;
+}
+
+.clearFilters:hover {
+    text-decoration: underline;
+}
+
+.dueDate {
+    margin-right: 4px !important;
+}
+
+
+.icon {
+    width: 12px;
+    margin-right: 6px;
+    padding-top: 2px;
+}
+
+.dateRow {
+    font-size: 11px !important;
+}
+
+.image {
+    margin-top: 10px;
+    height: 13px;
+}
+
+.checkbox {
+    margin-top: 10px;
+    margin-left: 8px;
+}
+
+.linkStyle {
+    cursor: pointer;
+}
+
+.marginLeft {
+    margin-left: 30px !important;
+}

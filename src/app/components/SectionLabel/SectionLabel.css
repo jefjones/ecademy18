@@ -1,0 +1,26 @@
+@import 'variables.css';
+
+.container {
+    margin-top: 22px;
+}
+.mainStyle, .addOnLabel {
+    font-size: 21px;
+    color: #333333;
+    position: relative;
+    margin: 9px 0px;
+	font-family: "Helam Slab", "Roboto Slab", Calibri, Helvetica, Arial, sans-serif;
+    font-weight: 200;
+    line-height: normal;
+}
+
+.addOnLabel {
+    color: silver !important;
+    margin-left: 15px;
+}
+
+.subStyle {
+    font-size: 15px;
+    color: #333333;
+    position: relative;
+    line-height: normal;
+}

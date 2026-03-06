@@ -1,0 +1,198 @@
+@import 'variables.css';
+
+.titleLine {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.container {
+	position: relative;
+	left: 0;
+	top: 0;
+	width: auto;
+	margin-left: 15px;
+}
+
+.centered {
+    display: flex;
+    flex-direction: column;
+    max-width: 330;
+    /* align-items: center; */
+    /* justify-content: center; */
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.loginButton {
+    background: linear-gradient(#67ae55, #578843);
+	background-color: #69a74e;
+	border: 1px solid;
+	border-color: #3b6e22 #3b6e22 #2c5115;
+	border-radius: 5px;
+	box-shadow: inset 0 1px 1px #a4e388;
+	color: white;
+	cursor: pointer;
+	display: inline-block;
+	font-family: var(--generalFont, sans-serif);
+	font-size: 14px;
+	font-weight: bold !important;
+	letter-spacing: 1px;
+	line-height: 116%;
+	margin-bottom: 8px;
+	margin-top: 22px;
+	min-width: 84px;
+	padding: 6px 15px;
+	position: relative;
+	text-align: center;
+	text-rendering: optimizelegibility;
+	text-shadow: 0 1px 2px rgba(0,0,0,.5);
+    outline: none;
+}
+
+.opacityLow {
+  opacity: .6;
+}
+
+.opacityHigh {
+  opacity: 1;
+}
+
+.loginButton:active {
+  transform: scalex(.95);
+}
+
+.loginButton:focus {
+  box-shadow: 0 0 0 1px #297e2d;
+}
+
+.nameFull {
+  display: flex;
+  flex-direction: row;
+  font-weight: normal !important;
+}
+
+.messageBox {
+		font-family: var(--generalFont, sans-serif);
+		letter-spacing: normal;
+		text-rendering: optimizelegibility;
+    border-radius: 5px;
+    border: 1px solid #d1d9de;
+    background: #fff !important;
+    display: inline-block;
+    vertical-align: middle;
+    color: black;
+    font-size: 12px;
+    padding-left: 5px;
+    outline: none;
+}
+
+.messageBox:focus {
+    box-shadow: 0 0 0 2px #297e2d;
+}
+
+.singleDropDown {
+    font-size: 10px;
+    margin-top: 20px;
+}
+
+.multiSelect {
+    min-width: 100px;
+    width: auto;
+    font-size: 12px;
+    margin-bottom: 8px;
+    margin-right: 10px;
+}
+
+.moreTop {
+  margin-top: 5px !important;
+}
+
+.muchTop {
+  margin-top: 25px;
+}
+
+.moreLeft {
+  margin-left: 4px;
+}
+
+.row {
+	display: flex;
+	flex-flow: row;
+	flex-direction: row;
+}
+
+.languageDiv {
+    margin-bottom: 10px;
+}
+
+.inputNoBold {
+    font-weight: normal !important;
+}
+
+.buttonCenter {
+    margin-left: 150px;
+    display: flex;
+    flex-direction: row;
+}
+
+.cancelButton {
+    font-weight: normal;
+	font-family: var(--generalFont, sans-serif);
+	font-weight: normal !important;
+	letter-spacing: normal;
+	text-rendering: optimizelegibility;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 10pt;
+    color: #747778;
+    margin-right: 15px;
+    margin-top: 20px;
+}
+
+.cancelButton:hover {
+    color: #353e40 !important;
+}
+
+.checkbox {
+		margin-top: 7px;
+		margin-left: 20px;
+		margin-bottom: 8px;
+}
+
+.labelCheckbox {
+		font-family: var(--generalFont, sans-serif);
+		letter-spacing: normal;
+		text-rendering: optimizelegibility;
+		font-size: 12px !important;
+		margin-top: 6px;
+}
+
+.inputText {
+		margin-top: 12px;
+    margin-bottom: -13px;
+    font-size: 12px;
+		font-family: var(--generalFont, sans-serif);
+		font-weight: normal !important;
+		letter-spacing: normal;
+		text-rendering: optimizelegibility;
+}
+
+.resetPassword {
+    color: var(--green, green);
+    font-size: 13px;
+    margin-top: 10px !important;
+    margin-left: 7px;
+    cursor: pointer;
+    text-decoration: none;
+		font-family: var(--generalFont, sans-serif);
+		letter-spacing: normal;
+		text-rendering: optimizelegibility;
+}
+
+.reposition {
+	position: relative;
+	left: -20px;
+	margin-top: 10px;
+}

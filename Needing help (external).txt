@@ -1,0 +1,19 @@
+More notes (needing help)
+
+Cory Review:
+1.  ***cdn.polyfill in HTML is the one that is not allowing for local development without Internet.
+3.  Look for an Android emulator
+4.  Facebook has an editor for React.
+    Medium Editi is another one.
+        [That's ok.  I found contentEditable and that has worked great for what we need.]
+5.  Node 8 is LTS (something about the Last something System?  Meaning that it is the one that is being supported and highly recommended.)
+
+More help:
+1.  When clicking outside of the left-side-over panel, close it.
+2.
+3.
+
+using System.ComponentModel.DataAnnotations;
+ [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
+0.-2  The profile picture of the ContactSummary won't lower its z-index as indicated.

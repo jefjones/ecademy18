@@ -1,0 +1,461 @@
+@import 'variables.css';
+@import 'rc-time-picker/assets/index.css';
+
+/* common */
+.container {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: auto;
+}
+
+.unorderedList {
+    overflow-y: auto;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    flex-flow:column;
+}
+
+.whiteLine {
+    color:white;
+    opacity: .5;
+    width:140px;
+    text-align:left;
+    margin-left:15px;
+    margin-top:10px;
+}
+
+.singleDropDown {
+  /*margin-top: 6px !important;*/
+  margin-left: 4px;
+  font-size: 10px;
+}
+
+.menuItemContainer {
+  display: flex;
+  justify-content: flex-start;
+  flex-flow:row;
+}
+
+.rightArrow {
+  float: right;
+  margin-top: 8px;
+
+}
+
+.spreadToRight {
+  justify-content: space-between !important;
+}
+
+.subMenuArrow {
+  width: 100%;
+  margin-right: 4px;
+  cursor: pointer;
+}
+
+.workSummary {
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-bottom: 10px;
+    width: auto;
+}
+
+.pageTitle {
+    position: relative;
+    top: 10px;
+}
+
+.classification, .addNew, .noRecords, .link, .centeredFooter, .text {
+    font-family: var(--generalFont, sans-serif);
+    letter-spacing: normal;
+    text-rendering: optimizelegibility;
+    font-size: 9px;
+}
+
+.text {
+	 font-size: 12px;
+}
+
+.row {
+    display: flex;
+    flex-flow: row;
+		flex-wrap: wrap;
+}
+
+.marginLeft {
+    margin-left: 10px;
+}
+
+.multiSelect {
+    z-index: 99 !important;
+    min-width: 100px;
+    width: auto;
+    font-size: 11px;
+    margin-bottom: 8px;
+    margin-right: 10px;
+}
+
+.moreBottomMargin {
+    margin-bottom: 20px !important;
+}
+
+.signatureLine {
+		margin-top: 60px;
+		margin-bottom: 20px;
+}
+
+.submitButton {
+		margin-top: 19px !important;
+		height: 20px;
+    background: linear-gradient(#67ae55, #578843);
+  	background-color: #69a74e;
+  	border: 1px solid;
+  	border-color: #3b6e22 #3b6e22 #2c5115;
+  	border-radius: 5px;
+  	box-shadow: inset 0 1px 1px #a4e388;
+  	color: white;
+  	cursor: pointer;
+  	display: inline-block;
+  	font-family: var(--generalFont, sans-serif);
+  	font-size: 12px;
+  	font-weight: bold !important;
+  	letter-spacing: 1px;
+  	line-height: 116%;
+  	margin-left: 12px;
+  	min-width: 50px;
+  	padding: 2px 5px;
+  	position: relative;
+  	text-align: center;
+  	text-rendering: optimizelegibility;
+  	text-shadow: 0 1px 2px rgba(0,0,0,.5);
+    outline: none;
+}
+
+.submitButton:active {
+    transform: scaleX(.89);
+    background: linear-gradient(#aec3a9, #578843);
+  	border: 1px solid;
+  	border-color: #3b6e22 #3b6e22 #2c5115;
+  	border-radius: 5px;
+  	box-shadow: inset 0 1px 1px #a4e388;
+  	color: gray;
+  	cursor: default;
+}
+
+.submitButton:hover {
+    box-shadow: 0 0 0 1px #297e2d;
+}
+
+.dateButton {
+    background: linear-gradient(var(--blue, blue), #445d88);
+    background-color: var(--blue, blue) !important;
+    height: 20px !important;
+}
+
+.error {
+    color: var(--red, red);;
+    font-size: 12px;
+    opacity: 1;
+}
+
+.tableData {
+    font-size: 13px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.cellSpacing {
+    margin-right: 20px;
+}
+
+.tableMargin {
+    margin-left: 20px;
+    margin-bottom: 7px;
+}
+
+.noData {
+    font-size: 12px;
+    font-style: italic;
+}
+
+.radio {
+    margin-left: 8px;
+}
+
+.radioLabels {
+    font-size: 11px;
+    margin-left: 3px !important;
+    margin-bottom: 13px !important;
+    margin-top: -10px !important;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.radioLabels:hover {
+    text-decoration: underline;
+}
+
+.radioClass {
+    margin-top: 10px !important;
+}
+
+.labelCheckbox {
+    font-size: 11px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.tableLabelClass {
+    font-size: 8pt !important;
+    text-align: left !important;
+    font-weight: bold !important;
+    padding-right: 2px;
+    text-decoration: underline;
+}
+
+.remove {
+  color: var(--maroon, maroon);
+  cursor: pointer;
+}
+
+.cancelLink {
+    font-weight: normal;
+    font-family: var(--generalFont, sans-serif);
+    font-weight: normal !important;
+    letter-spacing: normal;
+    text-rendering: optimizelegibility;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 10pt;
+    color: #4f5253;
+    position: relative;
+    top: 20px;
+    left: 12px;
+}
+
+.timePicker {
+    width: 110px;
+    border-radius: 3px;
+    font-family: var(--generalFont, sans-serif);
+    font-weight: bold !important;
+    letter-spacing: normal;
+    text-rendering: optimizelegibility;
+    font-size: 11px;
+    padding-left: 3px;
+}
+
+.inputText {
+    margin-bottom: 1px;
+    font-size: 9px;
+}
+
+.commentTextarea {
+    border-radius: 5px;
+    padding-left: 4px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    font-size: 13px;
+		width: 100%;
+    max-width: 400px;
+		margin-right: 8px;
+}
+
+.textareaDiv {
+	margin-top: 8px;
+	margin-bottom: 8px;
+}
+
+.link {
+	font-size: 12px;
+	color: var(--blue, blue);
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.link:hover {
+	text-decoration: underline;
+}
+
+.linkBold {
+	font-weight: bold !important;
+}
+
+.scrollSideVertical {
+	overflow-y: auto;
+}
+
+.classification {
+    width: 100%;
+    color: white;
+    background-color: var(--blue, blue);
+    font-size: 12px;
+    margin-top: 6px;
+    padding-left: 5px;
+    border-radius: 3px;
+		padding-top: 2px;
+		padding-bottom: 2px;
+}
+
+.addNew {
+		margin-top: 10px;
+		margin-bottom: 10px;
+		margin-left: 25px;
+    font-size: 13px !important;
+    cursor: pointer;
+    color: var(--blue, blue);
+    text-decoration: none;
+}
+
+.addNew:hover {
+		text-decoration: underline;
+}
+
+.icon {
+		width: 16px;
+		margin-right: 10px !important;
+		position: relative;
+		top: -3px;
+}
+
+.noRecords {
+		font-weight: bold;
+		color: var(--red, red);
+		font-size: 12px;
+		font-style: italic;;
+}
+
+.moreTop {
+		margin-top: 18px !important;
+}
+
+.moreleft {
+	margin-left: 30px;
+}
+
+.centeredFooter {
+		font-size: 11px;
+		justify-content: center;
+		text-align: center;
+}
+
+.centerSignature {
+		justify-content: center;
+		margin-right: 10px;
+		margin-left: 10px;
+		text-align: center;
+}
+
+.logoTop {
+		margin-top: 35px;
+		height: 60px;
+		/* position: relative;
+		left: 30px; */
+		max-width: 800px;
+}
+
+.logoBottom {
+		height: 25px;
+}
+
+.center {
+		justify-content: center !important;
+		text-align: center !important;
+}
+
+.spaceRight {
+		margin-right: 15px;
+}
+
+.maxWidth {
+		max-width: 900px;
+}
+
+.moveDownRight {
+	margin-right: 25px;
+	margin-top: 15px;
+	margin-bottom: 10px;
+	/* position: relative;
+	top: 20px;
+	left: 35px; */
+}
+
+.centerTable {
+		margin-left:auto;
+    margin-right:auto;
+		margin-top: 25px;
+		margin-bottom: 25px;
+		width: 550px;
+}
+
+.upperHeader {
+		font-size: 12px;
+		padding: 4px;
+		align-text: center;
+}
+
+.upperHeaderLeft {
+		font-size: 12px;
+		padding: 4px;
+		margin-left: 10px;
+}
+
+.data {
+		font-size: 12px;
+		padding: 4px;
+		align-text: center;
+}
+
+.serif {
+  font-family: var(--serif, 'Times New Roman');
+}
+
+.tableHeight {
+		min-height: 300px !important;
+}
+
+.moveLeftMuch {
+		position: relative;
+		left: -100px;
+}
+
+.fromLeft {
+		margin-left: 20px !important;
+}
+
+.gray {
+	color: var(--gray, gray);
+}
+
+.checkbox {
+		margin-bottom: 8px;
+}
+
+.inputPosition {
+		margin-top: 7px;
+		margin-left: 4px;
+		margin-right: 14px;
+}
+
+.moreBottom {
+	margin-bottom: 12px;
+}
+
+.printPosition {
+	margin-left: 10px;
+	margin-top: 4px;
+}
+
+.moreRight {
+	margin-right: 25px;
+}
+
+.baseline {
+		vertical-align: baseline;
+}
+
+.littleLeft {
+  margin-left: 5px;
+}

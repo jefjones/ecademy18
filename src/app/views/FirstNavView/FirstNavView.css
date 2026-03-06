@@ -1,0 +1,690 @@
+@import 'variables.css';
+
+/* common */
+.container {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: auto;
+		margin-bottom: 20px;
+}
+
+.mainTitle {
+	font-family: var(--generalFont, sans-serif);
+	font-size: 15px;
+	margin-left: 10px;
+	margin-bottom: 0px !important;
+	margin-top: 32px;
+}
+
+@media only screen
+and (min-width : 700px) {
+/* Styles */
+  .container {
+    max-width: 350px;
+  }
+}
+
+.unorderedList, .unorderedListLeft {
+    /* overflow-y: auto; */
+    margin-left: 25px;
+    padding: 0;
+    list-style: none;
+}
+
+.unorderedListLeft {
+		margin-left: 0px !important;
+}
+
+
+
+.workSummary {
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-bottom: 10px;
+    width: auto;
+}
+
+.pageTitle {
+    position: relative;
+    top: 10px;
+}
+
+.linkBig, .displayOnly, .label, .balanceDue, .menuHeaderGreen, .workNameLabel, .goWhere, .personal, .text, .calendarLink, .link, .textClassName, .noRecord, .gradebook, .menuHeader, .countHeader, .countSubmenu, .countText, .messageHeader, .messageBody, .expired, .menuHeaderRed {
+    font-family: var(--generalFont, sans-serif);
+    font-weight: normal !important;
+    letter-spacing: normal;
+    text-rendering: optimizelegibility;
+    font-size: 12px;
+}
+
+.text {
+  font-size: 12px;
+}
+
+.workNameLabel {
+    margin-left: 13px;
+    margin-bottom:-6px !important;
+}
+
+.menuItem {
+    display: block;
+    color: black;
+    cursor: pointer !important;
+    font-family: var(--generalFont, sans-serif);
+    font-size: 12px;
+    letter-spacing: 1px;
+    line-height: 286%;
+    margin-left: 14px;
+    margin-right: 4px;
+    text-align: left;
+    text-rendering: optimizelegibility;
+    text-decoration: none;
+    -webkit-transition: all .8s;
+    transition: all .8s;
+    /* z-index: 99; */
+}
+
+.current {
+    margin-top: 5px;
+    background-color: #ffcc66;
+    color: white;
+}
+
+.workNameInput {
+    margin-left: 10px;
+}
+
+.marginLeft {
+    margin-left: 15px;
+}
+
+.goWhere {
+    color: var(--blue, blue);
+    font-size: 14px;
+    margin-left: 15px;
+    margin-bottom: 20px !important;
+}
+
+.loading {
+    margin-top: 20px;
+    height: 50px;
+}
+
+.implemented {
+    font-weight: bold !important;
+    color: var(--blue, blue);
+}
+
+.listManage {
+  margin-left: 12px;
+}
+
+.row {
+  display: flex;
+  flex-flow: row;
+}
+
+.listButton {
+  position: relative;
+  top: 10px;
+  left: -7px;
+}
+
+.moreBottomMargin {
+  margin-bottom: 22px !important;
+}
+
+.moreBottomLittle {
+  margin-bottom: 10px;
+}
+
+.someBottomMargin {
+	margin-bottom: 10px !important;
+}
+
+.personal {
+  font-style: italic;
+  color: var(--gray, gray);
+  text-transform: lowercase;
+  margin-right: 4px;
+  font-size: 12px;
+}
+
+.calendarLink {
+  cursor: pointer;
+  margin-left: 20px;
+  color: var(--linkMaroon, maroon);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.topSpace {
+  margin-top: 8px !important;
+}
+
+.noWrap {
+  white-space: nowrap;;
+}
+
+.desktopLeft {
+  margin-right: 25px;
+  width: 350px;
+}
+
+.icon {
+  margin-left: 8px;
+  margin-top: 4px;
+  width: 16px;
+}
+
+.iconTutorial {
+	margin-left: 10px !important;
+	width: 14px !important;
+}
+
+.iconCourse {
+  margin-left: 18px !important;
+  margin-top: 5px !important;
+  width: 14px !important;
+}
+
+.iconDoctor {
+  margin-left: 3px !important;
+  margin-top: 0px !important;
+  width: 18px !important;
+}
+
+.iconTeacher {
+  margin-left: 18px !important;
+	margin-top: 5px !important;
+  margin-right: -7px !important;
+  width: 12px !important;
+}
+
+.iconText {
+	margin-left: 4px;
+  margin-right: 10px;
+  width: 16px;
+}
+
+.iconBigger {
+	margin-left: 4px;
+  margin-right: 10px;
+  width: 19	px;
+}
+
+.iconSolo {
+  margin-left: 0px;
+	margin-top: 4px !important;
+  margin-right: 8px !important;
+  width: 12px;
+
+}
+
+.iconSoloBig {
+  margin-left: 0px;
+	margin-top: 4px !important;
+  margin-right: 8px !important;
+  width: 18px;
+}
+
+.iconRight {
+	margin-left: 4px !important;
+	margin-right: 8px !important;
+	margin-top: 4px;
+  width: 12px !important;
+	position: relative;
+	top: 4px;
+	left: 4px;
+}
+
+.iconBig {
+	width: 25px;
+	margin-top: 2px !important;
+	margin-right: 8px !important;
+	position: relative;
+	top: 3px;
+
+}
+
+.topSelect {
+	margin-top: 12px !important;
+	margin-left: 10px !important;
+}
+
+
+.link {
+		font-size: 12px;
+		color: var(--blue, blue);
+		text-decoration: none;
+		margin-left: 5px;
+		cursor: pointer;
+		margin-top: 3px !important;
+}
+
+.link:hover {
+		text-decoration: underline;
+}
+
+.linkBig {
+		font-size: 14px;
+    font-weight: bold;
+		color: var(--blue, blue);
+		text-decoration: none;
+		margin-left: 5px;
+		cursor: pointer;
+		margin-top: 3px !important;
+}
+
+.linkBig:hover {
+		text-decoration: underline;
+}
+
+.noRecord {
+    color: var(--red, red);
+    font-size: 12px !important;
+    font-weight: bold;
+    margin-left: 20px !important;
+    margin-top: 20px !important;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.editCountFirstNav {
+	  font-family: var(--generalFont, sans-serif);
+	  font-weight: normal !important;
+	  letter-spacing: normal;
+	  text-rendering: optimizelegibility;
+	  margin-left: 4px;
+	  /* margin-top: 16px; */
+	  font-size: 12pt;
+	  color: var(--gold, gold);
+}
+
+.editCountFirstNav {
+  font-family: var(--generalFont, sans-serif);
+  font-weight: normal !important;
+  letter-spacing: normal;
+  text-rendering: optimizelegibility;
+  margin-left: 4px;
+  /* margin-top: 16px; */
+  font-size: 12pt;
+  color: var(--gold, gold);
+}
+
+.gradebook {
+		position: relative;
+		top: -3px;
+		left: -3px;
+		font-size: 12px;
+}
+
+.moveLeft {
+	position: relative;
+	left: -5px;
+}
+
+.moveLeftMuch {
+	position: relative;
+	left: -22px;
+}
+
+
+.moreLeft {
+	margin-left: 10px;
+}
+
+.muchMoreLeft {
+	margin-left: 24px;
+}
+
+.littleLeft {
+	margin-left: 5px !important;
+}
+
+.bitSpace {
+	margin-left: 3px;
+	margin-right: 9px;
+}
+
+.jef_caret {
+	transform: rotate(180deg);
+  position: relative;
+  margin-top: 5px;
+  margin-right: 30px;
+  cursor: pointer;
+}
+
+.jef_caret:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-top: 8px solid #948c8c;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+}
+
+.jef_caret:after {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 0;
+  border-top: 4px solid white;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+}
+
+.jefCaretDown {
+	transform: rotate(180deg);
+  transition: transform 0.3s ease-in-out;
+}
+
+.jefCaretUp {
+	transform: rotate(0deg);
+  transition: transform 0.3s ease-in-out;
+}
+
+.menuHeader, .countHeader, .menuHeaderGreen, .menuHeaderRed {
+		font-size: 12px;
+		font-weight: bold !important;
+		cursor: pointer;
+		margin-left: 8px;
+		margin-top: 2px;
+}
+
+.menuHeader {
+		color: var(--blue, blue);
+}
+
+.menuHeader:hover {
+		text-decoration: underline;
+}
+
+.countHeader {
+		color: var(--gold, gold);
+}
+
+.horizScroll {
+		overflow-x: auto;
+		position: relative;
+		left: -25px;
+}
+
+.flipped {
+		transform: rotate(180deg);
+		width: 16px;
+}
+
+.moreTop {
+		margin-top: 15px !important;
+}
+
+.columnFlex {
+		display: flex;
+		flex-direction: column;
+		width: 95%;
+		min-width: 300px !important;
+}
+
+.smallList {
+		height: 50px;
+		overflow-x: auto;
+		overflow-y: auto;
+}
+
+.scrollable {
+		overflow-y: auto;
+		overflow-x: auto;
+		height: auto;
+		width: auto;
+		max-width: 400px;
+		max-height: 130px;
+}
+
+.bgcolor {
+	background-color: blue;
+}
+
+.narrow {
+		width: 10px;
+}
+
+.iconSmall {
+		width: 11px !important;
+		margin-right: 3px !important;
+		position: relative;
+		top: -3px;
+}
+
+.littleTop {
+		margin-top: 8px;
+}
+
+.muchLeft {
+		margin-left: 20px;
+}
+
+.countText {
+		font-size: 12px;
+		margin-right: 5px;
+		margin-left: 0px !important;
+		position: relative;
+		top: 4px;
+}
+
+.lessLeft {
+		position: relative;
+		left: -1px;
+		top: -3px;
+}
+
+.wideSpace {
+		width: 1000px;
+}
+
+.tabChoice {
+		background-color: var(--lightGray, gray);
+		border-radius: 4px;
+}
+
+.tabs {
+		color: var(--blue, blue);
+		font-size: 12px;
+		align-items: center;
+		text-transform: capitalize;
+		width: 60px !important;
+		cursor: pointer;
+		padding: 4px;
+		margin-right: 7px;
+}
+
+.alertText {
+	font-size: 12px;
+	text-transform: none;
+}
+
+.red {
+		color: var(--red, red) !important;
+}
+
+.raiseUpward {
+	position: relative;
+	top: -15px;
+}
+
+.messageHeader {
+		margin-top: 10px;
+		margin-left: 10px;
+		max-width: 400px;
+		color: var(--maroon, maroon);
+		font-size: 12px;
+}
+
+.messageBody {
+		margin-left: 10px;
+		max-width: 400px;
+		color: var(--darkGrey, grey);
+		font-size: 12px;
+}
+
+.expired {
+	color: var(--red, red);
+	font-size: 12px;
+}
+
+.bitTop {
+	margin-top: 3px !important;
+}
+
+.linkAlone {
+		margin-left: 18px;
+		margin-top: 15px !important;
+		margin-bottom: 12px !important;
+}
+
+.linkAloneForCurbside {
+		margin-left: 18px;
+		margin-top: 18px !important;
+		margin-bottom: 12px !important;
+}
+
+.lowHeight {
+	margin-top: 12px;
+	height: 14px !important;
+	width: 18px !important;
+}
+
+.menuHeaderGreen {
+		color: var(--green, green);
+}
+
+.menuHeaderRed {
+		color: var(--red, red);
+}
+
+.goGuardianButton {
+	margin-left: 50px;
+	position: relative !important;
+	top: -8px !important;
+}
+
+.iconLift {
+	position: relative !important;
+	top: -4px !important;
+}
+
+.impersonateBackground {
+	background-color: var(--lightGray, lightGray);
+	border-radius: 4px;
+	padding: 4px;
+	padding-top: 10px;
+	margin-top: 8px;
+}
+
+.selectPosition {
+	margin-left: 10px;
+	margin-bottom: 10px;
+}
+
+.moveSlightLeft {
+	position: relative !important;
+	left: -2px !important;
+}
+
+.gray {
+	opacity: .4;
+}
+
+.maroon {
+	color: var(--maroon, maroon) !important;
+}
+
+.muchMoreTop {
+	margin-top: 20px !important;
+}
+
+.hrLine {
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+}
+
+.superScript {
+		position: relative !important;
+		left: 1px !important;
+		top: 12px !important;
+}
+
+.iconSuper {
+		width: 16px !important;
+		margin-right: 0px;
+		cursor: pointer;
+		position: relative;
+		top: 3px;
+		left: 6px;
+}
+
+.listPosition {
+		position: relative;
+		top: -4px;
+}
+
+.balanceDue {
+		margin-left: 25px;
+		color: black;
+		font-size: 12px;
+}
+
+.label {
+	font-size: 12px;
+}
+
+.displayOnly {
+		font-size: 12px;
+		color: #f6bb65;
+		margin-left: 20px;
+}
+
+.iconHigher {
+  margin-top: -3px !important;
+}
+
+.iconPencil {
+  width: 14px;
+  margin-top: -3px !important;
+}
+
+.checkListLeft {
+	margin-left: 8px;
+}
+
+.backgroundRecommend {
+		padding: 4px;
+		border-radius: 4px;
+		background-color: var(--yellow, yellow);
+		height: auto;
+}
+
+.littleSpace {
+	margin-left: 2px;
+	margin-right: 2px;
+}
+
+.bold {
+	font-weight: bold !important;
+}
+
+.countSubmenu {
+	font-size: 12px;
+	font-weight: bold !important;
+	cursor: pointer;
+	margin-left: 1px !important;
+	margin-top: 10px !important;
+	color: var(--gold, gold);
+}
+
+.littleHigher {
+	position: relative;
+	top: -6px;
+	left: 4px;
+}

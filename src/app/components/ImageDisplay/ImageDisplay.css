@@ -1,0 +1,65 @@
+@import 'variables.css';
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+		margin-bottom: 8px;
+}
+
+.label, .text, .linkText, .link, .remove {
+    font-family: var(--generalFont, sans-serif);
+    letter-spacing: normal;
+    text-rendering: optimizelegibility;
+}
+
+.label {
+    margin-left: 10px;
+    margin-bottom: 0px !important;
+    font-size: 9px;
+    font-weight: normal;
+}
+
+.text {
+    margin-left: 13px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.linkText {
+  margin-left: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--blue, blue);
+  font-size: 12px;
+}
+
+.linkText:hover {
+  text-decoration: underline;
+}
+
+.topMargin {
+  /* margin-bottom: 8px !important; */
+}
+
+.row {
+  display: flex;
+  flex-flow: row;
+}
+
+.remove {
+  margin-left: 12px;
+  margin-top: 2px;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--red, red);
+  font-size: 11px;
+}
+
+.remove:hover {
+  text-decoration: underline;
+}
+
+.horizontalScroll {
+		overflow-x: auto;
+}

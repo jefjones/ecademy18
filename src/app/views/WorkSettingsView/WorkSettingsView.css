@@ -1,0 +1,192 @@
+@import 'variables.css';
+
+/* common */
+.container {
+    /* position: relative;
+    left: 0;
+    top: 0; */
+    width: auto;
+		max-width: 650px;
+}
+
+.unorderedList {
+    overflow-y: auto;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    flex-flow:column;
+}
+
+.whiteLine {
+    color:white;
+    opacity: .5;
+    width:140px;
+    text-align:left;
+    margin-left:15px;
+    margin-top:10px;
+}
+
+.singleDropDown {
+  /*margin-top: 6px !important;*/
+  margin-left: 4px;
+  font-size: 10px;
+}
+
+.menuItemContainer {
+  display: flex;
+  justify-content: flex-start;
+  flex-flow:row;
+}
+
+.rightArrow {
+  float: right;
+  margin-top: 8px;
+
+}
+
+.spreadToRight {
+  justify-content: space-between !important;
+}
+
+.subMenuArrow {
+  width: 100%;
+  margin-right: 4px;
+  cursor: pointer;
+}
+
+.workSummary {
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-bottom: 10px;
+    width: auto;
+}
+
+.pageTitle {
+    position: relative;
+    top: 10px;
+}
+
+.selectLabelClass, .dueDateLabel, .workNameLabel, .inputText, .error, .labelHigher {
+    font-family: var(--generalFont, sans-serif);
+    font-weight: normal !important;
+    letter-spacing: normal;
+    text-rendering: optimizelegibility;
+    font-size: 9px;
+}
+
+.selectLabelClass {
+    margin-bottom:-4px !important;
+}
+
+.workNameLabel {
+    margin-left: 13px;
+    margin-bottom:-6px !important;
+}
+
+.selectListClass {
+    margin-top: 10px !important;
+    margin-left: 10px !important;
+    mmargin-bottom: 10px !important;
+}
+
+.menuItem {
+    display: block;
+    color: black;
+    cursor: pointer;
+    font-family: var(--generalFont, sans-serif);
+    font-size: 11px;
+    letter-spacing: 1px;
+    line-height: 286%;
+    margin-top: 4px;
+    margin-left: 14px;
+    margin-right: 4px;
+    text-align: left;
+    text-rendering: optimizelegibility;
+    text-decoration: none;
+    -webkit-transition: all .8s;
+    transition: all .8s;
+    z-index: -1;
+}
+
+.dateRow {
+    display: flex;
+    flex-direction: row;
+    font-size: 13px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.dateTimePicker {
+    margin-top: 0px;
+    margin-left: 8px;
+    font-size: 12px;
+    border-radius: 4px;
+}
+
+.dueDateLabel {
+    margin-left: 15px;
+}
+
+.current {
+    margin-top: 5px;
+    background-color: #ffcc66;
+    color: white;
+}
+
+.workNameInput {
+    margin-left: 10px;
+}
+
+.marginLeft {
+    margin-left: 15px;
+}
+
+.error {
+    color: var(--red, red);
+}
+
+.labelHigher {
+    margin-top: 8px;
+    margin-bottom: 2px;
+    font-size: 9px;
+}
+
+.messageBox {
+    margin-right: 6px;
+	font-family: var(--generalFont, sans-serif);
+	letter-spacing: normal;
+	text-rendering: optimizelegibility;
+    border-radius: 5px;
+    border: 1px solid #d1d9de;
+    background: #fff !important;
+    display: inline-block;
+    vertical-align: middle;
+    color: black;
+    font-size: 12px;
+    padding: 2px;
+    padding-left: 5px;
+    /* outline: none; */
+    font-weight: bold;
+}
+
+.messageBox:focus {
+    box-shadow: 0 0 0 2px #297e2d;
+}
+
+.input {
+    margin-bottom: 10px;
+}
+
+.inputControls {
+    margin-left: 10px;
+}
+
+.inputText {
+    font-size: 9pt;
+}
+
+.moreMarginBottom {
+    margin-bottom: 10px !important;
+}

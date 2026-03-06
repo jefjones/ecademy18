@@ -1,0 +1,546 @@
+import React from 'react';
+import { Route, IndexRoute } from 'react-router';
+import App from './containers/app.js';
+import Login from './containers/landing.js';
+import Landing from './containers/landing.js';
+import PrivacyPolicy from './containers/privacy-policy.js';
+import InitStudentLogin from './containers/init-student-login.js';
+import NotFound from './containers/not-found.js';
+import EnsureLoggedIn from './containers/ensure-logged-in.js';
+import MyProfile from './containers/my-profile.js';
+import Logout from './containers/logout.js';
+import FirstNav from './containers/first-nav.js';
+import ForgotPassword from './containers/password-forgot.js';
+import ResetPassword from './containers/password-reset.js';
+/* BEGIN Penspring specific routes */
+import EditReview from './containers/edit-review.js';
+import WorkSettings from './containers/work-settings.js';
+import MyWorks from './containers/my-works.js';
+import MyContacts from './containers/my-contacts.js';
+import GiveAccessToEditors from './containers/give-access-to-editors.js';
+import GiveAccessToWorks from './containers/give-access-to-works.js';
+import WorkAddNew from './containers/work-add-new.js';
+import WorkUploadFile from './containers/work-upload-file.js';
+import WorkNewAfterNav from './containers/work-new-after-nav.js';
+import ChapterUploadFile from './containers/chapter-upload-file.js';
+import WorkDownload from './containers/work-download.js';
+import DraftSettings from './containers/draft-settings.js';
+import EditorInviteNameEmail from './containers/editor-invite-name.js';
+import EditorInviteWorkAssign from './containers/editor-invite-work.js';
+import WorkSections from './containers/work-sections.js';
+import AddOrUpdateChapter from './containers/chapter-add-update.js';
+import MergeChapters from './containers/chapter-merge.js';
+import SplitChapter from './containers/chapter-splitter.js';
+import OpenCommunity from './containers/open-community.js';
+import ContributorReport from './containers/contributor-report.js';
+import GroupTypeChoice from './containers/group-type-choice.js';
+import GroupAddNew from './containers/group-add-new.js';
+import GroupSettings from './containers/group-settings.js';
+import MyGroups from './containers/my-groups.js';
+import PeerGroupAddOrUpdate from './containers/peer-group-add-update.js';
+import GroupWorkAssign from './containers/group-work-assign.js';
+import GroupMemberAdd from './containers/group-member-add.js';
+import GroupMemberUpdate from './containers/group-member-update.js';
+import AccessReport from './containers/access-report.js';
+import GroupEditReport from './containers/group-edit-report.js';
+import MyGroupsReport from './containers/my-groups-report.js';
+import AssignmentDashboard from './containers/assignment-dashboard.js';
+
+/* BEGIN  LearnerSphere-specific routes */
+import LearnerAdd from './containers/learner-add.js';
+import UserAdd from './containers/user-add.js';
+import LearnerOutcomeAdd from './containers/learner-outcome-add.js';
+import CourseEntry from './containers/course-entry.js';
+import CourseToSchedule from './containers/course-to-schedule.js';
+import LearnerCourseAssign from './containers/learner-course-assign.js';
+import CalendarEventAdd from './containers/calendar-event-add.js';
+import AssessmentQuestions from './containers/assessment-questions.js';
+import AssessmentLearner from './containers/assessment-learner.js';
+import LearnerSearch from './containers/learner-search.js';
+import MentorsNotAssigned from './containers/mentor-not-assigned.js';
+import MentorsReassign from './containers/mentor-reassign.js';
+import FacilitatorMentorSet from './containers/facilitator-mentor-set.js';
+import MessagesAndReminders from './containers/messages-reminders.js';
+import CalendarAndEvents from './containers/calendar-events.js';
+import ScheduleAssignByMath from './containers/schedule-assign-by-math.js';
+import CourseAttendance from './containers/course-attendance.js';
+import CourseAttendanceAdmin from './containers/course-attendance-admin.js';
+import CourseAttendanceSingle from './containers/course-attendance-single.js';
+//import CourseAttendanceClassReport from './containers/course-attendance-class-report.js';
+import GradebookEntry from './containers/gradebook-entry.js';
+import GradebookSummary from './containers/gradebook-summary.js';
+import RatingBook from './containers/rating-book.js';
+import AssessmentCorrect from './containers/assessment-correct.js';
+import AssessmentPendingEssay from './containers/assessment-pending-essay.js';
+import AssignmentsPendingReview from './containers/assignments-pending-review.js';
+import AnnouncementEdit from './containers/announcement-edit.js';
+import AnnouncementManage from './containers/announcement-manage.js';
+import MentorSummaryEdit from './containers/mentor-summary-edit.js';
+import BaseCourses from './containers/base-courses.js';
+import ScheduledCourses from './containers/scheduled-courses.js';
+import RegistrationNew from './containers/registration.js';
+import RegInstructions from './containers/reg-instructions.js';
+import RegPoliciesAcademy from './containers/reg-policies-academy.js';
+import RegPoliciesElementary from './containers/reg-policies-elementary.js';
+import RegGuardiansContacts from './containers/reg-guardian-contact.js';
+import RegStudents from './containers/reg-student.js';
+import RegBillingPreference from './containers/reg-billing-preference.js';
+import RegBillingPreference_simple from './containers/reg-billing-preference-simple.js';
+import StudentSchedule from './containers/student-schedule.js';
+import StudentScheduleWeek from './containers/student-schedule-week.js';
+import GradeReport from './containers/grade-report.js';
+import StudentProfile from './containers/student-profile.js';
+import DiscussionClass from './containers/discussion-entries.js';
+import AssignmentList from './containers/assignment-list.js';
+import AssignmentEntry from './containers/assignment-entry.js';
+import StudentAssignments from './containers/student-assignments.js';
+import StudentCourseAssign from './containers/student-course-assign.js';
+import OpenRegistration from './containers/open-registrations.js';
+import AlertCourseSchedule from './containers/alerts-course.js';
+import CourseNewRequested from './containers/course-new-requested.js';
+import CourseWeightedScore from './containers/course-weighted-score.js';
+import AttendanceReport from './containers/attendance-report.js';
+import ReportRecommendCourse from './containers/report-recommend-course.js';
+import RegistrationPending from './containers/registration-pending.js';
+import ReportStudentRegistration from './containers/report-student-registration.js';
+import StudentScheduleFinalize from './containers/student-schedule-finalize.js';
+import CreateNewSchool from './containers/create-new-school.js';
+import ClassPeriodsSettings from './containers/class-periods.js';
+import LearningPathwaysSettings from './containers/learning-pathways.js';
+import IntervalsSettings from './containers/semester-intervals.js';
+import GradeScaleSettings from './containers/grade-scale.js';
+import StandardsRatingSettings from './containers/standards-rating.js';
+import ContentTypesSettings from './containers/content-types.js';
+import CourseTypesSettings from './containers/course-types.js';
+import StudentAddOptions from './containers/student-add-options.js';
+import StudentAddManual from './containers/student-add-manual.js';
+import StudentAddBulk from './containers/student-add-bulk.js';
+import StudentAddBulkConfirm from './containers/student-add-bulk-confirm.js';
+import StudentAssignmentAssign from './containers/student-assignment-assign.js';
+import TeacherSchedule from './containers/teacher-schedule.js';
+import SchoolDays from './containers/school-days.js';
+import PassFailRating from './containers/pass-fail-rating.js';
+import NewSchoolCheckList from './containers/new-school-check-list.js';
+import CarpoolAreas from './containers/carpool-areas.js';
+import Carpool from './containers/carpool.js';
+import CurbsideCheckInOrOut from './containers/curbside-check-in-out.js';
+import CurbsideAdminCheckInOrOut from './containers/curbside-admin-check-in-out.js';
+import SchoolSettings from './containers/school-settings.js';
+import BuildingAndFieldSettings from './containers/building-and-field-settings.js';
+import BuildingAndFieldFrequentMine from './containers/building-and-field-frequent-mine.js';
+import SafetyAlertAdd from './containers/safety-alert-add.js';
+import SafetyAdminAlerts from './containers/safety-admin-alerts.js';
+import VolunteerCheckInOut from './containers/volunteer-check-in-out.js';
+import VolunteerHours from './containers/volunteer-hours.js';
+import VolunteerOpportunityAdd from './containers/volunteer-opportunity-add.js';
+import VolunteerOpportunities from './containers/volunteer-opportunities.js';
+import AttendanceSchool from './containers/attendance-school.js';
+import LunchMenuOptionSetup from './containers/lunch-menu-options.js';
+import LunchMenuMonth from './containers/lunch-menu-month.js';
+import LunchMenuStudentsDay from './containers/lunch-menu-student-day.js';
+import SystemFeatures from './containers/system-features.js';
+import BehaviorIncidentList from './containers/behavior-incident-list.js';
+import BehaviorIncidentAdd from './containers/behavior-incident-add.js';
+import FinanceBillingAdd from './containers/finance-billing-add.js';
+import VolunteerTypes from './containers/volunteer-types.js';
+import BehaviorIncidentTypes from './containers/behavior-incident-types.js';
+import LockerSettings from './containers/locker-settings.js';
+import PaddleLockSettings from './containers/paddle-lock-settings.js';
+import LockerAssignments from './containers/locker-assignments.js';
+import AssignLocker from './containers/assign-locker.js';
+import AssessmentCorrectSameAll from './containers/assessment-correct-same-all-students.js';
+import AssessmentCorrectSummary from './containers/assessment-correct-summary.js';
+import TestSettings from './containers/test-settings.js';
+import TestComponentSettings from './containers/test-component-settings.js';
+import TestComponentAssign from './containers/test-component-assign.js';
+import TestScoreAdd from './containers/test-score-add.js';
+import Transcripts from './containers/transcripts-view.js';
+import TranscriptAdd from './containers/transcript-add.js';
+import TranscriptTestAdd from './containers/transcript-test-add.js';
+import SchoolContactManager from './containers/school-contact-manager.js';
+import CarContactManager from './containers/car-contact-manager.js';
+import TutorialVideo from './containers/tutorial-videos.js';
+import ReimbursementRequestAdd from './containers/reimbursement-request-add.js';
+import ReportWaitList from './containers/course-wait-list.js';
+import GeoLocation from './containers/geolocation.js';
+import StudentBaseCourseRequest from './containers/student-base-course-request.js';
+import CourseAssignByAdminAdd from './containers/course-assign-by-admin-add.js';
+import CourseAssignByAdminList from './containers/course-assign-by-admin-list.js';
+import DistributedCourses from './containers/distributed-courses.js';
+import ProfileResetPassword from './containers/profile-reset-password.js';
+import PasswordResetAdmin from './containers/password-reset-admin.js';
+import AbsenceUnexcused from './containers/absence-unexcused.js';
+import DoctorNoteInvite from './containers/doctor-note-invite.js';
+import DoctorInviteLogin from './containers/doctor-invite-login.js';
+import DoctorNoteAdd from './containers/doctor-note-add.js';
+import DoctorNotes from './containers/doctor-note-list.js';
+import DoctorNoteInviteList from './containers/doctor-note-invite-list.js';
+import BenchmarkTestList from './containers/benchmark-test-list.js';
+import BenchmarkTestClassComparison from './containers/benchmark-test-class-comparison.js';
+import BenchmarkTestStudentComparison from './containers/benchmark-test-student-comparison.js';
+import FinanceFeeTypes from './containers/finance-fee-types';
+import FinanceCreditTypes from './containers/finance-credit-types';
+import FinanceGroups from './containers/finance-groups';
+import FinanceGLCodes from './containers/finance-gl-codes';
+import FinanceWaiverSchedule from './containers/finance-waiver-schedule';
+import FinanceLowIncomeWaivers from './containers/finance-low-income-waivers';
+import FinanceBillingList from './containers/finance-billing-list';
+import FinanceCreditAdd from './containers/finance-credit-add.js';
+import FinanceCreditList from './containers/finance-credit-list';
+import FinanceRefundAdd from './containers/finance-refund-add';
+import FinanceRefundList from './containers/finance-refund-list';
+import FinancePaymentAdd from './containers/finance-payment-add';
+import FinancePaymentList from './containers/finance-payment-list';
+import FinancePaymentReceipt from './containers/finance-payment-receipt';
+import FinanceLunchList from './containers/finance-lunch-list';
+import FinanceTransferAdd from './containers/finance-transfer-add';
+import FinanceTransferList from './containers/finance-transfer-list';
+import FinanceAccountList from './containers/finance-account-list';
+import FinanceCourseFeeAdd from './containers/finance-course-fee-add';
+import LunchReducedInstructions from './containers/lunch-reduced-instructions.js';
+import LunchReducedApply from './containers/lunch-reduced-apply.js';
+import PickupLaneSettings from './containers/pickup-lane-settings.js';
+import RegSelfServiceCourseCount from './containers/reg-self-service-course-count.js';
+import BehaviorIncidentReport from './containers/behavior-incident-report.js';
+import GalleryList from './containers/gallery-list.js';
+import GalleryAdd from './containers/gallery-add.js';
+
+/* END  LearnerSphere-specific routes */
+import {APP_WEB_BASE_PATH} from './env.js';
+
+const routes = (
+    <Route path={`${APP_WEB_BASE_PATH||'/'}`} component={App} >
+        <IndexRoute component={Login} />
+				<Route path="/landing" component={Landing} />
+				<Route path="/login" component={Login} />
+				<Route path="/privacy-policy" component={PrivacyPolicy} />
+				<Route path="/createNewSchool" component={CreateNewSchool} />
+				<Route path="/newLogin/:newLoginPersonId" component={Login} />
+				<Route path="/initStudentLogin/:personId/:username" component={InitStudentLogin} />
+        <Route path="/login/:createNew" component={Login} />
+				<Route path="/forgotPassword" component={ForgotPassword} />
+        <Route path="/forgotPassword/:salta" component={ForgotPassword} />
+        <Route path="/resetPassword/:resetCode/:emailAddress" component={ResetPassword} />
+				<Route path="/regLogin/:schoolCode" component={RegistrationNew} />
+				<Route path="/reg/:schoolRegistrationCode" component={RegistrationNew} />
+				<Route path="/doctor/:doctorNoteInviteId" component={DoctorInviteLogin} />
+				<Route path="/logout" component={Logout} />
+        <Route component={EnsureLoggedIn}>
+            <Route path="/profileResetPassword/:personId" component={ProfileResetPassword} />
+            <Route path="/profileResetPassword/:personId/:name" component={ProfileResetPassword} />
+						<Route path="/passwordResetAdmin" component={PasswordResetAdmin} />
+            <Route path="/myProfile" component={MyProfile} />
+            <Route path="/learnerAdd" component={LearnerAdd} />
+            <Route path="/learnerAdd/:studentPersonId" component={LearnerAdd} />
+						<Route path="/userAdd/:userRole" component={UserAdd} />
+            <Route path="/userAdd/:userRole/:userPersonId" component={UserAdd} />
+            <Route path="/learnerOutcomeAdd" component={LearnerOutcomeAdd} />
+            <Route path="/courseEntry" component={CourseEntry} />
+						<Route path="/courseEntry/:courseEntryId" component={CourseEntry} />
+            <Route path="/courseToSchedule" component={CourseToSchedule} />
+						<Route path="/courseToSchedule/:courseEntryId" component={CourseToSchedule} />
+            <Route path="/courseToSchedule/:newOrEdit/:id" component={CourseToSchedule} />
+						<Route path="/learnerCourseAssign" component={LearnerCourseAssign} />
+            <Route path="/learnerCourseAssign/set/course/:courseScheduledId" component={LearnerCourseAssign} />
+            <Route path="/learnerCourseAssign/:studentPersonId" component={LearnerCourseAssign} />
+            <Route path="/learnerCourseAssign/:personal/:timeTarget" component={LearnerCourseAssign} />
+            <Route path="/calendarEventAdd" component={CalendarEventAdd} />
+            <Route path="/calendarEventAdd/:scheduleDate/:fromDate/:toDate" component={CalendarEventAdd} />
+            <Route path="/learnerSearch" component={LearnerSearch} />
+            <Route path="/mentorsNotAssigned" component={MentorsNotAssigned} />
+            <Route path="/mentorsReassign" component={MentorsReassign} />
+            <Route path="/facilitatorMentorSet" component={FacilitatorMentorSet} />
+						<Route path="/messagesAndReminders" component={MessagesAndReminders} />
+            <Route path="/calendarAndEvents" component={CalendarAndEvents} />
+						<Route path="/forceFirstNav" component={FirstNav} />
+						<Route path="/firstNav" component={FirstNav} />
+            <Route path="/firstNav/:schoolYearId" component={FirstNav} />
+            <Route path="/assessmentQuestions" component={AssessmentQuestions} />
+						<Route path="/assessmentQuestions/:assessmentId" component={AssessmentQuestions} />
+            <Route path="/assessmentQuestions/:assessmentId/:benchmarkTestId" component={AssessmentQuestions} />
+            <Route path="/scheduleAssignByMath" component={ScheduleAssignByMath} />
+						<Route path="/courseAttendance" component={CourseAttendance} />
+            <Route path="/courseAttendance/:courseScheduledId" component={CourseAttendance} />
+            <Route path="/courseAttendanceAdmin" component={CourseAttendanceAdmin} />
+            <Route path="/courseAttendanceSingle" component={CourseAttendanceSingle} />
+            <Route path="/courseAttendanceSingle/:studentPersonId" component={CourseAttendanceSingle} />
+            <Route path="/gradebookEntry" component={GradebookEntry} />
+						<Route path="/gradebookEntry/:courseScheduledId" component={GradebookEntry} />
+						<Route path="/gradebookEntry/:courseScheduledId/:studentPersonId" component={GradebookEntry} />
+            <Route path="/gradebookEntry/:courseScheduledId/:studentPersonId/contentType/:contentTypeId" component={GradebookEntry} />
+						<Route path="/gradebookSummary" component={GradebookSummary} />
+						<Route path="/gradebookSummary/:courseScheduledId" component={GradebookSummary} />
+            <Route path="/ratingBook" component={RatingBook} />
+            <Route path="/ratingBook/:studentPersonId" component={RatingBook} />
+						<Route path="/assessmentLearner/:assignmentId/:assessmentId" component={AssessmentLearner} />
+						<Route path="/assessmentLearner/:assignmentId/:assessmentId/:isRetakeQuiz" component={AssessmentLearner} />
+						<Route path="/assessmentLearner/:assignmentId/:assessmentId/:isRetakeQuiz/:courseScheduledId" component={AssessmentLearner} />
+            <Route path="/assessmentLearner/:assignmentId/:assessmentId/:isRetakeQuiz/:courseScheduledId/:benchmarkTestId" component={AssessmentLearner} />
+						<Route path="/assessmentCorrect/:assignmentId/:assessmentId/:studentPersonId" component={AssessmentCorrect} />
+						<Route path="/assessmentCorrect/:assignmentId/:assessmentId/:studentPersonId/:courseScheduledId" component={AssessmentCorrect} />
+						<Route path="/assessmentCorrect/:assignmentId/:assessmentId/:studentPersonId/:courseScheduledId/:benchmarkTestId" component={AssessmentCorrect} />
+						<Route path="/assessmentPendingEssay" component={AssessmentPendingEssay} />
+						<Route path="/assignmentsPendingReview" component={AssignmentsPendingReview} />
+						<Route path="/announcementEdit" component={AnnouncementEdit} />
+						<Route path="/announcementEdit/:editType/:announcementId" component={AnnouncementEdit} />
+						<Route path="/announcementEdit/:editType/:announcementId/:fromPersonId/:fromFirstName/:fromLastName" component={AnnouncementEdit} />
+						<Route path="/announcementEdit/:editType/:carpoolRequestId/:toPersonId/:toPersonName" component={AnnouncementEdit} />
+						<Route path="/announcementManage" component={AnnouncementManage} />
+						<Route path="/mentorSummaryEdit" component={MentorSummaryEdit} />
+						<Route path="/baseCourses" component={BaseCourses} />
+						<Route path="/scheduledCourses" component={ScheduledCourses} />
+						<Route path="/scheduledCourses/:courseScheduledId" component={ScheduledCourses} />
+						<Route path="/regInstructions" component={RegInstructions} />
+						<Route path="/regGuardianContact/:contactPersonId/:personType" component={RegGuardiansContacts} />
+						<Route path="/regGuardianContact/:contactPersonId/:personType/:schoolYearId" component={RegGuardiansContacts} />
+						<Route path="/regStudent/:studentPersonId" component={RegStudents} />
+						<Route path="/regStudent/:studentPersonId/:pickUpLast" component={RegStudents} />
+						<Route path="/regStudent/:studentPersonId/schoolYear/:schoolYearId" component={RegStudents} />
+						<Route path="/regPoliciesAcademy" component={RegPoliciesAcademy} />
+						<Route path="/regPoliciesElementary" component={RegPoliciesElementary} />
+            <Route path="/regBillingPreference/:schoolYearId" component={RegBillingPreference} />
+						<Route path="/regBillingPreference_simple" component={RegBillingPreference_simple} />
+						<Route path="/studentSchedule" component={StudentSchedule} />
+						<Route path="/studentSchedule/:studentPersonId" component={StudentSchedule} />
+						<Route path="/studentScheduleWeek" component={StudentScheduleWeek} />
+						<Route path="/studentScheduleWeek/:studentPersonId" component={StudentScheduleWeek} />
+						<Route path="/gradeReport" component={GradeReport} />
+						<Route path="/gradeReport/:studentPersonId" component={GradeReport} />
+						<Route path="/studentProfile/:studentPersonId" component={StudentProfile} />
+						<Route path="/studentProfile/:studentPersonId/:schoolYearId" component={StudentProfile} />
+						<Route path="/discussionClass/:courseEntryId" component={DiscussionClass} />
+						<Route path="/discussionClass/:courseEntryId/:discussionEntryId" component={DiscussionClass} />
+						<Route path="/assignmentList/:courseEntryId" component={AssignmentList} />
+						<Route path="/assignmentList/:courseEntryId/:intervalId" component={AssignmentList} />
+						<Route path="/assignmentList/:courseEntryId/assignmentId/:assignmentId" component={AssignmentList} />
+						<Route path="/assignmentEntry/:courseEntryId" component={AssignmentEntry} />
+						<Route path="/assignmentEntry/:courseEntryId/:assignmentId" component={AssignmentEntry} />
+						<Route path="/assignmentEntry/:courseEntryId/:assignmentId/:insertSequence" component={AssignmentEntry} />
+						<Route path="/studentAssignments/:courseScheduledId" component={StudentAssignments} />
+						<Route path="/studentAssignments/:courseScheduledId/:studentPersonId" component={StudentAssignments} />
+						<Route path="/studentAssignments/:courseScheduledId/:studentPersonId/:chosenAssignmentId" component={StudentAssignments} />
+						<Route path="/studentCourseAssign" component={StudentCourseAssign} />
+						<Route path="/studentCourseAssign/:studentPersonId" component={StudentCourseAssign} />
+						<Route path="/openRegistration" component={OpenRegistration} />
+						<Route path="/openRegistration/:openRegistrationTableId" component={OpenRegistration} />
+						<Route path="/alertCourseSchedule/:courseScheduledId" component={AlertCourseSchedule} />
+						<Route path="/alertCourseSchedule/:courseScheduledId/:alertWhenId" component={AlertCourseSchedule} />
+						<Route path="/courseNewRequested" component={CourseNewRequested} />
+						<Route path="/courseWeightedScore/:courseEntryId" component={CourseWeightedScore} />
+						<Route path="/attendanceReport/:studentPersonId/:intervalId" component={AttendanceReport} />
+						<Route path="/reportRecommendCourse" component={ReportRecommendCourse} />
+						<Route path="/registrationPending" component={RegistrationPending} />
+						<Route path="/reportStudentRegistration" component={ReportStudentRegistration} />
+						<Route path="/studentScheduleFinalize" component={StudentScheduleFinalize} />
+						<Route path="/studentScheduleFinalize/:studentPersonId" component={StudentScheduleFinalize} />
+						<Route path="/classPeriods" component={ClassPeriodsSettings} />
+						<Route path="/learningPathways" component={LearningPathwaysSettings} />
+						<Route path="/intervals" component={IntervalsSettings} />
+						<Route path="/gradeScale" component={GradeScaleSettings} />
+						<Route path="/standardsRating" component={StandardsRatingSettings} />
+						<Route path="/contentTypes" component={ContentTypesSettings} />
+						<Route path="/courseTypes" component={CourseTypesSettings} />
+						<Route path="/studentAddOptions" component={StudentAddOptions} />
+						<Route path="/studentAddManual" component={StudentAddManual} />
+						<Route path="/studentAddManual/:studentPersonId" component={StudentAddManual} />
+						<Route path="/studentAddBulk" component={StudentAddBulk} />
+						<Route path="/studentAddBulkConfirm" component={StudentAddBulkConfirm} />
+						<Route path="/studentAssignmentAssign" component={StudentAssignmentAssign} />
+						<Route path="/studentAssignmentAssign/:courseScheduledId" component={StudentAssignmentAssign} />
+						<Route path="/studentAssignmentAssign/:courseScheduledId/:studentPersonId" component={StudentAssignmentAssign} />
+						<Route path="/studentAssignmentAssign/:courseScheduledId/:studentPersonId/contentType/:contentTypeId" component={StudentAssignmentAssign} />
+						<Route path="/teacherSchedule" component={TeacherSchedule} />
+						<Route path="/teacherSchedule/:facilitatorPersonId" component={TeacherSchedule} />
+						<Route path="/schoolDays" component={SchoolDays} />
+						<Route path="/passFailRating" component={PassFailRating} />
+						<Route path="/newSchoolCheckList" component={NewSchoolCheckList} />
+						<Route path="/carpoolAreas" component={CarpoolAreas} />
+						<Route path="/carpool" component={Carpool} />
+						<Route path="/curbside" component={CurbsideCheckInOrOut} />
+						<Route path="/curbsideAdmin" component={CurbsideAdminCheckInOrOut} />
+						<Route path="/schoolSettings" component={SchoolSettings} />
+						<Route path="/buildingAndFieldSettings" component={BuildingAndFieldSettings} />
+						<Route path="/buildingAndFieldFrequentMine" component={BuildingAndFieldFrequentMine} />
+						<Route path="/safetyAlertAdd" component={SafetyAlertAdd} />
+						<Route path="/safetyAdminAlerts" component={SafetyAdminAlerts} />
+						<Route path="/volunteerCheckInOut" component={VolunteerCheckInOut} />
+						<Route path="/volunteerCheckInOut/:volunteerEventId" component={VolunteerCheckInOut} />
+						<Route path="/volunteerHours" component={VolunteerHours} />
+						<Route path="/volunteerOpportunityAdd" component={VolunteerOpportunityAdd} />
+						<Route path="/volunteerOpportunities" component={VolunteerOpportunities} />
+						<Route path="/attendanceSchool" component={AttendanceSchool} />
+						<Route path="/lunchMenuOptionSetup" component={LunchMenuOptionSetup} />
+						<Route path="/lunchMenuMonth" component={LunchMenuMonth} />
+						<Route path="/lunchMenuStudentsDay" component={LunchMenuStudentsDay} />
+						<Route path="/systemFeatures" component={SystemFeatures} />
+						<Route path="/behaviorIncidentList" component={BehaviorIncidentList} />
+						<Route path="/behaviorIncidentAdd" component={BehaviorIncidentAdd} />
+						<Route path="/behaviorIncidentAdd/:behaviorIncidentId" component={BehaviorIncidentAdd} />
+						<Route path="/financeBillingAdd" component={FinanceBillingAdd} />
+						<Route path="/financeBillingAdd/:financeBillingId" component={FinanceBillingAdd} />
+						<Route path="/financeBillingAdd/paid/:billingPaidId" component={FinanceBillingAdd} />
+						<Route path="/financeBillingAdd/lunch/:addLunchBilling" component={FinanceBillingAdd} />
+						<Route path="/financeBillingAdd/person/:paramPersonId" component={FinanceBillingAdd} />
+						<Route path="/financeBillingAdd/lunch/:addLunchBilling/person/:paramPersonId" component={FinanceBillingAdd} />
+						<Route path="/volunteerTypes" component={VolunteerTypes} />
+						<Route path="/behaviorIncidentTypes" component={BehaviorIncidentTypes} />
+						<Route path="/lockerAssignments" component={LockerAssignments} />
+						<Route path="/lockerSettings" component={LockerSettings} />
+            <Route path="/paddleLockSettings" component={PaddleLockSettings} />
+						<Route path="/assignLocker" component={AssignLocker} />
+						<Route path="/assignLocker/:lockerStudentAssignId" component={AssignLocker} />
+            <Route path="/assessmentCorrectSameAll/:assignmentId/:assessmentId" component={AssessmentCorrectSameAll} />
+						<Route path="/assessmentCorrectSameAll/:assignmentId/:assessmentId/:assessmentQuestionId" component={AssessmentCorrectSameAll} />
+						<Route path="/assessmentCorrectSummary/:assignmentId/:assessmentId" component={AssessmentCorrectSummary} />
+						<Route path="/testSettings" component={TestSettings} />
+						<Route path="/testComponentSettings" component={TestComponentSettings} />
+						<Route path="/testComponentAssign" component={TestComponentAssign} />
+						<Route path="/testScoreAdd" component={TestScoreAdd} />
+						<Route path="/transcripts" component={Transcripts} />
+						<Route path="/transcripts/:studentPersonId" component={Transcripts} />
+						<Route path="/transcriptAdd" component={TranscriptAdd} />
+						<Route path="/transcriptAdd/:studentPersonId" component={TranscriptAdd} />
+						<Route path="/transcriptTestAdd" component={TranscriptTestAdd} />
+            <Route path="/transcriptTestAdd/:studentPersonId" component={TranscriptTestAdd} />
+            <Route path="/schoolContactManager" component={SchoolContactManager} />
+						<Route path="/carContactManager" component={CarContactManager} />
+						<Route path="/transcriptTestAdd/:studentPersonId" component={TranscriptTestAdd} />
+						<Route path="/reimbursementRequestAdd" component={ReimbursementRequestAdd} />
+						<Route path="/reimbursementRequestAdd/:reimbursementRequestId" component={ReimbursementRequestAdd} />
+						<Route path="/reportWaitList" component={ReportWaitList} />
+						<Route path="/geoLocation" component={GeoLocation} />
+						<Route path="/tutorialVideos" component={TutorialVideo} />
+						<Route path="/tutorialVideos/:label" component={TutorialVideo} />
+						<Route path="/studentBaseCourseRequest/:studentPersonId" component={StudentBaseCourseRequest} />
+						<Route path="/courseAssignByAdminAdd" component={CourseAssignByAdminAdd} />
+						<Route path="/courseAssignByAdminList" component={CourseAssignByAdminList} />
+						<Route path="/distributedCourses" component={DistributedCourses} />
+						<Route path="/absenceUnexcused" component={AbsenceUnexcused} />
+						<Route path="/absenceUnexcused/:pendingApproval" component={AbsenceUnexcused} />
+						<Route path="/doctorNoteInvite" component={DoctorNoteInvite} />
+						<Route path="/doctorNoteAdd" component={DoctorNoteAdd} />
+						<Route path="/doctorNoteAdd/:doctorNoteInviteId" component={DoctorNoteAdd} />
+						<Route path="/doctorNotes" component={DoctorNotes} />
+						<Route path="/doctorNoteInviteList" component={DoctorNoteInviteList} />
+						<Route path="/benchmarkTestList" component={BenchmarkTestList} />
+						<Route path="/benchmarkTestClassComparison" component={BenchmarkTestClassComparison} />
+						<Route path="/benchmarkTestClassComparison/:benchmarkTestId" component={BenchmarkTestClassComparison} />
+						<Route path="/benchmarkTestStudentComparison" component={BenchmarkTestStudentComparison} />
+						<Route path="/benchmarkTestStudentComparison/:benchmarkTestId" component={BenchmarkTestStudentComparison} />
+						<Route path="/financeFeeTypes" component={FinanceFeeTypes} />
+						<Route path="/financeCreditTypes" component={FinanceCreditTypes} />
+						<Route path="/financeGroups" component={FinanceGroups} />
+						<Route path="/financeGLCodes" component={FinanceGLCodes} />
+						<Route path="/financeWaiverSchedule" component={FinanceWaiverSchedule} />
+						<Route path="/financeLowIncomeWaivers" component={FinanceLowIncomeWaivers} />
+						<Route path="/financeBillingList" component={FinanceBillingList} />
+						<Route path="/financeBillingList/person/:paramPersonId" component={FinanceBillingList} />
+						<Route path="/financeBillingList/:onlyBillingDue" component={FinanceBillingList} />
+						<Route path="/financeCreditAdd" component={FinanceCreditAdd} />
+						<Route path="/financeCreditAdd/:financeCreditTransactionId" component={FinanceCreditAdd} />
+						<Route path="/financeCreditAdd/person/:paramPersonId" component={FinanceCreditAdd} />
+						<Route path="/financeCreditList" component={FinanceCreditList} />
+						<Route path="/financeCreditList/person/:paramPersonId" component={FinanceCreditList} />
+						<Route path="/financeRefundAdd" component={FinanceRefundAdd} />
+						<Route path="/financeRefundAdd/person/:paramPersonId" component={FinanceRefundAdd} />
+						<Route path="/financeRefundList" component={FinanceRefundList} />
+						<Route path="/financeRefundList/person/:paramPersonId" component={FinanceRefundList} />
+						<Route path="/financePaymentAdd" component={FinancePaymentAdd} />
+						<Route path="/financePaymentAdd/person/:paramPersonId" component={FinancePaymentAdd} />
+						<Route path="/financePaymentAdd/lunch/:addNewLunchPayment" component={FinancePaymentAdd} />
+						<Route path="/financePaymentAdd/lunch/:addNewLunchPayment/person/:paramPersonId" component={FinancePaymentAdd} />
+						<Route path="/financePaymentList" component={FinancePaymentList} />
+						<Route path="/financePaymentList/person/:paramPersonId" component={FinancePaymentList} />
+						<Route path="/financePaymentReceipt" component={FinancePaymentReceipt} />
+						<Route path="/financePaymentReceipt/:financePaymentTableId" component={FinancePaymentReceipt} />
+						<Route path="/financeLunchList" component={FinanceLunchList} />
+						<Route path="/financeLunchList/person/:paramPersonId" component={FinanceLunchList} />
+						<Route path="/financeTransferAdd" component={FinanceTransferAdd} />
+						<Route path="/financeTransferAdd/new/person/:paramPersonId" component={FinanceTransferAdd} />
+						<Route path="/financeTransferAdd/:fromPersonId/:toPersonId" component={FinanceTransferAdd} />
+						<Route path="/financeTransferList" component={FinanceTransferList} />
+						<Route path="/financeTransferList/person/:paramPersonId" component={FinanceTransferList} />
+						<Route path="/financeAccountList" component={FinanceAccountList} />
+            <Route path="/financeCreditFeeAdd" component={FinanceCourseFeeAdd} />
+            <Route path="/lunchReducedInstructions" component={LunchReducedInstructions} />
+            <Route path="/lunchReducedApply" component={LunchReducedApply} />
+            <Route path="/pickupLaneSettings" component={PickupLaneSettings} />
+            <Route path="/regSelfServiceCourseCount" component={RegSelfServiceCourseCount} />
+						<Route path="/behaviorIncidentReport" component={BehaviorIncidentReport} />
+
+            <Route path="/workSettings" component={WorkSettings} />
+            <Route path="/myWorks" component={MyWorks} />
+            <Route path="/myWorks/group/:groupChosen" component={MyWorks} />
+            <Route path="/myWorks/:init" component={MyWorks} />
+            <Route path="/myContacts" component={MyContacts} />
+            <Route path="/giveAccessToEditors" component={GiveAccessToEditors} />
+            <Route path="/giveAccessToWorks" component={GiveAccessToWorks} />
+            <Route path="/editReview" component={EditReview} />
+            <Route path="/editReview/:workId" component={EditReview} />
+            <Route path="/editReview/:isLMSTransfer/:workId" component={EditReview} />
+            <Route path="/editReview/draft/:isdraft" component={EditReview} />
+            <Route path="/editReview/:workId/:chosenTabPersonId/:hrefId" component={EditReview} />
+            <Route path="/workAddNew" component={WorkAddNew} />
+            <Route path="/workAddNew/:groupChosen" component={WorkAddNew} />
+            <Route path="/workUploadFile" component={WorkUploadFile} />
+            <Route path="/workNewAfterNav" component={WorkNewAfterNav} />
+            <Route path="/chapterUploadFile" component={ChapterUploadFile} />
+            <Route path="/workDownload" component={WorkDownload} />
+            <Route path="/draftSettings" component={DraftSettings} />
+            <Route path="/editorInviteNameEmail" component={EditorInviteNameEmail} />
+            <Route path="/editorInviteNameEmail/:groupChosen" component={EditorInviteNameEmail} />
+            <Route path="/editorInviteWorkAssign" component={EditorInviteWorkAssign} />
+            <Route path="/workSections" component={WorkSections} />
+            <Route path="/addOrUpdateChapter" component={AddOrUpdateChapter} />
+            <Route path="/addOrUpdateChapter/:chapterId" component={AddOrUpdateChapter} />
+            <Route path="/mergeChapters" component={MergeChapters} />
+            <Route path="/splitChapter" component={SplitChapter} />
+            <Route path="/openCommunity" component={OpenCommunity} />
+            <Route path="/report/e/:editType" component={ContributorReport} />
+            <Route path="/report/e/:editType/editCount/:editTypeCount" component={ContributorReport} />
+            <Route path="/report/e/:editType/:workId" component={ContributorReport} />
+            <Route path="/report/e/:editType/:workId/editCount/:editTypeCount" component={ContributorReport} />
+            <Route path="/report/e/:editType/:workId/:personId" component={ContributorReport} />
+            <Route path="/report/e/:editType/:workId/:personId/editCount/:editTypeCount" component={ContributorReport} />
+            <Route path="/report/e/:editType/:workId/:personId/:sections" component={ContributorReport} />
+            <Route path="/report/e/:editType/:workId/:personId/:sections/editCount/:editTypeCount" component={ContributorReport} />
+            <Route path="/report/t/:editType" component={ContributorReport} />
+            <Route path="/report/t/:editType/editCount/:editTypeCount" component={ContributorReport} />
+            <Route path="/report/t/:editType/:workId" component={ContributorReport} />
+            <Route path="/report/t/:editType/:workId/editCount/:editTypeCount" component={ContributorReport} />
+            <Route path="/report/t/:editType/:workId/:languageId" component={ContributorReport} />
+            <Route path="/report/t/:editType/:workId/:languageId/editCount/:editTypeCount" component={ContributorReport} />
+            <Route path="/report/t/:editType/:workId/:languageId/:personId" component={ContributorReport} />
+            <Route path="/report/t/:editType/:workId/:languageId/:personId/editCount/:editTypeCount" component={ContributorReport} />
+            <Route path="/report/t/:editType/:workId/:languageId/:personId/:sections" component={ContributorReport} />
+            <Route path="/report/t/:editType/:workId/:languageId/:personId/:sections/editCount/:editTypeCount" component={ContributorReport} />
+            <Route path="/report/t/:editType/works/languages/editors/noSections/le/:langOrEditorCount" component={ContributorReport} />
+            <Route path="/report/t/:editType/works/languages/editors/noSections/le/:langOrEditorCount/editCount/:editTypeCount" component={ContributorReport} />
+            <Route path="/groupTypeChoice" component={GroupTypeChoice} />
+            <Route path="/groupAddNew/:groupTypeName" component={GroupAddNew} />
+            <Route path="/groupSettings" component={GroupSettings} />
+            <Route path="/groupSettings/:groupChosen" component={GroupSettings} />
+            <Route path="/myGroups" component={MyGroups} />
+            <Route path="/myGroupsReport" component={MyGroupsReport} />
+            <Route path="/groupMemberAdd" component={GroupMemberAdd} />
+            <Route path="/groupMemberUpdate/:memberPersonId" component={GroupMemberUpdate} />
+            <Route path="/accessReport" component={AccessReport} />
+            <Route path="/accessReport/:groupChosen" component={AccessReport} />
+            <Route path="/groupEditReport/e/:editType" component={GroupEditReport} />
+            <Route path="/groupEditReport/e/:editType/:workId/editCount/:editTypeCount" component={GroupEditReport} />
+            <Route path="/groupEditReport/e/:editType/:workId" component={GroupEditReport} />
+            <Route path="/groupEditReport/e/:editType/:workId/:personId" component={GroupEditReport} />
+            <Route path="/peerGroupAddOrUpdate/:groupChosen" component={PeerGroupAddOrUpdate} />
+            <Route path="/peerGroupAddOrUpdate/:groupChosen/:peerGroupId" component={PeerGroupAddOrUpdate} />
+            <Route path="/groupWorkAssign/:groupChosen/:masterWorkId" component={GroupWorkAssign} />
+            <Route path="/assignmentDashboard" component={AssignmentDashboard} />
+            <Route path="/assignmentDashboard/:groupChosen" component={AssignmentDashboard} />
+            <Route path="/assignmentDashboard/:groupChosen/:masterWorkId" component={AssignmentDashboard} />
+            <Route path="/galleryList" component={GalleryList} />
+            <Route path="/galleryAdd" component={GalleryAdd} />
+
+        </Route>
+        <Route path="*" component={NotFound} />
+    </Route>
+);
+export default routes;

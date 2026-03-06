@@ -1,0 +1,115 @@
+@import 'variables.css';
+
+.container {
+  z-index: 101;
+  float:right;
+  /*margin-top: 6px;*/
+  position: absolute;
+}
+
+.switch {
+    display: flex;
+    flex-flow: row;
+    padding-top: 15px !important;
+    padding-bottom: 7px !important;
+    margin-left: 5px;
+}
+
+.launchButton {
+    position:absolute;
+    z-index: -1;
+    cursor: pointer;
+    float:right;
+    margin-right: 32px;
+    margin-top: 6px;
+    height: 18px;
+}
+
+textarea {
+    resize: none;
+}
+
+.label {
+}
+
+.subMenuIcon {
+  margin-left: 10px;
+  height: 18px;
+  margin-top: 1px;
+}
+
+.children {
+    position:absolute;
+    float:right;
+    top: -135px;
+    left: -160px;
+    width: 190px;
+    height: 0px;
+    /*border: solid 0px var(--green);*/
+    overflow: hidden;
+    background-color: #f4cd92;
+    z-index: 9;
+    border-radius: 4px;
+
+    transition:  height .5s;
+    -webkit-transition-timing-function: ease-in;
+    transition-timing-function: ease-in-out;
+
+    border-radius: 5x;
+    padding-left: 5px;
+    padding-right: 15px;
+}
+
+.opened {
+    position:absolute;
+    float: right;
+    top: -135px;
+    left: -160px;
+    width: 190px;
+    height: 180px;
+    /*border: solid 1px black;*/
+    transition:  height .5s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+    z-index: 9;
+}
+
+.closeButton, .labelSwitch, .labelCheckbox {
+	font-family: var(--generalFont, sans-serif);
+	font-weight: normal !important;
+	letter-spacing: normal;
+	text-rendering: optimizelegibility;
+}
+
+.labelSwitch {
+    font-size: 12px !important;
+    margin-left: 20px;
+    cursor: pointer;
+    position: relative;
+    top: -3px;
+}
+
+.labelCheckbox {
+    font-size: 10px !important;
+    margin-left: 10px;
+}
+
+.closeButton {
+    font-size: 10px;
+    color: var(--blue, #147EA7);
+    text-decoration: none;
+    cursor: pointer;
+    float: right;
+    margin-right: 10px;
+    position: relative;
+    top: -8px;
+}
+
+.closeButton:hover {
+    text-decoration: underline;
+}
+
+.buttonRow {
+    margin-left: 120px;
+    margin-top: 8px;
+}

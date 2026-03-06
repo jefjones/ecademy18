@@ -1,0 +1,173 @@
+@import 'variables.css';
+
+.container {
+    margin-top: 2px;
+    padding-top: 5px;
+    padding-bottom: 16px;
+    background-color: #ebebee;
+}
+
+.hidden {
+    height: 0px;
+    display: none;
+}
+
+.row, .text, .labelCheckbox, .textSave, .radioLabels, .clearFilters {
+    font-family: var(--generalFont, sans-serif);
+    font-weight: normal !important;
+    letter-spacing: normal;
+    text-rendering: optimizelegibility;
+    margin-left: 5px;
+}
+
+.labelCheckbox {
+    margin-left: 0px !important;
+    font-size: 10px;
+}
+
+.row {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+}
+
+.text {
+    font-size: 10px;
+    margin-right: 4px;
+}
+
+.textSave  {
+    font-size: 10px;
+    margin-right: 3px;
+    margin-top: 7px;
+}
+
+.radio {
+    margin-left: 8px;
+}
+
+.radioLabels {
+    font-size: 10px;
+    margin-left: 3px !important;
+    margin-bottom: 13px !important;
+    margin-top: -10px !important;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.radioLabels:hover {
+    text-decoration: underline;
+}
+
+.radioClass {
+    margin-top: 10px !important;
+}
+
+.searchText {
+    margin-left: 5px;
+}
+
+.singleDropDown {
+    margin-left: 7px;
+}
+
+.selectMultiple {
+    margin-left: 12px;
+}
+
+.clearFilters {
+    margin-top: 10px;
+    margin-bottoom: 0px;
+    margin-left: 20px;
+    cursor: pointer;
+    font-size: 11px;
+    color: #da132e;
+}
+
+.clearFilters:hover {
+    text-decoration: underline;
+}
+
+.containerLeft {
+    display:flex;
+    flex-direction: row;
+    margin-right: 10px 0px;
+    justify-content: flex-start;
+}
+
+.inputBox, .addon {
+    border: 1px solid #d1d9de;
+    background: #fff !important;
+    display: inline-block;
+    vertical-align: middle;
+    color: black;
+    font-size: 12px;
+    height: 28px;
+}
+
+.inputBox:focus, .addon:focus {
+    outline: 0;
+}
+
+.inputBox {
+    border-radius: 12px 0 0 12px;
+    -webkit-border-radius: 12px 0 0 12px;
+    border-right: none;
+    padding-top: 6px;
+    padding-right: 50px;
+    padding-left: 10px;
+    padding-bottom: 6px;
+    height: 30px;
+}
+
+.addon {
+    border-radius: 0 12px 12px 0;
+    -webkit-border-radius: 0 12px 12px 0;
+    border-left: none;
+}
+
+.icon {
+    width: 12px;
+    margin-right: 6px;
+    padding-top: 2px;
+}
+
+.dateRow {
+    font-size: 11px !important;
+}
+
+.image {
+    margin-top: 7px;
+    height: 13px;
+}
+
+.checkbox {
+    margin-top: 10px;
+    margin-left: 8px;
+}
+
+.linkStyle {
+    cursor: pointer;
+}
+
+.leftMargin {
+    margin-left: 8px;
+}
+
+.multiSelect {
+    z-index: 99 !important;
+    min-width: 100px;
+    width: auto;
+    font-size: 11px;
+    margin-bottom: 8px;
+    margin-right: 10px;
+}
+
+.marginLeft {
+    margin-left: 30px !important;
+}
+
+.inputClassName {
+    margin-top: 4px;
+    z-index: 1 !important;
+}

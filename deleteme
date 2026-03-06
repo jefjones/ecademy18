@@ -1,0 +1,19 @@
+join role in _context.AccessRoleLearner on accessAdmin.AccessRoleLearnerId equals role.AccessRoleLearnerId
+where role.Name == "Admin"
+select assign).FirstOrDefault();
+
+_context.AccessRoleLearner.Where(m => m.Name == "Admin").Select(m => m.AccessRoleLearnerId).FirstOrDefault()
+
+_context.SchoolYear.Where(m => m.YearInt == 2020).Select(m => m.SchoolYearId).FirstOrDefault()
+
+CourseName == "Pre-Algebra" && m.CompanyId == Guid.Parse("31B03385-213F-4630-A938-5F3EA0061EFC")).FirstOrDefault();
+
+_context.GroupWorkStatus.Where(m => m.Name == "ACCEPTED").Select(m => m.GroupWorkStatusId).FirstOrDefault()
+
+_context.Interval.Where(m => m.CompanyId == Guid.Parse("2BEBF302-57B9-4E5E-93A5-B9228E5A5C5D") && m.Code == "M1M2").Select(m => m.IntervalId).FirstOrDefault()
+
+new Guid())
+        {
+            if (schoolYearId == Guid.Empty) schoolYearId = _context.SchoolYear.Where(m => m.YearInt == 2020).Select(m => m.SchoolYearId).FirstOrDefault();
+
+Guid.Empty : (Guid
