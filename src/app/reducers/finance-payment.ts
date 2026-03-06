@@ -1,0 +1,13 @@
+import * as types from '../actions/actionTypes'
+
+export default function(state = [], action) {
+    switch(action.type) {
+        case types.FINANCE_PAYMENT_INIT:
+            return action.payload
+
+        default:
+            return state
+    }
+}
+
+export const selectFinancePayments = (state) => state

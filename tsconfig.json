@@ -1,22 +1,44 @@
 {
-	"compilerOptions": {
-		"experimentalDecorators": true,
-		"target": "es2015",
-		"lib": ["dom", "dom.iterable", "esnext"],
-		"allowJs": true,
-		"skipLibCheck": true,
-		"esModuleInterop": true,
-		"allowSyntheticDefaultImports": true,
-		"strict": true,
-		"forceConsistentCasingInFileNames": true,
-		"module": "esnext",
-		"moduleResolution": "node",
-		"resolveJsonModule": true,
-		"isolatedModules": true,
-		"jsx": "react",
-		"sourceMap": true,
-		"outDir": "phpstorm",
-		"noEmit": false
-	},
-	"include": ["src"]
+  "compilerOptions": {
+    /* Language and environment */
+    "target": "ES2020",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "jsx": "react-jsx",
+
+    /* Modules */
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["src/app/*"]
+    },
+
+    /* Emit */
+    "noEmit": true,
+    "sourceMap": true,
+    "declaration": false,
+
+    /* JavaScript interop (allows .js files to coexist during migration) */
+    "allowJs": true,
+    "checkJs": false,
+    "isolatedModules": true,
+
+    /* Interop */
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+
+    /* Type checking — start lenient; tighten as each file is migrated */
+    "strict": false,
+    "noImplicitAny": false,
+    "strictNullChecks": false,
+    "skipLibCheck": true,
+
+    /* Decorators (Material-UI, Redux) */
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"]
 }

@@ -1,0 +1,101 @@
+﻿import { storiesOf } from '@kadira/storybook'
+import Icon from './Icon'
+import styles from './Icon.css'
+
+storiesOf('Icon', module)
+
+    .add('All of them', () => (<div>
+        <Icon pathName={"addressBook"} className={styles.storyStyle}/> addressBook <br />
+        <Icon pathName={"addressBook"}/> addressBook <br />
+        <Icon pathName={"alarm"}/> alarm <br />
+        <Icon pathName={"arrow_down"}/> arrow_down <br />
+        <Icon pathName={"arrow_right"}/> arrow_right <br />
+        <Icon pathName={"arrow_up"}/> arrow_up <br />
+        <Icon pathName={"arrow_dropdown"}/> arrow_dropdown <br />
+        <Icon pathName={"bin2"}/> bin2 <br />
+        <Icon pathName={"blocked"}/> blocked <br />
+        <Icon pathName={"book"}/> book <br />
+        <Icon pathName={"bookmarks"}/> bookmarks <br />
+        <Icon pathName={"books"}/> books <br />
+        <Icon pathName={"bubbles4"}/> bubbles4 <br />
+        <Icon pathName={"camera"}/> camera <br />
+        <Icon pathName={"calendar"}/> calendar <br />
+        <Icon pathName={"checkmark"}/> checkmark <br />
+        <Icon pathName={"cancel_circle"}/> cancel_circle <br />
+        <Icon pathName={"circle_down"}/> circle_down <br />
+        <Icon pathName={"cloud_download"}/> cloud_download <br />
+        <Icon pathName={"cloud_upload"}/> cloud_upload <br />
+        <Icon pathName={"coin_dollar"}/> coin_dollar <br />
+        <Icon pathName={"coin_euro"}/> coin_euro <br />
+        <Icon pathName={"coin_pound"}/> coin_pound <br />
+        <Icon pathName={"coin_yen"}/> coin_yen <br />
+        <Icon pathName={"comment_bubble"}/> comment_bubble <br />
+        <Icon pathName={"cross"}/> cross <br />
+        <Icon pathName={"doc_close"}/> doc_close <br />
+        <Icon pathName={"docs_compare"}/> docs_compare <br />
+        <Icon pathName={"document_refresh"}/> document_refresh <br />
+        <Icon pathName={"emptyFile"}/> emptyFile <br />
+        <Icon pathName={"envelop"}/> envelop <br />
+        <Icon pathName={"erase_text"}/> erase_text <br />
+        <Icon pathName={"facebook2"}/> facebook2 <br />
+        <Icon pathName={"file_text2"}/> file_text2 <br />
+        <Icon pathName={"files_empty"}/> files_empty <br />
+        <Icon pathName={"film"}/> film <br />
+        <Icon pathName={"fire"}/> fire <br />
+        <Icon pathName={"first"}/> first <br />
+        <Icon pathName={"folder_plus"}/> folder_plus <br />
+        <Icon pathName={"floppy_disk"}/> floppy_disk <br />
+        <Icon pathName={"garbage_bin"}/> garbage_bin <br />
+        <Icon pathName={"garbageCan"}/> garbageCan <br />
+        <Icon pathName={"gearSettings"}/> gearSettings <br />
+        <Icon pathName={"google_plus2"}/> google_plus2 <br />
+        <Icon pathName={"home"}/> home <br />
+        <Icon pathName={"icon_switch"}/> icon_switch <br />
+        <Icon pathName={"image_picture"}/> image_picture <br />
+        <Icon pathName={"indent_decrease"}/> indent_decrease <br />
+        <Icon pathName={"indent_increase"}/> indent_increase <br />
+        <Icon pathName={"info"}/> info <br />
+        <Icon pathName={"key"}/> key <br />
+        <Icon pathName={"key2"}/> key2 <br />
+        <Icon pathName={"last"}/> last <br />
+        <Icon pathName={"linkedin"}/> linkedin <br />
+        <Icon pathName={"left_arrow"}/> left_arrow <br />
+        <Icon pathName={"locked"}/> locked <br />
+        <Icon pathName={"minus"}/> minus <br />
+        <Icon pathName={"move_sentence"}/> move_sentence <br />
+        <Icon pathName={"nav_return"}/> nav_return <br />
+        <Icon pathName={"newspaper"}/> newspaper <br />
+        <Icon pathName={"notification"}/> notification <br />
+        <Icon pathName={"paper_stack"}/> paper_stack <br />
+        <Icon pathName={"paperclip"}/> paperclip <br />
+        <Icon pathName={"paragraph"}/> paragraph <br />
+        <Icon pathName={"pencil"}/> pencil <br />
+        <Icon pathName={"play3"}/> play3 <br />
+        <Icon pathName={"plus"}/> plus <br />
+        <Icon pathName={"power_cord"}/> power_cord <br />
+        <Icon pathName={"profile"}/> profile <br />
+        <Icon pathName={"profilePerson"}/> profilePerson <br />
+        <Icon pathName={"question"}/> question <br />
+        <Icon pathName={"screen_icon"}/> screen_icon <br />
+        <Icon pathName={"search"}/> search <br />
+        <Icon pathName={"sections"}/> sections <br />
+        <Icon pathName={"sound_board"}/> sound_board <br />
+        <Icon pathName={"splitter"}/> splitter <br />
+        <Icon pathName={"stack_papers"}/> stack_papers <br />
+        <Icon pathName={"stats_bars"}/> stats_bars <br />
+        <Icon pathName={"stats_dots"}/> stats_dots <br />
+        <Icon pathName={"sub_menu"}/> sub_menu <br />
+        <Icon pathName={"target"}/> target <br />
+        <Icon pathName={"thumbs_down"}/> thumbs_down <br />
+        <Icon pathName={"twitter"}/> twitter <br />
+        <Icon pathName={"undo"}/> undo <br />
+        <Icon pathName={"user_check"}/> user_check <br />
+        <Icon pathName={"user_minus"}/> user_minus <br />
+        <Icon pathName={"user_plus"}/> user_plus <br />
+        <Icon pathName={"users"}/> users <br />
+        <Icon pathName={"video"}/> video <br />
+        <Icon pathName={"warning"}/> warning <br />
+        <Icon pathName={"zoom_in"}/> zoom_in <br />
+        <Icon pathName={"zoom_ou"}/> zoom_out <br />
+    </div>
+))

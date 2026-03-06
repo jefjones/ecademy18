@@ -1,0 +1,72 @@
+﻿import { useEffect } from 'react'
+import WorkUploadFileView from '../views/WorkUploadFileView'
+import { useSelector, useDispatch } from 'react-redux'
+import * as actionWorks from '../actions/works'
+import * as actionChapters from '../actions/chapters'
+import * as fromWorks from '../reducers/works'
+import * as actionWorkFilter from '../actions/works'
+import * as actionTextProcessingProgress from '../actions/text-processing-progress'
+import * as actionPageLang from '../actions/language-list'
+
+import { selectMe, selectLanguageList, selectWorkSummaryCurrent, selectChapterIdCurrent, selectTextProcessingProgress } from '../store'
+
+//At this point the user would have come from the WorkAddOrUpdate page or the ChapterAddOrUpdate page.
+//So we will have the work set as the workId_current.  We can get the name and the workId and languageId from the store.
+
+// takes values from the redux store and maps them to props
+const mapStateToProps = state => {
+    let me = selectMe(state)
+    //We don't want a current work for this page nor for the MobileHeader to show the current work.  The idea is to add a new one.
+    //  Later, when we want to update a work, we can use that current work.
+
+    let isAuthorAlready = fromWorks.selectWorks(state.works) ? fromWorks.selectWorks(state.works).filter(m => m.personId === me.personId)[0] : []
+    let isNewUser = !isAuthorAlready
+    let work = selectWorkSummaryCurrent(state)
+    let chapter = work.chapterOptions.filter(m => m.id === selectChapterIdCurrent(state))[0]
+    let chapterName = chapter && chapter.label
+
+    return {
+        personId: me.personId,
+        langCode: me.langCode,
+        isNewUser,
+        //isWorkNameChange: !!work.workId,  //This is not implemented yet.
+        languageChosen: work.languageId,
+        workId: work.workId,
+        chapterId: selectChapterIdCurrent(state),  //These three fields are the only difference between the work-upload-file and this chapter-upload-file container.
+        isExistingChapter: true,  //chapter-specific
+        workName: chapterName,  //chapter-specific
+        languageList: selectLanguageList(state),
+        textProcessingProgress: selectTextProcessingProgress(state),
+    }
+}
+
+// binds the result of action creators to redux dispatch, wrapped in callable functions
+const bindActionsToDispatch = dispatch => ({
+    setWorkCurrentSelected: (personId, workId, chapterId, languageId, goToPage) => dispatch(actionWorks.setWorkCurrentSelected(personId, workId, chapterId, languageId, goToPage)),
+    deleteWork: (personId, workId) => dispatch(actionWorks.deleteWork(personId, workId)),
+    deleteChapter: (personId, workId, chapterId) => dispatch(actionChapters.deleteChapter(personId, workId, chapterId)),
+    addOrUpdateDocument: (workRecord, isFileUpload) => dispatch(actionWorks.addOrUpdateDocument(workRecord, isFileUpload)),
+    getWorkList: (personId) => dispatch(actionWorkFilter.init(personId)),
+    getTextProcessingProgress: (personId) => dispatch(actionTextProcessingProgress.getTextProcessingProgress(personId)),
+    setBlankTextProcessingProgress: (personId) => dispatch(actionTextProcessingProgress.setBlankTextProcessingProgress(personId)),
+    getPageLangs: (personId, langCode, page) => dispatch(actionPageLang.getPageLangs(personId, langCode, page)),
+})
+
+
+function Container(ownProps) {
+  const dispatch = useDispatch()
+  const storeData = useSelector(state => mapStateToProps(state, ownProps))
+  const storeActions = bindActionsToDispatch(dispatch)
+  const props = { ...ownProps, ...storeData, ...storeActions }
+
+  useEffect(() => {
+    
+        	const {personId, langCode, getPageLangs} = props
+        	getPageLangs(personId, langCode, 'WorkUploadFileView')
+      
+  }, [])
+
+  return <WorkUploadFileView {...props} />
+}
+
+export default Container
