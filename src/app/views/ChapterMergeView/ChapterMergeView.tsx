@@ -15,7 +15,6 @@ function ChapterMergeView(props) {
   const [secondChapterId, setSecondChapterId] = useState(0)
   const [p, setP] = useState(undefined)
 
-  let {error, firstChapterId, secondChapterId} = state
           let {chapterOptions, workSummary, personId, setWorkCurrentSelected, deleteWork, deleteChapter, updateChapterDueDate,
                   updateChapterComment, updatePersonConfig, personConfig} = props
   

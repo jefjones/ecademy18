@@ -269,36 +269,22 @@ function LearnerOutcomeAddView(props) {
 
   const handleNoBulkEntryMessageOpen = () => {
     return setIsShowingNoBulkEntryMessage(true)
-      handleNoBulkEntryMessageClose = () => setIsShowingNoBulkEntryMessage(false)
     
-    	handleRemoveClose = () => setIsShowingModal_remove(false)
-    	handleRemoveOpen = (learnerOutcomeId) => setIsShowingModal_remove(true); setLearnerOutcomeId(learnerOutcomeId)
-    	handleRemove = () => {
-    			const {removeLearnerOutcome, personId} = props
-  }
 
+  }
   const handleNoBulkEntryMessageClose = () => {
     return setIsShowingNoBulkEntryMessage(false)
     
-    	handleRemoveClose = () => setIsShowingModal_remove(false)
-    	handleRemoveOpen = (learnerOutcomeId) => setIsShowingModal_remove(true); setLearnerOutcomeId(learnerOutcomeId)
-    	handleRemove = () => {
-    			const {removeLearnerOutcome, personId} = props
-  }
 
+  }
   const handleRemoveClose = () => {
     return setIsShowingModal_remove(false)
-    	handleRemoveOpen = (learnerOutcomeId) => setIsShowingModal_remove(true); setLearnerOutcomeId(learnerOutcomeId)
-    	handleRemove = () => {
-    			const {removeLearnerOutcome, personId} = props
-  }
 
+  }
   const handleRemoveOpen = (learnerOutcomeId) => {
     return setIsShowingModal_remove(true); setLearnerOutcomeId(learnerOutcomeId)
-    	handleRemove = () => {
-    			const {removeLearnerOutcome, personId} = props
-  }
 
+  }
   const handleRemove = () => {
     
     			const {removeLearnerOutcome, personId} = props
@@ -311,7 +297,6 @@ function LearnerOutcomeAddView(props) {
   const handleEditSet = (learnerOutcomeId) => {
     
     			const {learnerOutcomes} = props
-    			let record = {}
     			let learnerOutcome = learnerOutcomes && learnerOutcomes.filter(m => m.learnerOutcomeId === learnerOutcomeId)[0]
     			if (learnerOutcome && learnerOutcome.learnerOutcomeId) {
     					record = {

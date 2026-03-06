@@ -96,11 +96,6 @@ function StudentAddManualView(props) {
   const changeUser = (event) => {
     
         const field = event.target.name
-        let user = user
-        user[field] = event.target.value
-        field === "firstName" && setErrorFirstName('')
-        (field === "emailAddress" || field === "phone") && setErrorEmailAddress('')
-        // field === "emailAddress" && findContactMatches(event.target.value, '');
         // field === "phone" && findContactMatches('', event.target.value);
         if (field === "emailAddress") user[field] = user[field].replace(/ /g, "")
     
@@ -240,10 +235,6 @@ function StudentAddManualView(props) {
 
   const handleBirthDate = (event) => {
     
-        let user = user
-        user.birthDate = event.target.value
-        setUser(user)
-      
   }
 
   const fillInEmailAddress = (event) => {
@@ -263,19 +254,14 @@ function StudentAddManualView(props) {
 
   const handleMissingInfoOpen = (messageInfoIncomplete) => {
     return setIsShowingModal_missingInfo(true); setMessageInfoIncomplete(messageInfoIncomplete)
-    	handleMissingInfoClose = () => setIsShowingModal_missingInfo(false); setMessageInfoIncomplete('')
     
-    	handleUpdateSchoolYear = ({target}) => {
-    			const {personId, updatePersonConfig, getLearners} = props
-  }
 
+  }
   const handleMissingInfoClose = () => {
     return setIsShowingModal_missingInfo(false); setMessageInfoIncomplete('')
     
-    	handleUpdateSchoolYear = ({target}) => {
-    			const {personId, updatePersonConfig, getLearners} = props
-  }
 
+  }
   const handleUpdateSchoolYear = ({target}) => {
     
     			const {personId, updatePersonConfig, getLearners} = props

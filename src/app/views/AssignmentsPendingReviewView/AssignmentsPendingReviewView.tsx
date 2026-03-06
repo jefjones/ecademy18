@@ -46,7 +46,6 @@ function AssignmentsPendingReviewView(props) {
   const [partialNameText, setPartialNameText] = useState('')
   const [dueDateFrom, setDueDateFrom] = useState('')
   const [dueDateTo, setDueDateTo] = useState('')
-  const [contentTypes, setContentTypes] = useState([])
   const [showSet, setShowSet] = useState('all')
   const [gradingType, setGradingType] = useState('TEACHER')
   const [hasUpdatedScores, setHasUpdatedScores] = useState(undefined)
@@ -87,20 +86,11 @@ function AssignmentsPendingReviewView(props) {
 
   const resort = (field) => {
     
-    				let sortByHeadings = sortByHeadings
-    				sortByHeadings.isAsc = sortByHeadings.sortField === field ? !sortByHeadings.isAsc : 'asc'
-    				sortByHeadings.isNumber = field === 'totalPoints' ? true : false
-    				sortByHeadings.sortField = field
-    				setSortByHeadings(sortByHeadings)
-    		
   }
 
   const handleScore = (assignmentId, studentPersonId, event) => {
     
     				const {getAssignmentsPendingReview, personId} = props
-    				let scores = [...scores]
-    				scores[assignmentId + studentPersonId] = event.target.value
-    				setScores(scores)
     				if (event.target.value) getAssignmentsPendingReview(personId)
     		
   }
@@ -113,7 +103,6 @@ function AssignmentsPendingReviewView(props) {
 
   const changeFilter = (event, filterName) => {
     
-    				let filters = filters
     				let field = filterName ? filterName : event.target.name
     				filters[field] = event.target.value
     				setFilters(filters)
@@ -122,7 +111,6 @@ function AssignmentsPendingReviewView(props) {
 
   const toggleCheckbox = (id) => {
     
-    				let filters = filters
     				if (filters.contentTypes && filters.contentTypes.length > 0) {
     						if (filters.contentTypes.indexOf(id) > -1) {
     								filters.contentTypes.splice(filters.contentTypes.indexOf(id), 1)
@@ -138,10 +126,6 @@ function AssignmentsPendingReviewView(props) {
 
   const handleShowSet = (value) => {
     
-    				let filters = filters
-    				filters.showSet = value
-    				setFilters(filters)
-    		
   }
 
   const toggleHideSearch = () => {
@@ -152,19 +136,14 @@ function AssignmentsPendingReviewView(props) {
 
   const handleInstructionsOpen = (assignmentName, instructions) => {
     return setIsShowingModal_instructions(true); setInstructions(instructions); setAssignmentName(assignmentName)
-    		handleInstructionsClose = () => setIsShowingModal_instructions(false); setInstructions(''); setAssignmentName('')
     
-    		setClickedId = (clickedId) => {
-    				setClickedId(clickedId)
-  }
 
+  }
   const handleInstructionsClose = () => {
     return setIsShowingModal_instructions(false); setInstructions(''); setAssignmentName('')
     
-    		setClickedId = (clickedId) => {
-    				setClickedId(clickedId)
-  }
 
+  }
   const setClickedId = (clickedId) => {
     
     				setClickedId(clickedId)
@@ -179,10 +158,8 @@ function AssignmentsPendingReviewView(props) {
 
   const handleDocumentClose = () => {
     return setIsShowingModal_document(false); setAssignmentId(''); setClickedUrl({})
-    		handleDocumentSave = (studentResponse, assignmentId) => {
-    				const {addOrUpdateStudentResponse, personId} = props
-  }
 
+  }
   const handleDocumentSave = (studentResponse, assignmentId) => {
     
     				const {addOrUpdateStudentResponse, personId} = props
@@ -205,10 +182,6 @@ function AssignmentsPendingReviewView(props) {
 
   const handleRadioChoice = (field, value) => {
     
-    				let filters = filters
-    				filters[field] = value
-    				setFilters(filters)
-    		
   }
 
   const handleEnterKey = (event) => {
@@ -222,7 +195,6 @@ function AssignmentsPendingReviewView(props) {
     				const assignments = filterAssignments()
     				//Get the current id which will be the student and the assignment Ids.  Get the next student and use the current AssignmentId in order to move the focus down to the next one.
     				let studentPersonId = target.name.substring(0, target.name.indexOf('#$'))
-    				let assignmentId = target.name.substring(target.name.indexOf('#$') + 2)
     				let nextRecord = ''
     				let foundCurrent = false
     				assignments && assignments.length > 0 && assignments.forEach(m => {
@@ -240,7 +212,6 @@ function AssignmentsPendingReviewView(props) {
   const filterAssignments = () => {
     
     				let assignments = [...props.assignments]
-    				const {filters={}, sortByHeadings} = state
     				if (filters.partialNameText) assignments = assignments
     						.filter(m => m.title.toLowerCase().indexOf(filters.partialNameText.toLowerCase()) > -1
     										|| m.firstName.toLowerCase().indexOf(filters.partialNameText.toLowerCase()) > -1
@@ -295,8 +266,6 @@ function AssignmentsPendingReviewView(props) {
 
   const {personId, fetchingRecord, contentTypes, accessRoles, companyConfig, setResponseVisitedType, removeStudentResponse,
   			 				visitedColor, myFrequentPlaces, setMyFrequentPlace} = props
-  			const {hideSearch, filters={}, isShowingModal_instructions, assignmentName, instructions, clickedId, isShowingModal_document,
-  		 					student, clickedUrl, penspringWorkId} = state
   			let assignmentsFiltered = filterAssignments()
   
   	    let headings = [

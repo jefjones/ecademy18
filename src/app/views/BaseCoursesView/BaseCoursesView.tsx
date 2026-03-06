@@ -42,11 +42,6 @@ function BaseCoursesView(props) {
     		
   }, [])
 
-  const {personId, baseCourses, learningPathways, removeCourse, scheduledCourses, companyConfig={}, courseClipboard, accessRoles,
-  							myFrequentPlaces, setMyFrequentPlace, fetchingRecord, setPersonConfigChoice } = props
-        
-  
-  			let {courseEntryId} = state
   			if (!courseEntryId && baseCourses && baseCourses.length === 1) courseEntryId = baseCourses[0].courseEntryId
   
   			let filteredCourses = baseCourses

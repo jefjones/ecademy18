@@ -134,18 +134,11 @@ function VolunteerHoursView(props) {
   }
 
   const handleNoteOpen = (noteType, note) => {
-    return setIsShowingModal_note(true); setNoteType(noteType); setNote(note)
-    	handleNoteClose = () => setIsShowingModal_note(false); setNoteType(''); setNote('')
-    
-    	changeDate = (field, event) => {
-    			const newState = Object.assign({}, state)
+    setIsShowingModal_note(true); setNoteType(noteType); setNote(note)
   }
 
   const handleNoteClose = () => {
-    return setIsShowingModal_note(false); setNoteType(''); setNote('')
-    
-    	changeDate = (field, event) => {
-    			const newState = Object.assign({}, state)
+    setIsShowingModal_note(false); setNoteType(''); setNote('')
   }
 
   const changeDate = (field, event) => {
@@ -161,10 +154,7 @@ function VolunteerHoursView(props) {
   }
 
   const handleImageViewerClose = () => {
-    return setIsShowingModal_picture(false); setFileUrl('')
-    
-      render() {
-        const {personId, myFrequentPlaces, setMyFrequentPlace, volunteerEvents, volunteerList, volunteerTypes, accessRoles, fetchingRecord} = props
+    setIsShowingModal_picture(false); setFileUrl('')
   }
 
   const {personId, myFrequentPlaces, setMyFrequentPlace, volunteerEvents, volunteerList, volunteerTypes, accessRoles, fetchingRecord} = props

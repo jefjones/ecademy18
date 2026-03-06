@@ -24,8 +24,6 @@ function GalleryListView(props) {
   const [isShowingModal_comment, setIsShowingModal_comment] = useState(true)
   const [comments, setComments] = useState([])
 
-  const {personId, myFrequentPlaces, setMyFrequentPlace, galleryList, students, fetchingRecord, coursesScheduled} = props
-        const {filter={},  isShowingModal_comment, comments} = state
   
         return (
           <div className={styles.container}>

@@ -12,8 +12,7 @@ function InputText(props) {
 
   const {name, label, placeholder, value, defaultValue, error, isPasswordType=false, size, height, maxLength=100, inputClassName="",
               	labelClass="", onEnterKey, noShadow, instructions, instructionsBelow, required=false, whenFilled, autoFocus, onBlur,
-  							onDoubleClick=() => {}, autoComplete} = props
-  			
+  		} = props
   
   		  return (
   		    <div className={classes(styles.container, inputClassName)}>

@@ -17,8 +17,6 @@ function WorkAddView(props) {
   const [file, setFile] = useState({})
   const [isShowingChooseEntry, setIsShowingChooseEntry] = useState(false)
 
-  const {isNewUser, languageList, groupList, personId, workId, addOrUpdateDocument, groupChosen} = props
-            let {isShowingSectionInfo, isShowingChooseEntry, runVerifyForm, runClearForm} = state
   
             return (
               <div className={styles.container}>

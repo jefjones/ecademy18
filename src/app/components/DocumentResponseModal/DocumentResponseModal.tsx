@@ -34,7 +34,6 @@ function DocumentResponseModal(props) {
   const [isShowingModal_remove, setIsShowingModal_remove] = useState(false)
   const [fileList, setFileList] = useState([<L p={p} t={`First file`}/>, <L p={p} t={`Second file`}/>, <L p={p} t={`Third file`}/>, <L p={p} t={`Fourth file`}/>, <L p={p} t={`Firth file`}/>, <L p={p} t={`Sixth file`}/>, <L p={p} t={`Seventh file`}/>, <L p={p} t={`Eighth file`}/>, <L p={p} t={`Ninth file`}/>])
   const [responseVisitedTypeCode, setResponseVisitedTypeCode] = useState(props.clickedUrl && props.clickedUrl.responseVisitedTypeCode)
-  const [fileTypeDisplay, setFileTypeDisplay] = useState(undefined)
   const [setVisitedAlready, setSetVisitedAlready] = useState(undefined)
   const [p, setP] = useState(undefined)
   const [studentAssignmentResponseId, setStudentAssignmentResponseId] = useState(undefined)
@@ -162,27 +161,18 @@ function DocumentResponseModal(props) {
 
   const handleRemoveOpen = (studentAssignmentResponseId, deleteFile='') => {
     return setIsShowingModal_remove(true); setStudentAssignmentResponseId(studentAssignmentResponseId); setDeleteFile(deleteFile)
-      handleRemoveClose = () => setIsShowingModal_remove(false)
-      handleRemove = () => {
-          const {handleRemove, personId} = props
-  }
 
+  }
   const handleRemoveClose = () => {
     return setIsShowingModal_remove(false)
-      handleRemove = () => {
-          const {handleRemove, personId} = props
-  }
 
-  const handleRemove = (emove(personId, studentAssignmentResponseId, deleteFile) => {
+  }
+  const handleRemove = (personId, studentAssignmentResponseId, deleteFile) => {
     
   }
 
   const setEditTextResponse = () => {
     
-    			let data = Object.assign({}, data)
-    			data.responseTypeName = 'STUDENTRESPONSE'
-    			setData(data)
-    	
   }
 
   const fileTypeDisplay = () => {
@@ -208,10 +198,7 @@ function DocumentResponseModal(props) {
     	
   }
 
-  const {clickedUrl, student, handleClose, className, course, accessRoles, companyConfig, fileUploads, websiteLinks, textResponses,
-  							assignment} = props
-        const {data={ assignment: {}}, errorTextResponse, errorWebsiteLink, errorResponseType, errorFileUpload, isShowingModal_remove,
-  		 					responseVisitedTypeCode, isSubmitted, fileTypeDisplay} = state
+  const {clickedUrl, student, handleClose, className, course, accessRoles, companyConfig, fileUploads, websiteLinks, textResponses} = props
         const config = componentConfig
         const djsConfig = djsConfig
         const eventHandlers = {

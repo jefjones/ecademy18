@@ -113,16 +113,6 @@ class ExcelFile extends Component {
         return `${filename}.${extension}`
     }
 
-    render() {
-        const { hideElement, element } = this.props
-
-        if (hideElement) {
-            return null
-        } else {
-            return (<span onClick={this.handleDownload}>{element}</span>)
-        }
-        
-    }
 }
 
 export default ExcelFile

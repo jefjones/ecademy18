@@ -30,7 +30,6 @@ function StudentScheduleView(props) {
   const [isShowingModal_remove, setIsShowingModal_remove] = useState(false)
   const [isShowingModal_noStudent, setIsShowingModal_noStudent] = useState(false)
   const [scheduleAssignByMathId, setScheduleAssignByMathId] = useState('')
-  const [studentPersonId, setStudentPersonId] = useState(this.props.studentPersonId)
   const [intervalId, setIntervalId] = useState(props.personConfig.intervalId || props.companyConfig.intervalId)
   const [hideSearch, setHideSearch] = useState(true)
   const [schoolYearId, setSchoolYearId] = useState(props.personConfig.schoolYearId || props.companyConfig.schoolYearId)
@@ -50,9 +49,6 @@ function StudentScheduleView(props) {
   const {me, personId, studentSchedule, accessRoles, students, mathNames, fetchingRecord, companyConfig={}, studentAssignmentsInit,
   							removeStudentCourseAssign, intervals, personConfig, learningPathways, courseTypes, classPeriods, studentFirstName, studentLastName,
   							facilitators, openRegistration, schoolYears, myFrequentPlaces, setMyFrequentPlace, scheduledCourses} = props
-        const {isShowingModal_remove, scheduleAssignByMathId, studentPersonId, classPeriodId, facilitatorPersonId, courseTypeId, sortByHeadings={},
-  							learningPathwayId, intervalId, hideSearch, isShowingModal_noStudent, schoolYearId, hideMoreClasses, isShowingModal_addCourse,
-  							isShowingModal_billings, financeBillings, courseScheduledId, isShowingModal_finalizeGrades, isShowingModal_notAccredited} = state
   
   			let student = (students && students.length > 0 && students.filter(m => m.id === studentPersonId)[0]) || {}
   			let interval = intervalId && intervals && intervals.length > 0 && intervals.filter(m => m.intervalId === intervalId)[0]

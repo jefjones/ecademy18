@@ -61,7 +61,6 @@ function TranscriptAddView(props) {
     
           const {addOrUpdateTranscript, personId} = props
     			
-    			let errors = Object.assign({}, errors)
           let hasError = false
     			let missingInfoMessage = []
     
@@ -134,8 +133,6 @@ function TranscriptAddView(props) {
 
   const handleChange = (event) => {
     
-    				let transcript = Object.assign({}, transcript)
-    				transcript[event.target.name] = event.target.value
     				if (event.target.name === 'firstInterval' || event.target.name === 'secondInterval' || event.target.name === 'thirdInterval' || event.target.name === 'fourthInterval')
     						transcript[event.target.name] = event.target.value.toUpperCase()
     				else
@@ -152,17 +149,12 @@ function TranscriptAddView(props) {
 
   const handleRemoveOpen = (transcriptId) => {
     return setIsShowingModal_remove(true); setTranscriptId(transcriptId)
-    		handleRemoveClose = () => setIsShowingModal_remove(false); setTranscriptId('')
-        handleRemove = () => {
-    				const {personId, removeTranscript} = props
-  }
 
+  }
   const handleRemoveClose = () => {
     return setIsShowingModal_remove(false); setTranscriptId('')
-        handleRemove = () => {
-    				const {personId, removeTranscript} = props
-  }
 
+  }
   const handleRemove = () => {
     
     				const {personId, removeTranscript} = props
@@ -174,19 +166,14 @@ function TranscriptAddView(props) {
 
   const handleMissingInfoOpen = (messageInfoIncomplete) => {
     return setIsShowingModal_missingInfo(true); setMessageInfoIncomplete(messageInfoIncomplete)
-    		handleMissingInfoClose = () => setIsShowingModal_missingInfo(false); setMessageInfoIncomplete('')
     
-    		handleSelectedStudent = (selectedStudent) => {
-    				const {personId, getTranscripts} = props
-  }
 
+  }
   const handleMissingInfoClose = () => {
     return setIsShowingModal_missingInfo(false); setMessageInfoIncomplete('')
     
-    		handleSelectedStudent = (selectedStudent) => {
-    				const {personId, getTranscripts} = props
-  }
 
+  }
   const handleSelectedStudent = (selectedStudent) => {
     
     				const {personId, getTranscripts} = props
@@ -219,8 +206,6 @@ function TranscriptAddView(props) {
     return setTranscript(transcript)
   }
 
-  const {personId, myFrequentPlaces, setMyFrequentPlace, gradeLevels, schoolYears, students, transcripts={}, fetchingRecord} = props
-  			const {transcript={}, errors, isShowingModal_remove, messageInfoIncomplete, isShowingModal_missingInfo, selectedStudent} = state
   
   			let headings = [{}, {},
   					{label: <L p={p} t={`School year`}/>, tightText: true},

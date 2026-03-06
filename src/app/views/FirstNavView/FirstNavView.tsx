@@ -47,7 +47,6 @@ function FirstNavView(props) {
   const [valueMessageTab, setValueMessageTab] = useState(0)
   const [slotInfo, setSlotInfo] = useState({})
   const [chosenEvent, setChosenEvent] = useState({})
-  const [registrationPersonId, setRegistrationPersonId] = useState(this.props.registrationPersonId)
   const [isShowingModal_nav, setIsShowingModal_nav] = useState(false)
   const [isShowingModal_event, setIsShowingModal_event] = useState(false)
   const [isShowingModal_removeLearner, setIsShowingModal_removeLearner] = useState(false)
@@ -200,128 +199,50 @@ function FirstNavView(props) {
 
   const handleScheduleClose = () => {
     return setIsShowingModal_nav(false)
-        handleScheduleOpen = (slotInfo) => setIsShowingModal_nav(true); setSlotInfo(slotInfo)
-        handleEventClose = () => setIsShowingModal_event(false)
-        handleEventOpen = (event) => setIsShowingModal_event(true); setChosenEvent(event)
-        handleRemoveLearnerClose = () => setIsShowingModal_removeLearner(false)
-        handleRemoveLearnerOpen = () => setIsShowingModal_removeLearner(true)
-        handleRemoveMentorClose = () => setIsShowingModal_removeMentor(false)
-        handleRemoveMentorOpen = () => setIsShowingModal_removeMentor(true)
-        handleRemoveCourseClose = () => setIsShowingModal_removeCourse(false)
-        handleRemoveCourseOpen = () => setIsShowingModal_removeCourse(true)
-        handleRemoveAssessmentClose = () => setIsShowingModal_removeAssessment(false)
-        handleRemoveAssessmentOpen = () => setIsShowingModal_removeAssessment(true)
-    		handleAllRemoveRecommendationOpen = () => setIsShowingModal_removeRecommendations(true)
   }
 
   const handleScheduleOpen = (slotInfo) => {
     return setIsShowingModal_nav(true); setSlotInfo(slotInfo)
-        handleEventClose = () => setIsShowingModal_event(false)
-        handleEventOpen = (event) => setIsShowingModal_event(true); setChosenEvent(event)
-        handleRemoveLearnerClose = () => setIsShowingModal_removeLearner(false)
-        handleRemoveLearnerOpen = () => setIsShowingModal_removeLearner(true)
-        handleRemoveMentorClose = () => setIsShowingModal_removeMentor(false)
-        handleRemoveMentorOpen = () => setIsShowingModal_removeMentor(true)
-        handleRemoveCourseClose = () => setIsShowingModal_removeCourse(false)
-        handleRemoveCourseOpen = () => setIsShowingModal_removeCourse(true)
-        handleRemoveAssessmentClose = () => setIsShowingModal_removeAssessment(false)
-        handleRemoveAssessmentOpen = () => setIsShowingModal_removeAssessment(true)
-    		handleAllRemoveRecommendationOpen = () => setIsShowingModal_removeRecommendations(true)
   }
 
   const handleEventClose = () => {
     return setIsShowingModal_event(false)
-        handleEventOpen = (event) => setIsShowingModal_event(true); setChosenEvent(event)
-        handleRemoveLearnerClose = () => setIsShowingModal_removeLearner(false)
-        handleRemoveLearnerOpen = () => setIsShowingModal_removeLearner(true)
-        handleRemoveMentorClose = () => setIsShowingModal_removeMentor(false)
-        handleRemoveMentorOpen = () => setIsShowingModal_removeMentor(true)
-        handleRemoveCourseClose = () => setIsShowingModal_removeCourse(false)
-        handleRemoveCourseOpen = () => setIsShowingModal_removeCourse(true)
-        handleRemoveAssessmentClose = () => setIsShowingModal_removeAssessment(false)
-        handleRemoveAssessmentOpen = () => setIsShowingModal_removeAssessment(true)
-    		handleAllRemoveRecommendationOpen = () => setIsShowingModal_removeRecommendations(true)
   }
 
   const handleEventOpen = (event) => {
     return setIsShowingModal_event(true); setChosenEvent(event)
-        handleRemoveLearnerClose = () => setIsShowingModal_removeLearner(false)
-        handleRemoveLearnerOpen = () => setIsShowingModal_removeLearner(true)
-        handleRemoveMentorClose = () => setIsShowingModal_removeMentor(false)
-        handleRemoveMentorOpen = () => setIsShowingModal_removeMentor(true)
-        handleRemoveCourseClose = () => setIsShowingModal_removeCourse(false)
-        handleRemoveCourseOpen = () => setIsShowingModal_removeCourse(true)
-        handleRemoveAssessmentClose = () => setIsShowingModal_removeAssessment(false)
-        handleRemoveAssessmentOpen = () => setIsShowingModal_removeAssessment(true)
-    		handleAllRemoveRecommendationOpen = () => setIsShowingModal_removeRecommendations(true)
   }
 
   const handleRemoveLearnerClose = () => {
     return setIsShowingModal_removeLearner(false)
-        handleRemoveLearnerOpen = () => setIsShowingModal_removeLearner(true)
-        handleRemoveMentorClose = () => setIsShowingModal_removeMentor(false)
-        handleRemoveMentorOpen = () => setIsShowingModal_removeMentor(true)
-        handleRemoveCourseClose = () => setIsShowingModal_removeCourse(false)
-        handleRemoveCourseOpen = () => setIsShowingModal_removeCourse(true)
-        handleRemoveAssessmentClose = () => setIsShowingModal_removeAssessment(false)
-        handleRemoveAssessmentOpen = () => setIsShowingModal_removeAssessment(true)
-    		handleAllRemoveRecommendationOpen = () => setIsShowingModal_removeRecommendations(true)
   }
 
   const handleRemoveLearnerOpen = () => {
     return setIsShowingModal_removeLearner(true)
-        handleRemoveMentorClose = () => setIsShowingModal_removeMentor(false)
-        handleRemoveMentorOpen = () => setIsShowingModal_removeMentor(true)
-        handleRemoveCourseClose = () => setIsShowingModal_removeCourse(false)
-        handleRemoveCourseOpen = () => setIsShowingModal_removeCourse(true)
-        handleRemoveAssessmentClose = () => setIsShowingModal_removeAssessment(false)
-        handleRemoveAssessmentOpen = () => setIsShowingModal_removeAssessment(true)
-    		handleAllRemoveRecommendationOpen = () => setIsShowingModal_removeRecommendations(true)
   }
 
   const handleRemoveMentorClose = () => {
     return setIsShowingModal_removeMentor(false)
-        handleRemoveMentorOpen = () => setIsShowingModal_removeMentor(true)
-        handleRemoveCourseClose = () => setIsShowingModal_removeCourse(false)
-        handleRemoveCourseOpen = () => setIsShowingModal_removeCourse(true)
-        handleRemoveAssessmentClose = () => setIsShowingModal_removeAssessment(false)
-        handleRemoveAssessmentOpen = () => setIsShowingModal_removeAssessment(true)
-    		handleAllRemoveRecommendationOpen = () => setIsShowingModal_removeRecommendations(true)
   }
 
   const handleRemoveMentorOpen = () => {
     return setIsShowingModal_removeMentor(true)
-        handleRemoveCourseClose = () => setIsShowingModal_removeCourse(false)
-        handleRemoveCourseOpen = () => setIsShowingModal_removeCourse(true)
-        handleRemoveAssessmentClose = () => setIsShowingModal_removeAssessment(false)
-        handleRemoveAssessmentOpen = () => setIsShowingModal_removeAssessment(true)
-    		handleAllRemoveRecommendationOpen = () => setIsShowingModal_removeRecommendations(true)
   }
 
   const handleRemoveCourseClose = () => {
     return setIsShowingModal_removeCourse(false)
-        handleRemoveCourseOpen = () => setIsShowingModal_removeCourse(true)
-        handleRemoveAssessmentClose = () => setIsShowingModal_removeAssessment(false)
-        handleRemoveAssessmentOpen = () => setIsShowingModal_removeAssessment(true)
-    		handleAllRemoveRecommendationOpen = () => setIsShowingModal_removeRecommendations(true)
   }
 
   const handleRemoveCourseOpen = () => {
     return setIsShowingModal_removeCourse(true)
-        handleRemoveAssessmentClose = () => setIsShowingModal_removeAssessment(false)
-        handleRemoveAssessmentOpen = () => setIsShowingModal_removeAssessment(true)
-    		handleAllRemoveRecommendationOpen = () => setIsShowingModal_removeRecommendations(true)
   }
 
   const handleRemoveAssessmentClose = () => {
     return setIsShowingModal_removeAssessment(false)
-        handleRemoveAssessmentOpen = () => setIsShowingModal_removeAssessment(true)
-    		handleAllRemoveRecommendationOpen = () => setIsShowingModal_removeRecommendations(true)
   }
 
   const handleRemoveAssessmentOpen = () => {
     return setIsShowingModal_removeAssessment(true)
-    		handleAllRemoveRecommendationOpen = () => setIsShowingModal_removeRecommendations(true)
   }
 
   const handleAllRemoveRecommendationOpen = () => {
@@ -458,19 +379,14 @@ function FirstNavView(props) {
 
   const handleRegistrationMessageOpen = () => {
     return setShowModal_registrationMessage(true)
-        handleRegistrationMessageClose = () => setShowModal_registrationMessage(false)
     
-    		makeSound = () => {
-    				let audio = new Audio(AlertSound)
-  }
 
+  }
   const handleRegistrationMessageClose = () => {
     return setShowModal_registrationMessage(false)
     
-    		makeSound = () => {
-    				let audio = new Audio(AlertSound)
-  }
 
+  }
   const makeSound = () => {
     
     				const audio = new Audio(AlertSound)
@@ -498,15 +414,12 @@ function FirstNavView(props) {
 
   const handlePickupLaneImageOpen = (pickupLaneFileUpload) => {
     return setIsShowingModal_document(true); setPickupLaneFileUpload(pickupLaneFileUpload)
-      	handlePickupLaneImageClose = () => setIsShowingModal_document(false); setPickupLaneFileUpload({})
     
-        togglePickupLaneShow = () => props.togglePickupLaneShow(props.personId)
   }
 
   const handlePickupLaneImageClose = () => {
     return setIsShowingModal_document(false); setPickupLaneFileUpload({})
     
-        togglePickupLaneShow = () => props.togglePickupLaneShow(props.personId)
   }
 
   const togglePickupLaneShow = () => {

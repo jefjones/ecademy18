@@ -28,8 +28,6 @@ function DoctorNoteInviteView(props) {
   const [studentPersonId, setStudentPersonId] = useState(studentPersonId.id)
   const [doctorPersonId, setDoctorPersonId] = useState(doctorPersonId.id)
 
-  const {doctors, students} = props
-      const {isShowingModal_missingInfo, invite={}, errors={}, messageInfoIncomplete, clearDoctor, clearStudent} = state
   
       return (
           <div className={styles.container}>

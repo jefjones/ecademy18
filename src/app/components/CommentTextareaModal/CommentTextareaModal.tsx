@@ -40,7 +40,6 @@ function CommentTextareaModal(props) {
                       }
                   })
   
-          let {comment} = props
           //
           // const regex = "/<(.|\n)*?>/";
           // originalText = originalText &&

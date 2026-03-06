@@ -60,7 +60,6 @@ export function GeoLocationView(props) {
 
   const displayLocation = (position) => {
     
-    		let locations = Object.assign([], locations)
     		let location = {
     			longitude: position.coords.longitude,
     			latitude: position.coords.latitude,
@@ -81,7 +80,7 @@ export function GeoLocationView(props) {
   const displayError = (error) => {
     
     			let errors = [<L p={p} t={`Unknown error`}/>, <L p={p} t={`Permission denied by user`}/>, <L p={p} t={`Position not available`}/>, <L p={p} t={`timeout error`}/>]
-    			setMessage(errors[error.code] + '); set' + error.message(' + error.message)
+    			setMessage((errors[error.code] || '') + '; ' + error.message)
     	
   }
 
@@ -137,9 +136,6 @@ export function GeoLocationView(props) {
     	
   }
 
-  const {trackId, distance, location={}, message} = state
-  		let locations= Object.assign([], locations)
-  
       locations = doSort(locations, { sortField: 'timeStamp', isAsc: true, isNumber: false })
   
       return (

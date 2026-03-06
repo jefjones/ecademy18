@@ -92,9 +92,6 @@ function ForgotPasswordView(props) {
 
   const handleMessageOpen = () => {
     return setIsShowingModal(true)
-    
-        render() {
-            
   }
 
   return (

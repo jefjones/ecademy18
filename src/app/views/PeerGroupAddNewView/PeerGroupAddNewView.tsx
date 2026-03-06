@@ -33,10 +33,8 @@ function PeerGroupAddNewView(props) {
   }, [])
 
   let {summary, subGroupCountOptions} = props
-            let {peerGroupName, subGroupCount, peerGroupNameError, subGroupCountError, assignedSubGroup, unevenCount,
-                  unassignedMembers, memberToBeAssigned, isSubmitted} = state
-  
-            return (
+
+  return (
               <div className={styles.container}>
                   <form method="post" encType="multipart/form-data" id="my-awesome-dropzone" className={styles.form}>
                       <div className={globalStyles.pageTitle}>

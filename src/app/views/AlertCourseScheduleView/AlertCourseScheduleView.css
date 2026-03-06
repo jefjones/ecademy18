@@ -92,7 +92,8 @@
 .subDiv {
 		margin-left: 10px;
 		margin-top: 10px !important;
-		margin padding: 10px;
+		margin: 10px;
+		padding: 10px;
 }
 
 .giveMeSpace {

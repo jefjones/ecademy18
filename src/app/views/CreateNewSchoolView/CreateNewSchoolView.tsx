@@ -37,7 +37,6 @@ function CreateNewSchoolView(props) {
   const [orgName, setOrgName] = useState('')
   const [firstName, setFirstName] = useState('')
   const [lastName, setLastName] = useState('')
-  const [username, setUsername] = useState('')
   const [clave, setClave] = useState('')
   const [usernameConfirm, setUsernameConfirm] = useState('')
   const [claveConfirm, setClaveConfirm] = useState('')
@@ -217,11 +216,8 @@ function CreateNewSchoolView(props) {
 
   const handleFailedLoginOpen = () => {
     return setIsShowingFailedLogin(true); setIsSubmitted(false)
-        handleFailedLoginClose = () => {
-            setIsShowingFailedLogin(false)
-            props.logout()
-  }
 
+  }
   const handleFailedLoginClose = () => {
     
             setIsShowingFailedLogin(false)
@@ -239,15 +235,12 @@ function CreateNewSchoolView(props) {
   const handleMatchingRecordOpen = () => {
     return setIsShowingMatchingRecord(true)
     
-    		isDuplicateOrgName = (event) => {
-    				const {organizationNames} = props
-  }
 
+  }
   const isDuplicateOrgName = (event) => {
     
     				const {organizationNames} = props
     				
-    				let errors = {}
     				let isDuplicate = organizationNames && organizationNames.length > 0 && organizationNames.filter(m => m.label.replace(' ', '').toLowerCase() === user.orgName.replace(' ', '').toLowerCase())[0]
     
     				if (isDuplicate && isDuplicate.label) {
@@ -265,18 +258,10 @@ function CreateNewSchoolView(props) {
 
   const toggleDemoDetails = () => {
     
-    				let user = user
-    				user['demoDetails'] = !user['demoDetails']
-    				setUser(user)
-    		
   }
 
   const handleRadioChoice = (field, value) => {
     
-    				let user = user
-    				user[field] = value
-    				setUser(user)
-    		
   }
 
   const {loginData} = props

@@ -234,8 +234,6 @@ function CourseEntryView(props) {
   const handleRadioChoice = (field, value) => {
     
     				const {standardsRatingTables} = props
-    				let course = Object.assign({}, course)
-    				course[field] = value
     				if (field === 'gradingType' && value === 'STANDARDSRATING' && standardsRatingTables && standardsRatingTables.length === 1) {
     						course['gradingType'] = 'STANDARDSRATING'
     						course['standardsRatingTableId'] = standardsRatingTables[0].standardsRatingTableId
@@ -246,25 +244,16 @@ function CourseEntryView(props) {
 
   const handleMissingInfoOpen = (messageInfoIncomplete) => {
     return setIsShowingModal_missingInfo(true); setMessageInfoIncomplete(messageInfoIncomplete)
-    		handleMissingInfoClose = () => setIsShowingModal_missingInfo(false); setMessageInfoIncomplete('')
     
-    		handleStandardsRatingChoice = (standardsRatingTableId) => {
-    				let course = Object.assign({}, course)
-  }
 
+  }
   const handleMissingInfoClose = () => {
     return setIsShowingModal_missingInfo(false); setMessageInfoIncomplete('')
     
-    		handleStandardsRatingChoice = (standardsRatingTableId) => {
-    				let course = Object.assign({}, course)
-  }
 
+  }
   const handleStandardsRatingChoice = (standardsRatingTableId) => {
     
-    				let course = Object.assign({}, course)
-    				course['standardsRatingTableId'] = standardsRatingTableId
-    				setCourse(course)
-    		
   }
 
   const changePrerequisiteFirst = (values) => {
@@ -280,8 +269,6 @@ function CourseEntryView(props) {
   }
 
   const {personId, myFrequentPlaces, setMyFrequentPlace, learningPathways, companyConfig={}, gradeLevels, standardsRatingTables, courses=[]} = props
-        const {course={}, errorCourseName, errorLearningPathway, messageInfoIncomplete, errorCredits, errorFromGradeLevelId, errorToGradeLevelId,
-                isShowingModal_missingInfo, localCoursePrerequisites } = state
   
         return (
           <div className={styles.container}>

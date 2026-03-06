@@ -32,7 +32,6 @@ function DoctorNoteAddView(props) {
   const [isShowingFileUpload, setIsShowingFileUpload] = useState(undefined)
   const [loadingFiles, setLoadingFiles] = useState(undefined)
   const [fileUploads, setFileUploads] = useState(undefined)
-  const [doctorNoteId, setDoctorNoteId] = useState(undefined)
   const [isShowingModal_removeFileUpload, setIsShowingModal_removeFileUpload] = useState(undefined)
   const [fileUpload, setFileUpload] = useState(undefined)
   const [studentPersonId, setStudentPersonId] = useState(undefined)
@@ -50,7 +49,6 @@ function DoctorNoteAddView(props) {
 
   const changeNote = (event) => {
     
-    			let doctorNote = Object.assign({}, doctorNote)
     	    const field = event.target.name
     	    doctorNote[field] = event.target.value
     			if (field === 'companyId') {
@@ -72,8 +70,6 @@ function DoctorNoteAddView(props) {
     			//When the file upload is used, it will create the new ExcusedAbsence record plus let the files be accrued if the user wants to enter
     			//	more than one file.  But as soon as the page's submit button is used (processform), then the user is submitting the entire record which may have a note.
     			//For the user (either parent, student or admin), the chosen absence records should then disappear from this list.
-          const {addOrUpdateDoctorNote, personId, doctorNoteInviteId} = props
-          const {doctorNote={}} = state
     			let errors = {}
     			let missingInfoMessage = []
     
@@ -119,44 +115,22 @@ function DoctorNoteAddView(props) {
 
   const handleMissingInfoOpen = (messageInfoIncomplete) => {
     return setIsShowingModal_missingInfo(true); setMessageInfoIncomplete(messageInfoIncomplete)
-    	handleMissingInfoClose = () => setIsShowingModal_missingInfo(false); setMessageInfoIncomplete('')
     
-    	handleFileUploadOpen = () => setIsShowingFileUpload(true); setLoadingFiles(true)
-    	handleFileUploadClose = () => setIsShowingFileUpload(false); setLoadingFiles(false)
-    	handleFileUploadSubmit = () => {
-    			//When the file upload is used, it will create the new DoctorNote record plus let the files be accrued if the user wants to enter
-    			//	more than one file.  But as soon as the page's submit button is used (processForm), then the user is submitting the entire record which may have a note.
-    			const {personId} = props
-  }
 
+  }
   const handleMissingInfoClose = () => {
     return setIsShowingModal_missingInfo(false); setMessageInfoIncomplete('')
     
-    	handleFileUploadOpen = () => setIsShowingFileUpload(true); setLoadingFiles(true)
-    	handleFileUploadClose = () => setIsShowingFileUpload(false); setLoadingFiles(false)
-    	handleFileUploadSubmit = () => {
-    			//When the file upload is used, it will create the new DoctorNote record plus let the files be accrued if the user wants to enter
-    			//	more than one file.  But as soon as the page's submit button is used (processForm), then the user is submitting the entire record which may have a note.
-    			const {personId} = props
-  }
 
+  }
   const handleFileUploadOpen = () => {
     return setIsShowingFileUpload(true); setLoadingFiles(true)
-    	handleFileUploadClose = () => setIsShowingFileUpload(false); setLoadingFiles(false)
-    	handleFileUploadSubmit = () => {
-    			//When the file upload is used, it will create the new DoctorNote record plus let the files be accrued if the user wants to enter
-    			//	more than one file.  But as soon as the page's submit button is used (processForm), then the user is submitting the entire record which may have a note.
-    			const {personId} = props
-  }
 
+  }
   const handleFileUploadClose = () => {
     return setIsShowingFileUpload(false); setLoadingFiles(false)
-    	handleFileUploadSubmit = () => {
-    			//When the file upload is used, it will create the new DoctorNote record plus let the files be accrued if the user wants to enter
-    			//	more than one file.  But as soon as the page's submit button is used (processForm), then the user is submitting the entire record which may have a note.
-    			const {personId} = props
-  }
 
+  }
   const handleFileUploadSubmit = () => {
     
     			//When the file upload is used, it will create the new DoctorNote record plus let the files be accrued if the user wants to enter
@@ -193,25 +167,16 @@ function DoctorNoteAddView(props) {
   const handleInputFile = (selectedFile) => {
     return setSelectedFile(selectedFile)
     
-    	handleRemoveFileUploadOpen = (fileUpload) => setIsShowingModal_removeFileUpload(true); setFileUpload(fileUpload)
-    	handleRemoveFileUploadClose = () => setIsShowingModal_removeFileUpload(false); setFileUpload([])
-    	handleRemoveFileUpload = () => {
-    			const {removeDoctorNoteFileUpload, personId} = props
-  }
 
+  }
   const handleRemoveFileUploadOpen = (fileUpload) => {
     return setIsShowingModal_removeFileUpload(true); setFileUpload(fileUpload)
-    	handleRemoveFileUploadClose = () => setIsShowingModal_removeFileUpload(false); setFileUpload([])
-    	handleRemoveFileUpload = () => {
-    			const {removeDoctorNoteFileUpload, personId} = props
-  }
 
+  }
   const handleRemoveFileUploadClose = () => {
     return setIsShowingModal_removeFileUpload(false); setFileUpload([])
-    	handleRemoveFileUpload = () => {
-    			const {removeDoctorNoteFileUpload, personId} = props
-  }
 
+  }
   const handleRemoveFileUpload = () => {
     
     			const {removeDoctorNoteFileUpload, personId} = props
@@ -229,15 +194,9 @@ function DoctorNoteAddView(props) {
 
   const changeDate = (field, event) => {
     
-    			let doctorNote = Object.assign({}, doctorNote)
-    			doctorNote[field] = event.target.value
-    			setDoctorNote(doctorNote)
-    	
   }
 
   const {personId, schools, students} = props
-      const {isShowingModal_missingInfo, doctorNote={}, messageInfoIncomplete, isShowingModal_removeFileUpload, isShowingFileUpload, selectedFile,
-  						loadingFiles, student, errors={}, clearStudent} = state
   
   		let studentList = Object.assign([], students)
   

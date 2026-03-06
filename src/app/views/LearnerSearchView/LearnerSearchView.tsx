@@ -27,7 +27,6 @@ import {doSort} from '../../utils/sort'
 
 function LearnerSearchView(props) {
   const [valueClipboardTab, setValueClipboardTab] = useState(0)
-  const [students, setStudents] = useState([])
   const [hideSearch, setHideSearch] = useState(false)
   const [hideMoreOptions, setHideMoreOptions] = useState(true)
   const [nameEntry, setNameEntry] = useState('')

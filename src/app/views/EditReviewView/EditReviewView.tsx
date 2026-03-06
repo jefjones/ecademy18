@@ -94,8 +94,6 @@ const borderRadius  = "4px"
 function EditReviewView(props) {
   const [hasInitialized, setHasInitialized] = useState(false)
   const [tinyEditorInitialized, setTinyEditorInitialized] = useState(false)
-  const [sidePanel_open, setSidePanel_open] = useState(this.props.mediaQuery === 'large' || this.props.leftSidePanelOpen)
-  const [sidePanel_docked, setSidePanel_docked] = useState(this.props.mediaQuery === 'large')
   const [errors, setErrors] = useState({})
   const [alreadyProcessed, setAlreadyProcessed] = useState(false)
   const [editDetailsUpdated, setEditDetailsUpdated] = useState('empty')
@@ -134,7 +132,6 @@ function EditReviewView(props) {
   const [savedCursorPosition, setSavedCursorPosition] = useState(null)
   const [isShowingLoadingModal, setIsShowingLoadingModal] = useState(false)
   const [isShowingUpdateContentModal, setIsShowingUpdateContentModal] = useState(false)
-  const [fetchingRecord, setFetchingRecord] = useState(this.props.fetchingRecord && this.props.fetchingRecord.chapterText)
   const [isShowingEndOfDocument, setIsShowingEndOfDocument] = useState(false)
   const [saveWorkSpaceTime, setSaveWorkSpaceTime] = useState(new Date())
   const [hideEditorsVersions, setHideEditorsVersions] = useState(props.isEditor || (props.tabsData && props.tabsData.tabs && props.tabsData.tabs.length > 1) ? false : true)
@@ -297,10 +294,10 @@ function EditReviewView(props) {
         
   }, [])
 
-  const setSavedCursorPosition = () => {
+  const saveCursorPosition = () => {
     
     				
-    				savedCursorPosition = saveSelection(document.getElementById('editorDiv'))
+    				setSavedCursorPosition(saveSelection(document.getElementById('editorDiv')))
     		
   }
 
@@ -992,7 +989,6 @@ function EditReviewView(props) {
             //4. Set the highlight on the sentence.
             //e.preventDefault();
             let {toggleLeftSidePanelOpen, setVisitedHrefId, personId, workSummary, workId, isTranslation, getTranslation} = props
-            let {currentHrefId} = state
             let newHrefId = ""
     
             let spans = document.getElementById('editorDiv') && document.getElementById('editorDiv').getElementsByTagName('SPAN')
@@ -1396,12 +1392,10 @@ function EditReviewView(props) {
                     let originalNode = document.getElementById(element.id)
                     if (!document.getElementById('textNewBegin' + element.id)) {
                         let targetBegin = document.createRange().createContextualFragment(createTarget('Begin'))
-                        targetBegin.onclick = () => textNewLastStep('Begin')
                         originalNode.parentNode.insertBefore(targetBegin.childNodes[0], originalNode)
                     }
                     if (!document.getElementById('textNewEnd' + element.id)) {
                         let targetEnd = document.createRange().createContextualFragment(createTarget('End'))
-                        targetEnd.onclick = () => textNewLastStep('End')
                         let nextSibling = originalNode.nextSibling
                         if (nextSibling) {
                             originalNode.parentNode.insertBefore(targetEnd.childNodes[0], nextSibling)
@@ -1452,12 +1446,10 @@ function EditReviewView(props) {
                     let originalNode = document.getElementById(element.id)
                     if (!document.getElementById('breakNewBegin' + element.id)) {
                         let targetBegin = document.createRange().createContextualFragment(createTarget('Begin'))
-                        targetBegin.onclick = () => breakNewLastStep('Begin')
                         originalNode.parentNode.insertBefore(targetBegin.childNodes[0], originalNode)
                     }
                     if (!document.getElementById('breakNewEnd' + element.id)) {
                         let targetEnd = document.createRange().createContextualFragment(createTarget('End'))
-                        targetEnd.onclick = () => breakNewLastStep('End')
                         let nextSibling = originalNode.nextSibling
                         if (nextSibling) {
                             originalNode.parentNode.insertBefore(targetEnd.childNodes[0], nextSibling)
@@ -1522,13 +1514,11 @@ function EditReviewView(props) {
                 //Begin target
                 if (!document.getElementById('breakDeleteBegin' + element.id)) {
                     let targetBegin = document.createRange().createContextualFragment(createTarget('Begin'))
-                    targetBegin.onclick = () => breakDeleteLastStep('Begin')
                     firstChild.parentNode.insertBefore(targetBegin.firstElementChild, firstChild); //.childNodes[0]
                 }
                 //End target
                 if (!document.getElementById('breakDeleteEnd' + element.id)) {
                     let targetEnd = document.createRange().createContextualFragment(createTarget('End'))
-                    targetEnd.onclick =  () => breakDeleteLastStep('End')
                     let nextSibling = lastChild.nextSibling
                     if (nextSibling) {
                         originalNode.parentNode.insertBefore(targetEnd.firstElementChild, nextSibling); //.childNodes[0]
@@ -1699,7 +1689,6 @@ function EditReviewView(props) {
             let {setEditDetail, setVisitedHrefId, isAuthor, personId, workId, workSummary, tabsData, setSentenceChosen,
                     draftComparison, isDraftView, isTranslation, toggleLeftSidePanelOpen, getTranslation, editReview, leftSidePanelOpen,
                     editDetails, isEditor} = props
-            let {searchChoice, saveSelection, restoreSelection, currentHrefId, currentSentence} = state
             e && e.stopPropagation()
             e && e.preventDefault()
             //hideContextEditReviewMenu();
@@ -1754,8 +1743,8 @@ function EditReviewView(props) {
                 if (document.getElementById(standardHrefId(currentHrefId)))
                     revertEditBackgroundColorByPendingOrNot(standardHrefId(currentHrefId))
     
-                setCurrentHrefId(writerHrefId(element.id)); set//this is a global variable.  This should be the left-side hrefId type(~^
-                    currentSentence: document.getElementById(writerHrefId(element.id)) ? document.getElementById(writerHrefId(element.id)).innerHTML : '')
+                setCurrentHrefId(writerHrefId(element.id))
+                setCurrentSentence(document.getElementById(writerHrefId(element.id)) ? document.getElementById(writerHrefId(element.id)).innerHTML : '')
     
                 setVisitedHrefId(workId, standardHrefId(element.id), element.innerHTML); //The author has freestyle editing which saves editDetails but then saves chapterText directly, but don't run a fucntion that will recall the redux store
                 if (isTranslation) {
@@ -2075,17 +2064,13 @@ function EditReviewView(props) {
 
   const handleMissingBookmarkClose = () => {
     return setIsShowingMissingBookmarkModal(false)
-        handleDeleteClose = () => setIsShowingDeleteModal(false)
-        handleDeleteOpen = () => {
-            
-  }
 
+  }
+  }
   const handleDeleteClose = () => {
     return setIsShowingDeleteModal(false)
-        handleDeleteOpen = () => {
-            
-  }
 
+  }
   const handleDeleteOpen = () => {
     
             
@@ -2106,109 +2091,44 @@ function EditReviewView(props) {
 
   const handleMovedSentenceErrorClose = () => {
     return setIsShowingMovedSentenceError(false)
-        handleCutPasteMessageOpen = () => setIsShowingCutPasteMessage(true)
-        handleCutPasteMessageClose = () => setIsShowingCutPasteMessage(false)
-        handleLoadingModalOpen = () => setIsShowingLoadingModal(true)
-        handleLoadingModalClose = () => setIsShowingLoadingModal(false)
-        handleUpdateContentModalOpen = () => setIsShowingUpdateContentModal(true)
-        handleUpdateContentModalClose = () => setIsShowingUpdateContentModal(false)
-        handleEndOfDocumentOpen = () => setIsShowingEndOfDocument(true)
-        handleEndOfDocumentClose = () => setIsShowingEndOfDocument(false)
-        handleImageUploadOpen = () => setIsShowingImageUpload(true)
-        handleImageUploadClose = () => {
-            
-  }
 
+  }
   const handleCutPasteMessageOpen = () => {
     return setIsShowingCutPasteMessage(true)
-        handleCutPasteMessageClose = () => setIsShowingCutPasteMessage(false)
-        handleLoadingModalOpen = () => setIsShowingLoadingModal(true)
-        handleLoadingModalClose = () => setIsShowingLoadingModal(false)
-        handleUpdateContentModalOpen = () => setIsShowingUpdateContentModal(true)
-        handleUpdateContentModalClose = () => setIsShowingUpdateContentModal(false)
-        handleEndOfDocumentOpen = () => setIsShowingEndOfDocument(true)
-        handleEndOfDocumentClose = () => setIsShowingEndOfDocument(false)
-        handleImageUploadOpen = () => setIsShowingImageUpload(true)
-        handleImageUploadClose = () => {
-            
-  }
 
+  }
   const handleCutPasteMessageClose = () => {
     return setIsShowingCutPasteMessage(false)
-        handleLoadingModalOpen = () => setIsShowingLoadingModal(true)
-        handleLoadingModalClose = () => setIsShowingLoadingModal(false)
-        handleUpdateContentModalOpen = () => setIsShowingUpdateContentModal(true)
-        handleUpdateContentModalClose = () => setIsShowingUpdateContentModal(false)
-        handleEndOfDocumentOpen = () => setIsShowingEndOfDocument(true)
-        handleEndOfDocumentClose = () => setIsShowingEndOfDocument(false)
-        handleImageUploadOpen = () => setIsShowingImageUpload(true)
-        handleImageUploadClose = () => {
-            
-  }
 
+  }
   const handleLoadingModalOpen = () => {
     return setIsShowingLoadingModal(true)
-        handleLoadingModalClose = () => setIsShowingLoadingModal(false)
-        handleUpdateContentModalOpen = () => setIsShowingUpdateContentModal(true)
-        handleUpdateContentModalClose = () => setIsShowingUpdateContentModal(false)
-        handleEndOfDocumentOpen = () => setIsShowingEndOfDocument(true)
-        handleEndOfDocumentClose = () => setIsShowingEndOfDocument(false)
-        handleImageUploadOpen = () => setIsShowingImageUpload(true)
-        handleImageUploadClose = () => {
-            
-  }
 
+  }
   const handleLoadingModalClose = () => {
     return setIsShowingLoadingModal(false)
-        handleUpdateContentModalOpen = () => setIsShowingUpdateContentModal(true)
-        handleUpdateContentModalClose = () => setIsShowingUpdateContentModal(false)
-        handleEndOfDocumentOpen = () => setIsShowingEndOfDocument(true)
-        handleEndOfDocumentClose = () => setIsShowingEndOfDocument(false)
-        handleImageUploadOpen = () => setIsShowingImageUpload(true)
-        handleImageUploadClose = () => {
-            
-  }
 
+  }
   const handleUpdateContentModalOpen = () => {
     return setIsShowingUpdateContentModal(true)
-        handleUpdateContentModalClose = () => setIsShowingUpdateContentModal(false)
-        handleEndOfDocumentOpen = () => setIsShowingEndOfDocument(true)
-        handleEndOfDocumentClose = () => setIsShowingEndOfDocument(false)
-        handleImageUploadOpen = () => setIsShowingImageUpload(true)
-        handleImageUploadClose = () => {
-            
-  }
 
+  }
   const handleUpdateContentModalClose = () => {
     return setIsShowingUpdateContentModal(false)
-        handleEndOfDocumentOpen = () => setIsShowingEndOfDocument(true)
-        handleEndOfDocumentClose = () => setIsShowingEndOfDocument(false)
-        handleImageUploadOpen = () => setIsShowingImageUpload(true)
-        handleImageUploadClose = () => {
-            
-  }
 
+  }
   const handleEndOfDocumentOpen = () => {
     return setIsShowingEndOfDocument(true)
-        handleEndOfDocumentClose = () => setIsShowingEndOfDocument(false)
-        handleImageUploadOpen = () => setIsShowingImageUpload(true)
-        handleImageUploadClose = () => {
-            
-  }
 
+  }
   const handleEndOfDocumentClose = () => {
     return setIsShowingEndOfDocument(false)
-        handleImageUploadOpen = () => setIsShowingImageUpload(true)
-        handleImageUploadClose = () => {
-            
-  }
 
+  }
   const handleImageUploadOpen = () => {
     return setIsShowingImageUpload(true)
-        handleImageUploadClose = () => {
-            
-  }
 
+  }
   const handleImageUploadClose = () => {
     
             
@@ -2220,17 +2140,12 @@ function EditReviewView(props) {
 
   const handlePenspringHomeworkOpen = () => {
     return setIsShowingPenspringHomework(true)
-        handlePenspringHomeworkClose = () => setIsShowingPenspringHomework(false)
-    		handlePenspringHomework = () => {
-    				const {personId, workSummary, setPenspringHomeworkSubmitted} = props
-  }
 
+  }
   const handlePenspringHomeworkClose = () => {
     return setIsShowingPenspringHomework(false)
-    		handlePenspringHomework = () => {
-    				const {personId, workSummary, setPenspringHomeworkSubmitted} = props
-  }
 
+  }
   const handlePenspringHomework = () => {
     
     				const {personId, workSummary, setPenspringHomeworkSubmitted} = props
@@ -2243,17 +2158,12 @@ function EditReviewView(props) {
 
   const handlePenspringDistributeOpen = () => {
     return setIsShowingPenspringDistribute(true)
-        handlePenspringDistributeClose = () => setIsShowingPenspringDistribute(false)
-    		handlePenspringDistribute = () => {
-    				const {personId, workSummary, setPenspringDistributeSubmitted} = props
-  }
 
+  }
   const handlePenspringDistributeClose = () => {
     return setIsShowingPenspringDistribute(false)
-    		handlePenspringDistribute = () => {
-    				const {personId, workSummary, setPenspringDistributeSubmitted} = props
-  }
 
+  }
   const handlePenspringDistribute = () => {
     
     				const {personId, workSummary, setPenspringDistributeSubmitted} = props
@@ -2455,10 +2365,8 @@ function EditReviewView(props) {
   const handleHideEditorsVersions = () => {
     return setHideEditorsVersions(!hideEditorsVersions)
     
-    		onChangeLanguage = (event) => {
-    				const {setWorkCurrentSelected, personId, workSummary} = props
-  }
 
+  }
   const onChangeLanguage = (event) => {
     
     				const {setWorkCurrentSelected, personId, workSummary} = props

@@ -195,22 +195,14 @@ function CarpoolRequests(props) {
 
   const handleShowUsedInOpen = (requests) => {
     
-    			let listUsedIn = requests && requests.length > 0 && requests.join("<br/>")
-    			setIsShowingModal_requests(true); setListUsedIn(listUsedIn)
     	
   }
 
   const handleShowUsedInClose = () => {
     return setIsShowingModal_requests(false); setListUsedIn([])
     
-    	handleRemoveItemOpen = (carpoolRequestId) => {
-    			setIsShowingModal_remove(true); setCarpoolRequestId(carpoolRequestId)
-    	}
-      handleRemoveItemClose = () => setIsShowingModal_remove(false); setCarpoolRequestId('')
-      handleRemoveItem = () => {
-          const {removeCarpoolRequest, personId} = props
-  }
 
+  }
   const handleRemoveItemOpen = (carpoolRequestId) => {
     
     			setIsShowingModal_remove(true); setCarpoolRequestId(carpoolRequestId)
@@ -219,10 +211,8 @@ function CarpoolRequests(props) {
 
   const handleRemoveItemClose = () => {
     return setIsShowingModal_remove(false); setCarpoolRequestId('')
-      handleRemoveItem = () => {
-          const {removeCarpoolRequest, personId} = props
-  }
 
+  }
   const handleRemoveItem = () => {
     
           const {removeCarpoolRequest, personId} = props
@@ -263,26 +253,19 @@ function CarpoolRequests(props) {
 
   const handleDescriptionOpen = (areaName, description) => {
     return setIsShowingModal_description(true); setAreaName(areaName); setDescription(description)
-    	handleDescriptionClose = () => setIsShowingModal_description(false); setAreaName(''); setDescription('')
     
-    	handleFilterCarpoolArea = (event, filterCarpoolAreaId) => {
-    			const {carpool, addOrUpdateCarpoolSearchFilter, personId} = props
-  }
 
+  }
   const handleDescriptionClose = () => {
     return setIsShowingModal_description(false); setAreaName(''); setDescription('')
     
-    	handleFilterCarpoolArea = (event, filterCarpoolAreaId) => {
-    			const {carpool, addOrUpdateCarpoolSearchFilter, personId} = props
-  }
 
+  }
   const handleFilterCarpoolArea = (event, filterCarpoolAreaId) => {
     
     			const {carpool, addOrUpdateCarpoolSearchFilter, personId} = props
     			
     
-    			let filterCarpoolAreas = filterCarpoolAreas
-    			filterCarpoolAreaId = filterCarpoolAreaId ? filterCarpoolAreaId : event.target.value
     			if (filterCarpoolAreaId && filterCarpoolAreaId !== guidEmpty) {
     					let carpoolArea = carpool.carpoolAreas.filter(m => m.carpoolAreaId === filterCarpoolAreaId)[0] || {}
     					if (filterCarpoolAreas && filterCarpoolAreas.length > 0) {
@@ -360,10 +343,8 @@ function CarpoolRequests(props) {
   const handleMessageClose = () => {
     return setIsShowingModal_message(false)
     
-    	sendToNewCarpool = () => {
-    		 const {changeTabChosen, toggleOpenAddNewCarpool} = props
-  }
 
+  }
   const sendToNewCarpool = () => {
     
     		 const {changeTabChosen, toggleOpenAddNewCarpool} = props
@@ -405,17 +386,12 @@ function CarpoolRequests(props) {
 
   const handleUninviteRequestOpen = (carpoolRequestResponseId) => {
     return setIsShowingModal_uninvite(true); setCarpoolRequestResponseId(carpoolRequestResponseId)
-    	handleUninviteRequestClose = () => setIsShowingModal_uninvite(false); setCarpoolRequestResponseId('')
-    	handleUninviteRequest = () => {
-    			const {removeCarpoolRequestResponse, personId} = props
-  }
 
+  }
   const handleUninviteRequestClose = () => {
     return setIsShowingModal_uninvite(false); setCarpoolRequestResponseId('')
-    	handleUninviteRequest = () => {
-    			const {removeCarpoolRequestResponse, personId} = props
-  }
 
+  }
   const handleUninviteRequest = () => {
     
     			const {removeCarpoolRequestResponse, personId} = props
@@ -487,9 +463,6 @@ function CarpoolRequests(props) {
   const handleAcceptOrDecline = (acceptOrDecline, request, response) => {
     
     			const {personId, setCarpoolMember} = props
-    			let localPendingAnswer = Object.assign({}, localPendingAnswer)
-    			localPendingAnswer = localPendingAnswer ? localPendingAnswer.concat(response.carpoolRequestResponseId) : [response.carpoolRequestResponseId]
-    			setLocalPendingAnswer(localPendingAnswer)
     			let thisPersonId = response.responseType === 'invite' ? personId : response.responsePersonId
     			setCarpoolMember(thisPersonId, acceptOrDecline, response.carpoolRequestResponseId, thisPersonId)
     	
@@ -609,8 +582,6 @@ function CarpoolRequests(props) {
   const handleAcceptRequestFinalOpen = (carpoolRequestId, request, carpoolRequestResponse) => {
     
     			const {carpool} = props
-    			let carpoolRequest = carpool && carpool.carpoolRequests && carpool.carpoolRequests.length > 0 && carpool.carpoolRequests.filter(m => m.carpoolRequestId === carpoolRequestId)[0]
-    			setIsShowingModal_accept(true); setCarpoolRequestId(carpoolRequestId); setCarpoolRequest(carpoolRequest); setRequest(request); setCarpoolRequestResponse(carpoolRequestResponse)
     	
   }
 

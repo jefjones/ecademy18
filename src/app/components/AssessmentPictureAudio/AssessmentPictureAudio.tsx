@@ -30,7 +30,6 @@ function AssessmentPictureAudio(props) {
   const [score, setScore] = useState('')
   const [isCorrect, setIsCorrect] = useState('')
   const [errorScore, setErrorScore] = useState('')
-  const [assessmentCorrect, setAssessmentCorrect] = useState(this.props.assessmentCorrect)
   const [assessmentQuestionId, setAssessmentQuestionId] = useState('')
   const [record, setRecord] = useState(true)
   const [selectedRecording, setSelectedRecording] = useState(recordedBlob)

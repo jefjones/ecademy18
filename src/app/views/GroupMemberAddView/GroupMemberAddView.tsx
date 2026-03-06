@@ -66,20 +66,11 @@ function GroupMemberAddView(props) {
   }, [])
 
   const handleNoBulkEntryMessageOpen = () => {
-    return setIsShowingNoBulkEntryMessage(true)
-      handleNoBulkEntryMessageClose = () => setIsShowingNoBulkEntryMessage(false)
-    
-      render() {
-        const {editorInvitePending, personId, deleteInvite, acceptInvite, resendInvite, setContactCurrentSelected, group, removeMember,
-                bulkDelimiterOptions, fieldOptions} = props
+    setIsShowingNoBulkEntryMessage(true)
   }
 
   const handleNoBulkEntryMessageClose = () => {
-    return setIsShowingNoBulkEntryMessage(false)
-    
-      render() {
-        const {editorInvitePending, personId, deleteInvite, acceptInvite, resendInvite, setContactCurrentSelected, group, removeMember,
-                bulkDelimiterOptions, fieldOptions} = props
+    setIsShowingNoBulkEntryMessage(false)
   }
 
   const {editorInvitePending, personId, deleteInvite, acceptInvite, resendInvite, setContactCurrentSelected, group, removeMember,

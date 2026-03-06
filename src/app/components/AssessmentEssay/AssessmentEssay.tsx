@@ -25,7 +25,6 @@ function AssessmentEssay(props) {
   const [score, setScore] = useState('')
   const [isCorrect, setIsCorrect] = useState('')
   const [errorScore, setErrorScore] = useState('')
-  const [assessmentCorrect, setAssessmentCorrect] = useState(this.props.assessmentCorrect)
   const [p, setP] = useState(undefined)
 
   useEffect(() => {

@@ -94,10 +94,6 @@ function AssessmentCorrectSameAllView(props) {
 
   const handleScore = (personId, event) => {
     
-    			let scores = scores
-    			scores[personId] = event.target.value
-    			setScores(scores)
-    	
   }
 
   const {personId, assessment, assessmentCorrectSameAllStudents, assessmentQuestions, setPenspringTransfer, correctionTypeFilter,

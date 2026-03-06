@@ -8,7 +8,6 @@ const p = 'component'
 import L from '../../components/PageLanguage'
 
 function InputTextModal(props) {
-  const [chosenOption, setChosenOption] = useState(this.props.defaultValue)
 
   const {onClick, handleClose, className, headerClass, explainClass, heading, explain, defaultValue=0, label=<L p={p} t={`Choose option`}/>} = props
           

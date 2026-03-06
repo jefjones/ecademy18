@@ -34,7 +34,7 @@ export function AppView(props) {
 
   const {personId, children, currentPathname, accessRoles={}, adminResponsePendings, confirmSafetyAlert, confirmCheckInOrOut, confirmVolunteerHour,
   								companyConfig} = props
-  				//return (
+  				return (
               <div className={personId ? styles.app : styles.divCenter}>
                   {/* <ReactHint autoPosition events delay={100} />
                   <ReactHint persist attribute="data-custom" onRenderContent={onRenderContent}/> */}

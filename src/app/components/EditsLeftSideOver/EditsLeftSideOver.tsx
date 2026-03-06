@@ -62,66 +62,32 @@ function EditsLeftSideOver(props) {
 
   const handleSingleDeleteClose = () => {
     return setIsShowingModal_single(false)
-        handleSingleDeleteOpen = (deleteIndex) => setIsShowingModal_single(true); setDeleteIndex(deleteIndex)
-        handleAllDeleteClose = () => setIsShowingModal_all(false)
-        handleAllDeleteOpen = () => setIsShowingModal_all(true)
-        handleConfigClose = () => setIsShowingModal_config(false)
-        handleConfigOpen = () => setIsShowingModal_config(true)
     
-        render() {
-            const {labelClass, editDetailsByHrefId, personId, authorPersonId, leftSidePanelOpen, originalSentence, personConfig,
-                        updatePersonConfig, setNextHrefId} = props
-  }
 
+  }
   const handleSingleDeleteOpen = (deleteIndex) => {
     return setIsShowingModal_single(true); setDeleteIndex(deleteIndex)
-        handleAllDeleteClose = () => setIsShowingModal_all(false)
-        handleAllDeleteOpen = () => setIsShowingModal_all(true)
-        handleConfigClose = () => setIsShowingModal_config(false)
-        handleConfigOpen = () => setIsShowingModal_config(true)
     
-        render() {
-            const {labelClass, editDetailsByHrefId, personId, authorPersonId, leftSidePanelOpen, originalSentence, personConfig,
-                        updatePersonConfig, setNextHrefId} = props
-  }
 
+  }
   const handleAllDeleteClose = () => {
     return setIsShowingModal_all(false)
-        handleAllDeleteOpen = () => setIsShowingModal_all(true)
-        handleConfigClose = () => setIsShowingModal_config(false)
-        handleConfigOpen = () => setIsShowingModal_config(true)
     
-        render() {
-            const {labelClass, editDetailsByHrefId, personId, authorPersonId, leftSidePanelOpen, originalSentence, personConfig,
-                        updatePersonConfig, setNextHrefId} = props
-  }
 
+  }
   const handleAllDeleteOpen = () => {
     return setIsShowingModal_all(true)
-        handleConfigClose = () => setIsShowingModal_config(false)
-        handleConfigOpen = () => setIsShowingModal_config(true)
     
-        render() {
-            const {labelClass, editDetailsByHrefId, personId, authorPersonId, leftSidePanelOpen, originalSentence, personConfig,
-                        updatePersonConfig, setNextHrefId} = props
-  }
 
+  }
   const handleConfigClose = () => {
     return setIsShowingModal_config(false)
-        handleConfigOpen = () => setIsShowingModal_config(true)
     
-        render() {
-            const {labelClass, editDetailsByHrefId, personId, authorPersonId, leftSidePanelOpen, originalSentence, personConfig,
-                        updatePersonConfig, setNextHrefId} = props
-  }
 
+  }
   const handleConfigOpen = () => {
     return setIsShowingModal_config(true)
     
-        render() {
-            const {labelClass, editDetailsByHrefId, personId, authorPersonId, leftSidePanelOpen, originalSentence, personConfig,
-                        updatePersonConfig, setNextHrefId} = props
-  }
 
   const {labelClass, editDetailsByHrefId, personId, authorPersonId, leftSidePanelOpen, originalSentence, personConfig,
                       updatePersonConfig, setNextHrefId} = props

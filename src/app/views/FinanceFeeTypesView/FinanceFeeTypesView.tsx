@@ -30,8 +30,6 @@ function FinanceFeeTypesView(props) {
       })
   const [name, setName] = useState('')
   const [description, setDescription] = useState('')
-  const [refundType, setRefundType] = useState('')
-  const [schoolYears, setSchoolYears] = useState('')
   const [financeGlcodeId, setFinanceGlcodeId] = useState('')
   const [financeLowIncomeWaiverId, setFinanceLowIncomeWaiverId] = useState('')
   const [errors, setErrors] = useState({

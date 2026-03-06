@@ -12,7 +12,4 @@ export default class ExcelColumn extends Component {
         ]).isRequired
     }
 
-    render() {
-        return null
-    }
 }

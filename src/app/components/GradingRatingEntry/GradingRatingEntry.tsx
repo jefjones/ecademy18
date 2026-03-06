@@ -8,7 +8,6 @@ import Icon from '../Icon'
 import classes from 'classnames'
 
 export const GradingRatingEntry = ({ gradingType, studentScore={}, studentPersonId, assignmentId, handleEnterKey=()=>{}, handleScore=()=>{}, onBlurScore=()=>{}, onEnterKey=()=>{},
- 																			onPassFailIncrement=()=>{}, theScore, useType, setEditMode, isEditMode, courseScheduledId, assessmentId, onStandardLevelIncrement=()=>{},
 																			canEditScore, standards, standardsRatings, scoredAnswers, contentTypeCode, hasAssessmentQuestions, forceInputBox, chooseRecord}) => {
 
 		//forceInputBox: Force the input box to be shown on the last two assignments so that the enter key will work to go downward to enter scores for all students more easily.

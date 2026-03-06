@@ -45,17 +45,13 @@ function EditorEditList(props) {
 
   const handleCommentClose = () => {
     return setIsShowingModal_comment(false)
-        handleCommentOpen = (commentIndex) => setIsShowingModal_comment(true); setCommentIndex(commentIndex)
-        handleCommentSave = (commentText) => {
-            props.saveEditOrComment(true)(commentText)(null, false)
-  }
 
+  }
+  }
   const handleCommentOpen = (commentIndex) => {
     return setIsShowingModal_comment(true); setCommentIndex(commentIndex)
-        handleCommentSave = (commentText) => {
-            props.saveEditOrComment(true)(commentText)(null, false)
-  }
 
+  }
   const handleCommentSave = (commentText) => {
     
             props.saveEditOrComment(true)(commentText)(null, false)
@@ -65,112 +61,46 @@ function EditorEditList(props) {
 
   const handleSingleDeleteClose = () => {
     return setIsShowingModal_single(false)
-        handleSingleDeleteOpen = () => setIsShowingModal_single(true)
-        handleAllDeleteClose = () => setIsShowingModal_deleteAll(false)
-        handleAllDeleteOpen = () => setIsShowingModal_deleteAll(true)
-        handleAllAcceptClose = () => setIsShowingModal_acceptAll(false)
-        handleAllAcceptOpen = () => setIsShowingModal_acceptAll(true)
-        handleFilterClose = () => setIsShowingModal_filter(false)
-        handleFilterOpen = () => setIsShowingModal_filter(true)
-        handleInfoClose = () => setIsShowingModal_info(false)
-        handleInfoOpen = (infoIndex) => setIsShowingModal_info(true); setInfoIndex(infoIndex)
-        handleEditClose = () => setIsShowingModal_edit(false)
-        handleEditOpen = (editIndex, hrefId, hrefSentence) => setIsShowingModal_edit(true); setEditIndex(editIndex); setCurrentHrefId(hrefId); setCurrentAuthorSentence(hrefSentence)
   }
 
   const handleSingleDeleteOpen = () => {
     return setIsShowingModal_single(true)
-        handleAllDeleteClose = () => setIsShowingModal_deleteAll(false)
-        handleAllDeleteOpen = () => setIsShowingModal_deleteAll(true)
-        handleAllAcceptClose = () => setIsShowingModal_acceptAll(false)
-        handleAllAcceptOpen = () => setIsShowingModal_acceptAll(true)
-        handleFilterClose = () => setIsShowingModal_filter(false)
-        handleFilterOpen = () => setIsShowingModal_filter(true)
-        handleInfoClose = () => setIsShowingModal_info(false)
-        handleInfoOpen = (infoIndex) => setIsShowingModal_info(true); setInfoIndex(infoIndex)
-        handleEditClose = () => setIsShowingModal_edit(false)
-        handleEditOpen = (editIndex, hrefId, hrefSentence) => setIsShowingModal_edit(true); setEditIndex(editIndex); setCurrentHrefId(hrefId); setCurrentAuthorSentence(hrefSentence)
   }
 
   const handleAllDeleteClose = () => {
     return setIsShowingModal_deleteAll(false)
-        handleAllDeleteOpen = () => setIsShowingModal_deleteAll(true)
-        handleAllAcceptClose = () => setIsShowingModal_acceptAll(false)
-        handleAllAcceptOpen = () => setIsShowingModal_acceptAll(true)
-        handleFilterClose = () => setIsShowingModal_filter(false)
-        handleFilterOpen = () => setIsShowingModal_filter(true)
-        handleInfoClose = () => setIsShowingModal_info(false)
-        handleInfoOpen = (infoIndex) => setIsShowingModal_info(true); setInfoIndex(infoIndex)
-        handleEditClose = () => setIsShowingModal_edit(false)
-        handleEditOpen = (editIndex, hrefId, hrefSentence) => setIsShowingModal_edit(true); setEditIndex(editIndex); setCurrentHrefId(hrefId); setCurrentAuthorSentence(hrefSentence)
   }
 
   const handleAllDeleteOpen = () => {
     return setIsShowingModal_deleteAll(true)
-        handleAllAcceptClose = () => setIsShowingModal_acceptAll(false)
-        handleAllAcceptOpen = () => setIsShowingModal_acceptAll(true)
-        handleFilterClose = () => setIsShowingModal_filter(false)
-        handleFilterOpen = () => setIsShowingModal_filter(true)
-        handleInfoClose = () => setIsShowingModal_info(false)
-        handleInfoOpen = (infoIndex) => setIsShowingModal_info(true); setInfoIndex(infoIndex)
-        handleEditClose = () => setIsShowingModal_edit(false)
-        handleEditOpen = (editIndex, hrefId, hrefSentence) => setIsShowingModal_edit(true); setEditIndex(editIndex); setCurrentHrefId(hrefId); setCurrentAuthorSentence(hrefSentence)
   }
 
   const handleAllAcceptClose = () => {
     return setIsShowingModal_acceptAll(false)
-        handleAllAcceptOpen = () => setIsShowingModal_acceptAll(true)
-        handleFilterClose = () => setIsShowingModal_filter(false)
-        handleFilterOpen = () => setIsShowingModal_filter(true)
-        handleInfoClose = () => setIsShowingModal_info(false)
-        handleInfoOpen = (infoIndex) => setIsShowingModal_info(true); setInfoIndex(infoIndex)
-        handleEditClose = () => setIsShowingModal_edit(false)
-        handleEditOpen = (editIndex, hrefId, hrefSentence) => setIsShowingModal_edit(true); setEditIndex(editIndex); setCurrentHrefId(hrefId); setCurrentAuthorSentence(hrefSentence)
   }
 
   const handleAllAcceptOpen = () => {
     return setIsShowingModal_acceptAll(true)
-        handleFilterClose = () => setIsShowingModal_filter(false)
-        handleFilterOpen = () => setIsShowingModal_filter(true)
-        handleInfoClose = () => setIsShowingModal_info(false)
-        handleInfoOpen = (infoIndex) => setIsShowingModal_info(true); setInfoIndex(infoIndex)
-        handleEditClose = () => setIsShowingModal_edit(false)
-        handleEditOpen = (editIndex, hrefId, hrefSentence) => setIsShowingModal_edit(true); setEditIndex(editIndex); setCurrentHrefId(hrefId); setCurrentAuthorSentence(hrefSentence)
   }
 
   const handleFilterClose = () => {
     return setIsShowingModal_filter(false)
-        handleFilterOpen = () => setIsShowingModal_filter(true)
-        handleInfoClose = () => setIsShowingModal_info(false)
-        handleInfoOpen = (infoIndex) => setIsShowingModal_info(true); setInfoIndex(infoIndex)
-        handleEditClose = () => setIsShowingModal_edit(false)
-        handleEditOpen = (editIndex, hrefId, hrefSentence) => setIsShowingModal_edit(true); setEditIndex(editIndex); setCurrentHrefId(hrefId); setCurrentAuthorSentence(hrefSentence)
   }
 
   const handleFilterOpen = () => {
     return setIsShowingModal_filter(true)
-        handleInfoClose = () => setIsShowingModal_info(false)
-        handleInfoOpen = (infoIndex) => setIsShowingModal_info(true); setInfoIndex(infoIndex)
-        handleEditClose = () => setIsShowingModal_edit(false)
-        handleEditOpen = (editIndex, hrefId, hrefSentence) => setIsShowingModal_edit(true); setEditIndex(editIndex); setCurrentHrefId(hrefId); setCurrentAuthorSentence(hrefSentence)
   }
 
   const handleInfoClose = () => {
     return setIsShowingModal_info(false)
-        handleInfoOpen = (infoIndex) => setIsShowingModal_info(true); setInfoIndex(infoIndex)
-        handleEditClose = () => setIsShowingModal_edit(false)
-        handleEditOpen = (editIndex, hrefId, hrefSentence) => setIsShowingModal_edit(true); setEditIndex(editIndex); setCurrentHrefId(hrefId); setCurrentAuthorSentence(hrefSentence)
   }
 
   const handleInfoOpen = (infoIndex) => {
     return setIsShowingModal_info(true); setInfoIndex(infoIndex)
-        handleEditClose = () => setIsShowingModal_edit(false)
-        handleEditOpen = (editIndex, hrefId, hrefSentence) => setIsShowingModal_edit(true); setEditIndex(editIndex); setCurrentHrefId(hrefId); setCurrentAuthorSentence(hrefSentence)
   }
 
   const handleEditClose = () => {
     return setIsShowingModal_edit(false)
-        handleEditOpen = (editIndex, hrefId, hrefSentence) => setIsShowingModal_edit(true); setEditIndex(editIndex); setCurrentHrefId(hrefId); setCurrentAuthorSentence(hrefSentence)
   }
 
   const handleEditOpen = (editIndex, hrefId, hrefSentence) => {

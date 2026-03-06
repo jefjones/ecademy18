@@ -45,8 +45,6 @@ function TranscriptTestAddView(props) {
   const [isShowingModal_missingInfo, setIsShowingModal_missingInfo] = useState(true)
   const [messageInfoIncomplete, setMessageInfoIncomplete] = useState('')
 
-  const {personId, myFrequentPlaces, setMyFrequentPlace, students, transcripts=[], fetchingRecord} = props
-  		const {transcriptTest={}, errors, isShowingModal_remove, messageInfoIncomplete, isShowingModal_missingInfo, selectedStudent} = state
   
   		let headings = [{},{},
   				{label: <L p={p} t={`Name`}/>, tightText: true},

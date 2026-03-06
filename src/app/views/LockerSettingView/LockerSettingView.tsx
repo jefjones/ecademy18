@@ -32,8 +32,6 @@ function LockerSettingView(props) {
 				name:'',
 			})
 
-  const {levels, lockers=[], fetchingRecord} = props
-  		const {locker={}, errors, isShowingModal_remove} = state
   
   		let headings = [{},{},
   				{label: <L p={p} t={`Locker #`}/>, tightText: true},

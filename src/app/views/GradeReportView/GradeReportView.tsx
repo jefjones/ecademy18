@@ -74,14 +74,6 @@ function GradeReportView(props) {
 
   const toggleInterval = (intervalId) => {
     
-    				let intervalList = Object.assign([], intervalList)
-    				intervalList = intervalList && intervalList.length > 0 && intervalList.indexOf(intervalId) > -1
-    						? intervalList.filter(id => id !== intervalId)
-    						: intervalList && intervalList.length > 0
-    								? intervalList.concat(intervalId)
-    								: [intervalId]
-    				setIntervalList(intervalList)
-    		
   }
 
   const handleUpdateSchoolYear = ({target}) => {
@@ -107,10 +99,8 @@ function GradeReportView(props) {
   const toggleShowDeleteIcons = () => {
     return setShowDeleteIcons(!showDeleteIcons)
     
-        deleteStudentGradeFinal = (courseScheduledId, intervalId) => {
-            const {personId, removeStudentGradeFinal} = props
-  }
 
+  }
   const deleteStudentGradeFinal = (courseScheduledId, intervalId) => {
     
             const {personId, removeStudentGradeFinal} = props
@@ -121,17 +111,12 @@ function GradeReportView(props) {
 
   const handleRemoveStudentGradeFinalOpen = (courseScheduledId, intervalId) => {
     return setIsShowingModal_remove(true); setCourseScheduledId(courseScheduledId); setIntervalId(intervalId)
-    	  handleRemoveStudentGradeFinalClose = () => setIsShowingModal_remove(false)
-    	  handleRemoveStudentGradeFinal = () => {
-            const {removeStudentGradeFinal, personId, gradeReport} = props
-  }
 
+  }
   const handleRemoveStudentGradeFinalClose = () => {
     return setIsShowingModal_remove(false)
-    	  handleRemoveStudentGradeFinal = () => {
-            const {removeStudentGradeFinal, personId, gradeReport} = props
-  }
 
+  }
   const handleRemoveStudentGradeFinal = () => {
     
             const {removeStudentGradeFinal, personId, gradeReport} = props

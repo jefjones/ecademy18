@@ -62,13 +62,6 @@ function EditorInviteNameView(props) {
   const changeUser = (event) => {
     
         const field = event.target.name
-        const user = user
-        user[field] = event.target.value
-        field === "firstName" && setErrorFirstName('')
-        (field === "emailAddress" || field === "phone") && setErrorEmailAddress('')
-        field === "emailAddress" && findContactMatches(event.target.value, '')
-        field === "phone" && findContactMatches('', event.target.value)
-    
         setUser(user)
     
         showNextButton()
@@ -83,7 +76,6 @@ function EditorInviteNameView(props) {
 
   const showNextButton = () => {
     
-        const user = user
         if (user.firstName && ((user.emailAddress && validateEmail(user.emailAddress)) || (user.phone && user.phone.length > 8))) {
             setIsUserComplete(true)
         } else {

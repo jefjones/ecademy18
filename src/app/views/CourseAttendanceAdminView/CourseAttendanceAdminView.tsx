@@ -1,4 +1,4 @@
-﻿import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import styles from './CourseAttendanceAdminView.css'
 const p = 'CourseAttendanceAdminView'
@@ -115,38 +115,24 @@ function CourseAttendanceAdminView(props) {
 
   const handleMissingDataOpen = (message) => {
     return setIsShowingModal(true); setMessage(message)
-    	handleMissingDataClose = () => setIsShowingModal(false); setMessage('')
-    	handleSetColumnOpen = () => setIsShowingModal_setColumn(true)
-    	handleSetColumnClose = () => setIsShowingModal_setColumn(false)
     
-    	processForm = () => {
-    			
-  }
 
+  }
   const handleMissingDataClose = () => {
     return setIsShowingModal(false); setMessage('')
-    	handleSetColumnOpen = () => setIsShowingModal_setColumn(true)
-    	handleSetColumnClose = () => setIsShowingModal_setColumn(false)
     
-    	processForm = () => {
-    			
-  }
 
+  }
   const handleSetColumnOpen = () => {
     return setIsShowingModal_setColumn(true)
-    	handleSetColumnClose = () => setIsShowingModal_setColumn(false)
     
-    	processForm = () => {
-    			
-  }
 
+  }
   const handleSetColumnClose = () => {
     return setIsShowingModal_setColumn(false)
     
-    	processForm = () => {
-    			
-  }
 
+  }
   const processForm = () => {
     
     			
@@ -244,43 +230,24 @@ function CourseAttendanceAdminView(props) {
 
   const handleDocumentOpen = (fileUpload) => {
     return setIsShowingModal_document(true); setFileUpload(fileUpload)
-    	handleDocumentClose = () => setIsShowingModal_document(false); setFileUpload({})
     
-    	handleInstructionsOpen = (note) => setIsShowingModal_instructions(true); setNote(note)
-    	handleInstructionsClose = () => setIsShowingModal_instructions(false); setNote('')
     
-      render() {
-        const {personId, attendanceAdmin, students, fetchingRecord, companyConfig={}, personConfig, schoolYears, myFrequentPlaces, setMyFrequentPlace,
-    						accessRoles} = props
-  }
 
+  }
   const handleDocumentClose = () => {
     return setIsShowingModal_document(false); setFileUpload({})
     
-    	handleInstructionsOpen = (note) => setIsShowingModal_instructions(true); setNote(note)
-    	handleInstructionsClose = () => setIsShowingModal_instructions(false); setNote('')
     
-      render() {
-        const {personId, attendanceAdmin, students, fetchingRecord, companyConfig={}, personConfig, schoolYears, myFrequentPlaces, setMyFrequentPlace,
-    						accessRoles} = props
-  }
 
+  }
   const handleInstructionsOpen = (note) => {
     return setIsShowingModal_instructions(true); setNote(note)
-    	handleInstructionsClose = () => setIsShowingModal_instructions(false); setNote('')
     
-      render() {
-        const {personId, attendanceAdmin, students, fetchingRecord, companyConfig={}, personConfig, schoolYears, myFrequentPlaces, setMyFrequentPlace,
-    						accessRoles} = props
-  }
 
+  }
   const handleInstructionsClose = () => {
     return setIsShowingModal_instructions(false); setNote('')
     
-      render() {
-        const {personId, attendanceAdmin, students, fetchingRecord, companyConfig={}, personConfig, schoolYears, myFrequentPlaces, setMyFrequentPlace,
-    						accessRoles} = props
-  }
 
   const {personId, attendanceAdmin, students, fetchingRecord, companyConfig={}, personConfig, schoolYears, myFrequentPlaces, setMyFrequentPlace,
   						accessRoles} = props
@@ -422,5 +389,6 @@ function CourseAttendanceAdminView(props) {
   						}
         </div>
       )
+}
 }
 export default CourseAttendanceAdminView

@@ -413,10 +413,14 @@ function LearnerAddView(props) {
         // if (!user.externalId) {
         //     hasError = true;
         //     setHasError = true;
-            setState({errorBirthDate("The birth date is required" })
-            missingInfoMessage[missingInfoMessage.length] = <div className={globalStyles.moreLeft}><L p={p} t={`Birth date`}/></div>) {
+        if (!user.birthDate) {
             hasError = true
-            setErrorBirthDateerrorGradeLevel("The grade level is required")
+            setErrorBirthDate("The birth date is required")
+            missingInfoMessage[missingInfoMessage.length] = <div className={globalStyles.moreLeft}><L p={p} t={`Birth date`}/></div>
+        }
+        if (!user.gradeLevel) {
+            hasError = true
+            setErrorGradeLevel("The grade level is required")
             missingInfoMessage[missingInfoMessage.length] = <div className={globalStyles.moreLeft}><L p={p} t={`Grade level`}/></div>
         }
     
@@ -465,26 +469,17 @@ function LearnerAddView(props) {
   }
 
   const handleNoBulkEntryMessageOpen = () => {
-    return setIsShowingNoBulkEntryMessage(true)
-      handleNoBulkEntryMessageClose = () => setIsShowingNoBulkEntryMessage(false)
-    
-      handleBirthDate = (event) => {
-        let user = user
+    setIsShowingNoBulkEntryMessage(true)
   }
 
   const handleNoBulkEntryMessageClose = () => {
-    return setIsShowingNoBulkEntryMessage(false)
-    
-      handleBirthDate = (event) => {
-        let user = user
+    setIsShowingNoBulkEntryMessage(false)
   }
 
   const handleBirthDate = (event) => {
-    
-        let user = user
-        user.birthDate = event.target.value
-        setUser(user)
-      
+    let newUser = {...user}
+    newUser.birthDate = event.target.value
+    setUser(newUser)
   }
 
   const fillInEmailAddress = (event) => {
@@ -503,18 +498,11 @@ function LearnerAddView(props) {
   }
 
   const handleMissingInfoOpen = (messageInfoIncomplete) => {
-    return setIsShowingModal_missingInfo(true); setMessageInfoIncomplete(messageInfoIncomplete)
-    	handleMissingInfoClose = () => setIsShowingModal_missingInfo(false); setMessageInfoIncomplete('')
-    
-      render() {
-        const {bulkDelimiterOptions, fieldOptions, gradeLevels, loginData} = props
+    setIsShowingModal_missingInfo(true); setMessageInfoIncomplete(messageInfoIncomplete)
   }
 
   const handleMissingInfoClose = () => {
-    return setIsShowingModal_missingInfo(false); setMessageInfoIncomplete('')
-    
-      render() {
-        const {bulkDelimiterOptions, fieldOptions, gradeLevels, loginData} = props
+    setIsShowingModal_missingInfo(false); setMessageInfoIncomplete('')
   }
 
   const {bulkDelimiterOptions, fieldOptions, gradeLevels, loginData} = props

@@ -26,8 +26,6 @@ function FileFolderAddUpdateView(props) {
     		
   }, [])
 
-  const {workFolderId, workFolder, fileFolderList} = props
-            let {errorFolderName, folderName, parentWorkFolderId} = state
   
             return (
               <div className={styles.container}>

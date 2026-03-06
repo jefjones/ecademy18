@@ -191,11 +191,8 @@ function LoginView(props) {
 
   const handleFailedLoginOpen = () => {
     return setIsShowingFailedLogin(true)
-        handleFailedLoginClose = () => {
-            setIsShowingFailedLogin(false)
-            props.logout()
-  }
 
+  }
   const handleFailedLoginClose = () => {
     
             setIsShowingFailedLogin(false)
@@ -213,9 +210,6 @@ function LoginView(props) {
   const handleMatchingRecordOpen = () => {
     return setIsShowingMatchingRecord(true)
     
-        render() {
-            const {loginData} = props
-  }
 
   const {loginData} = props
           

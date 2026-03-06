@@ -35,9 +35,6 @@ function RegistrationPendingView(props) {
   const {fetchingRecord, students, companyConfig} = props
         const {personId, setRegistrationPaidDate, personConfig, registrationPending, registrationStati, myFrequentPlaces, setMyFrequentPlace} = props
   			let localRegPending = Object.assign([], registrationPending)
-  			let {isShowingModal_accept, isShowingModal_deny, orderBy, orderDirection, registrationStatusFilter, partialNameText, studentIdList,
-  						selectedGradeLevels} = state
-  
   			let headings = [
   					{label: <L p={p} t={`Paid`}/>, tightText: true, clickFunction: () => resort('paidDate'), biggerClickArea: true},
   					{label: <L p={p} t={`Entry Date`}/>, tightText: true, clickFunction: () => resort('entryDate'), biggerClickArea: true},

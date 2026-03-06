@@ -121,13 +121,10 @@ function SafetyAdminAlertView(props) {
   }
 
   const handleImageViewerClose = () => {
-    return setIsShowingModal(false); setFileUrl('')
-    
-      render() {
-        const {personId, myFrequentPlaces, setMyFrequentPlace, safetyAlerts, accessRoles, fetchingRecord} = props
+    setIsShowingModal(false); setFileUrl('')
   }
 
-  const {personId, myFrequentPlaces, setMyFrequentPlace, safetyAlerts, accessRoles, fetchingRecord} = props
+  const {myFrequentPlaces, setMyFrequentPlace, safetyAlerts, accessRoles, fetchingRecord} = props
   		
   		let localSafetyAlerts = safetyAlerts
   

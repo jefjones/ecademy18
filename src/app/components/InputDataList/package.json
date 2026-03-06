@@ -1,5 +1,5 @@
 {
     "name": "InputDataList",
-    "main": "InputDataList.js",
+    "main": "InputDataList.tsx",
     "storybook": "InputDataList.story.js"
 }

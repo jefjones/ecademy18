@@ -29,7 +29,6 @@ function MentorSummaryEditView(props) {
 					}])
   const [learningPathWayId, setLearningPathWayId] = useState('')
   const [learningPathWayName, setLearningPathWayName] = useState('')
-  const [comment, setComment] = useState('')
   const [learningPathwayName, setLearningPathwayName] = useState(undefined)
 
   // TODO: verify useEffect deps (converted from componentDidUpdate)
@@ -74,8 +73,8 @@ function MentorSummaryEditView(props) {
     
     				//This page saves the textarea entries every time the user leaves it.
     				//So, the save button here really just clears the controls.  If it is "finish" it will reroute back to dashboard.
-            setIsShowingModal_remove(false); setIsShowingModal_message(false); setPathwayComments([]); setStudentPersonId(''); setMentorCommentId(''); set//This is just for removing an entry(//This is just for removing an entry); setBut keep in mind that each learningPathwayId has a mentorCommentId separate from each other.
-    						entries([{
+            setIsShowingModal_remove(false); setIsShowingModal_message(false); setPathwayComments([]); setStudentPersonId(''); setMentorCommentId('')
+    						setEntries([{
     								mentorCommentId: '',
     								learningPathWayId: '',
     								learningPathWayName: '',
@@ -88,17 +87,13 @@ function MentorSummaryEditView(props) {
   }
 
   const changeComment = (event, learningPathwayId) => {
-    
-    				let entries = [...entries]
-    				entries = entries && entries.length > 0 && entries.map(m => {
+    setEntries(entries.map(m => {
     						if (m.learningPathwayId === learningPathwayId) {
     								m.comment = event.target.value
     								m.studentPersonId = studentPersonId
     						}
     						return m
-    				})
-    				setEntries(entries)
-    		
+    				}))
   }
 
   const onBlurComment = (learningPathwayId) => {
@@ -115,28 +110,20 @@ function MentorSummaryEditView(props) {
 
   const handleRemoveClose = () => {
     return setIsShowingModal_remove(false)
-        handleRemoveOpen = (mentorCommentId) => setIsShowingModal_remove(true); setMentorCommentId(mentorCommentId)
-        handleRemove = () => {
-    				const {removeMentorComment, personId} = props
-  }
 
+  }
   const handleRemoveOpen = (mentorCommentId) => {
     return setIsShowingModal_remove(true); setMentorCommentId(mentorCommentId)
-        handleRemove = () => {
-    				const {removeMentorComment, personId} = props
-  }
 
+  }
   const handleMessageClose = () => {
     return setIsShowingModal_message(false)
-    		handleMessageOpen = (mentorCommentId) => {
-    				const {pathwayComments} = props
-  }
 
+  }
   const handleMessageOpen = (mentorCommentId) => {
     
     				const {pathwayComments} = props
     				let entry = pathwayComments & pathwayComments.length > 0 && pathwayComments.filter(m => m.mentorCommentId === mentorCommentId)
-    				let learningPathwayName = entry && entry.learningPathwayName
     				let commment = entry && entry.comment
     				setIsShowingModal_message(true); setMentorCommentId(mentorCommentId); setLearningPathwayName(learningPathwayName); setCommment(commment)
     		
@@ -151,7 +138,6 @@ function MentorSummaryEditView(props) {
     				//btw:  We will need to cut out the time of the date and take the date that equals by the string format itself
     				//3. Replace the entries records with each pathwayComments that matches for the learningPathwayId
     				const {pathwayComments} = props
-    				let entries = [...entries]
     				let comment = pathwayComments && pathwayComments.filter(m => m.mentorCommentId === mentorCommentId)[0]
     				if (comment && comment.mentorCommentId) {
     						let theDate = moment(comment.entryDate).format('D MMM YYYY')
@@ -167,7 +153,7 @@ function MentorSummaryEditView(props) {
     		
   }
 
-  const {learners, pathwayComments} = props
+  const {learners} = props
         
   
         let headings = [{}, {}, {label: 'Date', tightText: true}, {label: 'Pathway', tightText: true}, {label: 'Read By', tightText: true}, {label: 'Comment', tightText: true}]

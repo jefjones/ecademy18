@@ -15,13 +15,7 @@ import OneFJefFooter from '../../components/OneFJefFooter'
 
 function ContributorReportView(props) {
   const params = useParams()
-  const [tabsData, setTabsData] = useState({
-            chosenTab: "edit",
-            tabs: this.props.tabs,
-            reportChoice: 'editWorksEditors',
-        })
   const [chosenTab, setChosenTab] = useState("edit")
-  const [tabs, setTabs] = useState(this.props.tabs)
   const [reportChoice, setReportChoice] = useState('editWorksEditors')
 
   const {personId, reportTable, updateFilterByField, clearFilters, filterScratch, savedFilterIdCurrent,

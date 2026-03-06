@@ -1,4 +1,5 @@
 require('dotenv/config');
+const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const isDev = process.env.NODE_ENV !== 'production';
@@ -61,6 +62,7 @@ module.exports = {
   },
 
   resolve: {
+    modules: ['node_modules', path.resolve(__dirname, 'src/app')],
     extensions: ['.ts', '.tsx', '.js', '.jsx', '.json'],
     fallback: {
       // Polyfills removed in webpack 5 — supply only what the project truly needs

@@ -1,4 +1,4 @@
-﻿import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { navigate, navigateReplace, goBack } from './'
 import styles from './StandardsRatingSettingsView.css'
@@ -130,36 +130,22 @@ function StandardsRatingSettingsView(props) {
 
   const handleNewStandardsRatingMessageOpen = () => {
     return setIsShowingModal_newInstructions(true)
-      handleNewStandardsRatingMessageClose = () => setIsShowingModal_newInstructions(false)
     
-      handleRemoveDetailOpen = (standardsRatingDetailId) => setIsShowingModal_removeDetail(true); setStandardsRatingDetailId(standardsRatingDetailId)
-      handleRemoveDetailClose = () => setIsShowingModal_removeDetail(false)
-      handleRemoveDetail = () => {
-          const {removeStandardsRatingDetail, personId} = props
-  }
 
+  }
   const handleNewStandardsRatingMessageClose = () => {
     return setIsShowingModal_newInstructions(false)
     
-      handleRemoveDetailOpen = (standardsRatingDetailId) => setIsShowingModal_removeDetail(true); setStandardsRatingDetailId(standardsRatingDetailId)
-      handleRemoveDetailClose = () => setIsShowingModal_removeDetail(false)
-      handleRemoveDetail = () => {
-          const {removeStandardsRatingDetail, personId} = props
-  }
 
+  }
   const handleRemoveDetailOpen = (standardsRatingDetailId) => {
     return setIsShowingModal_removeDetail(true); setStandardsRatingDetailId(standardsRatingDetailId)
-      handleRemoveDetailClose = () => setIsShowingModal_removeDetail(false)
-      handleRemoveDetail = () => {
-          const {removeStandardsRatingDetail, personId} = props
-  }
 
+  }
   const handleRemoveDetailClose = () => {
     return setIsShowingModal_removeDetail(false)
-      handleRemoveDetail = () => {
-          const {removeStandardsRatingDetail, personId} = props
-  }
 
+  }
   const handleRemoveDetail = () => {
     
           const {removeStandardsRatingDetail, personId} = props
@@ -172,17 +158,12 @@ function StandardsRatingSettingsView(props) {
 
   const handleRemoveTableOpen = (standardsRatingTableId, event) => {
     return setIsShowingModal_removeTable(true); setStandardsRatingTableId(standardsRatingTableId)
-      handleRemoveTableClose = () => setIsShowingModal_removeTable(false)
-      handleRemoveTable = () => {
-          const {removeStandardsRatingTable, personId} = props
-  }
 
+  }
   const handleRemoveTableClose = () => {
     return setIsShowingModal_removeTable(false)
-      handleRemoveTable = () => {
-          const {removeStandardsRatingTable, personId} = props
-  }
 
+  }
   const handleRemoveTable = () => {
     
           const {removeStandardsRatingTable, personId} = props
@@ -196,7 +177,6 @@ function StandardsRatingSettingsView(props) {
   const handleEditDetail = (standardsRatingDetailId) => {
     
     			const {standardsRatings} = props
-    			let standardsRating = standardsRatings && standardsRatings.length > 0 && standardsRatings.filter(m => m.standardsRatingDetailId === standardsRatingDetailId)[0]
     			if (standardsRating && standardsRating.name)
     					setStandardsRating(standardsRating)
     	
@@ -205,7 +185,6 @@ function StandardsRatingSettingsView(props) {
   const handleEditTable = (standardsRatingTableId, event) => {
     
     			const {standardsRatings} = props
-    			let standardsRating = standardsRatings && standardsRatings.length > 0 && standardsRatings.filter(m => m.standardsRatingTableId === standardsRatingTableId)[0]
     			if (standardsRating && standardsRating.standardsRatingName) {
     					let scaleGradeLevels = doSort(standardsRating.gradeLevels, { sortField: 'sequence', isAsc: true, isNumber: true })
     					let fromGradeLevelId = scaleGradeLevels && scaleGradeLevels.length > 0 && scaleGradeLevels[0].gradeLevelId
@@ -234,10 +213,8 @@ function StandardsRatingSettingsView(props) {
   const openAddNewStandardsRating = () => {
     return setNewStandardsRating(true); setStandardsRatingTableId(''); setStandardsRatingDetailId('')
     
-    	handleNewStandardsRatingChange = (event) => {
-    			let newState = Object.assign({}, state)
-  }
 
+  }
   const handleNewStandardsRatingChange = (event) => {
     
     			let newState = Object.assign({}, state)
@@ -275,7 +252,6 @@ function StandardsRatingSettingsView(props) {
     					addOrUpdateStandardsRatingTable(personId, newStandardsRatingName, fromGradeLevelId, toGradeLevelId, standardsRatingTableId, isLevelOnly)
               //Don't clear the IsLevelOnly so that it can be used to show the right controls on the detail section.
     					setErrorStandardsRatingName(''); setNewStandardsRatingName(''); setNewStandardsRating(false); setFromGradeLevelId(''); setToGradeLevelId('')
-    					handleNewStandardsRatingMessageOpen = () => setIsShowingModal_newInstructions(true)
     			}
     	
   }
@@ -283,50 +259,30 @@ function StandardsRatingSettingsView(props) {
   const clearStandardsRating = () => {
     return setStandardsRating({ standardsRatingDetailId: '', })
     
-    	handleMissingInfoOpen = (messageInfoIncomplete) => setIsShowingModal_missingInfo(true); setMessageInfoIncomplete(messageInfoIncomplete)
-    	handleMissingInfoClose = () => setIsShowingModal_missingInfo(false); setMessageInfoIncomplete('')
     
     
-    	handleColorPickerOpen = (standardsRatingDetailId) => setIsShowingModal_colorPicker(true); setStandardsRatingDetailId(standardsRatingDetailId)
-    	handleColorPickerClose = () => setIsShowingModal_colorPicker(false); setStandardsRatingDetailId('')
-    	handleColorPicker = (color) => {
-    			const {personId, setStandardsRatingColor} = props
-  }
 
+  }
   const handleMissingInfoOpen = (messageInfoIncomplete) => {
     return setIsShowingModal_missingInfo(true); setMessageInfoIncomplete(messageInfoIncomplete)
-    	handleMissingInfoClose = () => setIsShowingModal_missingInfo(false); setMessageInfoIncomplete('')
     
     
-    	handleColorPickerOpen = (standardsRatingDetailId) => setIsShowingModal_colorPicker(true); setStandardsRatingDetailId(standardsRatingDetailId)
-    	handleColorPickerClose = () => setIsShowingModal_colorPicker(false); setStandardsRatingDetailId('')
-    	handleColorPicker = (color) => {
-    			const {personId, setStandardsRatingColor} = props
-  }
 
+  }
   const handleMissingInfoClose = () => {
     return setIsShowingModal_missingInfo(false); setMessageInfoIncomplete('')
     
     
-    	handleColorPickerOpen = (standardsRatingDetailId) => setIsShowingModal_colorPicker(true); setStandardsRatingDetailId(standardsRatingDetailId)
-    	handleColorPickerClose = () => setIsShowingModal_colorPicker(false); setStandardsRatingDetailId('')
-    	handleColorPicker = (color) => {
-    			const {personId, setStandardsRatingColor} = props
-  }
 
+  }
   const handleColorPickerOpen = (standardsRatingDetailId) => {
     return setIsShowingModal_colorPicker(true); setStandardsRatingDetailId(standardsRatingDetailId)
-    	handleColorPickerClose = () => setIsShowingModal_colorPicker(false); setStandardsRatingDetailId('')
-    	handleColorPicker = (color) => {
-    			const {personId, setStandardsRatingColor} = props
-  }
 
+  }
   const handleColorPickerClose = () => {
     return setIsShowingModal_colorPicker(false); setStandardsRatingDetailId('')
-    	handleColorPicker = (color) => {
-    			const {personId, setStandardsRatingColor} = props
-  }
 
+  }
   const handleColorPicker = (color) => {
     
     			const {personId, setStandardsRatingColor} = props
@@ -346,18 +302,12 @@ function StandardsRatingSettingsView(props) {
 
   const handleIsLevelOnlyOpen = () => {
     return setIsShowingModal_isLevelOnly(true)
-    	handleIsLevelOnlyClose = () => setIsShowingModal_isLevelOnly(false)
     
-      render() {
-        const {standardsRatings, standardsRatingTables, fetchingRecord, gradeLevels} = props
-  }
 
+  }
   const handleIsLevelOnlyClose = () => {
     return setIsShowingModal_isLevelOnly(false)
     
-      render() {
-        const {standardsRatings, standardsRatingTables, fetchingRecord, gradeLevels} = props
-  }
 
   const {standardsRatings, standardsRatingTables, fetchingRecord, gradeLevels} = props
       
@@ -624,5 +574,6 @@ function StandardsRatingSettingsView(props) {
   						}
         </div>
       )
+}
 }
 export default StandardsRatingSettingsView

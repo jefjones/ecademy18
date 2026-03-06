@@ -5,7 +5,6 @@ import InputText from '../InputText'
 import classes from 'classnames'
 
 export const GradingRatingEntry = ({ gradingType, studentScore={}, studentPersonId, assignmentId, handleEnterKey=()=>{}, handleScore=()=>{}, onBlurScore=()=>{}, onEnterKey=()=>{},
- 																			onPassFailIncrement=()=>{}, theScore, useType, setEditMode, isEditMode}) => { //onSTANDARDSRATINGIncrement=()=>{}
 		let sequence = gradingType === 'STANDARDSRATING'
 				? (studentScore && studentScore.STANDARDSRATINGSequence)
 				: (studentScore && studentScore.passFailSequence)

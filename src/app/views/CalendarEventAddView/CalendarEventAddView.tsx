@@ -77,8 +77,6 @@ function CalendarEventAddView(props) {
   useEffect(() => {
     
             const {dateMoment} = props
-    				let schedule = schedule
-    				schedule.weekdays = schedule.weekdays ? schedule.weekdays : {}
             if (dateMoment) {
     						schedule.fromDate = dateMoment.format('YYYY-MM-DD')
                 schedule.toDate = dateMoment.format('YYYY-MM-DD')
@@ -158,11 +156,6 @@ function CalendarEventAddView(props) {
 
   const toggleCheckbox = () => {
     
-    				let schedule = schedule
-    				schedule.allDay = !schedule.allDay
-    				schedule.duration = schedule.allDay ? '' : 30
-    				setSchedule(schedule)
-    		
   }
 
   const coursesValueRenderer = (selected, options) => {

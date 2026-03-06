@@ -83,43 +83,19 @@ function AttendanceReportView(props) {
   }
 
   const handleDocumentOpen = (fileUpload) => {
-    return setIsShowingModal_document(true); setFileUpload(fileUpload)
-    		handleDocumentClose = () => setIsShowingModal_document(false); setFileUpload({})
-    
-    		handleInstructionsOpen = (note) => setIsShowingModal_instructions(true); setNote(note)
-    		handleInstructionsClose = () => setIsShowingModal_instructions(false); setNote('')
-    
-        render() {
-          const {personId, myFrequentPlaces, setMyFrequentPlace, attendanceReport, students, fetchingRecord, intervals, companyConfig={}, setEditMode,
-    							accessRoles} = props
+    setIsShowingModal_document(true); setFileUpload(fileUpload)
   }
 
   const handleDocumentClose = () => {
-    return setIsShowingModal_document(false); setFileUpload({})
-    
-    		handleInstructionsOpen = (note) => setIsShowingModal_instructions(true); setNote(note)
-    		handleInstructionsClose = () => setIsShowingModal_instructions(false); setNote('')
-    
-        render() {
-          const {personId, myFrequentPlaces, setMyFrequentPlace, attendanceReport, students, fetchingRecord, intervals, companyConfig={}, setEditMode,
-    							accessRoles} = props
+    setIsShowingModal_document(false); setFileUpload({})
   }
 
   const handleInstructionsOpen = (note) => {
-    return setIsShowingModal_instructions(true); setNote(note)
-    		handleInstructionsClose = () => setIsShowingModal_instructions(false); setNote('')
-    
-        render() {
-          const {personId, myFrequentPlaces, setMyFrequentPlace, attendanceReport, students, fetchingRecord, intervals, companyConfig={}, setEditMode,
-    							accessRoles} = props
+    setIsShowingModal_instructions(true); setNote(note)
   }
 
   const handleInstructionsClose = () => {
-    return setIsShowingModal_instructions(false); setNote('')
-    
-        render() {
-          const {personId, myFrequentPlaces, setMyFrequentPlace, attendanceReport, students, fetchingRecord, intervals, companyConfig={}, setEditMode,
-    							accessRoles} = props
+    setIsShowingModal_instructions(false); setNote('')
   }
 
   const {personId, myFrequentPlaces, setMyFrequentPlace, attendanceReport, students, fetchingRecord, intervals, companyConfig={}, setEditMode,

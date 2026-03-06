@@ -43,7 +43,6 @@ function WorkUploadFileView(props) {
   }, [])
 
   let {workSummary, textProcessingProgress} = props
-        let {isFileChosen, isShowingProgress} = state
   
         const config = componentConfig
         const djsConfig = djsConfig

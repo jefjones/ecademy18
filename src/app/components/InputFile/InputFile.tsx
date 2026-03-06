@@ -29,7 +29,6 @@ function InputFile(props) {
 
   const {id, name, label, error, className="", instructions, instructionsBelow, labelClass, required=false, whenFilled, boldText,
   							isCamera, accept} = props
-  			const {isShowingModal_greaterThan} = state
   
   		  return (
   		    <div className={classes(styles.container, className)}>

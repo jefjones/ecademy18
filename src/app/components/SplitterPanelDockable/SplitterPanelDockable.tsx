@@ -61,8 +61,6 @@ const defaultStyles = {
 }
 
 function SplitterPanelDockable(props) {
-  const [docked, setDocked] = useState(this.props.mediaQuery === 'large')
-  const [open, setOpen] = useState(this.props.mediaQuery === 'large' || this.props.leftSidePanelOpen)
   const [sidebarWidth, setSidebarWidth] = useState(props.defaultSidebarWidth)
   const [touchIdentifier, setTouchIdentifier] = useState(null)
   const [touchStartX, setTouchStartX] = useState(null)

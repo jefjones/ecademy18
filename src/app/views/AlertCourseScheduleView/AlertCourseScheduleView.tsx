@@ -40,8 +40,6 @@ function AlertCourseScheduleView(props) {
     	
   }, [])
 
-  const {course={studentList: []}, classPeriods, companyConfig, doNotAddCourse} = props
-  		const {alert={}, messageInfoIncomplete, isShowingModal_missingInfo, isShowingModal_removeAlert} = state
   
   		// let seatThreshold = '';
   		// let hasNewSectionAlert = false;

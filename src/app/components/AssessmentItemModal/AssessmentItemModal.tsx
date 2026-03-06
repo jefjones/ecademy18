@@ -42,7 +42,6 @@ function AssessmentItemModal(props) {
   const [isShowingVoiceRecording, setIsShowingVoiceRecording] = useState(false)
   const [multipleChoiceAnswers, setMultipleChoiceAnswers] = useState(question && question.answers ? question.answers : [{answerText: ''}, {answerText: ''}, {answerText: ''}])
   const [multipleAnswerAnswers, setMultipleAnswerAnswers] = useState(question && question.answers ? question.answers : [{answerText: ''}, {answerText: ''}, {answerText: ''}])
-  const [multipleCount, setMultipleCount] = useState(question && question.answers ? question.answers.length : 3)
   const [hasOrigUpdate, setHasOrigUpdate] = useState(false)
   const [matchingEntries, setMatchingEntries] = useState(6)
   const [errors, setErrors] = useState({
@@ -122,11 +121,6 @@ function AssessmentItemModal(props) {
 
   const {personId, handleClose, className, questionTypes, assessment, handleRemoveFileOpen, gradingType, removeAnswerFileOpen, handleRemoveSolutionFileOpen,
                 accessRoles, handleSubmit, removeToMatchFileOpen, standards=[]} = props
-        const {question={}, errors, multipleChoiceAnswers, multipleAnswerAnswers, isShowingModal_keywordCount, isShowingFileUpload, messageInfoIncomplete,
-  		 					selectedFile_question, selectedFile_solution, deleted_fileUploadId, isQuestionFile, isSolutionFile, isMatchingFile, answerIndex,
-  							isShowingModal_missingInfo, isShowingVoiceRecording, selectedRecording_question, selectedRecording_solution,
-  							record, matchingEntries, fillInTheBlankPhrases, blobUrl, onTheAir, isShowingModal_removeAnswerRecording, standardIds,
-  							isShowingModal_removeQuestionRecording, isShowingModal_removeSolutionRecording, multipleMatchingAnswers} = state
   			let newState = Object.assign({}, state)
         let multipleCount = newState.multipleCount >= 3 ? newState.multipleCount : 3
   

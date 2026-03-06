@@ -20,8 +20,6 @@ function ChapterSplitterView(props) {
   const [prevHrefId, setPrevHrefId] = useState('')
   const [isShowingModal, setIsShowingModal] = useState(false)
   const [sequenceOptions, setSequenceOptions] = useState([])
-  const [sidePanel_open, setSidePanel_open] = useState(this.props.mediaQuery === 'large' || this.props.leftSidePanelOpen)
-  const [sidePanel_docked, setSidePanel_docked] = useState(this.props.mediaQuery === 'large')
   const [errors, setErrors] = useState({})
   const [stopKeypress, setStopKeypress] = useState(false)
   const [pointerSearchText, setPointerSearchText] = useState(0)
@@ -94,7 +92,6 @@ function ChapterSplitterView(props) {
     
             e.preventDefault()
             let {toggleLeftSidePanelOpen} = props
-            let {prevHrefId} = state
             if (!prevHrefId) return
             let element = e.target
             let count = 0
@@ -118,7 +115,6 @@ function ChapterSplitterView(props) {
             //4. Set the prevHrefId to the currentHrefId
             //5. Open the TextAreaModal with the existing new section name or the current sentence
             //6. Put a yellow highlight on the selected sentence throughout the process until Me clicks off to another sentence.
-            let {prevHrefId, newSections} = state
             let element = e.target
             let count = 0
     
@@ -174,23 +170,12 @@ function ChapterSplitterView(props) {
 
   const handleNewSectionClose = () => {
     return setIsShowingModal(false)
-        handleNewSectionOpen = () => setIsShowingModal(true)
-        handleNewSectionSave = (newSectionName) => {
-            //1. Update the section if it already exists in newSections.  Otherwise save it new.
-            //2. Check the order by considering the index location of the hrefId so that the sections are in strict order.
-            //      If not, saving and splitting text of more than one section that is out of order would have ovelapping and duplicate text.
-            let newSections = newSections
-  }
 
+  }
   const handleNewSectionOpen = () => {
     return setIsShowingModal(true)
-        handleNewSectionSave = (newSectionName) => {
-            //1. Update the section if it already exists in newSections.  Otherwise save it new.
-            //2. Check the order by considering the index location of the hrefId so that the sections are in strict order.
-            //      If not, saving and splitting text of more than one section that is out of order would have ovelapping and duplicate text.
-            let newSections = newSections
-  }
 
+  }
   const handleNewSectionSave = (newSectionName) => {
     
             //1. Update the section if it already exists in newSections.  Otherwise save it new.

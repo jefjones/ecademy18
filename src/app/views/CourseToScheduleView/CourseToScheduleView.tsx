@@ -56,8 +56,6 @@ function CourseToScheduleView(props) {
 
   const {durationOptions, facilitators, campusLocationOptions, companyConfig={}, classPeriods, intervals, standardsRatings,
   							baseCourses, courseTypes, schoolYears} = props
-        const {course={}, errors={}, isShowingModal_dateWarning, isShowingModal_deleteDate, isShowingModal_instructions, instructions, showMoreInfo,
-                isShowingModal_showList, gradeScaleList, gradeScaleName} = state
   
   			let gradeScaleTables = props.gradeScaleTables && props.gradeScaleTables.length > 0 && props.gradeScaleTables.map(m => {
             m.id = m.gradeScaleTableId

@@ -80,7 +80,7 @@
     "react-excel-export"
   ],
   "license": "MIT",
-  "main": "dist/index.js",
+  "main": "dist/index.ts",
   "name": "react-data-export",
   "repository": {
     "type": "git",

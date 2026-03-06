@@ -88,17 +88,12 @@ function AssessmentCorrectView(props) {
 
   const handleRetakeTestClose = () => {
     return setIsShowingModal(false)
-    	handleRetakeTestOpen = () => setIsShowingModal(true)
-    	handleRetakeTest = () => {
-    			const {retakeTest, personId, assessmentId, assignmentId} = props
-  }
 
+  }
   const handleRetakeTestOpen = () => {
     return setIsShowingModal(true)
-    	handleRetakeTest = () => {
-    			const {retakeTest, personId, assessmentId, assignmentId} = props
-  }
 
+  }
   const handleRetakeTest = () => {
     
     			const {retakeTest, personId, assessmentId, assignmentId} = props
@@ -123,7 +118,7 @@ function AssessmentCorrectView(props) {
       
   }
 
-  const {personId, studentPersonId, studentFullName, assessment, assessmentCorrect={}, students, questionTypeFilter, standardsRatings,
+  const {personId, studentFullName, assessment, assessmentCorrect={}, students, questionTypeFilter, standardsRatings,
   						setPenspringTransfer, correctionTypeFilter, accessRoles={}, courseScheduledId, fetchingRecord, benchmarkTestId} = props
   		
   
@@ -145,7 +140,6 @@ function AssessmentCorrectView(props) {
       let details = assessmentCorrect.details
   
       if (details && details.length > 0) {
-  				let score = Math.round(details.reduce((acc, m) => acc + m.score, 0) * 10) / 10
   				let scorePending = details.reduce((acc, m) => m.pendingCorrection ? acc + m.pointsPossible : acc, 0)
   				let essaysPending = details.reduce((acc, m) => m.pendingCorrection ? ++acc : acc, 0)
   				let totalPoints = details.reduce((acc, m) => acc + m.pointsPossible, 0)

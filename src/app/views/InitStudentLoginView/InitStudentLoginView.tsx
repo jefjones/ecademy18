@@ -20,7 +20,6 @@ function InitStudentLoginView(props) {
                 clave: '', //'j',
                 claveConfirm: '',
             })
-  const [username, setUsername] = useState('')
   const [clave, setClave] = useState('')
   const [claveConfirm, setClaveConfirm] = useState('')
   const [isSubmitted, setIsSubmitted] = useState(true)

@@ -66,41 +66,7 @@ function AssignmentEntryView(props) {
   const [errorCoursesSpecific, setErrorCoursesSpecific] = useState('')
   const [selectedStandards, setSelectedStandards] = useState(assignment.standards)
   const [isInit, setIsInit] = useState(true)
-  const [coursesSpecific, setCoursesSpecific] = useState(coursesRelated && coursesRelated.length > 0 && coursesRelated.map(m => m.courseScheduledId)
-
-			this.state = {
-					isShowingModal_delete: false,
-					isShowingModal_removeFile: false,
-					isShowingModal_removeWebsite: false,
-					isShowingModal_numberOnly: false,
-					isShowingModal_noStudents: false,
-					isShowingModal_missingInfo: false,
-          contentType: '',
-					coursesSpecific,
-          assignment: {
-              assignmentId: '',
-              sequence: props.insertSequence,
-              courseEntryId: '',
-              title: '',
-              subtitle: '',
-              contentTypeId: '',
-							intervalId: '',
-              instructions: '',
-							totalPoints: 0,
-							extraCredit: 0,
-              mustComplete: true,
-              gradable: true,
-							dueDate: '',
-							gradingTypes: [],
-							studentsAssigned: ''
-          },
-          errorTitle: '',
-          errorContentType: '',
-					//errorInterval: '',
-          errorInstruction: '',
-					errorTotalPoints: '',
-					errorCoursesSpecific: '',
-      })
+  const [coursesSpecific, setCoursesSpecific] = useState(coursesRelated && coursesRelated.length > 0 && coursesRelated.map(m => m.courseScheduledId))
   const [p, setP] = useState(undefined)
   const [errorStandardsRating, setErrorStandardsRating] = useState("You must choose at least one standard")
   const [errorDiscussion, setErrorDiscussion] = useState(<L p={p} t={`For Discussion type, At least one post or one comment is required.`}/>)
@@ -118,8 +84,6 @@ function AssignmentEntryView(props) {
   // TODO: verify useEffect deps (converted from componentDidUpdate)
   useEffect(() => {
     
-    			let assignment = Object.assign({}, props.assignment)
-    
     			if (!isInit && assignment && assignment.assignmentId) {
     					if (assignment.standards && assignment.standards.length > 0) {
     							assignment.standardIds = assignment.standards.reduce((acc, m) => acc && acc.length ? acc.concat(m.id) : [m.id], [])
@@ -131,9 +95,6 @@ function AssignmentEntryView(props) {
 
   const {coursesRelated, sequences, className, contentTypes, course={}, courseTypes, intervals, personConfig, insertSequence, students=[], standards=[],
   							studentCourseAssigns, benchmarkTests=[]} = props
-        const {assignment={}, contentTypeCode, errorTitle, errorContentType, errorInstruction, errorTotalPoints, isShowingModal_delete, errorStandardsRating,
-  							coursesSpecific, openFileAttach, isShowingModal_removeFile, isShowingModal_removeWebsite, errorCoursesSpecific, messageInfoIncomplete,
-  							isShowingModal_numberOnly, errorDiscussion, isShowingModal_noStudents, isShowingModal_missingInfo, selectedStandards } = state
   
   			let interval = intervals && intervals.length > 0 && intervals.filter(m => m.id === personConfig.intervalId)[0]
   			let intervalName = interval && interval.label ? interval.label : ''

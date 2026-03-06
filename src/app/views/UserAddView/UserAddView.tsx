@@ -247,21 +247,14 @@ function UserAddView(props) {
   }
 
   const handleMissingInfoOpen = (messageInfoIncomplete) => {
-    return setIsShowingModal_missingInfo(true); setMessageInfoIncomplete(messageInfoIncomplete)
-    	handleMissingInfoClose = () => setIsShowingModal_missingInfo(false); setMessageInfoIncomplete('')
-    
-      render() {
-        const {userRole, personId, login, accessRoles, loginData, userPersonId, gradeLevels, myFrequentPlaces, setMyFrequentPlace} = props
+    setIsShowingModal_missingInfo(true); setMessageInfoIncomplete(messageInfoIncomplete)
   }
 
   const handleMissingInfoClose = () => {
-    return setIsShowingModal_missingInfo(false); setMessageInfoIncomplete('')
-    
-      render() {
-        const {userRole, personId, login, accessRoles, loginData, userPersonId, gradeLevels, myFrequentPlaces, setMyFrequentPlace} = props
+    setIsShowingModal_missingInfo(false); setMessageInfoIncomplete('')
   }
 
-  const {userRole, personId, login, accessRoles, loginData, userPersonId, gradeLevels, myFrequentPlaces, setMyFrequentPlace} = props
+  const {userRole, login, accessRoles, loginData, gradeLevels, myFrequentPlaces, setMyFrequentPlace} = props
       
   
       return (

@@ -58,7 +58,6 @@ export function GeoLocationView(props) {
 
   const displayLocation = (position) => {
     
-    		let locations = Object.assign([], locations)
     		let location = {
     			longitude: position.coords.longitude,
     			latitude: position.coords.latitude,
@@ -136,9 +135,6 @@ export function GeoLocationView(props) {
     	
   }
 
-  const {trackId, distance, location={}, message} = state
-  		let locations= Object.assign([], locations)
-  
       locations = doSort(locations, { sortField: 'timeStamp', isAsc: true, isNumber: false })
   
       return (

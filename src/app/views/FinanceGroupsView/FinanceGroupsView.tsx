@@ -41,9 +41,6 @@ function FinanceGroupsView(props) {
   const [isShowingModal_usedCount, setIsShowingModal_usedCount] = useState(true)
   const [selectedSchoolYears, setSelectedSchoolYears] = useState([])
   const [selectedGradeLevels, setSelectedGradeLevels] = useState([])
-  const [schoolYears, setSchoolYears] = useState([])
-  const [coursesScheduled, setCoursesScheduled] = useState([])
-  const [gradeLevels, setGradeLevels] = useState([])
   const [selectedCoursesScheduled, setSelectedCoursesScheduled] = useState([])
 
   const {financeGroups, fetchingRecord, schoolYears, coursesScheduled, gradeLevels} = props

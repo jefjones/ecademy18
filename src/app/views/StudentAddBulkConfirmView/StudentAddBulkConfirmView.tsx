@@ -125,7 +125,7 @@ function StudentAddBulkConfirmView(props) {
     	
   }
 
-  let {learners, studentBulkEntryDetails, personConfigEntry, fileFields, fetchingRecord} = props
+  let {studentBulkEntryDetails, personConfigEntry, fileFields, fetchingRecord} = props
       //
   
   		personConfigEntry = doSort(personConfigEntry, { sortField: 'sequence', isAsc: true, isNumber: true })

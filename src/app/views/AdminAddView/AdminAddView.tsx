@@ -67,7 +67,6 @@ function AdminAddView(props) {
   const [errorPhone, setErrorPhone] = useState(undefined)
   const [errorFromGradeLevelId, setErrorFromGradeLevelId] = useState(undefined)
   const [errorToGradeLevelId, setErrorToGradeLevelId] = useState(undefined)
-  const [username, setUsername] = useState(undefined)
   const [fromGradeLevelId, setFromGradeLevelId] = useState(undefined)
   const [toGradeLevelId, setToGradeLevelId] = useState(undefined)
   const [messageInfoIncomplete, setMessageInfoIncomplete] = useState(undefined)
@@ -325,12 +324,6 @@ function AdminAddView(props) {
   const changeUser = (event) => {
     
         const field = event.target.name
-        let user = user
-        user[field] = event.target.value
-        field === "firstName" && setErrorFirstName('')
-        (field === "emailAddress" || field === "phone") && setErrorEmailAddress('')
-        field === "emailAddress" && findContactMatches(event.target.value, '')
-        field === "phone" && findContactMatches('', event.target.value)
         if (field === "emailAddress") user[field] = user[field].replace(/ /g, "")
     
         setUser(user)
@@ -341,10 +334,6 @@ function AdminAddView(props) {
   const changeBulk = (event) => {
     
         const field = event.target.name
-        let bulk = bulk
-        bulk[field] = event.target.value
-        setBulk(bulk)
-      
   }
 
   const handleEnterKey = (event) => {
@@ -355,7 +344,6 @@ function AdminAddView(props) {
 
   const showNextButton = () => {
     
-        let user = user
         if (user.firstName && ((user.emailAddress && validateEmail(user.emailAddress)) || (user.phone && user.phone.length > 8))) {
             setIsUserComplete(true)
         } else {
@@ -464,21 +452,14 @@ function AdminAddView(props) {
 
   const handleNoBulkEntryMessageOpen = () => {
     return setIsShowingNoBulkEntryMessage(true)
-      handleNoBulkEntryMessageClose = () => setIsShowingNoBulkEntryMessage(false)
     
-    	fillInEmailAddress = (event) => {
-    			//if this is a valid email address and the emailAddress is empty, fill it in automatically with the user
-    			
-  }
 
+  }
   const handleNoBulkEntryMessageClose = () => {
     return setIsShowingNoBulkEntryMessage(false)
     
-    	fillInEmailAddress = (event) => {
-    			//if this is a valid email address and the emailAddress is empty, fill it in automatically with the user
-    			
-  }
 
+  }
   const fillInEmailAddress = (event) => {
     
     			//if this is a valid email address and the emailAddress is empty, fill it in automatically with the user
@@ -531,18 +512,12 @@ function AdminAddView(props) {
 
   const handleMissingInfoOpen = (messageInfoIncomplete) => {
     return setIsShowingModal_missingInfo(true); setMessageInfoIncomplete(messageInfoIncomplete)
-    	handleMissingInfoClose = () => setIsShowingModal_missingInfo(false); setMessageInfoIncomplete('')
     
-      render() {
-        const {personId, bulkDelimiterOptions, login, accessRoles, fieldOptions, loginData, adminPersonId, gradeLevels} = props
-  }
 
+  }
   const handleMissingInfoClose = () => {
     return setIsShowingModal_missingInfo(false); setMessageInfoIncomplete('')
     
-      render() {
-        const {personId, bulkDelimiterOptions, login, accessRoles, fieldOptions, loginData, adminPersonId, gradeLevels} = props
-  }
 
   const {personId, bulkDelimiterOptions, login, accessRoles, fieldOptions, loginData, adminPersonId, gradeLevels} = props
       

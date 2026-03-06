@@ -10,7 +10,6 @@ import classes from 'classnames'
 
 function TutorialVideoView(props) {
   const [isShowingModal, setIsShowingModal] = useState(false)
-  const [tutorial, setTutorial] = useState('')
 
   const {tutorialVideos=[], tutorialLabel} = props
   			

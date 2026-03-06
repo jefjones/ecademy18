@@ -32,7 +32,6 @@ function LoginView(props) {
   const [orgName, setOrgName] = useState('')
   const [firstName, setFirstName] = useState('')
   const [lastName, setLastName] = useState('')
-  const [username, setUsername] = useState('')
   const [clave, setClave] = useState('')
   const [usernameConfirm, setUsernameConfirm] = useState('')
   const [claveConfirm, setClaveConfirm] = useState('')
@@ -201,11 +200,8 @@ function LoginView(props) {
 
   const handleFailedLoginOpen = () => {
     return setIsShowingFailedLogin(true); setIsSubmitted(false)
-        handleFailedLoginClose = () => {
-            setIsShowingFailedLogin(false)
-            props.logout()
-  }
 
+  }
   const handleFailedLoginClose = () => {
     
             setIsShowingFailedLogin(false)
@@ -223,9 +219,6 @@ function LoginView(props) {
   const handleMatchingRecordOpen = () => {
     return setIsShowingMatchingRecord(true)
     
-        render() {
-            
-  }
 
   return (
             <section className={styles.container}>

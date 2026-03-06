@@ -30,7 +30,6 @@ function StudentBaseCourseRequestView(props) {
   const [isShowingModal_finalize, setIsShowingModal_finalize] = useState(false)
   const [isShowingModal_description, setIsShowingModal_description] = useState(false)
   const [isShowingModal_prerequisite, setIsShowingModal_prerequisite] = useState(false)
-  const [baseCreditCount, setBaseCreditCount] = useState(0)
   const [actionType, setActionType] = useState('')
   const [partialNameText, setPartialNameText] = useState('')
   const [learningPathwayId, setLearningPathwayId] = useState('')
@@ -53,13 +52,9 @@ function StudentBaseCourseRequestView(props) {
   // TODO: verify useEffect deps (converted from componentDidUpdate)
   useEffect(() => {
     
-    				let allCreditCount = baseCreditCount() + extraCreditCount()
-    				if (state.allCreditCount !== allCreditCount) {
-    						setAllCreditCount(allCreditCount)
-    				}
     				if (props.partialNameText) {
     						//Take the partialNameText from the courseRecommendation which is on a different page.  Clear out all other filters.
-    						setPartialNameText(props.partialNameText); set//departmentId(''); setLearningPathwayId('');
+    						setPartialNameText(props.partialNameText)
     						props.clearStudentCourseAssignNameSearch()
     				}
     		
@@ -128,19 +123,14 @@ function StudentBaseCourseRequestView(props) {
 
   const handleNotAvailableOpen = () => {
     return setIsShowingModal_notOpen(true)
-        handleNotAvailableClose = () => setIsShowingModal_notOpen(false)
     
-    		handleFinalizeSubmit = () => {
-    				const {personId, studentPersonId, setFinalizeStudentBaseCourseRequests} = props
-  }
 
+  }
   const handleNotAvailableClose = () => {
     return setIsShowingModal_notOpen(false)
     
-    		handleFinalizeSubmit = () => {
-    				const {personId, studentPersonId, setFinalizeStudentBaseCourseRequests} = props
-  }
 
+  }
   const handleFinalizeSubmit = () => {
     
     				const {personId, studentPersonId, setFinalizeStudentBaseCourseRequests} = props
@@ -152,40 +142,26 @@ function StudentBaseCourseRequestView(props) {
 
   const handleLackingCreditsOpen = () => {
     return setIsShowingModal_lackingCredits(true)
-        handleLackingCreditsClose = () => setIsShowingModal_lackingCredits(false)
     
-    		handleDescriptionOpen = (courseName, description) => setIsShowingModal_description(true); setCourseName(courseName); setDescription(description)
-        handleDescriptionClose = () => setIsShowingModal_description(false)
     
-    		clearFilters = () => {
-    				setPartialNameText(''); set//departmentId(''); setLearningPathwayId('');
-  }
 
+  }
   const handleLackingCreditsClose = () => {
     return setIsShowingModal_lackingCredits(false)
     
-    		handleDescriptionOpen = (courseName, description) => setIsShowingModal_description(true); setCourseName(courseName); setDescription(description)
-        handleDescriptionClose = () => setIsShowingModal_description(false)
     
-    		clearFilters = () => {
-    				setPartialNameText(''); set//departmentId(''); setLearningPathwayId('');
-  }
 
+  }
   const handleDescriptionOpen = (courseName, description) => {
     return setIsShowingModal_description(true); setCourseName(courseName); setDescription(description)
-        handleDescriptionClose = () => setIsShowingModal_description(false)
     
-    		clearFilters = () => {
-    				setPartialNameText(''); set//departmentId(''); setLearningPathwayId('');
-  }
 
+  }
   const handleDescriptionClose = () => {
     return setIsShowingModal_description(false)
     
-    		clearFilters = () => {
-    				setPartialNameText(''); set//departmentId(''); setLearningPathwayId('');
-  }
 
+  }
   const clearFilters = () => {
     
     				setPartialNameText(''); set//departmentId(''); setLearningPathwayId('');
@@ -249,12 +225,6 @@ function StudentBaseCourseRequestView(props) {
   }
 
   const getPrerequisiteMessageWithTitle = (prerequisite) => {
-    
-    				let prerequisiteMessage = ''
-    				let courseName = <L p={p} t={`Course: ${prerequisite.courseName} (${prerequisite.externalId}) Credits: ${prerequisite.credits}`}/>
-    				prerequisiteMessage += prerequisite.firstList && prerequisite.firstList.length === 1
-    						? '<u><L p={p} t={`This class is required:`}/></u>'
-    						: '<u><L p={p} t={`One of these classes is required:`}/></u>'
     
     				prerequisite.firstList && prerequisite.firstList.length > 0 && prerequisite.firstList.forEach(m => {
     						prerequisiteMessage += <div><br/><L p={p} t={`${m.courseName} (${m.externalId}) Credits: ${m.credits}`}/></div>
@@ -342,7 +312,6 @@ function StudentBaseCourseRequestView(props) {
   const handleRemove = (incomingRequest) => {
     
     				const {personId, removeStudentBaseCourseRequest, declineCourseAssignByAdmin, removeCourseRecommendation, studentPersonId} = props
-    				let request = incomingRequest ? incomingRequest : Object.assign({}, request)
     				if (request.courseAssignByAdminId && request.courseAssignByAdminId !== guidEmpty) {
     						declineCourseAssignByAdmin(personId, request.courseAssignByAdminId, studentPersonId)
     				} else if (request.learnerCourseRecommendedId && request.learnerCourseRecommendedId !== guidEmpty) {

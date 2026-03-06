@@ -56,9 +56,6 @@ function FinancePaymentAddView(props) {
   const [selectedStudents, setSelectedStudents] = useState(undefined)
   const [selectedFinanceFeeTypes, setSelectedFinanceFeeTypes] = useState(undefined)
   const [noSiblingsFound, setNoSiblingsFound] = useState(undefined)
-  const [totalAmount, setTotalAmount] = useState(undefined)
-  const [creditcard, setCreditcard] = useState(undefined)
-  const [check, setCheck] = useState(undefined)
   const [isShowingModal_description, setIsShowingModal_description] = useState(undefined)
   const [studentName, setStudentName] = useState(undefined)
   const [description, setDescription] = useState(undefined)
@@ -81,9 +78,6 @@ function FinancePaymentAddView(props) {
 
   const processForm = (creditBalance) => {
     
-          const {personId, addOrUpdateFinancePayment, accessRoles, financePaymentTypes} = props
-    			const {selectedFinanceBillingIds, billing={}, financePayment={}, selectedFile} = state
-    			let errors = {}
     			let data = new FormData()
     			data.append('file', selectedFile)
     			let missingInfoMessage = []
@@ -216,7 +210,6 @@ function FinancePaymentAddView(props) {
 
   const handleFilter = ({target}) => {
     
-    			let filter = Object.assign({}, filter)
     			let field = target.name
     			filter[field] = target.value
     			setFilter(filter)
@@ -225,7 +218,6 @@ function FinancePaymentAddView(props) {
 
   const handleChange = ({target}) => {
     
-    			let financePayment = Object.assign({}, financePayment)
     			let field = target.name
     			if (field === 'studentPersonId' || field === 'guardianPersonId') {
     					financePayment['personId'] = target.value
@@ -243,10 +235,6 @@ function FinancePaymentAddView(props) {
 
   const changeDate = (field, {target}) => {
     
-    			let filter = Object.assign({}, filter)
-    			filter[field] = target.value
-    			setFilter(filter)
-    	
   }
 
   const handleImageViewerOpen = (fileUrl) => {
@@ -255,7 +243,6 @@ function FinancePaymentAddView(props) {
 
   const handleImageViewerClose = () => {
     return setIsShowingModal(false); setFileUrl('')
-    	handleInputFile = (file) => setSelectedFile(file)
   }
 
   const handleInputFile = (file) => {
@@ -264,19 +251,14 @@ function FinancePaymentAddView(props) {
 
   const handleMissingInfoOpen = (messageInfoIncomplete) => {
     return setIsShowingModal_missingInfo(true); setMessageInfoIncomplete(messageInfoIncomplete)
-    	handleMissingInfoClose = () => setIsShowingModal_missingInfo(false); setMessageInfoIncomplete('')
     
-    	resetClearTextValue = () => {
-    			setClearStudent(false); setClearGuardian(false); setClearTeacher(false)
-  }
 
+  }
   const handleMissingInfoClose = () => {
     return setIsShowingModal_missingInfo(false); setMessageInfoIncomplete('')
     
-    	resetClearTextValue = () => {
-    			setClearStudent(false); setClearGuardian(false); setClearTeacher(false)
-  }
 
+  }
   const resetClearTextValue = () => {
     
     			setClearStudent(false); setClearGuardian(false); setClearTeacher(false)
@@ -312,7 +294,6 @@ function FinancePaymentAddView(props) {
   const toggleSelectedBilling = (financeBillingId) => {
     
     			const {financeBillings} = props
-    			let selectedFinanceBillingIds = Object.assign([], selectedFinanceBillingIds)
     			if (selectedFinanceBillingIds && selectedFinanceBillingIds.length > 0 && selectedFinanceBillingIds.indexOf(financeBillingId) > -1) {
     					selectedFinanceBillingIds = selectedFinanceBillingIds.filter(id => id !== financeBillingId)
     			} else {
@@ -347,7 +328,6 @@ function FinancePaymentAddView(props) {
 
   const handleRadioCheckAccount = (field, value) => {
     
-    			let billing = {...billing}
     			billing.check = {...billing.check, [field]: value }
     			setBilling(billing)
     	
@@ -355,7 +335,6 @@ function FinancePaymentAddView(props) {
 
   const changeCreditCard = ({target}) => {
     
-    			let billing = billing
     			let creditcard = billing.creditcard || {}
     			creditcard[target.name] = target.value
     			setBilling({...billing, creditcard })
@@ -364,7 +343,6 @@ function FinancePaymentAddView(props) {
 
   const changeBankAccount = ({target}) => {
     
-    			let billing = billing
     			let check = billing.check || {}
     			check[target.name] = target.value
     			setBilling({...billing, check })
@@ -373,8 +351,6 @@ function FinancePaymentAddView(props) {
 
   const handleCreditAmount = (studentPersonId, {target}) => {
     
-    			let studentsAndAmounts = Object.assign([], studentsAndAmounts)
-    			//If the studentPersonId already exists in studentsAndAmounts, then update the amount.  Otherwise, add a new one.
     			let found = false
     			if (studentsAndAmounts && studentsAndAmounts.length > 0 && studentsAndAmounts.indexOf(studentPersonId) > -1) found = true
     			studentsAndAmounts = studentsAndAmounts && studentsAndAmounts.length > 0 && studentsAndAmounts.map(m => {
@@ -417,17 +393,12 @@ function FinancePaymentAddView(props) {
 
   const handleCreditLackingBalanceOpen = (creditBalance) => {
     return setIsShowingModal_lackingCredit(true); setCreditBalance(creditBalance)
-      handleCreditLackingBalanceClose = () => setIsShowingModal_lackingCredit(false); setCreditBalance('')
-      handleCreditLackingBalance = () => {
-          
-  }
 
+  }
   const handleCreditLackingBalanceClose = () => {
     return setIsShowingModal_lackingCredit(false); setCreditBalance('')
-      handleCreditLackingBalance = () => {
-          
-  }
 
+  }
   const handleCreditLackingBalance = () => {
     
           
@@ -436,10 +407,8 @@ function FinancePaymentAddView(props) {
       
   }
 
-  const {personId, students, myFrequentPlaces, setMyFrequentPlace, financeBillings, fetchingRecord, financeFeeTypes, financePaymentTypes,
+  const {students, myFrequentPlaces, setMyFrequentPlace, financeBillings, fetchingRecord, financeFeeTypes, financePaymentTypes,
   							accessRoles, guardians, financeAccountSummaries} = props
-  			const {errors, isShowingModal, fileUrl, messageInfoIncomplete, isShowingModal_missingInfo, financeBillingId, fromDate, toDate, mandatoryOrOptional,
-  							billing={}, financePayment={}, filter={}, isShowingModal_description, studentName, description, isShowingModal_lackingCredit} = state
   
   			let filteredBillings = financeBillings; // && financeBillings.length > 0 && financeBillings.filter(m => m.isPaid);
   
@@ -607,7 +576,6 @@ function FinancePaymentAddView(props) {
       //Credit payments
       //Only show the CreditTransfer optin in the Payment Type list if the student chosen (not the parent) has a credit balance to apply . And show that credit balance.
       let financePaymentTypesLocal = Object.assign([], financePaymentTypes)
-      let creditBalance = 0
       let accountSummary = financePayment.personId && financeAccountSummaries && financeAccountSummaries.length > 0 && financeAccountSummaries.filter(m => m.personId === financePayment.personId)[0]
       if (accountSummary && accountSummary.creditAccount) creditBalance = accountSummary.creditAccount
       if (!creditBalance) financePaymentTypesLocal = financePaymentTypesLocal && financePaymentTypesLocal.length > 0 && financePaymentTypesLocal.filter(m => m.label.toLowerCase() !== 'credit transfer')

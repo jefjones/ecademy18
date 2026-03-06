@@ -13,12 +13,7 @@ import AccordionItem from '../../components/ListAccordion/AccordionItem/Accordio
 
 function OpenCommunityView(props) {
   const [modifyOpenCommunityEntryId, setModifyOpenCommunityEntryId] = useState(0)
-  const [tabsData, setTabsData] = useState({
-                chosenTab: "ToVolunteer",
-                tabs: this.props.tabs,
-            })
   const [chosenTab, setChosenTab] = useState("ToVolunteer")
-  const [tabs, setTabs] = useState(this.props.tabs)
 
   const {personId, workOptions, workList, saveOpenCommunityEntry, modifyEntry, declineIdleOptions, genreOptions, languageOptions,
                   editSeverityOptions, workSummaries, editorsCountOptions, openCommunityToVol, openCommunityFull, removeOpenCommunityEntry, tabEntryCounts,

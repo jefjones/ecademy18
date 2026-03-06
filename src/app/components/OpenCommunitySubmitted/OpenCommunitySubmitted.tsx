@@ -1,4 +1,4 @@
-﻿import { useState } from 'react'
+import { useState } from 'react'
 import styles from './OpenCommunitySubmitted.css'
 import classes from 'classnames'
 import MessageModal from '../../components/MessageModal'
@@ -14,20 +14,12 @@ function OpenCommunitySubmitted(props) {
 
   const handleAlertClose = () => {
     return setIsShowingModal(false)
-      handleAlertOpen = (deleteIndex) => setIsShowingModal(true); setDeleteIndex(deleteIndex)
     
-      render() {
-          let {personId, setWorkCurrentSelected, updateChapterComment, openCommunityFull,
-                setToModifyRecord} = props
-  }
 
+  }
   const handleAlertOpen = (deleteIndex) => {
     return setIsShowingModal(true); setDeleteIndex(deleteIndex)
     
-      render() {
-          let {personId, setWorkCurrentSelected, updateChapterComment, openCommunityFull,
-                setToModifyRecord} = props
-  }
 
   let {personId, setWorkCurrentSelected, updateChapterComment, openCommunityFull,
               setToModifyRecord} = props
@@ -61,5 +53,6 @@ function OpenCommunitySubmitted(props) {
               }
           </div>
         )
+}
 }
 export default OpenCommunitySubmitted

@@ -38,7 +38,6 @@ function GradebookEntryView(props) {
   const [courseScheduledId, setCourseScheduledId] = useState('')
   const [contentTypeId, setContentTypeId] = useState('')
   const [singleAssignmentId, setSingleAssignmentId] = useState('')
-  const [studentPersonId, setStudentPersonId] = useState('')
   const [showPercentScoreBoth, setShowPercentScoreBoth] = useState('score')
   const [contentTypeCode, setContentTypeCode] = useState('')
   const [isShowingModal, setIsShowingModal] = useState(false)
@@ -149,7 +148,6 @@ function GradebookEntryView(props) {
     				//
     				//Get the current id which will be the student and the assignment Ids.  Get the next student and use the current AssignmentId in order to move the focus down to the next one.
     				let studentPersonId = target.name.substring(0, target.name.indexOf('#$'))
-    				let assignmentId = target.name.substring(target.name.indexOf('#$') + 2)
     				let nextStudentPersonId = ''
     				let foundCurrent = false
     				gradebook && gradebook.students && gradebook.students.length > 0 && gradebook.students.forEach(m => {
@@ -233,8 +231,6 @@ function GradebookEntryView(props) {
 
   const setVisitedResponse = (studentAssignmentResponseId) => {
     
-    				let gradebook = props.gradebook
-    				gradebook.studentResponses = gradebook.studentResponses.map(m => {
     						if (m.studentAssignmentResponseId === studentAssignmentResponseId) m.responseVisitedTypeCode = 'VISITED'
     						return m
     				})
@@ -251,10 +247,8 @@ function GradebookEntryView(props) {
 
   const handleAddOrUpdateClose = () => {
     return setIsShowingModal_response(false); setAssignmentId(''); setStudent({})
-    	  handleAddOrUpdateSave = (studentResponse, assignmentId) => {
-    				const {addOrUpdateStudentResponse, courseEntryId, courseScheduledId, personId, gradebookInit} = props
-  }
 
+  }
   const handleAddOrUpdateSave = (studentResponse, assignmentId) => {
     
     				const {addOrUpdateStudentResponse, courseEntryId, courseScheduledId, personId, gradebookInit} = props
@@ -383,17 +377,12 @@ function GradebookEntryView(props) {
 
   const handleSetMultScoreColumnOpen = (assignmentId) => {
     return setIsShowingModal_columnMultScore(true); setAssignmentId(assignmentId)
-    		handleSetMultScoreColumnClose = () => setIsShowingModal_columnMultScore(false); setAssignmentId('')
-    		handleSetMultScoreColumn = (multScore) => {
-    				const {personId, setGradebookScoreColumnZero, courseScheduledId} = props
-  }
 
+  }
   const handleSetMultScoreColumnClose = () => {
     return setIsShowingModal_columnMultScore(false); setAssignmentId('')
-    		handleSetMultScoreColumn = (multScore) => {
-    				const {personId, setGradebookScoreColumnZero, courseScheduledId} = props
-  }
 
+  }
   const handleSetMultScoreColumn = (multScore) => {
     
     				const {personId, setGradebookScoreColumnZero, courseScheduledId} = props
@@ -410,17 +399,12 @@ function GradebookEntryView(props) {
 
   const handleFinalizeGradeOpen = () => {
     return setIsShowingModal_finalizeGrade(true)
-    		handleFinalizeGradeClose = () => setIsShowingModal_finalizeGrade(false)
-    		handleFinalizeGrade = () => {
-    				const {personId, finalizeGradebookGrades, courseScheduledId, personConfig} = props
-  }
 
+  }
   const handleFinalizeGradeClose = () => {
     return setIsShowingModal_finalizeGrade(false)
-    		handleFinalizeGrade = () => {
-    				const {personId, finalizeGradebookGrades, courseScheduledId, personConfig} = props
-  }
 
+  }
   const handleFinalizeGrade = () => {
     
     				const {personId, finalizeGradebookGrades, courseScheduledId, personConfig} = props
@@ -466,10 +450,8 @@ function GradebookEntryView(props) {
   const chooseRecord = (chosenStudentRow) => {
     return setChosenStudentRow(chosenStudentRow)
     
-    		handleSetMultNextSequence = (standardLevelSequence) => {
-    				const {personId, courseScheduledId, gradebookInit, setStandardLevelSequenceMultiple, jumpToAssignmentId} = props
-  }
 
+  }
   const handleSetMultNextSequence = (standardLevelSequence) => {
     
     				const {personId, courseScheduledId, gradebookInit, setStandardLevelSequenceMultiple, jumpToAssignmentId} = props
@@ -504,7 +486,6 @@ function GradebookEntryView(props) {
   					? courses && courses.length > 0 && courses.filter(m => m.learningPathwayId === learningPathwayId)
   					: courses
   
-  			let {jumpToAssignmentId} = state
   			const fullAssignmentList = gradebook && gradebook.assignments
   			let gradebookLocal = Object.assign({}, gradebook)
   			if (gradebookLocal && gradebookLocal.studentScores && gradebookLocal.studentScores.length > 0 && studentPersonId) {

@@ -45,7 +45,7 @@ function PickupLaneSettingsView(props) {
   const [errorPickupLaneName, setErrorPickupLaneName] = useState(<L p={p} t={`Duplicate name. Please try again.`}/>)
   const [isShowingModal_missingInfo, setIsShowingModal_missingInfo] = useState(true)
   const [messageInfoIncomplete, setMessageInfoIncomplete] = useState('')
-  const [message, setMessage] = useState(errors[error.code] + ');
+  const [message, setMessage] = useState('')
 
   // TODO: verify useEffect deps (converted from componentDidUpdate)
   useEffect(() => {
@@ -59,8 +59,6 @@ function PickupLaneSettingsView(props) {
   }, [])
 
   const {pickupLanes, pickupLaneTables, fetchingRecord, positionNumbers} = props
-      const {pickupLane={}, isShowingModal_removeDetail, pickupLaneTableId, newPickupLane, newPickupLaneName, errorPickupLaneName, isShowingModal_newInstructions,
-              isShowingModal_removeTable, pickupLaneNameChosen, isShowingModal_missingInfo, messageInfoIncomplete,} = state
   
       let headings = [{}, {},
   				{label: <L p={p} t={`Position`}/>, tightText: true},

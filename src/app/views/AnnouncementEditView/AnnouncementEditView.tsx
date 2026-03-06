@@ -1,4 +1,4 @@
-﻿import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import {apiHost} from '../../api_host'
 import axios from 'axios'
 import { navigate, navigateReplace, goBack } from './'
@@ -207,7 +207,6 @@ function AnnouncementEditView(props) {
 
   const setTimeNow = () => {
     
-    				const announcement = announcement
     				const todayNow = new Date()
     				announcement.startDate = moment(todayNow).format("YYYY-MM-DD")
     	      announcement.startTime = moment(todayNow).format("HH:mm")
@@ -217,10 +216,6 @@ function AnnouncementEditView(props) {
 
   const changeStartDate = (field, event) => {
     
-    				const announcement = announcement
-    	      announcement.startDate = event.target.value
-    	      setAnnouncement(announcement)
-        
   }
 
   const handleEnterKey = (event) => {
@@ -289,7 +284,7 @@ function AnnouncementEditView(props) {
     		
   }
 
-  const setRecipients = (fromFilter, incomingValue, newState=null) => {
+  const buildRecipients = (fromFilter, incomingValue, newState=null) => {
     
     				// 1.	Send in the changed filter values.
     				// 2.	Get the local state
@@ -319,8 +314,6 @@ function AnnouncementEditView(props) {
     				// 3.	Update the local state with the parameter value
     				if (fromFilter) state[fromFilter] = incomingValue
     				// 4.	Clear out the recipients
-    				let recipients = []
-    
     				// 5.	Rebuild the recipients
     				// 	a.	Take the course students, if any.
     				if (state.selectedCourses && state.selectedCourses.length > 0) {
@@ -501,58 +494,54 @@ function AnnouncementEditView(props) {
   const handleSelectedGuardians = (selectedGuardians) => {
     
     				setSelectedGuardians(selectedGuardians)
-    				setRecipients('selectedGuardians', selectedGuardians)
+    				buildRecipients('selectedGuardians', selectedGuardians)
         
   }
 
   const handleSelectedStudents = (selectedStudents) => {
     
     				setSelectedStudents(selectedStudents)
-    				setRecipients('selectedStudents', selectedStudents)
+    				buildRecipients('selectedStudents', selectedStudents)
         
   }
 
   const handleSelectedCourses = (selectedCourses) => {
     
     				setSelectedCourses(selectedCourses)
-    				setRecipients('selectedCourses', selectedCourses)
+    				buildRecipients('selectedCourses', selectedCourses)
         
   }
 
   const handleSelectedFacilitators = (selectedFacilitators) => {
     
     				setSelectedFacilitators(selectedFacilitators)
-    				setRecipients('selectedFacilitators', selectedFacilitators)
+    				buildRecipients('selectedFacilitators', selectedFacilitators)
         
   }
 
   const handleSelectedAdmins = (selectedAdmins) => {
     
     				setSelectedAdmins(selectedAdmins)
-    				setRecipients('selectedAdmins', selectedAdmins)
+    				buildRecipients('selectedAdmins', selectedAdmins)
         
   }
 
   const handleSelectedMentors = (selectedMentors) => {
     
     				setSelectedMentors(selectedMentors)
-    				setRecipients('selectedMentors', selectedMentors)
+    				buildRecipients('selectedMentors', selectedMentors)
         
   }
 
   const handleSelectedCounselors = (selectedCounselors) => {
     
     				setSelectedCounselors(selectedCounselors)
-    				setRecipients('selectedCounselors', selectedCounselors)
+    				buildRecipients('selectedCounselors', selectedCounselors)
         
   }
 
   const removeRecipient = (personId) => {
     
-    				let announcement = announcement
-    				announcement.recipients = announcement.recipients.filter(m => m.personId !== personId)
-    				setAnnouncement(announcement)
-    		
   }
 
   const guardiansValueRenderer = (selected, options) => {
@@ -604,14 +593,14 @@ function AnnouncementEditView(props) {
     				//And remember that when a student is de-selected that the guardian is also de-selected IF this is checked.
     				//	And that deselection can happen in the table list below on a "remove" click.
     	      setIncludeGuardians(event.target.checked); setNotIncludeStudentsOfGuardians(event.target.checked ? notIncludeStudentsOfGuardians : false)
-    				setRecipients('includeGuardians', event.target.checked)
+    				buildRecipients('includeGuardians', event.target.checked)
     		
   }
 
   const toggleNotStudentsOfGuardian = (event) => {
     
     	      setNotIncludeStudentsOfGuardians(event.target.checked)
-    				setRecipients('notIncludeStudentsOfGuardians', event.target.checked)
+    				buildRecipients('notIncludeStudentsOfGuardians', event.target.checked)
     		
   }
 
@@ -639,21 +628,14 @@ function AnnouncementEditView(props) {
 
   const handleFileUploadOpen = () => {
     return setIsShowingFileUpload(true)
-      	handleFileUploadClose = () => setIsShowingFileUpload(false)
-      	handleFileUploadSubmit = () => {
-      			const {personId} = props
-  }
 
+  }
   const handleFileUploadClose = () => {
     return setIsShowingFileUpload(false)
-      	handleFileUploadSubmit = () => {
-      			const {personId} = props
-  }
 
+  }
   const handleFileUploadSubmit = () => {
     
-      			const {personId} = props
-      			const {selectedFile, announcement={}} = state
       			let data = new FormData()
       			data.append('file', selectedFile)
       			let url = `${apiHost}ebi/announcementAttachments/fileUpload/${personId}/${announcement.announcementId || ''}`; // + `/` + encodeURIComponent(announcement.title);
@@ -684,17 +666,12 @@ function AnnouncementEditView(props) {
 
   const handleRemoveFileOpen = (announcementAttachmentId) => {
     return setIsShowingModal_removeFile(true); setAnnouncementAttachmentId(announcementAttachmentId)
-    		handleRemoveFileClose = () => setIsShowingModal_removeFile(false)
-    		handleRemoveFile = () => {
-    				const {removeAnnouncementAttachmentFile, personId} = props
-  }
 
+  }
   const handleRemoveFileClose = () => {
     return setIsShowingModal_removeFile(false)
-    		handleRemoveFile = () => {
-    				const {removeAnnouncementAttachmentFile, personId} = props
-  }
 
+  }
   const handleRemoveFile = () => {
     
     				const {removeAnnouncementAttachmentFile, personId} = props
@@ -707,28 +684,19 @@ function AnnouncementEditView(props) {
 
   const toggleGradeLevel = (gradeLevelId) => {
     
-    				let selectedGradeLevels = selectedGradeLevels
-    				selectedGradeLevels = selectedGradeLevels && selectedGradeLevels.length > 0 && selectedGradeLevels.indexOf(gradeLevelId) > -1
-    						? selectedGradeLevels.filter(id => id !== gradeLevelId)
-    						: selectedGradeLevels && selectedGradeLevels.length > 0
-    								? selectedGradeLevels.concat(gradeLevelId)
-    								: [gradeLevelId]
-    				setSelectedGradeLevels(selectedGradeLevels)
-    				setRecipients('selectedGradeLevels', selectedGradeLevels)
-    		
   }
 
   const handleStudentType = (value) => {
     
     				setStudentType(value)
-    				setRecipients('studentType', value)
+    				buildRecipients('studentType', value)
     		
   }
 
   const handleAccredited = (value) => {
     
     				setAccredited(value)
-    				setRecipients('accredited', value)
+    				buildRecipients('accredited', value)
     		
   }
 
@@ -823,7 +791,7 @@ function AnnouncementEditView(props) {
     				}
     				newState.isUserChangedMessageGroupId = true
     				setState(newState)
-    				setRecipients('', '', newState)
+    				buildRecipients('', '', newState)
     		
   }
 
@@ -843,11 +811,8 @@ function AnnouncementEditView(props) {
 
   const handleResetGroupOpen = (recipient_personId) => {
     return setIsShowingModal_resetGroup(true); setRecipient_personId(recipient_personId)
-    		handleResetGroupClose = (isClose, setRecipient) => {
-    				if (isClose) setIsShowingModal_resetGroup(false)
-    				if (setRecipient) setFromPersonId(recipient_personId, false)
-  }
 
+  }
   const handleResetGroupClose = (isClose, setRecipient) => {
     
     				if (isClose) setIsShowingModal_resetGroup(false)
@@ -872,13 +837,6 @@ function AnnouncementEditView(props) {
 
   const {personId, facilitators, mentors, guardians, counselors, accessRoles={}, companyConfig={}, announcementAttachments,
   							gradeLevels, messageGroups, students, coursesScheduled, admins, singleSimpleList, myFrequentPlaces, setMyFrequentPlace} = props
-        const {announcement={}, isRecordComplete, errorSubject, includeGuardians, isShowingFileUpload, isShowingModal_removeFile,
-  		 					messageGroupId, messageGroupName, notIncludeStudentsOfGuardians, selectedGradeLevels, studentType,
-  							accredited, selectedGuardians, selectedStudents, selectedCourses, selectedFacilitators, selectedAdmins, selectedMentors,
-  							selectedCounselors, hideGroupChoices, personChosen, isShowingModal_resetGroup, selectedFile, attachmentTitle,
-                announcementAttachmentId} = state
-  			let recipients = []
-  
   			if (announcement && announcement.recipients && announcement && announcement.recipients.length > 0) {
   					recipients = doSort(announcement.recipients, {sortField: companyConfig.studentNameFirst === 'FIRSTNAME' ? 'firstName' : 'lastName', isAsc: true, isNumber: false})
   			}

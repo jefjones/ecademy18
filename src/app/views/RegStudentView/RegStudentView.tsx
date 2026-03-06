@@ -61,7 +61,6 @@ function RegStudentView(props) {
   const [gradeLevelId, setGradeLevelId] = useState(undefined)
   const [schoolYearId, setSchoolYearId] = useState(undefined)
   const [carsonSmith, setCarsonSmith] = useState(undefined)
-  const [selectedCourses, setSelectedCourses] = useState(undefined)
   const [ell, setEll] = useState(undefined)
   const [speechTherapy, setSpeechTherapy] = useState(undefined)
   const [attendedPreviously, setAttendedPreviously] = useState(undefined)
@@ -241,15 +240,7 @@ function RegStudentView(props) {
   const setPersonIncoming = () => {
     
     				const {companyConfig} = props
-    				let person = Object.assign({}, person)
     				let personEntry = props.personEntry ? {...props.personEntry} : {}
-    				let accreditation = props.accreditation ? {...props.accreditation} : {}
-    				let medical = props.medical ? {...props.medical} : {}
-    				let background = props.background ? {...props.background} : {}
-    				let vaccinationFiles = props.vaccinationFiles ? [...props.vaccinationFiles] : []
-    				let birthCertificateFiles = props.birthCertificateFiles ? [...props.birthCertificateFiles] : []
-    				let transcriptFiles = props.transcriptFiles ? [...props.transcriptFiles] : []
-    				let courtFiles = props.courtFiles ? [...props.courtFiles] : []
     				let registration = {...props.registration}
             let peopleApprovedToPickup = props.peopleApprovedToPickup
     
@@ -367,8 +358,6 @@ function RegStudentView(props) {
   const changeAccreditation = ({target}) => {
     
     				if (target.name === 'gradeLevelId') clearSelectedCourses()
-    				let monthlyAmount = target.name === 'gradeLevelId' ? 0 : monthlyAmount
-    	      setAccreditation({...accreditation, [target.name]: target.value}); setMonthlyAmount(monthlyAmount)
         
   }
 
@@ -406,11 +395,6 @@ function RegStudentView(props) {
      //, event
           const {addOrUpdateStudent, personId, companyConfig, schoolYearId } = props
           let  person = Object.assign({}, person)
-    			let accreditation = Object.assign({}, accreditation)
-    			let medical = Object.assign({}, medical)
-    			let background = Object.assign({}, background)
-          // prevent default action. in this case, action is the form submission event
-          //event && event.preventDefault();
           let hasMinimalErrors = false
     			let isIncomplete = false
           let errors = {}
@@ -599,19 +583,14 @@ function RegStudentView(props) {
 
   const handleMissingInfoOpen = (messageInfoIncomplete) => {
     return setIsShowingModal_missingInfo(true); setMessageInfoIncomplete(messageInfoIncomplete)
-    		handleMissingInfoClose = () => setIsShowingModal_missingInfo(false); setMessageInfoIncomplete('')
     
-    		toggleCheckbox = (field) => {
-            let person = Object.assign({}, person)
-  }
 
+  }
   const handleMissingInfoClose = () => {
     return setIsShowingModal_missingInfo(false); setMessageInfoIncomplete('')
     
-    		toggleCheckbox = (field) => {
-            let person = Object.assign({}, person)
-  }
 
+  }
   const toggleCheckbox = (field) => {
     
             let person = Object.assign({}, person)
@@ -632,10 +611,6 @@ function RegStudentView(props) {
     
     				
     				let eachClassAmount = accredited ? 75 : 55
-    				let monthlyAmount = accreditation.selectedCourses && accreditation.selectedCourses.length > 0
-    						? eachClassAmount * accreditation.selectedCourses.length
-    						: 0
-    
     				setMonthlyAmount(monthlyAmount); setAccreditation({...accreditation, [field]: accredited})
     		
   }
@@ -648,7 +623,6 @@ function RegStudentView(props) {
 
   const handleBackgroundRadio = (field, value) => {
     
-    				let background = {...background}
     				background[field] = value
     				setBackground(background)
     		
@@ -656,7 +630,6 @@ function RegStudentView(props) {
 
   const handleVaccinationFormRadio = (field, value) => {
     
-    				const medical = Object.assign({}, medical)
     				if (value === 'ATTACH') {
     						handleFileUploadOpen('Vaccination'); //If this is a new student, this personId will not exist yet.
     						medical.vaccinationFileUpload = true
@@ -683,17 +656,12 @@ function RegStudentView(props) {
 
   const handleRemoveFileUploadOpen = (fileUpload) => {
     return setIsShowingModal_removeFileUpload(true); setFileUpload(fileUpload)
-    		handleRemoveFileUploadClose = () => setIsShowingModal_removeFileUpload(false)
-    		handleRemoveFileUpload = () => {
-    				const {removeRegStudentFileUpload, personId} = props
-  }
 
+  }
   const handleRemoveFileUploadClose = () => {
     return setIsShowingModal_removeFileUpload(false)
-    		handleRemoveFileUpload = () => {
-    				const {removeRegStudentFileUpload, personId} = props
-  }
 
+  }
   const handleRemoveFileUpload = () => {
     
     				const {removeRegStudentFileUpload, personId} = props
@@ -722,7 +690,6 @@ function RegStudentView(props) {
 
   const handleSelectCourse = (learningPathwayName, registrationCourseId, isToggleDelete) => {
      //, accredited
-    				let accreditation = Object.assign({}, accreditation)
     				let selectedCourses = accreditation.selectedCourses
     				if (isToggleDelete) {
     						selectedCourses = selectedCourses && selectedCourses.length > 0 && selectedCourses.filter(m => m.registrationCourseId !== registrationCourseId)
@@ -736,17 +703,12 @@ function RegStudentView(props) {
     				}
     				accreditation.selectedCourses = selectedCourses
     				let eachClassAmount = accreditation.accredited ? 75 : 55
-    				let monthlyAmount = accreditation.selectedCourses && accreditation.selectedCourses.length > 0
-    						? eachClassAmount * accreditation.selectedCourses.length
-    						: 0
-    
     				setAccreditation(accreditation); setMonthlyAmount(monthlyAmount)
     		
   }
 
   const clearSelectedCourses = () => {
     
-    				let accreditation = Object.assign({}, accreditation)
     				if (accreditation && accreditation.selectedCourses) accreditation.selectedCourses.length = 0
     				setAccreditation(accreditation); setMonthlyAmount(0)
     		
@@ -771,10 +733,8 @@ function RegStudentView(props) {
 
   const handleFileUploadClose = () => {
     return setIsShowingFileUpload(false); setRegFileType('')
-    		handleFileUploadSubmit = () => {
-    				const {personId} = props
-  }
 
+  }
   const handleFileUploadSubmit = () => {
     
     				const {personId} = props
@@ -836,15 +796,10 @@ function RegStudentView(props) {
     		
   }
 
-  const {personId, genders, schoolYearId, countries, usStates, gradeLevels, languages, howLearnOfUsList, registrationCourses, intervals, companyConfig={}} = props; //, races
-        const {person={}, peopleApprovedToPickup, accreditation={}, medical={}, background={}, isShowingFileUpload, isShowingModal_removeFileUpload, monthlyAmount, isShowingModal_missingInfo,
-                messageInfoIncomplete, selectedFile_vaccination, vaccinationFiles, birthCertificateFiles, transcriptFiles, courtFiles,  loadingVaccinationFile,
-  							loadingTranscriptFile, regFileType, selectedFile_transcript, selectedFile_birthCertificate, selectedFile_court, loadingBirthCertificateFile,
-  							loadingCourtFile, errors={}} = state
+  const {genders, countries, usStates, gradeLevels, languages, howLearnOfUsList, registrationCourses, intervals, companyConfig={}} = props; //, races
   
   			let regCourses = registrationCourses && registrationCourses.length > 0 && registrationCourses.filter(m => m.schoolYearId === schoolYearId)
   
-  			let vaccinationForm = ''
   			if (medical.vaccinationFileUpload && medical.vaccinationFileUpload !== 'false') {
   					vaccinationForm = 'ATTACH'
   			} else if (medical.vaccinationBringToOffice && medical.vaccinationBringToOffice !== 'false') {

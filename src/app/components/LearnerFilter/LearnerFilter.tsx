@@ -27,8 +27,7 @@ function LearnerFilter(props) {
               birthDateFrom: props.learnerFilter.birthDateFrom,
               birthDateTo: props.learnerFilter.birthDateTo,
           })
-  const [birthDateFrom, setBirthDateFrom] = useState(props.learnerFilter.birthDateFrom)
-  const [birthDateTo, setBirthDateTo] = useState(props.learnerFilter.birthDateTo)
+  
 
   // TODO: verify useEffect deps (converted from componentDidUpdate)
   useEffect(() => {
@@ -124,14 +123,14 @@ function LearnerFilter(props) {
       
   }
 
-  const setBirthDateFrom = () => {
+  const handleBirthDateFromBlur = () => {
     
     	    const {updateFilterByField, learnerFilter} = props
     	    updateFilterByField(learnerFilter.personId, "birthDateFrom", localDate.birthDateFrom)
       
   }
 
-  const setBirthDateTo = () => {
+  const handleBirthDateToBlur = () => {
     
     	    const {updateFilterByField, learnerFilter} = props
     	    updateFilterByField(learnerFilter.personId, "birthDateTo", localDate.birthDateTo)
@@ -141,15 +140,6 @@ function LearnerFilter(props) {
   const toggleGradeLevel = (gradeLevelId) => {
     
     			const {updateFilterByField, learnerFilter} = props
-    			let selectedGradeLevels = [...selectedGradeLevels]
-    			selectedGradeLevels = selectedGradeLevels.indexOf(gradeLevelId) > -1
-    					? selectedGradeLevels.filter(id => id !== gradeLevelId)
-    					: selectedGradeLevels && selectedGradeLevels.length > 0
-    							? selectedGradeLevels.concat(gradeLevelId)
-    							: [gradeLevelId]
-    			setSelectedGradeLevels(selectedGradeLevels)
-    			updateFilterByField(learnerFilter.personId, "selectedGradeLevels", selectedGradeLevels)
-    	
   }
 
   const {learnerFilter, updateFilterByField, learnerOutcomes, learnerOutcomeTargets, learningFocusAreas, facilitators, mentors,
@@ -176,13 +166,13 @@ function LearnerFilter(props) {
                           <span className={styles.text}>Birth date - From</span>
                           <DateTimePicker id={`birthDateFrom`} value={localDate.birthDateFrom} maxDate={lf.birthDateTo}
                               onChange={(event) => changeReoccurringSchedule('birthDateFrom', event)}
-                              onBlur={setBirthDateFrom}/>
+                              onBlur={handleBirthDateFromBlur}/>
                       </div>
                       <div className={styles.dateRow}>
                           <span className={styles.text}>To</span>
                           <DateTimePicker id={`birthDateTo`} value={localDate.birthDateTo} minDate={lf.birthDateFrom ? lf.birthDateFrom : ''}
                               onChange={(event) => changeReoccurringSchedule('birthDateTo', event)}
-                              onBlur={setBirthDateTo}/>
+                              onBlur={handleBirthDateToBlur}/>
                       </div>
   										<a onClick={() => clearFilters(personId)} className={classes(styles.lower, styles.linkStyle)}>
   												Clear filters

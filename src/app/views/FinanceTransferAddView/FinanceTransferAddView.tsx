@@ -61,8 +61,6 @@ function FinanceTransferAddView(props) {
     
           const {personId, addFinanceTransfer, getFinanceAccountSummaries} = props
     			
-    			let financeTransferId = financeTransferId
-    			let errors = Object.assign({}, errors)
     			let data = new FormData()
     			data.append('file', selectedFile)
     			let missingInfoMessage = []
@@ -216,7 +214,6 @@ function FinanceTransferAddView(props) {
 
   const handleImageViewerClose = () => {
     return setIsShowingModal(false); setFileUrl('')
-    	handleInputFile = (file) => setSelectedFile(file)
   }
 
   const handleInputFile = (file) => {
@@ -225,19 +222,14 @@ function FinanceTransferAddView(props) {
 
   const handleMissingInfoOpen = (messageInfoIncomplete) => {
     return setIsShowingModal_missingInfo(true); setMessageInfoIncomplete(messageInfoIncomplete)
-    	handleMissingInfoClose = () => setIsShowingModal_missingInfo(false); setMessageInfoIncomplete('')
     
-    	resetClearTextValue = () => {
-    			setClearStudent(false); setClearGuardian(false); setClearTeacher(false)
-  }
 
+  }
   const handleMissingInfoClose = () => {
     return setIsShowingModal_missingInfo(false); setMessageInfoIncomplete('')
     
-    	resetClearTextValue = () => {
-    			setClearStudent(false); setClearGuardian(false); setClearTeacher(false)
-  }
 
+  }
   const resetClearTextValue = () => {
     
     			setClearStudent(false); setClearGuardian(false); setClearTeacher(false)
@@ -294,7 +286,7 @@ function FinanceTransferAddView(props) {
   														}
   														labelClass={styles.checkboxLabel}
   														checked={fromAccountType === 'LUNCH' || false}
-  														onClick={() => setFromAccountType('LUNCH'); setAmount(fromLunchAmount); setFromAmount(fromLunchAmount)}
+  														onClick={() => { setFromAccountType('LUNCH'); setAmount(fromLunchAmount); setFromAmount(fromLunchAmount) }}
   														className={styles.button}/>
   										</div>
   								}
@@ -309,7 +301,7 @@ function FinanceTransferAddView(props) {
   														}
   														labelClass={styles.checkboxLabel}
   														checked={fromAccountType === 'CREDIT' || false}
-  														onClick={() => setFromAccountType('CREDIT'); setAmount(fromCreditAmount); setFromAmount(fromCreditAmount)}
+  														onClick={() => { setFromAccountType('CREDIT'); setAmount(fromCreditAmount); setFromAmount(fromCreditAmount) }}
   														className={styles.button}/>
   										</div>
   								}

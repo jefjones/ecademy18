@@ -42,7 +42,6 @@ function AbsenceUnexcusedView(props) {
   const [courseScheduledId, setCourseScheduledId] = useState(undefined)
   const [isShowingFileUpload, setIsShowingFileUpload] = useState(undefined)
   const [loadingFiles, setLoadingFiles] = useState(undefined)
-  const [handleFileUploadOpen, setHandleFileUploadOpen] = useState(undefined)
   const [isShowingModal_chooseAbsence, setIsShowingModal_chooseAbsence] = useState(undefined)
   const [isShowingModal_removeFileUpload, setIsShowingModal_removeFileUpload] = useState(undefined)
   const [fileUpload, setFileUpload] = useState(undefined)
@@ -123,25 +122,17 @@ function AbsenceUnexcusedView(props) {
 
   const handleMissingInfoOpen = (messageInfoIncomplete) => {
     return setIsShowingModal_missingInfo(true); setMessageInfoIncomplete(messageInfoIncomplete)
-    	handleMissingInfoClose = () => setIsShowingModal_missingInfo(false); setMessageInfoIncomplete('')
     
-    	toggleCheckbox = (event, id) => {
-    			//The id can be a courseAttendanceId (not pendingApproval) or excusedAbsenceId (pendingApproval)
-    			let selectedAbsences = Object.assign([], selectedAbsences)
-  }
 
+  }
   const handleMissingInfoClose = () => {
     return setIsShowingModal_missingInfo(false); setMessageInfoIncomplete('')
     
-    	toggleCheckbox = (event, id) => {
-    			//The id can be a courseAttendanceId (not pendingApproval) or excusedAbsenceId (pendingApproval)
-    			let selectedAbsences = Object.assign([], selectedAbsences)
-  }
 
+  }
   const toggleCheckbox = (event, id) => {
     
     			//The id can be a courseAttendanceId (not pendingApproval) or excusedAbsenceId (pendingApproval)
-    			let selectedAbsences = Object.assign([], selectedAbsences)
     			if (selectedAbsences && selectedAbsences.length > 0 && selectedAbsences.indexOf(id) > -1) {
     					selectedAbsences = selectedAbsences.filter(m => m !== id)
     			} else {
@@ -153,64 +144,29 @@ function AbsenceUnexcusedView(props) {
 
   const handleSelectedStudents = ({target}) => {
     return setStudentPersonId(target.value); setSelectedAbsences([])
-    	handleSelectedCourses = ({target}) => setCourseScheduledId(target.value); setSelectedAbsences([])
     
-    	handleSetAll = (selectedAbsences) => setSelectedAbsences(selectedAbsences)
     
-    	handleFileUploadOpen = () => setIsShowingFileUpload(true); setLoadingFiles(true)
-    	handleFileUploadClose = () => setIsShowingFileUpload(false); setHandleFileUploadOpen(false)
-    	handleFileUploadSubmit = () => {
-    			//When the file upload is used, it will create the new ExcusedAbsence record plus let the files be accrued if the user wants to enter
-    			//	more than one file.  But as soon as the page's submit button is used (processform), then the user is submitting the entire record which may have a note.
-    			//For the user (either parent, student or admin), the chosen absence records should then disappear from this list.
-    			const {personId, reduxAbsenceExcusedFiles} = props
-  }
 
+  }
   const handleSelectedCourses = ({target}) => {
     return setCourseScheduledId(target.value); setSelectedAbsences([])
     
-    	handleSetAll = (selectedAbsences) => setSelectedAbsences(selectedAbsences)
     
-    	handleFileUploadOpen = () => setIsShowingFileUpload(true); setLoadingFiles(true)
-    	handleFileUploadClose = () => setIsShowingFileUpload(false); setHandleFileUploadOpen(false)
-    	handleFileUploadSubmit = () => {
-    			//When the file upload is used, it will create the new ExcusedAbsence record plus let the files be accrued if the user wants to enter
-    			//	more than one file.  But as soon as the page's submit button is used (processform), then the user is submitting the entire record which may have a note.
-    			//For the user (either parent, student or admin), the chosen absence records should then disappear from this list.
-    			const {personId, reduxAbsenceExcusedFiles} = props
-  }
 
+  }
   const handleSetAll = (selectedAbsences) => {
     return setSelectedAbsences(selectedAbsences)
     
-    	handleFileUploadOpen = () => setIsShowingFileUpload(true); setLoadingFiles(true)
-    	handleFileUploadClose = () => setIsShowingFileUpload(false); setHandleFileUploadOpen(false)
-    	handleFileUploadSubmit = () => {
-    			//When the file upload is used, it will create the new ExcusedAbsence record plus let the files be accrued if the user wants to enter
-    			//	more than one file.  But as soon as the page's submit button is used (processform), then the user is submitting the entire record which may have a note.
-    			//For the user (either parent, student or admin), the chosen absence records should then disappear from this list.
-    			const {personId, reduxAbsenceExcusedFiles} = props
-  }
 
+  }
   const handleFileUploadOpen = () => {
     return setIsShowingFileUpload(true); setLoadingFiles(true)
-    	handleFileUploadClose = () => setIsShowingFileUpload(false); setHandleFileUploadOpen(false)
-    	handleFileUploadSubmit = () => {
-    			//When the file upload is used, it will create the new ExcusedAbsence record plus let the files be accrued if the user wants to enter
-    			//	more than one file.  But as soon as the page's submit button is used (processform), then the user is submitting the entire record which may have a note.
-    			//For the user (either parent, student or admin), the chosen absence records should then disappear from this list.
-    			const {personId, reduxAbsenceExcusedFiles} = props
-  }
 
+  }
   const handleFileUploadClose = () => {
     return setIsShowingFileUpload(false); setHandleFileUploadOpen(false)
-    	handleFileUploadSubmit = () => {
-    			//When the file upload is used, it will create the new ExcusedAbsence record plus let the files be accrued if the user wants to enter
-    			//	more than one file.  But as soon as the page's submit button is used (processform), then the user is submitting the entire record which may have a note.
-    			//For the user (either parent, student or admin), the chosen absence records should then disappear from this list.
-    			const {personId, reduxAbsenceExcusedFiles} = props
-  }
 
+  }
   const handleFileUploadSubmit = () => {
     
     			//When the file upload is used, it will create the new ExcusedAbsence record plus let the files be accrued if the user wants to enter
@@ -248,47 +204,27 @@ function AbsenceUnexcusedView(props) {
   const handleInputFile = (selectedFile) => {
     return setSelectedFile(selectedFile)
     
-    	handleChooseAnAbsenceOpen = () => setIsShowingModal_chooseAbsence(true)
-    	handleChooseAnAbsenceClose = () => setIsShowingModal_chooseAbsence(false)
     
-    	handleRemoveFileUploadOpen = (fileUpload) => setIsShowingModal_removeFileUpload(true); setFileUpload(fileUpload)
-    	handleRemoveFileUploadClose = () => setIsShowingModal_removeFileUpload(false); setFileUpload([])
-    	handleRemoveFileUpload = () => {
-    			const {removeAbsenceExcusedFileUpload, personId} = props
-  }
 
+  }
   const handleChooseAnAbsenceOpen = () => {
     return setIsShowingModal_chooseAbsence(true)
-    	handleChooseAnAbsenceClose = () => setIsShowingModal_chooseAbsence(false)
     
-    	handleRemoveFileUploadOpen = (fileUpload) => setIsShowingModal_removeFileUpload(true); setFileUpload(fileUpload)
-    	handleRemoveFileUploadClose = () => setIsShowingModal_removeFileUpload(false); setFileUpload([])
-    	handleRemoveFileUpload = () => {
-    			const {removeAbsenceExcusedFileUpload, personId} = props
-  }
 
+  }
   const handleChooseAnAbsenceClose = () => {
     return setIsShowingModal_chooseAbsence(false)
     
-    	handleRemoveFileUploadOpen = (fileUpload) => setIsShowingModal_removeFileUpload(true); setFileUpload(fileUpload)
-    	handleRemoveFileUploadClose = () => setIsShowingModal_removeFileUpload(false); setFileUpload([])
-    	handleRemoveFileUpload = () => {
-    			const {removeAbsenceExcusedFileUpload, personId} = props
-  }
 
+  }
   const handleRemoveFileUploadOpen = (fileUpload) => {
     return setIsShowingModal_removeFileUpload(true); setFileUpload(fileUpload)
-    	handleRemoveFileUploadClose = () => setIsShowingModal_removeFileUpload(false); setFileUpload([])
-    	handleRemoveFileUpload = () => {
-    			const {removeAbsenceExcusedFileUpload, personId} = props
-  }
 
+  }
   const handleRemoveFileUploadClose = () => {
     return setIsShowingModal_removeFileUpload(false); setFileUpload([])
-    	handleRemoveFileUpload = () => {
-    			const {removeAbsenceExcusedFileUpload, personId} = props
-  }
 
+  }
   const handleRemoveFileUpload = () => {
     
     			const {removeAbsenceExcusedFileUpload, personId} = props
@@ -304,17 +240,12 @@ function AbsenceUnexcusedView(props) {
 
   const handleDocumentOpen = (excusedAbsenceId, fileUpload) => {
     return setIsShowingModal_document(true); setExcusedAbsenceId(excusedAbsenceId); setFileUpload(fileUpload)
-    	handleDocumentClose = () => setIsShowingModal_document(false); setFileUpload({}); setExcusedAbsenceId('')
-    	handleAbsenceApproval = (declineOrApprove) => {
-    			const {personId, approveAbsenceExcused} = props
-  }
 
+  }
   const handleDocumentClose = () => {
     return setIsShowingModal_document(false); setFileUpload({}); setExcusedAbsenceId('')
-    	handleAbsenceApproval = (declineOrApprove) => {
-    			const {personId, approveAbsenceExcused} = props
-  }
 
+  }
   const handleAbsenceApproval = (declineOrApprove) => {
     
     			const {personId, approveAbsenceExcused} = props
@@ -326,17 +257,12 @@ function AbsenceUnexcusedView(props) {
 
   const handleInstructionsOpen = (excusedAbsenceId, note) => {
     return setIsShowingModal_instructions(true); setExcusedAbsenceId(excusedAbsenceId); setNote(note)
-    	handleInstructionsClose = () => setIsShowingModal_instructions(false); setNote(''); setExcusedAbsenceId('')
-    	handleApprovalSubmit = (declineOrApprove) => {
-    			const {personId, approveAbsenceExcused} = props
-  }
 
+  }
   const handleInstructionsClose = () => {
     return setIsShowingModal_instructions(false); setNote(''); setExcusedAbsenceId('')
-    	handleApprovalSubmit = (declineOrApprove) => {
-    			const {personId, approveAbsenceExcused} = props
-  }
 
+  }
   const handleApprovalSubmit = (declineOrApprove) => {
     
     			const {personId, approveAbsenceExcused} = props
@@ -348,7 +274,6 @@ function AbsenceUnexcusedView(props) {
 
   const handleEnteredByOpen = (displayDoctor) => {
     return setIsShowingModal_doctor(true); setDisplayDoctor(displayDoctor)
-    	handleEnteredByClose = () => setIsShowingModal_doctor(false); setDisplayDoctor('')
     
     	chooseRecord = chosen_courseAttendanceId => setChosen_courseAttendanceId(chosen_courseAttendanceId)
   }
@@ -374,9 +299,6 @@ function AbsenceUnexcusedView(props) {
   }
 
   const {personId, absenceUnexcused={}, fetchingRecord, companyConfig, accessRoles, pendingApproval} = props
-      const {isShowingModal_missingInfo, selectedAbsences=[], note, studentPersonId, courseScheduledId, messageInfoIncomplete, isShowingModal_removeFileUpload,
-  						isShowingFileUpload, selectedFile, isShowingModal_chooseAbsence, loadingFiles, includeSiblings, fileUpload, isShowingModal_instructions,
-  						isShowingModal_document, isShowingModal_doctor, displayDoctor={}, chosen_courseAttendanceId, searchDate} = state
   
   		let localAbsence = (absenceUnexcused && absenceUnexcused.absenceDateLines) || []
   

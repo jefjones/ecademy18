@@ -44,38 +44,24 @@ function WorkTools(props) {
 
   const handleDeleteWorkClose = () => {
     return setIsShowingModal_work(false)
-        handleDeleteWorkOpen = () => setIsShowingModal_work(true)
-        handleDeleteWorkOrSectionClose = () => setIsShowingModal_workOrSection(false)
-        handleDeleteWorkOrSectionOpen = () => setIsShowingModal_workOrSection(true)
     
-        toggleLabels = () => {
-            const {personId, updatePersonConfig, personConfig} = props
-  }
 
+  }
   const handleDeleteWorkOpen = () => {
     return setIsShowingModal_work(true)
-        handleDeleteWorkOrSectionClose = () => setIsShowingModal_workOrSection(false)
-        handleDeleteWorkOrSectionOpen = () => setIsShowingModal_workOrSection(true)
     
-        toggleLabels = () => {
-            const {personId, updatePersonConfig, personConfig} = props
-  }
 
+  }
   const handleDeleteWorkOrSectionClose = () => {
     return setIsShowingModal_workOrSection(false)
-        handleDeleteWorkOrSectionOpen = () => setIsShowingModal_workOrSection(true)
     
-        toggleLabels = () => {
-            const {personId, updatePersonConfig, personConfig} = props
-  }
 
+  }
   const handleDeleteWorkOrSectionOpen = () => {
     return setIsShowingModal_workOrSection(true)
     
-        toggleLabels = () => {
-            const {personId, updatePersonConfig, personConfig} = props
-  }
 
+  }
   const toggleLabels = () => {
     
             const {personId, updatePersonConfig, personConfig} = props

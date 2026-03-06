@@ -60,27 +60,12 @@ function AssessmentQuestionsView(props) {
 
   const handleFileUploadOpen = (assessmentQuestionId) => {
     return setIsShowingFileUpload(true); setAssessmentQuestionId(assessmentQuestionId)
-      handleFileUploadClose = () => setIsShowingFileUpload(false)
-      handleSubmitFile = () => {
-        const {
-          assessmentQuestionsInit,
-          personId,
-          assessmentId,
-          assignmentId
-        } = props
-  }
 
+  }
   const handleFileUploadClose = () => {
     return setIsShowingFileUpload(false)
-      handleSubmitFile = () => {
-        const {
-          assessmentQuestionsInit,
-          personId,
-          assessmentId,
-          assignmentId
-        } = props
-  }
 
+  }
   const handleSubmitFile = () => {
     
         const {
@@ -112,15 +97,8 @@ function AssessmentQuestionsView(props) {
 
   const handleAddOrUpdateQuestionClose = () => {
     return setIsShowingModal_addOrUpdate(false); setIsEditMode(false)
-      handleAddOrUpdateQuestionSave = (assessmentQuestion) => {
-        const {
-          addOrUpdateAssessmentItem,
-          addOrUpdateAssessmentItemMatching,
-          personId,
-          assessmentId
-        } = props
-  }
 
+  }
   const handleAddOrUpdateQuestionSave = (assessmentQuestion) => {
     
         const {
@@ -139,17 +117,12 @@ function AssessmentQuestionsView(props) {
 
   const handleRemoveQuestionOpen = (assessmentQuestionId) => {
     return setIsShowingModal_removeQuestion(true); setAssessmentQuestionId(assessmentQuestionId)
-      handleRemoveQuestionClose = () => setIsShowingModal_removeQuestion(false)
-      handleRemoveQuestion = () => {
-        const {removeAssessmentQuestion, personId, assessmentId} = props
-  }
 
+  }
   const handleRemoveQuestionClose = () => {
     return setIsShowingModal_removeQuestion(false)
-      handleRemoveQuestion = () => {
-        const {removeAssessmentQuestion, personId, assessmentId} = props
-  }
 
+  }
   const handleRemoveQuestion = () => {
     
         const {removeAssessmentQuestion, personId, assessmentId} = props
@@ -161,17 +134,12 @@ function AssessmentQuestionsView(props) {
 
   const handleRemoveWebsiteLinkOpen = (assessmentQuestionId, websiteLink) => {
     return setIsShowingModal_removeWebsiteLink(true); setAssessmentQuestionId(assessmentQuestionId); setWebsiteLink(websiteLink)
-      handleRemoveWebsiteLinkClose = () => setIsShowingModal_removeWebsiteLink(false)
-      handleRemoveWebsiteLink = () => {
-        const {removeAssessmentQuestionWebsiteLink, personId} = props
-  }
 
+  }
   const handleRemoveWebsiteLinkClose = () => {
     return setIsShowingModal_removeWebsiteLink(false)
-      handleRemoveWebsiteLink = () => {
-        const {removeAssessmentQuestionWebsiteLink, personId} = props
-  }
 
+  }
   const handleRemoveWebsiteLink = () => {
     
         const {removeAssessmentQuestionWebsiteLink, personId} = props
@@ -183,17 +151,12 @@ function AssessmentQuestionsView(props) {
 
   const handleRemoveFileUploadOpen = (assessmentQuestionId, fileUploadId) => {
     return setIsShowingModal_removeFileUpload(true); setAssessmentQuestionId(assessmentQuestionId); setFileUploadId(fileUploadId)
-      handleRemoveFileUploadClose = () => setIsShowingModal_removeFileUpload(false)
-      handleRemoveFileUpload = () => {
-        const {removeAssessmentQuestionFileUpload, personId} = props
-  }
 
+  }
   const handleRemoveFileUploadClose = () => {
     return setIsShowingModal_removeFileUpload(false)
-      handleRemoveFileUpload = () => {
-        const {removeAssessmentQuestionFileUpload, personId} = props
-  }
 
+  }
   const handleRemoveFileUpload = () => {
     
         const {removeAssessmentQuestionFileUpload, personId} = props
@@ -205,17 +168,12 @@ function AssessmentQuestionsView(props) {
 
   const handleRemoveQuestionFileOpen = (assessmentQuestionId, fileUploadId) => {
     return setIsShowingModal_removeQuestionFile(true); setAssessmentQuestionId(assessmentQuestionId); setFileUploadId(fileUploadId)
-      handleRemoveQuestionFileClose = () => setIsShowingModal_removeQuestionFile(false)
-      handleRemoveQuestionFile = () => {
-        const {removeAssessmentQuestionQuestionFile, personId} = props
-  }
 
+  }
   const handleRemoveQuestionFileClose = () => {
     return setIsShowingModal_removeQuestionFile(false)
-      handleRemoveQuestionFile = () => {
-        const {removeAssessmentQuestionQuestionFile, personId} = props
-  }
 
+  }
   const handleRemoveQuestionFile = () => {
     
         const {removeAssessmentQuestionQuestionFile, personId} = props
@@ -238,10 +196,8 @@ function AssessmentQuestionsView(props) {
 
   const handleRemoveQuestionRecordingClose = () => {
     return setIsShowingModal_removeQuestionRecording(false)
-      handleRemoveQuestionRecording = () => {
-        const {removeAssessmentQuestionQuestionRecording, personId} = props
-  }
 
+  }
   const handleRemoveQuestionRecording = () => {
     
         const {removeAssessmentQuestionQuestionRecording, personId} = props
@@ -254,17 +210,12 @@ function AssessmentQuestionsView(props) {
 
   const handleRemoveAnswerFileOpen = (assessmentQuestionId, fileUploadId) => {
     return setIsShowingModal_removeAnswerFile(true); setAssessmentQuestionId(assessmentQuestionId); setFileUploadId(fileUploadId)
-      handleRemoveAnswerFileClose = () => setIsShowingModal_removeAnswerFile(false)
-      handleRemoveAnswerFile = () => {
-        const {removeAssessmentQuestionAnswerFile, personId} = props
-  }
 
+  }
   const handleRemoveAnswerFileClose = () => {
     return setIsShowingModal_removeAnswerFile(false)
-      handleRemoveAnswerFile = () => {
-        const {removeAssessmentQuestionAnswerFile, personId} = props
-  }
 
+  }
   const handleRemoveAnswerFile = () => {
     
         const {removeAssessmentQuestionAnswerFile, personId} = props
@@ -277,17 +228,12 @@ function AssessmentQuestionsView(props) {
 
   const handleRemoveToMatchFileOpen = (assessmentQuestionId, fileUploadId) => {
     return setIsShowingModal_removeToMatchFile(true); setAssessmentQuestionId(assessmentQuestionId); setFileUploadId(fileUploadId)
-      handleRemoveToMatchFileClose = () => setIsShowingModal_removeToMatchFile(false)
-      handleRemoveToMatchFile = () => {
-        const {removeAssessmentQuestionToMatchFile, personId} = props
-  }
 
+  }
   const handleRemoveToMatchFileClose = () => {
     return setIsShowingModal_removeToMatchFile(false)
-      handleRemoveToMatchFile = () => {
-        const {removeAssessmentQuestionToMatchFile, personId} = props
-  }
 
+  }
   const handleRemoveToMatchFile = () => {
     
         const {removeAssessmentQuestionToMatchFile, personId} = props
@@ -300,17 +246,12 @@ function AssessmentQuestionsView(props) {
 
   const handleRemoveAnswerOptionOpen = (assessmentQuestionId, answerIndex) => {
     return setIsShowingModal_removeAnswerOption(true); setAssessmentQuestionId(assessmentQuestionId); setAnswerIndex(answerIndex)
-      handleRemoveAnswerOptionClose = () => setIsShowingModal_removeAnswerOption(false); setAssessmentQuestionId(''); setAnswerIndex('')
-      handleRemoveAnswerOption = () => {
-        const {removeAssessmentQuestionAnswerOption, personId} = props
-  }
 
+  }
   const handleRemoveAnswerOptionClose = () => {
     return setIsShowingModal_removeAnswerOption(false); setAssessmentQuestionId(''); setAnswerIndex('')
-      handleRemoveAnswerOption = () => {
-        const {removeAssessmentQuestionAnswerOption, personId} = props
-  }
 
+  }
   const handleRemoveAnswerOption = () => {
     
         const {removeAssessmentQuestionAnswerOption, personId} = props
@@ -323,17 +264,12 @@ function AssessmentQuestionsView(props) {
 
   const handleRemoveAnswerRecordingOpen = (assessmentQuestionId, fileUploadId, answerIndex, multipleAnswerType) => {
     return setIsShowingModal_removeAnswerRecording(true); setAssessmentQuestionId(assessmentQuestionId); setFileUploadId(fileUploadId); setAnswerIndex(answerIndex); setMultipleAnswerType(multipleAnswerType)
-      handleRemoveAnswerRecordingClose = () => setIsShowingModal_removeAnswerRecording(false); setAnswerIndex(''); setMultipleAnswerType('')
-      handleRemoveAnswerRecording = () => {
-        const {removeAssessmentQuestionAnswerRecording, personId} = props
-  }
 
+  }
   const handleRemoveAnswerRecordingClose = () => {
     return setIsShowingModal_removeAnswerRecording(false); setAnswerIndex(''); setMultipleAnswerType('')
-      handleRemoveAnswerRecording = () => {
-        const {removeAssessmentQuestionAnswerRecording, personId} = props
-  }
 
+  }
   const handleRemoveAnswerRecording = () => {
     
         const {removeAssessmentQuestionAnswerRecording, personId} = props
@@ -346,17 +282,12 @@ function AssessmentQuestionsView(props) {
 
   const handleRemoveSolutionFileOpen = (assessmentQuestionId, fileUploadId) => {
     return setIsShowingModal_removeSolutionFile(true); setAssessmentQuestionId(assessmentQuestionId); setFileUploadId(fileUploadId)
-      handleRemoveSolutionFileClose = () => setIsShowingModal_removeSolutionFile(false)
-      handleRemoveSolutionFile = () => {
-        const {removeAssessmentQuestionSolutionFile, personId} = props
-  }
 
+  }
   const handleRemoveSolutionFileClose = () => {
     return setIsShowingModal_removeSolutionFile(false)
-      handleRemoveSolutionFile = () => {
-        const {removeAssessmentQuestionSolutionFile, personId} = props
-  }
 
+  }
   const handleRemoveSolutionFile = () => {
     
         const {removeAssessmentQuestionSolutionFile, personId} = props
@@ -369,17 +300,12 @@ function AssessmentQuestionsView(props) {
 
   const handleRemoveSolutionRecordingOpen = (assessmentQuestionId, fileUploadId) => {
     return setIsShowingModal_removeSolutionRecording(true); setAssessmentQuestionId(assessmentQuestionId); setFileUploadId(fileUploadId)
-      handleRemoveSolutionRecordingClose = () => setIsShowingModal_removeSolutionRecording(false)
-      handleRemoveSolutionRecording = () => {
-        const {removeAssessmentQuestionSolutionRecording, personId} = props
-  }
 
+  }
   const handleRemoveSolutionRecordingClose = () => {
     return setIsShowingModal_removeSolutionRecording(false)
-      handleRemoveSolutionRecording = () => {
-        const {removeAssessmentQuestionSolutionRecording, personId} = props
-  }
 
+  }
   const handleRemoveSolutionRecording = () => {
     
         const {removeAssessmentQuestionSolutionRecording, personId} = props
@@ -392,17 +318,12 @@ function AssessmentQuestionsView(props) {
 
   const handleWebsiteLinkOpen = (assessmentQuestionId) => {
     return setIsShowingModal_websiteLink(true); setAssessmentQuestionId(assessmentQuestionId)
-      handleWebsiteLinkClose = () => setIsShowingModal_websiteLink(false)
-      handleWebsiteLinkSave = (websiteLink) => {
-        const {saveAssessmentQuestionWebsiteLink, personId} = props
-  }
 
+  }
   const handleWebsiteLinkClose = () => {
     return setIsShowingModal_websiteLink(false)
-      handleWebsiteLinkSave = (websiteLink) => {
-        const {saveAssessmentQuestionWebsiteLink, personId} = props
-  }
 
+  }
   const handleWebsiteLinkSave = (websiteLink) => {
     
         const {saveAssessmentQuestionWebsiteLink, personId} = props
@@ -472,29 +393,14 @@ function AssessmentQuestionsView(props) {
 
   const handleCannotChangeOpen = () => {
     return setIsShowingModal_cannotChange(true)
-      handleCannotChangeClose = () => setIsShowingModal_cannotChange(false)
     
-      toggleCheckbox = (field, event) => {
-        const {
-          updateAssessmentSettings,
-          personId,
-          assessmentId,
-          assessment
-        } = props
-  }
 
+  }
   const handleCannotChangeClose = () => {
     return setIsShowingModal_cannotChange(false)
     
-      toggleCheckbox = (field, event) => {
-        const {
-          updateAssessmentSettings,
-          personId,
-          assessmentId,
-          assessment
-        } = props
-  }
 
+  }
   const toggleCheckbox = (field, event) => {
     
         const {

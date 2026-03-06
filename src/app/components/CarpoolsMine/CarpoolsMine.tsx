@@ -56,7 +56,6 @@ function CarpoolsMine(props) {
   const [errorAllowAddress, setErrorAllowAddress] = useState(<L p={p} t={`A carpool member needs to consider your location in order to make a decision to carpool with you.`}/>)
   const [isShowingModal_requests, setIsShowingModal_requests] = useState(true)
   const [listUsedIn, setListUsedIn] = useState([])
-  const [carpool, setCarpool] = useState({})
   const [allowAddress, setAllowAddress] = useState(true)
   const [expandedStudentIncluded, setExpandedStudentIncluded] = useState(!this.state.expandedStudentIncluded)
   const [checkedSendEmail, setCheckedSendEmail] = useState(!checkedSendEmail)
@@ -84,10 +83,6 @@ function CarpoolsMine(props) {
   //Notice that this Accordion is different since it gets its expanded state from the parent page, CarpoolView, so that
   		//	other tab links or actions can open up the new carpool remotely.
       const {personId, carpool={}, daysOfWeekAll, expanded, setMemberStudentsInCarpool} = props
-      const {myCarpool, thisStudentCarpool, isShowingModal_remove, isShowingModal_requests, errorCarpoolName, errorDestination, isShowingModal_description,
-  						carpoolName, carpoolComment, isShowingModal_myStudents, errorAllowAddress, allowAddress, isShowingModal_removePickUpTime, errorCarpoolTime,
-  						isShowingModal_removeDropOffTime, newDropOff={}, newPickUp={}, isShowingModal_missingInfo, messageInfoIncomplete, studentsIncluded,
-  						myStudentsAll, expandedStudentIncluded} = state
   
   		//Notice that this Accordion is different since it gets its expanded state from the parent page, CarpoolView, so that
   		//	other tab links or actions can open up the new carpool remotely.

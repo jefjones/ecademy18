@@ -33,7 +33,6 @@ function StudentScheduleWeekView(props) {
   const [isShowingModal_cannotAdd, setIsShowingModal_cannotAdd] = useState(false)
   const [intervalId, setIntervalId] = useState(props.personConfig.intervalId || props.companyConfig.intervalId)
   const [student, setStudent] = useState(undefined)
-  const [studentPersonId, setStudentPersonId] = useState(this.props.studentPersonId)
   const [courseScheduledschoolYearId, setCourseScheduledschoolYearId] = useState(target.value)
   const [chosenEvent, setChosenEvent] = useState(event)
   const [isShowingModal_comment, setIsShowingModal_comment] = useState(true)

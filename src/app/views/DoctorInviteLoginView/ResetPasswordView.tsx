@@ -43,9 +43,6 @@ function ResetPasswordView(props) {
   const handleMessageOpen = () => {
     return setIsShowingModal(true)
     
-        render() {
-            const {loginData} = props
-  }
 
   const {loginData} = props
           

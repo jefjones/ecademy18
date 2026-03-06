@@ -21,13 +21,6 @@ function CourseAttendanceView(props) {
   const [isShowingModal_noDate, setIsShowingModal_noDate] = useState(false)
   const [isShowingModal_setAllPresent, setIsShowingModal_setAllPresent] = useState(false)
   const [isInit, setIsInit] = useState(true)
-  const [courseDay, setCourseDay] = useState(this.props.courseDay
-			courseDay = moment(courseDay).format('YYYY-MM-DD')
-			if (!courseDay || courseDay === 'Invalid date') {
-					this.handleDateMissingOpen()
-			} else {
-					setCourseAttendance(personId, type, studentPersonId, courseScheduledId, courseDay, currentSetting, studentList)
-			})
   const [attendance, setAttendance] = useState([])
   const [isShowingModal_document, setIsShowingModal_document] = useState(true)
   const [fileUpload, setFileUpload] = useState({})
@@ -53,7 +46,7 @@ function CourseAttendanceView(props) {
     	
   }, [])
 
-  const {personId, myFrequentPlaces, setMyFrequentPlace, students, courseDates, coursesScheduled, attendance, courseScheduledId, intervals,
+  const {personId, myFrequentPlaces, setMyFrequentPlace, students, courseDates, coursesScheduled, courseScheduledId, intervals,
   						personConfig, companyConfig={}, schoolYears, fetchingRecord, accessRoles} = props
       
       let localStudents = students

@@ -59,10 +59,8 @@ function StudentListMenu(props) {
   const chooseRecord = (studentPersonId, studentType) => {
     return setStudentPersonId(studentPersonId); setStudentType(studentType)
     
-    		handleGoToStudentOption = ({target}) => {
-    				
-  }
 
+  }
   const handleGoToStudentOption = ({target}) => {
     
     				

@@ -38,37 +38,22 @@ function OpenCommunityToCommitButtons(props) {
 
   const handleNewAlertClose = () => {
     return setIsShowingModal_new(false)
-      handleNewAlertOpen = () => setIsShowingModal_new(true)
-      handleUncommitAlertClose = () => setIsShowingModal_uncommit(false)
-      handleUncommitAlertOpen = () => setIsShowingModal_uncommit(true)
     
-      render() {
-          let {chapterOptions, languageOptions, openCommunityEntry} = props
-  }
 
+  }
   const handleNewAlertOpen = () => {
     return setIsShowingModal_new(true)
-      handleUncommitAlertClose = () => setIsShowingModal_uncommit(false)
-      handleUncommitAlertOpen = () => setIsShowingModal_uncommit(true)
     
-      render() {
-          let {chapterOptions, languageOptions, openCommunityEntry} = props
-  }
 
+  }
   const handleUncommitAlertClose = () => {
     return setIsShowingModal_uncommit(false)
-      handleUncommitAlertOpen = () => setIsShowingModal_uncommit(true)
     
-      render() {
-          let {chapterOptions, languageOptions, openCommunityEntry} = props
-  }
 
+  }
   const handleUncommitAlertOpen = () => {
     return setIsShowingModal_uncommit(true)
     
-      render() {
-          let {chapterOptions, languageOptions, openCommunityEntry} = props
-  }
 
   let {chapterOptions, languageOptions, openCommunityEntry} = props
         

@@ -73,7 +73,6 @@ function FinanceBillingAddView(props) {
     
           const {personId, getFinanceBillings} = props
     			
-    			let errors = Object.assign({}, errors)
     			let data = new FormData()
     			data.append('file', selectedFile)
     			let missingInfoMessage = []
@@ -164,15 +163,11 @@ function FinanceBillingAddView(props) {
   const resetClearTextValue = () => {
     return setClearStudent(false)
     
-    	handleChange = ({target}) => {
-    			const {financeFeeTypes} = props
-  }
 
+  }
   const handleChange = ({target}) => {
     
     			const {financeFeeTypes} = props
-    			let financeBilling = Object.assign({}, financeBilling)
-    			financeBilling[target.name] = target.value
     			if (target.name === 'financeGroupTableId') {
     					setFinanceBilling(financeBilling); setSelectedStudents([]); //Blank out the selectedStudents if a financeGroupTableId is chosen
     			} else if (target.name === 'financeFeeTypeId') {
@@ -191,10 +186,6 @@ function FinanceBillingAddView(props) {
 
   const changeDate = (field, {target}) => {
     
-    			let financeBilling = Object.assign({}, financeBilling)
-    			financeBilling[field] = target.value
-    			setFinanceBilling(financeBilling)
-    	
   }
 
   const handleDeleteOpen = () => {
@@ -220,7 +211,6 @@ function FinanceBillingAddView(props) {
 
   const handleImageViewerClose = () => {
     return setIsShowingModal(false); setFileUrl('')
-    	handleInputFile = (file) => setSelectedFile(file)
   }
 
   const handleInputFile = (file) => {
@@ -229,19 +219,14 @@ function FinanceBillingAddView(props) {
 
   const handleMissingInfoOpen = (messageInfoIncomplete) => {
     return setIsShowingModal_missingInfo(true); setMessageInfoIncomplete(messageInfoIncomplete)
-    	handleMissingInfoClose = () => setIsShowingModal_missingInfo(false); setMessageInfoIncomplete('')
     
-    	resetClearTextValue = () => {
-    			setClearStudent(false); setClearGuardian(false); setClearTeacher(false)
-  }
 
+  }
   const handleMissingInfoClose = () => {
     return setIsShowingModal_missingInfo(false); setMessageInfoIncomplete('')
     
-    	resetClearTextValue = () => {
-    			setClearStudent(false); setClearGuardian(false); setClearTeacher(false)
-  }
 
+  }
   const includeSiblings = (event) => {
     
     			const {students} = props
@@ -267,10 +252,6 @@ function FinanceBillingAddView(props) {
 
   const handleRadioChoice = (value) => {
     
-    			let financeBilling = Object.assign({}, financeBilling)
-    			financeBilling['refundType'] = value
-    			setFinanceBilling(financeBilling)
-    	
   }
 
   const {personId, financeFeeTypes, students, myFrequentPlaces, setMyFrequentPlace, financeGroups, refundOptions, financeGLCodes,

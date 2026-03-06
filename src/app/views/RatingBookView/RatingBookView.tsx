@@ -16,7 +16,7 @@ function RatingBookView(props) {
   const [inProgress, setInProgress] = useState(false)
   const [notStarted, setNotStarted] = useState(false)
 
-  const {personId, studentPersonId, ratingBook, courses, students, facilitators, learnerOutcomes, setRatingBook, fetchingRecord} = props
+  const {personId, ratingBook, courses, students, facilitators, learnerOutcomes, setRatingBook, fetchingRecord} = props
       
   
       let headings = [{label: 'Proficient', tightText: true}, {label: 'In Progress', tightText: true}, {label: 'Not Started', tightText: true}, {label: 'Code', tightText: true}, {label: 'Learner Outcome', tightText: true}]

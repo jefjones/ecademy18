@@ -1,4 +1,4 @@
-﻿import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { navigate, navigateReplace, goBack } from './'
 import styles from './AccessReportView.css'
 const p = 'AccessReportView'
@@ -37,41 +37,26 @@ function AccessReportView(props) {
 
   const handlePeerGroupInfoClose = () => {
     return setIsShowingPeerGroupInfo(false)
-      handlePeerGroupInfoOpen = () => setIsShowingPeerGroupInfo(true)
-      handleJumpToAssignClose = () => setIsShowingJumpToAssign(false)
-      handleJumpToAssignOpen = () => setIsShowingJumpToAssign(true)
     
     
-      render() {
-        const {group, fetchingRecord} = props
-  }
 
+  }
   const handlePeerGroupInfoOpen = () => {
     return setIsShowingPeerGroupInfo(true)
-      handleJumpToAssignClose = () => setIsShowingJumpToAssign(false)
-      handleJumpToAssignOpen = () => setIsShowingJumpToAssign(true)
     
     
-      render() {
-        const {group, fetchingRecord} = props
-  }
 
+  }
   const handleJumpToAssignClose = () => {
     return setIsShowingJumpToAssign(false)
-      handleJumpToAssignOpen = () => setIsShowingJumpToAssign(true)
     
     
-      render() {
-        const {group, fetchingRecord} = props
-  }
 
+  }
   const handleJumpToAssignOpen = () => {
     return setIsShowingJumpToAssign(true)
     
     
-      render() {
-        const {group, fetchingRecord} = props
-  }
 
   const {group, fetchingRecord} = props
       
@@ -116,5 +101,6 @@ function AccessReportView(props) {
               }
         </div>
       )
+}
 }
 export default AccessReportView

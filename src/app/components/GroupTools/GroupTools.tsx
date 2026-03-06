@@ -23,19 +23,14 @@ function GroupTools(props) {
 
   const handleDeleteGroupClose = () => {
     return setIsShowingModal_work(false)
-        handleDeleteGroupOpen = () => setIsShowingModal_work(true)
     
-        toggleLabels = () => {
-            const {personId, updatePersonConfig, personConfig} = props
-  }
 
+  }
   const handleDeleteGroupOpen = () => {
     return setIsShowingModal_work(true)
     
-        toggleLabels = () => {
-            const {personId, updatePersonConfig, personConfig} = props
-  }
 
+  }
   const toggleLabels = () => {
     
             const {personId, updatePersonConfig, personConfig} = props

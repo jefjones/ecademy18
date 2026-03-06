@@ -56,7 +56,7 @@ function RegistrationPendingView(props) {
     		
   }
 
-  const {gradeLevelId, courseTypeName, selectedCourses, gradeLevels, monthlyAmount} = props
+  const {gradeLevelId, courseTypeName, selectedCourses, gradeLevels} = props
   				let {data} = props
   				//If the data doesn't have the courseTypeName in it, then do not bother even showing this control.
   				data = data && data.length > 0 && data.filter(m => m.courseTypeName === courseTypeName)

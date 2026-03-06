@@ -50,8 +50,6 @@ function VolunteerOpportunityAddView(props) {
     	
   }, [])
 
-  const {personId, myFrequentPlaces, setMyFrequentPlace, volunteerTypes} = props
-      const {localOpportunity={}, errorCheckInTime, errorName, errorVolunteersNeeded, errorVolunteerTypeId, errorDateTime} = state
   
       return (
           <div className={styles.container}>

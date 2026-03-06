@@ -59,8 +59,6 @@ function ClassPeriodsSettingsView(props) {
           const {addOrUpdateClassPeriod, personId} = props
           
           let hasError = false
-    			let errors = Object.assign({}, errors)
-    
           if (!classPeriod.periodNumber) {
               hasError = true
               errors.periodNumber = <L p={p} t={`Period number is required`}/>
@@ -109,7 +107,6 @@ function ClassPeriodsSettingsView(props) {
   const handleShowUsedInClose = () => {
     return setIsShowingModal_usedIn(false); setListUsedIn([])
     
-    	handleRemoveItemOpen = (classPeriodId, usedIn) => {
     			if (usedIn && usedIn.length > 0) {
     					handleShowUsedInOpen(usedIn)
   }
@@ -126,10 +123,9 @@ function ClassPeriodsSettingsView(props) {
 
   const handleRemoveItemClose = () => {
     return setIsShowingModal_remove(false)
-      handleRemoveItem = () => {
-          const {removeClassPeriod, personId} = props
-  }
 
+  }
+  }
   const handleRemoveItem = () => {
     
           const {removeClassPeriod, personId} = props
@@ -142,7 +138,6 @@ function ClassPeriodsSettingsView(props) {
   const handleEdit = (classPeriodId) => {
     
     			const {classPeriods} = props
-    			let classPeriod = classPeriods && classPeriods.length > 0 && classPeriods.filter(m => m.classPeriodId === classPeriodId)[0]
     			if (classPeriod && classPeriod.periodNumber) {
     					classPeriod.startTime = classPeriod.startTime.indexOf('T') > -1 ? classPeriod.startTime.substring(classPeriod.startTime.indexOf('T') + 1) : classPeriod.startTime
     					classPeriod.endTime = classPeriod.endTime.indexOf('T') > -1 ? classPeriod.endTime.substring(classPeriod.endTime.indexOf('T') + 1) : classPeriod.endTime

@@ -47,46 +47,6 @@ export default class ImageTools {
 
         let image = document.createElement('img')
 
-        image.onload = (imgEvt) => {
-            let width  = image.width
-            let height = image.height
-            let isTooLarge = false
-
-            if (width >= height && width > maxDimensions.width) {
-                // width is the largest dimension, and it's too big.
-                height *= maxDimensions.width / width
-                width = maxDimensions.width
-                isTooLarge = true
-            } else if (height > maxDimensions.height) {
-                // either width wasn't over-size or height is the largest dimension
-                // and the height is over-size
-                width *= maxDimensions.height / height
-                height = maxDimensions.height
-                isTooLarge = true
-            }
-
-            if (!isTooLarge) {
-                // early exit; no need to resize
-                callback(file, false)
-                return
-            }
-
-            let canvas = document.createElement('canvas')
-            canvas.width = width
-            canvas.height = height
-
-            let ctx = canvas.getContext('2d')
-            ctx.drawImage(image, 0, 0, width, height)
-
-            if (hasToBlobSupport) {
-                canvas.toBlob((blob) => {
-                    callback(blob, true)
-                }, file.type)
-            } else {
-                let blob = ImageTools._toBlob(canvas, file.type)
-                callback(blob, true)
-            }
-        }
         ImageTools._loadImage(image, file)
 
         return true

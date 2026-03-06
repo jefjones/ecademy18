@@ -37,7 +37,6 @@ function BenchmarkTestListMenu(props) {
   								modalOpen} = props
   				
   
-  				let benchmarkTestId = benchmarkTest.benchmarkTestId
   				let hasRecordChosen = benchmarkTestId && benchmarkTestId !== guidEmpty ? true : false
   
           return (

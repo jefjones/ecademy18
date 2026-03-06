@@ -9,18 +9,12 @@ function OpenCommunityCommittedButtons(props) {
 
   const handleUncommitAlertClose = () => {
     return setIsShowingModal_uncommit(false)
-      handleUncommitAlertOpen = () => setIsShowingModal_uncommit(true)
     
-      render() {
-          
-  }
 
+  }
   const handleUncommitAlertOpen = () => {
     return setIsShowingModal_uncommit(true)
     
-      render() {
-          
-  }
 
   return (
         <div className={styles.container}>

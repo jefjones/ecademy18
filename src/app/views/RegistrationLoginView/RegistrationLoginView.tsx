@@ -212,7 +212,7 @@ function RegistrationLoginView(props) {
             let errors = {}
             let hasError = false
             let missingInfoMessage = []
-            set...user(...user); setSchoolYearId('6B64B061-8E35-403F-A16E-B4A7F1318439')
+            setUser({...user}); setSchoolYearId('6B64B061-8E35-403F-A16E-B4A7F1318439')
     
             if (!user.schoolYearId || user.schoolYearId === "0" || user.schoolYearId === guidEmpty) {
                 errors.schoolYear = "School year is required"
@@ -281,10 +281,7 @@ function RegistrationLoginView(props) {
   }
 
   const handleFailedLoginOpen = () => {
-    return setIsShowingFailedLogin(true)
-        handleFailedLoginClose = () => {
-            setIsShowingFailedLogin(false)
-            props.logout()
+    setIsShowingFailedLogin(true)
   }
 
   const handleFailedLoginClose = () => {
@@ -295,10 +292,7 @@ function RegistrationLoginView(props) {
   }
 
   const handleMatchingRecordOpen = () => {
-    return setIsShowingMatchingRecord(true)
-    		handleMatchingRecordClose = (event) => {
-            setIsShowingMatchingRecord(false)
-            navigate('/login')
+    setIsShowingMatchingRecord(true)
   }
 
   const handleMatchingRecordClose = (event) => {
@@ -310,29 +304,12 @@ function RegistrationLoginView(props) {
         
   }
 
-  const setShowNewRegLogin = () => {
-    return setShowNewRegLogin(true)
-    
-    		handleMissingInfoOpen = (missingInfoMessage) => setIsShowingModal_missingInfo(true); setMissingInfoMessage(missingInfoMessage)
-    		handleMissingInfoClose = () => setIsShowingModal_missingInfo(false); setMissingInfoMessage('')
-    
-        render() {
-            const {loginData, schoolYears, companyConfig={}} = props
-  }
-
   const handleMissingInfoOpen = (missingInfoMessage) => {
-    return setIsShowingModal_missingInfo(true); setMissingInfoMessage(missingInfoMessage)
-    		handleMissingInfoClose = () => setIsShowingModal_missingInfo(false); setMissingInfoMessage('')
-    
-        render() {
-            const {loginData, schoolYears, companyConfig={}} = props
+    setIsShowingModal_missingInfo(true); setMissingInfoMessage(missingInfoMessage)
   }
 
   const handleMissingInfoClose = () => {
-    return setIsShowingModal_missingInfo(false); setMissingInfoMessage('')
-    
-        render() {
-            const {loginData, schoolYears, companyConfig={}} = props
+    setIsShowingModal_missingInfo(false); setMissingInfoMessage('')
   }
 
   const {loginData, schoolYears, companyConfig={}} = props
@@ -399,7 +376,7 @@ function RegistrationLoginView(props) {
   												<div className={globalStyles.instructionsBiggest}>
   														Current school year (2019-2020):  If you are new to this school, let's create a new account:
   												</div>
-  												<button className={styles.button} onClick={setShowNewRegLogin}>{'New Account'}</button>
+  												<button className={styles.button} onClick={() => setShowNewRegLogin(true)}>{'New Account'}</button>
   												<br/>
   												<br/>
   										</div>

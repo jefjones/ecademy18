@@ -1,4 +1,4 @@
-﻿import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import styles from './OpenCommunityToSubmit.css'
 import MultiSelect from '../MultiSelect'
@@ -61,49 +61,22 @@ function OpenCommunityToSubmit(props) {
 
   const handleAlertClose = () => {
     return setIsShowingModal_saved(false)
-      handleAlertOpen = () => setIsShowingModal_saved(true)
-      handleEditTranslateMessageClose = () => setIsShowingModal_editTranslate(false)
-      handleEditTranslateMessageOpen = () => setIsShowingModal_editTranslate(true)
     
-      render() {
-          const {personId, workOptions, declineIdleOptions, genreOptions, languageOptions, editorsCountOptions, workSummaries, editSeverityOptions,
-                    modifyOpenCommunityEntryId, updateFilterByField_work, updateFilterDefaultFlag_work, clearFilters_work,
-                    saveNewSavedSearch_work, updateSavedSearch_work, deleteSavedSearch_work, chooseSavedSearch_work, workFilterScratch,
-                    savedWorkFilterIdCurrent, workFilterOptions, } = props
-  }
 
+  }
   const handleAlertOpen = () => {
     return setIsShowingModal_saved(true)
-      handleEditTranslateMessageClose = () => setIsShowingModal_editTranslate(false)
-      handleEditTranslateMessageOpen = () => setIsShowingModal_editTranslate(true)
     
-      render() {
-          const {personId, workOptions, declineIdleOptions, genreOptions, languageOptions, editorsCountOptions, workSummaries, editSeverityOptions,
-                    modifyOpenCommunityEntryId, updateFilterByField_work, updateFilterDefaultFlag_work, clearFilters_work,
-                    saveNewSavedSearch_work, updateSavedSearch_work, deleteSavedSearch_work, chooseSavedSearch_work, workFilterScratch,
-                    savedWorkFilterIdCurrent, workFilterOptions, } = props
-  }
 
+  }
   const handleEditTranslateMessageClose = () => {
     return setIsShowingModal_editTranslate(false)
-      handleEditTranslateMessageOpen = () => setIsShowingModal_editTranslate(true)
     
-      render() {
-          const {personId, workOptions, declineIdleOptions, genreOptions, languageOptions, editorsCountOptions, workSummaries, editSeverityOptions,
-                    modifyOpenCommunityEntryId, updateFilterByField_work, updateFilterDefaultFlag_work, clearFilters_work,
-                    saveNewSavedSearch_work, updateSavedSearch_work, deleteSavedSearch_work, chooseSavedSearch_work, workFilterScratch,
-                    savedWorkFilterIdCurrent, workFilterOptions, } = props
-  }
 
+  }
   const handleEditTranslateMessageOpen = () => {
     return setIsShowingModal_editTranslate(true)
     
-      render() {
-          const {personId, workOptions, declineIdleOptions, genreOptions, languageOptions, editorsCountOptions, workSummaries, editSeverityOptions,
-                    modifyOpenCommunityEntryId, updateFilterByField_work, updateFilterDefaultFlag_work, clearFilters_work,
-                    saveNewSavedSearch_work, updateSavedSearch_work, deleteSavedSearch_work, chooseSavedSearch_work, workFilterScratch,
-                    savedWorkFilterIdCurrent, workFilterOptions, } = props
-  }
 
   const {personId, workOptions, declineIdleOptions, genreOptions, languageOptions, editorsCountOptions, workSummaries, editSeverityOptions,
                   modifyOpenCommunityEntryId, updateFilterByField_work, updateFilterDefaultFlag_work, clearFilters_work,
@@ -259,5 +232,6 @@ function OpenCommunityToSubmit(props) {
                 </div>
           </div>
         )
+}
 }
 export default OpenCommunityToSubmit

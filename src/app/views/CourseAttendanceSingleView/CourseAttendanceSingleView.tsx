@@ -27,7 +27,6 @@ import {guidEmpty} from '../../utils/guidValidate'
 
 function CourseAttendanceSingleView(props) {
   const [hasSetToday, setHasSetToday] = useState(false)
-  const [attendanceLocal, setAttendanceLocal] = useState(props.attendanceSingle)
   const [dayFrom, setDayFrom] = useState(dayFrom === '1-01-01' || !dayFrom ? today : dayFrom)
   const [dayTo, setDayTo] = useState(dayTo === '1-01-01' || !dayTo ? today : dayFrom)
   const [selectedCourses, setSelectedCourses] = useState([])

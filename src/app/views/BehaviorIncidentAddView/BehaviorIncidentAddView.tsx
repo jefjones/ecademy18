@@ -233,21 +233,12 @@ function BehaviorIncidentAddView(props) {
 
   const handleFileUploadOpen = () => {
     return setIsShowingFileUpload(true); setLoadingFiles(true)
-      handleFileUploadClose = () => setIsShowingFileUpload(false); setLoadingFiles(false)
-      handleFileUploadSubmit = () => {
-          //When the file upload is used, it will create the new DoctorNote record plus let the files be accrued if the user wants to enter
-          //	more than one file.  But as soon as the page's submit button is used (processForm), then the user is submitting the entire record which may have a note.
-          const {personId} = props
-  }
 
+  }
   const handleFileUploadClose = () => {
     return setIsShowingFileUpload(false); setLoadingFiles(false)
-      handleFileUploadSubmit = () => {
-          //When the file upload is used, it will create the new DoctorNote record plus let the files be accrued if the user wants to enter
-          //	more than one file.  But as soon as the page's submit button is used (processForm), then the user is submitting the entire record which may have a note.
-          const {personId} = props
-  }
 
+  }
   const handleFileUploadSubmit = () => {
     
           //When the file upload is used, it will create the new DoctorNote record plus let the files be accrued if the user wants to enter
@@ -295,7 +286,6 @@ function BehaviorIncidentAddView(props) {
 
   const handleImageViewerClose = () => {
     return setIsShowingModal(false); setFileUrl('')
-    	handleStudentChange  = ({target}) => setStudentPersonId(target.value)
   }
 
   const handleStudentChange = ({target}) => {
@@ -304,15 +294,12 @@ function BehaviorIncidentAddView(props) {
 
   const handleRemoveAccusedStudent = (id) => {
     return setAccusedStudents(accusedStudents.filter(m => m.id !== id))
-    	handleRemoveOtherStudent = (id) => setOtherStudents(otherStudents.filter(m => m.id !== id))
-    	handleRemoveStaff = (id) => setStaffInvolved(staffInvolved.filter(m => m.id !== id))
     
     	handleAccusedStudents = accusedStudents => setAccusedStudents(accusedStudents)
   }
 
   const handleRemoveOtherStudent = (id) => {
     return setOtherStudents(otherStudents.filter(m => m.id !== id))
-    	handleRemoveStaff = (id) => setStaffInvolved(staffInvolved.filter(m => m.id !== id))
     
     	handleAccusedStudents = accusedStudents => setAccusedStudents(accusedStudents)
   }
@@ -325,22 +312,15 @@ function BehaviorIncidentAddView(props) {
 
   const handleMissingInfoOpen = (messageInfoIncomplete) => {
     return setIsShowingModal_missingInfo(true); setMessageInfoIncomplete(messageInfoIncomplete)
-    	handleMissingInfoClose = () => setIsShowingModal_missingInfo(false); setMessageInfoIncomplete('')
     
     	handleExpansionChange = panel => (event, expanded) => setExpanded(expanded ? panel : false); setHasChangedExpanded(true)
     
-    	handleSelectedTypes1 = (behaviorIncidentTypeChoices) => {
-    			
-  }
 
   const handleMissingInfoClose = () => {
     return setIsShowingModal_missingInfo(false); setMessageInfoIncomplete('')
     
     	handleExpansionChange = panel => (event, expanded) => setExpanded(expanded ? panel : false); setHasChangedExpanded(true)
     
-    	handleSelectedTypes1 = (behaviorIncidentTypeChoices) => {
-    			
-  }
 
   const handleSelectedTypes1 = (behaviorIncidentTypeChoices) => {
     
@@ -414,17 +394,14 @@ function BehaviorIncidentAddView(props) {
 
   const handleRemoveFileUploadOpen = () => {
     return setIsShowingModal_removeFileUpload(true)
-    	handleRemoveFileUploadClose = () => setIsShowingModal_removeFileUpload(false)
-    	handleRemoveFileUpload = () => {
-    			const {removeBehaviorIncidentFile, personId} = props
-  }
 
+  }
+  }
+  }
   const handleRemoveFileUploadClose = () => {
     return setIsShowingModal_removeFileUpload(false)
-    	handleRemoveFileUpload = () => {
-    			const {removeBehaviorIncidentFile, personId} = props
-  }
 
+  }
   const handleRemoveFileUpload = () => {
     
     			const {removeBehaviorIncidentFile, personId} = props

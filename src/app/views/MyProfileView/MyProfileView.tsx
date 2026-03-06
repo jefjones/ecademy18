@@ -113,7 +113,6 @@ function MyProfileView(props) {
     
             const {personId, setMyProfile} = props
             
-    				let errorUsername = ''
             let errors = {}
             let isVerify = false
             let usernameExists = true

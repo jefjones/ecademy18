@@ -78,15 +78,12 @@ function LearningPathwaysSettingsView(props) {
 
   const handleShowUsedInOpen = (usedIn) => {
     
-    			let listUsedIn = usedIn && usedIn.length > 0 && usedIn.join("<br/>")
-    			setIsShowingModal_usedIn(true); setListUsedIn(listUsedIn)
     	
   }
 
   const handleShowUsedInClose = () => {
     return setIsShowingModal_usedIn(false); setListUsedIn([])
     
-      handleRemoveItemOpen = (learningPathwayId, usedIn) => {
     			if (usedIn && usedIn.length > 0) {
     					handleShowUsedInOpen(usedIn)
   }
@@ -103,10 +100,9 @@ function LearningPathwaysSettingsView(props) {
 
   const handleRemoveItemClose = () => {
     return setIsShowingModal_remove(false)
-      handleRemoveItem = () => {
-          const {removeLearningPathway, personId} = props
-  }
 
+  }
+  }
   const handleRemoveItem = () => {
     
           const {removeLearningPathway, personId} = props
@@ -119,7 +115,6 @@ function LearningPathwaysSettingsView(props) {
   const handleEdit = (learningPathwayId) => {
     
     			const {learningPathways} = props
-    			let learningPathway = learningPathways && learningPathways.length > 0 && learningPathways.filter(m => m.learningPathwayId === learningPathwayId)[0]
     			if (learningPathway && learningPathway.name)
     					setLearningPathway(learningPathway)
     	

@@ -35,7 +35,6 @@ function ChapterAddOrUpdateView(props) {
         
   }, [])
 
-  let {errors, chapter} = state
           let {chapterSequenceOptions, workStatusOptions, editSeverityOptions, params, workSummary, personId, setWorkCurrentSelected, //eslint-disable-line
                   deleteWork, deleteChapter, updateChapterDueDate, updateChapterComment, updatePersonConfig, personConfig} = props
   

@@ -18,7 +18,6 @@ function ScheduleAssignByMathView(props) {
   const [isShowingModal_remove, setIsShowingModal_remove] = useState(false)
   const [scheduleAssignByMathId, setScheduleAssignByMathId] = useState('0')
   const [scheduleAssignByMathCourseAssignId, setScheduleAssignByMathCourseAssignId] = useState('')
-  const [selectedCourses, setSelectedCourses] = useState(this.props.scheduleAssignByMathList)
   const [errorMathName, setErrorMathName] = useState('')
 
   // TODO: verify useEffect deps (converted from componentDidUpdate)

@@ -20,8 +20,7 @@ function DocumentViewOnlyModal(props) {
   const [isShowingModal_remove, setIsShowingModal_remove] = useState(true)
   const [studentAssignmentResponseId, setStudentAssignmentResponseId] = useState(undefined)
 
-  const handleRemove = (emove(personId, deleteId) => {
-    fileUpload, handleClose, className, accessRoles={}, isOwner, isSubmitType, onSubmit
+  const handleRemove = (personId, deleteId) => {
   }
 
   const {fileUpload, handleClose, className, accessRoles={}, isOwner, isSubmitType, onSubmit} = props

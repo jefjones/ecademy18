@@ -1,4 +1,4 @@
-﻿import { useState } from 'react'
+import { useState } from 'react'
 import styles from './OpenCommunityCommitted.css'
 import MessageModal from '../../components/MessageModal'
 import WorkSummary from '../../components/WorkSummary'
@@ -15,18 +15,12 @@ function OpenCommunityCommitted(props) {
 
   const handleUncommitAlertClose = () => {
     return setIsShowingModal_uncommit(false)
-    handleUncommitAlertOpen = () => setIsShowingModal_uncommit(true)
     
-    render() {
-          let {personId, setWorkCurrentSelected, updateChapterComment, openCommunityFull, uncommitOpenCommunityEntry} = props
-  }
 
+  }
   const handleUncommitAlertOpen = () => {
     return setIsShowingModal_uncommit(true)
     
-    render() {
-          let {personId, setWorkCurrentSelected, updateChapterComment, openCommunityFull, uncommitOpenCommunityEntry} = props
-  }
 
   let {personId, setWorkCurrentSelected, updateChapterComment, openCommunityFull, uncommitOpenCommunityEntry} = props
         
@@ -58,5 +52,6 @@ function OpenCommunityCommitted(props) {
               }
           </div>
         )
+}
 }
 export default OpenCommunityCommitted

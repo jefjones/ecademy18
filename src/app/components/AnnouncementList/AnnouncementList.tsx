@@ -45,17 +45,12 @@ function AnnouncementList(props) {
 
   const handleRemoveOpen = (announcementId, recipientPersonId) => {
     return setIsShowingModal_remove(true); setAnnouncementId(announcementId); setRecipientPersonId(recipientPersonId)
-    		handleRemoveClose = () => setIsShowingModal_remove(false)
-        handleRemove = () => {
-    				const {personId, removeAnnouncement, listType} = props
-  }
 
+  }
   const handleRemoveClose = () => {
     return setIsShowingModal_remove(false)
-        handleRemove = () => {
-    				const {personId, removeAnnouncement, listType} = props
-  }
 
+  }
   const handleRemove = () => {
     
     				const {personId, removeAnnouncement, listType} = props
@@ -70,17 +65,12 @@ function AnnouncementList(props) {
 
   const handleRemoveMultipleOpen = () => {
     return setIsShowingModal_removeMultiple(true)
-    		handleRemoveMultipleClose = () => setIsShowingModal_removeMultiple(false)
-        handleRemoveMultiple = () => {
-    				const {personId, removeAnnouncement, listType, announcementList} = props
-  }
 
+  }
   const handleRemoveMultipleClose = () => {
     return setIsShowingModal_removeMultiple(false)
-        handleRemoveMultiple = () => {
-    				const {personId, removeAnnouncement, listType, announcementList} = props
-  }
 
+  }
   const handleRemoveMultiple = () => {
     
     				const {personId, removeAnnouncement, listType, announcementList} = props
@@ -109,28 +99,19 @@ function AnnouncementList(props) {
   const handleMessageClose = () => {
     return setIsShowingModal_message(false)
     
-    		handleRecipientListOpen = (announcement, recipients) => setIsShowingModal_recipients(true); setAnnouncement(announcement); setRecipients(recipients)
-    		handleStudentListClose = () => setIsShowingModal_recipients(false)
     
-    		setColumnType = (announcement, announcementId, fromPersonFirstName, fromPersonLastName, recipients) => {
-    				const {listType} = props
-  }
 
+  }
   const handleRecipientListOpen = (announcement, recipients) => {
     return setIsShowingModal_recipients(true); setAnnouncement(announcement); setRecipients(recipients)
-    		handleStudentListClose = () => setIsShowingModal_recipients(false)
     
-    		setColumnType = (announcement, announcementId, fromPersonFirstName, fromPersonLastName, recipients) => {
-    				const {listType} = props
-  }
 
+  }
   const handleStudentListClose = () => {
     return setIsShowingModal_recipients(false)
     
-    		setColumnType = (announcement, announcementId, fromPersonFirstName, fromPersonLastName, recipients) => {
-    				const {listType} = props
-  }
 
+  }
   const setColumnType = (announcement, announcementId, fromPersonFirstName, fromPersonLastName, recipients) => {
     
     				const {listType} = props
@@ -142,12 +123,6 @@ function AnnouncementList(props) {
 
   const resort = (field) => {
     
-    				let sortByHeadings = Object.assign({}, sortByHeadings)
-    				sortByHeadings.isAsc = sortByHeadings.sortField === field ? !sortByHeadings.isAsc : 'desc'
-    				sortByHeadings.isNumber = field === 'recipients' ? true : false
-    				sortByHeadings.sortField = field
-    				setSortByHeadings(sortByHeadings)
-    		
   }
 
   const isMultipleChecked = (announcementId) => {
@@ -182,8 +157,6 @@ function AnnouncementList(props) {
     				//  end if
     				const {announcementList} = props
     				
-    				let multipleChecked = Object.assign([], multipleChecked)
-    
     				if (!firstClick) {
     						setFirstClick(index)
     						toggleChosenAnnouncement(announcementId)
@@ -220,7 +193,6 @@ function AnnouncementList(props) {
 
   const toggleChosenAnnouncement = (announcementId) => {
     
-    				let multipleChecked = Object.assign([], multipleChecked)
     				let indexChecked = multipleChecked && multipleChecked.length > 0 ? multipleChecked.indexOf(announcementId) : -1
     				multipleChecked = indexChecked > -1 ? multipleChecked.splice(indexChecked, 1) : multipleChecked ? multipleChecked.concat(announcementId) : [announcementId]
     				setMultipleChecked(multipleChecked)

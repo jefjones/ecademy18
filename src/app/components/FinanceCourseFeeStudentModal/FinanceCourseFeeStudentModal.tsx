@@ -18,8 +18,6 @@ function FinanceCourseFeeStudentModal(props) {
   const [allRefundPercent, setAllRefundPercent] = useState(target.value)
   const [financeRefundOrRemoves, setFinanceRefundOrRemoves] = useState(undefined)
 
-  const {handleClose, financeBillings} = props
-  				const {messageInfoIncomplete, isShowingModal_missingInfo, errors={}, allRefundPercent} = state
   
   				let refundPercentages = []
   				for(let i = 100; i >= 0; i -= 5) {

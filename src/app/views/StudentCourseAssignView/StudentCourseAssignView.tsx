@@ -34,7 +34,6 @@ function StudentCourseAssignView(props) {
   const [isShowingModal_prerequisite, setIsShowingModal_prerequisite] = useState(false)
   const [isShowingModal_tooManyCredits, setIsShowingModal_tooManyCredits] = useState(false)
   const [isShowingModal_sameMPAndBlock, setIsShowingModal_sameMPAndBlock] = useState(false)
-  const [baseCreditCount, setBaseCreditCount] = useState(0)
   const [outcomeList, setOutcomeList] = useState([])
   const [actionType, setActionType] = useState('')
   const [partialNameText, setPartialNameText] = useState('')
@@ -80,10 +79,6 @@ function StudentCourseAssignView(props) {
   // TODO: verify useEffect deps (converted from componentDidUpdate)
   useEffect(() => {
     
-    				let allCreditCount = baseCreditCount() + extraCreditCount()
-    				if (state.allCreditCount !== allCreditCount) {
-    						setAllCreditCount(allCreditCount)
-    				}
     				if (props.partialNameText) {
     						//Take the partialNameText from the courseRecommendation which is on a different page.  Clear out all other filters.
     						setPartialNameText(props.partialNameText); setFilterIntervalId(''); setDepartmentId(''); setLearningPathwayId(''); setClassPeriodId(''); setFacilitatorName(''); setShowAlertsOnly(false); setShowOpenCoursesOnly(false); setOnlineOrTraditionalOnly('all')
@@ -207,12 +202,6 @@ function StudentCourseAssignView(props) {
 
   const resort = (field) => {
     
-    				let sortByHeadings = sortByHeadings
-    				sortByHeadings.isAsc = sortByHeadings.sortField === field ? !sortByHeadings.isAsc : 'desc'
-    				sortByHeadings.isNumber = field === 'classPeriodId' ? true : false
-    				sortByHeadings.sortField = field
-    				setSortByHeadings(sortByHeadings)
-    		
   }
 
   const changeItem = ({target}) => {
@@ -230,11 +219,6 @@ function StudentCourseAssignView(props) {
     				event.stopPropagation()
     				event.preventDefault()
     				const {scheduledCourses} = props
-    				let course = scheduledCourses && scheduledCourses.length > 0 && scheduledCourses.filter(m => m.courseScheduledId === courseScheduledId)[0]
-    				let courseEntryId = course && course.courseEntryId ? course.courseEntryId : ''
-            document.getElementById('contextScheduledCourse').style.display = 'inline'
-            document.getElementById('contextScheduledCourse').style.position = 'fixed'
-            //document.getElementById('contextScheduledCourse').style.left = event.clientX;
             document.getElementById('contextScheduledCourse').style.top = event.clientY + 5
     				setActionType(actionType); setCourseEntryId(courseEntryId); setCourseScheduledId(courseScheduledId)
         
@@ -242,92 +226,48 @@ function StudentCourseAssignView(props) {
 
   const handleStudentListOpen = (course, studentList) => {
     return setIsShowingModal_students(true); setCourse(course); setStudentList(studentList)
-        handleStudentListClose = () => setIsShowingModal_students(false)
     
-        handleHasErrorOpen = (errorMessage) => setIsShowingModal_hasError(true); setErrorMessage(errorMessage)
-        handleHasErrorClose = () => setIsShowingModal_hasError(false)
     
-    		handleNotAvailableOpen = () => setIsShowingModal_notOpen(true)
-        handleNotAvailableClose = () => setIsShowingModal_notOpen(false)
     
-    		handleFinalizeOpen = () => setIsShowingModal_finalize(true)
-        handleFinalizeClose = () => setIsShowingModal_finalize(false)
-    		handleFinalizeSubmit = () => {
-    				const {setFinalized, studentPersonId} = props
-  }
 
+  }
   const handleStudentListClose = () => {
     return setIsShowingModal_students(false)
     
-        handleHasErrorOpen = (errorMessage) => setIsShowingModal_hasError(true); setErrorMessage(errorMessage)
-        handleHasErrorClose = () => setIsShowingModal_hasError(false)
     
-    		handleNotAvailableOpen = () => setIsShowingModal_notOpen(true)
-        handleNotAvailableClose = () => setIsShowingModal_notOpen(false)
     
-    		handleFinalizeOpen = () => setIsShowingModal_finalize(true)
-        handleFinalizeClose = () => setIsShowingModal_finalize(false)
-    		handleFinalizeSubmit = () => {
-    				const {setFinalized, studentPersonId} = props
-  }
 
+  }
   const handleHasErrorOpen = (errorMessage) => {
     return setIsShowingModal_hasError(true); setErrorMessage(errorMessage)
-        handleHasErrorClose = () => setIsShowingModal_hasError(false)
     
-    		handleNotAvailableOpen = () => setIsShowingModal_notOpen(true)
-        handleNotAvailableClose = () => setIsShowingModal_notOpen(false)
     
-    		handleFinalizeOpen = () => setIsShowingModal_finalize(true)
-        handleFinalizeClose = () => setIsShowingModal_finalize(false)
-    		handleFinalizeSubmit = () => {
-    				const {setFinalized, studentPersonId} = props
-  }
 
+  }
   const handleHasErrorClose = () => {
     return setIsShowingModal_hasError(false)
     
-    		handleNotAvailableOpen = () => setIsShowingModal_notOpen(true)
-        handleNotAvailableClose = () => setIsShowingModal_notOpen(false)
     
-    		handleFinalizeOpen = () => setIsShowingModal_finalize(true)
-        handleFinalizeClose = () => setIsShowingModal_finalize(false)
-    		handleFinalizeSubmit = () => {
-    				const {setFinalized, studentPersonId} = props
-  }
 
+  }
   const handleNotAvailableOpen = () => {
     return setIsShowingModal_notOpen(true)
-        handleNotAvailableClose = () => setIsShowingModal_notOpen(false)
     
-    		handleFinalizeOpen = () => setIsShowingModal_finalize(true)
-        handleFinalizeClose = () => setIsShowingModal_finalize(false)
-    		handleFinalizeSubmit = () => {
-    				const {setFinalized, studentPersonId} = props
-  }
 
+  }
   const handleNotAvailableClose = () => {
     return setIsShowingModal_notOpen(false)
     
-    		handleFinalizeOpen = () => setIsShowingModal_finalize(true)
-        handleFinalizeClose = () => setIsShowingModal_finalize(false)
-    		handleFinalizeSubmit = () => {
-    				const {setFinalized, studentPersonId} = props
-  }
 
+  }
   const handleFinalizeOpen = () => {
     return setIsShowingModal_finalize(true)
-        handleFinalizeClose = () => setIsShowingModal_finalize(false)
-    		handleFinalizeSubmit = () => {
-    				const {setFinalized, studentPersonId} = props
-  }
 
+  }
   const handleFinalizeClose = () => {
     return setIsShowingModal_finalize(false)
-    		handleFinalizeSubmit = () => {
-    				const {setFinalized, studentPersonId} = props
-  }
 
+  }
   const handleFinalizeSubmit = () => {
     
     				const {setFinalized, studentPersonId} = props
@@ -340,19 +280,14 @@ function StudentCourseAssignView(props) {
 
   const handleLackingCreditsOpen = () => {
     return setIsShowingModal_lackingCredits(true)
-        handleLackingCreditsClose = () => setIsShowingModal_lackingCredits(false)
     
-    		handleDescriptionOpen = (courseEntryId, courseName) => {
-            const {getCourseDescription, personId} = props
-  }
 
+  }
   const handleLackingCreditsClose = () => {
     return setIsShowingModal_lackingCredits(false)
     
-    		handleDescriptionOpen = (courseEntryId, courseName) => {
-            const {getCourseDescription, personId} = props
-  }
 
+  }
   const handleDescriptionOpen = (courseEntryId, courseName) => {
     
             const {getCourseDescription, personId} = props
@@ -371,19 +306,14 @@ function StudentCourseAssignView(props) {
 
   const handleDoubledUpChoicesOpen = () => {
     return setIsShowingModal_doubledUp(true)
-        handleDoubledUpChoicesClose = () => setIsShowingModal_doubledUp(false)
     
-    		toggleClassPeriods = (classPeriodId) => {
-    				let selectedClassPeriods = [...state.selectedClassPeriods]
-  }
 
+  }
   const handleDoubledUpChoicesClose = () => {
     return setIsShowingModal_doubledUp(false)
     
-    		toggleClassPeriods = (classPeriodId) => {
-    				let selectedClassPeriods = [...state.selectedClassPeriods]
-  }
 
+  }
   const toggleClassPeriods = (classPeriodId) => {
     
     				let selectedClassPeriods = [...state.selectedClassPeriods]
@@ -575,12 +505,6 @@ function StudentCourseAssignView(props) {
 
   const getPrerequisiteMessageWithTitle = (prerequisite) => {
     
-    				let prerequisiteMessage = ''
-    				let courseName = `Course: ${prerequisite.courseName} (${prerequisite.externalId}) Credits: ${prerequisite.credits}`
-    				prerequisiteMessage += prerequisite.firstList && prerequisite.firstList.length === 1
-    						? '<u>This class is required:</u>'
-    						: '<u>One of these classes is required:</u>'
-    
     				prerequisite.firstList && prerequisite.firstList.length > 0 && prerequisite.firstList.forEach(m => {
     						prerequisiteMessage += `<br/>${m.courseName} (${m.externalId}) Credits: ${m.credits}`
     						prerequisiteMessage += m.hasCredit ? `&#10004;` : ``
@@ -675,71 +599,44 @@ function StudentCourseAssignView(props) {
 
   const handleAlertLimitOpen = () => {
     return setIsShowingModal_alertLimit(true)
-    		handleAlertLimitClose = () => setIsShowingModal_alertLimit(false)
-    
-    		handleAlertBelowCreditOpen = () => setIsShowingModal_alertBelowCredit(true)
-    		handleAlertBelowCreditClose = () => setIsShowingModal_alertBelowCredit(false)
     
     
-        handleOnlineClassAlertOpen = () => setIsShowingModal_onlineClass(true)
-    		handleOnlineClassAlertClose = () => setIsShowingModal_onlineClass(false)
     
-        hasErrors = () => {
-            let hasTooManyCredits = false
-  }
+    
 
+  }
   const handleAlertLimitClose = () => {
     return setIsShowingModal_alertLimit(false)
     
-    		handleAlertBelowCreditOpen = () => setIsShowingModal_alertBelowCredit(true)
-    		handleAlertBelowCreditClose = () => setIsShowingModal_alertBelowCredit(false)
     
     
-        handleOnlineClassAlertOpen = () => setIsShowingModal_onlineClass(true)
-    		handleOnlineClassAlertClose = () => setIsShowingModal_onlineClass(false)
     
-        hasErrors = () => {
-            let hasTooManyCredits = false
-  }
 
+  }
   const handleAlertBelowCreditOpen = () => {
     return setIsShowingModal_alertBelowCredit(true)
-    		handleAlertBelowCreditClose = () => setIsShowingModal_alertBelowCredit(false)
     
     
-        handleOnlineClassAlertOpen = () => setIsShowingModal_onlineClass(true)
-    		handleOnlineClassAlertClose = () => setIsShowingModal_onlineClass(false)
     
-        hasErrors = () => {
-            let hasTooManyCredits = false
-  }
 
+  }
   const handleAlertBelowCreditClose = () => {
     return setIsShowingModal_alertBelowCredit(false)
     
     
-        handleOnlineClassAlertOpen = () => setIsShowingModal_onlineClass(true)
-    		handleOnlineClassAlertClose = () => setIsShowingModal_onlineClass(false)
     
-        hasErrors = () => {
-            let hasTooManyCredits = false
-  }
 
+  }
   const handleOnlineClassAlertOpen = () => {
     return setIsShowingModal_onlineClass(true)
-    		handleOnlineClassAlertClose = () => setIsShowingModal_onlineClass(false)
     
-        hasErrors = () => {
-            let hasTooManyCredits = false
-  }
 
+  }
   const handleOnlineClassAlertClose = () => {
     return setIsShowingModal_onlineClass(false)
     
-        hasErrors = () => {
-            let hasTooManyCredits = false
-  }
 
+  }
   const hasErrors = () => {
     
             let hasTooManyCredits = false

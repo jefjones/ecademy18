@@ -103,9 +103,6 @@ function RegBillingPreferenceView(props) {
   }, [])
 
   const {countries, usStates, guardians, paymentProcessResponse, companyConfig={}} = props
-        const {billing={}, errorBillingYearly, errorPaymentType, errorRouting, errorBankAccount, errorNameOnCard, isShowingModal_error, errorResponsiblePerson,
-  							errorCardNumber, errorExpiration, errorSecurityCode, errorCountry, errorStreetAddress, errorCity, errorPostalCode,
-  							errorBankAccountType, errorResponsibleFirstName, errorResponsibleLastName} = state
   
         return (
           <div className={styles.container}>

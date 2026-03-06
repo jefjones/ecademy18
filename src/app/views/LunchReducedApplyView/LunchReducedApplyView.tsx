@@ -57,8 +57,6 @@ function LunchReducedApplyView(props) {
   const [addOrUpdateType, setAddOrUpdateType] = useState(lunchReducedApplyStudentId ? 'Update a Student' : 'Add a New Student')
 
   const {lunchReducedApply={}, fetchingRecord, uSStates} = props
-      const {isEditMainMode, mainRecord={}, errors, isShowingModal_removeAdult, isShowingModal_removeStudent, lunchReducedApplyStudentId, lunchReducedApplyAdultId,
-              isShowingModal_missingInfo, messageInfoIncomplete, isShowingModal_addOrUpdate, addOrUpdateFunction, explainJSX, addOrUpdateType, closeFunction} = state
   
       //Student table
       let headingsStudent = [{}, {},

@@ -75,36 +75,22 @@ function RegistrationNavView(props) {
 
   const handleRemoveLearnerClose = () => {
     return setIsShowingModal_removeLearner(false)
-        handleRemoveLearnerOpen = () => setIsShowingModal_removeLearner(true)
     
-    		handleRemoveContactClose = () => setIsShowingModal_removeContact(false)
-        handleRemoveContactOpen = (removeContactPersonId, removePersonType) => setIsShowingModal_removeContact(true); setRemoveContactPersonId(removeContactPersonId); setRemovePersonType(removePersonType)
-        handleRemoveContact = () => {
-    				const {personId, removeGuardianContact, schoolYearId} = props
-  }
 
+  }
   const handleRemoveLearnerOpen = () => {
     return setIsShowingModal_removeLearner(true)
     
-    		handleRemoveContactClose = () => setIsShowingModal_removeContact(false)
-        handleRemoveContactOpen = (removeContactPersonId, removePersonType) => setIsShowingModal_removeContact(true); setRemoveContactPersonId(removeContactPersonId); setRemovePersonType(removePersonType)
-        handleRemoveContact = () => {
-    				const {personId, removeGuardianContact, schoolYearId} = props
-  }
 
+  }
   const handleRemoveContactClose = () => {
     return setIsShowingModal_removeContact(false)
-        handleRemoveContactOpen = (removeContactPersonId, removePersonType) => setIsShowingModal_removeContact(true); setRemoveContactPersonId(removeContactPersonId); setRemovePersonType(removePersonType)
-        handleRemoveContact = () => {
-    				const {personId, removeGuardianContact, schoolYearId} = props
-  }
 
+  }
   const handleRemoveContactOpen = (removeContactPersonId, removePersonType) => {
     return setIsShowingModal_removeContact(true); setRemoveContactPersonId(removeContactPersonId); setRemovePersonType(removePersonType)
-        handleRemoveContact = () => {
-    				const {personId, removeGuardianContact, schoolYearId} = props
-  }
 
+  }
   const handleRemoveContact = () => {
     
     				const {personId, removeGuardianContact, schoolYearId} = props
@@ -116,17 +102,12 @@ function RegistrationNavView(props) {
 
   const handleRemoveStudentOpen = (studentPersonId) => {
     return setIsShowingModal_removeStudent(true); setStudentPersonId(studentPersonId)
-    		handleRemoveStudentClose = () => setIsShowingModal_removeStudent(false)
-        handleRemoveStudent = () => {
-    				const {personId, removeRegStudent, schoolYearId} = props
-  }
 
+  }
   const handleRemoveStudentClose = () => {
     return setIsShowingModal_removeStudent(false)
-        handleRemoveStudent = () => {
-    				const {personId, removeRegStudent, schoolYearId} = props
-  }
 
+  }
   const handleRemoveStudent = () => {
     
     				const {personId, removeRegStudent, schoolYearId} = props
@@ -272,11 +253,8 @@ function RegistrationNavView(props) {
 
   const handleMissingInfoOpen = (recordType, person, textMessage, sendToPage) => {
     return setSendToPage(sendToPage); setIsShowingModal_missingInfo(true); setMessageInfoIncomplete(textMessage ? textMessage : isNotComplete(recordType, person))
-    		handleMissingInfoClose = () => {
-            setIsShowingModal_missingInfo(false); setMissingInfo_PersonId('')
-            navigate(sendToPage)
-  }
 
+  }
   const handleMissingInfoClose = () => {
     
             setIsShowingModal_missingInfo(false); setMissingInfo_PersonId('')
@@ -286,40 +264,26 @@ function RegistrationNavView(props) {
 
   const handleFinalizeInvalidOpen = (finalizeInvalidMessage) => {
     return setIsShowingModal_finalizeInvalid(true); setFinalizeInvalidMessage(finalizeInvalidMessage)
-    		handleFinalizeInvalidClose = () => setIsShowingModal_finalizeInvalid(false); setFinalizeInvalidMessage('')
     
-    		handleFinalizeIncompleteStudentOpen = (finalizeInvalidMessage) => setIsShowingModal_incompleteStudent(true); setFinalizeInvalidMessage(finalizeInvalidMessage)
-    		handleFinalizeIncompleteStudentClose = () => setIsShowingModal_incompleteStudent(false); setFinalizeInvalidMessage('')
     
-    		validateForm = () => {
-    				const {personId, registration, schoolYearId, companyConfig, finalizeNonLiahonaRegistration} = props
-  }
 
+  }
   const handleFinalizeInvalidClose = () => {
     return setIsShowingModal_finalizeInvalid(false); setFinalizeInvalidMessage('')
     
-    		handleFinalizeIncompleteStudentOpen = (finalizeInvalidMessage) => setIsShowingModal_incompleteStudent(true); setFinalizeInvalidMessage(finalizeInvalidMessage)
-    		handleFinalizeIncompleteStudentClose = () => setIsShowingModal_incompleteStudent(false); setFinalizeInvalidMessage('')
     
-    		validateForm = () => {
-    				const {personId, registration, schoolYearId, companyConfig, finalizeNonLiahonaRegistration} = props
-  }
 
+  }
   const handleFinalizeIncompleteStudentOpen = (finalizeInvalidMessage) => {
     return setIsShowingModal_incompleteStudent(true); setFinalizeInvalidMessage(finalizeInvalidMessage)
-    		handleFinalizeIncompleteStudentClose = () => setIsShowingModal_incompleteStudent(false); setFinalizeInvalidMessage('')
     
-    		validateForm = () => {
-    				const {personId, registration, schoolYearId, companyConfig, finalizeNonLiahonaRegistration} = props
-  }
 
+  }
   const handleFinalizeIncompleteStudentClose = () => {
     return setIsShowingModal_incompleteStudent(false); setFinalizeInvalidMessage('')
     
-    		validateForm = () => {
-    				const {personId, registration, schoolYearId, companyConfig, finalizeNonLiahonaRegistration} = props
-  }
 
+  }
   const validateForm = () => {
     
     				const {personId, registration, schoolYearId, companyConfig, finalizeNonLiahonaRegistration} = props
@@ -434,9 +398,6 @@ function RegistrationNavView(props) {
   const handleRadioGroup = (hasOneAcademyStudent) => {
     return setHasOneAcademyStudent(hasOneAcademyStudent)
     
-        render() {
-             const {personId, removeLearner, companyConfig={}, relationTypes, registrationCustodies, schoolYearId, schoolYears, showSteps, personConfig} = props
-  }
 
   const {personId, removeLearner, companyConfig={}, relationTypes, registrationCustodies, schoolYearId, schoolYears, showSteps, personConfig} = props
   				 let {registration={}} = props

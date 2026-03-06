@@ -6,7 +6,6 @@ const p = 'component'
 import L from '../../components/PageLanguage'
 
 function EditModal(props) {
-  const [edit, setEdit] = useState(this.props.editText)
   const [originalText_noHTML, setOriginalText_noHTML] = useState('')
 
   useEffect(() => {

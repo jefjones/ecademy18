@@ -25,7 +25,6 @@ const ColoredDateCellWrapper = ({ children }) =>
 
 function TeacherScheduleView(props) {
   const [intervalId, setIntervalId] = useState(props.personConfig.intervalId || props.companyConfig.intervalId)
-  const [facilitatorPersonId, setFacilitatorPersonId] = useState(this.props.facilitatorPersonId)
   const [courseScheduledschoolYearId, setCourseScheduledschoolYearId] = useState(target.value)
 
   // TODO: verify useEffect deps (converted from componentDidUpdate)

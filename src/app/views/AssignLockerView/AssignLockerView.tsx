@@ -27,8 +27,6 @@ function AssignLockerView(props) {
   const [lockers, setLockers] = useState('')
   const [note, setNote] = useState('')
 
-  const {personId , myFrequentPlaces, setMyFrequentPlace, students, lockers, padlocks, lockerStudentAssigns, companyConfig={}, fetchingRecord} = props
-  		const {selectedStudents, selectedLockers, selectedPadlocks, note, errors={}} = state
   
   		let headings = [{},{},
   				{label: <L p={p} t={`Student`}/>, tightText: true},

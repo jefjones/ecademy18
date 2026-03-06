@@ -9,12 +9,12 @@ import { Component } from 'react'
 const STYLESHEET_NAME = "__react-multi-select_style_inject__"
 
 
-function findStylesheet(): ?CSSStyleSheet {
+function findStylesheet() {
     const styleSheet = Array.from(document.styleSheets)
         .find(stylesheet => stylesheet.title === STYLESHEET_NAME)
 
     // upcast as CSSStyleSheet
-    const cssStylesheet: ?CSSStyleSheet = (styleSheet: any)
+    const cssStylesheet = styleSheet as any
 
     return cssStylesheet
 }

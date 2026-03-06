@@ -1,4 +1,4 @@
-﻿import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import styles from './RegGuardiansContactsView.css'
 const p = 'RegGuardiansContactsView'
 import L from '../../components/PageLanguage'
@@ -80,7 +80,7 @@ function RegGuardiansContactsView(props) {
   useEffect(() => {
     
     				//document.getElementById('firstName').focus(); //Don't put the focus on pages since on mobile that will bring up the keyboard and cover most of the page.
-    				setPerson()
+    				loadPersonFromProps()
         
   }, [])
 
@@ -88,16 +88,15 @@ function RegGuardiansContactsView(props) {
   useEffect(() => {
     
     	      if (params.personType && person.personType !== params.personType) {
-    						setPerson()
+    						loadPersonFromProps()
     						//document.getElementById('firstName').focus(); //Don't put the focus on pages since on mobile that will bring up the keyboard and cover most of the page.
     	    	}
         
   }, [])
 
-  const setPerson = () => {
+  const loadPersonFromProps = () => {
     
     				const {registration} = props
-    				let person = person
     				let personEntry = props.personEntry ? props.personEntry : {}
             if (props.personType === 'PRIMARYGUARDIAN') {
                 let guardianContacts = registration && registration.guardianContacts
@@ -179,8 +178,6 @@ function RegGuardiansContactsView(props) {
 
   const processForm = (stayOrFinish) => {
      //, event
-    	      const {addOrUpdatePerson, personId, personType, schoolYearId} = props
-    	      let  {person} = state
             let errors = {}
     				let missingInfoMessage = []
     
@@ -260,19 +257,14 @@ function RegGuardiansContactsView(props) {
 
   const handleMissingInfoOpen = (messageInfoIncomplete) => {
     return setIsShowingModal_missingInfo(true); setMessageInfoIncomplete(messageInfoIncomplete)
-    		handleMissingInfoClose = () => setIsShowingModal_missingInfo(false); setMessageInfoIncomplete('')
     
-    		toggleCheckbox = (field) => {
-            let person = person
-  }
 
+  }
   const handleMissingInfoClose = () => {
     return setIsShowingModal_missingInfo(false); setMessageInfoIncomplete('')
     
-    		toggleCheckbox = (field) => {
-            let person = person
-  }
 
+  }
   const toggleCheckbox = (field) => {
     
             let person = person
@@ -292,8 +284,6 @@ function RegGuardiansContactsView(props) {
     		
   }
 
-  const {maritalStati, genders, countries, usStates } = props
-        const {person={}, errors={}, isShowingModal_missingInfo, messageInfoIncomplete } = state
   
         return (
           <div className={styles.container}>

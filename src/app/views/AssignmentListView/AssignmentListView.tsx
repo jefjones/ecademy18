@@ -48,7 +48,6 @@ function AssignmentListView(props) {
   const [partialNameText, setPartialNameText] = useState('')
   const [dueDateFrom, setDueDateFrom] = useState('')
   const [dueDateTo, setDueDateTo] = useState('')
-  const [contentTypes, setContentTypes] = useState([])
   const [showSet, setShowSet] = useState('all')
   const [sendToHiddenPenspringLink, setSendToHiddenPenspringLink] = useState(undefined)
   const [isParamAssignment, setIsParamAssignment] = useState(undefined)
@@ -136,7 +135,6 @@ function AssignmentListView(props) {
 
   const changeFilter = (event, filterName) => {
     
-    			let filters = filters
     			let field = filterName ? filterName : event.target.name
     			filters[field] = event.target.value
     			setFilters(filters)
@@ -145,7 +143,6 @@ function AssignmentListView(props) {
 
   const toggleCheckbox = (id) => {
     
-    			let filters = filters
     			if (filters.contentTypes && filters.contentTypes.length > 0) {
     					if (filters.contentTypes.indexOf(id) > -1) {
     							filters.contentTypes.splice(filters.contentTypes.indexOf(id), 1)
@@ -161,10 +158,6 @@ function AssignmentListView(props) {
 
   const handleShowSet = (value) => {
     
-    			let filters = filters
-    			filters.showSet = value
-    			setFilters(filters)
-    	
   }
 
   const toggleHideSearch = () => {
@@ -175,17 +168,12 @@ function AssignmentListView(props) {
 
   const handleRemoveCourseDocOpen = (courseDocumentId) => {
     return setIsShowingModal_removeCourseDoc(true); setCourseDocumentId(courseDocumentId)
-    	handleRemoveCourseDocClose = () => setIsShowingModal_removeCourseDoc(false)
-    	handleRemoveCourseDoc = () => {
-    			const {removeCourseDocumentFile, personId} = props
-  }
 
+  }
   const handleRemoveCourseDocClose = () => {
     return setIsShowingModal_removeCourseDoc(false)
-    	handleRemoveCourseDoc = () => {
-    			const {removeCourseDocumentFile, personId} = props
-  }
 
+  }
   const handleRemoveCourseDoc = () => {
     
     			const {removeCourseDocumentFile, personId} = props
@@ -227,36 +215,22 @@ function AssignmentListView(props) {
 
   const handleInstructionsOpen = (assignmentName, instructions) => {
     return setIsShowingModal_instructions(true); setInstructions(instructions); setAssignmentName(assignmentName)
-    	handleInstructionsClose = () => setIsShowingModal_instructions(false); setInstructions(''); setAssignmentName('')
     
-    	handleFileUploadOpen = () => setIsShowingFileUpload_course(true)
-      handleFileUploadClose = () => setIsShowingFileUpload_course(false)
-      handleSubmitFile = () => {
-          const {courseDocumentsInit, personId, courseEntryId} = props
-  }
 
+  }
   const handleInstructionsClose = () => {
     return setIsShowingModal_instructions(false); setInstructions(''); setAssignmentName('')
     
-    	handleFileUploadOpen = () => setIsShowingFileUpload_course(true)
-      handleFileUploadClose = () => setIsShowingFileUpload_course(false)
-      handleSubmitFile = () => {
-          const {courseDocumentsInit, personId, courseEntryId} = props
-  }
 
+  }
   const handleFileUploadOpen = () => {
     return setIsShowingFileUpload_course(true)
-      handleFileUploadClose = () => setIsShowingFileUpload_course(false)
-      handleSubmitFile = () => {
-          const {courseDocumentsInit, personId, courseEntryId} = props
-  }
 
+  }
   const handleFileUploadClose = () => {
     return setIsShowingFileUpload_course(false)
-      handleSubmitFile = () => {
-          const {courseDocumentsInit, personId, courseEntryId} = props
-  }
 
+  }
   const handleSubmitFile = () => {
     
           const {courseDocumentsInit, personId, courseEntryId} = props
@@ -267,17 +241,12 @@ function AssignmentListView(props) {
 
   const handleWebsiteLinkOpen = () => {
     return setIsShowingWebsiteLink_course(true)
-    	handleWebsiteLinkClose = () => setIsShowingWebsiteLink_course(false)
-    	handleWebsiteLinkSave = (websiteLink, websiteTitle) => {
-    			const {saveCourseWebsiteLink, courseEntryId, personId} = props
-  }
 
+  }
   const handleWebsiteLinkClose = () => {
     return setIsShowingWebsiteLink_course(false)
-    	handleWebsiteLinkSave = (websiteLink, websiteTitle) => {
-    			const {saveCourseWebsiteLink, courseEntryId, personId} = props
-  }
 
+  }
   const handleWebsiteLinkSave = (websiteLink, websiteTitle) => {
     
     			const {saveCourseWebsiteLink, courseEntryId, personId} = props
@@ -326,17 +295,12 @@ function AssignmentListView(props) {
 
   const handlePenspringFileOpen_assignment = (assignment) => {
     return setIsShowingPenspringFile_assignment(true); setSendAssignment(assignment)
-    	handlePenspringFileClose_assignment = () => setIsShowingPenspringFile_assignment(false); setAssignment({})
-    	handleSubmitFile_assignment = () => {
-    			const {assignmentsInit, personId, assignment} = props
-  }
 
+  }
   const handlePenspringFileClose_assignment = () => {
     return setIsShowingPenspringFile_assignment(false); setAssignment({})
-    	handleSubmitFile_assignment = () => {
-    			const {assignmentsInit, personId, assignment} = props
-  }
 
+  }
   const handleSubmitFile_assignment = () => {
     
     			const {assignmentsInit, personId, assignment} = props
@@ -347,30 +311,20 @@ function AssignmentListView(props) {
 
   const handleFileUploadOpen_assignment = (assignmentId) => {
     return setIsShowingFileUpload_assignment(true); setAssignmentId(assignmentId)
-    	handleFileUploadClose_assignment = () => setIsShowingFileUpload_assignment(false)
-    	handleSubmitFile_assignment = () => {
-    			const {assignmentsInit, personId, assignment} = props
-  }
 
+  }
   const handleFileUploadClose_assignment = () => {
     return setIsShowingFileUpload_assignment(false)
-    	handleSubmitFile_assignment = () => {
-    			const {assignmentsInit, personId, assignment} = props
-  }
 
+  }
   const handleWebsiteLinkOpen_assignment = (assignmentId) => {
     return setIsShowingWebsiteLink_assignment(true); setAssignmentId(assignmentId)
-    	handleWebsiteLinkClose_assignment = () => setIsShowingWebsiteLink_assignment(false)
-    	handleWebsiteLinkSave_assignment = (websiteLink) => {
-    			const {saveAssignmentWebsiteLink, personId} = props
-  }
 
+  }
   const handleWebsiteLinkClose_assignment = () => {
     return setIsShowingWebsiteLink_assignment(false)
-    	handleWebsiteLinkSave_assignment = (websiteLink) => {
-    			const {saveAssignmentWebsiteLink, personId} = props
-  }
 
+  }
   const handleWebsiteLinkSave_assignment = (websiteLink) => {
     
     			const {saveAssignmentWebsiteLink, personId} = props
@@ -382,29 +336,19 @@ function AssignmentListView(props) {
 
   const handleDisplayClose = () => {
     return setIsShowingModal_display(false); setModalDisplay('')
-    	handleDescriptionOpen = (modalDisplay) => setIsShowingModal_display(true); setModalTitle(<L p={p} t={`Description`}/>); setModalDisplay(modalDisplay)
-    	handleShowListOpen = (modalTitle, list) => {
-    		let modalDisplay = <div>{list && list.length > 0 && list.map((m, i) => <div key={i} className={styles.textDisplay}>{m.label}</div>)}</div>
-  }
 
+  }
   const handleDescriptionOpen = (modalDisplay) => {
     return setIsShowingModal_display(true); setModalTitle(<L p={p} t={`Description`}/>); setModalDisplay(modalDisplay)
-    	handleShowListOpen = (modalTitle, list) => {
-    		let modalDisplay = <div>{list && list.length > 0 && list.map((m, i) => <div key={i} className={styles.textDisplay}>{m.label}</div>)}</div>
-  }
 
+  }
   const handleShowListOpen = (modalTitle, list) => {
     
-    		let modalDisplay = <div>{list && list.length > 0 && list.map((m, i) => <div key={i} className={styles.textDisplay}>{m.label}</div>)}</div>
-    				setIsShowingModal_display(true); setModalTitle(modalTitle); setModalDisplay(modalDisplay)
     	
   }
 
   const {fetchingRecord, personId, courseEntryId, courseDocuments, course={}, assignments, contentTypes, accessRoles={}, intervals, personConfig,
   						companyConfig, languageList, createWorkAndPenspringTransfer, assignmentsInit, sequences, saveAssignmentWebsiteLink, removeAssignment} = props
-  		const {isShowingModal_removeCourseDoc, hideSearch, filters={}, isShowingModal_instructions, assignmentName, instructions, isShowingFileUpload_course,
-  						isShowingWebsiteLink_course, isShowingFileUpload_assignment, isShowingWebsiteLink_assignment, clickedId, assignment,
-  						penspringWorkId, assignmentId, isShowingModal_display, modalDisplay, modalTitle} = state
   		let assignmentsFiltered = assignments
   
   		if (filters.partialNameText) assignmentsFiltered = assignmentsFiltered.filter(m => m.title.toLowerCase().indexOf(filters.partialNameText.toLowerCase()) > -1)

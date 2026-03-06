@@ -39,7 +39,6 @@ function LandingView(props) {
   const [orgName, setOrgName] = useState('')
   const [firstName, setFirstName] = useState('')
   const [lastName, setLastName] = useState('')
-  const [username, setUsername] = useState('')
   const [clave, setClave] = useState('')
   const [usernameConfirm, setUsernameConfirm] = useState('')
   const [claveConfirm, setClaveConfirm] = useState('')
@@ -200,11 +199,8 @@ function LandingView(props) {
 
   const handleFailedLoginOpen = () => {
     return setIsShowingFailedLogin(true); setIsSubmitted(false)
-        handleFailedLoginClose = () => {
-            setIsShowingFailedLogin(false)
-            props.logout()
-  }
 
+  }
   const handleFailedLoginClose = () => {
     
             setIsShowingFailedLogin(false)
@@ -222,15 +218,11 @@ function LandingView(props) {
   const handleMatchingRecordOpen = () => {
     return setIsShowingMatchingRecord(true)
     
-    		handleSelectedFeature = (jefFeatureId) => {
-    				//If the feature is selected, remove it. Otherwise, add it.
-    				let selectedFeatures = Object.assign([], selectedFeatures)
-  }
 
+  }
   const handleSelectedFeature = (jefFeatureId) => {
     
     				//If the feature is selected, remove it. Otherwise, add it.
-    				let selectedFeatures = Object.assign([], selectedFeatures)
     				if (selectedFeatures && selectedFeatures.length > 0 && selectedFeatures.indexOf('jefFeatureId') > -1) {
     						selectedFeatures = selectedFeatures.filter(id => id !== jefFeatureId)
     				} else {

@@ -31,9 +31,6 @@ function PassFailRatingSettingsView(props) {
     	
   }, [])
 
-  const {setPassFailRating, personId} = props
-      
-  		let {passFailRatings=[]} = state
   		passFailRatings = doSort(passFailRatings, { sortField: 'sequence', isAsc: true, isNumber: true })
   
       return (

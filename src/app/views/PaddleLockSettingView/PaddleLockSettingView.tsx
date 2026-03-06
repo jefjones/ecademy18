@@ -26,8 +26,6 @@ function PaddleLockSettingView(props) {
 						serialNumber:'',
 					})
 
-  const {paddlelocks=[], fetchingRecord} = props
-  		const {paddlelock={}, errors, isShowingModal_remove} = state
   
   		let headings = [{},{},
   				{label: <L p={p} t={`Serial #`}/>, tightText: true},

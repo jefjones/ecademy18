@@ -66,7 +66,6 @@ function DiscussionEntryView(props) {
 									: {})
   const [courseEntryId, setCourseEntryId] = useState(undefined)
   const [remove_discussionEntryId, setRemove_discussionEntryId] = useState(undefined)
-  const [course, setCourse] = useState(this.props.course)
 
   useEffect(() => {
     return () => {
@@ -96,7 +95,7 @@ function DiscussionEntryView(props) {
       
   }, [])
 
-  const {personId, discussion={}, accessRoles, course={}, discussionEntriesInit, courseEntryId, companyConfig={}, fetchingRecord,
+  const {discussion={}, accessRoles, course={}, discussionEntriesInit, companyConfig={}, fetchingRecord,
   						participants, entryReport, students, updatePersonConfig} = props
   		//let {, postedSubjects} = props;
       

@@ -59,7 +59,7 @@ function LearnerCourseAssignView(props) {
   const [p, setP] = useState(undefined)
   const [errorCourses, setErrorCourses] = useState(<L p={p} t={`At least one course is required`}/>)
 
-  const {personId, timeTarget, personal, studentPersonId, companyConfig={}, accessRoles, gradeLevels, clipboardStudents, clipboardCourses,
+  const {personId, timeTarget, personal, companyConfig={}, accessRoles, gradeLevels, clipboardStudents, clipboardCourses,
   							courseListType, setStudentsSelected, removeAllCourseClipboard, myFrequentPlaces, setMyFrequentPlace, fetchingRecord,
   							getStudentSchedule } = props
         

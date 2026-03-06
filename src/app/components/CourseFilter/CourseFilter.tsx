@@ -1,4 +1,4 @@
-import { Component } from 'react'
+import { useState } from 'react'
 import styles from './CourseFilter.css'
 import MultiSelect from '../MultiSelect'
 import SelectSingleDropDown from '../SelectSingleDropDown'
@@ -20,7 +20,10 @@ function CourseFilter(props) {
   const [errorSearchName, setErrorSearchName] = useState('')
   const [checkedDefault, setCheckedDefault] = useState(false)
   const [searchText, setSearchText] = useState('')
-  const [p, setP] = useState(undefined)
+
+  const handleEnterKey = () => {} // TODO: implement
+  const avoidDupicateSearchName = () => true // TODO: implement
+  const handleSearchTextSubmit = () => {} // TODO: implement
 
   const handleSearchNameEnterKey = (event) => {
     
@@ -66,109 +69,14 @@ function CourseFilter(props) {
   const learnerOutcomesValueRenderer = (selected, options) => {
     
           return <L p={p} t={`Learner Outcomes:  ${selected.length} of ${options.length}`}/>
-      }
-    
-      learnerOutcomeTargetsValueRenderer = (selected, options) => {
-          return <L p={p} t={`Learner Outcome Targets:  ${selected.length} of ${options.length}`}/>
-      }
-    
-      render() {
-        const {courseFilter, updateFilterByField, learnerOutcomes, learnerOutcomeTargets, learningPathways, learningFocusAreas,
-                  facilitators, companyConfig={}} = props
-        
-        const wf = courseFilter
-    
-        let g_learnerOutcomes = learnerOutcomes
-        let g_learningFocusAreas = learningFocusAreas
-    
-        if (wf.learningPathwayId) {
-            g_learnerOutcomes = g_learnerOutcomes.filter(m => m.learningPathwayId === wf.learningPathwayId)
-            g_learningFocusAreas = g_learningFocusAreas.filter(m => m.learningPathwayId === wf.learningPathwayId)
-        }
-        if (wf.selectedLearnerOutcomeTargets && wf.selectedLearnerOutcomeTargets.length > 0) {
-            g_learnerOutcomes = g_learnerOutcomes.filter(m => wf.selectedLearnerOutcomeTargets.includes(m.gradeTarget))
-        }
-    
-        return (
-            <div className={styles.container}>
-                <div>
-                    <div className={styles.marginLeft}>
-                        <div>
-                            <SelectSingleDropDown
-                                id={`learningPathwayId`}
-                                name={`learningPathway`}
-                                label={<L p={p} t={`Subject/Discipline`}/>`}
-                                value={wf.learningPathwayId}
-                                options={learningPathways}
-                                className={styles.moreBottomMargin}
-                                height={`medium`}
-                                onChange={(event) => updateFilterByField(wf.personId, 'learningPathwayId', event.target.value)}
-                                onEnterKey={handleEnterKey}/>
-                        </div>
-                        {companyConfig.isMcl &&
-                            <div className={styles.multiSelect}>
-                                <MultiSelect
-                                    options={learnerOutcomeTargets || []}
-                                    onSelectedChanged={(selected) => updateFilterByField(wf.personId, 'selectedLearnerOutcomeTargets', selected)}
-                                    valueRenderer={learnerOutcomeTargetsValueRenderer}
-                                    getJustCollapsed={() => {}}
-                                    selected={wf.selectedLearnerOutcomeTargets || []}/>
-                            </div>
-                        }
-                        {companyConfig.isMcl &&
-                            <div className={styles.multiSelect}>
-                                <MultiSelect
-                                    options={g_learnerOutcomes || []}
-                                    onSelectedChanged={(selected) => updateFilterByField(wf.personId, 'selectedLearnerOutcomes', selected)}
-                                    valueRenderer={learnerOutcomesValueRenderer}
-                                    getJustCollapsed={() => {}}
-                                    selected={wf.selectedLearnerOutcomes || []}/>
-                            </div>
-                        }
-                        <hr className={styles.divider}/>
-                        <SelectSingleDropDown
-                            id={`learningFocusAreaId`}
-                            label={<L p={p} t={`Sub discipline`}/>}
-                            value={wf.learningFocusAreaId}
-                            options={g_learningFocusAreas}
-                            height={`medium`}
-                            onChange={(event) => updateFilterByField(wf.personId, 'learningFocusAreaId', event.target.value)} />
-                        <SelectSingleDropDown
-                            id={`facilitatorPersonId`}
-                            label={<L p={p} t={`Teacher`}/>}
-                            value={wf.facilitatorPersonId}
-                            options={facilitators}
-                            height={`medium`}
-                            onChange={(event) => updateFilterByField(wf.personId, 'facilitatorPersonId', event.target.value)} />
-                    </div>
-                    <hr/>
-                    <div className={styles.row}>
-                        <span className={styles.textSave}>Save search</span>
-                        <InputText
-                            size={"medium"}
-                            name={"name"}
-                            value={savedSearchName}
-                            onChange={handleSearchNameChange}
-                            onEnterKey={handleSaveSearchEnterKey}
-                            error={errorSearchName} />
-                        <a onClick={handleSearchNameSubmit} className={styles.linkStyle}>
-                            <Icon pathName={`plus`} className={styles.image}/>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        )
-    
   }
 
   const learnerOutcomeTargetsValueRenderer = (selected, options) => {
-    
-          return <L p={p} t={`Learner Outcome Targets:  ${selected.length} of ${options.length}`}/>
-      }
-    
-      render() {
-        const {courseFilter, updateFilterByField, learnerOutcomes, learnerOutcomeTargets, learningPathways, learningFocusAreas,
-                  facilitators, companyConfig={}} = props
+    return <L p={p} t={`Learner Outcome Targets:  ${selected.length} of ${options.length}`}/>
+  }
+
+  const {courseFilter, updateFilterByField, learnerOutcomes, learnerOutcomeTargets, learningPathways, learningFocusAreas,
+            facilitators, companyConfig={}} = props
         
         const wf = courseFilter
     
@@ -191,7 +99,7 @@ function CourseFilter(props) {
                             <SelectSingleDropDown
                                 id={`learningPathwayId`}
                                 name={`learningPathway`}
-                                label={<L p={p} t={`Subject/Discipline`}/>`}
+                                label={<L p={p} t={`Subject/Discipline`}/>}
                                 value={wf.learningPathwayId}
                                 options={learningPathways}
                                 className={styles.moreBottomMargin}
@@ -255,6 +163,4 @@ function CourseFilter(props) {
     
   }
 
-  styles.multiSelect
-}
 export default CourseFilter

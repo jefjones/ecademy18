@@ -27,7 +27,6 @@ function BenchmarkTestListView(props) {
   const [filters, setFilters] = useState({
 					})
   const [isParamBenchmarkTest, setIsParamBenchmarkTest] = useState(true)
-  const [benchmarkTestId, setBenchmarkTestId] = useState(benchmarkTest && benchmarkTest.benchmarkTestId)
   const [modalDisplay, setModalDisplay] = useState('')
   const [modalOpen, setModalOpen] = useState(false)
   const [modalTitle, setModalTitle] = useState('Description')
@@ -36,8 +35,6 @@ function BenchmarkTestListView(props) {
 
   const {fetchingRecord, personId, course={}, benchmarkTests, accessRoles={}, personConfig, companyConfig, sequences, removeBenchmarkTest,
   						facilitators, myFrequentPlaces, setMyFrequentPlace, sharedTeachersBenchmarkTest} = props
-  		const {isShowingModal_removeCourseDoc, hideSearch, filters={}, isShowingModal_display, modalDisplay, modalTitle, benchmarkTest={},
-  						isShowingModal_addOrUpdate, modalOpen} = state
   		let testListFiltered = benchmarkTests
   		let benchmarkTestId = benchmarkTest.benchmarkTestId
   

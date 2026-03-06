@@ -177,7 +177,6 @@ function CarpoolDailySchedule(props) {
   		// 					c. Place the student in the column of unassigned or the carpool time assigned.
   		// 					d. If the current user is the parent, provide the student names with the left and right arrows to move between columns
   		// 			ii. Do the same for pickUps as 6.i above.
-  		let carpoolId = carpool.myCarpools && carpool.myCarpools.length > 0 && carpool.myCarpools[0] && carpool.myCarpools[0].carpoolId
   		let days = [<L p={p} t={`sunday`}/>, <L p={p} t={`monday`}/>, <L p={p} t={`tuesday`}/>, <L p={p} t={`wednesday`}/>, <L p={p} t={`thursday`}/>, <L p={p} t={`friday`}/>, <L p={p} t={`saturday`}/>]
   		let datePointer = moment()
   		let sixtyDays = []

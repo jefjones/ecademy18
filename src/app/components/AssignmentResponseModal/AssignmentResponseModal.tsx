@@ -39,7 +39,6 @@ function AssignmentResponseModal(props) {
   useEffect(() => {
     
     			const {assignmentId, assignmentsInfo, clearPenspringTransfer, personId} = props
-    			let data = assignmentsInfo && assignmentsInfo.assignments && assignmentsInfo.assignments.length > 0 && assignmentsInfo.assignments.filter(m => m.assignmentId === assignmentId)[0]
     			if (!data || !data.assignmentId) setData(data)
     			clearPenspringTransfer(personId)
       
@@ -49,7 +48,6 @@ function AssignmentResponseModal(props) {
   useEffect(() => {
     
     			const {assignmentId, assignmentsInfo, penspringTransfer, clearPenspringTransfer, personId, handleClose} = props
-    			let data = assignmentsInfo && assignmentsInfo.assignments && assignmentsInfo.assignments.length > 0 && assignmentsInfo.assignments.filter(m => m.assignmentId === assignmentId)[0]
     			if (!data || !data.assignmentId) setData(data)
     			if (penspringTransfer) {
     					setData({})
@@ -98,9 +96,6 @@ function AssignmentResponseModal(props) {
 
   const handleCommentEntry = ({target}) => {
     
-    			let data = Object.assign({}, data)
-    			data.newTextResponse = target.value
-    			setData(data); setErrorTextResponse('')
     	
   }
 
@@ -141,33 +136,22 @@ function AssignmentResponseModal(props) {
 
   const handleRemoveOpen = (studentAssignmentResponseId, deleteFile='') => {
     return setIsShowingModal_remove(true); setStudentAssignmentResponseId(studentAssignmentResponseId); setDeleteFile(deleteFile)
-      handleRemoveClose = () => setIsShowingModal_remove(false)
-      handleRemove = () => {
-          const {handleRemove, personId} = props
-  }
 
+  }
   const handleRemoveClose = () => {
     return setIsShowingModal_remove(false)
-      handleRemove = () => {
-          const {handleRemove, personId} = props
-  }
 
+  }
   const handleRemove = (emove(personId, studentAssignmentResponseId, deleteFile) => {
     
   }
 
   const setEditTextResponse = () => {
     
-    			let data = Object.assign({}, data)
-    			data.responseTypeName = 'STUDENTRESPONSE'
-    			setData(data)
-    	
   }
 
   const {personId, studentPersonId, languageList, handleClose, className, assignmentId, course, companyConfig={}, accessRoles,
   							createWorkAndPenspringTransfer, recallInitRecords } = props
-        const {data={ assignment: {}}, errorTextResponse, errorWebsiteLink, errorResponseType, errorFileUpload, isShowingModal_remove,
-  							fileList, isSubmitted, isFileChosen } = state
         const config = componentConfig
         const djsConfig = djsConfig
         const eventHandlers = {

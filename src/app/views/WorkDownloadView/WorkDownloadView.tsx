@@ -30,18 +30,11 @@ function WorkDownloadView(props) {
   }
 
   const handleMessageClose = () => {
-    return setIsShowingModal(false)
-        handleMessageOpen = () => setIsShowingModal(true)
-    
-        render() {
-            const {workSummary, setWorkCurrentSelected, deleteWork, deleteChapter, chapterText, updateChapterDueDate, updateChapterComment} = props
+    setIsShowingModal(false)
   }
 
   const handleMessageOpen = () => {
-    return setIsShowingModal(true)
-    
-        render() {
-            const {workSummary, setWorkCurrentSelected, deleteWork, deleteChapter, chapterText, updateChapterDueDate, updateChapterComment} = props
+    setIsShowingModal(true)
   }
 
   const {workSummary, setWorkCurrentSelected, deleteWork, deleteChapter, chapterText, updateChapterDueDate, updateChapterComment} = props

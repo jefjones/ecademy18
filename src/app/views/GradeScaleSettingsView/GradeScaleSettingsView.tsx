@@ -35,7 +35,7 @@ function GradeScaleSettingsView(props) {
 				highValue: '',
         scale40Value: '',
       })
-  const [Letter, setLetter] = useState(<L p={p} t={`A letter grade is required`}/>)
+  const [errorLetter, setErrorLetter] = useState(<L p={p} t={`A letter grade is required`}/>)
   const [p, setP] = useState(undefined)
   const [gradeScaleTableId, setGradeScaleTableId] = useState(gradeScale.gradeScaleTableId)
   const [gradeScaleNameChosen, setGradeScaleNameChosen] = useState(undefined)

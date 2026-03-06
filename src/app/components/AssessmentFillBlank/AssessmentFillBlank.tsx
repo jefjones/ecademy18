@@ -22,13 +22,8 @@ function AssessmentFillBlank(props) {
   const [score, setScore] = useState('')
   const [isCorrect, setIsCorrect] = useState('')
   const [errorScore, setErrorScore] = useState('')
-  const [assessmentCorrect, setAssessmentCorrect] = useState(this.props.assessmentCorrect)
   const [answers, setAnswers] = useState(learnerAnswer && learnerAnswer.learnerAnswer ? learnerAnswer.learnerAnswer.split('~^') : [])
   const [p, setP] = useState(undefined)
-  const [question, setQuestion] = useState({
-        ...this.state.question,
-        correctAnswer: fillBlanksChosen
-      })
   const [correctAnswer, setCorrectAnswer] = useState(fillBlanksChosen)
 
   useEffect(() => {

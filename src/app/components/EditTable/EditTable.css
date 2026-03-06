@@ -238,8 +238,8 @@ tr:nth-of-type(even) {
 }
 
 .verticalAlign {
-	/* align-text: top;  /* this is not working */ */
-	/* align-self: top;  /* this is not working */ */
+	/* align-text: top;  /* this is not working */
+	/* align-self: top;  /* this is not working */
 	vertical-align: top !important;  /* this is not working */
 }
 

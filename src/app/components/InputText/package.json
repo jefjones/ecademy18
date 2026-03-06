@@ -1,5 +1,5 @@
 {
     "name": "InputText",
-    "main": "InputText.js",
+    "main": "InputText.tsx",
     "storybook": "InputText.story.js"
 }

@@ -53,14 +53,6 @@ function TranscriptsView(props) {
 
   const toggleInterval = (intervalId) => {
     
-    				let intervalList = intervalList
-    				intervalList = intervalList && intervalList.length > 0 && intervalList.indexOf(intervalId) > -1
-    						? intervalList.filter(id => id !== intervalId)
-    						: intervalList && intervalList.length > 0
-    								? intervalList.concat(intervalId)
-    								: [intervalId]
-    				setIntervalList(intervalList)
-    		
   }
 
   const handleUpdateSchoolYear = ({target}) => {
@@ -83,19 +75,14 @@ function TranscriptsView(props) {
 
   const toggleShowSignature = () => {
     return setShowSignature(!showSignature)
-    		toggleOfficialSeal = () => setShowOfficialSeal(!showOfficialSeal)
     
-    		changeDate = (field, event) => {
-    				let newState = Object.assign({}, state)
-  }
 
+  }
   const toggleOfficialSeal = () => {
     return setShowOfficialSeal(!showOfficialSeal)
     
-    		changeDate = (field, event) => {
-    				let newState = Object.assign({}, state)
-  }
 
+  }
   const changeDate = (field, event) => {
     
     				let newState = Object.assign({}, state)

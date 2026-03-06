@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import styles from './FileTreeSubContents.css'
 import classes from 'classnames'
 import Icon from '../Icon'
-import FileTreeSubContents from '../FileTreeSubContents'
 import MessageModal from '../MessageModal'
 import DateMoment from '../DateMoment'
 import InputText from '../InputText'
@@ -28,17 +27,12 @@ function FileTreeSubContents(props) {
 
   const handlePenspringHomeworkOpen = (workId) => {
     return setWorkId(workId); setIsShowingPenspringHomework(true)
-        handlePenspringHomeworkClose = () => setWorkId(''); setIsShowingPenspringHomework(false)
-    		handlePenspringHomework = () => {
-    				const {personId, setPenspringHomeworkSubmitted, getMyWorks, getWorksSharedWithMe} = props
-  }
 
+  }
   const handlePenspringHomeworkClose = () => {
     return setWorkId(''); setIsShowingPenspringHomework(false)
-    		handlePenspringHomework = () => {
-    				const {personId, setPenspringHomeworkSubmitted, getMyWorks, getWorksSharedWithMe} = props
-  }
 
+  }
   const handlePenspringHomework = () => {
     
     				const {personId, setPenspringHomeworkSubmitted, getMyWorks, getWorksSharedWithMe} = props
@@ -52,17 +46,12 @@ function FileTreeSubContents(props) {
 
   const handlePenspringDistributeOpen = (workId) => {
     return setWorkId(workId); setIsShowingPenspringDistribute(true)
-        handlePenspringDistributeClose = () => setWorkId(''); setIsShowingPenspringDistribute(false)
-    		handlePenspringDistribute = () => {
-    				const {personId, setPenspringDistributeSubmitted} = props
-  }
 
+  }
   const handlePenspringDistributeClose = () => {
     return setWorkId(''); setIsShowingPenspringDistribute(false)
-    		handlePenspringDistribute = () => {
-    				const {personId, setPenspringDistributeSubmitted} = props
-  }
 
+  }
   const handlePenspringDistribute = () => {
     
     				const {personId, setPenspringDistributeSubmitted} = props
@@ -81,10 +70,6 @@ function FileTreeSubContents(props) {
 
   const handleScore = (studentAssignmentResponseId, event) => {
     
-    				let scores = scores
-    				scores[studentAssignmentResponseId] = !event.target.value ? 'Empty' : event.target.value
-    				setScores(scores)
-    		
   }
 
   const {fileTreeExplorer, isParentExpanded=true, toggleExpanded, personId, setWorkCurrentSelected, workSummaries, deleteWork, mineOrOthers,

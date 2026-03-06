@@ -20,7 +20,4 @@ export default class ExcelSheet extends Component {
         }).isRequired
     }
 
-    render() {
-        return null
-    }
 }

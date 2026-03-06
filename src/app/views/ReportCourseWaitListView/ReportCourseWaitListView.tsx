@@ -18,10 +18,9 @@ import {doSort} from '../../utils/sort'
 function ReportCourseWaitListView(props) {
   const [isShowingModal_description, setIsShowingModal_description] = useState(true)
   const [courseName, setCourseName] = useState(undefined)
-  const [showOnlyMarked, setShowOnlyMarked] = useState(!this.state.showOnlyMarked)
+  const [showOnlyMarked, setShowOnlyMarked] = useState(false)
 
-  const toggleDoNotAddCourse = (e(personId, courseEntryId) => {
-    reportExcelCourseWaitList, coursesBase
+  const toggleDoNotAddCourse = (personId, courseEntryId) => {
   }
 
   const {reportExcelCourseWaitList, coursesBase} = props

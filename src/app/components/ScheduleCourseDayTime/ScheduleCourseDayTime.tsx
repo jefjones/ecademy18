@@ -26,8 +26,6 @@ function ScheduleCourseDayTime(props) {
   const setReoccurringByClassPeriod = (dayOfTheWeek, classPeriodId) => {
     
     				const {classPeriods} = props
-    				let daysScheduled = Object.assign([], daysScheduled)
-    				let classPeriod = classPeriods && classPeriods.length > 0 && classPeriods.filter(m => m.classPeriodId == classPeriodId)[0]; //eslint-disable-line
     
     				if (classPeriod && classPeriod.startTime) {
     						const {setDaySchedule} = props
@@ -67,7 +65,6 @@ function ScheduleCourseDayTime(props) {
   const handleDaySchedule = (dayOfTheWeek, field, value) => {
     
     				const {setDaySchedule} = props
-    				let daysScheduled = Object.assign([], daysScheduled)
     				let daySchedule = daysScheduled.filter(m => m.dayOfTheWeek === dayOfTheWeek)[0] || {dayOfTheWeek}
     				daySchedule[field] = value
     				daysScheduled = daysScheduled.filter(m => m.dayOfTheWeek !== dayOfTheWeek)
@@ -80,7 +77,6 @@ function ScheduleCourseDayTime(props) {
   const toggleCheckbox = (dayOfTheWeek) => {
     
     				const {setDaySchedule} = props
-    				let daysScheduled = Object.assign([], daysScheduled)
     				let daySchedule = daysScheduled.filter(m => m.dayOfTheWeek === dayOfTheWeek)[0]
     				if (!daySchedule || !daySchedule.dayOfTheWeek) {
     						daySchedule = {dayOfTheWeek}

@@ -35,8 +35,6 @@ function BehaviorIncidentReportView(props) {
   const [stackedOrSideBySide, setStackedOrSideBySide] = useState(filter.stackedOrSideBySide)
   const [recipient_personId, setRecipient_personId] = useState('')
 
-  const {personId, filterGroups, behaviorIncidentTypes, myFrequentPlaces, setMyFrequentPlace, gradeLevels, facilitators, students} = props
-      const {filter={}, behaviorIncidentFilterGroupId, filterGroupName} = state
       let reportData = setData()
   
       return (

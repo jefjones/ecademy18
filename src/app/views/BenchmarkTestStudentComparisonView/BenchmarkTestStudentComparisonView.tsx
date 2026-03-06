@@ -1,4 +1,4 @@
-﻿import { useState } from 'react'
+import { useState } from 'react'
 import { navigate, navigateReplace, goBack } from './'
 import styles from './BenchmarkTestStudentComparisonView.css'
 const p = 'BenchmarkTestStudentComparisonView'
@@ -24,17 +24,13 @@ function BenchmarkTestStudentComparisonView(props) {
     return setSelectedClasses(selectedClasses)
     	classesValueRenderer = (selected, options) => <div className={styles.boldText}><L p={p} t={`Classes:  ${selected.length} of ${options.length}`}/></div>
     
-    	handleChange = ({target}) => {
-    			const {getBenchmarkTestStudentComparison, personId} = props
-  }
 
   const classesValueRenderer = (selected, options) => {
     return <div className={styles.boldText}><L p={p} t={`Classes:  ${selected.length} of ${options.length}`}/></div>
     
-    	handleChange = ({target}) => {
-    			const {getBenchmarkTestStudentComparison, personId} = props
-  }
 
+  }
+  }
   const handleChange = ({target}) => {
     
     			const {getBenchmarkTestStudentComparison, personId} = props
@@ -48,18 +44,12 @@ function BenchmarkTestStudentComparisonView(props) {
 
   const handleStandardInfoOpen = (standardCode, standardName) => {
     return setIsShowingModal_standard(true); setStandardCode(standardCode); setStandardName(standardName)
-    	handleStandardInfoClose = () => setIsShowingModal_standard(false); setStandardCode(''); setStandardName('')
     
-    	render() {
-    	    const {personId, benchmarkTestStudentComparison=[], standardsRatings, benchmarkTests, fetchingRecord, standardsRatingTableId, accessRoles} = props
-  }
 
+  }
   const handleStandardInfoClose = () => {
     return setIsShowingModal_standard(false); setStandardCode(''); setStandardName('')
     
-    	render() {
-    	    const {personId, benchmarkTestStudentComparison=[], standardsRatings, benchmarkTests, fetchingRecord, standardsRatingTableId, accessRoles} = props
-  }
 
   const {personId, benchmarkTestStudentComparison=[], standardsRatings, benchmarkTests, fetchingRecord, standardsRatingTableId, accessRoles} = props
   	    
@@ -179,5 +169,6 @@ function BenchmarkTestStudentComparisonView(props) {
   							<OneFJefFooter />
   					</div>
   			)
+}
 }
 export default BenchmarkTestStudentComparisonView

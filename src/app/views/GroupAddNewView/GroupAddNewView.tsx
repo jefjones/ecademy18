@@ -7,8 +7,6 @@ import OneFJefFooter from '../../components/OneFJefFooter'
 import Loading from '../../components/Loading'
 
 function GroupAddNewView(props) {
-  const [groupName, setGroupName] = useState(this.props.groupName || '')
-  const [languageChosen, setLanguageChosen] = useState(this.props.languageChosen || 1)
   const [internalId, setInternalId] = useState('')
   const [description, setDescription] = useState('')
   const [groupNameError, setGroupNameError] = useState('')
@@ -23,7 +21,6 @@ function GroupAddNewView(props) {
   }, [])
 
   let {languageList, groupTypeDescription} = props
-            let {languageChosen, groupName, groupNameError, languageError, description, internalId, showNextButton} = state
   
             return (
               <div className={styles.container}>

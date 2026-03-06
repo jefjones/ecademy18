@@ -125,10 +125,6 @@ function GalleryAddView(props) {
 
   const changeDate = (field, event) => {
     
-        let galleryFile = Object.assign({}, galleryFile)
-        galleryFile[field] = event.target.value
-        setGalleryFile(galleryFile)
-    	
   }
 
   const handlePartialOwnerEnterKey = (event) => {
@@ -184,17 +180,12 @@ function GalleryAddView(props) {
 
   const handleRemoveFileUploadOpen = (fileUpload) => {
     return setIsShowingModal_removeFileUpload(true); setFileUpload(fileUpload)
-      handleRemoveFileUploadClose = () => setIsShowingModal_removeFileUpload(false)
-      handleRemoveFileUpload = () => {
-          const {removeGalleryFileUpload, personId} = props
-  }
 
+  }
   const handleRemoveFileUploadClose = () => {
     return setIsShowingModal_removeFileUpload(false)
-      handleRemoveFileUpload = () => {
-          const {removeGalleryFileUpload, personId} = props
-  }
 
+  }
   const handleRemoveFileUpload = () => {
     
           const {removeGalleryFileUpload, personId} = props
@@ -209,15 +200,12 @@ function GalleryAddView(props) {
 
   const handleDocumentOpen = (fileUpload) => {
     return setIsShowingModal_document(true); setFileUpload(fileUpload)
-      handleDocumentClose = () => setIsShowingModal_document(false); setFileUpload({})
     
-      handleShowGPSOpen = (galleryFileChosen) => setIsShowingModal_gps(true); setGalleryFileChosen(galleryFileChosen)
   }
 
   const handleDocumentClose = () => {
     return setIsShowingModal_document(false); setFileUpload({})
     
-      handleShowGPSOpen = (galleryFileChosen) => setIsShowingModal_gps(true); setGalleryFileChosen(galleryFileChosen)
   }
 
   const handleShowGPSOpen = (galleryFileChosen) => {
@@ -226,136 +214,8 @@ function GalleryAddView(props) {
 
   const handleShowGPSClose = () => {
     return setIsShowingModal_gps(false); setGalleryFileChosen({})
-    
-      getGPSLocation = () => {
-      		if(navigator.geolocation) {
-      			   navigator.geolocation.getCurrentPosition(displayLocation, displayError, { enableHighAccuracy: true, timeout: 5000, maximumAge: 0 })
   }
 
-  const getGPSLocation = () => {
-    
-      		if(navigator.geolocation) {
-      			   navigator.geolocation.getCurrentPosition(displayLocation, displayError, { enableHighAccuracy: true, timeout: 5000, maximumAge: 0 })
-      		} else {
-      			   console.log("Geo Location not supported by browser")
-      		}
-    	
-  }
-
-  const displayLocation = (position) => {
-    
-      		let galleryFile = Object.assign([], galleryFile)
-          galleryFile.longitude = position.coords.longitude
-          galleryFile.latitude = position.coords.latitude
-      		setGalleryFile(galleryFile)
-    	
-  }
-
-  const displayError = (error) => {
-    
-    			let errors = ['Unknown error', 'Persmission denied by user', 'Position not available', 'timeout error']
-    			setMessage(errors[error.code] + '); set' + error.message(' + error.message)
-    	
-  }
-
-  const onMarkerClick = (props, marker, e) => {
-    return setSelectedPlace(props); setActiveMarker(marker); setShowingInfoWindow(true)
-  }
-
-  const handleFormatPhone = () => {
-    
-          
-          if (galleryFile.phoneNumber && ('' + galleryFile.phoneNumber).replace(/\D/g, '').length !== 10) {
-              setErrorPhone(`The phone number entered is not 10 digits`)
-          } else if (formatPhoneNumber(galleryFile.phoneNumber)) {
-              setErrorPhone(''); setGalleryFile({...galleryFile, phoneNumber: formatPhoneNumber(galleryFile.phoneNumber)})
-          }
-      
-  }
-
-  const {personId, myFrequentPlaces, setMyFrequentPlace} = props
-      const {galleryFile={}, errors, isShowingModal_gps, isShowingModal_removeFileUpload, files, galleryFileChosen={}} = state
-  
-      return (
-          <div className={styles.container}>
-              <div className={classes(styles.moreBottom, globalStyles.pageTitle)}>
-                  {'Add Gallery Photo'}
-              </div>
-  						<div className={classes(styles.row, styles.littleLeft)}>
-  								<InputText
-  										name={'description'}
-  										value={galleryFile.description || ''}
-  										label={'Owner'}
-  										maxLength={150}
-  										size={'medium-long'}
-  										onChange={changeRecord}
-                      error={errors.description}/>
-  						</div>
-              <div className={styles.row}>
-                  <div>
-                      <ButtonWithIcon label={'Set GPS Location'} icon={'checkmark_circle'} onClick={(event) => getGPSLocation()}/>
-                  </div>
-  								<InputText
-                      label={"Latitude"}
-  										id={`latitude`}
-  										name={`latitude`}
-  										size={"medium-short"}
-  										numberOnly={true}
-  										value={galleryFile.latitude || ''}
-  										onChange={handleChange}
-  										inputClassName={styles.moreLeft} />
-  								<InputText
-                      label={"Longitude"}
-  										id={`longitude`}
-  										name={`longitude`}
-  										size={"medium-short"}
-  										numberOnly={true}
-  										value={galleryFile.longitude || ''}
-  										onChange={handleChange}
-  										inputClassName={styles.moreLeft} />
-              </div>
-              {/*
-                student lists and parent lists here.
-              */}
-              <div>
-                  <InputFile label={'Add a picture'} isCamera={true} onChange={handleInputFile} isResize={true}/>
-  								{files && files.length > 0 && files.map((f, i) =>
-  										<div key={i}>
-  												<ImageDisplay linkText={''} url={f.fileUrl} isOwner={f.entryPersonId === personId} fileUploadId={f.fileUploadId}
-  														deleteFunction={() => handleRemoveFileUploadOpen(f)} deleteId={galleryFile.galleryFileId}/>
-  										</div>
-  								)}
-  						</div>
-              <div className={styles.dateTime}>
-                  <DateTimePicker id={`expireDate`} label={'Return date'} value={galleryFile.expireDate || ''} onChange={(event) => changeDate('expireDate', event)}/>
-              </div>
-              <div className={classes(styles.row, styles.lotLeft)}>
-  								<ButtonWithIcon label={'Submit'} icon={'checkmark_circle'} onClick={(event) => processForm("STAY", event)}/>
-              </div>
-  						<MyFrequentPlaces personId={personId} pageName={'Add Gallery Photo'} path={'gallaryAdd'} myFrequentPlaces={myFrequentPlaces} setMyFrequentPlace={setMyFrequentPlace}/>
-              <OneFJefFooter />
-  						{isShowingModal_removeFileUpload &&
-                  <MessageModal handleClose={handleRemoveFileUploadClose} heading={`Remove this gallery photo?`}
-                     explain={`Are you sure you want to delete this gallery photo?`} isConfirmType={true}
-                     onClick={handleRemoveFileUpload} />
-              }
-              {isShowingModal_gps &&
-                  <MessageModal handleClose={handleShowGPSClose} heading={galleryFileChosen.description}
-    									explainJSX={<div style={{width: '320px', height: '320px'}}>
-                                     <Map google={props.google} zoom={14} style={mapStyles} initialCenter={{ lat: galleryFileChosen.latitude, lng: galleryFileChosen.longitude }}>
-                                        <Marker onClick={onMarkerClick} name={galleryFileChosen.description} />
-                                        <InfoWindow marker={activeMarker} visible={showingInfoWindow} onClose={onClose} >
-                                            <div>
-                                              <h4>{selectedPlace.name}</h4>
-                                            </div>
-                                        </InfoWindow>
-                                    </Map>
-                                </div>
-                      }
-    									onClick={handleShowGPSClose}/>
-              }
-  				</div>
-      )
 }
 
 export default GoogleApiWrapper({

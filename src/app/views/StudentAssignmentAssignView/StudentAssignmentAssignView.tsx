@@ -124,10 +124,6 @@ function StudentAssignmentAssignView(props) {
     		
   }
 
-  const {personId, companyConfig={}, courses, accessRoles={}, courseEntryId, contentTypes, intervals, personConfig, studentAssignmentAssign,
-  							schoolYears, myFrequentPlaces, setMyFrequentPlace, courseScheduledId} = props
-        
-  			let {jumpToAssignmentId} = state
   
   			const fullAssignmentList = props.studentAssignmentAssign && props.studentAssignmentAssign.assignments
   

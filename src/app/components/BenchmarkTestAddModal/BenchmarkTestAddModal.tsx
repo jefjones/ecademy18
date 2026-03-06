@@ -23,8 +23,6 @@ function BenchmarkTestAddModal(props) {
   const [isShowingModal_missingInfo, setIsShowingModal_missingInfo] = useState(true)
   const [messageInfoIncomplete, setMessageInfoIncomplete] = useState('')
 
-  const {handleClose, className, sequences, personConfig={}, changeBenchmarkTest, benchmarkTest={}} = props
-        const {errors={}, messageInfoIncomplete, isShowingModal_missingInfo} = state
   
         return (
             <div className={classes(styles.container, className)}>

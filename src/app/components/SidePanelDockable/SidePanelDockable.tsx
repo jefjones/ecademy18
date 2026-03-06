@@ -65,8 +65,6 @@ const defaultStyles = {
 }
 
 function SidePanelDockable(props) {
-  const [docked, setDocked] = useState(this.props.mediaQuery === 'large')
-  const [open, setOpen] = useState(this.props.mediaQuery === 'large' || this.props.leftSidePanelOpen)
   const [sidebarWidth, setSidebarWidth] = useState(props.defaultSidebarWidth)
   const [touchIdentifier, setTouchIdentifier] = useState(null)
   const [touchStartX, setTouchStartX] = useState(null)
@@ -157,103 +155,51 @@ function SidePanelDockable(props) {
 
   const handleSingleDeleteClose = () => {
     return setIsShowingModal_single(false)
-      handleSingleDeleteOpen = (deleteIndex) => setIsShowingModal_single(true); setDeleteIndex(deleteIndex)
-      handleAllDeleteClose = () => setIsShowingModal_all(false)
-      handleAllDeleteOpen = () => setIsShowingModal_all(true)
-      handleBlankClose = () => setIsShowingModal_blank(false)
-      handleBlankOpen = () => setIsShowingModal_blank(true)
-      handleConfigClose = () => setIsShowingModal_config(false)
-      handleConfigOpen = () => setIsShowingModal_config(true)
     
       //******************END Of functions from EditsLeftSideOver
     
-      render() {
-        const sidebarStyle = {...defaultStyles.sidebar, ...props.styles.sidebar}
-  }
 
   const handleSingleDeleteOpen = (deleteIndex) => {
     return setIsShowingModal_single(true); setDeleteIndex(deleteIndex)
-      handleAllDeleteClose = () => setIsShowingModal_all(false)
-      handleAllDeleteOpen = () => setIsShowingModal_all(true)
-      handleBlankClose = () => setIsShowingModal_blank(false)
-      handleBlankOpen = () => setIsShowingModal_blank(true)
-      handleConfigClose = () => setIsShowingModal_config(false)
-      handleConfigOpen = () => setIsShowingModal_config(true)
     
       //******************END Of functions from EditsLeftSideOver
     
-      render() {
-        const sidebarStyle = {...defaultStyles.sidebar, ...props.styles.sidebar}
-  }
 
   const handleAllDeleteClose = () => {
     return setIsShowingModal_all(false)
-      handleAllDeleteOpen = () => setIsShowingModal_all(true)
-      handleBlankClose = () => setIsShowingModal_blank(false)
-      handleBlankOpen = () => setIsShowingModal_blank(true)
-      handleConfigClose = () => setIsShowingModal_config(false)
-      handleConfigOpen = () => setIsShowingModal_config(true)
     
       //******************END Of functions from EditsLeftSideOver
     
-      render() {
-        const sidebarStyle = {...defaultStyles.sidebar, ...props.styles.sidebar}
-  }
 
   const handleAllDeleteOpen = () => {
     return setIsShowingModal_all(true)
-      handleBlankClose = () => setIsShowingModal_blank(false)
-      handleBlankOpen = () => setIsShowingModal_blank(true)
-      handleConfigClose = () => setIsShowingModal_config(false)
-      handleConfigOpen = () => setIsShowingModal_config(true)
     
       //******************END Of functions from EditsLeftSideOver
     
-      render() {
-        const sidebarStyle = {...defaultStyles.sidebar, ...props.styles.sidebar}
-  }
 
   const handleBlankClose = () => {
     return setIsShowingModal_blank(false)
-      handleBlankOpen = () => setIsShowingModal_blank(true)
-      handleConfigClose = () => setIsShowingModal_config(false)
-      handleConfigOpen = () => setIsShowingModal_config(true)
     
       //******************END Of functions from EditsLeftSideOver
     
-      render() {
-        const sidebarStyle = {...defaultStyles.sidebar, ...props.styles.sidebar}
-  }
 
   const handleBlankOpen = () => {
     return setIsShowingModal_blank(true)
-      handleConfigClose = () => setIsShowingModal_config(false)
-      handleConfigOpen = () => setIsShowingModal_config(true)
     
       //******************END Of functions from EditsLeftSideOver
     
-      render() {
-        const sidebarStyle = {...defaultStyles.sidebar, ...props.styles.sidebar}
-  }
 
   const handleConfigClose = () => {
     return setIsShowingModal_config(false)
-      handleConfigOpen = () => setIsShowingModal_config(true)
     
       //******************END Of functions from EditsLeftSideOver
     
-      render() {
-        const sidebarStyle = {...defaultStyles.sidebar, ...props.styles.sidebar}
-  }
 
   const handleConfigOpen = () => {
     return setIsShowingModal_config(true)
     
       //******************END Of functions from EditsLeftSideOver
     
-      render() {
-        const sidebarStyle = {...defaultStyles.sidebar, ...props.styles.sidebar}
-  }
 
   const dragHandle = (
           <div style={dragHandleStyle}

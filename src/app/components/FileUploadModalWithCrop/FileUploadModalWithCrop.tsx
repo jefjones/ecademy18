@@ -71,7 +71,6 @@
 // 	}
 //
 // 	handleOnCropComplete = (crop, pixelCrop) => {
-// 			const {imgSrc} = this.state
 // 			const canvasRef = this.imagePreviewCanvasRef.current
 // 			image64toCanvasRef(canvasRef, imgSrc, pixelCrop)
 // 	}
@@ -79,7 +78,6 @@
 // 	handleSaveClick = (event) => {
 // 			event.preventDefault();
 // 			const {submitFileUpload, handleInputFile} = this.props;
-// 			const {imgSrc} = this.state
 // 			if (imgSrc) {
 // 					const fileExtension = extractImageFileExtensionFromBase64(imgSrc)
 // 					const canvasRef = this.imagePreviewCanvasRef.current

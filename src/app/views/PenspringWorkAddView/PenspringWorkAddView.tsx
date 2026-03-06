@@ -35,20 +35,14 @@ function PenspringWorkAddView(props) {
   const toggleShowMoreInfo = () => {
     return setLocalShowMoreInfo(!localShowMoreInfo)
     
-        handleSectionInfoClose = () => setIsShowingSectionInfo(false)
-        handleSectionInfoOpen = () => setIsShowingSectionInfo(true)
-        handleChooseEntryClose = () => setIsShowingChooseEntry(false)
   }
 
   const handleSectionInfoClose = () => {
     return setIsShowingSectionInfo(false)
-        handleSectionInfoOpen = () => setIsShowingSectionInfo(true)
-        handleChooseEntryClose = () => setIsShowingChooseEntry(false)
   }
 
   const handleSectionInfoOpen = () => {
     return setIsShowingSectionInfo(true)
-        handleChooseEntryClose = () => setIsShowingChooseEntry(false)
   }
 
   const handleChooseEntryClose = () => {
@@ -61,7 +55,6 @@ function PenspringWorkAddView(props) {
 
   const changeData = (event) => {
     
-    				let data = data
     				let field = event.target.name
     				data[field] = event.target.value
     				setData(data)
@@ -122,8 +115,6 @@ function PenspringWorkAddView(props) {
         
   }
 
-  const {personId, isNewUser, languageList, groupChosen, showMoreInfo=true, hideSectionMessage} = props
-            let {localShowMoreInfo, isShowingSectionInfo, isShowingChooseEntry, data, errorWorkName, errorLanguageId } = state
   
             return (
               <div className={styles.container}>

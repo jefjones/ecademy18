@@ -35,14 +35,6 @@ function RegBillingPreferenceView_simple(props) {
 								countryId: 251,
 						})
   const [amount, setAmount] = useState("")
-  const [creditcard, setCreditcard] = useState({
-										avs_street: billingIncoming.address1, //"1234 Main St.",
-										avs_zip: billingIncoming.postalCode, //"12345",
-										cardholder: billingIncoming.nameOnCard, //"John Doe",
-										cvv: '', //"123",
-										expiration: billingIncoming.expiration, //"0919",
-										number: billingIncoming.cardNumber, //"4000100011112224"
-								})
   const [avs_street, setAvs_street] = useState(billingIncoming.address1)
   const [avs_zip, setAvs_zip] = useState(billingIncoming.postalCode)
   const [cardholder, setCardholder] = useState(billingIncoming.nameOnCard)
@@ -162,7 +154,6 @@ function RegBillingPreferenceView_simple(props) {
 
   const changeCreditCard = ({target}) => {
     
-    				let billing = billing
     				let creditcard = billing.creditcard || {}
     				creditcard[target.name] = target.value
     	      setBilling({...billing, creditcard })
@@ -175,18 +166,12 @@ function RegBillingPreferenceView_simple(props) {
         
   }
 
-  const clientCallback = ( clientCallback(responseCode, responseMessage, proxyNumber) => {
-    
-    										...billing,
-    										billingType: target.value,
-    										command: target.value === 'BANKACCOUNT' ? 'check:sale' : 'cc:authonly',
-    									 	amount:  target.value === 'BANKACCOUNT' ? '0.05' : '0.05'
-    								
+  const clientCallback = (responseCode, responseMessage, proxyNumber) => {
+    // TODO: handle payment callback response
   }
 
   const processForm = () => {
      //, event
-    	      let {billing} = state
     	      // prevent default action. in this case, action is the form submission event
     	      //event && event.preventDefault();
     	      let hasError = false
@@ -246,8 +231,6 @@ function RegBillingPreferenceView_simple(props) {
     		
   }
 
-  const {countries, usStates, paymentProcessResponse} = props
-        const {billing={}, errorNameOnCard, isShowingModal_error, errorCardNumber, errorExpiration, errorSecurityCode, errorCountry, errorStreetAddress, errorCity, errorPostalCode } = state
   
         return (
           <div className={styles.container}>

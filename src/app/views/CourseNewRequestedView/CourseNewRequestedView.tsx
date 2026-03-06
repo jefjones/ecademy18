@@ -51,12 +51,6 @@ function CourseNewRequestedView(props) {
 
   const resort = (field) => {
     
-    				let sortByHeadings = sortByHeadings
-    				sortByHeadings.isAsc = sortByHeadings.sortField === field ? !sortByHeadings.isAsc : 'desc'
-    				sortByHeadings.isNumber = field === 'classPeriodId' ? true : false
-    				sortByHeadings.sortField = field
-    				setSortByHeadings(sortByHeadings)
-    		
   }
 
   const changeItem = ({target}) => {
@@ -71,19 +65,14 @@ function CourseNewRequestedView(props) {
 
   const handleStudentListOpen = (course, studentList) => {
     return setIsShowingModal_students(true); setCourse(course); setStudentList(studentList)
-        handleStudentListClose = () => setIsShowingModal_students(false)
     
-    		toggleClassPeriods = (classPeriodId) => {
-    				let selectedClassPeriods = [...state.selectedClassPeriods]
-  }
 
+  }
   const handleStudentListClose = () => {
     return setIsShowingModal_students(false)
     
-    		toggleClassPeriods = (classPeriodId) => {
-    				let selectedClassPeriods = [...state.selectedClassPeriods]
-  }
 
+  }
   const toggleClassPeriods = (classPeriodId) => {
     
     				let selectedClassPeriods = [...state.selectedClassPeriods]
