@@ -1,10 +1,10 @@
-﻿import { useEffect, useState } from 'react'
-import { navigate, navigateReplace, goBack } from './'
+import { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import styles from './FinancePaymentListView.css'
 const p = 'FinancePaymentListView'
 import L from '../../components/PageLanguage'
 import globalStyles from '../../utils/globalStyles.css'
-import {formatNumber} from '../../utils/numberformat'
+import {formatNumber} from '../../utils/numberFormat'
 import TextDisplay from '../../components/TextDisplay'
 import InputDataList from '../../components/InputDataList'
 import ButtonWithIcon from '../../components/ButtonWithIcon'
@@ -23,6 +23,9 @@ import Loading from '../../components/Loading'
 import { withAlert } from 'react-alert'
 
 function FinancePaymentListView(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath: string) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [isShowingModal, setIsShowingModal] = useState(false)
   const [fileUrl, setFileUrl] = useState('')
   const [isShowingModal_missingInfo, setIsShowingModal_missingInfo] = useState(false)

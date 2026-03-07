@@ -1,6 +1,5 @@
 ﻿import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
-import { navigate, navigateReplace, goBack } from './'
+import { Link, useNavigate } from 'react-router-dom'
 import {penspringHost} from '../../penspring_host'
 import styles from './GradebookEntryView.css'
 const p = 'GradebookEntryView'
@@ -33,6 +32,9 @@ import ReactToPrint from "react-to-print"
 import ContextKnowledgeRating from '../../components/ContextKnowledgeRating'
 
 function GradebookEntryView(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath: string) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [showSearchControls, setShowSearchControls] = useState(false)
   const [courseScheduledId, setCourseScheduledId] = useState('')
   const [contentTypeId, setContentTypeId] = useState('')

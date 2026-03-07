@@ -1,6 +1,6 @@
 ﻿import { useEffect } from 'react'
 import PreGateView from '../views/PreGateView'
-import { useSelector, useDispatch } from 'react-redux'
+import { useSelector, useDispatch, connect } from 'react-redux'
 import { setPageMeta } from '../actions/page-meta'
 import { selectMe  } from '../store'
 
@@ -25,8 +25,10 @@ const bindActionsToDispatch = dispatch => ({
 })
 
 // takes the result of mapStateToProps as store, and bindActionsToDispatch as actions
-// returns the final resulting props which will be passed to the component
-
+// returns the final resulting props which will be passed to the component
+
+
+
 
 function HomeContainer(props) {
   useEffect(() => {
@@ -38,4 +40,4 @@ function HomeContainer(props) {
   return <PreGateView {...props} />
 }
 
-export default storeConnector(HomeContainer)
+export default connect(mapStateToProps, bindActionsToDispatch)(HomeContainer)

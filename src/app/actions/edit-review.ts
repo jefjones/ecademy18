@@ -1,6 +1,6 @@
-﻿import * as types from './actionTypes'
+import * as types from './actionTypes'
 import {apiHost} from '../api_host'
-import * as guid from '../utils/GuidValidate'
+import * as guid from '../utils/guidValidate'
 
 //The chapter text and edit details will be picked up separately.  There ought to be a server-side process to see if the chapterText has changed
 //  before having to call it up again.  And then the edit details (edit or translation) will need to be overwritten to get the resulting chapterText

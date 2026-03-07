@@ -1,7 +1,6 @@
 ﻿import { useEffect, useState } from 'react'
 import {apiHost} from '../../api_host'
-import { Link } from 'react-router-dom'
-import { navigate, navigateReplace, goBack } from './'
+import { Link, useNavigate } from 'react-router-dom'
 import styles from './NewSchoolCheckListView.css'
 const p = 'NewSchoolCheckListView'
 import L from '../../components/PageLanguage'
@@ -19,6 +18,9 @@ import AccordionDetails from '@mui/material/AccordionDetails'
 import AccordionSummary from '@mui/material/AccordionSummary'
 
 function NewSchoolCheckListView(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath: string) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [isShowingFileUpload, setIsShowingFileUpload] = useState(false)
   const [expanded, setExpanded] = useState('')
   const [hasChangedExpanded, setHasChangedExpanded] = useState(false)

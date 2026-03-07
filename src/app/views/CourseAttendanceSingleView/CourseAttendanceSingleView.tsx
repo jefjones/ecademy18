@@ -1,5 +1,5 @@
 ﻿import { useEffect, useState } from 'react'
-import { navigate, navigateReplace, goBack } from './'
+import { useNavigate } from 'react-router-dom'
 import styles from './CourseAttendanceSingleView.css'
 const p = 'CourseAttendanceSingleView'
 import L from '../../components/PageLanguage'
@@ -26,6 +26,9 @@ import {guidEmpty} from '../../utils/guidValidate'
 */
 
 function CourseAttendanceSingleView(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath: string) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [hasSetToday, setHasSetToday] = useState(false)
   const [dayFrom, setDayFrom] = useState(dayFrom === '1-01-01' || !dayFrom ? today : dayFrom)
   const [dayTo, setDayTo] = useState(dayTo === '1-01-01' || !dayTo ? today : dayFrom)

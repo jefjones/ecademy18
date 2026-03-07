@@ -1,5 +1,5 @@
 ﻿import { useState } from 'react'
-import { navigate, navigateReplace, goBack } from './'
+import { useNavigate } from 'react-router-dom'
 import {penspringHost} from '../../penspring_host'
 import styles from './AssessmentPendingEssayView.css'
 const p = 'AssessmentPendingEssayView'
@@ -14,6 +14,9 @@ import MyFrequentPlaces from '../../components/MyFrequentPlaces'
 import OneFJefFooter from '../../components/OneFJefFooter'
 
 function AssessmentPendingEssayView(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath: string) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [studentPersonId, setStudentPersonId] = useState('')
   const [testTypes, setTestTypes] = useState('all')
   const [isShowingModal_instructions, setIsShowingModal_instructions] = useState(false)

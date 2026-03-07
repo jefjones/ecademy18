@@ -1,5 +1,5 @@
 ﻿import { useState } from 'react'
-import { navigate, navigateReplace, goBack } from './'
+import { useNavigate } from 'react-router-dom'
 import globalStyles from '../../utils/globalStyles.css'
 import styles from './MentorNotAssignedView.css'
 const p = 'MentorNotAssignedView'
@@ -14,6 +14,9 @@ import SelectSingleDropDown from '../../components/SelectSingleDropDown'
 import OneFJefFooter from '../../components/OneFJefFooter'
 
 function MentorNotAssignedView(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath: string) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [isShowingModal, setIsShowingModal] = useState(false)
   const [learnersChosen, setLearnersChosen] = useState([])
   const [learningCoach, setLearningCoach] = useState('')

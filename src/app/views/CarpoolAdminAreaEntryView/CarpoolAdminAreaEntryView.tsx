@@ -1,6 +1,5 @@
 ﻿import { useState } from 'react'
-import { Link } from 'react-router-dom'
-import { navigate, navigateReplace, goBack } from './'
+import { Link, useNavigate } from 'react-router-dom'
 import styles from './CarpoolAdminAreaEntryView.css'
 const p = 'CarpoolAdminAreaEntryView'
 import L from '../../components/PageLanguage'
@@ -14,6 +13,9 @@ import MyFrequentPlaces from '../../components/MyFrequentPlaces'
 import OneFJefFooter from '../../components/OneFJefFooter'
 
 function CarpoolAdminAreaEntryView(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath: string) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [isShowingModal_remove, setIsShowingModal_remove] = useState(false)
   const [carpoolAreaId, setCarpoolAreaId] = useState('')
   const [carpoolArea, setCarpoolArea] = useState({

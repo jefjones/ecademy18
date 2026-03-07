@@ -1,6 +1,5 @@
 ﻿import { cloneElement, Children, useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
-import { navigate, navigateReplace, goBack } from './'
+import { Link, useNavigate } from 'react-router-dom'
 import styles from './StudentScheduleWeekView.css'
 const p = 'StudentScheduleWeekView'
 import L from '../../components/PageLanguage'
@@ -29,6 +28,9 @@ const ColoredDateCellWrapper = ({ children }) =>
 })
 
 function StudentScheduleWeekView(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath: string) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [isShowingModal_event, setIsShowingModal_event] = useState(false)
   const [isShowingModal_cannotAdd, setIsShowingModal_cannotAdd] = useState(false)
   const [intervalId, setIntervalId] = useState(props.personConfig.intervalId || props.companyConfig.intervalId)

@@ -1,5 +1,5 @@
 ﻿import { useEffect, useState } from 'react'
-import { navigate, navigateReplace, goBack } from './'
+import { useNavigate } from 'react-router-dom'
 import {apiHost} from '../../api_host'
 import Accordion from '@mui/material/Accordion'
 import AccordionDetails from '@mui/material/AccordionDetails'
@@ -30,6 +30,9 @@ import { withAlert } from 'react-alert'
 import moment from 'moment'
 
 function BehaviorIncidentAddView(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath: string) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [incidentDate, setIncidentDate] = useState(moment(nowDate).format("YYYY-MM-DD"))
   const [incidentTime, setIncidentTime] = useState(moment(nowDate).format("HH:mm"))
   const [isInit, setIsInit] = useState(undefined)

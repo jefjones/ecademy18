@@ -1,7 +1,7 @@
 ﻿import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import {apiHost} from '../../api_host'
 import axios from 'axios'
-import { navigate, navigateReplace, goBack } from './'
 import styles from './GalleryAddView.css'
 import globalStyles from '../../utils/globalStyles.css'
 import InputText from '../../components/InputText'
@@ -27,6 +27,9 @@ const mapStyles = {
 }
 
 function GalleryAddView(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath: string) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [galleryFile, setGalleryFile] = useState(undefined)
   const [errors, setErrors] = useState(undefined)
   const [file, setFile] = useState(undefined)

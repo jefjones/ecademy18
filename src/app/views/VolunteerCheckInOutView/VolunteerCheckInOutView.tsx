@@ -1,5 +1,5 @@
 ﻿import { useEffect, useState } from 'react'
-import { navigate, navigateReplace, goBack } from './'
+import { useNavigate } from 'react-router-dom'
 import {apiHost} from '../../api_host'
 import InputFile from '../../components/InputFile'
 import axios from 'axios'
@@ -31,6 +31,9 @@ import { withAlert } from 'react-alert'
 //3. The parent receives that response as a timer is set to get their response back.  See componentDidUpdate for turning that timer on and then off when the response comes.
 
 function VolunteerCheckInOutView(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath: string) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [isShowingModal_delete, setIsShowingModal_delete] = useState(false)
   const [checkInDate, setCheckInDate] = useState('')
   const [reasonOther, setReasonOther] = useState('')

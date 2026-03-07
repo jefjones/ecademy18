@@ -1,5 +1,5 @@
 ﻿import { useState } from 'react'
-import { navigate, navigateReplace, goBack } from './'
+import { useNavigate } from 'react-router-dom'
 import styles from './SchoolDaysSettingsView.css'
 const p = 'SchoolDaysSettingsView'
 import L from '../../components/PageLanguage'
@@ -10,6 +10,9 @@ import Checkbox from '../../components/Checkbox'
 import OneFJefFooter from '../../components/OneFJefFooter'
 
 function SchoolDaysSettingsView(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath: string) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [isShowingModal, setIsShowingModal] = useState(false)
   const [monday, setMonday] = useState(props.companyConfig.monday)
   const [tuesday, setTuesday] = useState(props.companyConfig.tuesday)

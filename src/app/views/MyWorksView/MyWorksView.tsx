@@ -1,10 +1,9 @@
-﻿import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
-import { navigate, navigateReplace, goBack } from './'
+import { useEffect, useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 import styles from './MyWorksView.css'
 const p = 'MyWorksView'
 import L from '../../components/PageLanguage'
-import * as guid from '../../utils/GuidValidate'
+import * as guid from '../../utils/guidValidate'
 import globalStyles from '../../utils/globalStyles.css'
 import WorkFilter from '../../components/WorkFilter'
 import Loading from '../../components/Loading'
@@ -14,10 +13,13 @@ import SelectSingleDropDown from '../../components/SelectSingleDropDown'
 import Checkbox from '../../components/Checkbox'
 import OneFJefFooter from '../../components/OneFJefFooter'
 import classes from 'classnames'
-import {emptyGuid} from '../../utils/GuidValidate'
+import {emptyGuid} from '../../utils/guidValidate'
 import MenuDocumentRibbon from '../../components/MenuDocumentRibbon'
 
 function MyWorksView(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath: string) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [isShowingModal, setIsShowingModal] = useState(false)
   const [searchString, setSearchString] = useState('')
   const [searchFocusIndex, setSearchFocusIndex] = useState(0)
@@ -171,6 +173,6 @@ function MyWorksView(props) {
 // 		hasMultSections={workToolSummary && workToolSummary.sectionCount > 1} showLabels={false}
 // 		updatePersonConfig={updatePersonConfig} personConfig={personConfig} forceHideLabels={true}/>,
 // <button style={{ verticalAlign: 'middle', }} onClick={() => this.handleSummaryOpen(rowInfo.node['workId'])} >
-// 		ℹ
+// 		?
 // </button>,
 export default MyWorksView

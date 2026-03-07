@@ -1,5 +1,5 @@
 ﻿
-import { navigate, navigateReplace, goBack } from './'
+import { useNavigate } from 'react-router-dom'
 import styles from './LunchReducedInstructionsView.css'
 const p = 'LunchReducedInstructionsView'
 import L from '../../components/PageLanguage'
@@ -10,6 +10,9 @@ import OneFJefFooter from '../../components/OneFJefFooter'
 import classes from 'classnames'
 
 function LunchReducedInstructionsView(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath: string) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   return (
         <div className={styles.container}>
             <div className={classes(globalStyles.pageTitle, styles.moreBottom)}>

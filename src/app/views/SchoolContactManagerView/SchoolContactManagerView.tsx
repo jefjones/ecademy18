@@ -1,7 +1,7 @@
 ﻿import { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import {apiHost} from '../../api_host'
 import axios from 'axios'
-import { navigate, navigateReplace, goBack } from './'
 import styles from './SchoolContactManagerView.css'
 import globalStyles from '../../utils/globalStyles.css'
 import EditTable from '../../components/EditTable'
@@ -34,6 +34,9 @@ const mapStyles = {
 }
 
 function SchoolContactManagerView(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath: string) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [isShowingModal_remove, setIsShowingModal_remove] = useState(false)
   const [schoolContactId, setSchoolContactId] = useState('')
   const [schoolContact, setSchoolContact] = useState({

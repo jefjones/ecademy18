@@ -1,6 +1,5 @@
 ﻿import { useState } from 'react'
-import { Link } from 'react-router-dom'
-import { navigate, navigateReplace, goBack } from './'
+import { Link, useNavigate } from 'react-router-dom'
 import styles from './StudentScheduleView.css'
 const p = 'StudentScheduleView'
 import L from '../../components/PageLanguage'
@@ -27,6 +26,9 @@ import ReactToPrint from "react-to-print"
 import {guidEmpty} from '../../utils/guidValidate'
 
 function StudentScheduleView(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath: string) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [isShowingModal_remove, setIsShowingModal_remove] = useState(false)
   const [isShowingModal_noStudent, setIsShowingModal_noStudent] = useState(false)
   const [scheduleAssignByMathId, setScheduleAssignByMathId] = useState('')

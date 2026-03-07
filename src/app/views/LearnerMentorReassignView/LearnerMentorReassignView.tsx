@@ -1,7 +1,7 @@
 ﻿import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import styles from './LearnerMentorReassignView.css'
 import globalStyles from '../../utils/globalStyles.css'
-import { navigate, navigateReplace, goBack } from './'
 import EditTable from '../../components/EditTable'
 import MultiSelect from '../../components/MultiSelect'
 import SelectSingleDropDown from '../../components/SelectSingleDropDown'
@@ -14,6 +14,9 @@ import OneFJefFooter from '../../components/OneFJefFooter'
 import classes from 'classnames'
 
 function LearnerMentorReassignView(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath: string) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [isShowingModal, setIsShowingModal] = useState(false)
   const [selectedLearners, setSelectedLearners] = useState([])
   const [learnersChosen, setLearnersChosen] = useState([])

@@ -1,4 +1,4 @@
-﻿import { useEffect } from 'react'
+import { useEffect } from 'react'
 import EditReviewView from '../views/EditReviewView/EditReviewView'
 import { useSelector, useDispatch } from 'react-redux'
 import * as actionWorks from '../actions/works'
@@ -18,7 +18,7 @@ import * as actionTextProcessingProgress from '../actions/text-processing-progre
 import * as actionFetchingRecord from '../actions/fetching-record'
 import * as actionPageLang from '../actions/language-list'
 //import {wait} from '../utils/wait';
-import {guidEmpty} from '../utils/GuidValidate'
+import {guidEmpty} from '../utils/guidValidate'
 //import * as actionGradebook from '../actions/grade-book';  part of the score function that isn't working due to the cursor location management or EditorDiv.
 
 import { selectMe, selectWorkEditReview, selectLeftSidePanelOpen, selectPersonConfig, selectEditMicroReplace, assignColorsEditor, selectTextProcessingProgress,

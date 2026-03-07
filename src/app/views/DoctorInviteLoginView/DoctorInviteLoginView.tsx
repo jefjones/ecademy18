@@ -1,6 +1,5 @@
 ﻿import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
-import { navigate, navigateReplace, goBack } from './'
+import { Link, useNavigate } from 'react-router-dom'
 import styles from './DoctorInviteLoginView.css'
 const p = 'DoctorInviteLoginView'
 import L from '../../components/PageLanguage'
@@ -21,6 +20,9 @@ import {formatPhoneNumber} from '../../utils/numberFormat'
 //import Recaptcha from 'react-recaptcha';
 
 function DoctorInviteLoginView(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath: string) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [showNewRegLogin, setShowNewRegLogin] = useState(false)
   const [isOfficeComplete, setIsOfficeComplete] = useState(false)
   const [errors, setErrors] = useState({})

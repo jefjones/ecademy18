@@ -1,6 +1,6 @@
 ﻿import { useEffect } from 'react'
 import DoctorInviteLoginView from '../views/DoctorInviteLoginView'
-import { useSelector, useDispatch } from 'react-redux'
+import { useSelector, useDispatch, connect } from 'react-redux'
 import * as actionPageLang from '../actions/language-list'
 import * as actionDoctorNoteInvite from '../actions/doctor-note-invite'
 import * as actionCompanyConfig from '../actions/company-config'
@@ -34,7 +34,8 @@ const bindActionsToDispatch = dispatch => ({
 		getUsStates: () => dispatch(actionUsStates.init()),
 		setMyVisitedPage: (personId, myVisitedPage) => dispatch(actionMyVisitedPages.setMyVisitedPage(personId, myVisitedPage)),
 })
-
+
+
 
 function HomeContainer(props) {
   useEffect(() => {
@@ -52,4 +53,4 @@ function HomeContainer(props) {
   return <DoctorInviteLoginView {...props} />
 }
 
-export default storeConnector(HomeContainer)
+export default connect(mapStateToProps, bindActionsToDispatch)(HomeContainer)

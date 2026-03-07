@@ -5,7 +5,7 @@ import path from 'path';
 import compression from 'compression';
 import helmet from 'helmet';
 import {api} from './routes';
-import proxy from 'http-proxy-middleware';
+import { createProxyMiddleware as proxy } from 'http-proxy-middleware';
 import cors from 'cors';
 
 // the reactified route-handler from the `app`
@@ -61,6 +61,17 @@ app.use((err: { status?: number; message?: string; stack?: string }, req: Reques
     console.error(err.status === 404 ? `404 ${req.url}` : err.stack);
 });
 
-const { PORT } = process.env;
+const { PORT = '3001' } = process.env;
 
-app.listen(3001); // eslint-disable-line
+const server = app.listen(Number(PORT), () => {
+    console.log(`Server listening on port ${PORT}`);
+});
+
+server.on('error', (err: NodeJS.ErrnoException) => {
+    if (err.code === 'EADDRINUSE') {
+        console.error(`Port ${PORT} is already in use. Set PORT env var to use a different port.`);
+    } else {
+        console.error('Server error:', err);
+    }
+    process.exit(1);
+});

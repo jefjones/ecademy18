@@ -1,5 +1,5 @@
 ﻿import { useEffect, useState } from 'react'
-import { navigate, navigateReplace, goBack } from './'
+import { useNavigate } from 'react-router-dom'
 import globalStyles from '../../utils/globalStyles.css'
 import styles from './GroupMemberUpdateView.css'
 const p = 'GroupMemberUpdateView'
@@ -15,6 +15,9 @@ import OneFJefFooter from '../../components/OneFJefFooter'
 //  helpful, too, in class arrangements when the names of the people need to be hidden from other students. An arbitrary nickname can be given.
 
 function GroupMemberUpdateView(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath: string) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [isUserComplete, setIsUserComplete] = useState(false)
   const [errorEmailAddress, setErrorEmailAddress] = useState('')
   const [errorFirstName, setErrorFirstName] = useState('')

@@ -1,5 +1,5 @@
 ﻿import { useState } from 'react'
-import { navigate, navigateReplace, goBack } from './'
+import { useNavigate } from 'react-router-dom'
 import styles from './LunchMenuMonthView.css'
 const p = 'LunchMenuMonthView'
 import L from '../../components/PageLanguage'
@@ -11,6 +11,9 @@ import OneFJefFooter from '../../components/OneFJefFooter'
 import moment from 'moment'
 
 function LunchMenuMonthView(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath: string) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [monthChoice, setMonthChoice] = useState('')
   const [weekdays, setWeekdays] = useState({
 						monday: true,

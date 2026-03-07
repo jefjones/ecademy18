@@ -1,6 +1,5 @@
 ﻿import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
-import { navigate, navigateReplace, goBack } from './'
+import { Link, useNavigate } from 'react-router-dom'
 import styles from './ScheduleAssignByMathView.css'
 const p = 'ScheduleAssignByMathView'
 import L from '../../components/PageLanguage'
@@ -15,6 +14,9 @@ import classes from 'classnames'
 import {doSort} from '../../utils/sort'
 
 function ScheduleAssignByMathView(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath: string) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [isShowingModal_remove, setIsShowingModal_remove] = useState(false)
   const [scheduleAssignByMathId, setScheduleAssignByMathId] = useState('0')
   const [scheduleAssignByMathCourseAssignId, setScheduleAssignByMathCourseAssignId] = useState('')

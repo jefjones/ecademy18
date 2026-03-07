@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { navigate, navigateReplace, goBack } from './'
+import { useNavigate } from 'react-router-dom'
 import styles from './AccessReportView.css'
 const p = 'AccessReportView'
 import L from '../../components/PageLanguage'
@@ -14,6 +14,9 @@ import OneFJefFooter from '../../components/OneFJefFooter'
 import classes from 'classnames'
 
 function AccessReportView(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath: string) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [localHeadings, setLocalHeadings] = useState([])
   const [localData, setLocalData] = useState([])
   const [peerGroupId, setPeerGroupId] = useState('')

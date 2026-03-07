@@ -1,5 +1,5 @@
 ﻿import { useEffect, useState } from 'react'
-import { navigate, navigateReplace, goBack } from './'
+import { useNavigate } from 'react-router-dom'
 import styles from './AlertCourseScheduleView.css'
 import globalStyles from '../../utils/globalStyles.css'
 import TextDisplay from '../../components/TextDisplay'
@@ -13,6 +13,9 @@ const p = 'AlertCourseScheduleView'
 import L from '../../components/PageLanguage'
 
 function AlertCourseScheduleView(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath: string) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [seats, setSeats] = useState('')
   const [alert, setAlert] = useState({
 							courseScheduledId: props.param && props.param.courseScheduledId,

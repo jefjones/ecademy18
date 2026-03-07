@@ -1,6 +1,5 @@
 ﻿
-import { Link } from 'react-router-dom'
-import { navigate, navigateReplace, goBack } from './'
+import { Link, useNavigate } from 'react-router-dom'
 import styles from './SchoolSettingsView.css'
 const p = 'SchoolSettingsView'
 import L from '../../components/PageLanguage'
@@ -10,6 +9,9 @@ import OneFJefFooter from '../../components/OneFJefFooter'
 import SchoolSetup from '../../components/SchoolSetup'
 
 function SchoolSettingsView(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath: string) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const {personId, myFrequentPlaces, setMyFrequentPlace, companyConfig, schoolYears, setCompanyConfig, admins, removeDemoRecords,
   								removeLogoFileUpload, saveCompanyWebsiteLink, removeCompanyDocumentFile, getCompanyConfig, removeSignatureFileUpload,
   								removeOfficialSealFileUpload, intervals, frontDesks, counselors} = props

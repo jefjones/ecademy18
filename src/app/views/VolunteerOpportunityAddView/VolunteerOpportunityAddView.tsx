@@ -1,5 +1,5 @@
 ﻿import { useEffect, useState } from 'react'
-import { navigate, navigateReplace, goBack } from './'
+import { useNavigate } from 'react-router-dom'
 import globalStyles from '../../utils/globalStyles.css'
 const p = 'globalStyles'
 import L from '../../components/PageLanguage'
@@ -18,6 +18,9 @@ import classes from 'classnames'
 import { withAlert } from 'react-alert'
 
 function VolunteerOpportunityAddView(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath: string) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [isShowingModal_delete, setIsShowingModal_delete] = useState(false)
   const [localOpportunity, setLocalOpportunity] = useState(volunteerOpportunity)
   const [errorName, setErrorName] = useState(<L p={p} t={`Please enter a name`}/>)

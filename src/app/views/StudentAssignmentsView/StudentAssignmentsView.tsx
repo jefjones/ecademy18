@@ -1,6 +1,5 @@
 ﻿import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
-import { navigate, navigateReplace, goBack } from './'
+import { Link, useNavigate } from 'react-router-dom'
 import {penspringHost} from '../../penspring_host'
 import {apiHost} from '../../api_host'
 import styles from './StudentAssignmentsView.css'
@@ -31,6 +30,9 @@ import { withAlert } from 'react-alert'
 import ReactToPrint from "react-to-print"
 
 function StudentAssignmentsView(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath: string) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [scores, setScores] = useState([])
   const [chosenAssignmentId, setChosenAssignmentId] = useState(props.params && props.params.chosenAssignmentId)
   const [isShowingModal_response, setIsShowingModal_response] = useState(false)

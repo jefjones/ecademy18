@@ -109,7 +109,6 @@ var ModalPortal = (function (_React$Component) {
 })(_react2['default'].Component)
 
 exports['default'] = ModalPortal
-module.exports = exports['default']
 // optional, called on unmount
 // HTMLElement, a div that is appended to the body
 // ReactComponent, which is mounted on the target

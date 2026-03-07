@@ -1,5 +1,5 @@
 ﻿import { useState } from 'react'
-import { navigate, navigateReplace, goBack } from './'
+import { useNavigate } from 'react-router-dom'
 import styles from './AssessmentQuestionsView.css'
 
 const p = 'AssessmentQuestionsView'
@@ -32,6 +32,9 @@ import {withAlert} from 'react-alert'
 import ReactToPrint from "react-to-print"
 
 function AssessmentQuestionsView(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath: string) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [isShowingModal_addOrUpdate, setIsShowingModal_addOrUpdate] = useState(false)
   const [isShowingModal_removeQuestion, setIsShowingModal_removeQuestion] = useState(false)
   const [isShowingModal_removeWebsiteLink, setIsShowingModal_removeWebsiteLink] = useState(false)

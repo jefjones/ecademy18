@@ -1,6 +1,5 @@
 ﻿import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
-import { navigate, navigateReplace, goBack } from './'
+import { Link, useNavigate } from 'react-router-dom'
 import styles from './StudentAssignmentAssignView.css'
 const p = 'StudentAssignmentAssignView'
 import L from '../../components/PageLanguage'
@@ -22,6 +21,9 @@ import {doSort} from '../../utils/sort'
 import { withAlert } from 'react-alert'
 
 function StudentAssignmentAssignView(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath: string) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [showSearchControls, setShowSearchControls] = useState(false)
   const [contentTypeId, setContentTypeId] = useState('')
   const [singleAssignmentId, setSingleAssignmentId] = useState('')

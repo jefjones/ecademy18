@@ -1,6 +1,6 @@
 ﻿
 import { Outlet } from 'react-router-dom'
-import { useSelector, useDispatch } from 'react-redux'
+import { useSelector, useDispatch, connect } from 'react-redux'
 import AppView from '../views/AppView'
 import LangContext from '../context/LangContext'
 import { Provider as AlertProvider } from 'react-alert'
@@ -326,7 +326,8 @@ const bindActionsToDispatch = dispatch => ({
 		setCalendarViewRange: (viewRange) => dispatch(actionPersonConfigCalendar.setCalendarViewRange(viewRange)),
 
 })
-
+
+
 
 const alertOptions = {
 	  position: 'top center',
@@ -349,4 +350,4 @@ function App(props) {
   						: null
 }
 
-export default storeConnector(App)
+export default connect(mapStateToProps, bindActionsToDispatch)(App)

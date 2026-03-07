@@ -1,5 +1,5 @@
 ﻿import { useEffect, useState } from 'react'
-import { navigate, navigateReplace, goBack } from './'
+import { useNavigate } from 'react-router-dom'
 import styles from './PassFailRatingSettingsView.css'
 const p = 'PassFailRatingSettingsView'
 import L from '../../components/PageLanguage'
@@ -13,6 +13,9 @@ import classes from 'classnames'
 import {doSort} from '../../utils/sort'
 
 function PassFailRatingSettingsView(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath: string) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [isShowingModal_remove, setIsShowingModal_remove] = useState(false)
   const [newName, setNewName] = useState('')
   const [newSequence, setNewSequence] = useState('')

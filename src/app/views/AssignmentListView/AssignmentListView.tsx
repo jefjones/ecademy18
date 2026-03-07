@@ -1,6 +1,5 @@
 ﻿import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
-import { navigate, navigateReplace, goBack } from './'
+import { Link, useNavigate } from 'react-router-dom'
 import {penspringHost} from '../../penspring_host'
 import {apiHost} from '../../api_host'
 import styles from './AssignmentListView.css'
@@ -30,6 +29,9 @@ import { withAlert } from 'react-alert'
 import {guidEmpty} from '../../utils/guidValidate'
 
 function AssignmentListView(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath: string) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [scores, setScores] = useState([])
   const [isShowingFileUpload_course, setIsShowingFileUpload_course] = useState(false)
   const [isShowingWebsiteLink_course, setIsShowingWebsiteLink_course] = useState(false)

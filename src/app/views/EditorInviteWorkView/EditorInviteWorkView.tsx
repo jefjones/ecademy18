@@ -1,5 +1,5 @@
 ﻿import { useState } from 'react'
-import { navigate, navigateReplace, goBack } from './'
+import { useNavigate } from 'react-router-dom'
 import styles from './EditorInviteWorkView.css'
 const p = 'EditorInviteWorkView'
 import L from '../../components/PageLanguage'
@@ -15,6 +15,9 @@ import MessageModal from '../../components/MessageModal'
 import OneFJefFooter from '../../components/OneFJefFooter'
 
 function EditorInviteWorkView(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath: string) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [isSending, setIsSending] = useState(false)
   const [isShowingModal, setIsShowingModal] = useState(false)
 

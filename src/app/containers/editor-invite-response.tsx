@@ -1,6 +1,6 @@
 ﻿import { useEffect } from 'react'
 import LandingView from '../views/LandingView'
-import { useSelector, useDispatch } from 'react-redux'
+import { useSelector, useDispatch, connect } from 'react-redux'
 import * as actionEditorInvite from '../actions/editor-invite-response'
 import * as actionLandingSteps from '../actions/landing-steps'
 import { selectLandingSteps } from '../store'
@@ -15,7 +15,8 @@ const bindActionsToDispatch = dispatch => ({
   setEditorInviteGUIDResponse: (inviteCode, firstName, lastName, emailAddress, createNew) => dispatch(actionEditorInvite.setEditorInviteGUIDResponse(inviteCode, firstName, lastName, emailAddress, createNew)),
 	getLandingSteps: () => dispatch(actionLandingSteps.init()),
 })
-
+
+
 
 function HomeContainer(props) {
   useEffect(() => {
@@ -29,4 +30,4 @@ function HomeContainer(props) {
   return <LandingView {...props} />
 }
 
-export default storeConnector(HomeContainer)
+export default connect(mapStateToProps, bindActionsToDispatch)(HomeContainer)

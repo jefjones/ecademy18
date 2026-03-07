@@ -1,7 +1,6 @@
 ﻿import { useState } from 'react'
 import {apiHost} from '../../api_host'
-import { Link } from 'react-router-dom'
-import { navigate, navigateReplace, goBack } from './'
+import { Link, useNavigate } from 'react-router-dom'
 import styles from './StudentAddOptionsView.css'
 const p = 'StudentAddOptionsView'
 import L from '../../components/PageLanguage'
@@ -13,6 +12,9 @@ import classes from 'classnames'
 import { withAlert } from 'react-alert'
 
 function StudentAddOptionsView(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath: string) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [isShowingFileUpload, setIsShowingFileUpload] = useState(false)
 
   const {personId, companyConfig} = props

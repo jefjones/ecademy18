@@ -1,5 +1,5 @@
 ﻿import { useState } from 'react'
-import { navigate, navigateReplace, goBack } from './'
+import { useNavigate } from 'react-router-dom'
 import globalStyles from '../../utils/globalStyles.css'
 const p = 'globalStyles'
 import L from '../../components/PageLanguage'
@@ -17,6 +17,9 @@ import OneFJefFooter from '../../components/OneFJefFooter'
 import classes from 'classnames'
 
 function TranscriptTestAddView(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath: string) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [isShowingModal_remove, setIsShowingModal_remove] = useState(false)
   const [transcriptTest, setTranscriptTest] = useState({
 				transcriptTestId:'',

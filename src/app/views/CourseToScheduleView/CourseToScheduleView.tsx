@@ -1,9 +1,9 @@
 ﻿import { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import styles from './CourseToScheduleView.css'
 const p = 'CourseToScheduleView'
 import L from '../../components/PageLanguage'
 import globalStyles from '../../utils/globalStyles.css'
-import { navigate, navigateReplace, goBack } from './'
 import SelectSingleDropDown from '../../components/SelectSingleDropDown'
 import Checkbox from '../../components/Checkbox'
 import RadioGroup from '../../components/RadioGroup'
@@ -24,6 +24,9 @@ import {guidEmpty} from '../../utils/guidValidate'
 import {wait} from '../../utils/wait'
 
 function CourseToScheduleView(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath: string) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [isRecordComplete, setIsRecordComplete] = useState(false)
   const [showMoreInfo, setShowMoreInfo] = useState(false)
   const [isInit, setIsInit] = useState(true)

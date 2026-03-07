@@ -1,11 +1,11 @@
 ﻿import { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import {apiHost} from '../../api_host'
 import axios from 'axios'
 import styles from './RegStudentView.css'
 const p = 'RegStudentView'
 import L from '../../components/PageLanguage'
 import globalStyles from '../../utils/globalStyles.css'
-import { navigate, navigateReplace, goBack } from './'
 import SelectSingleDropDown from '../../components/SelectSingleDropDown'
 import InputText from '../../components/InputText'
 import Checkbox from '../../components/Checkbox'
@@ -28,6 +28,9 @@ import { withAlert } from 'react-alert'
 import {formatPhoneNumber} from '../../utils/numberFormat'
 
 function RegStudentView(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath: string) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [isRecordComplete, setIsRecordComplete] = useState(undefined)
   const [isShowingFileUpload, setIsShowingFileUpload] = useState(undefined)
   const [isShowingModal_removeFileUpload, setIsShowingModal_removeFileUpload] = useState(undefined)

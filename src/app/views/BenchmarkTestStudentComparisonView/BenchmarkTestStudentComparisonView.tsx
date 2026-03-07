@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { navigate, navigateReplace, goBack } from './'
+import { useNavigate } from 'react-router-dom'
 import styles from './BenchmarkTestStudentComparisonView.css'
 const p = 'BenchmarkTestStudentComparisonView'
 import L from '../../components/PageLanguage'
@@ -15,6 +15,9 @@ import OneFJefFooter from '../../components/OneFJefFooter'
 import classes from 'classnames'
 
 function BenchmarkTestStudentComparisonView(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath: string) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [benchmarkTestId, setBenchmarkTestId] = useState(props.benchmarkTestId)
   const [isShowingModal_standard, setIsShowingModal_standard] = useState(undefined)
   const [standardCode, setStandardCode] = useState(undefined)

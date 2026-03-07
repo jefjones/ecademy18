@@ -1,5 +1,5 @@
 ﻿import { useEffect, useState } from 'react'
-import { navigate, navigateReplace, goBack } from './'
+import { useNavigate } from 'react-router-dom'
 import {apiHost} from '../../api_host'
 const p = 'StudentScheduleView'
 import L from '../../components/PageLanguage'
@@ -29,6 +29,9 @@ import {guidEmpty} from '../../utils/guidValidate'
 //3. The parent receives that response as a timer is set to get their response back.  See componentDidUpdate for turning that timer on and then off when the response comes.
 
 function ReimbursementRequestAddView(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath: string) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [checkInOrOut, setCheckInOrOut] = useState('')
   const [reasonOther, setReasonOther] = useState('')
   const [reasonChoice, setReasonChoice] = useState('')

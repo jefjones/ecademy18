@@ -1,5 +1,5 @@
 ﻿
-import { navigate, navigateReplace, goBack } from './'
+import { useNavigate } from 'react-router-dom'
 import styles from './LunchMenuStudentDayView.css'
 const p = 'LunchMenuStudentDayView'
 import L from '../../components/PageLanguage'
@@ -10,6 +10,9 @@ import Checkbox from '../../components/Checkbox'
 import OneFJefFooter from '../../components/OneFJefFooter'
 
 function LunchMenuStudentDayView(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath: string) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const {personId, lunchMenuStudentDays, toggleLunchMenuStudentDay} = props
   
       return (

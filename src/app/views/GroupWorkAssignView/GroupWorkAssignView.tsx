@@ -1,5 +1,5 @@
-﻿import { useEffect, useState } from 'react'
-import { navigate, navigateReplace, goBack } from './'
+import { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import styles from './GroupWorkAssignView.css'
 const p = 'GroupWorkAssignView'
 import L from '../../components/PageLanguage'
@@ -12,9 +12,12 @@ import Icon from '../../components/Icon'
 import MessageModal from '../../components/MessageModal'
 import OneFJefFooter from '../../components/OneFJefFooter'
 import classes from 'classnames'
-import * as guid from '../../utils/GuidValidate'
+import * as guid from '../../utils/guidValidate'
 
 function GroupWorkAssignView(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath: string) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [peerGroupOpen, setPeerGroupOpen] = useState(false)
   const [copyPreviousPeerGroupId, setCopyPreviousPeerGroupId] = useState('')
   const [subGroupCountError, setSubGroupCountError] = useState('')

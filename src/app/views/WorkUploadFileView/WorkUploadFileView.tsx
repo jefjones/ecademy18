@@ -1,5 +1,5 @@
-﻿import { useEffect, useState } from 'react'
-import { navigate, navigateReplace, goBack } from './'
+import { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import styles from './WorkUploadFileView.css'
 const p = 'WorkUploadFileView'
 import L from '../../components/PageLanguage'
@@ -9,9 +9,12 @@ import TextDisplay from '../../components/TextDisplay'
 import DropZone from 'react-dropzone-component'
 import {apiHost} from '../../api_host'
 import OneFJefFooter from '../../components/OneFJefFooter'
-import * as guid from '../../utils/GuidValidate'
+import * as guid from '../../utils/guidValidate'
 
 function WorkUploadFileView(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath: string) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [file, setFile] = useState({})
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [isFileChosen, setIsFileChosen] = useState(false)

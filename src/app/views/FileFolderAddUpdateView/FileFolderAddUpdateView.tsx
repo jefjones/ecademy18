@@ -1,4 +1,4 @@
-﻿import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import styles from './FileFolderAddUpdateView.css'
 const p = 'FileFolderAddUpdateView'
 import L from '../../components/PageLanguage'
@@ -7,7 +7,7 @@ import OneFJefFooter from '../../components/OneFJefFooter'
 import InputText from '../../components/InputText'
 import SelectSingleDropDown from '../../components/SelectSingleDropDown'
 import ButtonWithIcon from '../../components/ButtonWithIcon'
-import {emptyGuid} from '../../utils/GuidValidate'
+import {emptyGuid} from '../../utils/guidValidate'
 
 function FileFolderAddUpdateView(props) {
   const [folderName, setFolderName] = useState('')

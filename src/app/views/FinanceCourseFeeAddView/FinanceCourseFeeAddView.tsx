@@ -1,5 +1,5 @@
 ﻿import { useState } from 'react'
-import { navigate, navigateReplace, goBack } from './'
+import { useNavigate } from 'react-router-dom'
 import styles from './FinanceCourseFeeAddView.css'
 const p = 'FinanceCourseFeeAddView'
 import L from '../../components/PageLanguage'
@@ -27,6 +27,9 @@ import {guidEmpty} from '../../utils/guidValidate'
 import { withAlert } from 'react-alert'
 
 function FinanceCourseFeeAddView(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath: string) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [isShowingModal_delete, setIsShowingModal_delete] = useState(false)
   const [isShowingModal, setIsShowingModal] = useState(false)
   const [isShowingModal_missingInfo, setIsShowingModal_missingInfo] = useState(false)

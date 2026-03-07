@@ -1,6 +1,5 @@
 ﻿import { useState } from 'react'
-import { useParams } from 'react-router-dom'
-import { navigate, navigateReplace, goBack } from './'
+import { useParams, useNavigate } from 'react-router-dom'
 import styles from './ContributorReportView.css'
 const p = 'ContributorReportView'
 import L from '../../components/PageLanguage'
@@ -14,6 +13,9 @@ import OneFJefFooter from '../../components/OneFJefFooter'
 //import EditorEditList from '../../components/EditorEditList';
 
 function ContributorReportView(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath: string) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const params = useParams()
   const [chosenTab, setChosenTab] = useState("edit")
   const [reportChoice, setReportChoice] = useState('editWorksEditors')

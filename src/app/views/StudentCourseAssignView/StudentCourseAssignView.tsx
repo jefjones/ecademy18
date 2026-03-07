@@ -1,5 +1,5 @@
 ﻿import { useEffect, useState } from 'react'
-import { navigate, navigateReplace, goBack } from './'
+import { useNavigate } from 'react-router-dom'
 import styles from './StudentCourseAssignView.css'
 const p = 'StudentCourseAssignView'
 import L from '../../components/PageLanguage'
@@ -22,6 +22,9 @@ import {withAlert} from 'react-alert'
 import {guidEmpty} from '../../utils/guidValidate'
 
 function StudentCourseAssignView(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath: string) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [isScheduledCourseContextOpen, setIsScheduledCourseContextOpen] = useState(false)
   const [isShowingModal_remove, setIsShowingModal_remove] = useState(false)
   const [isShowingModal_message, setIsShowingModal_message] = useState(false)

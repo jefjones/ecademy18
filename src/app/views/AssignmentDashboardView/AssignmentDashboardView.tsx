@@ -1,6 +1,5 @@
 ﻿import { useState } from 'react'
-import { Link } from 'react-router-dom'
-import { navigate, navigateReplace, goBack } from './'
+import { Link, useNavigate } from 'react-router-dom'
 import styles from './AssignmentDashboardView.css'
 const p = 'AssignmentDashboardView'
 import L from '../../components/PageLanguage'
@@ -16,6 +15,9 @@ import numberFormat from '../../utils/numberFormat'
 import OneFJefFooter from '../../components/OneFJefFooter'
 
 function AssignmentDashboardView(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath: string) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [isShowingSubMenu, setIsShowingSubMenu] = useState(false)
   const [timerId, setTimerId] = useState(null)
   const [peerGroupId, setPeerGroupId] = useState(event.target.value)

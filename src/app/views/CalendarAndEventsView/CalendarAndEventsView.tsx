@@ -1,5 +1,5 @@
 ﻿import { cloneElement, Children, useState } from 'react'
-import { navigate, navigateReplace, goBack } from './'
+import { useNavigate } from 'react-router-dom'
 import styles from './CalendarAndEventsView.css'
 const p = 'CalendarAndEventsView'
 import L from '../../components/PageLanguage'
@@ -26,6 +26,9 @@ const ColoredDateCellWrapper = ({ children }) =>
 })
 
 function CalendarAndEventsView(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath: string) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [slotInfo, setSlotInfo] = useState({})
   const [isShowingModal_nav, setIsShowingModal_nav] = useState(false)
   const [isShowingModal_event, setIsShowingModal_event] = useState(false)

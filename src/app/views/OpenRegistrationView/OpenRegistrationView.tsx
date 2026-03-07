@@ -1,5 +1,5 @@
 ﻿import { useEffect, useState } from 'react'
-import { navigate, navigateReplace, goBack } from './'
+import { useNavigate } from 'react-router-dom'
 import styles from './OpenRegistrationView.css'
 const p = 'OpenRegistrationView'
 import L from '../../components/PageLanguage'
@@ -15,6 +15,9 @@ import classes from 'classnames'
 import { withAlert } from 'react-alert'
 
 function OpenRegistrationView(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath: string) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [isShowingModal_remove, setIsShowingModal_remove] = useState(false)
   const [studentPersonId, setStudentPersonId] = useState('')
   const [name, setName] = useState((props.openRegistration && props.openRegistration.name) || '')

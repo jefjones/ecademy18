@@ -1,10 +1,10 @@
-﻿import { useEffect, useState } from 'react'
-import { navigate, navigateReplace, goBack } from './'
+import { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import styles from './FinanceTransferListView.css'
 const p = 'FinanceTransferListView'
 import L from '../../components/PageLanguage'
 import globalStyles from '../../utils/globalStyles.css'
-import {formatNumber} from '../../utils/numberformat'
+import {formatNumber} from '../../utils/numberFormat'
 import TableVirtualFast from '../../components/TableVirtualFast'
 import Paper from '@mui/material/Paper'
 import Loading from '../../components/Loading'
@@ -20,6 +20,9 @@ import classes from 'classnames'
 import { withAlert } from 'react-alert'
 
 function FinanceTransferListView(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath: string) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [financeTransferId, setFinanceTransferId] = useState('')
   const [isInit, setIsInit] = useState(true)
   const [selectedStudents, setSelectedStudents] = useState([paramPerson])

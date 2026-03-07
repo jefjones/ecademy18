@@ -1,6 +1,5 @@
 ﻿import { useState } from 'react'
-import { Link } from 'react-router-dom'
-import { navigate, navigateReplace, goBack } from './'
+import { Link, useNavigate } from 'react-router-dom'
 import globalStyles from '../../utils/globalStyles.css'
 const p = 'globalStyles'
 import L from '../../components/PageLanguage'
@@ -16,6 +15,9 @@ import MyFrequentPlaces from '../../components/MyFrequentPlaces'
 import { withAlert } from 'react-alert'
 
 function AssignLockerView(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath: string) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [selectedStudents, setSelectedStudents] = useState([])
   const [selectedLockers, setSelectedLockers] = useState([])
   const [selectedPadlocks, setSelectedPadlocks] = useState([])

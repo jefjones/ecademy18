@@ -50,4 +50,3 @@ CloseCircle.propTypes = {
 }
 
 exports["default"] = CloseCircle
-module.exports = exports["default"]

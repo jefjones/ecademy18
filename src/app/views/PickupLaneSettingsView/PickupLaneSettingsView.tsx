@@ -1,6 +1,5 @@
 ﻿import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
-import { navigate, navigateReplace, goBack } from './'
+import { Link, useNavigate } from 'react-router-dom'
 import styles from './PickupLaneSettingsView.css'
 const p = 'PickupLaneSettingsView'
 import L from '../../components/PageLanguage'
@@ -23,6 +22,9 @@ const mapStyles = {
 }
 
 function PickupLaneSettingsView(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath: string) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [showingInfoWindow, setShowingInfoWindow] = useState(false)
   const [activeMarker, setActiveMarker] = useState({})
   const [selectedPlace, setSelectedPlace] = useState({})

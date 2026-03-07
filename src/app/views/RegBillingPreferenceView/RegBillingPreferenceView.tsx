@@ -1,5 +1,5 @@
 ﻿import { useEffect, useState } from 'react'
-import { navigate, navigateReplace, goBack } from './'
+import { useNavigate } from 'react-router-dom'
 import styles from './RegBillingPreferenceView.css'
 const p = 'RegBillingPreferenceView'
 import L from '../../components/PageLanguage'
@@ -15,6 +15,9 @@ import checkWithroutingCode from '../../assets/CheckWithRoutingCode.png'
 import {wait} from '../../utils/wait'
 
 function RegBillingPreferenceView(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath: string) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [isShowingModal_error, setIsShowingModal_error] = useState(false)
   const [errorBillingYearly, setErrorBillingYearly] = useState('')
   const [errorResponsiblePerson, setErrorResponsiblePerson] = useState('')

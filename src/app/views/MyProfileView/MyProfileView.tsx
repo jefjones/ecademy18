@@ -1,5 +1,5 @@
 ﻿import { useEffect, useState } from 'react'
-import { navigate, navigateReplace, goBack } from './'
+import { useNavigate } from 'react-router-dom'
 import {apiHost} from '../../api_host'
 import InputFile from '../../components/InputFile'
 import axios from 'axios'
@@ -18,6 +18,9 @@ import { withAlert } from 'react-alert'
 import ButtonWithIcon from "../../components/ButtonWithIcon"
 
 function MyProfileView(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath: string) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [isUserComplete, setIsUserComplete] = useState(false)
   const [errorFirstName, setErrorFirstName] = useState('')
   const [errorEmailAddress, setErrorEmailAddress] = useState('')

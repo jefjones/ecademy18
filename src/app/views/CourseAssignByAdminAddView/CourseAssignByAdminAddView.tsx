@@ -1,6 +1,5 @@
 ﻿import { useState } from 'react'
-import { Link } from 'react-router-dom'
-import { navigate, navigateReplace, goBack } from './'
+import { Link, useNavigate } from 'react-router-dom'
 import styles from './CourseAssignByAdminAddView.css'
 const p = 'CourseAssignByAdminAddView'
 import L from '../../components/PageLanguage'
@@ -23,6 +22,9 @@ import {withAlert} from 'react-alert'
 import {guidEmpty} from '../../utils/guidValidate'
 
 function CourseAssignByAdminAddView(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath: string) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [isShowingModal_remove, setIsShowingModal_remove] = useState(false)
   const [isShowingModal_description, setIsShowingModal_description] = useState(false)
   const [partialNameText, setPartialNameText] = useState('')

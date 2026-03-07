@@ -1,6 +1,6 @@
 ﻿import { useEffect } from 'react'
 import LandingView from '../views/LandingView'
-import { useSelector, useDispatch } from 'react-redux'
+import { useSelector, useDispatch, connect } from 'react-redux'
 import { setPageMeta } from '../actions/page-meta'
 import * as actionLandingSteps from '../actions/landing-steps'
 import { selectMe, selectLandingSteps  } from '../store'
@@ -28,8 +28,10 @@ const bindActionsToDispatch = dispatch => ({
 })
 
 // takes the result of mapStateToProps as store, and bindActionsToDispatch as actions
-// returns the final resulting props which will be passed to the component
-
+// returns the final resulting props which will be passed to the component
+
+
+
 
 function HomeContainer(props) {
   useEffect(() => {
@@ -42,4 +44,4 @@ function HomeContainer(props) {
   return <LandingView {...props} />
 }
 
-export default storeConnector(HomeContainer)
+export default connect(mapStateToProps, bindActionsToDispatch)(HomeContainer)

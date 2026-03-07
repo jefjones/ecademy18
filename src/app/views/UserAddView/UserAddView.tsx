@@ -1,6 +1,5 @@
 ﻿import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
-import { navigate, navigateReplace, goBack } from './'
+import { Link, useNavigate } from 'react-router-dom'
 import globalStyles from '../../utils/globalStyles.css'
 const p = 'globalStyles'
 import L from '../../components/PageLanguage'
@@ -17,6 +16,9 @@ import { withAlert } from 'react-alert'
 import OneFJefFooter from '../../components/OneFJefFooter'
 
 function UserAddView(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath: string) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [personId, setPersonId] = useState(props.personId)
   const [isUserComplete, setIsUserComplete] = useState(false)
   const [errorEmailAddress, setErrorEmailAddress] = useState('')

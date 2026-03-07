@@ -1,4 +1,4 @@
-﻿import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import styles from './PeerGroupAddNewView.css'
 const p = 'PeerGroupAddNewView'
 import L from '../../components/PageLanguage'
@@ -9,7 +9,7 @@ import TextDisplay from '../../components/TextDisplay'
 import Icon from '../../components/Icon'
 import OneFJefFooter from '../../components/OneFJefFooter'
 import classes from 'classnames'
-import * as guid from '../../utils/GuidValidate'
+import * as guid from '../../utils/guidValidate'
 
 function PeerGroupAddNewView(props) {
   const [peerGroupName, setPeerGroupName] = useState('')

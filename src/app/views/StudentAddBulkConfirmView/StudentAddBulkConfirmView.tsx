@@ -1,5 +1,5 @@
 ﻿import { useState } from 'react'
-import { navigate, navigateReplace, goBack } from './'
+import { useNavigate } from 'react-router-dom'
 import globalStyles from '../../utils/globalStyles.css'
 const p = 'globalStyles'
 import L from '../../components/PageLanguage'
@@ -11,6 +11,9 @@ import { withAlert } from 'react-alert'
 import {doSort} from '../../utils/sort'
 
 function StudentAddBulkConfirmView(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath: string) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [learners, setLearners] = useState([])
   const [duplicateEntries, setDuplicateEntries] = useState([])
   const [contactMatches, setContactMatches] = useState([])

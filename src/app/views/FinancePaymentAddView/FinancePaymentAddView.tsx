@@ -1,5 +1,5 @@
-﻿import { useEffect, useState } from 'react'
-import { navigate, navigateReplace, goBack } from './'
+import { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import {apiHost} from '../../api_host'
 import styles from './FinancePaymentAddView.css'
 const p = 'FinancePaymentAddView'
@@ -7,7 +7,7 @@ import L from '../../components/PageLanguage'
 import InputFile from '../../components/InputFile'
 import axios from 'axios'
 import globalStyles from '../../utils/globalStyles.css'
-import {formatNumber} from '../../utils/numberformat'
+import {formatNumber} from '../../utils/numberFormat'
 import {guidEmpty} from '../../utils/guidValidate'
 import Checkbox from '../../components/Checkbox'
 import InputTextArea from '../../components/InputTextArea'
@@ -32,6 +32,9 @@ import checkWithroutingCode from '../../assets/CheckWithRoutingCode.png'
 import { withAlert } from 'react-alert'
 
 function FinancePaymentAddView(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath: string) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [isShowingModal_delete, setIsShowingModal_delete] = useState(false)
   const [isShowingModal, setIsShowingModal] = useState(false)
   const [fileUrl, setFileUrl] = useState('')

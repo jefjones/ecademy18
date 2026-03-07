@@ -1,6 +1,5 @@
 ﻿import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
-import { navigate, navigateReplace, goBack } from './'
+import { Link, useNavigate } from 'react-router-dom'
 const p = 'RegistrationLoginView'
 import L from '../../components/PageLanguage'
 import styles from './RegistrationLoginView.css'
@@ -19,6 +18,9 @@ import {guidEmpty} from '../../utils/guidValidate'
 //import Recaptcha from 'react-recaptcha';
 
 function RegistrationLoginView(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath: string) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [showNewRegLogin, setShowNewRegLogin] = useState(false)
   const [isUserComplete, setIsUserComplete] = useState(false)
   const [errors, setErrors] = useState({})

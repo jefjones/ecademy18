@@ -1,6 +1,6 @@
 ﻿import { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import {apiHost} from '../../api_host'
-import { navigate, navigateReplace, goBack } from './'
 import globalStyles from '../../utils/globalStyles.css'
 import styles from './StudentAddBulkView.css'
 const p = 'StudentAddBulkView'
@@ -17,6 +17,9 @@ let file = {}
 //let fileSubmitted = false;
 
 function StudentAddBulkView(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath: string) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [isShowingModal, setIsShowingModal] = useState(false)
   const [personConfigLocal, setPersonConfigLocal] = useState(props.personConfigEntry)
   const [bulk, setBulk] = useState({

@@ -1,10 +1,9 @@
 ﻿import { useEffect, useState } from 'react'
-import { navigate, navigateReplace, goBack } from './'
 import styles from './WorkSettingsView.css'
 const p = 'WorkSettingsView'
 import L from '../../components/PageLanguage'
 import globalStyles from '../../utils/globalStyles.css'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import SelectSingleDropDown from '../../components/SelectSingleDropDown'
 import OneFJefFooter from '../../components/OneFJefFooter'
 import WorkAddOrUpdate from '../../components/WorkAddOrUpdate'
@@ -12,6 +11,9 @@ import MessageModal from '../../components/MessageModal'
 import classes from 'classnames'
 
 function WorkSettingsView(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath: string) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [isShowingModal_comment, setIsShowingModal_comment] = useState(false)
   const [workName, setWorkName] = useState(workSummary.title)
 

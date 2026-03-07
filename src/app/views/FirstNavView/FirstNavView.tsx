@@ -1,5 +1,4 @@
 ﻿import { useEffect, useState } from 'react'
-import { navigate, navigateReplace, goBack } from './'
 const p = 'FirstNavView'
 import L from '../../components/PageLanguage'
 import MediaQuery from 'react-responsive'
@@ -9,7 +8,7 @@ import Accordion from '@mui/material/Accordion'
 import AccordionDetails from '@mui/material/AccordionDetails'
 import AccordionSummary from '@mui/material/AccordionSummary'
 import styles from './FirstNavView.css'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import SelectSingleDropDown from '../../components/SelectSingleDropDown'
 import ScheduleModal from '../../components/ScheduleModal'
 import CalendarEventModal from '../../components/CalendarEventModal'
@@ -42,6 +41,9 @@ import {formatNumber} from '../../utils/numberFormat'
 
 
 function FirstNavView(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath: string) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [expanded, setExpanded] = useState('')
   const [hasChangedExpanded, setHasChangedExpanded] = useState(false)
   const [valueMessageTab, setValueMessageTab] = useState(0)

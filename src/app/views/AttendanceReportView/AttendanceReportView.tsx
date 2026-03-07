@@ -1,5 +1,5 @@
 ﻿import { useEffect, useState } from 'react'
-import { navigate, navigateReplace, goBack } from './'
+import { useNavigate } from 'react-router-dom'
 import styles from './AttendanceReportView.css'
 const p = 'AttendanceReportView'
 import L from '../../components/PageLanguage'
@@ -17,6 +17,9 @@ import ReactToPrint from "react-to-print"
 import {guidEmpty} from '../../utils/guidValidate'
 
 function AttendanceReportView(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath: string) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [intervalId, setIntervalId] = useState(undefined)
   const [student, setStudent] = useState(undefined)
   const [studentPersonId, setStudentPersonId] = useState(undefined)

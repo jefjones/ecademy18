@@ -48,6 +48,7 @@ function LandingView(props) {
   const [isShowingSystemUpdateMessage, setIsShowingSystemUpdateMessage] = useState(undefined)
   const [isShowingModal_missingInfo, setIsShowingModal_missingInfo] = useState(undefined)
   const [messageInfoIncomplete, setMessageInfoIncomplete] = useState(undefined)
+  const [usernameNotGradeLevelManheim, setUsernameNotGradeLevelManheim] = useState(true)
 
   useEffect(() => {
     

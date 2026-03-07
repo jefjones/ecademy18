@@ -3,8 +3,7 @@ import styles from './MentorSummaryEditView.css'
 const p = 'MentorSummaryEditView'
 import L from '../../components/PageLanguage'
 import globalStyles from '../../utils/globalStyles.css'
-import { Link } from 'react-router-dom'
-import { navigate, navigateReplace, goBack } from './'
+import { Link, useNavigate } from 'react-router-dom'
 import EditTable from '../../components/EditTable'
 import SelectSingleDropDown from '../../components/SelectSingleDropDown'
 import MessageModal from '../../components/MessageModal'
@@ -16,6 +15,9 @@ import moment from 'moment'
 import {doSort} from '../../utils/sort'
 
 function MentorSummaryEditView(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath: string) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [isShowingModal_remove, setIsShowingModal_remove] = useState(false)
   const [isShowingModal_message, setIsShowingModal_message] = useState(false)
   const [pathwayComments, setPathwayComments] = useState([])

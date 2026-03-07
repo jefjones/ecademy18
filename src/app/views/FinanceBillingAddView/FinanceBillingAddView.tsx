@@ -1,5 +1,5 @@
 ﻿import { useEffect, useState } from 'react'
-import { navigate, navigateReplace, goBack } from './'
+import { useNavigate } from 'react-router-dom'
 import {apiHost} from '../../api_host'
 import styles from './FinanceBillingAddView.css'
 const p = 'FinanceBillingAddView'
@@ -23,6 +23,9 @@ import {guidEmpty} from '../../utils/guidValidate'
 import { withAlert } from 'react-alert'
 
 function FinanceBillingAddView(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath: string) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [isShowingModal_delete, setIsShowingModal_delete] = useState(false)
   const [isShowingModal, setIsShowingModal] = useState(false)
   const [fileUrl, setFileUrl] = useState('')

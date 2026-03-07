@@ -1,6 +1,5 @@
 ﻿import { useEffect, useState } from 'react'
-import { Link, useParams } from 'react-router-dom'
-import { navigate, navigateReplace, goBack } from './'
+import { Link, useParams, useNavigate } from 'react-router-dom'
 import globalStyles from '../../utils/globalStyles.css'
 import styles from './AdminAddView.css'
 import classes from 'classnames'
@@ -17,6 +16,9 @@ const p = 'AdminAddView'
 import L from '../../components/PageLanguage'
 
 function AdminAddView(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath: string) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const params = useParams()
   const [adminPersonId, setAdminPersonId] = useState(props.adminPersonId)
   const [isUserComplete, setIsUserComplete] = useState(false)

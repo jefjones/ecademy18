@@ -1,5 +1,5 @@
 ﻿import { useEffect, useState } from 'react'
-import { navigate, navigateReplace, goBack } from './'
+import { useNavigate } from 'react-router-dom'
 import styles from './GradeReportView.css'
 const p = 'GradeReportView'
 import L from '../../components/PageLanguage'
@@ -19,6 +19,9 @@ import ReactToPrint from "react-to-print"
 import {guidEmpty} from '../../utils/guidValidate'
 
 function GradeReportView(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath: string) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [intervalList, setIntervalList] = useState('')
   const [schoolYearId, setSchoolYearId] = useState(props.personConfig.schoolYearId)
   const [isInitStudent, setIsInitStudent] = useState(undefined)

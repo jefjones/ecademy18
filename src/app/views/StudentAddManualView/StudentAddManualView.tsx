@@ -1,6 +1,5 @@
 ﻿import { useEffect, useState } from 'react'
-import { Link, useParams } from 'react-router-dom'
-import { navigate, navigateReplace, goBack } from './'
+import { Link, useParams, useNavigate } from 'react-router-dom'
 import globalStyles from '../../utils/globalStyles.css'
 const p = 'globalStyles'
 import L from '../../components/PageLanguage'
@@ -17,6 +16,9 @@ import OneFJefFooter from '../../components/OneFJefFooter'
 import { withAlert } from 'react-alert'
 
 function StudentAddManualView(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath: string) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const params = useParams()
   const [studentPersonId, setStudentPersonId] = useState('')
   const [errorEmailAddress, setErrorEmailAddress] = useState('')

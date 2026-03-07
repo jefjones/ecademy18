@@ -1,5 +1,5 @@
 ﻿import { useState } from 'react'
-import { navigate, navigateReplace, goBack } from './'
+import { useNavigate } from 'react-router-dom'
 import styles from './AnnouncementManageView.css'
 const p = 'AnnouncementManageView'
 import L from '../../components/PageLanguage'
@@ -12,6 +12,9 @@ import classes from 'classnames'
 import moment from 'moment'
 
 function AnnouncementManageView(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath: string) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [isShowingModal_remove, setIsShowingModal_remove] = useState(false)
   const [isShowingModal_message, setIsShowingModal_message] = useState(false)
   const [announcementId, setAnnouncementId] = useState('')

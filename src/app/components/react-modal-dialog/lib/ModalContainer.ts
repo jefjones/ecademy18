@@ -76,4 +76,3 @@ var ModalContainer = (function (_React$Component) {
 })(_react2['default'].Component)
 
 exports['default'] = ModalContainer
-module.exports = exports['default']

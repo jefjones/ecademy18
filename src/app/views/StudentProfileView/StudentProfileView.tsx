@@ -1,6 +1,6 @@
 ﻿import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import {apiHost} from '../../api_host'
-import { navigate, navigateReplace, goBack } from './'
 import styles from './StudentProfileView.css'
 const p = 'StudentProfileView'
 import L from '../../components/PageLanguage'
@@ -24,6 +24,9 @@ import {wait} from '../../utils/wait'
 import {formatPhoneNumber} from '../../utils/numberFormat'
 
 function StudentProfileView(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath: string) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [showSaveButton, setShowSaveButton] = useState(false)
   const [isShowingModal_missingInfo, setIsShowingModal_missingInfo] = useState(false)
   const [isShowingModal_removeNote, setIsShowingModal_removeNote] = useState(false)

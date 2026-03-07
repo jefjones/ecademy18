@@ -69,6 +69,7 @@ module.exports = {
       fs: false,
       path: false,
       os: false,
+      crypto: false,
     },
     alias: {
       // cptable / jszip shims used by xlsx

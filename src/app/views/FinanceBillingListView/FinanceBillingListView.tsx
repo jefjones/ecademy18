@@ -1,5 +1,5 @@
-﻿import { useEffect, useState } from 'react'
-import { navigate, navigateReplace, goBack } from './'
+import { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import styles from './FinanceBillingListView.css'
 const p = 'FinanceBillingListView'
 import L from '../../components/PageLanguage'
@@ -16,11 +16,14 @@ import DateTimePicker from '../../components/DateTimePicker'
 import MyFrequentPlaces from '../../components/MyFrequentPlaces'
 import Checkbox from '../../components/Checkbox'
 import OneFJefFooter from '../../components/OneFJefFooter'
-import {formatNumber} from '../../utils/numberformat'
+import {formatNumber} from '../../utils/numberFormat'
 import classes from 'classnames'
 import { withAlert } from 'react-alert'
 
 function FinanceBillingListView(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath: string) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [financeBillingId, setFinanceBillingId] = useState('')
   const [onlyBillingDue, setOnlyBillingDue] = useState(props.onlyBillingDue === 'onlyBillingDue')
   const [isInit, setIsInit] = useState(true)

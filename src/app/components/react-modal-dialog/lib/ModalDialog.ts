@@ -265,4 +265,3 @@ var ModalDialog = (function (_React$Component) {
 })(_react2['default'].Component)
 
 exports['default'] = ModalDialog
-module.exports = exports['default']

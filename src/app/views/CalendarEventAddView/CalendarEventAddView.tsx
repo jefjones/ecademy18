@@ -3,8 +3,7 @@ import styles from './CalendarEventAddView.css'
 const p = 'CalendarEventAddView'
 import L from '../../components/PageLanguage'
 import globalStyles from '../../utils/globalStyles.css'
-import { Link } from 'react-router-dom'
-import { navigate, navigateReplace, goBack } from './'
+import { Link, useNavigate } from 'react-router-dom'
 import SelectSingleDropDown from '../../components/SelectSingleDropDown'
 import Checkbox from '../../components/Checkbox'
 import InputText from '../../components/InputText'
@@ -17,6 +16,9 @@ import OneFJefFooter from '../../components/OneFJefFooter'
 import classes from 'classnames'
 
 function CalendarEventAddView(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath: string) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [isShowingModal_deleteDate, setIsShowingModal_deleteDate] = useState(false)
   const [errorEventName, setErrorEventName] = useState('')
   const [errorSchedule, setErrorSchedule] = useState('')

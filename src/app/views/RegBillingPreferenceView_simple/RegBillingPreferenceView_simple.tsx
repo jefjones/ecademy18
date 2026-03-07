@@ -1,5 +1,5 @@
 ﻿import { useEffect, useState } from 'react'
-import { navigate, navigateReplace, goBack } from './'
+import { useNavigate } from 'react-router-dom'
 import styles from './RegBillingPreferenceView_simple.css'
 const p = 'RegBillingPreferenceView_simple'
 import L from '../../components/PageLanguage'
@@ -13,6 +13,9 @@ import classes from 'classnames'
 import {wait} from '../../utils/wait'
 
 function RegBillingPreferenceView_simple(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath: string) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [isShowingModal_error, setIsShowingModal_error] = useState(false)
   const [errorNameOnCard, setErrorNameOnCard] = useState('')
   const [errorCardNumber, setErrorCardNumber] = useState('')

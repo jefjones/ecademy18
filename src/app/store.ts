@@ -1,5 +1,5 @@
 ﻿import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
-import thunk from 'redux-thunk';
+import { thunk } from 'redux-thunk';
 import {ALLOW_REDUX_DEV_TOOLS} from './env';
 import isBrowser from 'is-in-browser';
 // react-router-redux removed — React Router v6 manages its own history internally.

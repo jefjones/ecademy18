@@ -1,6 +1,5 @@
 ﻿import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
-import { navigate, navigateReplace, goBack } from './'
+import { Link, useNavigate } from 'react-router-dom'
 import styles from './CourseAttendanceView.css'
 const p = 'CourseAttendanceView'
 import L from '../../components/PageLanguage'
@@ -18,6 +17,9 @@ import MessageModal from '../../components/MessageModal'
 import moment from 'moment'
 
 function CourseAttendanceView(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath: string) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [isShowingModal_noDate, setIsShowingModal_noDate] = useState(false)
   const [isShowingModal_setAllPresent, setIsShowingModal_setAllPresent] = useState(false)
   const [isInit, setIsInit] = useState(true)

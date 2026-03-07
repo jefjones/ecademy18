@@ -1,6 +1,6 @@
-﻿import * as types from './actionTypes'
+import * as types from './actionTypes'
 import {apiHost} from '../api_host'
-import * as guid from '../utils/GuidValidate'
+import * as guid from '../utils/guidValidate'
 
 export const init = (personId, groupId) => {
     groupId = groupId ? groupId : guid.emptyGuid()

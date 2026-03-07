@@ -1,5 +1,5 @@
 ﻿import { useState } from 'react'
-import { navigate, navigateReplace, goBack } from './'
+import { useNavigate } from 'react-router-dom'
 import styles from './DoctorNoteInviteListView.css'
 const p = 'DoctorNoteInviteListView'
 import L from '../../components/PageLanguage'
@@ -19,6 +19,9 @@ import classes from 'classnames'
 import { withAlert } from 'react-alert'
 
 function DoctorNoteInviteListView(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath: string) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [note, setNote] = useState('')
   const [isShowingModal_instructions, setIsShowingModal_instructions] = useState(true)
   const [doctorNoteInviteId, setDoctorNoteInviteId] = useState('')

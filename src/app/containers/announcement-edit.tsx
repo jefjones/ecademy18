@@ -1,6 +1,6 @@
 ﻿import { useEffect } from 'react'
 import AnnouncementEditView from '../views/AnnouncementEditView'
-import { useSelector, useDispatch } from 'react-redux';import * as actionPageLang from '../actions/language-list'
+import { useSelector, useDispatch, connect } from 'react-redux';import * as actionPageLang from '../actions/language-list'
 import * as actionAnnouncement from '../actions/announcements'
 import * as actionAnnouncementAttachments from '../actions/announcement-attachments'
 import * as actionUserPersonClipboard from '../actions/user-person-clipboard'

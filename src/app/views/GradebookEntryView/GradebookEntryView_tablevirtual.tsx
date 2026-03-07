@@ -1,6 +1,5 @@
 ﻿import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
-import { navigate, navigateReplace, goBack } from './'
+import { Link, useNavigate } from 'react-router-dom'
 import {penspringHost} from '../../penspring_host'
 const p = 'StudentScheduleView'
 import L from '../../components/PageLanguage'
@@ -34,6 +33,9 @@ import Paper from '@mui/material/Paper'
 import Loading from '../../components/Loading'
 
 function GradebookEntryView(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath: string) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [showSearchControls, setShowSearchControls] = useState(false)
   const [courseScheduledId, setCourseScheduledId] = useState('')
   const [contentTypeId, setContentTypeId] = useState('')

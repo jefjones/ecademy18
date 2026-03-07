@@ -1,4 +1,4 @@
-﻿import { useEffect } from 'react'
+import { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import GroupEditReportView from '../views/GroupEditReportView'
 import * as actionGroupEditReport from '../actions/group-edit-report'
@@ -7,7 +7,7 @@ import * as actionReportFilter from '../actions/report-filter'
 import * as actionReportFilterOptions from '../actions/report-filter-options'
 import * as fromReportFilterOptions from '../reducers/report-filter-options'
 import * as actionPageLang from '../actions/language-list'
-import * as guid from '../utils/GuidValidate'
+import * as guid from '../utils/guidValidate'
 import { selectMe, selectReportFilter, selectGroupIdCurrent } from '../store'
 
 const mapStateToProps = (state, props) => {

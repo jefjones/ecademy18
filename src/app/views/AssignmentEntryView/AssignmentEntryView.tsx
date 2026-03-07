@@ -1,5 +1,5 @@
 ﻿import { useEffect, useState } from 'react'
-import { navigate, navigateReplace, goBack } from './'
+import { useNavigate } from 'react-router-dom'
 import styles from './AssignmentEntryView.css'
 const p = 'AssignmentEntryView'
 import L from '../../components/PageLanguage'
@@ -20,6 +20,9 @@ import OneFJefFooter from '../../components/OneFJefFooter'
 import classes from 'classnames'
 
 function AssignmentEntryView(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath: string) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [isShowingModal_delete, setIsShowingModal_delete] = useState(false)
   const [isShowingModal_removeFile, setIsShowingModal_removeFile] = useState(false)
   const [isShowingModal_removeWebsite, setIsShowingModal_removeWebsite] = useState(false)
@@ -124,6 +127,14 @@ function AssignmentEntryView(props) {
   					assignment.studentsAssigned = setAllStudents
   			}
   
+  const isNumbersOnly = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (/^\d*$/.test(e.target.value)) {
+      setAssignment({ ...assignment, [e.target.name]: e.target.value })
+    } else {
+      setIsShowingModal_numberOnly(true)
+    }
+  }
+
         return (
             <div className={classes(styles.container, className)}>
   							<div className={globalStyles.pageTitle}>

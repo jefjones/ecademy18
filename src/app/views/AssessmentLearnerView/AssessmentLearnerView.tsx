@@ -1,6 +1,5 @@
 ﻿import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
-import { navigate, navigateReplace, goBack } from './'
+import { Link, useNavigate } from 'react-router-dom'
 import {apiHost} from '../../api_host'
 import styles from './AssessmentLearnerView.css'
 const p = 'AssessmentLearnerView'
@@ -26,6 +25,9 @@ import OneFJefFooter from '../../components/OneFJefFooter'
 import classes from 'classnames'
 
 function AssessmentLearnerView(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath: string) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [isShowingModal_removeFileUpload, setIsShowingModal_removeFileUpload] = useState(false)
   const [isShowingFileUpload, setIsShowingFileUpload] = useState(false)
   const [isShowingModal_incomplete, setIsShowingModal_incomplete] = useState(false)

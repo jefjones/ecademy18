@@ -1,6 +1,5 @@
 ﻿import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
-import { navigate, navigateReplace, goBack } from './'
+import { Link, useNavigate } from 'react-router-dom'
 import styles from './TranscriptsView.css'
 const p = 'TranscriptsView'
 import L from '../../components/PageLanguage'
@@ -21,6 +20,9 @@ import moment from 'moment'
 import {guidEmpty} from '../../utils/guidValidate'
 
 function TranscriptsView(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath: string) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [intervalList, setIntervalList] = useState('')
   const [showSignature, setShowSignature] = useState('')
   const [selectedStudent, setSelectedStudent] = useState(undefined)

@@ -1,10 +1,9 @@
 ﻿import { useEffect, useState } from 'react'
-import { navigate, navigateReplace, goBack } from './'
 import styles from './RegistrationNavView.css'
 const p = 'RegistrationNavView'
 import L from '../../components/PageLanguage'
 import globalStyles from '../../utils/globalStyles.css'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import MessageModal from '../../components/MessageModal'
 import TextDisplay from '../../components/TextDisplay'
 import ButtonWithIcon from '../../components/ButtonWithIcon'
@@ -18,6 +17,9 @@ import { withAlert } from 'react-alert'
 import Required from '../../components/Required'
 
 function RegistrationNavView(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath: string) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [slotInfo, setSlotInfo] = useState({})
   const [chosenEvent, setChosenEvent] = useState({})
   const [isShowingModal_nav, setIsShowingModal_nav] = useState(false)

@@ -1,5 +1,5 @@
 ﻿import { cloneElement, Children, useEffect, useState } from 'react'
-import { navigate, navigateReplace, goBack } from './'
+import { useNavigate } from 'react-router-dom'
 import styles from './TeacherScheduleView.css'
 const p = 'TeacherScheduleView'
 import L from '../../components/PageLanguage'
@@ -24,6 +24,9 @@ const ColoredDateCellWrapper = ({ children }) =>
 })
 
 function TeacherScheduleView(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath: string) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [intervalId, setIntervalId] = useState(props.personConfig.intervalId || props.companyConfig.intervalId)
   const [courseScheduledschoolYearId, setCourseScheduledschoolYearId] = useState(target.value)
 

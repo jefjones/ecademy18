@@ -1,6 +1,5 @@
 ﻿import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
-import { navigate, navigateReplace, goBack } from './'
+import { Link, useNavigate } from 'react-router-dom'
 import styles from './BaseCoursesView.css'
 const p = 'BaseCoursesView'
 import L from '../../components/PageLanguage'
@@ -19,6 +18,9 @@ import { withAlert } from 'react-alert'
 import {guidEmpty} from '../../utils/guidValidate'
 
 function BaseCoursesView(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath: string) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [scrollTop, setScrollTop] = useState(0)
   const [isBaseCourseContextOpen, setIsBaseCourseContextOpen] = useState(false)
   const [isBaseCourseSearch, setIsBaseCourseSearch] = useState(false)

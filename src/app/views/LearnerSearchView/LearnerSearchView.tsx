@@ -1,6 +1,5 @@
 ﻿import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
-import { navigate, navigateReplace, goBack } from './'
+import { Link, useNavigate } from 'react-router-dom'
 import styles from './LearnerSearchView.css'
 const p = 'LearnerSearchView'
 import L from '../../components/PageLanguage'
@@ -26,6 +25,9 @@ import { withAlert } from 'react-alert'
 import {doSort} from '../../utils/sort'
 
 function LearnerSearchView(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath: string) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [valueClipboardTab, setValueClipboardTab] = useState(0)
   const [hideSearch, setHideSearch] = useState(false)
   const [hideMoreOptions, setHideMoreOptions] = useState(true)

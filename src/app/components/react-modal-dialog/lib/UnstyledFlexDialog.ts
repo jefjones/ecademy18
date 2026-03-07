@@ -218,4 +218,3 @@ var UnstyledFlexDialog = (function (_React$Component) {
 })(_react2['default'].Component)
 
 exports['default'] = UnstyledFlexDialog
-module.exports = exports['default']

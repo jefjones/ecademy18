@@ -1,10 +1,9 @@
 ﻿import { useState } from 'react'
-import { navigate, navigateReplace, goBack } from './'
 import styles from './LearnerCourseAssignView.css'
 const p = 'LearnerCourseAssignView'
 import L from '../../components/PageLanguage'
 import globalStyles from '../../utils/globalStyles.css'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import StudentClipboard from '../../components/StudentClipboard'
 import CourseClipboard from '../../components/CourseClipboard'
 import Icon from '../../components/Icon'
@@ -16,6 +15,9 @@ import moment from 'moment'
 import { withAlert } from 'react-alert'
 
 function LearnerCourseAssignView(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath: string) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [isRecordComplete, setIsRecordComplete] = useState(false)
   const [errorCourse, setErrorCourse] = useState('')
   const [errorLearner, setErrorLearner] = useState('')

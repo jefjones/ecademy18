@@ -3,7 +3,7 @@
 // It renders <Outlet /> (child routes) when logged in, or redirects to /login.
 import { useEffect, useState } from 'react'
 import { Outlet, Navigate } from 'react-router-dom'
-import { useSelector, useDispatch } from 'react-redux'
+import { useSelector, useDispatch, connect } from 'react-redux'
 import jwtDecode from 'jwt-decode'
 import { selectMe } from '../store'
 import * as actionLogin from '../actions/login'
@@ -18,7 +18,8 @@ function mapStateToProps(state, ownProps) {
 const bindActionsToDispatch = dispatch => ({
     initRecords: (person) => dispatch(actionLogin.initRecords(person)),
 })
-
+
+
 
 function EnsureLoggedInContainer(props) {
   const [isLoggedIn, setIsLoggedIn] = useState(false)
@@ -53,5 +54,5 @@ function EnsureLoggedInContainer(props) {
           return <Navigate to="/login" replace />
 }
 
-export default storeConnector(EnsureLoggedInContainer)
+export default connect(mapStateToProps, bindActionsToDispatch)(EnsureLoggedInContainer)
 

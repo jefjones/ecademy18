@@ -1,6 +1,6 @@
 ﻿import { useEffect } from 'react'
 import RegistrationLoginView from '../views/RegistrationLoginView'
-import { useSelector, useDispatch } from 'react-redux'
+import { useSelector, useDispatch, connect } from 'react-redux'
 import * as actionPageLang from '../actions/language-list'
 import * as actionRegistration from '../actions/registration'
 import * as actionCompanyConfig from '../actions/company-config'
@@ -31,7 +31,8 @@ const bindActionsToDispatch = dispatch => ({
 		getCompanyConfig: (personId, schoolCode) => dispatch(actionCompanyConfig.init(personId, schoolCode)),
 		getSchoolYears: () => dispatch(actionSchoolYears.init()),
 })
-
+
+
 
 function HomeContainer(props) {
   useEffect(() => {
@@ -46,4 +47,4 @@ function HomeContainer(props) {
   return <RegistrationLoginView {...props} />
 }
 
-export default storeConnector(HomeContainer)
+export default connect(mapStateToProps, bindActionsToDispatch)(HomeContainer)

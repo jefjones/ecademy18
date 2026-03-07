@@ -1,6 +1,5 @@
 ﻿import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
-import { navigate, navigateReplace, goBack } from './'
+import { Link, useNavigate } from 'react-router-dom'
 import globalStyles from '../../utils/globalStyles.css'
 import styles from './LearnerOutcomeAddView.css'
 const p = 'LearnerOutcomeAddView'
@@ -15,6 +14,9 @@ import MessageModal from '../../components/MessageModal'
 import OneFJefFooter from '../../components/OneFJefFooter'
 
 function LearnerOutcomeAddView(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath: string) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [isShowingModal_remove, setIsShowingModal_remove] = useState(false)
   const [isUserComplete, setIsUserComplete] = useState(false)
   const [isBulkEntered, setIsBulkEntered] = useState(false)

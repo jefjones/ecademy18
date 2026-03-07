@@ -1,5 +1,5 @@
-﻿import * as types from '../actions/actionTypes'
-import * as guid from '../utils/GuidValidate'
+import * as types from '../actions/actionTypes'
+import * as guid from '../utils/guidValidate'
 
 export default function(state = {}, action) {
     switch(action.type) {

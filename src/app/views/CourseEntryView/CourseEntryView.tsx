@@ -3,8 +3,7 @@ import styles from './CourseEntryView.css'
 const p = 'CourseEntryView'
 import L from '../../components/PageLanguage'
 import globalStyles from '../../utils/globalStyles.css'
-import { Link } from 'react-router-dom'
-import { navigate, navigateReplace, goBack } from './'
+import { Link, useNavigate } from 'react-router-dom'
 import SelectSingleDropDown from '../../components/SelectSingleDropDown'
 import InputText from '../../components/InputText'
 import RadioGroup from '../../components/RadioGroup'
@@ -19,6 +18,9 @@ import {guidEmpty} from '../../utils/guidValidate'
 import classes from 'classnames'
 
 function CourseEntryView(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath: string) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [isRecordComplete, setIsRecordComplete] = useState(false)
   const [errorCourseName, setErrorCourseName] = useState('')
   const [errorLearningPathway, setErrorLearningPathway] = useState('')

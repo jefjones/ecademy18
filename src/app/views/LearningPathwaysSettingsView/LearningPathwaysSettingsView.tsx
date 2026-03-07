@@ -1,6 +1,5 @@
 ﻿import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
-import { navigate, navigateReplace, goBack } from './'
+import { Link, useNavigate } from 'react-router-dom'
 import styles from './LearningPathwaysSettingsView.css'
 const p = 'LearningPathwaysSettingsView'
 import L from '../../components/PageLanguage'
@@ -13,6 +12,9 @@ import MessageModal from '../../components/MessageModal'
 import OneFJefFooter from '../../components/OneFJefFooter'
 
 function LearningPathwaysSettingsView(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath: string) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [isShowingModal_remove, setIsShowingModal_remove] = useState(false)
   const [learningPathwayId, setLearningPathwayId] = useState('')
   const [learningPathway, setLearningPathway] = useState({

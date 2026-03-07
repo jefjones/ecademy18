@@ -1,6 +1,5 @@
 ﻿import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
-import { navigate, navigateReplace, goBack } from './'
+import { Link, useNavigate } from 'react-router-dom'
 import styles from './AssessmentCorrectView.css'
 const p = 'AssessmentCorrectView'
 import L from '../../components/PageLanguage'
@@ -27,6 +26,9 @@ import OneFJefFooter from '../../components/OneFJefFooter'
 import classes from 'classnames'
 
 function AssessmentCorrectView(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath: string) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [studentPersonId, setStudentPersonId] = useState(props.studentPersonId)
   const [correctionTypes, setCorrectionTypes] = useState('all')
   const [questionTypes, setQuestionTypes] = useState('all')

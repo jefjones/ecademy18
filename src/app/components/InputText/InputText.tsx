@@ -12,8 +12,20 @@ function InputText(props) {
 
   const {name, label, placeholder, value, defaultValue, error, isPasswordType=false, size, height, maxLength=100, inputClassName="",
               	labelClass="", onEnterKey, noShadow, instructions, instructionsBelow, required=false, whenFilled, autoFocus, onBlur,
+              	onChange, autoComplete, onDoubleClick,
   		} = props
-  
+
+  const isNumbersOnly = (e) => {
+    if (/^\d*$/.test(e.target.value)) {
+      if (onChange) onChange(e)
+    } else {
+      setIsShowingModal_numberOnly(true)
+    }
+  }
+
+  const handleNumberOnlyClose = () => setIsShowingModal_numberOnly(false)
+  const handleGreaterThanMaxClose = () => setIsShowingModal_greaterThan(false)
+
   		  return (
   		    <div className={classes(styles.container, inputClassName)}>
   		        <div className={styles.row}>

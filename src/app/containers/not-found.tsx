@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { useSelector, useDispatch } from 'react-redux'
+import { useSelector, useDispatch, connect } from 'react-redux'
 import { setHttpResponseCode } from '../actions/system'
 import NotFound from '../components/Error'
 
@@ -19,7 +19,8 @@ const mapStateToProps = state => ({
 // binds the result of action creators to redux dispatch, wrapped in callable functions
 const bindActionsToDispatch = dispatch => ({
 })
-
+
+
 
 function NotFoundContainer(props) {
   useEffect(() => {
@@ -31,4 +32,4 @@ function NotFoundContainer(props) {
   return <NotFound {...props} />
 }
 
-export default storeConnector(NotFoundContainer)
+export default connect(mapStateToProps, bindActionsToDispatch)(NotFoundContainer)

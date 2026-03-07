@@ -1,5 +1,5 @@
 ﻿import { useEffect, useState } from 'react'
-import { navigate, navigateReplace, goBack } from './'
+import { useNavigate } from 'react-router-dom'
 import styles from './StudentBaseCourseRequestView.css'
 const p = 'StudentBaseCourseRequestView'
 import L from '../../components/PageLanguage'
@@ -24,6 +24,9 @@ import {withAlert} from 'react-alert'
 import {guidEmpty} from '../../utils/guidValidate'
 
 function StudentBaseCourseRequestView(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath: string) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [isShowingModal_remove, setIsShowingModal_remove] = useState(false)
   const [isShowingModal_students, setIsShowingModal_students] = useState(false)
   const [isShowingModal_notOpen, setIsShowingModal_notOpen] = useState(false)

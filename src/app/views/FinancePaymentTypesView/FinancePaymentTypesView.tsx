@@ -1,6 +1,5 @@
 ﻿import { useState } from 'react'
-import { Link } from 'react-router-dom'
-import { navigate, navigateReplace, goBack } from './'
+import { Link, useNavigate } from 'react-router-dom'
 import styles from './FinancePaymentTypesView.css'
 const p = 'FinancePaymentTypesView'
 import L from '../../components/PageLanguage'
@@ -14,6 +13,9 @@ import OneFJefFooter from '../../components/OneFJefFooter'
 import classes from 'classnames'
 
 function FinancePaymentTypesView(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath: string) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [isShowingModal_remove, setIsShowingModal_remove] = useState(false)
   const [financePaymentTypeId, setFinancePaymentTypeId] = useState('')
   const [financePaymentType, setFinancePaymentType] = useState({

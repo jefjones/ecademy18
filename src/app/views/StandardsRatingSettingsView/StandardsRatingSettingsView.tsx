@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
-import { navigate, navigateReplace, goBack } from './'
+import { Link, useNavigate } from 'react-router-dom'
 import styles from './StandardsRatingSettingsView.css'
 const p = 'StandardsRatingSettingsView'
 import L from '../../components/PageLanguage'
@@ -21,6 +20,9 @@ import {doSort} from '../../utils/sort'
 import {guidEmpty} from '../../utils/guidValidate'
 
 function StandardsRatingSettingsView(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath: string) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [isShowingModal_removeDetail, setIsShowingModal_removeDetail] = useState(false)
   const [isShowingModal_removeTable, setIsShowingModal_removeTable] = useState(false)
   const [isShowingModal_newInstructions, setIsShowingModal_newInstructions] = useState(false)

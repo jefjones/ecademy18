@@ -1,8 +1,8 @@
-﻿import * as types from './actionTypes'
+import * as types from './actionTypes'
 import { navigate, navigateReplace, goBack } from './'
 import getGroupsIdCurrent from '../services/groupsId-current'
 import {apiHost} from '../api_host'
-import * as guid from '../utils/GuidValidate'
+import * as guid from '../utils/guidValidate'
 
 export const init = (personId) => {
 

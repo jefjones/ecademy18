@@ -1,9 +1,9 @@
-﻿import * as types from './actionTypes'
+import * as types from './actionTypes'
 import getChapters from '../services/chapters'
 import { navigate, navigateReplace, goBack } from './'
 import * as actionEditReview from './edit-review'
 import * as actionWorks from './works'
-import * as guid from '../utils/GuidValidate'
+import * as guid from '../utils/guidValidate'
 import {apiHost} from '../api_host'
 
 function setChapters( chapters=[] ) {

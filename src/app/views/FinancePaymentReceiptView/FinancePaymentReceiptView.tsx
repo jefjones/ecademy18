@@ -1,6 +1,5 @@
 ﻿import { useState } from 'react'
-import { Link } from 'react-router-dom'
-import { navigate, navigateReplace, goBack } from './'
+import { Link, useNavigate } from 'react-router-dom'
 import styles from './FinancePaymentReceiptView.css'
 const p = 'FinancePaymentReceiptView'
 import L from '../../components/PageLanguage'
@@ -19,6 +18,9 @@ import { withAlert } from 'react-alert'
 import ReactToPrint from "react-to-print"
 
 function FinancePaymentReceiptView(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath: string) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [financePaymentTableId, setFinancePaymentTableId] = useState('')
   const [isShowingModal_description, setIsShowingModal_description] = useState(true)
   const [studentName, setStudentName] = useState('')
