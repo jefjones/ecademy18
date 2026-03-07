@@ -1,5 +1,5 @@
 ﻿import { useEffect, useState } from 'react'
-import { navigate, navigateReplace, goBack } from './'
+import { useNavigate } from 'react-router-dom'
 import styles from './ContextCourseAction.css'
 import MessageModal from '../MessageModal'
 import TextareaModal from '../../components/TextareaModal'
@@ -9,6 +9,9 @@ const p = 'component'
 import L from '../../components/PageLanguage'
 
 function ContextCourseAction(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [isShowingModal_deleteEdit, setIsShowingModal_deleteEdit] = useState(false)
   const [isShowingModal_duplicate, setIsShowingModal_duplicate] = useState(false)
   const [isShowingModal_hasSchedule, setIsShowingModal_hasSchedule] = useState(false)

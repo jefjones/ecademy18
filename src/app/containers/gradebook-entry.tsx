@@ -146,7 +146,7 @@ const bindActionsToDispatch = dispatch => ({
 		clearGradebook: () => dispatch(actionGradebookEntry.clearGradebook()),
 		setGradebookScore: (personId, courseScheduledId, studentPersonId, assignmentId, score, runFunction) => dispatch(actionGradebookEntry.setGradebookScore(personId, courseScheduledId, studentPersonId, assignmentId, score, runFunction)),
     setLocalGradebookScore: (studentPersonId, assignmentId, score) => dispatch(actionGradebookEntry.setLocalGradebookScore(studentPersonId, assignmentId, score)),
-		getStudentOverallGrade: (personId, studentPersonId, courseScheduledId) => dispatch(actionGradebookEntry.getStudentOverallGrade(personId, studentPersonId, courseScheduledId)),
+		getStudentOverallGrade: (personId, studentPersonId, courseScheduledId) => dispatch(actionGradebookEntry.getGradebookOverallGrade(personId, studentPersonId, courseScheduledId)),
 		updatePersonConfigCourse: (personId, courseScheduledId, jumpToAssignmentId)  => dispatch(actionPersonConfig.updatePersonConfigCourse(personId, courseScheduledId, jumpToAssignmentId)),
 		addOrUpdateStudentResponse: (personId, courseEntryId, courseScheduledId, studentResponse, assignmentId, callInitFunction) => dispatch(actionStudentAssignments.addOrUpdateStudentResponse(personId, courseEntryId, courseScheduledId, studentResponse, assignmentId, callInitFunction)),
 		removeStudentResponse: (personId, studentAssignmentResponseId, deleteFile) => dispatch(actionStudentAssignments.removeStudentResponse(personId, studentAssignmentResponseId, deleteFile)),
@@ -173,7 +173,8 @@ const bindActionsToDispatch = dispatch => ({
 		setStandardLevelSequenceMultiple: (assignmentId, nextSequence, courseScheduledId, personId, runFunction) => dispatch(actionStandardsRating.setStandardLevelSequenceMultiple(assignmentId, nextSequence, courseScheduledId, personId, runFunction)),
 		setLocalGradebookOverwritePercent: (studentPersonId, intervalId, gradePercent) => dispatch(actionGradebookEntry.setLocalGradebookOverwritePercent(studentPersonId, intervalId, gradePercent)),
 })
-
+
+
 
 function Container(ownProps) {
   const dispatch = useDispatch()

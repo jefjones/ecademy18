@@ -1290,6 +1290,8 @@ export const selectEditDetails = (state) => fromEditDetails.selectEditDetails(st
 export const selectChapterText = (state) => fromEditReview.selectChapterTextOriginal(state.editReview)
 export const selectMyWorksFileTreeExplorer = (state) => fromMyWorksFileTreeExplorer.selectMyWorksFileTreeExplorer(state.myWorksFileTreeExplorer);
 export const selectLandingSteps = (state) => fromLandingSteps.selectLandingSteps(state.landingSteps)
+export const selectReimbursementRequests = (state) => fromCheckInOrOut.selectCheckInOrOuts(state.checkInOrOut)
+export const selectChapterTabText = (state) => fromEditReview.selectChapterTextOriginal(state.editReview)
 export const selectProxynizationTempPassword = (state) => fromProxynizationTempPassword.selectProxynizationTempPassword(state.proxynizationTempPassword)
 
 // do I have state in localstorage if so set it

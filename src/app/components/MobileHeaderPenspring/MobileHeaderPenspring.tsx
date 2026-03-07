@@ -1,6 +1,5 @@
 ﻿import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
-import { navigate, navigateReplace, goBack } from './'
+import { Link, useNavigate } from 'react-router-dom'
 import styles from './MobileHeader.css'
 import globalStyles from '../../utils/globalStyles.css'
 import Logo from '../../assets/PenSpring_medium.png'
@@ -12,6 +11,9 @@ import classes from 'classnames'
 import WorkSummaryModal from '../WorkSummaryModal'
 
 function MobileHeader(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [isShowingModal, setIsShowingModal] = useState(false)
   const [clickedOnCaret, setClickedOnCaret] = useState(false)
   const [isShowingOffline, setIsShowingOffline] = useState(false)

@@ -4,7 +4,7 @@
 import { useEffect, useState } from 'react'
 import { Outlet, Navigate } from 'react-router-dom'
 import { useSelector, useDispatch, connect } from 'react-redux'
-import jwtDecode from 'jwt-decode'
+import { jwtDecode } from 'jwt-decode'
 import { selectMe } from '../store'
 import * as actionLogin from '../actions/login'
 

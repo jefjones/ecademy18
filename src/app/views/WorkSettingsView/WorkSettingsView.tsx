@@ -1,8 +1,8 @@
 ﻿import { useEffect, useState } from 'react'
-import styles from './WorkSettingsView.css'
+import * as styles from './WorkSettingsView.css'
 const p = 'WorkSettingsView'
 import L from '../../components/PageLanguage'
-import globalStyles from '../../utils/globalStyles.css'
+import * as globalStyles from '../../utils/globalStyles.css'
 import { Link, useNavigate } from 'react-router-dom'
 import SelectSingleDropDown from '../../components/SelectSingleDropDown'
 import OneFJefFooter from '../../components/OneFJefFooter'
@@ -34,7 +34,7 @@ function WorkSettingsView(props) {
         })
   
         return (
-          <div className={styles.chapterer}>
+          <div className={styles.container}>
               <div className={classes(globalStyles.pageTitle, styles.moreMarginBottom)}>
                   <L p={p} t={`Document Settings`}/>
               </div>

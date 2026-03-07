@@ -91,3 +91,11 @@ export const resolveFetchingRecordAnnouncements = () => {
 export const resolveFetchingReportStudentRegistration = () => {
     return { type: types.FETCHING_RECORD, payload: {reportStudentRegistration: false} }
 }
+
+export const resolveFetchingRecordWorkEditReview = () => {
+    return { type: types.FETCHING_RECORD, payload: {workEditReview: false} }
+}
+
+export const resolveFetchingRecordFileTreeExplorer = () => {
+    return { type: types.FETCHING_RECORD, payload: {fileTreeExplorer: false} }
+}

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { navigate, navigateReplace, goBack } from './'
+import { useNavigate } from 'react-router-dom'
 import styles from './GroupSummary.css'
 import classes from 'classnames'
 import GroupTools from '../../components/GroupTools'
@@ -13,6 +13,9 @@ const p = 'component'
 import L from '../../components/PageLanguage'
 
 function GroupSummary(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [caretClassName, setCaretClassName] = useState(classes(styles.jef_caret, props.expanded ? styles.jefCaretUp : styles.jefCaretDown))
   const [expanded, setExpanded] = useState(props.expanded ? true : false)
   const [isShowingModal_deleteMember, setIsShowingModal_deleteMember] = useState(false)

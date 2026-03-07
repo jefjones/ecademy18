@@ -66,7 +66,7 @@ const mapStateToProps = (state, props) => {
 const bindActionsToDispatch = dispatch => ({
     addOrUpdateStudent: (personId, person, accreditation, medical, background, stayOrFinish, schoolYearId) => dispatch(actionRegStudents.addOrUpdateStudent(personId, person, accreditation, medical, background, stayOrFinish, schoolYearId)),
     getPageLangs: (personId, langCode, page) => dispatch(actionLanguageList.getPageLangs(personId, langCode, page)),
-		removeStudent: (personId, studentPersonId) => dispatch(actionRegStudents.removeStudent(personId, studentPersonId)),
+		removeStudent: (personId, studentPersonId) => dispatch(actionRegStudents.removeRegStudent(personId, studentPersonId)),
 		removeRegStudentFileUpload: (personId, fileUploadId) => dispatch(actionRegStudents.removeRegStudentFileUpload(personId, fileUploadId)),
 		getRegistrationCourses: (personId) => dispatch(actionRegistrationCourses.init(personId)),
 		setRegistrationCourses: (personId, studentPersonId, registrationTableId, courseRequests) => dispatch(actionRegistrationCourses.setRegistrationCourses(personId, studentPersonId, registrationTableId, courseRequests)),
@@ -80,7 +80,8 @@ const bindActionsToDispatch = dispatch => ({
 		getIntervals: (personId)  => dispatch(actionIntervals.init(personId)),
     setMyVisitedPage: (personId, myVisitedPage) => dispatch(actionMyVisitedPages.setMyVisitedPage(personId, myVisitedPage)),
 })
-
+
+
 
 function Container(ownProps) {
   const dispatch = useDispatch()

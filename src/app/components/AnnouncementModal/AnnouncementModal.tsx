@@ -1,5 +1,5 @@
 ﻿  //PropTypes
-import { navigate, navigateReplace, goBack } from './'
+import { useNavigate } from 'react-router-dom'
 const p = 'component'
 import L from '../../components/PageLanguage'
 import styles from './AnnouncementModal.css'
@@ -12,6 +12,9 @@ import Icon from '../Icon'
 import classes from 'classnames'
 
 function AnnouncementModal(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const {personId, onDelete, handleClose, setStudentsSelected, messageFullThread} = props
           return (
               <div className={styles.container}>

@@ -18,8 +18,8 @@ module.exports = {
 
   output: {
     path: path.join(__dirname, 'dist', 'static'),
-    filename: isDev ? 'app.js' : 'app.[contenthash:8].js',
-    chunkFilename: isDev ? '[id].app.js' : '[id].app.[contenthash:8].js',
+    filename: 'app.js',
+    chunkFilename: '[id].app.js',
     publicPath: '/static/',
     clean: true,
   },
@@ -31,28 +31,14 @@ module.exports = {
     }),
     ...(!isDev
       ? [
-          new MiniCssExtractPlugin({ filename: 'app.[contenthash:8].css' }),
+          new MiniCssExtractPlugin({ filename: 'app.css' }),
           // Uncomment to analyse bundle size:
           // new BundleAnalyzerPlugin({ analyzerMode: 'static', openAnalyzer: false }),
         ]
       : []),
   ],
 
-  optimization: isDev
-    ? {}
-    : {
-        splitChunks: {
-          chunks: 'all',
-          cacheGroups: {
-            vendor: {
-              test: /[\\/]node_modules[\\/]/,
-              name: 'vendors',
-              chunks: 'all',
-            },
-          },
-        },
-        runtimeChunk: 'single',
-      },
+  optimization: {},
 
   devServer: {
     static: {

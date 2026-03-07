@@ -54,9 +54,8 @@ export const setPersonConfigCalendar = (personId, field, value, runFunction=()=>
 }
 
 
-//This setCalendarViewRange call causes the browser to freeze ... probably due to the local redux update when the timer is going off every 10 seconds.
-// export const setCalendarViewRange = (viewRange) => {
-//     return dispatch => {
-// 				dispatch({ type: types.PERSON_CONFIG_CALENDAR_VIEW_RANGE_SET, payload: viewRange });
-// 		}
-// }
+export const setCalendarViewRange = (viewRange) => {
+    return dispatch => {
+        dispatch({ type: types.PERSON_CONFIG_CALENDAR_VIEW_RANGE_SET, payload: viewRange });
+    }
+}

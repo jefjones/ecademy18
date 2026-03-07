@@ -1,5 +1,5 @@
 ﻿import { useState } from 'react'
-import { navigate, navigateReplace, goBack } from './'
+import { useNavigate } from 'react-router-dom'
 import styles from './EditorEditList.css'
 import classes from 'classnames'
 import EditFilterModal from '../../components/EditFilterModal'
@@ -21,6 +21,9 @@ import L from '../../components/PageLanguage'
 */
 
 function EditorEditList(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [acceptedEditDetailId, setAcceptedEditDetailId] = useState(0)
   const [isAuthorAcceptedEdit, setIsAuthorAcceptedEdit] = useState(false)
   const [editDifferenceView, setEditDifferenceView] = useState(false)

@@ -1,9 +1,9 @@
 ﻿import { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import globalStyles from '../../utils/globalStyles.css'
+import * as globalStyles from '../../utils/globalStyles.css'
 const p = 'globalStyles'
 import L from '../../components/PageLanguage'
-import styles from './UserAddView.css'
+import * as styles from './UserAddView.css'
 import classes from 'classnames'
 import InputText from '../../components/InputText'
 import MyFrequentPlaces from '../../components/MyFrequentPlaces'
@@ -338,7 +338,7 @@ function UserAddView(props) {
   								<hr />
                   </div>
   								{userPersonId &&
-  										<TextDisplay label={<L p={p} t={`eCademyApp username`}/>} text={user.username} hideIfEmpty={true} textClassName={styles.red}
+  										<TextDisplay label={<L p={p} t={`eCademyApp username`}/>} text={user.username} hideIfEmpty={true} textClassName={styles.txtRed}
   												salta={accessRoles.admin ? () => login({username: user.username, clave: '*&^', salta: personId }, '', 'salta') : () => {}}/>
   								}
   								<div className={classes(styles.moreLeft, styles.headLabel)}><L p={p} t={`Grade level range:`}/></div>

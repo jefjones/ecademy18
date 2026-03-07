@@ -338,3 +338,121 @@ export const removeStudentDocumentFile = (personId, studentDocumentId) => {
         })
     }
 }
+export const initRegistration = (personId) => {
+    return dispatch => {
+        return fetch(`${apiHost}ebi/registration/init/${personId}`, {
+            method: 'post',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Credentials' : 'true',
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Methods": "GET,POST,DELETE,HEAD,PUT,OPTIONS",
+                "Access-Control-Allow-Headers": "Content-type,Accept,X-Custom-Header",
+                "Authorization": "Bearer " + localStorage.getItem("authToken"),
+            },
+        })
+        .then(response => {
+            if (response.status >= 200 && response.status < 300) {
+                return response.json()
+            } else {
+                const error = new Error(response.statusText)
+                error.response = response
+                throw error
+            }
+        })
+        .then(response => {
+            dispatch({ type: types.REGISTRATION_INIT, payload: response })
+        })
+    }
+}
+
+export const updateRegStudent = (personId, student, studentPersonId, isDelete) => {
+    return dispatch => {
+        return fetch(`${apiHost}ebi/registration/student/${personId}`, {
+            method: 'post',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Credentials' : 'true',
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Methods": "GET,POST,DELETE,HEAD,PUT,OPTIONS",
+                "Access-Control-Allow-Headers": "Content-type,Accept,X-Custom-Header",
+                "Authorization": "Bearer " + localStorage.getItem("authToken"),
+            },
+            body: JSON.stringify({ student, studentPersonId, isDelete }),
+        })
+        .then(response => {
+            if (response.status >= 200 && response.status < 300) {
+                return response.json()
+            } else {
+                const error = new Error(response.statusText)
+                error.response = response
+                throw error
+            }
+        })
+        .then(response => {
+            dispatch({ type: types.REGISTRATION_STUDENT, payload: response })
+        })
+    }
+}
+
+export const updateBillingPreference = (personId, billing) => {
+    return dispatch => {
+        return fetch(`${apiHost}ebi/registration/billingPreference/${personId}`, {
+            method: 'post',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Credentials' : 'true',
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Methods": "GET,POST,DELETE,HEAD,PUT,OPTIONS",
+                "Access-Control-Allow-Headers": "Content-type,Accept,X-Custom-Header",
+                "Authorization": "Bearer " + localStorage.getItem("authToken"),
+            },
+            body: JSON.stringify(billing),
+        })
+        .then(response => {
+            if (response.status >= 200 && response.status < 300) {
+                return response.json()
+            } else {
+                const error = new Error(response.statusText)
+                error.response = response
+                throw error
+            }
+        })
+        .then(response => {
+            dispatch({ type: types.REGISTRATION_BILLING_PREFERENCE, payload: response })
+        })
+    }
+}
+
+export const updatePayment = (personId, payment) => {
+    return dispatch => {
+        return fetch(`${apiHost}ebi/registration/payment/${personId}`, {
+            method: 'post',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Credentials' : 'true',
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Methods": "GET,POST,DELETE,HEAD,PUT,OPTIONS",
+                "Access-Control-Allow-Headers": "Content-type,Accept,X-Custom-Header",
+                "Authorization": "Bearer " + localStorage.getItem("authToken"),
+            },
+            body: JSON.stringify(payment),
+        })
+        .then(response => {
+            if (response.status >= 200 && response.status < 300) {
+                return response.json()
+            } else {
+                const error = new Error(response.statusText)
+                error.response = response
+                throw error
+            }
+        })
+        .then(response => {
+            dispatch({ type: types.REGISTRATION_PAYMENT, payload: response })
+        })
+    }
+}

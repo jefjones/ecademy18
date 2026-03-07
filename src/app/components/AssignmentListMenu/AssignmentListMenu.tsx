@@ -1,5 +1,5 @@
 ﻿import { useState } from 'react'
-import { navigate, navigateReplace, goBack } from './'
+import { useNavigate } from 'react-router-dom'
 import * as globalStyles from '../../utils/globalStyles.css'
 import psPlus from '../../assets/ps_plus.png'
 import styles from './AssignmentListMenu.css'
@@ -15,6 +15,9 @@ const p = 'component'
 import L from '../../components/PageLanguage'
 
 function AssignmentListMenu(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [isShowingPenspringFile_assignment, setIsShowingPenspringFile_assignment] = useState(true)
   const [sendAssignment, setSendAssignment] = useState({})
   const [isShowingFileUpload_assignment, setIsShowingFileUpload_assignment] = useState(true)

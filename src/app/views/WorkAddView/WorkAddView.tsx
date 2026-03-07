@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import styles from './WorkAddView.css'
-import globalStyles from '../../utils/globalStyles.css'
+import * as styles from './WorkAddView.css'
+import * as globalStyles from '../../utils/globalStyles.css'
 const p = 'globalStyles'
 import L from '../../components/PageLanguage'
 import OneFJefFooter from '../../components/OneFJefFooter'

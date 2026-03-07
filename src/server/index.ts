@@ -20,7 +20,19 @@ const {APP_WEB_BASE_PATH, NODE_ENV} = process.env;
 
 // middleware
 app.use(compression());
-app.use(helmet());
+app.use(helmet({
+  contentSecurityPolicy: {
+    directives: {
+      defaultSrc: ["'self'"],
+      scriptSrc: ["'self'", "'unsafe-inline'", "https://www.google.com", "https://www.gstatic.com"],
+      styleSrc: ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com"],
+      fontSrc: ["'self'", "https://fonts.gstatic.com"],
+      imgSrc: ["'self'", "data:", "blob:"],
+      connectSrc: ["'self'", "ws:", "wss:"],
+      frameSrc: ["'self'", "https://www.google.com"],
+    },
+  },
+}));
 
 // Suggest HTTPS in Production
 if(NODE_ENV==="production") {

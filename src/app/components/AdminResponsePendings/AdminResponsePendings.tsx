@@ -1,5 +1,5 @@
 ﻿import { useState } from 'react'
-import { navigate, navigateReplace, goBack } from './'
+import { useNavigate } from 'react-router-dom'
 import globalStyles from '../../utils/globalStyles.css'
 import styles from './AdminResponsePendings.css'
 import TextDisplay from '../TextDisplay'
@@ -12,6 +12,9 @@ const p = 'component'
 import L from '../../components/PageLanguage'
 
 function AdminResponsePendings(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [isShowingModal_safety, setIsShowingModal_safety] = useState(false)
   const [isShowingModal_curbside, setIsShowingModal_curbside] = useState(false)
   const [alertReviewType, setAlertReviewType] = useState('')

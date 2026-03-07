@@ -1,5 +1,5 @@
 ﻿import { useState } from 'react'
-import { navigate, navigateReplace, goBack } from './'
+import { useNavigate } from 'react-router-dom'
 import styles from './WorkTools.css'
 import classes from 'classnames'
 import Icon from '../../components/Icon'
@@ -9,6 +9,9 @@ const p = 'component'
 import L from '../../components/PageLanguage'
 
 function WorkTools(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [isShowingModal_work, setIsShowingModal_work] = useState(false)
   const [isShowingModal_workOrSection, setIsShowingModal_workOrSection] = useState(false)
 

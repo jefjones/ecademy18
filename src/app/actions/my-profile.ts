@@ -35,19 +35,78 @@ export const getMyProfile = (personId) => {
 
 export const setMyProfile = (personId, field, value) => {
     return dispatch => {
-				dispatch({ type: types.MY_PROFILE_UPDATE, payload: {field, value} })
-		    fetch(`${apiHost}ebi/myProfile/${personId}`, {
-		        method: 'post',
-		        headers: {
-		            'Accept': 'application/json',
-		            'Content-Type': 'application/json',
-		            'Access-Control-Allow-Credentials' : 'true',
-		            "Access-Control-Allow-Origin": "*",
-		            "Access-Control-Allow-Methods": "GET,POST,DELETE,HEAD,PUT,OPTIONS",
-		            "Access-Control-Allow-Headers": "Content-type,Accept,X-Custom-Header",
-		            "Authorization": "Bearer " + localStorage.getItem("authToken"),
-		        },
-		        body: JSON.stringify({personId, field, value}),
-		    })
-		}
+        dispatch({ type: types.MY_PROFILE_UPDATE, payload: {field, value} })
+        fetch(`${apiHost}ebi/myProfile/${personId}`, {
+            method: 'post',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Credentials' : 'true',
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Methods": "GET,POST,DELETE,HEAD,PUT,OPTIONS",
+                "Access-Control-Allow-Headers": "Content-type,Accept,X-Custom-Header",
+                "Authorization": "Bearer " + localStorage.getItem("authToken"),
+            },
+            body: JSON.stringify({personId, field, value}),
+        })
+    }
+}
+
+export const updateMyProfile = (user) => {
+    return dispatch => {
+        return fetch(`${apiHost}ebi/myProfile/update/${user.personId}`, {
+            method: 'post',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Credentials' : 'true',
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Methods": "GET,POST,DELETE,HEAD,PUT,OPTIONS",
+                "Access-Control-Allow-Headers": "Content-type,Accept,X-Custom-Header",
+                "Authorization": "Bearer " + localStorage.getItem("authToken"),
+            },
+            body: JSON.stringify(user),
+        })
+        .then(response => {
+            if (response.status >= 200 && response.status < 300) {
+                return response.json()
+            } else {
+                const error = new Error(response.statusText)
+                error.response = response
+                throw error
+            }
+        })
+        .then(response => {
+            dispatch({ type: types.MY_PROFILE_INIT, payload: response })
+        })
+    }
+}
+
+export const removeProfilePicture = (personId, profilePictureId) => {
+    return dispatch => {
+        return fetch(`${apiHost}ebi/myProfile/profilePicture/${personId}/${profilePictureId}`, {
+            method: 'delete',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Credentials' : 'true',
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Methods": "GET,POST,DELETE,HEAD,PUT,OPTIONS",
+                "Access-Control-Allow-Headers": "Content-type,Accept,X-Custom-Header",
+                "Authorization": "Bearer " + localStorage.getItem("authToken"),
+            },
+        })
+        .then(response => {
+            if (response.status >= 200 && response.status < 300) {
+                return response.json()
+            } else {
+                const error = new Error(response.statusText)
+                error.response = response
+                throw error
+            }
+        })
+        .then(response => {
+            dispatch({ type: types.MY_PROFILE_UPDATE, payload: response })
+        })
+    }
 }

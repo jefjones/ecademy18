@@ -1,5 +1,5 @@
 ﻿import { useState } from 'react'
-import { navigate, navigateReplace, goBack } from './'
+import { useNavigate } from 'react-router-dom'
 import styles from './StudentListOnly.css'
 import DateMoment from '../DateMoment'
 import EditTable from '../EditTable'
@@ -8,6 +8,9 @@ const p = 'component'
 import L from '../../components/PageLanguage'
 
 function StudentListOnly(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [isShowingModal_duplicate, setIsShowingModal_duplicate] = useState(false)
   const [isShowingModal_hasSchedule, setIsShowingModal_hasSchedule] = useState(false)
   const [studentPersonId, setStudentPersonId] = useState(students[0].personId)

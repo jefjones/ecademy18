@@ -1,6 +1,5 @@
 ﻿import { useState } from 'react'
-import { Link } from 'react-router-dom'
-import { navigate, navigateReplace, goBack } from './'
+import { Link, useNavigate } from 'react-router-dom'
 import {apiHost} from '../../api_host'
 import axios from 'axios'
 import styles from './SchoolSetup.css'
@@ -19,6 +18,9 @@ const p = 'component'
 import L from '../../components/PageLanguage'
 
 function SchoolSetup(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [expanded, setExpanded] = useState(false)
   const [adminPersonId, setAdminPersonId] = useState('')
   const [isShowingModal_remove, setIsShowingModal_remove] = useState(false)

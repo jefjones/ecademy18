@@ -127,6 +127,38 @@ export const removeStudentResponse = (personId, studentAssignmentResponseId, del
 
 export const setAssignmentEditMode = (assignmentId) => {
     return dispatch => {
-				dispatch({type: types.ASSIGNMENT_SCORE_EDIT_MODE_SET, payload: { assignmentId }})
+        dispatch({type: types.ASSIGNMENT_SCORE_EDIT_MODE_SET, payload: { assignmentId }})
+    }
+}
+
+export const saveAssignmentWebsiteLink = (personId, assignmentId, websiteLink) => {
+    return dispatch => {
+        dispatch({type: types.FETCHING_RECORD, payload: {assignments: true} })
+        return fetch(`${apiHost}ebi/assignments/websiteLink/` + personId, {
+            method: 'post',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Credentials' : 'true',
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Methods": "GET,POST,DELETE,HEAD,PUT,OPTIONS",
+                "Access-Control-Allow-Headers": "Content-type,Accept,X-Custom-Header",
+                "Authorization": "Bearer " + localStorage.getItem("authToken"),
+            },
+            body: JSON.stringify({ assignmentId, websiteLink: encodeURIComponent(websiteLink) })
+        })
+        .then(response => {
+            if (response.status >= 200 && response.status < 300) {
+                return response.json()
+            } else {
+                const error = new Error(response.statusText)
+                error.response = response
+                throw error
+            }
+        })
+        .then(response => {
+            dispatch({type: types.FETCHING_RECORD, payload: {assignments: 'ready'} })
+            dispatch({ type: types.ASSIGNMENTS_INIT, payload: response })
+        })
     }
 }

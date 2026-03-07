@@ -1,5 +1,5 @@
 ﻿import { useState } from 'react';  //PropTypes
-import { navigate, navigateReplace, goBack } from './'
+import { useNavigate } from 'react-router-dom'
 import styles from './VolunteerHoursPending.css'
 import EditTable from '../EditTable'
 import DateMoment from '../DateMoment'
@@ -11,6 +11,9 @@ import L from '../../components/PageLanguage'
 
 //If there is only one student, then the studentSchedule will be sent in and print it below the one student.
 function VolunteerHoursPending(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [isShowingModal_delete, setIsShowingModal_delete] = useState(false)
   const [volunteerEventId, setVolunteerEventId] = useState('')
 

@@ -1,5 +1,5 @@
 ﻿import { useEffect, useState } from 'react'
-import { navigate, navigateReplace, goBack } from './'
+import { useNavigate } from 'react-router-dom'
 const p = 'component'
 import L from '../../components/PageLanguage'
 import styles from './AnnouncementList.css'
@@ -18,6 +18,9 @@ import {doSort} from '../../utils/sort'
 import moment from 'moment'
 
 function AnnouncementList(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [announcementId, setAnnouncementId] = useState('')
   const [isShowingModal_remove, setIsShowingModal_remove] = useState(false)
   const [isShowingModal_removeMultiple, setIsShowingModal_removeMultiple] = useState(false)

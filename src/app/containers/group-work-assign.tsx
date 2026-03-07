@@ -35,14 +35,16 @@ const mapStateToProps = (state, props) => {
 
 const bindActionsToDispatch = dispatch => ({
     addOrUpdatePeerGroup: (peerGroup, subGroups) => dispatch(actionPeerGroup.addOrUpdatePeerGroup(peerGroup, subGroups)),
-    deletePeerGroup: (personId, peerGroupId) => dispatch(actionPeerGroup.updatePeerGroup(personId, peerGroupId)),
+    deletePeerGroup: (personId, peerGroupId) => dispatch(actionPeerGroup.deletePeerGroup(personId, peerGroupId)),
     addUpdateGroupWorkAssignAccess: (accessAssigned) => dispatch(actionGroupWorkAssignAccess.addUpdateGroupWorkAssignAccess(accessAssigned)),
     initGroupWorkAssignAccess: (personId, groupId, masterWorkId) => dispatch(actionGroupWorkAssignAccess.init(personId, groupId, masterWorkId)),
     copyPeerGroupGroupWorkAssignAccess: (personId, masterWorkId, previousPeerGroupId) => dispatch(actionGroupWorkAssignAccess.copyPeerGroupGroupWorkAssignAccess(personId, masterWorkId, previousPeerGroupId)),
     getPageLangs: (personId, langCode, page) => dispatch(actionPageLang.getPageLangs(personId, langCode, page)),
 })
-
-
+
+
+
+
 
 function Container(ownProps) {
   const dispatch = useDispatch()

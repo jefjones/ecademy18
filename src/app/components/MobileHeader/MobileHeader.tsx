@@ -1,14 +1,17 @@
 ﻿import { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import styles from './MobileHeader.css'
 import Logo from '../../assets/logos/ecademyapp logo super small no text.png'
 import MainMenu from '../MainMenu'
-import { navigate, navigateReplace, goBack } from './'
 import Idle from '../../utils/Idle'
 import MediaQuery from 'react-responsive'
 const p = 'component'
 import L from '../../components/PageLanguage'
 
 function MobileHeader(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [isShowingModal, setIsShowingModal] = useState(false)
   const [clickedOnCaret, setClickedOnCaret] = useState(false)
   const [isShowingOffline, setIsShowingOffline] = useState(false)

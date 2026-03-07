@@ -291,3 +291,7 @@
 	margin-bottom: 6px;
 	margin-right: 5px;
 }
+
+.notBold {
+	font-weight: normal !important;
+}

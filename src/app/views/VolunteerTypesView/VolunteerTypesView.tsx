@@ -1,9 +1,9 @@
-﻿import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import styles from './VolunteerTypesView.css'
+import * as styles from './VolunteerTypesView.css'
 const p = 'VolunteerTypesView'
 import L from '../../components/PageLanguage'
-import globalStyles from '../../utils/globalStyles.css'
+import * as globalStyles from '../../utils/globalStyles.css'
 import EditTable from '../../components/EditTable'
 import InputText from '../../components/InputText'
 import Icon from '../../components/Icon'
@@ -52,8 +52,8 @@ function VolunteerTypesView(props) {
       if (volunteerTypes && volunteerTypes.length > 0) {
           data = volunteerTypes.map(m => {
               return ([
-  							{value: <a onClick={() => handleEdit(m.volunteerTypeId)}><Icon pathName={'pencil0'} premium={true} className={styles.icon}/></a>},
-                {value: <a onClick={() => handleRemoveItemOpen(m.volunteerTypeId, m.usedIn)}><Icon pathName={'trash2'} premium={true} className={styles.icon}/></a>},
+  							{value: <a onClick={() => handleEdit(m.volunteerTypeId)}><Icon pathName={'pencil0'} premium={true} className={globalStyles.icon}/></a>},
+                {value: <a onClick={() => handleRemoveItemOpen(m.volunteerTypeId, m.usedIn)}><Icon pathName={'trash2'} premium={true} className={globalStyles.icon}/></a>},
   							{value: m.name},
   							{value: m.sequence},
   							{value: m.usedIn && m.usedIn.length},
@@ -83,7 +83,7 @@ function VolunteerTypesView(props) {
   										value={volunteerType.sequence || ''}
   										noBlank={true}
   										options={sequences}
-  										className={styles.dropdown}
+  										className={styles.singleDropDown}
   										onChange={handleChange}/>
   						</div>
               <div className={styles.rowRight}>

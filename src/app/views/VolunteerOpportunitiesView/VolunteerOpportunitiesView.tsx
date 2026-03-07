@@ -1,9 +1,9 @@
-﻿import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import globalStyles from '../../utils/globalStyles.css'
+import * as globalStyles from '../../utils/globalStyles.css'
 const p = 'globalStyles'
 import L from '../../components/PageLanguage'
-import styles from './VolunteerOpportunitiesView.css'
+import * as styles from './VolunteerOpportunitiesView.css'
 import EditTable from '../../components/EditTable'
 import Icon from '../../components/Icon'
 import SelectSingleDropDown from '../../components/SelectSingleDropDown'
@@ -166,7 +166,7 @@ function VolunteerOpportunitiesView(props) {
   																label={<L p={p} t={`Volunteer`}/>}
   																value={volunteerPersonId || ''}
   																options={volunteerList}
-  																className={styles.moreBottomMargin}
+  																className={styles.moreMarginBottom}
   																height={`medium`}
   																onChange={handleChange}/>
   												</div>
@@ -178,12 +178,12 @@ function VolunteerOpportunitiesView(props) {
   														label={<L p={p} t={`Event type`}/>}
   														value={volunteerTypeId || ''}
   														options={volunteerTypes}
-  														className={styles.moreBottomMargin}
+  														className={styles.moreMarginBottom}
   														height={`medium`}
   														onChange={handleChange}/>
   										</div>
   										<div>
-  												<div className={classes(styles.littleLeft, styles.moreTop, styles.row)}>
+  												<div className={classes(globalStyles.littleLeft, styles.moreTop, styles.row)}>
   														<div className={styles.dateRow}>
   																<span className={styles.headerLabel}><L p={p} t={`Date range - From`}/></span>
   																<DateTimePicker id={`fromDate`} value={fromDate} maxDate={toDate} onChange={(event) => changeDate('fromDate', event)}/>

@@ -106,3 +106,6 @@ export const confirmCheckInOrOut = (personId, adminConfirm) => {
     })
     .then(response => dispatch(getCheckInOrOuts(personId)))
 }
+
+export const getReimbursementRequests = getCheckInOrOuts
+export const addReimbursementRequest = addCheckInOrOut

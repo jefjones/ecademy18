@@ -2,7 +2,7 @@ import * as types from '../actions/actionTypes'
 
 export default function(state = [], action) {
     switch(action.type) {
-        case types.GALLERY_liSt_INIT:
+        case types.GALLEY_LIST_INIT:
             return action.payload
 
         default:

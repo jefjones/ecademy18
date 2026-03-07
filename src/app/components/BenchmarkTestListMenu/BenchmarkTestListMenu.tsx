@@ -1,5 +1,5 @@
 ﻿import { useEffect, useState } from 'react'
-import { navigate, navigateReplace, goBack } from './'
+import { useNavigate } from 'react-router-dom'
 import * as globalStyles from '../../utils/globalStyles.css'
 import styles from './BenchmarkTestListMenu.css'
 import classes from 'classnames'
@@ -12,6 +12,9 @@ const p = 'component'
 import L from '../../components/PageLanguage'
 
 function BenchmarkTestListMenu(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [isInit, setIsInit] = useState(true)
   const [benchmarkTestId, setBenchmarkTestId] = useState(benchmarkTest.benchmarkTestId)
   const [selectedSharedTeachers, setSelectedSharedTeachers] = useState(undefined)

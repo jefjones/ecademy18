@@ -1,6 +1,5 @@
 ﻿import { useState } from 'react';  //PropTypes
-import { Link } from 'react-router-dom'
-import { navigate, navigateReplace, goBack } from './'
+import { Link, useNavigate } from 'react-router-dom'
 import styles from './StudentListTable.css'
 import globalStyles from '../../utils/globalStyles.css'
 import TableVirtualFast from '../../components/TableVirtualFast'
@@ -15,6 +14,9 @@ import L from '../../components/PageLanguage'
 
 //If there is only one student, then the studentSchedule will be sent in and print it below the one student.
 function StudentListTable(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [sortByHeadings, setSortByHeadings] = useState({
 								sortField: '',
 								isAsc: '',

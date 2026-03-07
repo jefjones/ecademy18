@@ -1,7 +1,7 @@
 ﻿import { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import MyGroupsReportView from '../views/MyGroupsReportView'
-import actionGroups from '../actions/groups'
+import * as actionGroups from '../actions/groups'
 import * as actionPageLang from '../actions/language-list'
 
 import { selectMe, selectGroups } from '../store'
@@ -64,7 +64,8 @@ const bindActionsToDispatch = (dispatch) => ({
     initGroups: (personId) => dispatch(actionGroups.init(personId)),
     getPageLangs: (personId, langCode, page) => dispatch(actionPageLang.getPageLangs(personId, langCode, page)),
 })
-
+
+
 
 function Container(ownProps) {
   const dispatch = useDispatch()

@@ -1,9 +1,9 @@
 
-import styles from './SystemFeaturesView.css'
+import * as styles from './SystemFeaturesView.css'
 const p = 'SystemFeaturesView'
 import L from '../../components/PageLanguage'
 import penspringSmall from '../../assets/Penspring_small.png'
-import globalStyles from '../../utils/globalStyles.css'
+import * as globalStyles from '../../utils/globalStyles.css'
 import OneFJefFooter from '../../components/OneFJefFooter'
 import Checkbox from '../../components/Checkbox'
 

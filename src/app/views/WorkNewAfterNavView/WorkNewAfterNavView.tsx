@@ -1,8 +1,8 @@
 ﻿
-import styles from './WorkNewAfterNavView.css'
+import * as styles from './WorkNewAfterNavView.css'
 const p = 'WorkNewAfterNavView'
 import L from '../../components/PageLanguage'
-import globalStyles from '../../utils/globalStyles.css'
+import * as globalStyles from '../../utils/globalStyles.css'
 import { Link } from 'react-router-dom'
 import WorkSummary from '../../components/WorkSummary'
 import Accordion from '../../components/ListAccordion/Accordion/Accordion'

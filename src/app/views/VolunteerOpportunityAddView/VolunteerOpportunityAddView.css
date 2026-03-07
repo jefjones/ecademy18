@@ -298,6 +298,10 @@
 	margin-right: 5px;
 }
 
+.notBold {
+	font-weight: normal !important;
+}
+
 .littleBottom {
 	margin-bottom: 4px;
 }

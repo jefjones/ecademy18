@@ -170,3 +170,6 @@ export const removeFilterGroup = (personId, behaviorIncidentFilterGroupId) => {
         })
     }
 }
+export const setBehaviorIncidentEdit = (behaviorIncidentList, behaviorIncidentId, behaviorIncidentTypes) => {
+    return { type: types.BEHAVIOR_INCIDENT_EDIT, payload: {behaviorIncidentList, behaviorIncidentId, behaviorIncidentTypes} }
+}

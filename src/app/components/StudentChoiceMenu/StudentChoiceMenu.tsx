@@ -1,5 +1,5 @@
 ﻿
-import { navigate, navigateReplace, goBack } from './'
+import { useNavigate } from 'react-router-dom'
 const p = 'StudentScheduleView'
 import L from '../../components/PageLanguage'
 import styles from './StudentChoiceMenu.css'
@@ -9,6 +9,9 @@ import Icon from '../Icon'
 import { withAlert } from 'react-alert'
 
 function StudentChoiceMenu(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const {className="", personId, studentPersonId, studentType, personConfig, userPersonClipboard, companyConfig, excludeClipboard,
                   noBackground, getRegistrationByStudent} = props
   				let hasChosen = !studentPersonId || studentPersonId === guidEmpty ? false : true

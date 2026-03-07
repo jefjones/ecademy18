@@ -1,5 +1,5 @@
 ﻿import { useEffect, useState } from 'react'
-import { navigate, navigateReplace, goBack } from './'
+import { useNavigate } from 'react-router-dom'
 import styles from './Loading.css'
 import classes from 'classnames'
 import ButtonWithIcon from '../ButtonWithIcon'
@@ -7,6 +7,9 @@ const p = 'component'
 import L from '../../components/PageLanguage'
 
 function Loading(props) {
+  const navigate = useNavigate()
+  const navigateReplace = (navPath) => navigate(navPath, { replace: true })
+  const goBack = () => navigate(-1)
   const [error, setError] = useState('')
   const [indicator, setIndicator] = useState('...')
   const [timerId, setTimerId] = useState(null)
