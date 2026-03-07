@@ -21,8 +21,10 @@ import TextDisplay from '../../components/TextDisplay'
 import Icon from '../../components/Icon'
 import TextEditorTools from '../../components/TextEditorTools'
 import ContextEditReview from '../../components/ContextEditReview'
-import SlidingPane from 'material-ui/Drawer'; //http://www.material-ui.com
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
+// Local stubs replacing unmaintained material-ui v0.x
+const MuiThemeProvider = ({children}: {children?: any}) => <>{children}</>
+const SlidingPane = ({open, width, children}: {open?: boolean, width?: number, children?: any}) =>
+  open ? <div style={{width, position:'fixed', right:0, top:0, bottom:0, background:'white', zIndex:1000, overflowY:'auto'}}>{children}</div> : null
 import classes from 'classnames'
 import * as serviceEditReview from '../../services/edit-review'
 import debounce from 'lodash/debounce'

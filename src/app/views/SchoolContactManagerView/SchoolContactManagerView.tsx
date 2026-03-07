@@ -69,7 +69,7 @@ function SchoolContactManagerView(props) {
   const [openSearch, setOpenSearch] = useState('')
   const [showingInfoWindow, setShowingInfoWindow] = useState(false)
   const [activeMarker, setActiveMarker] = useState({})
-  const [selectedPlace, setSelectedPlace] = useState({}          //Shows the infoWindow to the selected place upon a marker);
+  const [selectedPlace, setSelectedPlace] = useState({}) // Shows the infoWindow to the selected place upon a marker
   const [expanded, setExpanded] = useState(undefined)
   const [files, setFiles] = useState(undefined)
   const [selectedFile, setSelectedFile] = useState(undefined)
@@ -336,7 +336,10 @@ function SchoolContactManagerView(props) {
 
   const handleShowGPSClose = () => {
     return setIsShowingModal_gps(false); setSchoolContactChosen({})
-    
+  }
+
+  return null
+}
 
 export default GoogleApiWrapper({
   apiKey: 'AIzaSyBVIYKu3n6REqA8Xr48NdApEvIon1ane8M'

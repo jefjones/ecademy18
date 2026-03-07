@@ -19,8 +19,7 @@ function SchoolDaysSettingsView(props) {
   const [saturday, setSaturday] = useState(props.companyConfig.saturday)
   const [sunday, setSunday] = useState(props.companyConfig.sunday)
 
-  const {isShowingModal} = props
-      	return (
+  return (
   	        <div className={styles.container}>
   	            <div className={globalStyles.pageTitle}>
   	                <L p={p} t={`School Days Settings`}/>

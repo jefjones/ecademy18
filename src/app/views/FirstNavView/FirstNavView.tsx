@@ -430,9 +430,7 @@ function FirstNavView(props) {
     return props.togglePickupParkedShow(props.personId)
   }
 
-  const resetCache = (etCache(personId) => {
-    styles.alertText
-  }
+  const resetCache = () => {}
 
   const {me, personId, firstName, counts={}, removeCalendarEvent, students, facilitators, mentors, removeLearner, studentChosenSession,
   				 				removeMentor, removeCourse, accessRoles={}, calendarEvents, removeAssessment, gradeLevels, registration, initRegistration,
@@ -445,7 +443,7 @@ function FirstNavView(props) {
   								addPreviousStudentThisYear, schoolYears, getCountsMainMenu, volunteerEvents, removeVolunteerHours, getVolunteerEvents,
   								adminResponsePendings, confirmSafetyAlert, confirmCheckInOrOut, confirmVolunteerHour, getStudentSchedule, getAbsenceUnexcused,
   								finalizeNonLiahonaRegistration, getRegistrationByStudent, isFetchingRecord, setStudentCourseAssignNameSearch,
-                  pickupLane={}, isShowingModal_document, pickupLaneFileUpload, setStudentChosenSession, getTheStudent,
+                  pickupLane={}, setStudentChosenSession, getTheStudent,
                   workSummary, groupSummary, deleteWork, deleteChapter, updatePersonConfig, setWorkCurrentSelected, setGroupCurrentSelected,
                   deleteGroup, groupSummaries, editorInvitePending, deleteInvite, acceptInvite, resendInvite } = props
   

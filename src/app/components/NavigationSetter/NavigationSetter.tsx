@@ -8,7 +8,7 @@
  */
 import { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { setNavigate } from '../utils/navigate'
+import { setNavigate } from '../../utils/navigate'
 
 const NavigationSetter: React.FC = () => {
   const nav = useNavigate()

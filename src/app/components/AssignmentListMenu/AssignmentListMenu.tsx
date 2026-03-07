@@ -16,8 +16,7 @@ import L from '../../components/PageLanguage'
 
 function AssignmentListMenu(props) {
   const [isShowingPenspringFile_assignment, setIsShowingPenspringFile_assignment] = useState(true)
-  const [sendAssignment, setSendAssignment] = useState(assignment)
-  const [assignment, setAssignment] = useState({})
+  const [sendAssignment, setSendAssignment] = useState({})
   const [isShowingFileUpload_assignment, setIsShowingFileUpload_assignment] = useState(true)
   const [isShowingWebsiteLink_assignment, setIsShowingWebsiteLink_assignment] = useState(true)
   const [isShowingModal_delete, setIsShowingModal_delete] = useState(true)

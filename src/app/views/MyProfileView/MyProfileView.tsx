@@ -31,7 +31,7 @@ function MyProfileView(props) {
   const [errorLastName, setErrorLastName] = useState(undefined)
   const [errorUsername, setErrorUsername] = useState(undefined)
   const [errorPhone, setErrorPhone] = useState(undefined)
-  const [user, setUser] = useState(undefined)
+  const [userEdit, setUserEdit] = useState(undefined)
   const [translateLanguageIds, setTranslateLanguageIds] = useState(undefined)
   const [genreIds, setGenreIds] = useState(undefined)
   const [errors, setErrors] = useState(undefined)
@@ -93,13 +93,13 @@ function MyProfileView(props) {
 
   const handleSelectedLanguages = (translateLanguageIds) => {
     
-          setUser({ ...user, translateLanguageIds})
+          setUserEdit({ ...user, translateLanguageIds})
       
   }
 
   const handleSelectedGenres = (genreIds) => {
     
-          setUser({ ...user, genreIds})
+          setUserEdit({ ...user, genreIds})
       
   }
 

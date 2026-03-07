@@ -61,10 +61,9 @@ function GroupWorkAssignView(props) {
   }
   const handlePeerGroupInfoOpen = () => {
     return setIsShowingPeerGroupInfo(true)
-    
+  }
 
   let {groupSummary, workSummary, subGroupCountOptions} = props
-            let {subGroupCountError, accessAssigned, unassignedMembers, hasRemainderMessage, memberToBeAssigned,peerGroupOpen,
   
             return (
               <div className={styles.container}>

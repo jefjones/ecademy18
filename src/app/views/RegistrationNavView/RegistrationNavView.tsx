@@ -397,7 +397,7 @@ function RegistrationNavView(props) {
 
   const handleRadioGroup = (hasOneAcademyStudent) => {
     return setHasOneAcademyStudent(hasOneAcademyStudent)
-    
+  }
 
   const {personId, removeLearner, companyConfig={}, relationTypes, registrationCustodies, schoolYearId, schoolYears, showSteps, personConfig} = props
   				 let {registration={}} = props

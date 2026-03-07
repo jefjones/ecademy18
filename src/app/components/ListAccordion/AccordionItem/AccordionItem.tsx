@@ -1,7 +1,7 @@
 import cx from 'classnames'
 import { useEffect, useState } from 'react'
 import ReactDOM from 'react-dom'
-import uuid from 'uuid'
+const uuid = () => crypto.randomUUID()
 import styles from './styles.css'
 import AccordionItemBody from '../AccordionItemBody'
 import AccordionItemTitle from '../AccordionItemTitle'

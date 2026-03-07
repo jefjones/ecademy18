@@ -10,8 +10,6 @@ import MobileHeader from '../../components/MobileHeader'
 import FirstNavView from '../FirstNavView'
 import CalendarAndEventsView from '../CalendarAndEventsView'
 import AdminResponsePendings from '../../components/AdminResponsePendings'
-import ReactHintFactory from 'react-hint'
-const ReactHint = ReactHintFactory(React)
 import classes from 'classnames'
 
 // AppView — wrapped in a functional component to access the useLocation hook

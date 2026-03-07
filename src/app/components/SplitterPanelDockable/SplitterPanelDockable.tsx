@@ -96,12 +96,6 @@ function SplitterPanelDockable(props) {
       
   }, [])
 
-  const dragHandle = (
-          <div style={dragHandleStyle}
-               onTouchStart={this.onTouchStart} onTouchMove={this.onTouchMove}
-               onTouchEnd={this.onTouchEnd} onTouchCancel={this.onTouchEnd} />) => {
-    return 
-  }
 
   const sidebarStyle = {...defaultStyles.sidebar, ...props.styles.sidebar}
       const contentStyle = {...defaultStyles.content, ...props.styles.content}
