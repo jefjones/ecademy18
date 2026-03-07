@@ -1,4 +1,4 @@
-import styles from './RadioGroup.css'
+import * as styles from './RadioGroup.css'
 import classes from 'classnames'
 import tapOrClick from 'react-tap-or-click'
 import Required from '../Required'

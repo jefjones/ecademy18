@@ -1,5 +1,5 @@
 import 'react'
-import styles from './TabPage.css'
+import * as styles from './TabPage.css'
 import classes from 'classnames'
 import SelectSingleDropDown from '../SelectSingleDropDown'
 

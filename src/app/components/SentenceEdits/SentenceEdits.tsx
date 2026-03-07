@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import styles from './SentenceEdits.css'
+import * as styles from './SentenceEdits.css'
 import classes from 'classnames'
 import ConfigModal from '../../components/ConfigModal'
 import MessageModal from '../../components/MessageModal'

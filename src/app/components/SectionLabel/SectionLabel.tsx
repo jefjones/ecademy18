@@ -1,4 +1,4 @@
-import styles from './SectionLabel.css'
+import * as styles from './SectionLabel.css'
 
 export const SectionLabel = ({mainLabel, addOnLabel, subLabel, mainStyle, subStyle}) => (
     <div className={styles.container}>

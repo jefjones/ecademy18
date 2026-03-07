@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import styles from './EditTools.css'
+import * as styles from './EditTools.css'
 import MenuEditModes from '../MenuEditModes'
 import MenuInline from '../MenuInline'
 import classes from 'classnames'

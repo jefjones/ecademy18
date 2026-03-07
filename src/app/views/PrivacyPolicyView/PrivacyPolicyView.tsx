@@ -1,7 +1,7 @@
-﻿
+
 import { Link } from 'react-router-dom'
-import styles from './PrivacyPolicyView.css'
-import globalStyles from '../../utils/globalStyles.css'
+import * as styles from './PrivacyPolicyView.css'
+import * as globalStyles from '../../utils/globalStyles.css'
 import Logo from '../../assets/logos/eCADEMYapp_Logo_vertical.png'
 import OneFJefFooter from '../../components/OneFJefFooter'
 

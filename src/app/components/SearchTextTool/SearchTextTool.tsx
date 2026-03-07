@@ -1,6 +1,6 @@
-﻿import { useState } from 'react'
+import { useState } from 'react'
 import classes from 'classnames'
-import styles from './SearchTextTool.css'
+import * as styles from './SearchTextTool.css'
 import InputText from '../InputText/InputText'
 import Icon from '../Icon'
 const p = 'component'

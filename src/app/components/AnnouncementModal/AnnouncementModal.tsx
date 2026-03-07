@@ -1,8 +1,8 @@
-﻿  //PropTypes
+  //PropTypes
 import { useNavigate } from 'react-router-dom'
 const p = 'component'
 import L from '../../components/PageLanguage'
-import styles from './AnnouncementModal.css'
+import * as styles from './AnnouncementModal.css'
 import {ModalContainer, ModalDialog} from '../react-modal-dialog/lib/index'
 import TextDisplay from '../TextDisplay'
 import LinkDisplay from '../LinkDisplay'

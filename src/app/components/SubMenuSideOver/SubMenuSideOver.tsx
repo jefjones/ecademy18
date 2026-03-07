@@ -1,4 +1,4 @@
-﻿import { useEffect, useState } from 'react';import styles from './SubMenuSideOver.css'
+import { useEffect, useState } from 'react';import * as styles from './SubMenuSideOver.css'
 import Icon from '../Icon/Icon'
 import classNames from 'classnames'
 import workMenuIcon from '../../assets/workMenuIcon.png'

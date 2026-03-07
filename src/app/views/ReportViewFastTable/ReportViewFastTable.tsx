@@ -1,6 +1,6 @@
-﻿import React, {Component} from 'react'
+import React, {Component} from 'react'
 import { Column, Table } from 'react-virtualized'
-import styles from './ReportViewFastTable.css'
+import * as styles from './ReportViewFastTable.css'
 import MemberCard from '../../components/MemberCard/MemberCard'
 import {doSort} from '../../utils/sort'
 import {formatDayShortMonthYear} from '../../utils/dateFormat'

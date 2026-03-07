@@ -1,4 +1,4 @@
-import styles from './InputSelect.css'
+import * as styles from './InputSelect.css'
 import classNames from 'classnames'
 
 export default ({label, id, onChange, value, error, options, height, className=""}) => (

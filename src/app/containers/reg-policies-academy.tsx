@@ -1,7 +1,7 @@
-﻿import { useEffect } from 'react'
+import { useEffect } from 'react'
 import RegPoliciesAcademyView from '../views/RegPoliciesAcademyView'
 import * as actionMyVisitedPages from '../actions/my-visited-pages'
-import { useSelector, useDispatch } from 'react-redux'
+import { useSelector, shallowEqual, useDispatch } from 'react-redux'
 
 const mapStateToProps = (state, props) => {
     return {
@@ -15,7 +15,7 @@ const bindActionsToDispatch = dispatch => ({
 
 function Container(ownProps) {
   const dispatch = useDispatch()
-  const storeData = useSelector(state => mapStateToProps(state, ownProps))
+  const storeData = useSelector(state => mapStateToProps(state, ownProps), shallowEqual)
   const storeActions = bindActionsToDispatch(dispatch)
   const props = { ...ownProps, ...storeData, ...storeActions }
 

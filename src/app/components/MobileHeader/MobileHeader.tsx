@@ -1,6 +1,6 @@
-﻿import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import styles from './MobileHeader.css'
+import * as styles from './MobileHeader.css'
 import Logo from '../../assets/logos/ecademyapp logo super small no text.png'
 import MainMenu from '../MainMenu'
 import Idle from '../../utils/Idle'

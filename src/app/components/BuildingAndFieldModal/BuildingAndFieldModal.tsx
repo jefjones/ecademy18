@@ -1,5 +1,5 @@
-﻿
-import styles from './BuildingAndFieldModal.css'
+
+import * as styles from './BuildingAndFieldModal.css'
 import {ModalContainer, ModalDialog} from '../react-modal-dialog/lib/index'
 import classes from 'classnames'
 import InputText from '../InputText'

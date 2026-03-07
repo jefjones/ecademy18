@@ -1,4 +1,4 @@
-import styles from './QuestionLabel.css'
+import * as styles from './QuestionLabel.css'
 
 export default ({label}) => {
   return (

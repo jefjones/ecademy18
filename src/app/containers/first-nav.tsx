@@ -1,5 +1,5 @@
-﻿
-import { useSelector, useDispatch } from 'react-redux'
+
+import { useSelector, shallowEqual, useDispatch } from 'react-redux'
 import LangContext from '../context/LangContext'
 import FirstNavView from '../views/FirstNavView'
 import { Provider as AlertProvider } from 'react-alert'
@@ -256,7 +256,7 @@ const alertOptions = {
 
 function Container(ownProps) {
   const dispatch = useDispatch()
-  const storeData = useSelector(state => mapStateToProps(state, ownProps))
+  const storeData = useSelector(state => mapStateToProps(state, ownProps), shallowEqual)
   const storeActions = bindActionsToDispatch(dispatch)
   const props = { ...ownProps, ...storeData, ...storeActions }
 

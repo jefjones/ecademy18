@@ -1,4 +1,9 @@
 module.exports = {
+  // 'unambiguous' lets Babel detect CJS (require/exports) vs ESM (import/export)
+  // from the file content. Without this, Babel assumes ESM and injects
+  // `import "core-js/..."` polyfills into CJS files — webpack 5 then treats
+  // those CJS files as ESM modules where `exports` is not defined.
+  sourceType: 'unambiguous',
   presets: [
     [
       '@babel/preset-env',

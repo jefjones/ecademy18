@@ -1,5 +1,5 @@
-﻿import { useState } from 'react';  //PropTypes
-import styles from './CarpoolRequestResponseModal.css'
+import { useState } from 'react';  //PropTypes
+import * as styles from './CarpoolRequestResponseModal.css'
 import {ModalContainer, ModalDialog} from '../react-modal-dialog/lib/index'
 import InputText from '../InputText'
 import TextDisplay from '../TextDisplay'

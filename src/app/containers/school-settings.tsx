@@ -1,4 +1,4 @@
-﻿import { useEffect } from 'react'
+import { useEffect } from 'react'
 import SchoolSettingsView from '../views/SchoolSettingsView'
 import NotFound from '../components/Error'
 import * as actionPageLang from '../actions/language-list'
@@ -7,7 +7,7 @@ import * as actionLogin from '../actions/login'
 import * as actionCompanyDocuments from '../actions/company-documents'
 import * as actionMyFrequentPlaces from '../actions/my-frequent-places'
 import * as actionMyVisitedPages from '../actions/my-visited-pages'
-import { useSelector, useDispatch } from 'react-redux'
+import { useSelector, shallowEqual, useDispatch } from 'react-redux'
 import {selectMe, selectMyFrequentPlaces, selectCompanyConfig, selectSchoolYears, selectUsers, selectIntervals, selectAccessRoles} from '../store'
 
 const mapStateToProps = (state, props) => {
@@ -44,7 +44,7 @@ const bindActionsToDispatch = dispatch => ({
 
 function Container(ownProps) {
   const dispatch = useDispatch()
-  const storeData = useSelector(state => mapStateToProps(state, ownProps))
+  const storeData = useSelector(state => mapStateToProps(state, ownProps), shallowEqual)
   const storeActions = bindActionsToDispatch(dispatch)
   const props = { ...ownProps, ...storeData, ...storeActions }
 

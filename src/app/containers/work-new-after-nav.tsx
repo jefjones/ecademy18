@@ -1,6 +1,6 @@
-﻿import { useEffect } from 'react'
+import { useEffect } from 'react'
 import WorkNewAfterNavView from '../views/WorkNewAfterNavView'
-import { useSelector, useDispatch } from 'react-redux'
+import { useSelector, shallowEqual, useDispatch } from 'react-redux'
 import * as actionWorks from '../actions/works'
 import * as actionChapters from '../actions/chapters'
 import * as actionPersonConfig from '../actions/person-config'
@@ -34,7 +34,7 @@ const bindActionsToDispatch = dispatch => ({
 
 function Container(ownProps) {
   const dispatch = useDispatch()
-  const storeData = useSelector(state => mapStateToProps(state, ownProps))
+  const storeData = useSelector(state => mapStateToProps(state, ownProps), shallowEqual)
   const storeActions = bindActionsToDispatch(dispatch)
   const props = { ...ownProps, ...storeData, ...storeActions }
 

@@ -1,4 +1,4 @@
-import styles from './InfoCard.css'
+import * as styles from './InfoCard.css'
 
 export default ({data={}, className=""}) => {
 

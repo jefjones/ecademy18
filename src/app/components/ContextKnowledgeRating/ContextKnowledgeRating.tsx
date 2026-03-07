@@ -1,5 +1,5 @@
 
-import styles from './ContextKnowledgeRating.css'
+import * as styles from './ContextKnowledgeRating.css'
 import StandardsRatingColor from '../StandardsRatingColor'
 import classes from 'classnames'
 

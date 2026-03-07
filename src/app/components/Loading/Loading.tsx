@@ -1,6 +1,6 @@
-﻿import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import styles from './Loading.css'
+import * as styles from './Loading.css'
 import classes from 'classnames'
 import ButtonWithIcon from '../ButtonWithIcon'
 const p = 'component'

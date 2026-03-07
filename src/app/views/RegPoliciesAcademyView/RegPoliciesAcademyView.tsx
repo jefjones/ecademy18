@@ -1,6 +1,6 @@
 
-import styles from './RegPoliciesAcademyView.css'
-import globalStyles from '../../utils/globalStyles.css'
+import * as styles from './RegPoliciesAcademyView.css'
+import * as globalStyles from '../../utils/globalStyles.css'
 import classes from 'classnames'
 
 function RegPoliciesAcademyView(props) {

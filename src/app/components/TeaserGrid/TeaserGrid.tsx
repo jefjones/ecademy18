@@ -1,4 +1,4 @@
-﻿import styles from './TeaserGrid.css'
+import * as styles from './TeaserGrid.css'
 import classes from 'classnames'
 import TeaserImage from '../TeaserImage/TeaserImage'
 

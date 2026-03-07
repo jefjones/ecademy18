@@ -1,4 +1,4 @@
-import styles from './CaretDropDown.css'
+import * as styles from './CaretDropDown.css'
 
 export default ({className=""}) => {
     return (

@@ -1,6 +1,6 @@
-﻿import { useEffect } from 'react'
+import { useEffect } from 'react'
 import LearnerCourseAssignView from '../views/LearnerCourseAssignView'
-import { useSelector, useDispatch } from 'react-redux'
+import { useSelector, shallowEqual, useDispatch } from 'react-redux'
 import {guidEmpty} from '../utils/guidValidate'
 import * as actionUserPersonClipboard from '../actions/user-person-clipboard'
 import * as actionCourseClipboard from '../actions/course-clipboard'
@@ -198,7 +198,7 @@ const bindActionsToDispatch = dispatch => ({
 
 function Container(ownProps) {
   const dispatch = useDispatch()
-  const storeData = useSelector(state => mapStateToProps(state, ownProps))
+  const storeData = useSelector(state => mapStateToProps(state, ownProps), shallowEqual)
   const storeActions = bindActionsToDispatch(dispatch)
   const props = { ...ownProps, ...storeData, ...storeActions }
 

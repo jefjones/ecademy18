@@ -1,6 +1,6 @@
-﻿import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import StudentAssignmentsView from '../views/StudentAssignmentsView'
-import { useSelector, useDispatch } from 'react-redux'
+import { useSelector, shallowEqual, useDispatch } from 'react-redux'
 import {guidEmpty} from '../utils/guidValidate'
 import * as actionStudentAssignments from '../actions/student-assignments'
 import * as actionCourseDocuments from '../actions/course-documents'
@@ -163,7 +163,7 @@ const bindActionsToDispatch = dispatch => ({
 
 function Container(ownProps) {
   const dispatch = useDispatch()
-  const storeData = useSelector(state => mapStateToProps(state, ownProps))
+  const storeData = useSelector(state => mapStateToProps(state, ownProps), shallowEqual)
   const storeActions = bindActionsToDispatch(dispatch)
   const props = { ...ownProps, ...storeData, ...storeActions }
 

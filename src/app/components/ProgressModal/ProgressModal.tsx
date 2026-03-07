@@ -1,4 +1,4 @@
-﻿import styles from './ProgressModal.css';  //PropTypes
+import * as styles from './ProgressModal.css';  //PropTypes
 import {ModalContainer, ModalDialog} from '../react-modal-dialog/lib/index'
 import numberFormat from '../../utils/numberFormat'
 

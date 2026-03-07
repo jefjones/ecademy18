@@ -1,9 +1,9 @@
-﻿
+
 import { useNavigate } from 'react-router-dom'
-import styles from './LunchReducedInstructionsView.css'
+import * as styles from './LunchReducedInstructionsView.css'
 const p = 'LunchReducedInstructionsView'
 import L from '../../components/PageLanguage'
-import globalStyles from '../../utils/globalStyles.css'
+import * as globalStyles from '../../utils/globalStyles.css'
 import ButtonWithIcon from '../../components/ButtonWithIcon'
 import OneFJefFooter from '../../components/OneFJefFooter'
 

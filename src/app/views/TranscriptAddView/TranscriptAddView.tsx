@@ -1,4 +1,4 @@
-﻿import { useState } from 'react'
+import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import * as globalStyles from '../../utils/globalStyles.css'
 const p = 'globalStyles'
@@ -273,7 +273,7 @@ function TranscriptAddView(props) {
   											label={<L p={p} t={`Grade Level`}/>}
   											value={transcript.gradeLevelId || ''}
   											options={gradeLevels}
-  											className={styles.moreBottomMargin}
+  											className={styles.moreBottom}
   											height={`medium`}
   											onChange={handleChange}
   											required={true}
@@ -287,7 +287,7 @@ function TranscriptAddView(props) {
   											label={<L p={p} t={`School year`}/>}
   											value={transcript.schoolYearId || ''}
   											options={schoolYears}
-  											className={styles.moreBottomMargin}
+  											className={styles.moreBottom}
   											height={`medium`}
   											onChange={handleChange}
   											required={true}
@@ -326,7 +326,7 @@ function TranscriptAddView(props) {
   													{id: 'SEMESTERS', label: 'Semesters'},
   													{id: 'TRIMESTERS', label: 'Trimesters'},
   											]}
-  											className={styles.moreBottomMargin}
+  											className={styles.moreBottom}
   											height={`medium`}
   											onChange={handleChange}
   											required={true}

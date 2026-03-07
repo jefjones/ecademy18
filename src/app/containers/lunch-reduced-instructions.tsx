@@ -1,8 +1,8 @@
-﻿import { useEffect } from 'react'
+import { useEffect } from 'react'
 import LunchReducedInstructionsView from '../views/LunchReducedInstructionsView'
 import * as actionMyVisitedPages from '../actions/my-visited-pages'
 import * as actionPageLang from '../actions/language-list'
-import { useSelector, useDispatch } from 'react-redux'
+import { useSelector, shallowEqual, useDispatch } from 'react-redux'
 
 const mapStateToProps = (state, props) => {
 		let me = selectMe(state)
@@ -20,7 +20,7 @@ const bindActionsToDispatch = dispatch => ({
 
 function Container(ownProps) {
   const dispatch = useDispatch()
-  const storeData = useSelector(state => mapStateToProps(state, ownProps))
+  const storeData = useSelector(state => mapStateToProps(state, ownProps), shallowEqual)
   const storeActions = bindActionsToDispatch(dispatch)
   const props = { ...ownProps, ...storeData, ...storeActions }
 

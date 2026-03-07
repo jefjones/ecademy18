@@ -1,5 +1,5 @@
-﻿import Paths from './Paths'
-import styles from './Icon.css'
+import Paths from './Paths'
+import * as styles from './Icon.css'
 import classes from 'classnames'
 
 export const Icon = ({pathName='', className='', superscript='', premium, supPremium, fillColor="#000000", supFillColor="#000000", smaller, onClick,

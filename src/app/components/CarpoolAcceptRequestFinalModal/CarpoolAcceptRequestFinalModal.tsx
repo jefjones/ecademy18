@@ -1,7 +1,7 @@
-﻿import { useState } from 'react';  //PropTypes
+import { useState } from 'react';  //PropTypes
 import {ModalContainer, ModalDialog} from '../react-modal-dialog/lib/index'
-import globalStyles from '../../utils/globalStyles.css'
-import styles from './CarpoolAcceptRequestFinalModal.css'
+import * as globalStyles from '../../utils/globalStyles.css'
+import * as styles from './CarpoolAcceptRequestFinalModal.css'
 import CheckboxGroup from '../CheckboxGroup'
 import WeekdayDisplay from '../WeekdayDisplay'
 import TimeDisplay from '../TimeDisplay'

@@ -261,3 +261,8 @@
 		font-size: 12px;
 		text-transform: none;
 }
+
+.error {
+	color: var(--red, red);
+	font-size: 12px;
+}

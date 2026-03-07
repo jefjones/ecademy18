@@ -1,5 +1,5 @@
-﻿import { useState } from 'react';  //PropTypes
-import styles from './ColorPickerModal.css'
+import { useState } from 'react';  //PropTypes
+import * as styles from './ColorPickerModal.css'
 import {ModalContainer, ModalDialog} from '../react-modal-dialog/lib/index'
 import classes from 'classnames'
 import ButtonWithIcon from '../ButtonWithIcon'

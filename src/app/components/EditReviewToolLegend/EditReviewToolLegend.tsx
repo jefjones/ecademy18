@@ -1,4 +1,4 @@
-import styles from './EditReviewToolLegend.css';  //PropTypes
+import * as styles from './EditReviewToolLegend.css';  //PropTypes
 import Icon from '../Icon'
 const p = 'component'
 import L from '../../components/PageLanguage'

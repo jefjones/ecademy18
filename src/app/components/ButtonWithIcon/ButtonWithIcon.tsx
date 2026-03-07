@@ -1,4 +1,4 @@
-import styles from './ButtonWithIcon.css'
+import * as styles from './ButtonWithIcon.css'
 import classes from 'classnames'
 import Icon from '../Icon'
 

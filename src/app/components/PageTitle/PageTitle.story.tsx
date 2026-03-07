@@ -1,6 +1,6 @@
-﻿import { storiesOf } from '@kadira/storybook'
+import { storiesOf } from '@kadira/storybook'
 import PageTitle from './PageTitle'
-import styles from './PageTitle.css'
+import * as styles from './PageTitle.css'
 
 storiesOf('PageTitle', module)
 

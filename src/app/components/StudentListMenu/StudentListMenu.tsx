@@ -1,6 +1,6 @@
-﻿import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import styles from './StudentListMenu.css'
+import * as styles from './StudentListMenu.css'
 import {guidEmpty} from '../../utils/guidValidate'
 import DateMoment from '../DateMoment'
 import EditTable from '../EditTable'

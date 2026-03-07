@@ -1,6 +1,6 @@
-﻿import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import {apiHost} from '../../api_host'
-import styles from './DocumentResponseModal.css'
+import * as styles from './DocumentResponseModal.css'
 import {ModalContainer, ModalDialog} from '../react-modal-dialog/lib/index'
 import classes from 'classnames'
 import TextDisplay from '../TextDisplay'

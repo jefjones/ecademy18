@@ -1,9 +1,9 @@
-﻿
+
 import { Link } from 'react-router-dom'
-import styles from './GroupTypeChoiceView.css'
+import * as styles from './GroupTypeChoiceView.css'
 const p = 'GroupTypeChoiceView'
 import L from '../../components/PageLanguage'
-import globalStyles from '../../utils/globalStyles.css'
+import * as globalStyles from '../../utils/globalStyles.css'
 import Accordion from '../../components/ListAccordion/Accordion/Accordion'
 import AccordionItem from '../../components/ListAccordion/AccordionItem/AccordionItem'
 import OneFJefFooter from '../../components/OneFJefFooter'

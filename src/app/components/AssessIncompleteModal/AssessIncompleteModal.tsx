@@ -1,5 +1,5 @@
-﻿import 'react';  //PropTypes
-import styles from './AssessIncompleteModal.css'
+import 'react';  //PropTypes
+import * as styles from './AssessIncompleteModal.css'
 import {ModalContainer, ModalDialog} from '../react-modal-dialog/lib/index'
 const p = 'component'
 import L from '../../components/PageLanguage'

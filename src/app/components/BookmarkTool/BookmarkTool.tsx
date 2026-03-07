@@ -1,5 +1,5 @@
-﻿import { useState } from 'react'
-import styles from './BookmarkTool.css'
+import { useState } from 'react'
+import * as styles from './BookmarkTool.css'
 import SelectSingleDropDown from '../SelectSingleDropDown/SelectSingleDropDown'
 import classes from 'classnames'
 import TextareaModal from '../TextareaModal'

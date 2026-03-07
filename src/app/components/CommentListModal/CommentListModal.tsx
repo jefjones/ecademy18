@@ -1,5 +1,5 @@
-﻿import 'react';  //PropTypes
-import styles from './CommentListModal.css'
+import 'react';  //PropTypes
+import * as styles from './CommentListModal.css'
 import {ModalContainer, ModalDialog} from '../react-modal-dialog/lib/index'
 import DateMoment from '../DateMoment'
 import ButtonWithIcon from '../ButtonWithIcon'

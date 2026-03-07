@@ -1,10 +1,10 @@
-﻿import { useState } from 'react'
+import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import styles from './AssessmentQuestionsView.css'
+import * as styles from './AssessmentQuestionsView.css'
 
 const p = 'AssessmentQuestionsView'
 import L from '../../components/PageLanguage'
-import globalStyles from '../../utils/globalStyles.css'
+import * as globalStyles from '../../utils/globalStyles.css'
 import MessageModal from '../../components/MessageModal'
 import AssessmentItemModal from '../../components/AssessmentItemModal'
 import TextDisplay from '../../components/TextDisplay'

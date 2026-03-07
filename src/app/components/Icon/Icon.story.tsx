@@ -1,6 +1,6 @@
-﻿import { storiesOf } from '@kadira/storybook'
+import { storiesOf } from '@kadira/storybook'
 import Icon from './Icon'
-import styles from './Icon.css'
+import * as styles from './Icon.css'
 
 storiesOf('Icon', module)
 

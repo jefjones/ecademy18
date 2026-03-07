@@ -1,4 +1,4 @@
-﻿import styles from './ConfigModal.css'
+import * as styles from './ConfigModal.css'
 import {ModalContainer, ModalDialog} from '../react-modal-dialog/lib/index'
 import classes from 'classnames'
 import SwitchOnOff from '../SwitchOnOff'

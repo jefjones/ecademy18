@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import styles from './EditsLeftSideOver.css'
+import * as styles from './EditsLeftSideOver.css'
 import classes from 'classnames'
 import ReactTooltip from 'react-tooltip'
 import ConfigModal from '../../components/ConfigModal'

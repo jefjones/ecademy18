@@ -1,4 +1,4 @@
-﻿import { useState } from 'react'
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import * as styles from './TestComponentAssignView.css'
 const p = 'TestComponentAssignView'
@@ -53,8 +53,8 @@ function TestComponentAssignView(props) {
   								let testName = currentTest !== m.name ? m.name : ''
   								currentTest = m.name
   		         		data.push([
-  										{value: <a onClick={() => handleEdit(c.testComponentAssignId, m.testId, c.testComponentId, c.possibleScore)}><Icon pathName={'pencil0'} premium={true} className={styles.icon}/></a>},
-  			              {value: <a onClick={() => handleRemoveItemOpen(c.testComponentAssignId)}><Icon pathName={'trash2'} premium={true} className={styles.icon}/></a>},
+  										{value: <a onClick={() => handleEdit(c.testComponentAssignId, m.testId, c.testComponentId, c.possibleScore)}><Icon pathName={'pencil0'} premium={true} className={globalStyles.icon}/></a>},
+  			              {value: <a onClick={() => handleRemoveItemOpen(c.testComponentAssignId)}><Icon pathName={'trash2'} premium={true} className={globalStyles.icon}/></a>},
   										{value: testName},
   										{value: c.testComponentName},
   										{value: c.possibleScore},

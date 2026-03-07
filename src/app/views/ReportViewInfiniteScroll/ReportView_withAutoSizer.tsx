@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import styles from './ReportView.css'
+import * as styles from './ReportView.css'
 import Immutable from 'immutable'
 import AutoSizer from 'react-virtualized/dist/commonjs/AutoSizer'
 import List from 'react-virtualized/dist/commonjs/List'

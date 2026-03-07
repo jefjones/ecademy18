@@ -1,6 +1,6 @@
 import cx from 'classnames'
 import 'react'
-import styles from './styles.css'
+import * as styles from './styles.css'
 
 const AccordionItemBody = props => {
   const {

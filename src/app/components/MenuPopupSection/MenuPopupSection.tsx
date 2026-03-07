@@ -1,4 +1,4 @@
-﻿import styles from './MenuPopupSection.css'
+import * as styles from './MenuPopupSection.css'
 import classNames from 'classnames'
 //import { Link } from 'react-router-dom';
 

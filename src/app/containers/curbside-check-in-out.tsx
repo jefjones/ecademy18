@@ -1,6 +1,6 @@
-﻿import { useEffect } from 'react'
+import { useEffect } from 'react'
 import CurbsideCheckInOrOutView from '../views/CurbsideCheckInOrOutView'
-import { useSelector, useDispatch } from 'react-redux'
+import { useSelector, shallowEqual, useDispatch } from 'react-redux'
 import * as actionPageLang from '../actions/language-list'
 import * as actionCheckInOrOut from '../actions/curbside-check-in-out'
 import * as actionMyFrequentPlaces from '../actions/my-frequent-places'
@@ -34,7 +34,7 @@ const bindActionsToDispatch = dispatch => ({
 
 function Container(ownProps) {
   const dispatch = useDispatch()
-  const storeData = useSelector(state => mapStateToProps(state, ownProps))
+  const storeData = useSelector(state => mapStateToProps(state, ownProps), shallowEqual)
   const storeActions = bindActionsToDispatch(dispatch)
   const props = { ...ownProps, ...storeData, ...storeActions }
 

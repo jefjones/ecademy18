@@ -1,5 +1,5 @@
-﻿import { Link } from 'react-router-dom'
-import styles from './ScheduleModal.css'
+import { Link } from 'react-router-dom'
+import * as styles from './ScheduleModal.css'
 import {ModalContainer, ModalDialog} from '../react-modal-dialog/lib/index'
 import classes from 'classnames'
 import tapOrClick from 'react-tap-or-click'

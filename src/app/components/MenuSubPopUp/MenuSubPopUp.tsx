@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import styles from './MenuSubPopUp.css'
+import * as styles from './MenuSubPopUp.css'
 import classes from 'classnames'
 import SwitchOnOff from '../SwitchOnOff'
 import Checkbox from '../Checkbox'

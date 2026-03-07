@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import styles from './FileTreeSubContents.css'
+import * as styles from './FileTreeSubContents.css'
 import classes from 'classnames'
 import Icon from '../Icon'
 import MessageModal from '../MessageModal'

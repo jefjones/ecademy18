@@ -457,3 +457,7 @@
 .bold {
 	font-weight: bold !important;
 }
+
+.calendarHeight {
+	height: 600px;
+}

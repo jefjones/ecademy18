@@ -1,5 +1,5 @@
-﻿  //PropTypes
-import styles from './MessageModal.css'
+  //PropTypes
+import * as styles from './MessageModal.css'
 import ButtonWithIcon from '../ButtonWithIcon'
 import {ModalContainer, ModalDialog} from '../react-modal-dialog/lib/index'
 const p = 'component'

@@ -1,8 +1,8 @@
-﻿import { Link } from 'react-router-dom'
-import styles from './MyGroupsView.css'
+import { Link } from 'react-router-dom'
+import * as styles from './MyGroupsView.css'
 const p = 'MyGroupsView'
 import L from '../../components/PageLanguage'
-import globalStyles from '../../utils/globalStyles.css'
+import * as globalStyles from '../../utils/globalStyles.css'
 import classes from 'classnames'
 //import WorkFilter from '../../components/WorkFilter';
 import Loading from '../../components/Loading'

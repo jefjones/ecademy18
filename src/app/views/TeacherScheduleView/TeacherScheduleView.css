@@ -444,3 +444,7 @@
 	flex-flow: row;
 	flex-wrap: wrap;
 }
+
+.calendarHeight {
+	height: 600px;
+}

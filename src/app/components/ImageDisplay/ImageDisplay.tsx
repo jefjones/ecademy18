@@ -1,5 +1,5 @@
 
-import styles from './ImageDisplay.css'
+import * as styles from './ImageDisplay.css'
 import classes from 'classnames'
 import Iframe from 'react-iframe'
 const p = 'component'

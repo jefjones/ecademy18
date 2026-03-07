@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import styles from './SplitterOptionsBar.css'
+import * as styles from './SplitterOptionsBar.css'
 import classes from 'classnames'
 import Icon from '../Icon'
 import MessageModal from '../MessageModal'

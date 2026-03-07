@@ -1,7 +1,7 @@
-﻿
-import globalStyles from '../../utils/globalStyles.css'
+
+import * as globalStyles from '../../utils/globalStyles.css'
 import { Link } from 'react-router-dom'
-import styles from './FacilitatorMentorSetView.css'
+import * as styles from './FacilitatorMentorSetView.css'
 import EditTable from '../../components/EditTable'
 import Checkbox from '../../components/Checkbox'
 import OneFJefFooter from '../../components/OneFJefFooter'

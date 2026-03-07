@@ -1,6 +1,6 @@
 /* See https://github.com/balloob/react-sidebar - this page was cloned to create this local component*/
 import { useEffect, useState } from 'react'
-import styles from './SidePanelDockable.css'
+import * as styles from './SidePanelDockable.css'
 import classes from 'classnames'
 import ReactTooltip from 'react-tooltip'
 import ConfigModal from '../../components/ConfigModal'

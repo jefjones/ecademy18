@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import styles from './ContextEditReview.css'
+import * as styles from './ContextEditReview.css'
 import MessageModal from '../MessageModal'
 import classes from 'classnames'
 import Icon from '../Icon'

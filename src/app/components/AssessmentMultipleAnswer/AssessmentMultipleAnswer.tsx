@@ -1,6 +1,6 @@
-﻿
-import globalStyles from '../../utils/globalStyles.css'
-import styles from './AssessmentMultipleAnswer.css'
+
+import * as globalStyles from '../../utils/globalStyles.css'
+import * as styles from './AssessmentMultipleAnswer.css'
 import classes from 'classnames'
 import Checkbox from '../Checkbox'
 import ImageDisplay from '../ImageDisplay'

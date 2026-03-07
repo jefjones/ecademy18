@@ -1,5 +1,5 @@
-﻿import { useEffect } from 'react'
-import styles from './OpenCommunityToVolunteer.css'
+import { useEffect } from 'react'
+import * as styles from './OpenCommunityToVolunteer.css'
 import classes from 'classnames'
 import OpenCommunityFilter from '../../components/OpenCommunityFilter'
 import WorkSummary from '../../components/WorkSummary'

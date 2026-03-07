@@ -1,5 +1,5 @@
-import styles from './AssessmentPassage.css'
-import globalStyles from '../../utils/globalStyles.css'
+import * as styles from './AssessmentPassage.css'
+import * as globalStyles from '../../utils/globalStyles.css'
 import ImageDisplay from '../ImageDisplay'
 import AudioDisplay from '../AudioDisplay'
 import classes from 'classnames'

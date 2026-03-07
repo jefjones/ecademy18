@@ -1,5 +1,5 @@
 import { useState } from 'react';  //PropTypes
-import styles from './CourseRecommendation.css'
+import * as styles from './CourseRecommendation.css'
 import EditTable from '../EditTable'
 import MessageModal from '../MessageModal'
 import Icon from '../Icon'

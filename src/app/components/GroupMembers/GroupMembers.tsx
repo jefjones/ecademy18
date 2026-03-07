@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import styles from './GroupMembers.css'
+import * as styles from './GroupMembers.css'
 import classes from 'classnames'
 import MessageModal from '../../components/MessageModal'
 const p = 'component'

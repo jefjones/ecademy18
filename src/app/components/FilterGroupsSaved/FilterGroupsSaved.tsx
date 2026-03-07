@@ -1,5 +1,5 @@
 
-import styles from './FilterGroupsSaved.css'
+import * as styles from './FilterGroupsSaved.css'
 import classes from 'classnames'
 import SelectSingleDropDown from '../SelectSingleDropDown'
 import InputText from '../InputText'

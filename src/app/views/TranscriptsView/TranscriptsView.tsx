@@ -1,4 +1,4 @@
-﻿import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import * as styles from './TranscriptsView.css'
 const p = 'TranscriptsView'
@@ -377,7 +377,7 @@ function TranscriptsView(props) {
   																		<div className={styles.textBold}><DateMoment date={transcripts.birthDate} format={'D MMM YYYY'} minusHours={6}/></div>
   																</div>
   														</div>
-  														<div className={classes(styles.header, styles.baseLine, styles.notCenter)}>
+  														<div className={classes(styles.header, styles.baseline, styles.notCenter)}>
   																<div className={classes(styles.row, styles.text)}>
   																		<div className={styles.text}><L p={p} t={`Graduation date:`}/></div>
   																		{
@@ -416,7 +416,7 @@ function TranscriptsView(props) {
   																			</div>
   																			<div className={classes(styles.row, styles.center)}>
   																					<div className={classes(styles.text, styles.moreRight)}><L p={p} t={`Principal Signature`}/></div>
-  																					<DateMoment date={new Date()} format={'D MMM YYYY'} className={styles.moreLeft}/>
+  																					<DateMoment date={new Date()} format={'D MMM YYYY'} className={styles.moreleft}/>
   																			</div>
   								                </div>
   																{companyConfig.urlcode === 'Liahona' &&
@@ -426,7 +426,7 @@ function TranscriptsView(props) {
   												                </div>
   																				<div className={classes(styles.centeredFooter, styles.row)}>
   												                  	<div>Principal: Breanne Dedrickson</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
-  																						<div className={styles.moreLeft}>Administrator: Jordan Long</div>
+  																						<div className={styles.moreleft}>Administrator: Jordan Long</div>
   												                </div>
   																				<div className={styles.centeredFooter}>
   												                  	2464 West 450 South &nbsp;&nbsp; Pleasant Grove, UT 84062 &nbsp;&nbsp;  Office: (801) 785-7850 &nbsp;&nbsp;  Fax: (801) 406-0071

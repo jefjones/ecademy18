@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import styles from './AssignWorkToEditor.css'
+import * as styles from './AssignWorkToEditor.css'
 //import SwitchOnOff from '../SwitchOnOff';
 import MultiSelect from '../MultiSelect'
 import { withAlert } from 'react-alert'

@@ -1,6 +1,6 @@
-﻿import { storiesOf } from '@kadira/storybook'
+import { storiesOf } from '@kadira/storybook'
 import MemberCard from './MemberCard'
-import styles from './MemberCard.css'
+import * as styles from './MemberCard.css'
 
 let member = {
     title: {

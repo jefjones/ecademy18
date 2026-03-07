@@ -1,6 +1,6 @@
-﻿import { storiesOf } from '@kadira/storybook'
+import { storiesOf } from '@kadira/storybook'
 import TextIdLine from './TextIdLine'
-import styles from './TextIdLine.css'
+import * as styles from './TextIdLine.css'
 
 storiesOf('TextIdLine', module)
 

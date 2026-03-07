@@ -1,4 +1,4 @@
-import styles from './TeaserImage.css'
+import * as styles from './TeaserImage.css'
 import classes from 'classnames'
 
 import Training2014 from './Assets/teaser-2014-Training.jpg'

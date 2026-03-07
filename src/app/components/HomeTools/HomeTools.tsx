@@ -1,4 +1,4 @@
-﻿import styles from './HomeTools.css'
+import * as styles from './HomeTools.css'
 import classes from 'classnames'
 import ToolHeader from '../ToolHeader/ToolHeader'
 import SiteSearch from '../SiteSearch/SiteSearch'

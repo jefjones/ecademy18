@@ -1,8 +1,8 @@
 
-import styles from './ReportStudentRegistrationView.css'
+import * as styles from './ReportStudentRegistrationView.css'
 const p = 'ReportStudentRegistrationView'
 import L from '../../components/PageLanguage'
-import globalStyles from '../../utils/globalStyles.css'
+import * as globalStyles from '../../utils/globalStyles.css'
 import OneFJefFooter from '../../components/OneFJefFooter'
 import Loading from '../../components/Loading'
 import classes from 'classnames'

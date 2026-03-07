@@ -1,8 +1,8 @@
-﻿import { useEffect } from 'react'
+import { useEffect } from 'react'
 import AttendanceSchoolView from '../views/AttendanceSchoolView'
 import {doSort} from '../utils/sort'
 import * as actionPageLang from '../actions/language-list'
-import { useSelector, useDispatch } from 'react-redux'
+import { useSelector, shallowEqual, useDispatch } from 'react-redux'
 import * as actionAttendanceSchool from '../actions/attendance-school'
 import * as actionMyVisitedPages from '../actions/my-visited-pages'
 import { selectMe, selectAttendanceSchool, selectAccessRoles, selectCompanyConfig, selectFetchingRecord } from '../store'
@@ -46,7 +46,7 @@ const bindActionsToDispatch = dispatch => ({
 
 function Container(ownProps) {
   const dispatch = useDispatch()
-  const storeData = useSelector(state => mapStateToProps(state, ownProps))
+  const storeData = useSelector(state => mapStateToProps(state, ownProps), shallowEqual)
   const storeActions = bindActionsToDispatch(dispatch)
   const props = { ...ownProps, ...storeData, ...storeActions }
 

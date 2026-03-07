@@ -1,8 +1,8 @@
 
-import styles from './ReportRecommendCourseView.css'
+import * as styles from './ReportRecommendCourseView.css'
 const p = 'ReportRecommendCourseView'
 import L from '../../components/PageLanguage'
-import globalStyles from '../../utils/globalStyles.css'
+import * as globalStyles from '../../utils/globalStyles.css'
 import OneFJefFooter from '../../components/OneFJefFooter'
 import Loading from '../../components/Loading'
 import classes from 'classnames'

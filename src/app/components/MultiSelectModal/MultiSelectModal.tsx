@@ -1,5 +1,5 @@
-﻿  //PropTypes
-import styles from './MultiSelectModal.css'
+  //PropTypes
+import * as styles from './MultiSelectModal.css'
 import {ModalContainer, ModalDialog} from '../react-modal-dialog/lib/index'
 import EditTable from '../EditTable'
 import ButtonWithIcon from '../ButtonWithIcon'

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import styles from './OpenCommunityToCommitButtons.css'
+import * as styles from './OpenCommunityToCommitButtons.css'
 import MultiSelect from '../MultiSelect'
 import Checkbox from '../Checkbox'
 import MessageModal from '../MessageModal'

@@ -1,6 +1,6 @@
 
 import ReactExport from '../ReactDataExport'//"react-data-export";
-import styles from './ExcelGradebookEntry.css'
+import * as styles from './ExcelGradebookEntry.css'
 import moment from 'moment'
 
 const ExcelFile = ReactExport.ExcelFile

@@ -1,10 +1,10 @@
-﻿import { useEffect } from 'react'
+import { useEffect } from 'react'
 import SystemFeaturesView from '../views/SystemFeaturesView'
 import * as actionCompanyConfig from '../actions/company-config'
 import * as actionPageLang from '../actions/language-list'
 import * as actionContentTypes from '../actions/content-types'
 import * as actionMyVisitedPages from '../actions/my-visited-pages'
-import { useSelector, useDispatch } from 'react-redux'
+import { useSelector, shallowEqual, useDispatch } from 'react-redux'
 import {selectMe, selectCompanyConfig} from '../store'
 
 const mapStateToProps = (state, props) => {
@@ -27,7 +27,7 @@ const bindActionsToDispatch = dispatch => ({
 
 function Container(ownProps) {
   const dispatch = useDispatch()
-  const storeData = useSelector(state => mapStateToProps(state, ownProps))
+  const storeData = useSelector(state => mapStateToProps(state, ownProps), shallowEqual)
   const storeActions = bindActionsToDispatch(dispatch)
   const props = { ...ownProps, ...storeData, ...storeActions }
 

@@ -1,6 +1,6 @@
-﻿import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import styles from './LoginView.css'
+import * as styles from './LoginView.css'
 import InputText from '../../components/InputText'
 import MessageModal from '../../components/MessageModal'
 import eCademy from '../../assets/logos/eCADEMYapp_Logo_vertical.png'

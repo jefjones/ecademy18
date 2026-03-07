@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import styles from './OpenCommunityToSubmit.css'
+import * as styles from './OpenCommunityToSubmit.css'
 import MultiSelect from '../MultiSelect'
 import Checkbox from '../Checkbox'
 import SelectSingleDropDown from '../../components/SelectSingleDropDown'

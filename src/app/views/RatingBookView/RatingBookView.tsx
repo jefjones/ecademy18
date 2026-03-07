@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import styles from './RatingBookView.css'
-import globalStyles from '../../utils/globalStyles.css'
+import * as styles from './RatingBookView.css'
+import * as globalStyles from '../../utils/globalStyles.css'
 import EditTable from '../../components/EditTable'
 import SelectSingleDropDown from '../../components/SelectSingleDropDown'
 import MultiSelect from '../../components/MultiSelect'

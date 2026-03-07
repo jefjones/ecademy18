@@ -1,4 +1,4 @@
-﻿import styles from './FilterDisplay.css'
+import * as styles from './FilterDisplay.css'
 //import classes from 'classnames';
 import { Link } from 'react-router-dom'
 

@@ -1,5 +1,5 @@
-﻿import { useEffect, useState } from 'react'
-import styles from './WorkAddOrUpdate.css'
+import { useEffect, useState } from 'react'
+import * as styles from './WorkAddOrUpdate.css'
 import classes from 'classnames'
 import InputText from '../../components/InputText'
 import SelectSingleDropDown from '../../components/SelectSingleDropDown'

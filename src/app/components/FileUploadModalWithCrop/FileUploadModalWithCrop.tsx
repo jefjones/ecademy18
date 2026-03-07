@@ -1,6 +1,6 @@
-﻿// import React, {Component} from 'react';
-// import styles from './FileUploadModalWithCrop.css';
-// import globalStyles from '../../utils/globalStyles.css';
+// import React, {Component} from 'react';
+// import * as styles from './FileUploadModalWithCrop.css';
+// import * as globalStyles from '../../utils/globalStyles.css';
 // import {image64toCanvasRef, extractImageFileExtensionFromBase64, base64StringtoFile} from '../../utils/javascriptUtils';
 // import InputFile from '../InputFile';
 // import {ModalContainer, ModalDialog} from '../react-modal-dialog/lib/index';
@@ -154,8 +154,8 @@
 // };
 
 
-import styles from './FileUploadModalWithCrop.css'
-import globalStyles from '../../utils/globalStyles.css'
+import * as styles from './FileUploadModalWithCrop.css'
+import * as globalStyles from '../../utils/globalStyles.css'
 import InputFile from '../InputFile'
 import {ModalContainer, ModalDialog} from '../react-modal-dialog/lib/index'
 const p = 'component'

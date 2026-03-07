@@ -1,4 +1,4 @@
-﻿import styles from './FilterOptions.css'
+import * as styles from './FilterOptions.css'
 import classes from 'classnames'
 // import Button from '../Button/Button';
 // import Icon from '../Icon/Icon';

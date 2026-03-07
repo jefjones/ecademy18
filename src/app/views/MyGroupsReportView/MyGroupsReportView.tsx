@@ -1,9 +1,9 @@
-﻿
+
 import { useNavigate } from 'react-router-dom'
-import styles from './MyGroupsReportView.css'
+import * as styles from './MyGroupsReportView.css'
 const p = 'MyGroupsReportView'
 import L from '../../components/PageLanguage'
-import globalStyles from '../../utils/globalStyles.css'
+import * as globalStyles from '../../utils/globalStyles.css'
 import EditTable from '../../components/EditTable'
 import OneFJefFooter from '../../components/OneFJefFooter'
 

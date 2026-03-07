@@ -1,5 +1,5 @@
 
-import styles from './EditorInstructions.css'
+import * as styles from './EditorInstructions.css'
 import tapOrClick from 'react-tap-or-click'
 const p = 'component'
 import L from '../../components/PageLanguage'

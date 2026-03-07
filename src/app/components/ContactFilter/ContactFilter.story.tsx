@@ -1,6 +1,6 @@
-﻿import { storiesOf } from '@kadira/storybook'
+import { storiesOf } from '@kadira/storybook'
 import ContactFilter from './ContactFilter'
-import styles from './ContactFilter.css'
+import * as styles from './ContactFilter.css'
 
 let contactFilter =
 {

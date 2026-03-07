@@ -1,4 +1,4 @@
-import styles from './WeekdayDisplay.css'
+import * as styles from './WeekdayDisplay.css'
 const p = 'component'
 import L from '../../components/PageLanguage'
 

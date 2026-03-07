@@ -1,6 +1,6 @@
-﻿import { useState } from 'react'
+import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import styles from './StudentListOnly.css'
+import * as styles from './StudentListOnly.css'
 import DateMoment from '../DateMoment'
 import EditTable from '../EditTable'
 import { withAlert } from 'react-alert'

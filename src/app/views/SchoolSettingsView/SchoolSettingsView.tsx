@@ -1,9 +1,9 @@
-﻿
+
 import { Link, useNavigate } from 'react-router-dom'
-import styles from './SchoolSettingsView.css'
+import * as styles from './SchoolSettingsView.css'
 const p = 'SchoolSettingsView'
 import L from '../../components/PageLanguage'
-import globalStyles from '../../utils/globalStyles.css'
+import * as globalStyles from '../../utils/globalStyles.css'
 import MyFrequentPlaces from '../../components/MyFrequentPlaces'
 import OneFJefFooter from '../../components/OneFJefFooter'
 import SchoolSetup from '../../components/SchoolSetup'

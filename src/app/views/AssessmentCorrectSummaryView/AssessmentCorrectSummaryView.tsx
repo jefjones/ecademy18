@@ -1,9 +1,9 @@
-﻿
+
 import { Link, useNavigate } from 'react-router-dom'
-import styles from './AssessmentCorrectSummaryView.css'
+import * as styles from './AssessmentCorrectSummaryView.css'
 const p = 'AssessmentCorrectSummaryView'
 import L from '../../components/PageLanguage'
-import globalStyles from '../../utils/globalStyles.css'
+import * as globalStyles from '../../utils/globalStyles.css'
 import EditTableFreezeLeft from '../../components/EditTableFreezeLeft'
 import Icon from '../../components/Icon'
 import TextDisplay from '../../components/TextDisplay'

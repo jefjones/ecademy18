@@ -1,6 +1,6 @@
-﻿import { storiesOf } from '@kadira/storybook'
+import { storiesOf } from '@kadira/storybook'
 import CaretDropDown from './CaretDropDown'
-import styles from './CaretDropDown.css'
+import * as styles from './CaretDropDown.css'
 
 storiesOf('CaretDropDown', module)
 

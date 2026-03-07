@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';import styles from './SelectMultiplePopover.css'
+import { useEffect, useState } from 'react';import * as styles from './SelectMultiplePopover.css'
 import classes from 'classnames'
 
 function SelectMultiplePopover(props) {

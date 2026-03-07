@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import styles from './ReportFilter.css'
+import * as styles from './ReportFilter.css'
 //import DateTimePicker from '../DateTimePicker';
 import MultiSelect from '../MultiSelect'
 import SelectSingleDropDown from '../SelectSingleDropDown'

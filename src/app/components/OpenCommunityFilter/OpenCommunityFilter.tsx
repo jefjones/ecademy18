@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import styles from './OpenCommunityFilter.css'
+import * as styles from './OpenCommunityFilter.css'
 import classes from 'classnames'
 import DateTimePicker from '../DateTimePicker'
 import MultiSelect from '../MultiSelect'

@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import styles from './GradingRatingLegend.css'
-import globalStyles from '../../utils/globalStyles.css'
+import * as styles from './GradingRatingLegend.css'
+import * as globalStyles from '../../utils/globalStyles.css'
 import StandardsRatingColor from '../StandardsRatingColor'
 import MessageModal from '../MessageModal'
 import Icon from '../Icon'

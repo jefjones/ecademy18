@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import styles from './LoginView.css'
+import * as styles from './LoginView.css'
 import InputText from '../../components/InputText'
 import MessageModal from '../../components/MessageModal'
 import ButtonWithIcon from '../../components/ButtonWithIcon'

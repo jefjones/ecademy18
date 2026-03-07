@@ -1,4 +1,4 @@
-import styles from './OneFJefFooterPenspring.css'
+import * as styles from './OneFJefFooterPenspring.css'
 import PenspringLogo from '../../assets/penspring_medium.png'
 import Slogan from '../../assets/Get an edge in word-wise_22.png'
 

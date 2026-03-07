@@ -1,4 +1,4 @@
-﻿import { useEffect, useState } from 'react';import styles from './MainMenu.css'
+import { useEffect, useState } from 'react';import * as styles from './MainMenu.css'
 const p = 'StudentScheduleView'
 import L from '../../components/PageLanguage'
 import { useNavigate } from 'react-router-dom'

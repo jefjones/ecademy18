@@ -1,6 +1,6 @@
 /* See https://github.com/balloob/react-sidebar - this page was cloned to create this local component*/
 import { useEffect, useState } from 'react'
-import styles from './SplitterPanelDockable.css'
+import * as styles from './SplitterPanelDockable.css'
 import classes from 'classnames'
 import tapOrClick from 'react-tap-or-click'
 import Icon from '../Icon'

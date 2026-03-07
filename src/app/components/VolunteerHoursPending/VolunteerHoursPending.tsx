@@ -1,6 +1,6 @@
-﻿import { useState } from 'react';  //PropTypes
+import { useState } from 'react';  //PropTypes
 import { useNavigate } from 'react-router-dom'
-import styles from './VolunteerHoursPending.css'
+import * as styles from './VolunteerHoursPending.css'
 import EditTable from '../EditTable'
 import DateMoment from '../DateMoment'
 import MessageModal from '../MessageModal'

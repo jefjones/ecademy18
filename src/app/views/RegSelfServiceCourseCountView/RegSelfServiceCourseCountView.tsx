@@ -1,8 +1,8 @@
 
-import styles from './RegSelfServiceCourseCountView.css'
+import * as styles from './RegSelfServiceCourseCountView.css'
 const p = 'RegSelfServiceCourseCountView'
 import L from '../../components/PageLanguage'
-import globalStyles from '../../utils/globalStyles.css'
+import * as globalStyles from '../../utils/globalStyles.css'
 import EditTable from '../../components/EditTable'
 import OneFJefFooter from '../../components/OneFJefFooter'
 

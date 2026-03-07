@@ -1,6 +1,6 @@
-﻿import { useState } from 'react'
+import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import styles from './EditorEditList.css'
+import * as styles from './EditorEditList.css'
 import classes from 'classnames'
 import EditFilterModal from '../../components/EditFilterModal'
 import TextareaModal from '../TextareaModal'

@@ -1,4 +1,4 @@
-import styles from './EditTable.css'
+import * as styles from './EditTable.css'
 import classes from 'classnames'
 import Loading from '../Loading'
 const p = 'component'

@@ -1,6 +1,6 @@
-﻿import { storiesOf } from '@kadira/storybook'
+import { storiesOf } from '@kadira/storybook'
 import WorkFilter from './WorkFilter'
-import styles from './WorkFilter.css'
+import * as styles from './WorkFilter.css'
 
 let workFilter =
 {

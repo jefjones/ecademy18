@@ -1,8 +1,8 @@
-﻿import { useEffect } from 'react'
+import { useEffect } from 'react'
 import VolunteerHoursView from '../views/VolunteerHoursView'
 import {doSort} from '../utils/sort'
 import * as actionPageLang from '../actions/language-list'
-import { useSelector, useDispatch } from 'react-redux'
+import { useSelector, shallowEqual, useDispatch } from 'react-redux'
 import * as actionVolunteerEvent from '../actions/volunteer-event'
 import * as actionMyFrequentPlaces from '../actions/my-frequent-places'
 import * as actionMyVisitedPages from '../actions/my-visited-pages'
@@ -50,7 +50,7 @@ const bindActionsToDispatch = dispatch => ({
 
 function Container(ownProps) {
   const dispatch = useDispatch()
-  const storeData = useSelector(state => mapStateToProps(state, ownProps))
+  const storeData = useSelector(state => mapStateToProps(state, ownProps), shallowEqual)
   const storeActions = bindActionsToDispatch(dispatch)
   const props = { ...ownProps, ...storeData, ...storeActions }
 

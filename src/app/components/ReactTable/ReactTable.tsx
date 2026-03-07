@@ -1,5 +1,5 @@
 
-import styles from './ReactTable.css'
+import * as styles from './ReactTable.css'
 import ReactTable from 'react-table'
 
 //The left-side columns that need to be frozen need to have the "fixed: true" in their object data.

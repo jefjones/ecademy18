@@ -505,3 +505,7 @@
   text-transform: uppercase;;
   font-size: 12px;
 }
+
+.componentPrint {
+	margin-top: 30px;
+}

@@ -1,5 +1,5 @@
-﻿import { useState } from 'react'
-import styles from './CourseAssignFilter.css'
+import { useState } from 'react'
+import * as styles from './CourseAssignFilter.css'
 import Icon from '../Icon'
 import CourseAssignFilterModal from '../../components/CourseAssignFilterModal'
 import TextDisplay from '../../components/TextDisplay'

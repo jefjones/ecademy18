@@ -1,5 +1,5 @@
-﻿  //PropTypes
-import styles from './PenspringFileModal.css'
+  //PropTypes
+import * as styles from './PenspringFileModal.css'
 import {ModalContainer, ModalDialog} from '../react-modal-dialog/lib/index'
 import classes from 'classnames'
 import TextDisplay from '../TextDisplay'

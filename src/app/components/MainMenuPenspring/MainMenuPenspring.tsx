@@ -1,4 +1,4 @@
-﻿import { useEffect, useState } from 'react';import styles from './MainMenuPenspring.css'
+import { useEffect, useState } from 'react';import * as styles from './MainMenuPenspring.css'
 import { Link } from 'react-router-dom'
 import classes from 'classnames'
 import WorkSummary from '../WorkSummary'

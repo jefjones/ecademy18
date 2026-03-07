@@ -1,5 +1,5 @@
-﻿import 'react';  //PropTypes
-import styles from './RecipientListModal.css'
+import 'react';  //PropTypes
+import * as styles from './RecipientListModal.css'
 import {ModalContainer, ModalDialog} from '../react-modal-dialog/lib/index'
 import EditTable from '../EditTable'
 import DateMoment from '../DateMoment'

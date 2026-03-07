@@ -1,4 +1,4 @@
-import styles from './Checkbox.css'
+import * as styles from './Checkbox.css'
 import classes from 'classnames'
 import Icon from '../Icon'
 import Required from '../Required'

@@ -1,6 +1,6 @@
 
 import ReactExport from '../ReactDataExport'//"react-data-export";
-import styles from './ExcelRecommendByStudent.css'
+import * as styles from './ExcelRecommendByStudent.css'
 
 const ExcelFile = ReactExport.ExcelFile
 const ExcelSheet = ReactExport.ExcelFile.ExcelSheet

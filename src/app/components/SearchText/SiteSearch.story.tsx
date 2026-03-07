@@ -1,6 +1,6 @@
-﻿import { storiesOf } from '@kadira/storybook'
+import { storiesOf } from '@kadira/storybook'
 import SearchText from './SearchText'
-import styles from './SearchText.css'
+import * as styles from './SearchText.css'
 
 storiesOf('SearchText', module)
 

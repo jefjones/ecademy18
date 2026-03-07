@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
-import styles from './ScheduleCourseDayTime.css'
-import globalStyles from '../../utils/globalStyles.css'
+import * as styles from './ScheduleCourseDayTime.css'
+import * as globalStyles from '../../utils/globalStyles.css'
 import SelectSingleDropDown from '../SelectSingleDropDown'
 import Checkbox from '../Checkbox'
 import moment from 'moment'

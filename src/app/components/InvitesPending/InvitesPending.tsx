@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import styles from './InvitesPending.css'
+import * as styles from './InvitesPending.css'
 import classes from 'classnames'
 import DateMoment from '../DateMoment'
 import MessageModal from '../../components/MessageModal'

@@ -1,4 +1,4 @@
-import styles from './Button.css'
+import * as styles from './Button.css'
 import classes from 'classnames'
 
 export default ({label="", id, disabled=false, onClick, replaceClassName, addClassName, keyIndex, changeRed}) => {

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
-import styles from './GroupAddNewView.css'
-import globalStyles from '../../utils/globalStyles.css'
+import * as styles from './GroupAddNewView.css'
+import * as globalStyles from '../../utils/globalStyles.css'
 import InputText from '../../components/InputText'
 import SelectSingleDropDown from '../../components/SelectSingleDropDown'
 import OneFJefFooter from '../../components/OneFJefFooter'

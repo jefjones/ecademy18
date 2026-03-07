@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import styles from './LearnerFilter.css'
+import * as styles from './LearnerFilter.css'
 import Checkbox from '../Checkbox'
 import MultiSelect from '../MultiSelect'
 import DateTimePicker from '../DateTimePicker'

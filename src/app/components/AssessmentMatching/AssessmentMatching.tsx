@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import globalStyles from '../../utils/globalStyles.css'
-import styles from './AssessmentMatching.css'
+import * as globalStyles from '../../utils/globalStyles.css'
+import * as styles from './AssessmentMatching.css'
 import classes from 'classnames'
 import ImageDisplay from '../ImageDisplay'
 import AudioDisplay from '../AudioDisplay'

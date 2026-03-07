@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';import styles from './MenuEditModes.css'
+import { useEffect, useState } from 'react';import * as styles from './MenuEditModes.css'
 import EditModeOption from '../EditModeOption'
 import classes from 'classnames'
 const p = 'component'

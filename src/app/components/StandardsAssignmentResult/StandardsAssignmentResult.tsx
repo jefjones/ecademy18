@@ -1,5 +1,5 @@
-﻿
-import styles from './StandardsAssignmentResult.css'
+
+import * as styles from './StandardsAssignmentResult.css'
 import StandardsRatingColor from '../StandardsRatingColor'
 import classes from 'classnames'
 import {doSort} from '../../utils/sort'

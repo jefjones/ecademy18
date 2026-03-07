@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import styles from './JefFeatureDisplay.css'
+import * as styles from './JefFeatureDisplay.css'
 import Icon from '../Icon'
 import classes from 'classnames'
 const p = 'component'

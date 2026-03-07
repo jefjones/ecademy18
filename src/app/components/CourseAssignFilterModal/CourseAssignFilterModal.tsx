@@ -1,5 +1,5 @@
-﻿import { useState } from 'react';  //PropTypes
-import styles from './CourseAssignFilterModal.css'
+import { useState } from 'react';  //PropTypes
+import * as styles from './CourseAssignFilterModal.css'
 import {ModalContainer, ModalDialog} from '../react-modal-dialog/lib/index'
 import SelectSingleDropDown from '../SelectSingleDropDown'
 import InputText from '../InputText'

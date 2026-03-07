@@ -1,5 +1,5 @@
-﻿import { useEffect, useState } from 'react'
-import styles from './EditReviewView.css'
+import { useEffect, useState } from 'react'
+import * as styles from './EditReviewView.css'
 const p = 'EditReviewView'
 import L from '../../components/PageLanguage'
 import EditTools from '../../components/EditTools'

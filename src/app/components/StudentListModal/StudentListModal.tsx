@@ -1,6 +1,6 @@
-﻿import 'react';  //PropTypes
+import 'react';  //PropTypes
 import { Link } from 'react-router-dom'
-import styles from './StudentListModal.css'
+import * as styles from './StudentListModal.css'
 import {ModalContainer, ModalDialog} from '../react-modal-dialog/lib/index'
 import EditTable from '../EditTable'
 import Loading from '../Loading'

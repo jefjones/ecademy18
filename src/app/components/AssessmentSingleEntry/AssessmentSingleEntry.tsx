@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
-import styles from './AssessmentSingleEntry.css'
-import globalStyles from '../../utils/globalStyles.css'
+import * as styles from './AssessmentSingleEntry.css'
+import * as globalStyles from '../../utils/globalStyles.css'
 import classes from 'classnames'
 import TextDisplay from '../TextDisplay'
 import ImageDisplay from '../ImageDisplay'

@@ -1,4 +1,4 @@
-﻿import { useState } from 'react'
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import * as styles from './TestScoreAddView.css'
 const p = 'TestScoreAddView'
@@ -73,7 +73,7 @@ function TestScoreAddView(props) {
   												value={testScore.testId || ''}
   												options={tests}
   												height={'medium'}
-  												className={styles.moreBottomMargin}
+  												className={styles.moreBottom}
   												required={true}
   												whenFilled={testScore.testId}
   												onChange={handleChange}

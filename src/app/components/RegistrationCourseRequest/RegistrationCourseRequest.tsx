@@ -1,5 +1,5 @@
-﻿import { useState } from 'react'
-import styles from './RegistrationCourseRequest.css'
+import { useState } from 'react'
+import * as styles from './RegistrationCourseRequest.css'
 import Required from '../Required'
 import Checkbox from '../Checkbox'
 import {doSort} from '../../utils/sort'

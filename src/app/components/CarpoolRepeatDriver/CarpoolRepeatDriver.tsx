@@ -1,5 +1,5 @@
-﻿import { useState } from 'react';  //PropTypes
-import styles from './CarpoolRepeatDriver.css'
+import { useState } from 'react';  //PropTypes
+import * as styles from './CarpoolRepeatDriver.css'
 import {ModalContainer, ModalDialog} from '../react-modal-dialog/lib/index'
 import SelectSingleDropDown from '../SelectSingleDropDown'
 import ButtonWithIcon from '../ButtonWithIcon'

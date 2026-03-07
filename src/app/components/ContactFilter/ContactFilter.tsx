@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import styles from './ContactFilter.css'
+import * as styles from './ContactFilter.css'
 import RadioGroup from '../RadioGroup'
 import DateTimePicker from '../DateTimePicker'
 import SelectSingleDropDown from '../SelectSingleDropDown'

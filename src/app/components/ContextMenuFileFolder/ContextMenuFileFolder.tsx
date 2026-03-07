@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import styles from './ContextMenuFileFolder.css'
+import * as styles from './ContextMenuFileFolder.css'
 import MessageModal from '../MessageModal'
 import classes from 'classnames'
 import Icon from '../Icon'

@@ -1,4 +1,4 @@
-﻿// @flow
+// @flow
 /**
  * This component is designed to be a multi-selct component which supports
  * the selection of several items in a picklist.  It was meant to mimic the
@@ -13,7 +13,7 @@
  * - isLoading: Show a loading indicator
  */
 import { Component } from 'react'
-import myStyles from './myStyles.css'
+import * as myStyles from './myStyles.css'
 
 import Dropdown from './dropdown'
 import SelectPanel from './select-panel'

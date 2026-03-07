@@ -1,5 +1,5 @@
 import { useState } from 'react';  //PropTypes
-import styles from './OpenRegistrationsList.css'
+import * as styles from './OpenRegistrationsList.css'
 import EditTable from '../EditTable'
 import Icon from '../Icon'
 import DateMoment from '../DateMoment'

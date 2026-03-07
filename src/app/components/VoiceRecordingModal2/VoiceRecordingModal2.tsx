@@ -1,6 +1,6 @@
-﻿
-import styles from './VoiceRecordingModal2.css'
-import globalStyles from '../../utils/globalStyles.css'
+
+import * as styles from './VoiceRecordingModal2.css'
+import * as globalStyles from '../../utils/globalStyles.css'
 import {ModalContainer, ModalDialog} from '../react-modal-dialog/lib/index'
 import TextDisplay from '../TextDisplay'
 import ButtonWithIcon from '../ButtonWithIcon'

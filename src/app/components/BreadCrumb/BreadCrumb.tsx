@@ -1,4 +1,4 @@
-import styles from './BreadCrumb.css'
+import * as styles from './BreadCrumb.css'
 import Required from '../Required'
 import classes from 'classnames'
 

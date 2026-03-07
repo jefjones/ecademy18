@@ -1,6 +1,6 @@
-﻿import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import styles from './MessagesAndRemindersView.css'
+import * as styles from './MessagesAndRemindersView.css'
 const p = 'MessagesAndRemindersView'
 import L from '../../components/PageLanguage'
 import AnnouncementList from '../../components/AnnouncementList'

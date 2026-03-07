@@ -1,7 +1,7 @@
-﻿import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link, useParams, useNavigate } from 'react-router-dom'
-import globalStyles from '../../utils/globalStyles.css'
-import styles from './AdminAddView.css'
+import * as globalStyles from '../../utils/globalStyles.css'
+import * as styles from './AdminAddView.css'
 import classes from 'classnames'
 import InputText from '../../components/InputText'
 //import TabPage from '../../components/TabPage';

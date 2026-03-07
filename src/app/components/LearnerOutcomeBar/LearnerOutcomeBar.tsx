@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import styles from './LearnerOutcomeBar.css'
+import * as styles from './LearnerOutcomeBar.css'
 import classes from 'classnames'
 
 function LearnerOutcomeBar(props) {

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import styles from './TextEditorTools.css'
+import * as styles from './TextEditorTools.css'
 import MessageModal from '../MessageModal'
 import Checkbox from '../Checkbox'
 import classes from 'classnames'

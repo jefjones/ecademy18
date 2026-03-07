@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import styles from './MenuDocumentRibbon.css'
+import * as styles from './MenuDocumentRibbon.css'
 import MessageModal from '../MessageModal'
 import WorkSummaryModal from '../../components/WorkSummaryModal'
 import classes from 'classnames'

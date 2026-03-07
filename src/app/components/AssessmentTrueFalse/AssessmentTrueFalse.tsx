@@ -1,6 +1,6 @@
 
-import styles from './AssessmentTrueFalse.css'
-import globalStyles from '../../utils/globalStyles.css'
+import * as styles from './AssessmentTrueFalse.css'
+import * as globalStyles from '../../utils/globalStyles.css'
 import RadioGroup from '../RadioGroup'
 import Icon from '../Icon'
 import ImageDisplay from '../ImageDisplay'

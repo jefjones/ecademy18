@@ -1,5 +1,5 @@
-﻿import { useState } from 'react'
-import styles from './DiscussionEntryModal.css'
+import { useState } from 'react'
+import * as styles from './DiscussionEntryModal.css'
 import {ModalContainer, ModalDialog} from '../react-modal-dialog/lib/index'
 import classes from 'classnames'
 import TextDisplay from '../TextDisplay'

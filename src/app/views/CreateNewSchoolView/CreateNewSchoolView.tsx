@@ -1,6 +1,6 @@
-﻿import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import styles from './CreateNewSchoolView.css'
+import * as styles from './CreateNewSchoolView.css'
 const p = 'CreateNewSchoolView'
 import L from '../../components/PageLanguage'
 import InputText from '../../components/InputText'

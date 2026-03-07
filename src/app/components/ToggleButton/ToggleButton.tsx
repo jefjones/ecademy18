@@ -1,4 +1,4 @@
-import styles from './ToggleButton.css'
+import * as styles from './ToggleButton.css'
 import classes from 'classnames'
 
 export default ({label="", toggledOn=false, caret=false, onClick, className=""}) => {

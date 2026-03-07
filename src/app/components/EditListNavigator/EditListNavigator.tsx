@@ -1,5 +1,5 @@
 
-import styles from './EditListNavigator.css'
+import * as styles from './EditListNavigator.css'
 import Icon from '../Icon'
 
 function EditListNavigator(props) {

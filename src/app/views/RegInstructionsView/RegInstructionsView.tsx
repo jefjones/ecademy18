@@ -1,8 +1,8 @@
 
-import styles from './RegInstructionsView.css'
+import * as styles from './RegInstructionsView.css'
 const p = 'RegInstructionsView'
 import L from '../../components/PageLanguage'
-import globalStyles from '../../utils/globalStyles.css'
+import * as globalStyles from '../../utils/globalStyles.css'
 import OneFJefFooter from '../../components/OneFJefFooter'
 import classes from 'classnames'
 

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import styles from './OpenCommunityCommittedButtons.css'
+import * as styles from './OpenCommunityCommittedButtons.css'
 import MessageModal from '../MessageModal'
 const p = 'component'
 import L from '../../components/PageLanguage'

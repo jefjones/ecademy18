@@ -1,4 +1,4 @@
-import styles from './TextIdLine.css'
+import * as styles from './TextIdLine.css'
 
 export default ({text, id, textStyle="", idStyle="", className=""}) => {
     return (

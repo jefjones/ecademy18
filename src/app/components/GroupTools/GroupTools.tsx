@@ -1,6 +1,6 @@
-﻿import { useState } from 'react'
+import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import styles from './GroupTools.css'
+import * as styles from './GroupTools.css'
 import classes from 'classnames'
 import Icon from '../../components/Icon'
 import MessageModal from '../../components/MessageModal'

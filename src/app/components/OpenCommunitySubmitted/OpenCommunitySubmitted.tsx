@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import styles from './OpenCommunitySubmitted.css'
+import * as styles from './OpenCommunitySubmitted.css'
 import classes from 'classnames'
 import MessageModal from '../../components/MessageModal'
 import WorkSummary from '../../components/WorkSummary'

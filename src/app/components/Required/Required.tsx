@@ -1,4 +1,4 @@
-import styles from './Required.css'
+import * as styles from './Required.css'
 import Icon from '../Icon'
 
 export default ({setIf=false, setWhen=false, className, hideWhenFilled, iconWarningJSX}) => {

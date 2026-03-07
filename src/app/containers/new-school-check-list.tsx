@@ -1,4 +1,4 @@
-﻿import { useEffect } from 'react'
+import { useEffect } from 'react'
 import NewSchoolCheckListView from '../views/NewSchoolCheckListView'
 import * as actionCompanyConfig from '../actions/company-config'
 import * as actionPageLang from '../actions/language-list'
@@ -7,7 +7,7 @@ import * as actionStudentSchedule from '../actions/student-schedule'
 import * as actionStudentAssignments from '../actions/student-assignments'
 import * as actionUserPersonClipboard from '../actions/user-person-clipboard'
 import * as actionStudent from '../actions/student'
-import { useSelector, useDispatch } from 'react-redux'
+import { useSelector, shallowEqual, useDispatch } from 'react-redux'
 import {selectMe, selectCompanyConfig, selectCountsMainMenu, selectSchoolYears, selectStudents, selectGradeLevels, selectStudentSchedule} from '../store'
 
 const mapStateToProps = (state, props) => {
@@ -61,7 +61,7 @@ const bindActionsToDispatch = dispatch => ({
 
 function Container(ownProps) {
   const dispatch = useDispatch()
-  const storeData = useSelector(state => mapStateToProps(state, ownProps))
+  const storeData = useSelector(state => mapStateToProps(state, ownProps), shallowEqual)
   const storeActions = bindActionsToDispatch(dispatch)
   const props = { ...ownProps, ...storeData, ...storeActions }
 

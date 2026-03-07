@@ -1,4 +1,4 @@
-import styles from './SelectSingleDropDown.css'
+import * as styles from './SelectSingleDropDown.css'
 import classes from 'classnames'
 import Required from '../Required'
 

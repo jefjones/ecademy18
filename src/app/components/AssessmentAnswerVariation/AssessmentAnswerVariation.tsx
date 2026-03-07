@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import styles from './AssessmentAnswerVariation.css'
+import * as styles from './AssessmentAnswerVariation.css'
 import classes from 'classnames'
 import InputText from '../InputText'
 import EditTable from '../EditTable'

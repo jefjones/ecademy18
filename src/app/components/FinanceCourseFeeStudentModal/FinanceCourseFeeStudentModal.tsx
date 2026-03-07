@@ -1,6 +1,6 @@
-﻿import { useState } from 'react';  //PropTypes
-import styles from './FinanceCourseFeeStudentModal.css'
-import globalStyles from '../../utils/globalStyles.css'
+import { useState } from 'react';  //PropTypes
+import * as styles from './FinanceCourseFeeStudentModal.css'
+import * as globalStyles from '../../utils/globalStyles.css'
 import ButtonWithIcon from '../ButtonWithIcon'
 import TextDisplay from '../TextDisplay'
 import Icon from '../Icon'

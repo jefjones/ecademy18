@@ -1,8 +1,8 @@
-﻿
+
 import { useNavigate } from 'react-router-dom'
 const p = 'StudentScheduleView'
 import L from '../../components/PageLanguage'
-import styles from './StudentChoiceMenu.css'
+import * as styles from './StudentChoiceMenu.css'
 import {guidEmpty} from '../../utils/guidValidate'
 import classes from 'classnames'
 import Icon from '../Icon'

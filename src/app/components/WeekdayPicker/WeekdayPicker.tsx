@@ -1,5 +1,5 @@
 
-import styles from './WeekdayPicker.css'
+import * as styles from './WeekdayPicker.css'
 import Checkbox from '../Checkbox'
 import classes from 'classnames'
 const p = 'component'

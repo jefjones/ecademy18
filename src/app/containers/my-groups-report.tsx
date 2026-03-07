@@ -1,5 +1,5 @@
-﻿import { useEffect } from 'react'
-import { useSelector, useDispatch } from 'react-redux'
+import { useEffect } from 'react'
+import { useSelector, shallowEqual, useDispatch } from 'react-redux'
 import MyGroupsReportView from '../views/MyGroupsReportView'
 import * as actionGroups from '../actions/groups'
 import * as actionPageLang from '../actions/language-list'
@@ -69,7 +69,7 @@ const bindActionsToDispatch = (dispatch) => ({
 
 function Container(ownProps) {
   const dispatch = useDispatch()
-  const storeData = useSelector(state => mapStateToProps(state, ownProps))
+  const storeData = useSelector(state => mapStateToProps(state, ownProps), shallowEqual)
   const storeActions = bindActionsToDispatch(dispatch)
   const props = { ...ownProps, ...storeData, ...storeActions }
 

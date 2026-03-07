@@ -1,6 +1,6 @@
 
 import ReactExport from '../ReactDataExport'//"react-data-export";
-import styles from './ExcelStudentCourseAssign.css'
+import * as styles from './ExcelStudentCourseAssign.css'
 const p = 'component'
 import L from '../../components/PageLanguage'
 

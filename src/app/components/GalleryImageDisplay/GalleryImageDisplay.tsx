@@ -1,5 +1,5 @@
 
-import styles from './GalleryImageDisplay.css'
+import * as styles from './GalleryImageDisplay.css'
 import classes from 'classnames'
 const p = 'component'
 import L from '../../components/PageLanguage'

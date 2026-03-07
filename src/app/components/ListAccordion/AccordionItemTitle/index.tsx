@@ -1,6 +1,6 @@
 import { cloneElement } from 'react'
 import cx from 'classnames'
-import styles from './styles.css'
+import * as styles from './styles.css'
 import TextDisplay from '../../TextDisplay'
 import Icon from '../../Icon'
 import classes from 'classnames'

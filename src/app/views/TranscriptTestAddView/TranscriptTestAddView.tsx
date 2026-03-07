@@ -1,4 +1,4 @@
-﻿import { useState } from 'react'
+import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import * as globalStyles from '../../utils/globalStyles.css'
 const p = 'globalStyles'
@@ -110,7 +110,7 @@ function TranscriptTestAddView(props) {
   								error={errors.name} />
   						<div className={styles.dateTimeSpace}>
   								<DateTimePicker id={`parentContactDate`} label={<L p={p} t={`Date`}/>} value={transcriptTest.testDate || ''} onChange={(event) => changeDate('testDate', event)}
-  										required={true} whenFilled={transcriptTest.testDate} className={styles.dateTime} error={errors.testDate}/>
+  										required={true} whenFilled={transcriptTest.testDate} className={styles.dateTimeSpace} error={errors.testDate}/>
   						</div>
   						<div className={styles.rowWrap}>
   								<InputText

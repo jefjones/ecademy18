@@ -1,5 +1,5 @@
-﻿
-import styles from './InputFile.css'
+
+import * as styles from './InputFile.css'
 import classes from 'classnames'
 import MessageModal from '../MessageModal'
 import Required from '../Required'

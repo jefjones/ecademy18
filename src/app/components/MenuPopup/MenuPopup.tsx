@@ -1,5 +1,5 @@
-﻿import { useState } from 'react';import { Link } from 'react-router-dom'
-import styles from './MenuPopup.css'
+import { useState } from 'react';import { Link } from 'react-router-dom'
+import * as styles from './MenuPopup.css'
 import Icon from '../Icon'
 import SectionChangeModal from '../SectionChangeModal'
 import EditModeOption from '../EditModeOption'

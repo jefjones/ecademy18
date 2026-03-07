@@ -1,5 +1,5 @@
-﻿import { useEffect, useState } from 'react'
-import styles from './LoginView.css'
+import { useEffect, useState } from 'react'
+import * as styles from './LoginView.css'
 const p = 'LoginView'
 import L from '../../components/PageLanguage'
 import InputText from '../../components/InputText'

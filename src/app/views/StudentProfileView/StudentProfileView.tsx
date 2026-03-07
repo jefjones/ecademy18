@@ -1,4 +1,4 @@
-﻿import { useState } from 'react'
+import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import {apiHost} from '../../api_host'
 import * as styles from './StudentProfileView.css'
@@ -110,7 +110,7 @@ function StudentProfileView(props) {
   												{!printOpen && <TextDisplay leftLabel={leftLabel} label={<L p={p} t={`eCADEMYapp username`}/>} text={studentProfile.username} hideIfEmpty={true} textClassName={styles.red} salta={accessRoles.admin || accessRoles.counselor ? () => login({username: studentProfile.username, clave: '*&^', salta: personId }, '', 'salta') : () => {}}/>}
   												{!printOpen && <TextDisplay leftLabel={leftLabel} label={<L p={p} t={`eCADEMYapp first time password`}/>} text={studentProfile.firstTimeEntry} hideIfEmpty={true} textClassName={styles.red}/>}
   												<TextDisplay leftLabel={leftLabel} label={<L p={p} t={`Suffix`}/>} text={studentProfile.suffix} hideIfEmpty={true} />
-  												<TextDisplay leftLabel={leftLabel} label={<L p={p} t={`Date of birth`}/>} text={<DateMoment date={studentProfile.birthDate || ''} format={`D MMM YYYY`} className={styles.entryDate}/> } hideIfEmpty={true} />
+  												<TextDisplay leftLabel={leftLabel} label={<L p={p} t={`Date of birth`}/>} text={<DateMoment date={studentProfile.birthDate || ''} format={`D MMM YYYY`} className={styles.birthDate}/> } hideIfEmpty={true} />
   												{/*<TextDisplay leftLabel={leftLabel} label={<L p={p} t={`Preferred Name`}/>} text={studentProfile.preferredName} hideIfEmpty={true} />*/}
   												<TextDisplay leftLabel={leftLabel} label={<L p={p} t={`Email address`}/>} text={contactLink(studentProfile.personId, studentProfile.emailAddress)} />
   												<TextDisplay leftLabel={leftLabel} label={<L p={p} t={`Gender`}/>} text={studentProfile.genderName} hideIfEmpty={true} />
@@ -163,7 +163,7 @@ function StudentProfileView(props) {
       														</div>
       														{!printOpen &&
       																<InputTextArea label={<L p={p} t={`Note`}/>} rows={5} cols={45} value={newNote} onChange={handleNote} id={'newNote'} name={'newNote'}
-      				                            className={styles.commentBox} boldText={true}/>
+      				                            className={styles.commentTextarea} boldText={true}/>
       														}
       														{!printOpen &&
       																<ButtonWithIcon label={<L p={p} t={`Save`}/>} icon={'checkmark_circle'} onClick={showSaveButton ? processForm : () => {}}

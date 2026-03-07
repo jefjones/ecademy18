@@ -1,4 +1,4 @@
-import styles from './DateMoment.css'
+import * as styles from './DateMoment.css'
 import moment from 'moment'
 import classes from 'classnames'
 

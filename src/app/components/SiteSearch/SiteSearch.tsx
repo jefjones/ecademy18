@@ -1,4 +1,4 @@
-﻿import styles from './SiteSearch.css'
+import * as styles from './SiteSearch.css'
 import Icon from '../Icon/Icon'
 import classes from 'classnames'
 

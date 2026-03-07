@@ -1,5 +1,5 @@
 import { Component } from 'react'
-import styles from './ContextMenu.css'
+import * as styles from './ContextMenu.css'
 import { ContextMenu, Item, Separator, ContextMenuProvider } from 'react-contexify'
 import classes from 'classnames'
 import Icon from '../Icon'

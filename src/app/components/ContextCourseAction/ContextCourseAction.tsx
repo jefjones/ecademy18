@@ -1,6 +1,6 @@
-﻿import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import styles from './ContextCourseAction.css'
+import * as styles from './ContextCourseAction.css'
 import MessageModal from '../MessageModal'
 import TextareaModal from '../../components/TextareaModal'
 import classes from 'classnames'

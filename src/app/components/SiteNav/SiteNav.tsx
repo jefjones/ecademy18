@@ -1,4 +1,4 @@
-﻿import styles from './SiteNav.css'
+import * as styles from './SiteNav.css'
 import classNames from 'classnames'
 import MainMenu from '../MainMenu/MainMenu'
 import MenuPopup from '../MenuPopup/MenuPopup'

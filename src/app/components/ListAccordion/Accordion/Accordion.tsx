@@ -1,6 +1,6 @@
 import cx from 'classnames'
 import { cloneElement, useEffect, useRef, useState } from 'react'
-import styles from './styles.css'
+import * as styles from './styles.css'
 
 import {
   arrayify,

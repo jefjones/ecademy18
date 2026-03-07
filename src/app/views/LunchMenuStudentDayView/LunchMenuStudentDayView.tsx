@@ -1,9 +1,9 @@
-﻿
+
 import { useNavigate } from 'react-router-dom'
-import styles from './LunchMenuStudentDayView.css'
+import * as styles from './LunchMenuStudentDayView.css'
 const p = 'LunchMenuStudentDayView'
 import L from '../../components/PageLanguage'
-import globalStyles from '../../utils/globalStyles.css'
+import * as globalStyles from '../../utils/globalStyles.css'
 import ButtonWithIcon from '../../components/ButtonWithIcon'
 import DateMoment from '../../components/DateMoment'
 import Checkbox from '../../components/Checkbox'

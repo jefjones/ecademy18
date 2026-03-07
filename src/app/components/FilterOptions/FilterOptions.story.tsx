@@ -1,6 +1,6 @@
-﻿import { storiesOf } from '@kadira/storybook'
+import { storiesOf } from '@kadira/storybook'
 import FilterOptions from './FilterOptions'
-//import styles from './FilterOptions.css';
+//import * as styles from './FilterOptions.css';
 
 const data = [
     {

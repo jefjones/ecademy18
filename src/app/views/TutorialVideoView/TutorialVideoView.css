@@ -51,3 +51,11 @@
 .moreBottom {
 	margin-top: 15px !important;
 }
+
+.moreTop {
+	margin-top: 10px;
+}
+
+.radio {
+	margin-right: 5px;
+}

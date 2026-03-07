@@ -1,6 +1,6 @@
 
-import globalStyles from '../../utils/globalStyles.css'
-import styles from './AssessmentMultipleChoice.css'
+import * as globalStyles from '../../utils/globalStyles.css'
+import * as styles from './AssessmentMultipleChoice.css'
 import classes from 'classnames'
 import RadioGroup from '../RadioGroup'
 import ImageDisplay from '../ImageDisplay'

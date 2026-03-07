@@ -1,8 +1,8 @@
-﻿import { useEffect } from 'react'
+import { useEffect } from 'react'
 import PasswordResetAdminView from '../views/PasswordResetAdminView'
 import NotFound from '../components/Error'
 import * as actionPageLang from '../actions/language-list'
-import { useSelector, useDispatch } from 'react-redux'
+import { useSelector, shallowEqual, useDispatch } from 'react-redux'
 import * as loginUser from '../actions/login'
 import * as actionMyFrequentPlaces from '../actions/my-frequent-places'
 import {doSort} from '../utils/sort'
@@ -36,7 +36,7 @@ const bindActionsToDispatch = dispatch => ({
 
 function Container(ownProps) {
   const dispatch = useDispatch()
-  const storeData = useSelector(state => mapStateToProps(state, ownProps))
+  const storeData = useSelector(state => mapStateToProps(state, ownProps), shallowEqual)
   const storeActions = bindActionsToDispatch(dispatch)
   const props = { ...ownProps, ...storeData, ...storeActions }
 

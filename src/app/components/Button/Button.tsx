@@ -1,4 +1,4 @@
-import styles from './Button.css'
+import * as styles from './Button.css'
 import classes from 'classnames'
 
 interface ButtonProps {

@@ -1,4 +1,4 @@
-﻿import styles from './WorkSummaryModal.css';  //PropTypes
+import * as styles from './WorkSummaryModal.css';  //PropTypes
 import {ModalContainer, ModalDialog} from '../react-modal-dialog/lib/index'
 import WorkSummary from '../WorkSummary'
 const p = 'component'

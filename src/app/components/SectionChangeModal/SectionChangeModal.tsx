@@ -1,4 +1,4 @@
-﻿import styles from './SectionChangeModal.css';  //PropTypes
+import * as styles from './SectionChangeModal.css';  //PropTypes
 import {ModalContainer, ModalDialog} from '../react-modal-dialog/lib/index'
 import RadioGroup from '../RadioGroup'
 const p = 'component'

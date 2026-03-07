@@ -1,4 +1,4 @@
-import styles from './StandardsRatingColor.css'
+import * as styles from './StandardsRatingColor.css'
 import classes from 'classnames'
 
 export default ({label="", id, disabled=false, onClick, replaceClassName, addClassName, keyIndex, name, description, showName, color='#d9d3d4' }) => {

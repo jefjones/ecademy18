@@ -1,5 +1,5 @@
 import 'react'
-import styles from './EditModeOption.css'
+import * as styles from './EditModeOption.css'
 import Icon from '../Icon'
 import classes from 'classnames'
 import tapOrClick from 'react-tap-or-click'

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import styles from './BookmarkAddPopup.css'
+import * as styles from './BookmarkAddPopup.css'
 import classes from 'classnames'
 import Icon from '../Icon'
 const p = 'component'

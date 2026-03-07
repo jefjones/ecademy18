@@ -31,7 +31,7 @@ function StudentScheduleFinalizeView(props) {
   								</div>
   								{!studentPersonId && (!studentSchedule || studentSchedule.length === 0) &&
   										<div>
-  												<div className={styles.heading}>Students chosen</div>
+  												<div className={styles.upperHeader}>Students chosen</div>
   												<StudentClipboard students={clipboardStudents} companyConfig={companyConfig} gradeLevels={gradeLevels} shortVersion={true}
   														setStudentsSelected={setStudentsSelected} getStudentSchedule={props.getStudentSchedule}
   														personId={personId} studentAssignmentsInit={studentAssignmentsInit} emptyMessage={<L p={p} t={`No students chosen`}/>}

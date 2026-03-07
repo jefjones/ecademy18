@@ -1,4 +1,4 @@
-import { useEffect } from 'react';import styles from './PreGateView.css'
+import { useEffect } from 'react';import * as styles from './PreGateView.css'
 import Logo from '../../assets/Penspring_medium.png'
 import classes from 'classnames'
 

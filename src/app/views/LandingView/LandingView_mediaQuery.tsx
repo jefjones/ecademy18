@@ -1,9 +1,9 @@
-﻿import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import styles from './LandingView.css'
+import * as styles from './LandingView.css'
 const p = 'LandingView'
 import L from '../../components/PageLanguage'
-import globalStyles from '../../utils/globalStyles.css'
+import * as globalStyles from '../../utils/globalStyles.css'
 import MessageModal from '../../components/MessageModal'
 // import Icon from '../../components/Icon';
 // import JefFeatureDisplay from '../../components/JefFeatureDisplay';

@@ -1,7 +1,7 @@
-import styles from './TimePicker.css'
+import * as styles from './TimePicker.css'
 import Required from '../Required'
 import classes from 'classnames'
-import globalStyles from '../../utils/globalStyles.css'
+import * as globalStyles from '../../utils/globalStyles.css'
 
 export default ({id, className="", onChange=() => {}, value, error, onBlur=() => {}, required=false, whenFilled, label, labelClass, boldText}) => {
 		value = value && value.indexOf('T') > -1 ? value.substring(value.indexOf('T')+1) : value

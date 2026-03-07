@@ -1,7 +1,7 @@
 import { useState } from 'react'
 const p = 'component'
 import L from '../../components/PageLanguage'
-import styles from './AnnouncementReply.css'
+import * as styles from './AnnouncementReply.css'
 import DateMoment from '../DateMoment'
 import TextDisplay from '../TextDisplay'
 import MessageModal from '../MessageModal'

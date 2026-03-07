@@ -1,4 +1,4 @@
-import styles from './AudioDisplay.css'
+import * as styles from './AudioDisplay.css'
 import classes from 'classnames'
 const p = 'component'
 import L from '../../components/PageLanguage'

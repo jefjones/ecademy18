@@ -1,4 +1,4 @@
-import styles from './MyFrequentPlaces.css'
+import * as styles from './MyFrequentPlaces.css'
 import Checkbox from '../Checkbox'
 const p = 'component'
 import L from '../../components/PageLanguage'

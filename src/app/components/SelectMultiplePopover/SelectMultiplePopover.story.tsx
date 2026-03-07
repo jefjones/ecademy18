@@ -1,8 +1,8 @@
-﻿import { storiesOf } from '@kadira/storybook'
+import { storiesOf } from '@kadira/storybook'
 import SelectMultiplePopover from './SelectMultiplePopover'
 import Checkbox from '../Checkbox/Checkbox'
 import RadioGroup from '../RadioGroup/RadioGroup'
-import styles from './SelectMultiplePopover.css'
+import * as styles from './SelectMultiplePopover.css'
 
 const radioTest = [
     {

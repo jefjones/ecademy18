@@ -1,4 +1,4 @@
-﻿import styles from './SiteHeader.css'
+import * as styles from './SiteHeader.css'
 import SiteNav from '../SiteNav/SiteNav'
 
 export default ({logoutClick, links = [], className="", setMenuSelected}) => {

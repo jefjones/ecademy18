@@ -1,5 +1,5 @@
-import styles from './GradingRatingEntry.css'
-import globalStyles from '../../utils/globalStyles.css'
+import * as styles from './GradingRatingEntry.css'
+import * as globalStyles from '../../utils/globalStyles.css'
 
 import InputText from '../InputText'
 import classes from 'classnames'

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
-import globalStyles from '../../utils/globalStyles.css'
-import styles from './InputDataList.css'
+import * as globalStyles from '../../utils/globalStyles.css'
+import * as styles from './InputDataList.css'
 import classes from 'classnames'
 import Required from '../Required'
 import Icon from '../Icon'

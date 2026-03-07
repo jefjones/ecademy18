@@ -1,4 +1,4 @@
-import styles from './StatusLegend.css'
+import * as styles from './StatusLegend.css'
 import Icon from '../Icon'
 import classes from 'classnames'
 

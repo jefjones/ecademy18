@@ -16,7 +16,7 @@ export const app = express();
 
 
 
-const {APP_WEB_BASE_PATH, NODE_ENV} = process.env;
+const {APP_WEB_BASE_PATH = '', NODE_ENV} = process.env;
 
 // middleware
 app.use(compression());

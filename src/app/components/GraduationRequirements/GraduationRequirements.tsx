@@ -1,5 +1,5 @@
 import { useState } from 'react';  //PropTypes
-import styles from './GraduationRequirements.css'
+import * as styles from './GraduationRequirements.css'
 import MessageModal from '../../components/MessageModal'
 import Icon from '../../components/Icon'
 import Slider from 'rc-slider'

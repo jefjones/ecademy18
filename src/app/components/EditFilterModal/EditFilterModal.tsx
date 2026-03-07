@@ -1,8 +1,8 @@
-﻿import {ModalContainer, ModalDialog} from '../react-modal-dialog/lib/index'
+import {ModalContainer, ModalDialog} from '../react-modal-dialog/lib/index'
 //import classes from 'classnames';
 const p = 'component'
 import L from '../../components/PageLanguage'
-import styles from './EditFilterModal.css'
+import * as styles from './EditFilterModal.css'
 import Checkbox from '../Checkbox'
 import SearchText from '../SearchText'
 //import DateTimePicker from '../DateTimePicker';

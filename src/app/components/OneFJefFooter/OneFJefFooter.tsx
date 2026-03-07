@@ -1,6 +1,6 @@
 import onefJef from '../../assets/onefJef_small_only_white.png'
 import eCademy from '../../assets/logos/eCADEMYapp_LOGO_horizontal_footer.png'
-import styles from './OneFJefFooter.css'
+import * as styles from './OneFJefFooter.css'
 const p = 'component'
 import L from '../../components/PageLanguage'
 

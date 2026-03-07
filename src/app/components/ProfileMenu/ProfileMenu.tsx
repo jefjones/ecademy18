@@ -1,4 +1,4 @@
-﻿import styles from './ProfileMenu.css'
+import * as styles from './ProfileMenu.css'
 import { Link } from 'react-router-dom'
 import classNames from 'classnames'
 import Icon from '../Icon/Icon'

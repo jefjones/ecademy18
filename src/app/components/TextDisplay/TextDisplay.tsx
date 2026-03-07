@@ -1,5 +1,5 @@
-﻿import { Link } from 'react-router-dom'
-import styles from './TextDisplay.css'
+import { Link } from 'react-router-dom'
+import * as styles from './TextDisplay.css'
 import classes from 'classnames'
 
 export default ({text, label, className, textClassName, labelClass, hideIfEmpty, linkTo, clickFunction, salta, leftLabel, topLabel}) => {

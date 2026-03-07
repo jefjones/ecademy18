@@ -1,4 +1,4 @@
-import styles from './FlexColumn.css'
+import * as styles from './FlexColumn.css'
 
 export default ({heading="", data}) => {
     return (

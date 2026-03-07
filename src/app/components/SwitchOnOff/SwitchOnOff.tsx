@@ -1,5 +1,5 @@
 
-import styles from './SwitchOnOff.css'
+import * as styles from './SwitchOnOff.css'
 import classes from 'classnames'
 
 function SwitchOnOff(props) {

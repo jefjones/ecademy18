@@ -1,5 +1,5 @@
-﻿import { useEffect } from 'react'
-import { useSelector, useDispatch } from 'react-redux'
+import { useEffect } from 'react'
+import { useSelector, shallowEqual, useDispatch } from 'react-redux'
 import AccessReportView from '../views/AccessReportView'
 import * as actionReportFilter from '../actions/report-filter'
 import * as actionReportFilterOptions from '../actions/report-filter-options'
@@ -54,7 +54,7 @@ const bindActionsToDispatch = (dispatch) => ({
 
 function Container(ownProps) {
   const dispatch = useDispatch()
-  const storeData = useSelector(state => mapStateToProps(state, ownProps))
+  const storeData = useSelector(state => mapStateToProps(state, ownProps), shallowEqual)
   const storeActions = bindActionsToDispatch(dispatch)
   const props = { ...ownProps, ...storeData, ...storeActions }
 

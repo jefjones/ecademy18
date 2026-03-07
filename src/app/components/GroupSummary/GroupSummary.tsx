@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import styles from './GroupSummary.css'
+import * as styles from './GroupSummary.css'
 import classes from 'classnames'
 import GroupTools from '../../components/GroupTools'
 import TextDisplay from '../../components/TextDisplay'

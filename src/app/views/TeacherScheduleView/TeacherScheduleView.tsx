@@ -1,4 +1,4 @@
-﻿import { cloneElement, Children, useEffect, useState } from 'react'
+import { cloneElement, Children, useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import * as styles from './TeacherScheduleView.css'
 const p = 'TeacherScheduleView'
@@ -90,11 +90,11 @@ function TeacherScheduleView(props) {
   								<hr/>
   								<Loading loadingText={`Loading`} isLoading={!facilitatorPersonId && fetchingRecord && fetchingRecord.teacherSchedule} />
   								<div ref={el => (componentRef = el)} className={classes(styles.center, styles.componentPrint, styles.maxWidth)}>
-  										<div className={styles.header}>
+  										<div className={styles.upperHeader}>
   												<L p={p} t={`Teacher Schedule`}/>
   										</div>
   										{teacherSchedule && teacherSchedule.firstName &&
-  												<div className={classes(styles.row, styles.header, styles.center, styles.bold)}>
+  												<div className={classes(styles.row, styles.upperHeader, styles.center, styles.bold)}>
   														{teacherSchedule.firstName + ' ' + (teacherSchedule.lastName || '')}
   												</div>
   										}

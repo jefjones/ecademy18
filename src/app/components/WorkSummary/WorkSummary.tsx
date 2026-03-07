@@ -1,5 +1,5 @@
-﻿import { useEffect, useState } from 'react'
-import styles from './WorkSummary.css'
+import { useEffect, useState } from 'react'
+import * as styles from './WorkSummary.css'
 import classes from 'classnames'
 import DateMoment from '../DateMoment'
 import WorkTools from '../../components/WorkTools'

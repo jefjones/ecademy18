@@ -1,5 +1,5 @@
-﻿import { useEffect, useState } from 'react';  //PropTypes
-import styles from './CarpoolMemberStudentsModal.css'
+import { useEffect, useState } from 'react';  //PropTypes
+import * as styles from './CarpoolMemberStudentsModal.css'
 import {ModalContainer, ModalDialog} from '../react-modal-dialog/lib/index'
 import TextDisplay from '../TextDisplay'
 import ButtonWithIcon from '../ButtonWithIcon'

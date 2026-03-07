@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import classes from 'classnames'
-import styles from './WorkFilter.css'
+import * as styles from './WorkFilter.css'
 import RadioGroup from '../RadioGroup'
 import DateTimePicker from '../DateTimePicker'
 import SelectSingleDropDown from '../SelectSingleDropDown'

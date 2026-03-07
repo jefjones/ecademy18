@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import styles from './OpenCommunityCommitted.css'
+import * as styles from './OpenCommunityCommitted.css'
 import MessageModal from '../../components/MessageModal'
 import WorkSummary from '../../components/WorkSummary'
 import Accordion from '../../components/ListAccordion/Accordion/Accordion'

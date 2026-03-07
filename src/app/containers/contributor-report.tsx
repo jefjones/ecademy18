@@ -1,5 +1,5 @@
-﻿import { useEffect } from 'react'
-import { useSelector, useDispatch } from 'react-redux'
+import { useEffect } from 'react'
+import { useSelector, shallowEqual, useDispatch } from 'react-redux'
 import ContributorReportView from '../views/ContributorReportView'
 import * as actionContributorReport from '../actions/contributor-report'
 import * as actionReportFilter from '../actions/report-filter'
@@ -209,7 +209,7 @@ const bindActionsToDispatch = (dispatch) => ({
 
 function Container(ownProps) {
   const dispatch = useDispatch()
-  const storeData = useSelector(state => mapStateToProps(state, ownProps))
+  const storeData = useSelector(state => mapStateToProps(state, ownProps), shallowEqual)
   const storeActions = bindActionsToDispatch(dispatch)
   const props = { ...ownProps, ...storeData, ...storeActions }
 

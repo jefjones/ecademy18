@@ -1,7 +1,7 @@
-﻿import { useState } from 'react';  //PropTypes
+import { useState } from 'react';  //PropTypes
 import { Link, useNavigate } from 'react-router-dom'
-import styles from './StudentListTable.css'
-import globalStyles from '../../utils/globalStyles.css'
+import * as styles from './StudentListTable.css'
+import * as globalStyles from '../../utils/globalStyles.css'
 import TableVirtualFast from '../../components/TableVirtualFast'
 import Paper from '@mui/material/Paper'
 import Loading from '../../components/Loading'

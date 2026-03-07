@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import styles from './CarpoolView.css'
+import * as styles from './CarpoolView.css'
 const p = 'CarpoolView'
 import L from '../../components/PageLanguage'
 import CarpoolRequests from '../../components/CarpoolRequests'

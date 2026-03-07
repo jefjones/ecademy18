@@ -1,4 +1,4 @@
-import styles from './Error.css'
+import * as styles from './Error.css'
 const p = 'component'
 import L from '../../components/PageLanguage'
 

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import styles from './CourseFilter.css'
+import * as styles from './CourseFilter.css'
 import MultiSelect from '../MultiSelect'
 import SelectSingleDropDown from '../SelectSingleDropDown'
 import InputText from '../InputText'

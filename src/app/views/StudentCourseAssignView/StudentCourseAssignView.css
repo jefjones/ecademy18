@@ -184,3 +184,11 @@
 .fullWidth {
 	width: 100%;
 }
+
+.iconSquare {
+	width: 16px;
+	position: relative;
+	left: -3px;
+	top: -4px;
+	cursor: pointer;
+}

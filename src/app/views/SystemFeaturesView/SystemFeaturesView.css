@@ -249,3 +249,7 @@
 	margin-left: 3px;
   cursor: pointer,
 }
+
+.checkboxLabel {
+	font-size: 12px !important;
+}

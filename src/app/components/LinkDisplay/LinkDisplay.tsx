@@ -1,4 +1,4 @@
-import styles from './LinkDisplay.css'
+import * as styles from './LinkDisplay.css'
 import classes from 'classnames'
 const p = 'component'
 import L from '../../components/PageLanguage'

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import styles from './InputText.css'
+import * as styles from './InputText.css'
 import classes from 'classnames'
 import MessageModal from '../MessageModal'
 import Required from '../Required'

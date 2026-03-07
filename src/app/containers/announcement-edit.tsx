@@ -1,6 +1,6 @@
-﻿import { useEffect } from 'react'
+import { useEffect } from 'react'
 import AnnouncementEditView from '../views/AnnouncementEditView'
-import { useSelector, useDispatch, connect } from 'react-redux';import * as actionPageLang from '../actions/language-list'
+import { useSelector, shallowEqual, useDispatch, connect } from 'react-redux';import * as actionPageLang from '../actions/language-list'
 import * as actionAnnouncement from '../actions/announcements'
 import * as actionAnnouncementAttachments from '../actions/announcement-attachments'
 import * as actionUserPersonClipboard from '../actions/user-person-clipboard'
@@ -190,7 +190,7 @@ const storeConnector = connect(
 
 function Container(ownProps) {
   const dispatch = useDispatch()
-  const storeData = useSelector(state => mapStateToProps(state, ownProps))
+  const storeData = useSelector(state => mapStateToProps(state, ownProps), shallowEqual)
   const storeActions = bindActionsToDispatch(dispatch)
   const props = { ...ownProps, ...storeData, ...storeActions }
 

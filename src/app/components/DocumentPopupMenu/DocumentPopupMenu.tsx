@@ -1,5 +1,5 @@
-﻿import { useEffect, useState } from 'react'
-import styles from './DocumentPopupMenu.css'
+import { useEffect, useState } from 'react'
+import * as styles from './DocumentPopupMenu.css'
 import Icon from '../Icon/Icon'
 import classNames from 'classnames'
 

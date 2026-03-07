@@ -1,7 +1,7 @@
-import styles from './DateTimePicker.css'
+import * as styles from './DateTimePicker.css'
 import Required from '../Required'
 import classes from 'classnames'
-import globalStyles from '../../utils/globalStyles.css'
+import * as globalStyles from '../../utils/globalStyles.css'
 
 export default ({id, className="", onChange, value, error, minDate, onBlur, required=false, whenFilled, label, labelClass}) => {
 		value = value && value.length > 0 && value.indexOf('T') > -1 ? value.substring(0, value.indexOf('T')) : value

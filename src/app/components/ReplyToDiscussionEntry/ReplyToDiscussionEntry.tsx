@@ -1,5 +1,5 @@
 
-import styles from './ReplyToDiscussionEntry.css'
+import * as styles from './ReplyToDiscussionEntry.css'
 import TextDisplay from '../../components/TextDisplay'
 import DateMoment from '../../components/DateMoment'
 import LinkDisplay from '../../components/LinkDisplay'

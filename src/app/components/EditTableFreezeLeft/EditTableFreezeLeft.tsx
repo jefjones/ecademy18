@@ -1,4 +1,4 @@
-import styles from './EditTableFreezeLeft.css'
+import * as styles from './EditTableFreezeLeft.css'
 import classes from 'classnames'
 const p = 'component'
 import L from '../../components/PageLanguage'

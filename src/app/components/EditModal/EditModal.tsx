@@ -1,5 +1,5 @@
-﻿import { useEffect, useState } from 'react';  //PropTypes
-import styles from './EditModal.css'
+import { useEffect, useState } from 'react';  //PropTypes
+import * as styles from './EditModal.css'
 import {ModalContainer, ModalDialog} from '../react-modal-dialog/lib/index'
 import classes from 'classnames'
 const p = 'component'

@@ -1,5 +1,5 @@
-﻿import { useState } from 'react';  //PropTypes
-import styles from './CourseListTable.css'
+import { useState } from 'react';  //PropTypes
+import * as styles from './CourseListTable.css'
 import EditTable from '../EditTable'
 import Icon from '../Icon'
 import MessageModal from '../MessageModal'

@@ -1,4 +1,4 @@
-import styles from './EditReviewEditIconLegend.css';  //PropTypes
+import * as styles from './EditReviewEditIconLegend.css';  //PropTypes
 import Icon from '../Icon'
 import classes from 'classnames'
 const p = 'component'

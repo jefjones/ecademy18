@@ -1,4 +1,4 @@
-﻿import styles from './SiteNavItem.css'
+import * as styles from './SiteNavItem.css'
 import { Link } from 'react-router-dom'
 import DocumentPopupMenu from '../DocumentPopupMenu/DocumentPopupMenu'
 import MenuAll from '../MenuAll/MenuAll'

@@ -1,7 +1,7 @@
-﻿
+
 import { Link } from 'react-router-dom'
 import Icon from '../Icon'
-import styles from './MenuHeaderIcons.css'
+import * as styles from './MenuHeaderIcons.css'
 
 function MenuHeaderIcons(props) {
   const {firstName} = props

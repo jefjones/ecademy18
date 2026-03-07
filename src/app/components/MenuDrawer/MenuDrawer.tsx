@@ -1,4 +1,4 @@
-﻿import styles from './MenuDrawer.css'
+import * as styles from './MenuDrawer.css'
 // import { Link } from 'react-router-dom';
 import classNames from 'classnames'
 import { Link } from 'react-router-dom'

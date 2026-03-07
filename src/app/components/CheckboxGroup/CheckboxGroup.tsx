@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import styles from './CheckboxGroup.css'
+import * as styles from './CheckboxGroup.css'
 import classes from 'classnames'
 import Required from '../Required'
 import Checkbox from '../Checkbox'

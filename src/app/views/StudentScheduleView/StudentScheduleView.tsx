@@ -1,4 +1,4 @@
-﻿import { useState } from 'react'
+import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import * as styles from './StudentScheduleView.css'
 const p = 'StudentScheduleView'
@@ -191,7 +191,7 @@ function StudentScheduleView(props) {
   			//new Course data and headings
   			localScheduledCourses = localScheduledCourses && localScheduledCourses.length > 0 && localScheduledCourses.map(m => {
   					m.icons =	<a onClick={() => {handleNewCourseAssignOpen(m.courseScheduledId); chooseRecord(m.courseScheduledId)} }>
-  												<Icon pathName={'clock3'} superscript={'plus'} supFillColor={'#0b7508'} premium={true} className={styles.iconSuperAdd} superScriptClass={styles.superScriptAdd}/>
+  												<Icon pathName={'clock3'} superscript={'plus'} supFillColor={'#0b7508'} premium={true} className={styles.icon} superScriptClass={styles.superScriptAdd}/>
   										</a>
   					m.name = <div className={classes(globalStyles.cellText, (m.courseScheduledId === courseScheduledId ? globalStyles.highlight : ''))} onClick={() => chooseRecord(m.courseScheduledId)}>
   											{m.courseName}

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import styles from './EditOptionsBar.css'
+import * as styles from './EditOptionsBar.css'
 import MenuPopup from '../MenuPopup'
 import classes from 'classnames'
 import Icon from '../Icon'

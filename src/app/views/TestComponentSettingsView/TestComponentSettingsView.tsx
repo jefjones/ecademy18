@@ -1,4 +1,4 @@
-﻿import { useState } from 'react'
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import * as styles from './TestComponentSettingsView.css'
 const p = 'TestComponentSettingsView'
@@ -41,8 +41,8 @@ function TestComponentSettingsView(props) {
       if (testComponents && testComponents.length > 0) {
           data = testComponents.map(m => {
               return ([
-  							{value: <a onClick={() => handleEdit(m.testComponentId)}><Icon pathName={'pencil0'} premium={true} className={styles.icon}/></a>},
-                {value: <a onClick={() => handleRemoveItemOpen(m.testComponentId)}><Icon pathName={'trash2'} premium={true} className={styles.icon}/></a>},
+  							{value: <a onClick={() => handleEdit(m.testComponentId)}><Icon pathName={'pencil0'} premium={true} className={globalStyles.icon}/></a>},
+                {value: <a onClick={() => handleRemoveItemOpen(m.testComponentId)}><Icon pathName={'trash2'} premium={true} className={globalStyles.icon}/></a>},
   							{value: m.name},
   							{value: m.usedIn},
   							{value: m.description},

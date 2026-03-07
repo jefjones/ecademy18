@@ -1,4 +1,4 @@
-import styles from './TimeDisplay.css'
+import * as styles from './TimeDisplay.css'
 
 export default ({time, className="", includeMilli=false}) => {
     let hourPart

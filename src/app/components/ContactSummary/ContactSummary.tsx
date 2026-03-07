@@ -1,4 +1,4 @@
-﻿import styles from './ContactSummary.css'
+import * as styles from './ContactSummary.css'
 import classes from 'classnames'
 import ProfilePicture from '../../assets/boy_default.jpg'
 import DateMoment from '../DateMoment'

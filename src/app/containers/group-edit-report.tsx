@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { useSelector, useDispatch } from 'react-redux'
+import { useSelector, shallowEqual, useDispatch } from 'react-redux'
 import GroupEditReportView from '../views/GroupEditReportView'
 import * as actionGroupEditReport from '../actions/group-edit-report'
 import * as fromGroupEditReport from '../reducers/group-edit-report'
@@ -97,7 +97,7 @@ const bindActionsToDispatch = (dispatch) => ({
 
 function Container(ownProps) {
   const dispatch = useDispatch()
-  const storeData = useSelector(state => mapStateToProps(state, ownProps))
+  const storeData = useSelector(state => mapStateToProps(state, ownProps), shallowEqual)
   const storeActions = bindActionsToDispatch(dispatch)
   const props = { ...ownProps, ...storeData, ...storeActions }
 

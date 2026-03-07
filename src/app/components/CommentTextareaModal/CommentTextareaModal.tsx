@@ -1,5 +1,5 @@
-﻿import { useEffect, useState } from 'react';  //PropTypes
-import styles from './CommentTextareaModal.css'
+import { useEffect, useState } from 'react';  //PropTypes
+import * as styles from './CommentTextareaModal.css'
 import {ModalContainer, ModalDialog} from '../react-modal-dialog/lib/index'
 import ButtonWithIcon from '../ButtonWithIcon'
 import classes from 'classnames'

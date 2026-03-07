@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import EditReviewView from '../views/EditReviewView/EditReviewView'
-import { useSelector, useDispatch } from 'react-redux'
+import { useSelector, shallowEqual, useDispatch } from 'react-redux'
 import * as actionWorks from '../actions/works'
 import * as actionWorkEditReview from '../actions/work-edit-review'
 import * as actionChapter from '../actions/chapters'
@@ -173,7 +173,7 @@ const bindActionsToDispatch = dispatch => ({
 
 function Container(ownProps) {
   const dispatch = useDispatch()
-  const storeData = useSelector(state => mapStateToProps(state, ownProps))
+  const storeData = useSelector(state => mapStateToProps(state, ownProps), shallowEqual)
   const storeActions = bindActionsToDispatch(dispatch)
   const props = { ...ownProps, ...storeData, ...storeActions }
 

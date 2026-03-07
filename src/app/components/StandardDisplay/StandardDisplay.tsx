@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import styles from './StandardDisplay.css'
-import globalStyles from '../../utils/globalStyles.css'
+import * as styles from './StandardDisplay.css'
+import * as globalStyles from '../../utils/globalStyles.css'
 import MessageModal from '../MessageModal'
 import classes from 'classnames'
 const p = 'component'
